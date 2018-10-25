@@ -10,7 +10,7 @@
 // vim: expandtab
 
 #ifndef QWT_MATHML_TEXT_ENGINE_H
-#define QWT_MATHML_TEXT_ENGINE_H 1
+#define QWT_MATHML_TEXT_ENGINE_H
 
 #include "qwt_text_engine.h"
 

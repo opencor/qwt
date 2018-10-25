@@ -29,8 +29,10 @@ SOURCES = \
 # qwt_mml_document.h/qwt_mml_document.cpp has been stripped down from
 # the mathml widgets offered in the Qt solutions package. 
 
-HEADERS += qwt_mml_document.h
-SOURCES += qwt_mml_document.cpp
+HEADERS += qwt_mml_document.h \
+           qwt_mml_entity_table.h
+SOURCES += qwt_mml_document.cpp \
+           qwt_mml_entity_table.cpp
 
 qwtmathmlspec.files  = qwtmathml.prf
 qwtmathmlspec.path  = $${QWT_INSTALL_FEATURES}
