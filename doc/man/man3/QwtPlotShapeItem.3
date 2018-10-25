@@ -30,7 +30,7 @@ Inherits \fBQwtPlotItem\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotShapeItem\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotShapeItem\fP (const QString &\fBtitle\fP=QString())"
 .br
 .RI "\fIConstructor\&. \fP"
 .ti -1c
@@ -154,7 +154,7 @@ Clip polygons before painting them\&. In situations, where points are far outsid
 But polygon clipping will convert the painter path into polygons what might introduce a negative impact on the performance of paths composed from curves or ellipses\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotShapeItem::QwtPlotShapeItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotShapeItem::QwtPlotShapeItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 
 .PP
 Constructor\&. Sets the following item attributes:

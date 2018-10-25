@@ -37,7 +37,7 @@ QwtText \- A class representing a text\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtText\fP (const QString &=QString::null, \fBTextFormat\fP textFormat=\fBAutoText\fP)"
+.RI "\fBQwtText\fP (const QString &=QString(), \fBTextFormat\fP textFormat=\fBAutoText\fP)"
 .br
 .ti -1c
 .RI "\fBQwtText\fP (const \fBQwtText\fP &)"
@@ -254,7 +254,7 @@ Use a TeX (http://en.wikipedia.org/wiki/TeX) render engine to display the text (
 The number of text formats can be extended using setTextEngine\&. Formats >= \fBQwtText::OtherFormat\fP are not used by Qwt\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtText::QwtText (const QString & text = \fCQString::null\fP, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
+.SS "QwtText::QwtText (const QString & text = \fCQString()\fP, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
 Constructor
 .PP
 \fBParameters:\fP

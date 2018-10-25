@@ -43,7 +43,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotCurve\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotCurve\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "\fBQwtPlotCurve\fP (const \fBQwtText\fP &\fBtitle\fP)"
@@ -329,7 +329,7 @@ Minimize memory usage that is temporarily needed for the translated points, befo
 Render the points to a temporary image and paint the image\&. This is a very special optimization for Dots style, when having a huge amount of points\&. With a reasonable number of points QPainter::drawPoints() will be faster\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotCurve::QwtPlotCurve (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotCurve::QwtPlotCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP

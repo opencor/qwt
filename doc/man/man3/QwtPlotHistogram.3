@@ -22,7 +22,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotHistogram\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotHistogram\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "\fBQwtPlotHistogram\fP (const \fBQwtText\fP &\fBtitle\fP)"
@@ -149,7 +149,7 @@ Draw a simple line using the \fBpen()\fP for each interval\&.
 Styles >= UserStyle are reserved for derived classes that overload \fBdrawSeries()\fP with additional application specific ways to display a histogram\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotHistogram::QwtPlotHistogram (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotHistogram::QwtPlotHistogram (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP

@@ -23,7 +23,7 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QwtSetSample >\fP
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotMultiBarChart\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotMultiBarChart\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "\fBQwtPlotMultiBarChart\fP (const \fBQwtText\fP &\fBtitle\fP)"
@@ -145,7 +145,7 @@ The bars of a set are displayed side by side\&.
 The bars are displayed on top of each other accumulating to a single bar\&. All values of a set need to have the same sign\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotMultiBarChart::QwtPlotMultiBarChart (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotMultiBarChart::QwtPlotMultiBarChart (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP
