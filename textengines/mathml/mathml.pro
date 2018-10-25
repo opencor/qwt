@@ -34,10 +34,13 @@ HEADERS += qwt_mml_document.h \
 SOURCES += qwt_mml_document.cpp \
            qwt_mml_entity_table.cpp
 
-qwtmathmlspec.files  = qwtmathml.prf
-qwtmathmlspec.path  = $${QWT_INSTALL_FEATURES}
+#qwtmathmlspec.files  = qwtmathml.prf
+#qwtmathmlspec.path  = $${QWT_INSTALL_FEATURES}
 
-INSTALLS += qwtmathmlspec
+#INSTALLS += qwtmathmlspec
+
+target.path    = $$INSTALL_DIR/lib
+INSTALLS       = target
 
 CONFIG(lib_bundle) {
 
@@ -48,8 +51,8 @@ CONFIG(lib_bundle) {
 }
 else {
 
-    headers.files  = qwt_mathml_text_engine.h
-    headers.path   = $${QWT_INSTALL_HEADERS}
+    headers.files  = $$HEADERS
+    headers.path   = $$INSTALL_DIR/include
     INSTALLS       += headers
 }
 

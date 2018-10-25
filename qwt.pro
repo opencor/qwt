@@ -29,8 +29,8 @@ contains(QWT_CONFIG, QwtPlayground ) {
     SUBDIRS += playground 
 }
  
-qwtspec.files  = qwtconfig.pri qwtfunctions.pri qwt.prf
-qwtspec.path  = $${QWT_INSTALL_FEATURES}
+#qwtspec.files  = qwtconfig.pri qwtfunctions.pri qwt.prf
+#qwtspec.path  = $${QWT_INSTALL_FEATURES}
 
-INSTALLS += qwtspec
+#INSTALLS += qwtspec
 

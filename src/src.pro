@@ -39,7 +39,7 @@ include ( $${PWD}/src.pri )
 
 # Install directives
 
-target.path    = $${QWT_INSTALL_LIBS}
+target.path    = $$INSTALL_DIR/lib
 INSTALLS       = target 
 
 CONFIG(lib_bundle) {
@@ -52,7 +52,7 @@ CONFIG(lib_bundle) {
 else {
 
     headers.files  = $${HEADERS}
-    headers.path   = $${QWT_INSTALL_HEADERS}
+    headers.path   = $$INSTALL_DIR/include
     INSTALLS += headers
 }
 

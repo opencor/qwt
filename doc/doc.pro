@@ -14,9 +14,9 @@ include( $${QWT_ROOT}/qwtconfig.pri )
 
 TEMPLATE = subdirs
 
-doc.files      =  $${QWT_ROOT}/doc/html
-unix:doc.files += $${QWT_ROOT}/doc/man
-doc.path       =  $${QWT_INSTALL_DOCS}
+#doc.files      =  $${QWT_ROOT}/doc/html
+#unix:doc.files += $${QWT_ROOT}/doc/man
+#doc.path       =  $${QWT_INSTALL_DOCS}
 
-INSTALLS       = doc
+#INSTALLS       = doc
 

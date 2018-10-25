@@ -38,7 +38,7 @@ qwtAddLibrary($${QWT_OUT_ROOT}/lib, qwt)
 
 # Install directives
 
-target.path    = $${QWT_INSTALL_LIBS}
-doc.path       = $${QWT_INSTALL_DOCS}
+#target.path    = $${QWT_INSTALL_LIBS}
+#doc.path       = $${QWT_INSTALL_DOCS}
 
-INSTALLS       = target 
+#INSTALLS       = target
