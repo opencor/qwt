@@ -61,7 +61,7 @@ $(function() {
       <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-  <div id="splitbar" style="-moz-user-select:none;"
+  <div id="splitbar" style="-moz-user-select:none;" 
        class="ui-resizable-handle">
   </div>
 </div>
@@ -80,7 +80,7 @@ $(document).ready(function(){initNavTree('class_qwt_text.html','');});
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0"
+<iframe src="javascript:void(0)" frameborder="0" 
         name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('class_qwt_text.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>A class representing a text.
+<p>A class representing a text.  
  <a href="class_qwt_text.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="qwt__text_8h_source.html">qwt_text.h</a>&gt;</code></p>
@@ -104,19 +104,19 @@ $(document).ready(function(){initNavTree('class_qwt_text.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a63e0d6a59a427a37ed0bfa71b782fd76"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76">TextFormat</a> { <br />
-&#160;&#160;<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76a0645d333081ec9e3574c98f510c284a1">AutoText</a> = 0,
-<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76aa6810f6d3c785c202d2507c601b97787">PlainText</a>,
-<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76a88f7eee487ce6f7769b67494623d8b79">RichText</a>,
-<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76abf479897e4514198246a0b232a597caf">MathMLText</a>,
+&#160;&#160;<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76a0645d333081ec9e3574c98f510c284a1">AutoText</a> = 0, 
+<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76aa6810f6d3c785c202d2507c601b97787">PlainText</a>, 
+<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76a88f7eee487ce6f7769b67494623d8b79">RichText</a>, 
+<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76abf479897e4514198246a0b232a597caf">MathMLText</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76af31a767faf2f7e322941866c6140ddc6">TeXText</a>,
+&#160;&#160;<a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76af31a767faf2f7e322941866c6140ddc6">TeXText</a>, 
 <a class="el" href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76ad69e3155611ef96eb14ed0cfeb69fd3d">OtherFormat</a> = 100
 <br />
  }</td></tr>
 <tr class="memdesc:a63e0d6a59a427a37ed0bfa71b782fd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text format.  <a href="class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76">More...</a><br /></td></tr>
 <tr class="separator:a63e0d6a59a427a37ed0bfa71b782fd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9739e47ea489e690f121e4b1d27ae24e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24e">PaintAttribute</a> { <a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24eac12e48f17fd02a6bc1840c61c4862a65">PaintUsingTextFont</a> = 0x01,
-<a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24ea1aa48cee0a54089820e77600cf93dc4b">PaintUsingTextColor</a> = 0x02,
+<tr class="memitem:a9739e47ea489e690f121e4b1d27ae24e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24e">PaintAttribute</a> { <a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24eac12e48f17fd02a6bc1840c61c4862a65">PaintUsingTextFont</a> = 0x01, 
+<a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24ea1aa48cee0a54089820e77600cf93dc4b">PaintUsingTextColor</a> = 0x02, 
 <a class="el" href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24ea77dd66b2a65e9998d9803672791e1456">PaintBackground</a> = 0x04
  }</td></tr>
 <tr class="memdesc:a9739e47ea489e690f121e4b1d27ae24e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paint Attributes.  <a href="class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24e">More...</a><br /></td></tr>
