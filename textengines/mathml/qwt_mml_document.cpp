@@ -1531,6 +1531,9 @@ QwtMmlNode *QwtMmlDocument::domToMml( const QDomNode &dom_node, bool *ok,
             }
 
             // ...and continue just as in ChildAny
+#ifdef Q_FALLTHROUGH
+            Q_FALLTHROUGH();
+#endif
 
         case QwtMmlNodeSpec::ChildAny:
             if ( mml_type == MfencedNode )
@@ -1620,7 +1623,7 @@ QwtMmlNode *QwtMmlDocument::createImplicitMrowNode( const QDomNode &dom_node,
         return domToMml( dom_child_list.item( 0 ), ok, errorMsg );
 
     QwtMmlNode *mml_node = createNode( MrowNode, QwtMmlAttributeMap(),
-                                       QString(), errorMsg );
+                                    QString(), errorMsg );
     Q_ASSERT( mml_node != 0 ); // there is no reason in heaven or hell for this to fail
 
     for ( int i = 0; i < child_cnt; ++i )
@@ -1868,8 +1871,7 @@ QColor QwtMmlNode::background() const
 }
 
 static void updateFontAttr( QwtMmlAttributeMap &font_attr, const QwtMmlNode *n,
-                            const QString &name,
-                            const QString &preferred_name = QString() )
+                            const QString &name, const QString &preferred_name = QString() )
 {
     if ( font_attr.contains( preferred_name ) || font_attr.contains( name ) )
         return;
@@ -3851,6 +3853,79 @@ static int attributeIndex( const QString &name )
             return i;
     }
     return -1;
+}
+
+static QString decodeEntityValue( QString literal )
+{
+    QString result;
+
+    while ( !literal.isEmpty() )
+    {
+
+        if ( !literal.startsWith( "&#" ) )
+        {
+            qWarning() << "decodeEntityValue(): bad entity literal: \"" + literal + "\"";
+            return QString();
+        }
+
+        literal = literal.right( literal.length() - 2 );
+
+        int i = literal.indexOf( ';' );
+        if ( i == -1 )
+        {
+            qWarning() << "decodeEntityValue(): bad entity literal: \"" + literal + "\"";
+            return QString();
+        }
+
+        QString char_code = literal.left( i );
+        literal = literal.right( literal.length() - i - 1 );
+
+        if ( char_code.isEmpty() )
+        {
+            qWarning() << "decodeEntityValue(): bad entity literal: \"" + literal + "\"";
+            return QString();
+        }
+
+        if ( char_code.at( 0 ) == 'x' )
+        {
+            char_code = char_code.right( char_code.length() - 1 );
+            bool ok;
+            unsigned c = char_code.toUInt( &ok, 16 );
+            if ( !ok )
+            {
+                qWarning() << "decodeEntityValue(): bad entity literal: \"" + literal + "\"";
+                return QString();
+            }
+            result += QChar( c );
+        }
+        else
+        {
+            bool ok;
+            unsigned c = char_code.toUInt( &ok, 10 );
+            if ( !ok )
+            {
+                qWarning() << "decodeEntityValue(): bad entity literal: \"" + literal + "\"";
+                return QString();
+            }
+            result += QChar( c );
+        }
+    }
+
+    return result;
+}
+
+static const QwtMmlEntitySpec *searchEntitySpecData( const QString &value, const QwtMmlEntitySpec *from = 0 )
+{
+    const QwtMmlEntitySpec *ent = from;
+    if ( ent == 0 )
+        ent = g_xml_entity_data;
+    for ( ; ent->name != 0; ++ent )
+    {
+        QString ent_value = decodeEntityValue( ent->value );
+        if ( value == ent_value )
+            return ent;
+    }
+    return 0;
 }
 
 struct OperSpecSearchResult

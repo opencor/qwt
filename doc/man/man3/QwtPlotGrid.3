@@ -1,4 +1,4 @@
-.TH "QwtPlotGrid" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotGrid" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,53 +17,53 @@ Inherits \fBQwtPlotItem\fP\&.
 .ti -1c
 .RI "\fBQwtPlotGrid\fP ()"
 .br
-.RI "\fIEnables major grid, disables minor grid\&. \fP"
+.RI "Enables major grid, disables minor grid\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotGrid\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
-.RI "void \fBenableX\fP (bool tf)"
+.RI "void \fBenableX\fP (bool)"
 .br
-.RI "\fIEnable or disable vertical grid lines\&. \fP"
+.RI "Enable or disable vertical grid lines\&. "
 .ti -1c
-.RI "bool \fBxEnabled\fP () const "
-.br
-.ti -1c
-.RI "void \fBenableY\fP (bool tf)"
-.br
-.RI "\fIEnable or disable horizontal grid lines\&. \fP"
-.ti -1c
-.RI "bool \fByEnabled\fP () const "
+.RI "bool \fBxEnabled\fP () const"
 .br
 .ti -1c
-.RI "void \fBenableXMin\fP (bool tf)"
+.RI "void \fBenableY\fP (bool)"
 .br
-.RI "\fIEnable or disable minor vertical grid lines\&. \fP"
+.RI "Enable or disable horizontal grid lines\&. "
 .ti -1c
-.RI "bool \fBxMinEnabled\fP () const "
-.br
-.ti -1c
-.RI "void \fBenableYMin\fP (bool tf)"
-.br
-.RI "\fIEnable or disable minor horizontal grid lines\&. \fP"
-.ti -1c
-.RI "bool \fByMinEnabled\fP () const "
+.RI "bool \fByEnabled\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetXDiv\fP (const \fBQwtScaleDiv\fP &sx)"
+.RI "void \fBenableXMin\fP (bool)"
+.br
+.RI "Enable or disable minor vertical grid lines\&. "
+.ti -1c
+.RI "bool \fBxMinEnabled\fP () const"
 .br
 .ti -1c
-.RI "const \fBQwtScaleDiv\fP & \fBxScaleDiv\fP () const "
+.RI "void \fBenableYMin\fP (bool)"
+.br
+.RI "Enable or disable minor horizontal grid lines\&. "
+.ti -1c
+.RI "bool \fByMinEnabled\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetYDiv\fP (const \fBQwtScaleDiv\fP &sy)"
+.RI "void \fBsetXDiv\fP (const \fBQwtScaleDiv\fP &)"
 .br
 .ti -1c
-.RI "const \fBQwtScaleDiv\fP & \fByScaleDiv\fP () const "
+.RI "const \fBQwtScaleDiv\fP & \fBxScaleDiv\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetYDiv\fP (const \fBQwtScaleDiv\fP &)"
+.br
+.ti -1c
+.RI "const \fBQwtScaleDiv\fP & \fByScaleDiv\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -78,23 +78,23 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "void \fBsetMajorPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "const QPen & \fBmajorPen\fP () const "
+.RI "const QPen & \fBmajorPen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMinorPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
 .br
 .ti -1c
-.RI "void \fBsetMinorPen\fP (const QPen &p)"
+.RI "void \fBsetMinorPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "const QPen & \fBminorPen\fP () const "
+.RI "const QPen & \fBminorPen\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
-.RI "\fIDraw the grid\&. \fP"
+.RI "Draw the grid\&. "
 .ti -1c
-.RI "virtual void \fBupdateScaleDiv\fP (const \fBQwtScaleDiv\fP &xMap, const \fBQwtScaleDiv\fP &yMap)"
+.RI "virtual void \fBupdateScaleDiv\fP (const \fBQwtScaleDiv\fP &\fBxScaleDiv\fP, const \fBQwtScaleDiv\fP &\fByScaleDiv\fP)"
 .br
 .in -1c
 .SS "Additional Inherited Members"

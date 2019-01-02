@@ -1,4 +1,4 @@
-.TH "QwtPlotMultiBarChart" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotMultiBarChart" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,9 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QwtSetSample >\fP
 
 .in +1c
 .ti -1c
-.RI "enum \fBChartStyle\fP { \fBGrouped\fP, \fBStacked\fP }
-.RI "\fIChart styles\&. \fP""
+.RI "enum \fBChartStyle\fP { \fBGrouped\fP, \fBStacked\fP }"
 .br
+.RI "Chart styles\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -31,16 +31,16 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QwtSetSample >\fP
 .ti -1c
 .RI "virtual \fB~QwtPlotMultiBarChart\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBarTitles\fP (const QList< \fBQwtText\fP > &)"
 .br
-.RI "\fISet the titles for the bars\&. \fP"
+.RI "Set the titles for the bars\&. "
 .ti -1c
-.RI "QList< \fBQwtText\fP > \fBbarTitles\fP () const "
+.RI "QList< \fBQwtText\fP > \fBbarTitles\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (const QVector< \fBQwtSetSample\fP > &)"
@@ -55,52 +55,52 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QwtSetSample >\fP
 .RI "void \fBsetStyle\fP (\fBChartStyle\fP \fBstyle\fP)"
 .br
 .ti -1c
-.RI "\fBChartStyle\fP \fBstyle\fP () const "
+.RI "\fBChartStyle\fP \fBstyle\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetSymbol\fP (int barIndex, \fBQwtColumnSymbol\fP *\fBsymbol\fP)"
+.RI "void \fBsetSymbol\fP (int valueIndex, \fBQwtColumnSymbol\fP *)"
 .br
-.RI "\fIAdd a symbol to the symbol map\&. \fP"
+.RI "Add a symbol to the symbol map\&. "
 .ti -1c
-.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP (int barIndex) const "
+.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP (int valueIndex) const"
 .br
 .ti -1c
 .RI "void \fBresetSymbolMap\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const "
+.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "virtual QList< \fBQwtLegendData\fP > \fBlegendData\fP () const "
+.RI "virtual QList< \fBQwtLegendData\fP > \fBlegendData\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtColumnSymbol\fP * \fBsymbol\fP (int barIndex)"
+.RI "\fBQwtColumnSymbol\fP * \fBsymbol\fP (int valueIndex)"
 .br
 .ti -1c
-.RI "virtual \fBQwtColumnSymbol\fP * \fBspecialSymbol\fP (int sampleIndex, int valueIndex) const "
+.RI "virtual \fBQwtColumnSymbol\fP * \fBspecialSymbol\fP (int sampleIndex, int valueIndex) const"
 .br
-.RI "\fICreate a symbol for special values\&. \fP"
+.RI "Create a symbol for special values\&. "
 .ti -1c
-.RI "virtual void \fBdrawSample\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, const \fBQwtInterval\fP &boundingInterval, int index, const \fBQwtSetSample\fP &\fBsample\fP) const "
-.br
-.ti -1c
-.RI "virtual void \fBdrawBar\fP (QPainter *, int sampleIndex, int barIndex, const \fBQwtColumnRect\fP &) const "
+.RI "virtual void \fBdrawSample\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, const \fBQwtInterval\fP &boundingInterval, int index, const \fBQwtSetSample\fP &\fBsample\fP) const"
 .br
 .ti -1c
-.RI "void \fBdrawStackedBars\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int index, double \fBsampleWidth\fP, const \fBQwtSetSample\fP &\fBsample\fP) const "
+.RI "virtual void \fBdrawBar\fP (QPainter *, int sampleIndex, int valueIndex, const \fBQwtColumnRect\fP &) const"
 .br
 .ti -1c
-.RI "void \fBdrawGroupedBars\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int index, double \fBsampleWidth\fP, const \fBQwtSetSample\fP &\fBsample\fP) const "
+.RI "void \fBdrawStackedBars\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int index, double \fBsampleWidth\fP, const \fBQwtSetSample\fP &\fBsample\fP) const"
+.br
+.ti -1c
+.RI "void \fBdrawGroupedBars\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int index, double \fBsampleWidth\fP, const \fBQwtSetSample\fP &\fBsample\fP) const"
 .br
 .in -1c
 .SH "Detailed Description"

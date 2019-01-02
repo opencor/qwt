@@ -1,4 +1,4 @@
-.TH "QwtCPointerData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCPointerData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,20 +18,20 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 .RI "\fBQwtCPointerData\fP (const double *x, const double *y, size_t \fBsize\fP)"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
-.RI "\fICalculate the bounding rectangle\&. \fP"
+.RI "Calculate the bounding rectangle\&. "
 .ti -1c
-.RI "virtual size_t \fBsize\fP () const "
-.br
-.ti -1c
-.RI "virtual QPointF \fBsample\fP (size_t i) const "
+.RI "virtual size_t \fBsize\fP () const"
 .br
 .ti -1c
-.RI "const double * \fBxData\fP () const "
+.RI "virtual QPointF \fBsample\fP (size_t index) const"
 .br
 .ti -1c
-.RI "const double * \fByData\fP () const "
+.RI "const double * \fBxData\fP () const"
+.br
+.ti -1c
+.RI "const double * \fByData\fP () const"
 .br
 .in -1c
 .SS "Additional Inherited Members"

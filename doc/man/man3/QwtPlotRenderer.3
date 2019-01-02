@@ -1,4 +1,4 @@
-.TH "QwtPlotRenderer" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRenderer" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,21 +15,21 @@ Inherits QObject\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBDiscardFlag\fP { \fBDiscardNone\fP = 0x00, \fBDiscardBackground\fP = 0x01, \fBDiscardTitle\fP = 0x02, \fBDiscardLegend\fP = 0x04, \fBDiscardCanvasBackground\fP = 0x08, \fBDiscardFooter\fP = 0x10, \fBDiscardCanvasFrame\fP = 0x20 }
-.RI "\fIDisard flags\&. \fP""
+.RI "enum \fBDiscardFlag\fP { \fBDiscardNone\fP = 0x00, \fBDiscardBackground\fP = 0x01, \fBDiscardTitle\fP = 0x02, \fBDiscardLegend\fP = 0x04, \fBDiscardCanvasBackground\fP = 0x08, \fBDiscardFooter\fP = 0x10, \fBDiscardCanvasFrame\fP = 0x20 }"
 .br
+.RI "Disard flags\&. "
 .ti -1c
-.RI "enum \fBLayoutFlag\fP { \fBDefaultLayout\fP = 0x00, \fBFrameWithScales\fP = 0x01 }
-.RI "\fILayout flags\&. \fP""
+.RI "enum \fBLayoutFlag\fP { \fBDefaultLayout\fP = 0x00, \fBFrameWithScales\fP = 0x01 }"
 .br
+.RI "Layout flags\&. "
 .ti -1c
 .RI "typedef QFlags< \fBDiscardFlag\fP > \fBDiscardFlags\fP"
 .br
-.RI "\fIDisard flags\&. \fP"
+.RI "Disard flags\&. "
 .ti -1c
 .RI "typedef QFlags< \fBLayoutFlag\fP > \fBLayoutFlags\fP"
 .br
-.RI "\fILayout flags\&. \fP"
+.RI "Layout flags\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -40,30 +40,30 @@ Inherits QObject\&.
 .ti -1c
 .RI "virtual \fB~QwtPlotRenderer\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetDiscardFlag\fP (\fBDiscardFlag\fP flag, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestDiscardFlag\fP (\fBDiscardFlag\fP flag) const "
+.RI "bool \fBtestDiscardFlag\fP (\fBDiscardFlag\fP flag) const"
 .br
 .ti -1c
 .RI "void \fBsetDiscardFlags\fP (\fBDiscardFlags\fP flags)"
 .br
 .ti -1c
-.RI "\fBDiscardFlags\fP \fBdiscardFlags\fP () const "
+.RI "\fBDiscardFlags\fP \fBdiscardFlags\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLayoutFlag\fP (\fBLayoutFlag\fP flag, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestLayoutFlag\fP (\fBLayoutFlag\fP flag) const "
+.RI "bool \fBtestLayoutFlag\fP (\fBLayoutFlag\fP flag) const"
 .br
 .ti -1c
 .RI "void \fBsetLayoutFlags\fP (\fBLayoutFlags\fP flags)"
 .br
 .ti -1c
-.RI "\fBLayoutFlags\fP \fBlayoutFlags\fP () const "
+.RI "\fBLayoutFlags\fP \fBlayoutFlags\fP () const"
 .br
 .ti -1c
 .RI "void \fBrenderDocument\fP (\fBQwtPlot\fP *, const QString &fileName, const QSizeF &sizeMM, int resolution=85)"
@@ -72,36 +72,36 @@ Inherits QObject\&.
 .RI "void \fBrenderDocument\fP (\fBQwtPlot\fP *, const QString &fileName, const QString &format, const QSizeF &sizeMM, int resolution=85)"
 .br
 .ti -1c
-.RI "void \fBrenderTo\fP (\fBQwtPlot\fP *, QPrinter &) const "
+.RI "void \fBrenderTo\fP (\fBQwtPlot\fP *, QPrinter &) const"
 .br
-.RI "\fIRender the plot to a QPrinter\&. \fP"
+.RI "Render the plot to a QPrinter\&. "
 .ti -1c
-.RI "void \fBrenderTo\fP (\fBQwtPlot\fP *, QPaintDevice &p) const "
+.RI "void \fBrenderTo\fP (\fBQwtPlot\fP *, QPaintDevice &) const"
 .br
-.RI "\fIRender the plot to a \fCQPaintDevice\fP\&. \fP"
+.RI "Render the plot to a \fCQPaintDevice\fP\&. "
 .ti -1c
-.RI "virtual void \fBrender\fP (\fBQwtPlot\fP *, QPainter *, const QRectF &rect) const "
-.br
-.ti -1c
-.RI "virtual void \fBrenderTitle\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &) const "
+.RI "virtual void \fBrender\fP (\fBQwtPlot\fP *, QPainter *, const QRectF &plotRect) const"
 .br
 .ti -1c
-.RI "virtual void \fBrenderFooter\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &) const "
+.RI "virtual void \fBrenderTitle\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &titleRect) const"
 .br
 .ti -1c
-.RI "virtual void \fBrenderScale\fP (const \fBQwtPlot\fP *, QPainter *, int axisId, int startDist, int endDist, int baseDist, const QRectF &) const "
-.br
-.RI "\fIPaint a scale into a given rectangle\&. Paint the scale into a given rectangle\&. \fP"
-.ti -1c
-.RI "virtual void \fBrenderCanvas\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &canvasRect, const \fBQwtScaleMap\fP *maps) const "
+.RI "virtual void \fBrenderFooter\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &footerRect) const"
 .br
 .ti -1c
-.RI "virtual void \fBrenderLegend\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &) const "
+.RI "virtual void \fBrenderScale\fP (const \fBQwtPlot\fP *, QPainter *, int axisId, int startDist, int endDist, int baseDist, const QRectF &scaleRect) const"
+.br
+.RI "Paint a scale into a given rectangle\&. Paint the scale into a given rectangle\&. "
+.ti -1c
+.RI "virtual void \fBrenderCanvas\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &canvasRect, const \fBQwtScaleMap\fP *maps) const"
+.br
+.ti -1c
+.RI "virtual void \fBrenderLegend\fP (const \fBQwtPlot\fP *, QPainter *, const QRectF &legendRect) const"
 .br
 .ti -1c
 .RI "bool \fBexportTo\fP (\fBQwtPlot\fP *, const QString &documentName, const QSizeF &sizeMM=QSizeF(300, 200), int resolution=85)"
 .br
-.RI "\fIExecute a file dialog and render the plot to the selected file\&. \fP"
+.RI "Execute a file dialog and render the plot to the selected file\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -249,7 +249,7 @@ Paint the contents of a \fBQwtPlot\fP instance into a given rectangle\&.
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderCanvas (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & canvasRect, const \fBQwtScaleMap\fP * map) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderCanvas (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & canvasRect, const \fBQwtScaleMap\fP * maps) const\fC [virtual]\fP"
 Render the canvas into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -258,7 +258,7 @@ Render the canvas into a given rectangle\&.
 .br
 \fIpainter\fP Painter 
 .br
-\fImap\fP Maps mapping between plot and paint device coordinates 
+\fImaps\fP Maps mapping between plot and paint device coordinates 
 .br
 \fIcanvasRect\fP Canvas rectangle 
 .RE
@@ -325,7 +325,7 @@ Scalable vector graphic formats like PDF or SVG are superior to raster graphics 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderFooter (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderFooter (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & footerRect) const\fC [virtual]\fP"
 Render the footer into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -334,11 +334,11 @@ Render the footer into a given rectangle\&.
 .br
 \fIpainter\fP Painter 
 .br
-\fIrect\fP Bounding rectangle 
+\fIfooterRect\fP Bounding rectangle for the footer 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderLegend (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderLegend (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & legendRect) const\fC [virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -347,11 +347,11 @@ Render the legend into a given rectangle\&.
 .br
 \fIpainter\fP Painter 
 .br
-\fIrect\fP Bounding rectangle 
+\fIlegendRect\fP Bounding rectangle for the legend 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderScale (const \fBQwtPlot\fP * plot, QPainter * painter, int axisId, int startDist, int endDist, int baseDist, const QRectF & rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderScale (const \fBQwtPlot\fP * plot, QPainter * painter, int axisId, int startDist, int endDist, int baseDist, const QRectF & scaleRect) const\fC [virtual]\fP"
 
 .PP
 Paint a scale into a given rectangle\&. Paint the scale into a given rectangle\&. 
@@ -370,11 +370,11 @@ Paint a scale into a given rectangle\&. Paint the scale into a given rectangle\&
 .br
 \fIbaseDist\fP Base distance 
 .br
-\fIrect\fP Bounding rectangle 
+\fIscaleRect\fP Bounding rectangle for the scale 
 .RE
 .PP
 
-.SS "void QwtPlotRenderer::renderTitle (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & rect) const\fC [virtual]\fP"
+.SS "void QwtPlotRenderer::renderTitle (const \fBQwtPlot\fP * plot, QPainter * painter, const QRectF & titleRect) const\fC [virtual]\fP"
 Render the title into a given rectangle\&.
 .PP
 \fBParameters:\fP
@@ -383,7 +383,7 @@ Render the title into a given rectangle\&.
 .br
 \fIpainter\fP Painter 
 .br
-\fIrect\fP Bounding rectangle 
+\fItitleRect\fP Bounding rectangle for the title 
 .RE
 .PP
 

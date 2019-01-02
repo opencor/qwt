@@ -31,7 +31,7 @@ public:
     void setOrientation( Qt::Orientation );
     Qt::Orientation orientation() const;
 
-    virtual void draw( QPainter *p,
+    virtual void draw( QPainter *,
         const QwtScaleMap &xMap, const QwtScaleMap &yMap,
         const QRectF & ) const;
 
@@ -52,7 +52,7 @@ public:
 
     virtual QRectF boundingRect() const;
 
-    virtual void updateScaleDiv( 
+    virtual void updateScaleDiv(
         const QwtScaleDiv &, const QwtScaleDiv & );
 
 protected:

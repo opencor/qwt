@@ -1,4 +1,4 @@
-.TH "QwtScaleDiv" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleDiv" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,9 +13,9 @@ QwtScaleDiv \- A class representing a scale division\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBTickType\fP { \fBNoTick\fP = -1, \fBMinorTick\fP, \fBMediumTick\fP, \fBMajorTick\fP, \fBNTickTypes\fP }
-.RI "\fIScale tick types\&. \fP""
+.RI "enum \fBTickType\fP { \fBNoTick\fP = -1, \fBMinorTick\fP, \fBMediumTick\fP, \fBMajorTick\fP, \fBNTickTypes\fP }"
 .br
+.RI "Scale tick types\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -33,13 +33,13 @@ QwtScaleDiv \- A class representing a scale division\&.
 .RI "\fBQwtScaleDiv\fP (double \fBlowerBound\fP, double \fBupperBound\fP, const QList< double > &minorTicks, const QList< double > &mediumTicks, const QList< double > &majorTicks)"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (const \fBQwtScaleDiv\fP &) const "
+.RI "bool \fBoperator==\fP (const \fBQwtScaleDiv\fP &) const"
 .br
-.RI "\fIEquality operator\&. \fP"
+.RI "Equality operator\&. "
 .ti -1c
-.RI "bool \fBoperator!=\fP (const \fBQwtScaleDiv\fP &) const "
+.RI "bool \fBoperator!=\fP (const \fBQwtScaleDiv\fP &) const"
 .br
-.RI "\fIInequality\&. \fP"
+.RI "Inequality\&. "
 .ti -1c
 .RI "void \fBsetInterval\fP (double \fBlowerBound\fP, double \fBupperBound\fP)"
 .br
@@ -47,48 +47,48 @@ QwtScaleDiv \- A class representing a scale division\&.
 .RI "void \fBsetInterval\fP (const \fBQwtInterval\fP &)"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBinterval\fP () const "
+.RI "\fBQwtInterval\fP \fBinterval\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLowerBound\fP (double)"
 .br
 .ti -1c
-.RI "double \fBlowerBound\fP () const "
+.RI "double \fBlowerBound\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetUpperBound\fP (double)"
 .br
 .ti -1c
-.RI "double \fBupperBound\fP () const "
+.RI "double \fBupperBound\fP () const"
 .br
 .ti -1c
-.RI "double \fBrange\fP () const "
+.RI "double \fBrange\fP () const"
 .br
 .ti -1c
-.RI "bool \fBcontains\fP (double value) const "
+.RI "bool \fBcontains\fP (double value) const"
 .br
 .ti -1c
 .RI "void \fBsetTicks\fP (int tickType, const QList< double > &)"
 .br
 .ti -1c
-.RI "QList< double > \fBticks\fP (int tickType) const "
+.RI "QList< double > \fBticks\fP (int tickType) const"
 .br
 .ti -1c
-.RI "bool \fBisEmpty\fP () const "
+.RI "bool \fBisEmpty\fP () const"
 .br
-.RI "\fICheck if the scale division is empty( \fBlowerBound()\fP == \fBupperBound()\fP ) \fP"
+.RI "Check if the scale division is empty( \fBlowerBound()\fP == \fBupperBound()\fP ) "
 .ti -1c
-.RI "bool \fBisIncreasing\fP () const "
+.RI "bool \fBisIncreasing\fP () const"
 .br
-.RI "\fICheck if the scale division is increasing( \fBlowerBound()\fP <= \fBupperBound()\fP ) \fP"
+.RI "Check if the scale division is increasing( \fBlowerBound()\fP <= \fBupperBound()\fP ) "
 .ti -1c
 .RI "void \fBinvert\fP ()"
 .br
 .ti -1c
-.RI "\fBQwtScaleDiv\fP \fBinverted\fP () const "
+.RI "\fBQwtScaleDiv\fP \fBinverted\fP () const"
 .br
 .ti -1c
-.RI "\fBQwtScaleDiv\fP \fBbounded\fP (double \fBlowerBound\fP, double \fBupperBound\fP) const "
+.RI "\fBQwtScaleDiv\fP \fBbounded\fP (double \fBlowerBound\fP, double \fBupperBound\fP) const"
 .br
 .in -1c
 .SH "Detailed Description"

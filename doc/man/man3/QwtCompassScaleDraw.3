@@ -1,8 +1,8 @@
-.TH "QwtCompassScaleDraw" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassScaleDraw" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtCompassScaleDraw \- A special scale draw made for \fBQwtCompass\fP\&.  
+QwtCompassScaleDraw \- A special scale draw made for \fBQwtCompass\fP\&.
 
 .SH SYNOPSIS
 .br
@@ -17,26 +17,26 @@ Inherits \fBQwtRoundScaleDraw\fP\&.
 .ti -1c
 .RI "\fBQwtCompassScaleDraw\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtCompassScaleDraw\fP (const QMap< double, QString > &map)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "void \fBsetLabelMap\fP (const QMap< double, QString > &map)"
 .br
-.RI "\fISet a map, mapping values to labels\&. \fP"
+.RI "Set a map, mapping values to labels\&. "
 .ti -1c
-.RI "QMap< double, QString > \fBlabelMap\fP () const "
+.RI "QMap< double, QString > \fBlabelMap\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtText\fP \fBlabel\fP (double value) const "
+.RI "virtual \fBQwtText\fP \fBlabel\fP (double value) const"
 .br
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
-.PP 
-A special scale draw made for \fBQwtCompass\fP\&. 
+.PP
+A special scale draw made for \fBQwtCompass\fP\&.
 
 \fBQwtCompassScaleDraw\fP maps values to strings using a special map, that can be modified by the application
 .PP
@@ -44,29 +44,29 @@ The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 .PP
 \fBSee also:\fP
 .RS 4
-\fBQwtCompass\fP 
+\fBQwtCompass\fP
 .RE
 .PP
 
 .SH "Constructor & Destructor Documentation"
-.PP 
+.PP
 .SS "QwtCompassScaleDraw::QwtCompassScaleDraw ()\fC [explicit]\fP"
 
 .PP
-Constructor\&. Initializes a label map for multiples of 45 degrees 
+Constructor\&. Initializes a label map for multiples of 45 degrees
 .SS "QwtCompassScaleDraw::QwtCompassScaleDraw (const QMap< double, QString > & map)\fC [explicit]\fP"
 
 .PP
-Constructor\&. 
+Constructor\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fImap\fP Value to label map 
+\fImap\fP Value to label map
 .RE
 .PP
 
 .SH "Member Function Documentation"
-.PP 
+.PP
 .SS "\fBQwtText\fP QwtCompassScaleDraw::label (double value) const\fC [virtual]\fP"
 Map a value to a corresponding label
 .PP
@@ -79,12 +79,12 @@ Map a value to a corresponding label
 .PP
 \fBReturns:\fP
 .RS 4
-Label, or QString() 
+Label
 .RE
 .PP
 \fBSee also:\fP
 .RS 4
-\fBlabelMap()\fP, \fBsetLabelMap()\fP 
+\fBlabelMap()\fP, \fBsetLabelMap()\fP
 .RE
 .PP
 
@@ -95,19 +95,19 @@ Reimplemented from \fBQwtAbstractScaleDraw\fP\&.
 .PP
 \fBReturns:\fP
 .RS 4
-map, mapping values to labels 
+map, mapping values to labels
 .RE
 .PP
 \fBSee also:\fP
 .RS 4
-\fBsetLabelMap()\fP 
+\fBsetLabelMap()\fP
 .RE
 .PP
 
 .SS "void QwtCompassScaleDraw::setLabelMap (const QMap< double, QString > & map)"
 
 .PP
-Set a map, mapping values to labels\&. 
+Set a map, mapping values to labels\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -123,11 +123,11 @@ The map will have no effect for values that are no major tick values\&. Major ti
 .PP
 \fBSee also:\fP
 .RS 4
-\fBlabelMap()\fP, scaleDraw(), setScale() 
+\fBlabelMap()\fP, scaleDraw(), setScale()
 .RE
 .PP
 
 
 .SH "Author"
-.PP 
+.PP
 Generated automatically by Doxygen for Qwt User's Guide from the source code\&.

@@ -1,4 +1,4 @@
-.TH "QwtSystemClock" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSystemClock" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,13 +15,13 @@ QwtSystemClock \- \fBQwtSystemClock\fP provides high resolution clock time funct
 .ti -1c
 .RI "\fBQwtSystemClock\fP ()"
 .br
-.RI "\fIConstructs a null clock object\&. \fP"
+.RI "Constructs a null clock object\&. "
 .ti -1c
 .RI "virtual \fB~QwtSystemClock\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "bool \fBisNull\fP () const "
+.RI "bool \fBisNull\fP () const"
 .br
 .ti -1c
 .RI "void \fBstart\fP ()"
@@ -30,7 +30,7 @@ QwtSystemClock \- \fBQwtSystemClock\fP provides high resolution clock time funct
 .RI "double \fBrestart\fP ()"
 .br
 .ti -1c
-.RI "double \fBelapsed\fP () const "
+.RI "double \fBelapsed\fP () const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -40,6 +40,8 @@ QwtSystemClock \- \fBQwtSystemClock\fP provides high resolution clock time funct
 Sometimes the resolution offered by QTime ( millisecond ) is not accurate enough for implementing time measurements ( f\&.e\&. sampling )\&. \fBQwtSystemClock\fP offers a subset of the QTime functionality using higher resolution timers ( if possible )\&.
 .PP
 Precision and time intervals are multiples of milliseconds (ms)\&.
+.PP
+( \fBQwtSystemClock\fP is obsolete since Qt 4\&.8 as QElapsedTimer offers the same precision )
 .PP
 \fBNote:\fP
 .RS 4

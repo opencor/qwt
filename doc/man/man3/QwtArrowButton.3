@@ -1,4 +1,4 @@
-.TH "QwtArrowButton" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtArrowButton" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,22 +20,22 @@ Inherits QPushButton\&.
 .ti -1c
 .RI "virtual \fB~QwtArrowButton\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "Qt::ArrowType \fBarrowType\fP () const "
+.RI "Qt::ArrowType \fBarrowType\fP () const"
 .br
-.RI "\fIThe direction of the arrows\&. \fP"
+.RI "The direction of the arrows\&. "
 .ti -1c
-.RI "int \fBnum\fP () const "
+.RI "int \fBnum\fP () const"
 .br
-.RI "\fIThe number of arrows\&. \fP"
+.RI "The number of arrows\&. "
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
-.RI "\fIReturn a minimum size hint\&. \fP"
+.RI "Return a minimum size hint\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -44,22 +44,22 @@ Inherits QPushButton\&.
 .RI "virtual void \fBpaintEvent\fP (QPaintEvent *event)"
 .br
 .ti -1c
-.RI "virtual void \fBdrawButtonLabel\fP (QPainter *p)"
+.RI "virtual void \fBdrawButtonLabel\fP (QPainter *)"
 .br
-.RI "\fIDraw the button label\&. \fP"
+.RI "Draw the button label\&. "
 .ti -1c
-.RI "virtual void \fBdrawArrow\fP (QPainter *, const QRect &, Qt::ArrowType) const "
-.br
-.ti -1c
-.RI "virtual QRect \fBlabelRect\fP () const "
+.RI "virtual void \fBdrawArrow\fP (QPainter *, const QRect &, Qt::ArrowType) const"
 .br
 .ti -1c
-.RI "virtual QSize \fBarrowSize\fP (Qt::ArrowType, const QSize &boundingSize) const "
+.RI "virtual QRect \fBlabelRect\fP () const"
+.br
+.ti -1c
+.RI "virtual QSize \fBarrowSize\fP (Qt::ArrowType, const QSize &boundingSize) const"
 .br
 .ti -1c
 .RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
 .br
-.RI "\fIautoRepeat for the space keys \fP"
+.RI "autoRepeat for the space keys "
 .in -1c
 .SH "Detailed Description"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtSimpleCompassRose" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSimpleCompassRose" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,40 +20,40 @@ Inherits \fBQwtCompassRose\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtSimpleCompassRose\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "void \fBsetWidth\fP (double w)"
+.RI "void \fBsetWidth\fP (double)"
 .br
 .ti -1c
-.RI "double \fBwidth\fP () const "
+.RI "double \fBwidth\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetNumThorns\fP (int count)"
+.RI "void \fBsetNumThorns\fP (int)"
 .br
 .ti -1c
-.RI "int \fBnumThorns\fP () const "
+.RI "int \fBnumThorns\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetNumThornLevels\fP (int count)"
+.RI "void \fBsetNumThornLevels\fP (int)"
 .br
 .ti -1c
-.RI "int \fBnumThornLevels\fP () const "
+.RI "int \fBnumThornLevels\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetShrinkFactor\fP (double factor)"
 .br
 .ti -1c
-.RI "double \fBshrinkFactor\fP () const "
+.RI "double \fBshrinkFactor\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const QPointF &center, double radius, double north, QPalette::ColorGroup=QPalette::Active) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const QPointF &center, double radius, double north, QPalette::ColorGroup=QPalette::Active) const"
 .br
 .in -1c
 .SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static void \fBdrawRose\fP (QPainter *, const QPalette &, const QPointF &center, double radius, double origin, double \fBwidth\fP, int \fBnumThorns\fP, int \fBnumThornLevels\fP, double \fBshrinkFactor\fP)"
+.RI "static void \fBdrawRose\fP (QPainter *, const QPalette &, const QPointF &center, double radius, double north, double \fBwidth\fP, int \fBnumThorns\fP, int \fBnumThornLevels\fP, double \fBshrinkFactor\fP)"
 .br
 .in -1c
 .SH "Detailed Description"

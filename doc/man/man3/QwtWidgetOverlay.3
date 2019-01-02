@@ -1,4 +1,4 @@
-.TH "QwtWidgetOverlay" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWidgetOverlay" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,13 +17,13 @@ Inherited by QwtPickerRubberband, and QwtPickerTracker\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBMaskMode\fP { \fBNoMask\fP, \fBMaskHint\fP, \fBAlphaMask\fP }
-.RI "\fIMask mode\&. \fP""
+.RI "enum \fBMaskMode\fP { \fBNoMask\fP, \fBMaskHint\fP, \fBAlphaMask\fP }"
 .br
+.RI "Mask mode\&. "
 .ti -1c
-.RI "enum \fBRenderMode\fP { \fBAutoRenderMode\fP, \fBCopyAlphaMask\fP, \fBDrawOverlay\fP }
-.RI "\fIRender mode\&. \fP""
+.RI "enum \fBRenderMode\fP { \fBAutoRenderMode\fP, \fBCopyAlphaMask\fP, \fBDrawOverlay\fP }"
 .br
+.RI "Render mode\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -31,23 +31,23 @@ Inherited by QwtPickerRubberband, and QwtPickerTracker\&.
 .ti -1c
 .RI "\fBQwtWidgetOverlay\fP (QWidget *)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtWidgetOverlay\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetMaskMode\fP (\fBMaskMode\fP)"
 .br
-.RI "\fISpecify how to find the mask for the overlay\&. \fP"
+.RI "Specify how to find the mask for the overlay\&. "
 .ti -1c
-.RI "\fBMaskMode\fP \fBmaskMode\fP () const "
+.RI "\fBMaskMode\fP \fBmaskMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRenderMode\fP (\fBRenderMode\fP)"
 .br
 .ti -1c
-.RI "\fBRenderMode\fP \fBrenderMode\fP () const "
+.RI "\fBRenderMode\fP \fBrenderMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBupdateOverlay\fP ()"
@@ -55,7 +55,7 @@ Inherited by QwtPickerRubberband, and QwtPickerTracker\&.
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -67,11 +67,11 @@ Inherited by QwtPickerRubberband, and QwtPickerTracker\&.
 .RI "virtual void \fBresizeEvent\fP (QResizeEvent *event)"
 .br
 .ti -1c
-.RI "virtual QRegion \fBmaskHint\fP () const "
+.RI "virtual QRegion \fBmaskHint\fP () const"
 .br
-.RI "\fICalculate an approximation for the mask\&. \fP"
+.RI "Calculate an approximation for the mask\&. "
 .ti -1c
-.RI "virtual void \fBdrawOverlay\fP (QPainter *painter) const  =0"
+.RI "virtual void \fBdrawOverlay\fP (QPainter *painter) const =0"
 .br
 .in -1c
 .SH "Detailed Description"

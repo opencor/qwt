@@ -1,4 +1,4 @@
-.TH "QwtKnob" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtKnob" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,13 +15,13 @@ Inherits \fBQwtAbstractSlider\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBKnobStyle\fP { \fBFlat\fP, \fBRaised\fP, \fBSunken\fP, \fBStyled\fP }
-.RI "\fIStyle of the knob surface\&. \fP""
+.RI "enum \fBKnobStyle\fP { \fBFlat\fP, \fBRaised\fP, \fBSunken\fP, \fBStyled\fP }"
 .br
+.RI "Style of the knob surface\&. "
 .ti -1c
-.RI "enum \fBMarkerStyle\fP { \fBNoMarker\fP = -1, \fBTick\fP, \fBTriangle\fP, \fBDot\fP, \fBNub\fP, \fBNotch\fP }
-.RI "\fIMarker type\&. \fP""
+.RI "enum \fBMarkerStyle\fP { \fBNoMarker\fP = -1, \fBTick\fP, \fBTriangle\fP, \fBDot\fP, \fBNub\fP, \fBNotch\fP }"
 .br
+.RI "Marker type\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -29,86 +29,86 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .ti -1c
 .RI "\fBQwtKnob\fP (QWidget *parent=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtKnob\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetAlignment\fP (Qt::Alignment)"
 .br
-.RI "\fISet the alignment of the knob\&. \fP"
+.RI "Set the alignment of the knob\&. "
 .ti -1c
-.RI "Qt::Alignment \fBalignment\fP () const "
+.RI "Qt::Alignment \fBalignment\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetKnobWidth\fP (int)"
 .br
-.RI "\fIChange the knob's width\&. \fP"
+.RI "Change the knob's width\&. "
 .ti -1c
-.RI "int \fBknobWidth\fP () const "
+.RI "int \fBknobWidth\fP () const"
 .br
-.RI "\fIReturn the width of the knob\&. \fP"
+.RI "Return the width of the knob\&. "
 .ti -1c
 .RI "void \fBsetNumTurns\fP (int)"
 .br
-.RI "\fISet the number of turns\&. \fP"
+.RI "Set the number of turns\&. "
 .ti -1c
-.RI "int \fBnumTurns\fP () const "
+.RI "int \fBnumTurns\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTotalAngle\fP (double angle)"
 .br
-.RI "\fISet the total angle by which the knob can be turned\&. \fP"
+.RI "Set the total angle by which the knob can be turned\&. "
 .ti -1c
-.RI "double \fBtotalAngle\fP () const "
+.RI "double \fBtotalAngle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetKnobStyle\fP (\fBKnobStyle\fP)"
 .br
-.RI "\fISet the knob type\&. \fP"
+.RI "Set the knob type\&. "
 .ti -1c
-.RI "\fBKnobStyle\fP \fBknobStyle\fP () const "
+.RI "\fBKnobStyle\fP \fBknobStyle\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetBorderWidth\fP (int bw)"
+.RI "void \fBsetBorderWidth\fP (int)"
 .br
-.RI "\fISet the knob's border width\&. \fP"
+.RI "Set the knob's border width\&. "
 .ti -1c
-.RI "int \fBborderWidth\fP () const "
+.RI "int \fBborderWidth\fP () const"
 .br
-.RI "\fIReturn the border width\&. \fP"
+.RI "Return the border width\&. "
 .ti -1c
 .RI "void \fBsetMarkerStyle\fP (\fBMarkerStyle\fP)"
 .br
-.RI "\fISet the marker type of the knob\&. \fP"
+.RI "Set the marker type of the knob\&. "
 .ti -1c
-.RI "\fBMarkerStyle\fP \fBmarkerStyle\fP () const "
+.RI "\fBMarkerStyle\fP \fBmarkerStyle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMarkerSize\fP (int)"
 .br
-.RI "\fISet the size of the marker\&. \fP"
+.RI "Set the size of the marker\&. "
 .ti -1c
-.RI "int \fBmarkerSize\fP () const "
+.RI "int \fBmarkerSize\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtRoundScaleDraw\fP *)"
 .br
 .ti -1c
-.RI "const \fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP () const "
+.RI "const \fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP ()"
 .br
 .ti -1c
-.RI "QRect \fBknobRect\fP () const "
+.RI "QRect \fBknobRect\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -121,24 +121,24 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .RI "virtual void \fBchangeEvent\fP (QEvent *)"
 .br
 .ti -1c
-.RI "virtual void \fBdrawKnob\fP (QPainter *, const QRectF &) const "
+.RI "virtual void \fBdrawKnob\fP (QPainter *, const QRectF &) const"
 .br
-.RI "\fIDraw the knob\&. \fP"
+.RI "Draw the knob\&. "
 .ti -1c
-.RI "virtual void \fBdrawFocusIndicator\fP (QPainter *) const "
+.RI "virtual void \fBdrawFocusIndicator\fP (QPainter *) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawMarker\fP (QPainter *, const QRectF &, double arc) const "
+.RI "virtual void \fBdrawMarker\fP (QPainter *, const QRectF &, double angle) const"
 .br
-.RI "\fIDraw the marker at the knob's front\&. \fP"
+.RI "Draw the marker at the knob's front\&. "
 .ti -1c
-.RI "virtual double \fBscrolledTo\fP (const QPoint &) const "
+.RI "virtual double \fBscrolledTo\fP (const QPoint &) const"
 .br
-.RI "\fIDetermine the value for a new position of the mouse\&. \fP"
+.RI "Determine the value for a new position of the mouse\&. "
 .ti -1c
-.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const "
+.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const"
 .br
-.RI "\fIDetermine what to do when the user presses a mouse button\&. \fP"
+.RI "Determine what to do when the user presses a mouse button\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"

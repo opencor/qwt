@@ -1,4 +1,4 @@
-.TH "QwtSymbol" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSymbol" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,20 +28,20 @@ QwtSymbol \- A class for drawing symbols\&.
 .ti -1c
 .RI "\fBQwtSymbol\fP (\fBStyle\fP, const QBrush &, const QPen &, const QSize &)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtSymbol\fP (const QPainterPath &, const QBrush &, const QPen &)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtSymbol\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetCachePolicy\fP (\fBCachePolicy\fP)"
 .br
 .ti -1c
-.RI "\fBCachePolicy\fP \fBcachePolicy\fP () const "
+.RI "\fBCachePolicy\fP \fBcachePolicy\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSize\fP (const QSize &)"
@@ -49,33 +49,33 @@ QwtSymbol \- A class for drawing symbols\&.
 .ti -1c
 .RI "void \fBsetSize\fP (int width, int height=\-1)"
 .br
-.RI "\fISpecify the symbol's size\&. \fP"
+.RI "Specify the symbol's size\&. "
 .ti -1c
-.RI "const QSize & \fBsize\fP () const "
+.RI "const QSize & \fBsize\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPinPoint\fP (const QPointF &pos, bool enable=true)"
 .br
-.RI "\fISet and enable a pin point\&. \fP"
+.RI "Set and enable a pin point\&. "
 .ti -1c
-.RI "QPointF \fBpinPoint\fP () const "
+.RI "QPointF \fBpinPoint\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPinPointEnabled\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBisPinPointEnabled\fP () const "
+.RI "bool \fBisPinPointEnabled\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBsetColor\fP (const QColor &)"
 .br
-.RI "\fISet the color of the symbol\&. \fP"
+.RI "Set the color of the symbol\&. "
 .ti -1c
-.RI "void \fBsetBrush\fP (const QBrush &b)"
+.RI "void \fBsetBrush\fP (const QBrush &)"
 .br
-.RI "\fIAssign a brush\&. \fP"
+.RI "Assign a brush\&. "
 .ti -1c
-.RI "const QBrush & \fBbrush\fP () const "
+.RI "const QBrush & \fBbrush\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -84,53 +84,53 @@ QwtSymbol \- A class for drawing symbols\&.
 .RI "void \fBsetPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "const QPen & \fBpen\fP () const "
+.RI "const QPen & \fBpen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetStyle\fP (\fBStyle\fP)"
 .br
 .ti -1c
-.RI "\fBStyle\fP \fBstyle\fP () const "
+.RI "\fBStyle\fP \fBstyle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPath\fP (const QPainterPath &)"
 .br
-.RI "\fISet a painter path as symbol\&. \fP"
+.RI "Set a painter path as symbol\&. "
 .ti -1c
-.RI "const QPainterPath & \fBpath\fP () const "
+.RI "const QPainterPath & \fBpath\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPixmap\fP (const QPixmap &)"
 .br
 .ti -1c
-.RI "const QPixmap & \fBpixmap\fP () const "
+.RI "const QPixmap & \fBpixmap\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetGraphic\fP (const \fBQwtGraphic\fP &)"
 .br
 .ti -1c
-.RI "const \fBQwtGraphic\fP & \fBgraphic\fP () const "
+.RI "const \fBQwtGraphic\fP & \fBgraphic\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSvgDocument\fP (const QByteArray &)"
 .br
 .ti -1c
-.RI "void \fBdrawSymbol\fP (QPainter *, const QRectF &) const "
+.RI "void \fBdrawSymbol\fP (QPainter *, const QRectF &) const"
 .br
-.RI "\fIDraw the symbol into a rectangle\&. \fP"
+.RI "Draw the symbol into a rectangle\&. "
 .ti -1c
-.RI "void \fBdrawSymbol\fP (QPainter *, const QPointF &) const "
+.RI "void \fBdrawSymbol\fP (QPainter *, const QPointF &) const"
 .br
-.RI "\fIDraw the symbol at a specified position\&. \fP"
+.RI "Draw the symbol at a specified position\&. "
 .ti -1c
-.RI "void \fBdrawSymbols\fP (QPainter *, const QPolygonF &) const "
+.RI "void \fBdrawSymbols\fP (QPainter *, const QPolygonF &) const"
 .br
-.RI "\fIDraw symbols at the specified points\&. \fP"
+.RI "Draw symbols at the specified points\&. "
 .ti -1c
-.RI "void \fBdrawSymbols\fP (QPainter *, const QPointF *, int numPoints) const "
+.RI "void \fBdrawSymbols\fP (QPainter *, const QPointF *, int numPoints) const"
 .br
 .ti -1c
-.RI "virtual QRect \fBboundingRect\fP () const "
+.RI "virtual QRect \fBboundingRect\fP () const"
 .br
 .ti -1c
 .RI "void \fBinvalidateCache\fP ()"
@@ -140,7 +140,7 @@ QwtSymbol \- A class for drawing symbols\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBrenderSymbols\fP (QPainter *, const QPointF *, int numPoints) const "
+.RI "virtual void \fBrenderSymbols\fP (QPainter *, const QPointF *, int numPoints) const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -623,38 +623,42 @@ Set a painter path as symbol\&. The symbol is represented by a painter path, whe
 .PP
 When the symbol has valid size the painter path gets scaled to fit into the size\&. Otherwise the symbol size depends on the bounding rectangle of the path\&.
 .PP
+\fBExample\fP
+.RS 4
 The following code defines a symbol drawing an arrow:
+.RE
 .PP
 .PP
 .nf
-#include <qwt_symbol.h>
+#include <qwt_symbol\&.h>
 
 QwtSymbol *symbol = new QwtSymbol();
 
 QPen pen( Qt::black, 2 );
-pen.setJoinStyle( Qt::MiterJoin );
+pen\&.setJoinStyle( Qt::MiterJoin );
 
 symbol->setPen( pen );
 symbol->setBrush( Qt::red );
 
 QPainterPath path;
-path.moveTo( 0, 8 );
-path.lineTo( 0, 5 );
-path.lineTo( -3, 5 );
-path.lineTo( 0, 0 );
-path.lineTo( 3, 5 );
-path.lineTo( 0, 5 );
+path\&.moveTo( 0, 8 );
+path\&.lineTo( 0, 5 );
+path\&.lineTo( -3, 5 );
+path\&.lineTo( 0, 0 );
+path\&.lineTo( 3, 5 );
+path\&.lineTo( 0, 5 );
 
 QTransform transform;
-transform.rotate( -30.0 );
-path = transform.map( path );
+transform\&.rotate( -30\&.0 );
+path = transform\&.map( path );
 
 symbol->setPath( path );
-symbol->setPinPoint( QPointF( 0.0, 0.0 ) );
+symbol->setPinPoint( QPointF( 0\&.0, 0\&.0 ) );
 
 setSize( 10, 14 );
 .fi
 .PP
+ 
 .PP
 \fBParameters:\fP
 .RS 4

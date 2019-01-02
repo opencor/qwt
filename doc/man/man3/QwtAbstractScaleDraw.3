@@ -1,4 +1,4 @@
-.TH "QwtAbstractScaleDraw" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractScaleDraw" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,7 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBScaleComponent\fP > \fBScaleComponents\fP"
 .br
-.RI "\fIScale components\&. \fP"
+.RI "Scale components\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -28,22 +28,22 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .ti -1c
 .RI "\fBQwtAbstractScaleDraw\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtAbstractScaleDraw\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "void \fBsetScaleDiv\fP (const \fBQwtScaleDiv\fP &s)"
+.RI "void \fBsetScaleDiv\fP (const \fBQwtScaleDiv\fP &)"
 .br
 .ti -1c
-.RI "const \fBQwtScaleDiv\fP & \fBscaleDiv\fP () const "
+.RI "const \fBQwtScaleDiv\fP & \fBscaleDiv\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTransformation\fP (\fBQwtTransform\fP *)"
 .br
 .ti -1c
-.RI "const \fBQwtScaleMap\fP & \fBscaleMap\fP () const "
+.RI "const \fBQwtScaleMap\fP & \fBscaleMap\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtScaleMap\fP & \fBscaleMap\fP ()"
@@ -52,70 +52,70 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .RI "void \fBenableComponent\fP (\fBScaleComponent\fP, bool enable=true)"
 .br
 .ti -1c
-.RI "bool \fBhasComponent\fP (\fBScaleComponent\fP) const "
+.RI "bool \fBhasComponent\fP (\fBScaleComponent\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetTickLength\fP (\fBQwtScaleDiv::TickType\fP, double length)"
 .br
 .ti -1c
-.RI "double \fBtickLength\fP (\fBQwtScaleDiv::TickType\fP) const "
+.RI "double \fBtickLength\fP (\fBQwtScaleDiv::TickType\fP) const"
 .br
 .ti -1c
-.RI "double \fBmaxTickLength\fP () const "
+.RI "double \fBmaxTickLength\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetSpacing\fP (double margin)"
+.RI "void \fBsetSpacing\fP (double)"
 .br
-.RI "\fISet the spacing between tick and labels\&. \fP"
+.RI "Set the spacing between tick and labels\&. "
 .ti -1c
-.RI "double \fBspacing\fP () const "
+.RI "double \fBspacing\fP () const"
 .br
-.RI "\fIGet the spacing\&. \fP"
+.RI "Get the spacing\&. "
 .ti -1c
 .RI "void \fBsetPenWidth\fP (int width)"
 .br
-.RI "\fISpecify the width of the scale pen\&. \fP"
+.RI "Specify the width of the scale pen\&. "
 .ti -1c
-.RI "int \fBpenWidth\fP () const "
+.RI "int \fBpenWidth\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const QPalette &) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const QPalette &) const"
 .br
-.RI "\fIDraw the scale\&. \fP"
+.RI "Draw the scale\&. "
 .ti -1c
-.RI "virtual \fBQwtText\fP \fBlabel\fP (double) const "
+.RI "virtual \fBQwtText\fP \fBlabel\fP (double) const"
 .br
-.RI "\fIConvert a value into its representing label\&. \fP"
+.RI "Convert a value into its representing label\&. "
 .ti -1c
-.RI "virtual double \fBextent\fP (const QFont &font) const  =0"
+.RI "virtual double \fBextent\fP (const QFont &font) const =0"
 .br
 .ti -1c
 .RI "void \fBsetMinimumExtent\fP (double)"
 .br
-.RI "\fISet a minimum for the extent\&. \fP"
+.RI "Set a minimum for the extent\&. "
 .ti -1c
-.RI "double \fBminimumExtent\fP () const "
+.RI "double \fBminimumExtent\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawTick\fP (QPainter *painter, double value, double len) const  =0"
+.RI "virtual void \fBdrawTick\fP (QPainter *painter, double value, double len) const =0"
 .br
 .ti -1c
-.RI "virtual void \fBdrawBackbone\fP (QPainter *painter) const  =0"
+.RI "virtual void \fBdrawBackbone\fP (QPainter *painter) const =0"
 .br
 .ti -1c
-.RI "virtual void \fBdrawLabel\fP (QPainter *painter, double value) const  =0"
+.RI "virtual void \fBdrawLabel\fP (QPainter *painter, double value) const =0"
 .br
 .ti -1c
 .RI "void \fBinvalidateCache\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtText\fP & \fBtickLabel\fP (const QFont &, double value) const "
+.RI "const \fBQwtText\fP & \fBtickLabel\fP (const QFont &, double value) const"
 .br
-.RI "\fIConvert a value into its representing label and cache it\&. \fP"
+.RI "Convert a value into its representing label and cache it\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

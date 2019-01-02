@@ -1,4 +1,4 @@
-.TH "QwtPlotItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,33 +15,33 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 
 .in +1c
 .ti -1c
-.RI "enum \fBRttiValues\fP { \fBRtti_PlotItem\fP = 0, \fBRtti_PlotGrid\fP, \fBRtti_PlotScale\fP, \fBRtti_PlotLegend\fP, \fBRtti_PlotMarker\fP, \fBRtti_PlotCurve\fP, \fBRtti_PlotSpectroCurve\fP, \fBRtti_PlotIntervalCurve\fP, \fBRtti_PlotHistogram\fP, \fBRtti_PlotSpectrogram\fP, \fBRtti_PlotSVG\fP, \fBRtti_PlotTradingCurve\fP, \fBRtti_PlotBarChart\fP, \fBRtti_PlotMultiBarChart\fP, \fBRtti_PlotShape\fP, \fBRtti_PlotTextLabel\fP, \fBRtti_PlotZone\fP, \fBRtti_PlotUserItem\fP = 1000 }
-.RI "\fIRuntime type information\&. \fP""
+.RI "enum \fBRttiValues\fP { \fBRtti_PlotItem\fP = 0, \fBRtti_PlotGrid\fP, \fBRtti_PlotScale\fP, \fBRtti_PlotLegend\fP, \fBRtti_PlotMarker\fP, \fBRtti_PlotCurve\fP, \fBRtti_PlotSpectroCurve\fP, \fBRtti_PlotIntervalCurve\fP, \fBRtti_PlotHistogram\fP, \fBRtti_PlotSpectrogram\fP, \fBRtti_PlotSVG\fP, \fBRtti_PlotTradingCurve\fP, \fBRtti_PlotBarChart\fP, \fBRtti_PlotMultiBarChart\fP, \fBRtti_PlotShape\fP, \fBRtti_PlotTextLabel\fP, \fBRtti_PlotZone\fP, \fBRtti_PlotUserItem\fP = 1000 }"
 .br
+.RI "Runtime type information\&. "
 .ti -1c
-.RI "enum \fBItemAttribute\fP { \fBLegend\fP = 0x01, \fBAutoScale\fP = 0x02, \fBMargins\fP = 0x04 }
-.RI "\fIPlot Item Attributes\&. \fP""
+.RI "enum \fBItemAttribute\fP { \fBLegend\fP = 0x01, \fBAutoScale\fP = 0x02, \fBMargins\fP = 0x04 }"
 .br
+.RI "Plot Item Attributes\&. "
 .ti -1c
-.RI "enum \fBItemInterest\fP { \fBScaleInterest\fP = 0x01, \fBLegendInterest\fP = 0x02 }
-.RI "\fIPlot Item Interests\&. \fP""
+.RI "enum \fBItemInterest\fP { \fBScaleInterest\fP = 0x01, \fBLegendInterest\fP = 0x02 }"
 .br
+.RI "Plot Item Interests\&. "
 .ti -1c
-.RI "enum \fBRenderHint\fP { \fBRenderAntialiased\fP = 0x1 }
-.RI "\fIRender hints\&. \fP""
+.RI "enum \fBRenderHint\fP { \fBRenderAntialiased\fP = 0x1 }"
 .br
+.RI "Render hints\&. "
 .ti -1c
 .RI "typedef QFlags< \fBItemAttribute\fP > \fBItemAttributes\fP"
 .br
-.RI "\fIPlot Item Attributes\&. \fP"
+.RI "Plot Item Attributes\&. "
 .ti -1c
 .RI "typedef QFlags< \fBItemInterest\fP > \fBItemInterests\fP"
 .br
-.RI "\fIPlot Item Interests\&. \fP"
+.RI "Plot Item Interests\&. "
 .ti -1c
 .RI "typedef QFlags< \fBRenderHint\fP > \fBRenderHints\fP"
 .br
-.RI "\fIRender hints\&. \fP"
+.RI "Render hints\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -52,19 +52,19 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .ti -1c
 .RI "virtual \fB~QwtPlotItem\fP ()"
 .br
-.RI "\fIDestroy the \fBQwtPlotItem\fP\&. \fP"
+.RI "Destroy the \fBQwtPlotItem\fP\&. "
 .ti -1c
 .RI "void \fBattach\fP (\fBQwtPlot\fP *\fBplot\fP)"
 .br
-.RI "\fIAttach the item to a plot\&. \fP"
+.RI "Attach the item to a plot\&. "
 .ti -1c
 .RI "void \fBdetach\fP ()"
 .br
-.RI "\fIThis method detaches a \fBQwtPlotItem\fP from any \fBQwtPlot\fP it has been associated with\&. \fP"
+.RI "This method detaches a \fBQwtPlotItem\fP from any \fBQwtPlot\fP it has been associated with\&. "
 .ti -1c
-.RI "\fBQwtPlot\fP * \fBplot\fP () const "
+.RI "\fBQwtPlot\fP * \fBplot\fP () const"
 .br
-.RI "\fIReturn attached plot\&. \fP"
+.RI "Return attached plot\&. "
 .ti -1c
 .RI "void \fBsetTitle\fP (const QString &\fBtitle\fP)"
 .br
@@ -72,61 +72,61 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .RI "void \fBsetTitle\fP (const \fBQwtText\fP &\fBtitle\fP)"
 .br
 .ti -1c
-.RI "const \fBQwtText\fP & \fBtitle\fP () const "
+.RI "const \fBQwtText\fP & \fBtitle\fP () const"
 .br
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetItemAttribute\fP (\fBItemAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestItemAttribute\fP (\fBItemAttribute\fP) const "
+.RI "bool \fBtestItemAttribute\fP (\fBItemAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetItemInterest\fP (\fBItemInterest\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestItemInterest\fP (\fBItemInterest\fP) const "
+.RI "bool \fBtestItemInterest\fP (\fBItemInterest\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetRenderHint\fP (\fBRenderHint\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestRenderHint\fP (\fBRenderHint\fP) const "
+.RI "bool \fBtestRenderHint\fP (\fBRenderHint\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetRenderThreadCount\fP (uint numThreads)"
 .br
 .ti -1c
-.RI "uint \fBrenderThreadCount\fP () const "
+.RI "uint \fBrenderThreadCount\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLegendIconSize\fP (const QSize &)"
 .br
 .ti -1c
-.RI "QSize \fBlegendIconSize\fP () const "
+.RI "QSize \fBlegendIconSize\fP () const"
 .br
 .ti -1c
-.RI "double \fBz\fP () const "
+.RI "double \fBz\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetZ\fP (double \fBz\fP)"
 .br
-.RI "\fISet the z value\&. \fP"
+.RI "Set the z value\&. "
 .ti -1c
 .RI "void \fBshow\fP ()"
 .br
-.RI "\fIShow the item\&. \fP"
+.RI "Show the item\&. "
 .ti -1c
 .RI "void \fBhide\fP ()"
 .br
-.RI "\fIHide the item\&. \fP"
+.RI "Hide the item\&. "
 .ti -1c
 .RI "virtual void \fBsetVisible\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBisVisible\fP () const "
+.RI "bool \fBisVisible\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAxes\fP (int \fBxAxis\fP, int \fByAxis\fP)"
@@ -135,16 +135,16 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .RI "void \fBsetXAxis\fP (int axis)"
 .br
 .ti -1c
-.RI "int \fBxAxis\fP () const "
+.RI "int \fBxAxis\fP () const"
 .br
-.RI "\fIReturn xAxis\&. \fP"
+.RI "Return xAxis\&. "
 .ti -1c
 .RI "void \fBsetYAxis\fP (int axis)"
 .br
 .ti -1c
-.RI "int \fByAxis\fP () const "
+.RI "int \fByAxis\fP () const"
 .br
-.RI "\fIReturn yAxis\&. \fP"
+.RI "Return yAxis\&. "
 .ti -1c
 .RI "virtual void \fBitemChanged\fP ()"
 .br
@@ -152,47 +152,47 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .RI "virtual void \fBlegendChanged\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const  =0"
+.RI "virtual void \fBdraw\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const =0"
 .br
-.RI "\fIDraw the item\&. \fP"
+.RI "Draw the item\&. "
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBgetCanvasMarginHint\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasSize, double &left, double &top, double &right, double &bottom) const "
+.RI "virtual void \fBgetCanvasMarginHint\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, double &left, double &top, double &right, double &bottom) const"
 .br
-.RI "\fICalculate a hint for the canvas margin\&. \fP"
+.RI "Calculate a hint for the canvas margin\&. "
 .ti -1c
 .RI "virtual void \fBupdateScaleDiv\fP (const \fBQwtScaleDiv\fP &, const \fBQwtScaleDiv\fP &)"
 .br
-.RI "\fIUpdate the item to changes of the axes scale division\&. \fP"
+.RI "Update the item to changes of the axes scale division\&. "
 .ti -1c
 .RI "virtual void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *, const QList< \fBQwtLegendData\fP > &)"
 .br
-.RI "\fIUpdate the item to changes of the legend info\&. \fP"
+.RI "Update the item to changes of the legend info\&. "
 .ti -1c
-.RI "QRectF \fBscaleRect\fP (const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const "
+.RI "QRectF \fBscaleRect\fP (const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const"
 .br
-.RI "\fICalculate the bounding scale rectangle of 2 maps\&. \fP"
+.RI "Calculate the bounding scale rectangle of 2 maps\&. "
 .ti -1c
-.RI "QRectF \fBpaintRect\fP (const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const "
+.RI "QRectF \fBpaintRect\fP (const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const"
 .br
-.RI "\fICalculate the bounding paint rectangle of 2 maps\&. \fP"
+.RI "Calculate the bounding paint rectangle of 2 maps\&. "
 .ti -1c
-.RI "virtual QList< \fBQwtLegendData\fP > \fBlegendData\fP () const "
+.RI "virtual QList< \fBQwtLegendData\fP > \fBlegendData\fP () const"
 .br
-.RI "\fIReturn all information, that is needed to represent the item on the legend\&. \fP"
+.RI "Return all information, that is needed to represent the item on the legend\&. "
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtGraphic\fP \fBdefaultIcon\fP (const QBrush &, const QSizeF &) const "
+.RI "\fBQwtGraphic\fP \fBdefaultIcon\fP (const QBrush &, const QSizeF &) const"
 .br
-.RI "\fIReturn a default icon from a brush\&. \fP"
+.RI "Return a default icon from a brush\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -499,10 +499,7 @@ The margins are in target device coordinates ( pixels on screen )
 \fIbottom\fP Returns the bottom margin
 .RE
 .PP
-\fBReturns:\fP
-.RS 4
 The default implementation returns 0 for all margins
-.RE
 .PP
 \fBSee also:\fP
 .RS 4

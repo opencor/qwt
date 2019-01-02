@@ -1,4 +1,4 @@
-.TH "QwtWheel" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWheel" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,19 +17,19 @@ Inherits QWidget\&.
 .ti -1c
 .RI "void \fBsetValue\fP (double)"
 .br
-.RI "\fISet a new value without adjusting to the step raster\&. \fP"
+.RI "Set a new value without adjusting to the step raster\&. "
 .ti -1c
 .RI "void \fBsetTotalAngle\fP (double)"
 .br
-.RI "\fISet the total angle which the wheel can be turned\&. \fP"
+.RI "Set the total angle which the wheel can be turned\&. "
 .ti -1c
 .RI "void \fBsetViewAngle\fP (double)"
 .br
-.RI "\fISpecify the visible portion of the wheel\&. \fP"
+.RI "Specify the visible portion of the wheel\&. "
 .ti -1c
 .RI "void \fBsetMass\fP (double)"
 .br
-.RI "\fISet the slider's mass for flywheel effect\&. \fP"
+.RI "Set the slider's mass for flywheel effect\&. "
 .in -1c
 .SS "Signals"
 
@@ -37,7 +37,7 @@ Inherits QWidget\&.
 .ti -1c
 .RI "void \fBvalueChanged\fP (double \fBvalue\fP)"
 .br
-.RI "\fINotify a change of value\&. \fP"
+.RI "Notify a change of value\&. "
 .ti -1c
 .RI "void \fBwheelPressed\fP ()"
 .br
@@ -54,122 +54,122 @@ Inherits QWidget\&.
 .ti -1c
 .RI "\fBQwtWheel\fP (QWidget *parent=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtWheel\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "double \fBvalue\fP () const "
+.RI "double \fBvalue\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetOrientation\fP (Qt::Orientation)"
 .br
-.RI "\fISet the wheel's orientation\&. \fP"
+.RI "Set the wheel's orientation\&. "
 .ti -1c
-.RI "Qt::Orientation \fBorientation\fP () const "
+.RI "Qt::Orientation \fBorientation\fP () const"
 .br
 .ti -1c
-.RI "double \fBtotalAngle\fP () const "
+.RI "double \fBtotalAngle\fP () const"
 .br
 .ti -1c
-.RI "double \fBviewAngle\fP () const "
+.RI "double \fBviewAngle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTickCount\fP (int)"
 .br
-.RI "\fIAdjust the number of grooves in the wheel's surface\&. \fP"
+.RI "Adjust the number of grooves in the wheel's surface\&. "
 .ti -1c
-.RI "int \fBtickCount\fP () const "
+.RI "int \fBtickCount\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetWheelWidth\fP (int)"
 .br
-.RI "\fISet the width of the wheel\&. \fP"
+.RI "Set the width of the wheel\&. "
 .ti -1c
-.RI "int \fBwheelWidth\fP () const "
+.RI "int \fBwheelWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetWheelBorderWidth\fP (int)"
 .br
-.RI "\fISet the wheel border width of the wheel\&. \fP"
+.RI "Set the wheel border width of the wheel\&. "
 .ti -1c
-.RI "int \fBwheelBorderWidth\fP () const "
+.RI "int \fBwheelBorderWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBorderWidth\fP (int)"
 .br
-.RI "\fISet the border width\&. \fP"
+.RI "Set the border width\&. "
 .ti -1c
-.RI "int \fBborderWidth\fP () const "
+.RI "int \fBborderWidth\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetInverted\fP (bool tf)"
+.RI "void \fBsetInverted\fP (bool)"
 .br
-.RI "\fIEn/Disable inverted appearance\&. \fP"
+.RI "En/Disable inverted appearance\&. "
 .ti -1c
-.RI "bool \fBisInverted\fP () const "
+.RI "bool \fBisInverted\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetWrapping\fP (bool tf)"
+.RI "void \fBsetWrapping\fP (bool)"
 .br
-.RI "\fIEn/Disable wrapping\&. \fP"
+.RI "En/Disable wrapping\&. "
 .ti -1c
-.RI "bool \fBwrapping\fP () const "
+.RI "bool \fBwrapping\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSingleStep\fP (double)"
 .br
-.RI "\fISet the step size of the counter\&. \fP"
+.RI "Set the step size of the counter\&. "
 .ti -1c
-.RI "double \fBsingleStep\fP () const "
+.RI "double \fBsingleStep\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPageStepCount\fP (int)"
 .br
-.RI "\fISet the page step count\&. \fP"
+.RI "Set the page step count\&. "
 .ti -1c
-.RI "int \fBpageStepCount\fP () const "
+.RI "int \fBpageStepCount\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetStepAlignment\fP (bool on)"
 .br
-.RI "\fIEn/Disable step alignment\&. \fP"
+.RI "En/Disable step alignment\&. "
 .ti -1c
-.RI "bool \fBstepAlignment\fP () const "
+.RI "bool \fBstepAlignment\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetRange\fP (double vmin, double vmax)"
+.RI "void \fBsetRange\fP (double min, double max)"
 .br
-.RI "\fISet the minimum and maximum values\&. \fP"
+.RI "Set the minimum and maximum values\&. "
 .ti -1c
-.RI "void \fBsetMinimum\fP (double min)"
-.br
-.ti -1c
-.RI "double \fBminimum\fP () const "
+.RI "void \fBsetMinimum\fP (double)"
 .br
 .ti -1c
-.RI "void \fBsetMaximum\fP (double max)"
+.RI "double \fBminimum\fP () const"
 .br
 .ti -1c
-.RI "double \fBmaximum\fP () const "
+.RI "void \fBsetMaximum\fP (double)"
+.br
+.ti -1c
+.RI "double \fBmaximum\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetUpdateInterval\fP (int)"
 .br
-.RI "\fISpecify the update interval when the wheel is flying\&. \fP"
+.RI "Specify the update interval when the wheel is flying\&. "
 .ti -1c
-.RI "int \fBupdateInterval\fP () const "
+.RI "int \fBupdateInterval\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetTracking\fP (bool enable)"
+.RI "void \fBsetTracking\fP (bool)"
 .br
-.RI "\fIEn/Disable tracking\&. \fP"
+.RI "En/Disable tracking\&. "
 .ti -1c
-.RI "bool \fBisTracking\fP () const "
+.RI "bool \fBisTracking\fP () const"
 .br
 .ti -1c
-.RI "double \fBmass\fP () const "
+.RI "double \fBmass\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -178,42 +178,42 @@ Inherits QWidget\&.
 .ti -1c
 .RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
 .br
-.RI "\fIQt Paint Event\&. \fP"
+.RI "Qt Paint Event\&. "
 .ti -1c
 .RI "virtual void \fBmousePressEvent\fP (QMouseEvent *)"
 .br
-.RI "\fIMouse press event handler\&. \fP"
+.RI "Mouse press event handler\&. "
 .ti -1c
 .RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *)"
 .br
-.RI "\fIMouse Release Event handler\&. \fP"
+.RI "Mouse Release Event handler\&. "
 .ti -1c
 .RI "virtual void \fBmouseMoveEvent\fP (QMouseEvent *)"
 .br
-.RI "\fIMouse Move Event handler\&. \fP"
+.RI "Mouse Move Event handler\&. "
 .ti -1c
 .RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
 .br
 .ti -1c
 .RI "virtual void \fBwheelEvent\fP (QWheelEvent *)"
 .br
-.RI "\fIHandle wheel events\&. \fP"
+.RI "Handle wheel events\&. "
 .ti -1c
 .RI "virtual void \fBtimerEvent\fP (QTimerEvent *)"
 .br
-.RI "\fIQt timer event\&. \fP"
+.RI "Qt timer event\&. "
 .ti -1c
 .RI "void \fBstopFlying\fP ()"
 .br
-.RI "\fIStop the flying movement of the wheel\&. \fP"
+.RI "Stop the flying movement of the wheel\&. "
 .ti -1c
-.RI "QRect \fBwheelRect\fP () const "
+.RI "QRect \fBwheelRect\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBdrawTicks\fP (QPainter *, const QRectF &)"
@@ -222,7 +222,7 @@ Inherits QWidget\&.
 .RI "virtual void \fBdrawWheelBackground\fP (QPainter *, const QRectF &)"
 .br
 .ti -1c
-.RI "virtual double \fBvalueAt\fP (const QPoint &) const "
+.RI "virtual double \fBvalueAt\fP (const QPoint &) const"
 .br
 .in -1c
 .SH "Detailed Description"

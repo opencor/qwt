@@ -1,4 +1,4 @@
-.TH "QwtPlotGLCanvas" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotGLCanvas" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,13 +15,13 @@ Inherits QGLWidget\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBShadow\fP { \fBPlain\fP = QFrame::Plain, \fBRaised\fP = QFrame::Raised, \fBSunken\fP = QFrame::Sunken }
-.RI "\fIFrame shadow\&. \fP""
+.RI "enum \fBShadow\fP { \fBPlain\fP = QFrame::Plain, \fBRaised\fP = QFrame::Raised, \fBSunken\fP = QFrame::Sunken }"
 .br
+.RI "Frame shadow\&. "
 .ti -1c
-.RI "enum \fBShape\fP { \fBNoFrame\fP = QFrame::NoFrame, \fBBox\fP = QFrame::Box, \fBPanel\fP = QFrame::Panel }
-.RI "\fIFrame shape\&. \fP""
+.RI "enum \fBShape\fP { \fBNoFrame\fP = QFrame::NoFrame, \fBBox\fP = QFrame::Box, \fBPanel\fP = QFrame::Panel }"
 .br
+.RI "Frame shape\&. "
 .in -1c
 .SS "Public Slots"
 
@@ -29,7 +29,7 @@ Inherits QGLWidget\&.
 .ti -1c
 .RI "void \fBreplot\fP ()"
 .br
-.RI "\fICalls repaint() \fP"
+.RI "Calls repaint() "
 .in -1c
 .SS "Public Member Functions"
 
@@ -37,49 +37,49 @@ Inherits QGLWidget\&.
 .ti -1c
 .RI "\fBQwtPlotGLCanvas\fP (\fBQwtPlot\fP *=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotGLCanvas\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetFrameStyle\fP (int style)"
 .br
 .ti -1c
-.RI "int \fBframeStyle\fP () const "
+.RI "int \fBframeStyle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetFrameShadow\fP (\fBShadow\fP)"
 .br
 .ti -1c
-.RI "\fBShadow\fP \fBframeShadow\fP () const "
+.RI "\fBShadow\fP \fBframeShadow\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetFrameShape\fP (\fBShape\fP)"
 .br
 .ti -1c
-.RI "\fBShape\fP \fBframeShape\fP () const "
+.RI "\fBShape\fP \fBframeShape\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLineWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBlineWidth\fP () const "
+.RI "int \fBlineWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMidLineWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBmidLineWidth\fP () const "
+.RI "int \fBmidLineWidth\fP () const"
 .br
 .ti -1c
-.RI "int \fBframeWidth\fP () const "
+.RI "int \fBframeWidth\fP () const"
 .br
 .ti -1c
-.RI "QRect \fBframeRect\fP () const "
+.RI "QRect \fBframeRect\fP () const"
 .br
 .ti -1c
-.RI "Q_INVOKABLE QPainterPath \fBborderPath\fP (const QRect &) const "
+.RI "Q_INVOKABLE QPainterPath \fBborderPath\fP (const QRect &) const"
 .br
 .ti -1c
 .RI "virtual bool \fBevent\fP (QEvent *)"
@@ -145,7 +145,7 @@ Frame shape\&. Unfortunately it is not possible to use QFrame::Shape as a proper
 .PP
 \fBNote:\fP
 .RS 4
-QFrame::StyledPanel and QFrame::WinPanel are unsuported and will be displayed as QFrame::Panel\&. 
+QFrame::StyledPanel and QFrame::WinPanel are unsupported and will be displayed as QFrame::Panel\&. 
 .RE
 .PP
 

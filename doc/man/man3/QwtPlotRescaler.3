@@ -1,4 +1,4 @@
-.TH "QwtPlotRescaler" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRescaler" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,19 +30,19 @@ Inherits QObject\&.
 .ti -1c
 .RI "virtual \fB~QwtPlotRescaler\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetEnabled\fP (bool)"
 .br
-.RI "\fIEn/disable the rescaler\&. \fP"
+.RI "En/disable the rescaler\&. "
 .ti -1c
-.RI "bool \fBisEnabled\fP () const "
+.RI "bool \fBisEnabled\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRescalePolicy\fP (\fBRescalePolicy\fP)"
 .br
 .ti -1c
-.RI "\fBRescalePolicy\fP \fBrescalePolicy\fP () const "
+.RI "\fBRescalePolicy\fP \fBrescalePolicy\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetExpandingDirection\fP (\fBExpandingDirection\fP)"
@@ -51,13 +51,13 @@ Inherits QObject\&.
 .RI "void \fBsetExpandingDirection\fP (int axis, \fBExpandingDirection\fP)"
 .br
 .ti -1c
-.RI "\fBExpandingDirection\fP \fBexpandingDirection\fP (int axis) const "
+.RI "\fBExpandingDirection\fP \fBexpandingDirection\fP (int axis) const"
 .br
 .ti -1c
 .RI "void \fBsetReferenceAxis\fP (int axis)"
 .br
 .ti -1c
-.RI "int \fBreferenceAxis\fP () const "
+.RI "int \fBreferenceAxis\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAspectRatio\fP (double ratio)"
@@ -66,34 +66,34 @@ Inherits QObject\&.
 .RI "void \fBsetAspectRatio\fP (int axis, double ratio)"
 .br
 .ti -1c
-.RI "double \fBaspectRatio\fP (int axis) const "
+.RI "double \fBaspectRatio\fP (int axis) const"
 .br
 .ti -1c
 .RI "void \fBsetIntervalHint\fP (int axis, const \fBQwtInterval\fP &)"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBintervalHint\fP (int axis) const "
+.RI "\fBQwtInterval\fP \fBintervalHint\fP (int axis) const"
 .br
 .ti -1c
 .RI "QWidget * \fBcanvas\fP ()"
 .br
 .ti -1c
-.RI "const QWidget * \fBcanvas\fP () const "
+.RI "const QWidget * \fBcanvas\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtPlot\fP * \fBplot\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtPlot\fP * \fBplot\fP () const "
+.RI "const \fBQwtPlot\fP * \fBplot\fP () const"
 .br
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter for the plot canvas\&. \fP"
+.RI "Event filter for the plot canvas\&. "
 .ti -1c
-.RI "void \fBrescale\fP () const "
+.RI "void \fBrescale\fP () const"
 .br
-.RI "\fIAdjust the plot axes scales\&. \fP"
+.RI "Adjust the plot axes scales\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -102,25 +102,25 @@ Inherits QObject\&.
 .RI "virtual void \fBcanvasResizeEvent\fP (QResizeEvent *)"
 .br
 .ti -1c
-.RI "virtual void \fBrescale\fP (const QSize &oldSize, const QSize &newSize) const "
+.RI "virtual void \fBrescale\fP (const QSize &oldSize, const QSize &newSize) const"
 .br
 .ti -1c
-.RI "virtual \fBQwtInterval\fP \fBexpandScale\fP (int axis, const QSize &oldSize, const QSize &newSize) const "
+.RI "virtual \fBQwtInterval\fP \fBexpandScale\fP (int axis, const QSize &oldSize, const QSize &newSize) const"
 .br
 .ti -1c
-.RI "virtual \fBQwtInterval\fP \fBsyncScale\fP (int axis, const \fBQwtInterval\fP &reference, const QSize &size) const "
+.RI "virtual \fBQwtInterval\fP \fBsyncScale\fP (int axis, const \fBQwtInterval\fP &reference, const QSize &size) const"
 .br
 .ti -1c
-.RI "virtual void \fBupdateScales\fP (\fBQwtInterval\fP intervals[\fBQwtPlot::axisCnt\fP]) const "
+.RI "virtual void \fBupdateScales\fP (\fBQwtInterval\fP intervals[\fBQwtPlot::axisCnt\fP]) const"
 .br
 .ti -1c
-.RI "Qt::Orientation \fBorientation\fP (int axis) const "
+.RI "Qt::Orientation \fBorientation\fP (int axis) const"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBinterval\fP (int axis) const "
+.RI "\fBQwtInterval\fP \fBinterval\fP (int axis) const"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBexpandInterval\fP (const \fBQwtInterval\fP &, double width, \fBExpandingDirection\fP) const "
+.RI "\fBQwtInterval\fP \fBexpandInterval\fP (const \fBQwtInterval\fP &, double width, \fBExpandingDirection\fP) const"
 .br
 .in -1c
 .SH "Detailed Description"

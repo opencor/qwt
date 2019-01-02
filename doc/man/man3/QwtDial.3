@@ -1,4 +1,4 @@
-.TH "QwtDial" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDial" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,13 +17,13 @@ Inherited by \fBQwtAnalogClock\fP, and \fBQwtCompass\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBShadow\fP { \fBPlain\fP = QFrame::Plain, \fBRaised\fP = QFrame::Raised, \fBSunken\fP = QFrame::Sunken }
-.RI "\fIFrame shadow\&. \fP""
+.RI "enum \fBShadow\fP { \fBPlain\fP = QFrame::Plain, \fBRaised\fP = QFrame::Raised, \fBSunken\fP = QFrame::Sunken }"
 .br
+.RI "Frame shadow\&. "
 .ti -1c
-.RI "enum \fBMode\fP { \fBRotateNeedle\fP, \fBRotateScale\fP }
-.RI "\fIMode controlling whether the needle or the scale is rotating\&. \fP""
+.RI "enum \fBMode\fP { \fBRotateNeedle\fP, \fBRotateScale\fP }"
 .br
+.RI "Mode controlling whether the needle or the scale is rotating\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -31,75 +31,75 @@ Inherited by \fBQwtAnalogClock\fP, and \fBQwtCompass\fP\&.
 .ti -1c
 .RI "\fBQwtDial\fP (QWidget *parent=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtDial\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetFrameShadow\fP (\fBShadow\fP)"
 .br
 .ti -1c
-.RI "\fBShadow\fP \fBframeShadow\fP () const "
+.RI "\fBShadow\fP \fBframeShadow\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLineWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBlineWidth\fP () const "
+.RI "int \fBlineWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMode\fP (\fBMode\fP)"
 .br
-.RI "\fIChange the mode of the dial\&. \fP"
+.RI "Change the mode of the dial\&. "
 .ti -1c
-.RI "\fBMode\fP \fBmode\fP () const "
+.RI "\fBMode\fP \fBmode\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetScaleArc\fP (double min, double max)"
+.RI "void \fBsetScaleArc\fP (double minArc, double maxArc)"
 .br
 .ti -1c
-.RI "void \fBsetMinScaleArc\fP (double min)"
+.RI "void \fBsetMinScaleArc\fP (double)"
 .br
 .ti -1c
-.RI "double \fBminScaleArc\fP () const "
+.RI "double \fBminScaleArc\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetMaxScaleArc\fP (double min)"
+.RI "void \fBsetMaxScaleArc\fP (double)"
 .br
 .ti -1c
-.RI "double \fBmaxScaleArc\fP () const "
+.RI "double \fBmaxScaleArc\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBsetOrigin\fP (double)"
 .br
-.RI "\fIChange the origin\&. \fP"
+.RI "Change the origin\&. "
 .ti -1c
-.RI "double \fBorigin\fP () const "
+.RI "double \fBorigin\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetNeedle\fP (\fBQwtDialNeedle\fP *)"
 .br
 .ti -1c
-.RI "const \fBQwtDialNeedle\fP * \fBneedle\fP () const "
+.RI "const \fBQwtDialNeedle\fP * \fBneedle\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtDialNeedle\fP * \fBneedle\fP ()"
 .br
 .ti -1c
-.RI "QRect \fBboundingRect\fP () const "
+.RI "QRect \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "QRect \fBinnerRect\fP () const "
+.RI "QRect \fBinnerRect\fP () const"
 .br
 .ti -1c
-.RI "virtual QRect \fBscaleInnerRect\fP () const "
+.RI "virtual QRect \fBscaleInnerRect\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtRoundScaleDraw\fP *)"
@@ -108,7 +108,7 @@ Inherited by \fBQwtAnalogClock\fP, and \fBQwtCompass\fP\&.
 .RI "\fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP () const "
+.RI "const \fBQwtRoundScaleDraw\fP * \fBscaleDraw\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -124,39 +124,39 @@ Inherited by \fBQwtAnalogClock\fP, and \fBQwtCompass\fP\&.
 .RI "virtual void \fBchangeEvent\fP (QEvent *)"
 .br
 .ti -1c
-.RI "virtual void \fBdrawFrame\fP (QPainter *p)"
+.RI "virtual void \fBdrawFrame\fP (QPainter *)"
 .br
 .ti -1c
-.RI "virtual void \fBdrawContents\fP (QPainter *) const "
+.RI "virtual void \fBdrawContents\fP (QPainter *) const"
 .br
-.RI "\fIDraw the contents inside the frame\&. \fP"
+.RI "Draw the contents inside the frame\&. "
 .ti -1c
-.RI "virtual void \fBdrawFocusIndicator\fP (QPainter *) const "
+.RI "virtual void \fBdrawFocusIndicator\fP (QPainter *) const"
 .br
 .ti -1c
 .RI "void \fBinvalidateCache\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBdrawScale\fP (QPainter *, const QPointF &center, double radius) const "
+.RI "virtual void \fBdrawScale\fP (QPainter *, const QPointF &center, double radius) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawScaleContents\fP (QPainter *painter, const QPointF &center, double radius) const "
+.RI "virtual void \fBdrawScaleContents\fP (QPainter *painter, const QPointF &center, double radius) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawNeedle\fP (QPainter *, const QPointF &, double radius, double direction, QPalette::ColorGroup) const "
+.RI "virtual void \fBdrawNeedle\fP (QPainter *, const QPointF &, double radius, double direction, QPalette::ColorGroup) const"
 .br
 .ti -1c
-.RI "virtual double \fBscrolledTo\fP (const QPoint &) const "
+.RI "virtual double \fBscrolledTo\fP (const QPoint &) const"
 .br
-.RI "\fIDetermine the value for a new position of the slider handle\&. \fP"
+.RI "Determine the value for a new position of the slider handle\&. "
 .ti -1c
-.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const "
+.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const"
 .br
-.RI "\fIDetermine what to do when the user presses a mouse button\&. \fP"
+.RI "Determine what to do when the user presses a mouse button\&. "
 .ti -1c
 .RI "virtual void \fBsliderChange\fP ()"
 .br
-.RI "\fICalling update() \fP"
+.RI "Calling update() "
 .ti -1c
 .RI "virtual void \fBscaleChange\fP ()"
 .br

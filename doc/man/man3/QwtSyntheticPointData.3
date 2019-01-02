@@ -1,4 +1,4 @@
-.TH "QwtSyntheticPointData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSyntheticPointData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,32 +21,32 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 .RI "void \fBsetSize\fP (size_t \fBsize\fP)"
 .br
 .ti -1c
-.RI "virtual size_t \fBsize\fP () const "
+.RI "virtual size_t \fBsize\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetInterval\fP (const \fBQwtInterval\fP &)"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBinterval\fP () const "
+.RI "\fBQwtInterval\fP \fBinterval\fP () const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
-.RI "\fICalculate the bounding rectangle\&. \fP"
+.RI "Calculate the bounding rectangle\&. "
 .ti -1c
-.RI "virtual QPointF \fBsample\fP (size_t i) const "
-.br
-.ti -1c
-.RI "virtual double \fBy\fP (double \fBx\fP) const  =0"
+.RI "virtual QPointF \fBsample\fP (size_t index) const"
 .br
 .ti -1c
-.RI "virtual double \fBx\fP (uint index) const "
+.RI "virtual double \fBy\fP (double \fBx\fP) const =0"
+.br
+.ti -1c
+.RI "virtual double \fBx\fP (uint index) const"
 .br
 .ti -1c
 .RI "virtual void \fBsetRectOfInterest\fP (const QRectF &)"
 .br
 .ti -1c
-.RI "QRectF \fBrectOfInterest\fP () const "
+.RI "QRectF \fBrectOfInterest\fP () const"
 .br
 .in -1c
 .SS "Additional Inherited Members"

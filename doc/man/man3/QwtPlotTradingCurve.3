@@ -1,4 +1,4 @@
-.TH "QwtPlotTradingCurve" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotTradingCurve" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,20 +15,20 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBSymbolStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBCandleStick\fP, \fBUserSymbol\fP = 100 }
-.RI "\fISymbol styles\&. \fP""
+.RI "enum \fBSymbolStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBCandleStick\fP, \fBUserSymbol\fP = 100 }"
 .br
+.RI "Symbol styles\&. "
 .ti -1c
-.RI "enum \fBDirection\fP { \fBIncreasing\fP, \fBDecreasing\fP }
-.RI "\fIDirection of a price movement\&. \fP""
+.RI "enum \fBDirection\fP { \fBIncreasing\fP, \fBDecreasing\fP }"
 .br
+.RI "Direction of a price movement\&. "
 .ti -1c
 .RI "enum \fBPaintAttribute\fP { \fBClipSymbols\fP = 0x01 }"
 .br
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "\fIPaint attributes\&. \fP"
+.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -42,15 +42,15 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtPlotTradingCurve\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const "
+.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (const QVector< \fBQwtOHLCSample\fP > &)"
@@ -62,7 +62,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .RI "void \fBsetSymbolStyle\fP (\fBSymbolStyle\fP style)"
 .br
 .ti -1c
-.RI "\fBSymbolStyle\fP \fBsymbolStyle\fP () const "
+.RI "\fBSymbolStyle\fP \fBsymbolStyle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSymbolPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -70,43 +70,43 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .ti -1c
 .RI "void \fBsetSymbolPen\fP (const QPen &)"
 .br
-.RI "\fISet the symbol pen\&. \fP"
+.RI "Set the symbol pen\&. "
 .ti -1c
-.RI "QPen \fBsymbolPen\fP () const "
+.RI "QPen \fBsymbolPen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSymbolBrush\fP (\fBDirection\fP, const QBrush &)"
 .br
 .ti -1c
-.RI "QBrush \fBsymbolBrush\fP (\fBDirection\fP) const "
+.RI "QBrush \fBsymbolBrush\fP (\fBDirection\fP) const"
 .br
 .ti -1c
-.RI "void \fBsetSymbolExtent\fP (double width)"
+.RI "void \fBsetSymbolExtent\fP (double)"
 .br
-.RI "\fISet the extent of the symbol\&. \fP"
+.RI "Set the extent of the symbol\&. "
 .ti -1c
-.RI "double \fBsymbolExtent\fP () const "
+.RI "double \fBsymbolExtent\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMinSymbolWidth\fP (double)"
 .br
 .ti -1c
-.RI "double \fBminSymbolWidth\fP () const "
+.RI "double \fBminSymbolWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMaxSymbolWidth\fP (double)"
 .br
 .ti -1c
-.RI "double \fBmaxSymbolWidth\fP () const "
+.RI "double \fBmaxSymbolWidth\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const "
+.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -115,24 +115,24 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .ti -1c
 .RI "void \fBinit\fP ()"
 .br
-.RI "\fIInitialize internal members\&. \fP"
+.RI "Initialize internal members\&. "
 .ti -1c
-.RI "virtual void \fBdrawSymbols\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const "
+.RI "virtual void \fBdrawSymbols\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawUserSymbol\fP (QPainter *, \fBSymbolStyle\fP, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double width) const "
+.RI "virtual void \fBdrawUserSymbol\fP (QPainter *, \fBSymbolStyle\fP, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double symbolWidth) const"
 .br
-.RI "\fIDraw a symbol for a symbol style >= UserSymbol\&. \fP"
+.RI "Draw a symbol for a symbol style >= UserSymbol\&. "
 .ti -1c
-.RI "void \fBdrawBar\fP (QPainter *painter, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double width) const "
+.RI "void \fBdrawBar\fP (QPainter *painter, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double width) const"
 .br
-.RI "\fIDraw a bar\&. \fP"
+.RI "Draw a bar\&. "
 .ti -1c
-.RI "void \fBdrawCandleStick\fP (QPainter *, const \fBQwtOHLCSample\fP &, Qt::Orientation, double width) const "
+.RI "void \fBdrawCandleStick\fP (QPainter *, const \fBQwtOHLCSample\fP &, Qt::Orientation, double width) const"
 .br
-.RI "\fIDraw a candle stick\&. \fP"
+.RI "Draw a candle stick\&. "
 .ti -1c
-.RI "virtual double \fBscaledSymbolWidth\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const "
+.RI "virtual double \fBscaledSymbolWidth\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
 .in -1c
 .SH "Detailed Description"

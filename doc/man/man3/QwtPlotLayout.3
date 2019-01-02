@@ -1,4 +1,4 @@
-.TH "QwtPlotLayout" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotLayout" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,7 +18,7 @@ QwtPlotLayout \- Layout engine for \fBQwtPlot\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBOption\fP > \fBOptions\fP"
 .br
-.RI "\fILayout options\&. \fP"
+.RI "Layout options\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -26,74 +26,74 @@ QwtPlotLayout \- Layout engine for \fBQwtPlot\fP\&.
 .ti -1c
 .RI "\fBQwtPlotLayout\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotLayout\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetCanvasMargin\fP (int margin, int axis=\-1)"
 .br
 .ti -1c
-.RI "int \fBcanvasMargin\fP (int axis) const "
+.RI "int \fBcanvasMargin\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBsetAlignCanvasToScales\fP (bool)"
 .br
-.RI "\fISet the align-canvas-to-axis-scales flag for all axes\&. \fP"
+.RI "Set the align-canvas-to-axis-scales flag for all axes\&. "
 .ti -1c
 .RI "void \fBsetAlignCanvasToScale\fP (int axisId, bool)"
 .br
 .ti -1c
-.RI "bool \fBalignCanvasToScale\fP (int axisId) const "
+.RI "bool \fBalignCanvasToScale\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBsetSpacing\fP (int)"
 .br
 .ti -1c
-.RI "int \fBspacing\fP () const "
+.RI "int \fBspacing\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLegendPosition\fP (\fBQwtPlot::LegendPosition\fP pos, double ratio)"
 .br
-.RI "\fISpecify the position of the legend\&. \fP"
+.RI "Specify the position of the legend\&. "
 .ti -1c
 .RI "void \fBsetLegendPosition\fP (\fBQwtPlot::LegendPosition\fP pos)"
 .br
-.RI "\fISpecify the position of the legend\&. \fP"
+.RI "Specify the position of the legend\&. "
 .ti -1c
-.RI "\fBQwtPlot::LegendPosition\fP \fBlegendPosition\fP () const "
+.RI "\fBQwtPlot::LegendPosition\fP \fBlegendPosition\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLegendRatio\fP (double ratio)"
 .br
 .ti -1c
-.RI "double \fBlegendRatio\fP () const "
+.RI "double \fBlegendRatio\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP (const \fBQwtPlot\fP *) const "
+.RI "virtual QSize \fBminimumSizeHint\fP (const \fBQwtPlot\fP *) const"
 .br
 .ti -1c
-.RI "virtual void \fBactivate\fP (const \fBQwtPlot\fP *, const QRectF &rect, \fBOptions\fP options=0x00)"
+.RI "virtual void \fBactivate\fP (const \fBQwtPlot\fP *, const QRectF &plotRect, \fBOptions\fP options=0x00)"
 .br
-.RI "\fIRecalculate the geometry of all components\&. \fP"
+.RI "Recalculate the geometry of all components\&. "
 .ti -1c
 .RI "virtual void \fBinvalidate\fP ()"
 .br
 .ti -1c
-.RI "QRectF \fBtitleRect\fP () const "
+.RI "QRectF \fBtitleRect\fP () const"
 .br
 .ti -1c
-.RI "QRectF \fBfooterRect\fP () const "
+.RI "QRectF \fBfooterRect\fP () const"
 .br
 .ti -1c
-.RI "QRectF \fBlegendRect\fP () const "
+.RI "QRectF \fBlegendRect\fP () const"
 .br
 .ti -1c
-.RI "QRectF \fBscaleRect\fP (int axis) const "
+.RI "QRectF \fBscaleRect\fP (int axis) const"
 .br
 .ti -1c
-.RI "QRectF \fBcanvasRect\fP () const "
+.RI "QRectF \fBcanvasRect\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -102,34 +102,34 @@ QwtPlotLayout \- Layout engine for \fBQwtPlot\fP\&.
 .ti -1c
 .RI "void \fBsetTitleRect\fP (const QRectF &)"
 .br
-.RI "\fISet the geometry for the title\&. \fP"
+.RI "Set the geometry for the title\&. "
 .ti -1c
 .RI "void \fBsetFooterRect\fP (const QRectF &)"
 .br
-.RI "\fISet the geometry for the footer\&. \fP"
+.RI "Set the geometry for the footer\&. "
 .ti -1c
 .RI "void \fBsetLegendRect\fP (const QRectF &)"
 .br
-.RI "\fISet the geometry for the legend\&. \fP"
+.RI "Set the geometry for the legend\&. "
 .ti -1c
 .RI "void \fBsetScaleRect\fP (int axis, const QRectF &)"
 .br
-.RI "\fISet the geometry for an axis\&. \fP"
+.RI "Set the geometry for an axis\&. "
 .ti -1c
 .RI "void \fBsetCanvasRect\fP (const QRectF &)"
 .br
-.RI "\fISet the geometry for the canvas\&. \fP"
+.RI "Set the geometry for the canvas\&. "
 .ti -1c
-.RI "QRectF \fBlayoutLegend\fP (\fBOptions\fP options, const QRectF &) const "
+.RI "QRectF \fBlayoutLegend\fP (\fBOptions\fP options, const QRectF &) const"
 .br
 .ti -1c
-.RI "QRectF \fBalignLegend\fP (const QRectF &\fBcanvasRect\fP, const QRectF &\fBlegendRect\fP) const "
+.RI "QRectF \fBalignLegend\fP (const QRectF &\fBcanvasRect\fP, const QRectF &\fBlegendRect\fP) const"
 .br
 .ti -1c
-.RI "void \fBexpandLineBreaks\fP (\fBOptions\fP options, const QRectF &rect, int &dimTitle, int &dimFooter, int dimAxes[\fBQwtPlot::axisCnt\fP]) const "
+.RI "void \fBexpandLineBreaks\fP (\fBOptions\fP options, const QRectF &rect, int &dimTitle, int &dimFooter, int dimAxes[\fBQwtPlot::axisCnt\fP]) const"
 .br
 .ti -1c
-.RI "void \fBalignScales\fP (\fBOptions\fP options, QRectF &\fBcanvasRect\fP, QRectF \fBscaleRect\fP[\fBQwtPlot::axisCnt\fP]) const "
+.RI "void \fBalignScales\fP (\fBOptions\fP options, QRectF &\fBcanvasRect\fP, QRectF \fBscaleRect\fP[\fBQwtPlot::axisCnt\fP]) const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -289,7 +289,7 @@ Geometry for the canvas
 .RE
 .PP
 
-.SS "void QwtPlotLayout::expandLineBreaks (\fBOptions\fP options, const QRectF & rect, int & dimTitle, int & dimFooter, int dimAxis[QwtPlot::axisCnt]) const\fC [protected]\fP"
+.SS "void QwtPlotLayout::expandLineBreaks (\fBOptions\fP options, const QRectF & rect, int & dimTitle, int & dimFooter, int dimAxes[QwtPlot::axisCnt]) const\fC [protected]\fP"
 Expand all line breaks in text labels, and calculate the height of their widgets in orientation of the text\&.
 .PP
 \fBParameters:\fP
@@ -302,7 +302,7 @@ Expand all line breaks in text labels, and calculate the height of their widgets
 .br
 \fIdimFooter\fP Expanded height of the footer widget 
 .br
-\fIdimAxis\fP Expanded heights of the axis in axis orientation\&.
+\fIdimAxes\fP Expanded heights of the axis in axis orientation\&.
 .RE
 .PP
 \fBSee also:\fP

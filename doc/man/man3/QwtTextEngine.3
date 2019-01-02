@@ -1,4 +1,4 @@
-.TH "QwtTextEngine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTextEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,21 +17,21 @@ Inherited by \fBQwtMathMLTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtRich
 .ti -1c
 .RI "virtual \fB~QwtTextEngine\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const  =0"
+.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const =0"
 .br
 .ti -1c
-.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const  =0"
+.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const =0"
 .br
 .ti -1c
-.RI "virtual bool \fBmightRender\fP (const QString &text) const  =0"
+.RI "virtual bool \fBmightRender\fP (const QString &text) const =0"
 .br
 .ti -1c
-.RI "virtual void \fBtextMargins\fP (const QFont &font, const QString &text, double &left, double &right, double &top, double &bottom) const  =0"
+.RI "virtual void \fBtextMargins\fP (const QFont &font, const QString &text, double &left, double &right, double &top, double &bottom) const =0"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const QRectF &rect, int flags, const QString &text) const  =0"
+.RI "virtual void \fBdraw\fP (QPainter *painter, const QRectF &rect, int flags, const QString &text) const =0"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -40,7 +40,7 @@ Inherited by \fBQwtMathMLTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtRich
 .ti -1c
 .RI "\fBQwtTextEngine\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

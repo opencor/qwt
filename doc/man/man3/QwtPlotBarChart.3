@@ -1,4 +1,4 @@
-.TH "QwtPlotBarChart" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotBarChart" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,9 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBLegendMode\fP { \fBLegendChartTitle\fP, \fBLegendBarTitles\fP }
-.RI "\fILegend modes\&. \fP""
+.RI "enum \fBLegendMode\fP { \fBLegendChartTitle\fP, \fBLegendBarTitles\fP }"
 .br
+.RI "Legend modes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -31,9 +31,9 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtPlotBarChart\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (const QVector< QPointF > &)"
@@ -42,50 +42,50 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 .RI "void \fBsetSamples\fP (const QVector< double > &)"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< QPointF > *series)"
+.RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< QPointF > *)"
 .br
 .ti -1c
 .RI "void \fBsetSymbol\fP (\fBQwtColumnSymbol\fP *)"
 .br
-.RI "\fIAssign a symbol\&. \fP"
+.RI "Assign a symbol\&. "
 .ti -1c
-.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP () const "
+.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLegendMode\fP (\fBLegendMode\fP)"
 .br
 .ti -1c
-.RI "\fBLegendMode\fP \fBlegendMode\fP () const "
+.RI "\fBLegendMode\fP \fBlegendMode\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const "
+.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtColumnSymbol\fP * \fBspecialSymbol\fP (int sampleIndex, const QPointF &) const "
+.RI "virtual \fBQwtColumnSymbol\fP * \fBspecialSymbol\fP (int sampleIndex, const QPointF &) const"
 .br
 .ti -1c
-.RI "virtual \fBQwtText\fP \fBbarTitle\fP (int sampleIndex) const "
+.RI "virtual \fBQwtText\fP \fBbarTitle\fP (int sampleIndex) const"
 .br
-.RI "\fIReturn the title of a bar\&. \fP"
+.RI "Return the title of a bar\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawSample\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, const \fBQwtInterval\fP &boundingInterval, int index, const QPointF &\fBsample\fP) const "
+.RI "virtual void \fBdrawSample\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, const \fBQwtInterval\fP &boundingInterval, int index, const QPointF &\fBsample\fP) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawBar\fP (QPainter *, int sampleIndex, const QPointF &point, const \fBQwtColumnRect\fP &) const "
+.RI "virtual void \fBdrawBar\fP (QPainter *, int sampleIndex, const QPointF &\fBsample\fP, const \fBQwtColumnRect\fP &) const"
 .br
 .ti -1c
-.RI "QList< \fBQwtLegendData\fP > \fBlegendData\fP () const "
+.RI "QList< \fBQwtLegendData\fP > \fBlegendData\fP () const"
 .br
-.RI "\fIReturn all information, that is needed to represent the item on the legend\&. \fP"
+.RI "Return all information, that is needed to represent the item on the legend\&. "
 .ti -1c
-.RI "\fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "\fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
 .br
 .in -1c
 .SH "Detailed Description"

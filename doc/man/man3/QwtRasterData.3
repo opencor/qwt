@@ -1,4 +1,4 @@
-.TH "QwtRasterData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRasterData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,17 +15,17 @@ Inherited by \fBQwtMatrixRasterData\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBConrecFlag\fP { \fBIgnoreAllVerticesOnLevel\fP = 0x01, \fBIgnoreOutOfRange\fP = 0x02 }
-.RI "\fIFlags to modify the contour algorithm\&. \fP""
+.RI "enum \fBConrecFlag\fP { \fBIgnoreAllVerticesOnLevel\fP = 0x01, \fBIgnoreOutOfRange\fP = 0x02 }"
 .br
+.RI "Flags to modify the contour algorithm\&. "
 .ti -1c
 .RI "typedef QMap< double, QPolygonF > \fBContourLines\fP"
 .br
-.RI "\fIContour lines\&. \fP"
+.RI "Contour lines\&. "
 .ti -1c
 .RI "typedef QFlags< \fBConrecFlag\fP > \fBConrecFlags\fP"
 .br
-.RI "\fIFlags to modify the contour algorithm\&. \fP"
+.RI "Flags to modify the contour algorithm\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -33,34 +33,34 @@ Inherited by \fBQwtMatrixRasterData\fP\&.
 .ti -1c
 .RI "\fBQwtRasterData\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtRasterData\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "virtual void \fBsetInterval\fP (Qt::Axis, const \fBQwtInterval\fP &)"
 .br
 .ti -1c
-.RI "const \fBQwtInterval\fP & \fBinterval\fP (Qt::Axis) const "
+.RI "const \fBQwtInterval\fP & \fBinterval\fP (Qt::Axis) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const "
+.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const"
 .br
-.RI "\fIPixel hint\&. \fP"
+.RI "Pixel hint\&. "
 .ti -1c
 .RI "virtual void \fBinitRaster\fP (const QRectF &, const QSize &raster)"
 .br
-.RI "\fIInitialize a raster\&. \fP"
+.RI "Initialize a raster\&. "
 .ti -1c
 .RI "virtual void \fBdiscardRaster\fP ()"
 .br
-.RI "\fIDiscard a raster\&. \fP"
+.RI "Discard a raster\&. "
 .ti -1c
-.RI "virtual double \fBvalue\fP (double x, double y) const  =0"
+.RI "virtual double \fBvalue\fP (double x, double y) const =0"
 .br
 .ti -1c
-.RI "virtual \fBContourLines\fP \fBcontourLines\fP (const QRectF &rect, const QSize &raster, const QList< double > &levels, \fBConrecFlags\fP) const "
+.RI "virtual \fBContourLines\fP \fBcontourLines\fP (const QRectF &rect, const QSize &raster, const QList< double > &levels, \fBConrecFlags\fP) const"
 .br
 .in -1c
 .SH "Detailed Description"

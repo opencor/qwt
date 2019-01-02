@@ -1,4 +1,4 @@
-.TH "QwtAbstractSlider" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractSlider" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBsetValue\fP (double val)"
+.RI "void \fBsetValue\fP (double \fBvalue\fP)"
 .br
 .in -1c
 .SS "Signals"
@@ -26,7 +26,7 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 .ti -1c
 .RI "void \fBvalueChanged\fP (double \fBvalue\fP)"
 .br
-.RI "\fINotify a change of value\&. \fP"
+.RI "Notify a change of value\&. "
 .ti -1c
 .RI "void \fBsliderPressed\fP ()"
 .br
@@ -43,73 +43,73 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 .ti -1c
 .RI "\fBQwtAbstractSlider\fP (QWidget *parent=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtAbstractSlider\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetValid\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBisValid\fP () const "
+.RI "bool \fBisValid\fP () const"
 .br
 .ti -1c
-.RI "double \fBvalue\fP () const "
+.RI "double \fBvalue\fP () const"
 .br
-.RI "\fIReturns the current value\&. \fP"
+.RI "Returns the current value\&. "
 .ti -1c
 .RI "void \fBsetWrapping\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBwrapping\fP () const "
+.RI "bool \fBwrapping\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTotalSteps\fP (uint)"
 .br
-.RI "\fISet the number of steps\&. \fP"
+.RI "Set the number of steps\&. "
 .ti -1c
-.RI "uint \fBtotalSteps\fP () const "
+.RI "uint \fBtotalSteps\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSingleSteps\fP (uint)"
 .br
-.RI "\fISet the number of steps for a single increment\&. \fP"
+.RI "Set the number of steps for a single increment\&. "
 .ti -1c
-.RI "uint \fBsingleSteps\fP () const "
+.RI "uint \fBsingleSteps\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPageSteps\fP (uint)"
 .br
-.RI "\fISet the number of steps for a page increment\&. \fP"
+.RI "Set the number of steps for a page increment\&. "
 .ti -1c
-.RI "uint \fBpageSteps\fP () const "
+.RI "uint \fBpageSteps\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetStepAlignment\fP (bool)"
 .br
-.RI "\fIEnable step alignment\&. \fP"
+.RI "Enable step alignment\&. "
 .ti -1c
-.RI "bool \fBstepAlignment\fP () const "
+.RI "bool \fBstepAlignment\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTracking\fP (bool)"
 .br
-.RI "\fIEnables or disables tracking\&. \fP"
+.RI "Enables or disables tracking\&. "
 .ti -1c
-.RI "bool \fBisTracking\fP () const "
+.RI "bool \fBisTracking\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetReadOnly\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBisReadOnly\fP () const "
+.RI "bool \fBisReadOnly\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetInvertedControls\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBinvertedControls\fP () const "
+.RI "bool \fBinvertedControls\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -131,15 +131,15 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 .RI "virtual void \fBwheelEvent\fP (QWheelEvent *)"
 .br
 .ti -1c
-.RI "virtual bool \fBisScrollPosition\fP (const QPoint &pos) const  =0"
+.RI "virtual bool \fBisScrollPosition\fP (const QPoint &pos) const =0"
 .br
-.RI "\fIDetermine what to do when the user presses a mouse button\&. \fP"
+.RI "Determine what to do when the user presses a mouse button\&. "
 .ti -1c
-.RI "virtual double \fBscrolledTo\fP (const QPoint &pos) const  =0"
+.RI "virtual double \fBscrolledTo\fP (const QPoint &pos) const =0"
 .br
-.RI "\fIDetermine the value for a new position of the movable part of the slider\&. \fP"
+.RI "Determine the value for a new position of the movable part of the slider\&. "
 .ti -1c
-.RI "void \fBincrementValue\fP (int numSteps)"
+.RI "void \fBincrementValue\fP (int stepCount)"
 .br
 .ti -1c
 .RI "virtual void \fBscaleChange\fP ()"
@@ -147,9 +147,9 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 .ti -1c
 .RI "virtual void \fBsliderChange\fP ()"
 .br
-.RI "\fICalling update() \fP"
+.RI "Calling update() "
 .ti -1c
-.RI "double \fBincrementedValue\fP (double \fBvalue\fP, int stepCount) const "
+.RI "double \fBincrementedValue\fP (double \fBvalue\fP, int stepCount) const"
 .br
 .in -1c
 .SH "Detailed Description"

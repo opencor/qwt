@@ -1,4 +1,4 @@
-.TH "QwtThermo" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtThermo" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ Inherits \fBQwtAbstractScale\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBsetValue\fP (double val)"
+.RI "virtual void \fBsetValue\fP (double)"
 .br
 .in -1c
 .SS "Public Member Functions"
@@ -37,126 +37,126 @@ Inherits \fBQwtAbstractScale\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtThermo\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetOrientation\fP (Qt::Orientation)"
 .br
-.RI "\fISet the orientation\&. \fP"
+.RI "Set the orientation\&. "
 .ti -1c
-.RI "Qt::Orientation \fBorientation\fP () const "
+.RI "Qt::Orientation \fBorientation\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScalePosition\fP (\fBScalePosition\fP)"
 .br
-.RI "\fIChange the position of the scale\&. \fP"
+.RI "Change the position of the scale\&. "
 .ti -1c
-.RI "\fBScalePosition\fP \fBscalePosition\fP () const "
+.RI "\fBScalePosition\fP \fBscalePosition\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSpacing\fP (int)"
 .br
-.RI "\fIChange the spacing between pipe and scale\&. \fP"
+.RI "Change the spacing between pipe and scale\&. "
 .ti -1c
-.RI "int \fBspacing\fP () const "
+.RI "int \fBspacing\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetBorderWidth\fP (int w)"
+.RI "void \fBsetBorderWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBborderWidth\fP () const "
+.RI "int \fBborderWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetOriginMode\fP (\fBOriginMode\fP)"
 .br
-.RI "\fIChange how the origin is determined\&. \fP"
+.RI "Change how the origin is determined\&. "
 .ti -1c
-.RI "\fBOriginMode\fP \fBoriginMode\fP () const "
+.RI "\fBOriginMode\fP \fBoriginMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetOrigin\fP (double)"
 .br
-.RI "\fISpecifies the custom origin\&. \fP"
+.RI "Specifies the custom origin\&. "
 .ti -1c
-.RI "double \fBorigin\fP () const "
+.RI "double \fBorigin\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetFillBrush\fP (const QBrush &b)"
+.RI "void \fBsetFillBrush\fP (const QBrush &)"
 .br
-.RI "\fIChange the brush of the liquid\&. \fP"
+.RI "Change the brush of the liquid\&. "
 .ti -1c
-.RI "QBrush \fBfillBrush\fP () const "
-.br
-.ti -1c
-.RI "void \fBsetAlarmBrush\fP (const QBrush &b)"
-.br
-.RI "\fISpecify the liquid brush above the alarm threshold\&. \fP"
-.ti -1c
-.RI "QBrush \fBalarmBrush\fP () const "
+.RI "QBrush \fBfillBrush\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetAlarmLevel\fP (double v)"
+.RI "void \fBsetAlarmBrush\fP (const QBrush &)"
+.br
+.RI "Specify the liquid brush above the alarm threshold\&. "
+.ti -1c
+.RI "QBrush \fBalarmBrush\fP () const"
 .br
 .ti -1c
-.RI "double \fBalarmLevel\fP () const "
+.RI "void \fBsetAlarmLevel\fP (double)"
 .br
 .ti -1c
-.RI "void \fBsetAlarmEnabled\fP (bool tf)"
+.RI "double \fBalarmLevel\fP () const"
 .br
-.RI "\fIEnable or disable the alarm threshold\&. \fP"
 .ti -1c
-.RI "bool \fBalarmEnabled\fP () const "
+.RI "void \fBsetAlarmEnabled\fP (bool)"
+.br
+.RI "Enable or disable the alarm threshold\&. "
+.ti -1c
+.RI "bool \fBalarmEnabled\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetColorMap\fP (\fBQwtColorMap\fP *)"
 .br
-.RI "\fIAssign a color map for the fill color\&. \fP"
+.RI "Assign a color map for the fill color\&. "
 .ti -1c
 .RI "\fBQwtColorMap\fP * \fBcolorMap\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtColorMap\fP * \fBcolorMap\fP () const "
+.RI "const \fBQwtColorMap\fP * \fBcolorMap\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetPipeWidth\fP (int w)"
+.RI "void \fBsetPipeWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBpipeWidth\fP () const "
+.RI "int \fBpipeWidth\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRangeFlags\fP (\fBQwtInterval::BorderFlags\fP)"
 .br
-.RI "\fIExclude/Include min/max values\&. \fP"
+.RI "Exclude/Include min/max values\&. "
 .ti -1c
-.RI "\fBQwtInterval::BorderFlags\fP \fBrangeFlags\fP () const "
+.RI "\fBQwtInterval::BorderFlags\fP \fBrangeFlags\fP () const"
 .br
 .ti -1c
-.RI "double \fBvalue\fP () const "
+.RI "double \fBvalue\fP () const"
 .br
-.RI "\fIReturn the value\&. \fP"
+.RI "Return the value\&. "
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtScaleDraw\fP *)"
 .br
-.RI "\fISet a scale draw\&. \fP"
+.RI "Set a scale draw\&. "
 .ti -1c
-.RI "const \fBQwtScaleDraw\fP * \fBscaleDraw\fP () const "
+.RI "const \fBQwtScaleDraw\fP * \fBscaleDraw\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawLiquid\fP (QPainter *, const QRect &) const "
+.RI "virtual void \fBdrawLiquid\fP (QPainter *, const QRect &) const"
 .br
 .ti -1c
 .RI "virtual void \fBscaleChange\fP ()"
 .br
-.RI "\fINotify a scale change\&. \fP"
+.RI "Notify a scale change\&. "
 .ti -1c
 .RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
 .br
@@ -170,16 +170,16 @@ Inherits \fBQwtAbstractScale\fP\&.
 .RI "\fBQwtScaleDraw\fP * \fBscaleDraw\fP ()"
 .br
 .ti -1c
-.RI "QRect \fBpipeRect\fP () const "
+.RI "QRect \fBpipeRect\fP () const"
 .br
 .ti -1c
-.RI "QRect \fBfillRect\fP (const QRect &) const "
+.RI "QRect \fBfillRect\fP (const QRect &) const"
 .br
-.RI "\fICalculate the filled rectangle of the pipe\&. \fP"
+.RI "Calculate the filled rectangle of the pipe\&. "
 .ti -1c
-.RI "QRect \fBalarmRect\fP (const QRect &) const "
+.RI "QRect \fBalarmRect\fP (const QRect &) const"
 .br
-.RI "\fICalculate the alarm rectangle of the pipe\&. \fP"
+.RI "Calculate the alarm rectangle of the pipe\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

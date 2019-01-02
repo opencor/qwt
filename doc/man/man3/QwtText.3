@@ -1,4 +1,4 @@
-.TH "QwtText" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtText" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,25 +13,25 @@ QwtText \- A class representing a text\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBTextFormat\fP { \fBAutoText\fP = 0, \fBPlainText\fP, \fBRichText\fP, \fBMathMLText\fP, \fBTeXText\fP, \fBOtherFormat\fP = 100 }
-.RI "\fIText format\&. \fP""
+.RI "enum \fBTextFormat\fP { \fBAutoText\fP = 0, \fBPlainText\fP, \fBRichText\fP, \fBMathMLText\fP, \fBTeXText\fP, \fBOtherFormat\fP = 100 }"
 .br
+.RI "Text format\&. "
 .ti -1c
-.RI "enum \fBPaintAttribute\fP { \fBPaintUsingTextFont\fP = 0x01, \fBPaintUsingTextColor\fP = 0x02, \fBPaintBackground\fP = 0x04 }
-.RI "\fIPaint Attributes\&. \fP""
+.RI "enum \fBPaintAttribute\fP { \fBPaintUsingTextFont\fP = 0x01, \fBPaintUsingTextColor\fP = 0x02, \fBPaintBackground\fP = 0x04 }"
 .br
+.RI "Paint Attributes\&. "
 .ti -1c
-.RI "enum \fBLayoutAttribute\fP { \fBMinimumLayout\fP = 0x01 }
-.RI "\fILayout Attributes The layout attributes affects some aspects of the layout of the text\&. \fP""
+.RI "enum \fBLayoutAttribute\fP { \fBMinimumLayout\fP = 0x01 }"
 .br
+.RI "Layout Attributes The layout attributes affects some aspects of the layout of the text\&. "
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "\fIPaint attributes\&. \fP"
+.RI "Paint attributes\&. "
 .ti -1c
 .RI "typedef QFlags< \fBLayoutAttribute\fP > \fBLayoutAttributes\fP"
 .br
-.RI "\fILayout attributes\&. \fP"
+.RI "Layout attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -42,100 +42,100 @@ QwtText \- A class representing a text\&.
 .ti -1c
 .RI "\fBQwtText\fP (const \fBQwtText\fP &)"
 .br
-.RI "\fICopy constructor\&. \fP"
+.RI "Copy constructor\&. "
 .ti -1c
 .RI "\fB~QwtText\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "\fBQwtText\fP & \fBoperator=\fP (const \fBQwtText\fP &)"
 .br
-.RI "\fIAssignment operator\&. \fP"
+.RI "Assignment operator\&. "
 .ti -1c
-.RI "bool \fBoperator==\fP (const \fBQwtText\fP &) const "
+.RI "bool \fBoperator==\fP (const \fBQwtText\fP &) const"
 .br
-.RI "\fIRelational operator\&. \fP"
+.RI "Relational operator\&. "
 .ti -1c
-.RI "bool \fBoperator!=\fP (const \fBQwtText\fP &) const "
+.RI "bool \fBoperator!=\fP (const \fBQwtText\fP &) const"
 .br
-.RI "\fIRelational operator\&. \fP"
+.RI "Relational operator\&. "
 .ti -1c
 .RI "void \fBsetText\fP (const QString &, \fBQwtText::TextFormat\fP textFormat=\fBAutoText\fP)"
 .br
 .ti -1c
-.RI "QString \fBtext\fP () const "
+.RI "QString \fBtext\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisNull\fP () const "
+.RI "bool \fBisNull\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisEmpty\fP () const "
+.RI "bool \fBisEmpty\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetFont\fP (const QFont &)"
 .br
 .ti -1c
-.RI "QFont \fBfont\fP () const "
+.RI "QFont \fBfont\fP () const"
 .br
-.RI "\fIReturn the font\&. \fP"
+.RI "Return the font\&. "
 .ti -1c
-.RI "QFont \fBusedFont\fP (const QFont &) const "
+.RI "QFont \fBusedFont\fP (const QFont &) const"
 .br
 .ti -1c
-.RI "void \fBsetRenderFlags\fP (int flags)"
+.RI "void \fBsetRenderFlags\fP (int)"
 .br
-.RI "\fIChange the render flags\&. \fP"
+.RI "Change the render flags\&. "
 .ti -1c
-.RI "int \fBrenderFlags\fP () const "
+.RI "int \fBrenderFlags\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetColor\fP (const QColor &)"
 .br
 .ti -1c
-.RI "QColor \fBcolor\fP () const "
+.RI "QColor \fBcolor\fP () const"
 .br
-.RI "\fIReturn the pen color, used for painting the text\&. \fP"
+.RI "Return the pen color, used for painting the text\&. "
 .ti -1c
-.RI "QColor \fBusedColor\fP (const QColor &) const "
+.RI "QColor \fBusedColor\fP (const QColor &) const"
 .br
 .ti -1c
 .RI "void \fBsetBorderRadius\fP (double)"
 .br
 .ti -1c
-.RI "double \fBborderRadius\fP () const "
+.RI "double \fBborderRadius\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBorderPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "QPen \fBborderPen\fP () const "
+.RI "QPen \fBborderPen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBackgroundBrush\fP (const QBrush &)"
 .br
 .ti -1c
-.RI "QBrush \fBbackgroundBrush\fP () const "
+.RI "QBrush \fBbackgroundBrush\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const "
+.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetLayoutAttribute\fP (\fBLayoutAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestLayoutAttribute\fP (\fBLayoutAttribute\fP) const "
+.RI "bool \fBtestLayoutAttribute\fP (\fBLayoutAttribute\fP) const"
 .br
 .ti -1c
-.RI "double \fBheightForWidth\fP (double width, const QFont &=QFont()) const "
+.RI "double \fBheightForWidth\fP (double width, const QFont &=QFont()) const"
 .br
 .ti -1c
-.RI "QSizeF \fBtextSize\fP (const QFont &=QFont()) const "
+.RI "QSizeF \fBtextSize\fP (const QFont &=QFont()) const"
 .br
 .ti -1c
-.RI "void \fBdraw\fP (QPainter *painter, const QRectF &rect) const "
+.RI "void \fBdraw\fP (QPainter *painter, const QRectF &rect) const"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -147,7 +147,7 @@ QwtText \- A class representing a text\&.
 .ti -1c
 .RI "static const \fBQwtTextEngine\fP * \fBtextEngine\fP (\fBQwtText::TextFormat\fP)"
 .br
-.RI "\fIFind the text engine for a text format\&. \fP"
+.RI "Find the text engine for a text format\&. "
 .ti -1c
 .RI "static void \fBsetTextEngine\fP (\fBQwtText::TextFormat\fP, \fBQwtTextEngine\fP *)"
 .br
@@ -239,10 +239,11 @@ Draw the text as it is, using a \fBQwtPlainTextEngine\fP\&.
 Use the Scribe framework (Qt Rich Text) to render the text\&. 
 .TP
 \fB\fIMathMLText \fP\fP
-Use a MathML (http://en.wikipedia.org/wiki/MathML) render engine to display the text\&. The Qwt MathML extension offers such an engine based on the MathML renderer of the Qt solutions package\&. To enable MathML support the following code needs to be added to the application: 
+Use a MathML (http://en.wikipedia.org/wiki/MathML) render engine to display the text\&. The Qwt MathML extension offers such an engine based on the MathML renderer of the former Qt solutions package\&. To enable MathML support the following code needs to be added to the application:
+.PP
 .PP
 .nf
-QwtText::setTextEngine(QwtText::MathMLText, new QwtMathMLTextEngine()); 
+QwtText::setTextEngine( QwtText::MathMLText, new QwtMathMLTextEngine() );
 .fi
 .PP
  

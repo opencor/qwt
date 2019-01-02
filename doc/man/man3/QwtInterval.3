@@ -1,4 +1,4 @@
-.TH "QwtInterval" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtInterval" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,7 +18,7 @@ QwtInterval \- A class representing an interval\&.
 .ti -1c
 .RI "typedef QFlags< \fBBorderFlag\fP > \fBBorderFlags\fP"
 .br
-.RI "\fIBorder flags\&. \fP"
+.RI "Border flags\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -26,7 +26,7 @@ QwtInterval \- A class representing an interval\&.
 .ti -1c
 .RI "\fBQwtInterval\fP ()"
 .br
-.RI "\fIDefault Constructor\&. \fP"
+.RI "Default Constructor\&. "
 .ti -1c
 .RI "\fBQwtInterval\fP (double \fBminValue\fP, double \fBmaxValue\fP, \fBBorderFlags\fP=\fBIncludeBorders\fP)"
 .br
@@ -34,39 +34,39 @@ QwtInterval \- A class representing an interval\&.
 .RI "void \fBsetInterval\fP (double \fBminValue\fP, double \fBmaxValue\fP, \fBBorderFlags\fP=\fBIncludeBorders\fP)"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBnormalized\fP () const "
+.RI "\fBQwtInterval\fP \fBnormalized\fP () const"
 .br
-.RI "\fINormalize the limits of the interval\&. \fP"
+.RI "Normalize the limits of the interval\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBinverted\fP () const "
-.br
-.ti -1c
-.RI "\fBQwtInterval\fP \fBlimited\fP (double \fBminValue\fP, double \fBmaxValue\fP) const "
+.RI "\fBQwtInterval\fP \fBinverted\fP () const"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (const \fBQwtInterval\fP &) const "
+.RI "\fBQwtInterval\fP \fBlimited\fP (double lowerBound, double upperBound) const"
 .br
-.RI "\fICompare two intervals\&. \fP"
 .ti -1c
-.RI "bool \fBoperator!=\fP (const \fBQwtInterval\fP &) const "
+.RI "bool \fBoperator==\fP (const \fBQwtInterval\fP &) const"
 .br
-.RI "\fICompare two intervals\&. \fP"
+.RI "Compare two intervals\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBQwtInterval\fP &) const"
+.br
+.RI "Compare two intervals\&. "
 .ti -1c
 .RI "void \fBsetBorderFlags\fP (\fBBorderFlags\fP)"
 .br
 .ti -1c
-.RI "\fBBorderFlags\fP \fBborderFlags\fP () const "
+.RI "\fBBorderFlags\fP \fBborderFlags\fP () const"
 .br
 .ti -1c
-.RI "double \fBminValue\fP () const "
+.RI "double \fBminValue\fP () const"
 .br
 .ti -1c
-.RI "double \fBmaxValue\fP () const "
+.RI "double \fBmaxValue\fP () const"
 .br
 .ti -1c
-.RI "double \fBwidth\fP () const "
+.RI "double \fBwidth\fP () const"
 .br
-.RI "\fIReturn the width of an interval\&. \fP"
+.RI "Return the width of an interval\&. "
 .ti -1c
 .RI "void \fBsetMinValue\fP (double)"
 .br
@@ -74,56 +74,54 @@ QwtInterval \- A class representing an interval\&.
 .RI "void \fBsetMaxValue\fP (double)"
 .br
 .ti -1c
-.RI "bool \fBcontains\fP (double value) const "
+.RI "bool \fBcontains\fP (double value) const"
 .br
 .ti -1c
-.RI "bool \fBintersects\fP (const \fBQwtInterval\fP &) const "
+.RI "bool \fBintersects\fP (const \fBQwtInterval\fP &) const"
 .br
-.RI "\fITest if two intervals overlap\&. \fP"
+.RI "Test if two intervals overlap\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBintersect\fP (const \fBQwtInterval\fP &) const "
+.RI "\fBQwtInterval\fP \fBintersect\fP (const \fBQwtInterval\fP &) const"
 .br
-.RI "\fIIntersect 2 intervals\&. \fP"
+.RI "Intersect 2 intervals\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBunite\fP (const \fBQwtInterval\fP &) const "
+.RI "\fBQwtInterval\fP \fBunite\fP (const \fBQwtInterval\fP &) const"
 .br
-.RI "\fIUnite 2 intervals\&. \fP"
+.RI "Unite 2 intervals\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBoperator|\fP (const \fBQwtInterval\fP &) const "
+.RI "\fBQwtInterval\fP \fBoperator|\fP (const \fBQwtInterval\fP &) const"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBoperator&\fP (const \fBQwtInterval\fP &) const "
+.RI "\fBQwtInterval\fP \fBoperator &\fP (const \fBQwtInterval\fP &) const"
 .br
-.RI "\fIIntersection of two intervals\&. \fP"
 .ti -1c
 .RI "\fBQwtInterval\fP & \fBoperator|=\fP (const \fBQwtInterval\fP &)"
 .br
-.RI "\fIUnite this interval with the given interval\&. \fP"
+.RI "Unite this interval with the given interval\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP & \fBoperator&=\fP (const \fBQwtInterval\fP &)"
+.RI "\fBQwtInterval\fP & \fBoperator &=\fP (const \fBQwtInterval\fP &)"
 .br
-.RI "\fIIntersect this interval with the given interval\&. \fP"
 .ti -1c
-.RI "\fBQwtInterval\fP \fBextend\fP (double value) const "
+.RI "\fBQwtInterval\fP \fBextend\fP (double value) const"
 .br
-.RI "\fIExtend the interval\&. \fP"
+.RI "Extend the interval\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBoperator|\fP (double) const "
+.RI "\fBQwtInterval\fP \fBoperator|\fP (double) const"
 .br
 .ti -1c
 .RI "\fBQwtInterval\fP & \fBoperator|=\fP (double)"
 .br
 .ti -1c
-.RI "bool \fBisValid\fP () const "
+.RI "bool \fBisValid\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisNull\fP () const "
+.RI "bool \fBisNull\fP () const"
 .br
 .ti -1c
 .RI "void \fBinvalidate\fP ()"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBsymmetrize\fP (double value) const "
+.RI "\fBQwtInterval\fP \fBsymmetrize\fP (double value) const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -376,43 +374,6 @@ Compare two intervals\&.
 \fBReturns:\fP
 .RS 4
 True, when this and other are not equal 
-.RE
-.PP
-
-.SS "\fBQwtInterval\fP QwtInterval::operator& (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
-
-.PP
-Intersection of two intervals\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIother\fP Interval to intersect with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Intersection of this and other
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBintersect()\fP 
-.RE
-.PP
-
-.SS "\fBQwtInterval\fP & QwtInterval::operator&= (const \fBQwtInterval\fP & other)"
-
-.PP
-Intersect this interval with the given interval\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIother\fP Interval to be intersected with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-This interval 
 .RE
 .PP
 
