@@ -1,4 +1,4 @@
-.TH "QwtPlotSvgItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSvgItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,17 +15,17 @@ Inherits \fBQwtPlotItem\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotSvgItem\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotSvgItem\fP (const QString &\fBtitle\fP=QString())"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtPlotSvgItem\fP (const \fBQwtText\fP &\fBtitle\fP)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotSvgItem\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "bool \fBloadFile\fP (const QRectF &, const QString &fileName)"
 .br
@@ -33,30 +33,30 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "bool \fBloadData\fP (const QRectF &, const QByteArray &)"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
-.RI "\fIBounding rectangle of the item\&. \fP"
+.RI "Bounding rectangle of the item\&. "
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "const QSvgRenderer & \fBrenderer\fP () const "
+.RI "const QSvgRenderer & \fBrenderer\fP () const"
 .br
 .ti -1c
 .RI "QSvgRenderer & \fBrenderer\fP ()"
 .br
 .ti -1c
-.RI "void \fBrender\fP (QPainter *painter, const QRectF &\fBviewBox\fP, const QRectF &rect) const "
+.RI "void \fBrender\fP (QPainter *, const QRectF &\fBviewBox\fP, const QRectF &rect) const"
 .br
 .ti -1c
-.RI "QRectF \fBviewBox\fP (const QRectF &area) const "
+.RI "QRectF \fBviewBox\fP (const QRectF &rect) const"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -67,7 +67,7 @@ A plot item, which displays data in Scalable Vector Graphics (SVG) format\&.
 SVG images are often used to display maps 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotSvgItem::QwtPlotSvgItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotSvgItem::QwtPlotSvgItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 
 .PP
 Constructor\&. Sets the following item attributes:

@@ -1,4 +1,4 @@
-.TH "QwtMatrixRasterData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMatrixRasterData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,9 @@ Inherits \fBQwtRasterData\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBResampleMode\fP { \fBNearestNeighbour\fP, \fBBilinearInterpolation\fP }
-.RI "\fIResampling algorithm The default setting is NearestNeighbour;\&. \fP""
+.RI "enum \fBResampleMode\fP { \fBNearestNeighbour\fP, \fBBilinearInterpolation\fP }"
 .br
+.RI "Resampling algorithm The default setting is NearestNeighbour;\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -25,45 +25,45 @@ Inherits \fBQwtRasterData\fP\&.
 .ti -1c
 .RI "\fBQwtMatrixRasterData\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtMatrixRasterData\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetResampleMode\fP (\fBResampleMode\fP mode)"
 .br
-.RI "\fISet the resampling algorithm\&. \fP"
+.RI "Set the resampling algorithm\&. "
 .ti -1c
-.RI "\fBResampleMode\fP \fBresampleMode\fP () const "
+.RI "\fBResampleMode\fP \fBresampleMode\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBsetInterval\fP (Qt::Axis, const \fBQwtInterval\fP &)"
 .br
-.RI "\fIAssign the bounding interval for an axis\&. \fP"
+.RI "Assign the bounding interval for an axis\&. "
 .ti -1c
 .RI "void \fBsetValueMatrix\fP (const QVector< double > &values, int \fBnumColumns\fP)"
 .br
-.RI "\fIAssign a value matrix\&. \fP"
+.RI "Assign a value matrix\&. "
 .ti -1c
-.RI "const QVector< double > \fBvalueMatrix\fP () const "
+.RI "const QVector< double > \fBvalueMatrix\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetValue\fP (int row, int col, double \fBvalue\fP)"
 .br
-.RI "\fIChange a single value in the matrix\&. \fP"
+.RI "Change a single value in the matrix\&. "
 .ti -1c
-.RI "int \fBnumColumns\fP () const "
+.RI "int \fBnumColumns\fP () const"
 .br
 .ti -1c
-.RI "int \fBnumRows\fP () const "
+.RI "int \fBnumRows\fP () const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const "
+.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const"
 .br
-.RI "\fICalculate the pixel hint\&. \fP"
+.RI "Calculate the pixel hint\&. "
 .ti -1c
-.RI "virtual double \fBvalue\fP (double x, double y) const "
+.RI "virtual double \fBvalue\fP (double x, double y) const"
 .br
 .in -1c
 .SH "Detailed Description"

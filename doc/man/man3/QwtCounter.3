@@ -1,4 +1,4 @@
-.TH "QwtCounter" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCounter" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,9 @@ Inherits QWidget\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBButton\fP { \fBButton1\fP, \fBButton2\fP, \fBButton3\fP, \fBButtonCnt\fP }
-.RI "\fIButton index\&. \fP""
+.RI "enum \fBButton\fP { \fBButton1\fP, \fBButton2\fP, \fBButton3\fP, \fBButtonCnt\fP }"
 .br
+.RI "Button index\&. "
 .in -1c
 .SS "Public Slots"
 
@@ -25,7 +25,7 @@ Inherits QWidget\&.
 .ti -1c
 .RI "void \fBsetValue\fP (double)"
 .br
-.RI "\fISet a new value without adjusting to the step raster\&. \fP"
+.RI "Set a new value without adjusting to the step raster\&. "
 .in -1c
 .SS "Signals"
 
@@ -46,89 +46,89 @@ Inherits QWidget\&.
 .ti -1c
 .RI "virtual \fB~QwtCounter\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetValid\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBisValid\fP () const "
+.RI "bool \fBisValid\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetWrapping\fP (bool)"
 .br
-.RI "\fIEn/Disable wrapping\&. \fP"
+.RI "En/Disable wrapping\&. "
 .ti -1c
-.RI "bool \fBwrapping\fP () const "
+.RI "bool \fBwrapping\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisReadOnly\fP () const "
+.RI "bool \fBisReadOnly\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetReadOnly\fP (bool)"
 .br
-.RI "\fIAllow/disallow the user to manually edit the value\&. \fP"
+.RI "Allow/disallow the user to manually edit the value\&. "
 .ti -1c
-.RI "void \fBsetNumButtons\fP (int n)"
+.RI "void \fBsetNumButtons\fP (int)"
 .br
 .ti -1c
-.RI "int \fBnumButtons\fP () const "
+.RI "int \fBnumButtons\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetIncSteps\fP (\fBQwtCounter::Button\fP btn, int nSteps)"
+.RI "void \fBsetIncSteps\fP (\fBQwtCounter::Button\fP, int numSteps)"
 .br
 .ti -1c
-.RI "int \fBincSteps\fP (\fBQwtCounter::Button\fP btn) const "
+.RI "int \fBincSteps\fP (\fBQwtCounter::Button\fP) const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
-.RI "\fIA size hint\&. \fP"
+.RI "A size hint\&. "
 .ti -1c
-.RI "double \fBsingleStep\fP () const "
+.RI "double \fBsingleStep\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetSingleStep\fP (double s)"
+.RI "void \fBsetSingleStep\fP (double stepSize)"
 .br
-.RI "\fISet the step size of the counter\&. \fP"
+.RI "Set the step size of the counter\&. "
 .ti -1c
 .RI "void \fBsetRange\fP (double min, double max)"
 .br
-.RI "\fISet the minimum and maximum values\&. \fP"
+.RI "Set the minimum and maximum values\&. "
 .ti -1c
-.RI "double \fBminimum\fP () const "
+.RI "double \fBminimum\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetMinimum\fP (double min)"
+.RI "void \fBsetMinimum\fP (double)"
 .br
 .ti -1c
-.RI "double \fBmaximum\fP () const "
+.RI "double \fBmaximum\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetMaximum\fP (double max)"
+.RI "void \fBsetMaximum\fP (double)"
 .br
 .ti -1c
 .RI "void \fBsetStepButton1\fP (int nSteps)"
 .br
 .ti -1c
-.RI "int \fBstepButton1\fP () const "
+.RI "int \fBstepButton1\fP () const"
 .br
-.RI "\fIreturns the number of increment steps for button 1 \fP"
+.RI "returns the number of increment steps for button 1 "
 .ti -1c
 .RI "void \fBsetStepButton2\fP (int nSteps)"
 .br
 .ti -1c
-.RI "int \fBstepButton2\fP () const "
+.RI "int \fBstepButton2\fP () const"
 .br
-.RI "\fIreturns the number of increment steps for button 2 \fP"
+.RI "returns the number of increment steps for button 2 "
 .ti -1c
 .RI "void \fBsetStepButton3\fP (int nSteps)"
 .br
 .ti -1c
-.RI "int \fBstepButton3\fP () const "
+.RI "int \fBstepButton3\fP () const"
 .br
-.RI "\fIreturns the number of increment steps for button 3 \fP"
+.RI "returns the number of increment steps for button 3 "
 .ti -1c
-.RI "double \fBvalue\fP () const "
+.RI "double \fBvalue\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"

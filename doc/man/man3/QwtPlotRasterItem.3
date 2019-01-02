@@ -1,4 +1,4 @@
-.TH "QwtPlotRasterItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRasterItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,80 +17,80 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBCachePolicy\fP { \fBNoCache\fP, \fBPaintCache\fP }
-.RI "\fICache policy The default policy is NoCache\&. \fP""
+.RI "enum \fBCachePolicy\fP { \fBNoCache\fP, \fBPaintCache\fP }"
 .br
+.RI "Cache policy The default policy is NoCache\&. "
 .ti -1c
 .RI "enum \fBPaintAttribute\fP { \fBPaintInDeviceResolution\fP = 1 }"
 .br
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "\fIPaint attributes\&. \fP"
+.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotRasterItem\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotRasterItem\fP (const QString &\fBtitle\fP=QString())"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtPlotRasterItem\fP (const \fBQwtText\fP &\fBtitle\fP)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotRasterItem\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const "
+.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetAlpha\fP (int \fBalpha\fP)"
 .br
-.RI "\fISet an alpha value for the raster data\&. \fP"
+.RI "Set an alpha value for the raster data\&. "
 .ti -1c
-.RI "int \fBalpha\fP () const "
+.RI "int \fBalpha\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetCachePolicy\fP (\fBCachePolicy\fP)"
 .br
 .ti -1c
-.RI "\fBCachePolicy\fP \fBcachePolicy\fP () const "
+.RI "\fBCachePolicy\fP \fBcachePolicy\fP () const"
 .br
 .ti -1c
 .RI "void \fBinvalidateCache\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
-.RI "\fIDraw the raster data\&. \fP"
+.RI "Draw the raster data\&. "
 .ti -1c
-.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const "
+.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const"
 .br
-.RI "\fIPixel hint\&. \fP"
+.RI "Pixel hint\&. "
 .ti -1c
-.RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis) const "
+.RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const  =0"
+.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const =0"
 .br
-.RI "\fIRender an image\&. \fP"
+.RI "Render an image\&. "
 .ti -1c
-.RI "virtual \fBQwtScaleMap\fP \fBimageMap\fP (Qt::Orientation, const \fBQwtScaleMap\fP &map, const QRectF &area, const QSize &imageSize, double pixelSize) const "
+.RI "virtual \fBQwtScaleMap\fP \fBimageMap\fP (Qt::Orientation, const \fBQwtScaleMap\fP &map, const QRectF &area, const QSize &imageSize, double pixelSize) const"
 .br
-.RI "\fICalculate a scale map for painting to an image\&. \fP"
+.RI "Calculate a scale map for painting to an image\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

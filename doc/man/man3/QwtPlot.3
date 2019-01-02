@@ -1,4 +1,4 @@
-.TH "QwtPlot" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlot" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,9 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBAxis\fP { \fByLeft\fP, \fByRight\fP, \fBxBottom\fP, \fBxTop\fP, \fBaxisCnt\fP }
-.RI "\fIAxis index\&. \fP""
+.RI "enum \fBAxis\fP { \fByLeft\fP, \fByRight\fP, \fBxBottom\fP, \fBxTop\fP, \fBaxisCnt\fP }"
 .br
+.RI "Axis index\&. "
 .ti -1c
 .RI "enum \fBLegendPosition\fP { \fBLeftLegend\fP, \fBRightLegend\fP, \fBBottomLegend\fP, \fBTopLegend\fP }"
 .br
@@ -28,11 +28,11 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 .ti -1c
 .RI "virtual void \fBreplot\fP ()"
 .br
-.RI "\fIRedraw the plot\&. \fP"
+.RI "Redraw the plot\&. "
 .ti -1c
 .RI "void \fBautoRefresh\fP ()"
 .br
-.RI "\fIReplots the plot if \fBautoReplot()\fP is \fCtrue\fP\&. \fP"
+.RI "Replots the plot if \fBautoReplot()\fP is \fCtrue\fP\&. "
 .in -1c
 .SS "Signals"
 
@@ -50,100 +50,100 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 .ti -1c
 .RI "\fBQwtPlot\fP (QWidget *=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtPlot\fP (const \fBQwtText\fP &\fBtitle\fP, QWidget *=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlot\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBapplyProperties\fP (const QString &)"
 .br
 .ti -1c
-.RI "QString \fBgrabProperties\fP () const "
+.RI "QString \fBgrabProperties\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAutoReplot\fP (bool=true)"
 .br
-.RI "\fISet or reset the autoReplot option\&. \fP"
+.RI "Set or reset the autoReplot option\&. "
 .ti -1c
-.RI "bool \fBautoReplot\fP () const "
+.RI "bool \fBautoReplot\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPlotLayout\fP (\fBQwtPlotLayout\fP *)"
 .br
-.RI "\fIAssign a new plot layout\&. \fP"
+.RI "Assign a new plot layout\&. "
 .ti -1c
 .RI "\fBQwtPlotLayout\fP * \fBplotLayout\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtPlotLayout\fP * \fBplotLayout\fP () const "
+.RI "const \fBQwtPlotLayout\fP * \fBplotLayout\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTitle\fP (const QString &)"
 .br
 .ti -1c
-.RI "void \fBsetTitle\fP (const \fBQwtText\fP &t)"
+.RI "void \fBsetTitle\fP (const \fBQwtText\fP &)"
 .br
 .ti -1c
-.RI "\fBQwtText\fP \fBtitle\fP () const "
+.RI "\fBQwtText\fP \fBtitle\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtTextLabel\fP * \fBtitleLabel\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtTextLabel\fP * \fBtitleLabel\fP () const "
+.RI "const \fBQwtTextLabel\fP * \fBtitleLabel\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetFooter\fP (const QString &)"
 .br
 .ti -1c
-.RI "void \fBsetFooter\fP (const \fBQwtText\fP &t)"
+.RI "void \fBsetFooter\fP (const \fBQwtText\fP &)"
 .br
 .ti -1c
-.RI "\fBQwtText\fP \fBfooter\fP () const "
+.RI "\fBQwtText\fP \fBfooter\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtTextLabel\fP * \fBfooterLabel\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtTextLabel\fP * \fBfooterLabel\fP () const "
+.RI "const \fBQwtTextLabel\fP * \fBfooterLabel\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetCanvas\fP (QWidget *)"
 .br
-.RI "\fISet the drawing canvas of the plot widget\&. \fP"
+.RI "Set the drawing canvas of the plot widget\&. "
 .ti -1c
 .RI "QWidget * \fBcanvas\fP ()"
 .br
 .ti -1c
-.RI "const QWidget * \fBcanvas\fP () const "
+.RI "const QWidget * \fBcanvas\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetCanvasBackground\fP (const QBrush &)"
 .br
-.RI "\fIChange the background of the plotting area\&. \fP"
+.RI "Change the background of the plotting area\&. "
 .ti -1c
-.RI "QBrush \fBcanvasBackground\fP () const "
+.RI "QBrush \fBcanvasBackground\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtScaleMap\fP \fBcanvasMap\fP (int axisId) const "
+.RI "virtual \fBQwtScaleMap\fP \fBcanvasMap\fP (int axisId) const"
 .br
 .ti -1c
-.RI "double \fBinvTransform\fP (int axisId, int pos) const "
+.RI "double \fBinvTransform\fP (int axisId, int pos) const"
 .br
 .ti -1c
-.RI "double \fBtransform\fP (int axisId, double value) const "
+.RI "double \fBtransform\fP (int axisId, double value) const"
 .br
-.RI "\fITransform a value into a coordinate in the plotting region\&. \fP"
+.RI "Transform a value into a coordinate in the plotting region\&. "
 .ti -1c
 .RI "\fBQwtScaleEngine\fP * \fBaxisScaleEngine\fP (int axisId)"
 .br
 .ti -1c
-.RI "const \fBQwtScaleEngine\fP * \fBaxisScaleEngine\fP (int axisId) const "
+.RI "const \fBQwtScaleEngine\fP * \fBaxisScaleEngine\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBsetAxisScaleEngine\fP (int axisId, \fBQwtScaleEngine\fP *)"
@@ -151,58 +151,58 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 .ti -1c
 .RI "void \fBsetAxisAutoScale\fP (int axisId, bool on=true)"
 .br
-.RI "\fIEnable autoscaling for a specified axis\&. \fP"
+.RI "Enable autoscaling for a specified axis\&. "
 .ti -1c
-.RI "bool \fBaxisAutoScale\fP (int axisId) const "
+.RI "bool \fBaxisAutoScale\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBenableAxis\fP (int axisId, bool tf=true)"
 .br
-.RI "\fIEnable or disable a specified axis\&. \fP"
+.RI "Enable or disable a specified axis\&. "
 .ti -1c
-.RI "bool \fBaxisEnabled\fP (int axisId) const "
+.RI "bool \fBaxisEnabled\fP (int axisId) const"
 .br
 .ti -1c
-.RI "void \fBsetAxisFont\fP (int axisId, const QFont &f)"
+.RI "void \fBsetAxisFont\fP (int axisId, const QFont &)"
 .br
-.RI "\fIChange the font of an axis\&. \fP"
+.RI "Change the font of an axis\&. "
 .ti -1c
-.RI "QFont \fBaxisFont\fP (int axisId) const "
+.RI "QFont \fBaxisFont\fP (int axisId) const"
 .br
 .ti -1c
-.RI "void \fBsetAxisScale\fP (int axisId, double min, double max, double step=0)"
+.RI "void \fBsetAxisScale\fP (int axisId, double min, double max, double stepSize=0)"
 .br
-.RI "\fIDisable autoscaling and specify a fixed scale for a selected axis\&. \fP"
+.RI "Disable autoscaling and specify a fixed scale for a selected axis\&. "
 .ti -1c
 .RI "void \fBsetAxisScaleDiv\fP (int axisId, const \fBQwtScaleDiv\fP &)"
 .br
-.RI "\fIDisable autoscaling and specify a fixed scale for a selected axis\&. \fP"
+.RI "Disable autoscaling and specify a fixed scale for a selected axis\&. "
 .ti -1c
 .RI "void \fBsetAxisScaleDraw\fP (int axisId, \fBQwtScaleDraw\fP *)"
 .br
-.RI "\fISet a scale draw\&. \fP"
+.RI "Set a scale draw\&. "
 .ti -1c
-.RI "double \fBaxisStepSize\fP (int axisId) const "
+.RI "double \fBaxisStepSize\fP (int axisId) const"
 .br
-.RI "\fIReturn the step size parameter that has been set in setAxisScale\&. \fP"
+.RI "Return the step size parameter that has been set in setAxisScale\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP \fBaxisInterval\fP (int axisId) const "
+.RI "\fBQwtInterval\fP \fBaxisInterval\fP (int axisId) const"
 .br
-.RI "\fIReturn the current interval of the specified axis\&. \fP"
+.RI "Return the current interval of the specified axis\&. "
 .ti -1c
-.RI "const \fBQwtScaleDiv\fP & \fBaxisScaleDiv\fP (int axisId) const "
+.RI "const \fBQwtScaleDiv\fP & \fBaxisScaleDiv\fP (int axisId) const"
 .br
-.RI "\fIReturn the scale division of a specified axis\&. \fP"
+.RI "Return the scale division of a specified axis\&. "
 .ti -1c
-.RI "const \fBQwtScaleDraw\fP * \fBaxisScaleDraw\fP (int axisId) const "
+.RI "const \fBQwtScaleDraw\fP * \fBaxisScaleDraw\fP (int axisId) const"
 .br
-.RI "\fIReturn the scale draw of a specified axis\&. \fP"
+.RI "Return the scale draw of a specified axis\&. "
 .ti -1c
 .RI "\fBQwtScaleDraw\fP * \fBaxisScaleDraw\fP (int axisId)"
 .br
-.RI "\fIReturn the scale draw of a specified axis\&. \fP"
+.RI "Return the scale draw of a specified axis\&. "
 .ti -1c
-.RI "const \fBQwtScaleWidget\fP * \fBaxisWidget\fP (int axisId) const "
+.RI "const \fBQwtScaleWidget\fP * \fBaxisWidget\fP (int axisId) const"
 .br
 .ti -1c
 .RI "\fBQwtScaleWidget\fP * \fBaxisWidget\fP (int axisId)"
@@ -216,35 +216,35 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 .ti -1c
 .RI "void \fBsetAxisTitle\fP (int axisId, const QString &)"
 .br
-.RI "\fIChange the title of a specified axis\&. \fP"
+.RI "Change the title of a specified axis\&. "
 .ti -1c
 .RI "void \fBsetAxisTitle\fP (int axisId, const \fBQwtText\fP &)"
 .br
-.RI "\fIChange the title of a specified axis\&. \fP"
+.RI "Change the title of a specified axis\&. "
 .ti -1c
-.RI "\fBQwtText\fP \fBaxisTitle\fP (int axisId) const "
+.RI "\fBQwtText\fP \fBaxisTitle\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBsetAxisMaxMinor\fP (int axisId, int maxMinor)"
 .br
 .ti -1c
-.RI "int \fBaxisMaxMinor\fP (int axisId) const "
+.RI "int \fBaxisMaxMinor\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBsetAxisMaxMajor\fP (int axisId, int maxMajor)"
 .br
 .ti -1c
-.RI "int \fBaxisMaxMajor\fP (int axisId) const "
+.RI "int \fBaxisMaxMajor\fP (int axisId) const"
 .br
 .ti -1c
 .RI "void \fBinsertLegend\fP (\fBQwtAbstractLegend\fP *, \fBLegendPosition\fP=\fBQwtPlot::RightLegend\fP, double ratio=\-1\&.0)"
 .br
-.RI "\fIInsert a legend\&. \fP"
+.RI "Insert a legend\&. "
 .ti -1c
 .RI "\fBQwtAbstractLegend\fP * \fBlegend\fP ()"
 .br
 .ti -1c
-.RI "const \fBQwtAbstractLegend\fP * \fBlegend\fP () const "
+.RI "const \fBQwtAbstractLegend\fP * \fBlegend\fP () const"
 .br
 .ti -1c
 .RI "void \fBupdateLegend\fP ()"
@@ -253,50 +253,50 @@ Inherits QFrame, and \fBQwtPlotDict\fP\&.
 .RI "void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *)"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const "
+.RI "virtual QSize \fBminimumSizeHint\fP () const"
 .br
-.RI "\fIReturn a minimum size hint\&. \fP"
+.RI "Return a minimum size hint\&. "
 .ti -1c
 .RI "virtual void \fBupdateLayout\fP ()"
 .br
-.RI "\fIAdjust plot content to its current size\&. \fP"
+.RI "Adjust plot content to its current size\&. "
 .ti -1c
 .RI "virtual void \fBdrawCanvas\fP (QPainter *)"
 .br
 .ti -1c
 .RI "void \fBupdateAxes\fP ()"
 .br
-.RI "\fIRebuild the axes scales\&. \fP"
+.RI "Rebuild the axes scales\&. "
 .ti -1c
 .RI "void \fBupdateCanvasMargins\fP ()"
 .br
-.RI "\fIUpdate the canvas margins\&. \fP"
+.RI "Update the canvas margins\&. "
 .ti -1c
-.RI "virtual void \fBgetCanvasMarginsHint\fP (const \fBQwtScaleMap\fP maps[], const QRectF &canvasRect, double &left, double &top, double &right, double &bottom) const "
+.RI "virtual void \fBgetCanvasMarginsHint\fP (const \fBQwtScaleMap\fP maps[], const QRectF &canvasRect, double &left, double &top, double &right, double &bottom) const"
 .br
-.RI "\fICalculate the canvas margins\&. \fP"
+.RI "Calculate the canvas margins\&. "
 .ti -1c
 .RI "virtual bool \fBevent\fP (QEvent *)"
 .br
-.RI "\fIAdds handling of layout requests\&. \fP"
+.RI "Adds handling of layout requests\&. "
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .ti -1c
-.RI "virtual void \fBdrawItems\fP (QPainter *, const QRectF &, const \fBQwtScaleMap\fP maps[\fBaxisCnt\fP]) const "
+.RI "virtual void \fBdrawItems\fP (QPainter *, const QRectF &, const \fBQwtScaleMap\fP maps[\fBaxisCnt\fP]) const"
 .br
 .ti -1c
-.RI "virtual QVariant \fBitemToInfo\fP (\fBQwtPlotItem\fP *) const "
+.RI "virtual QVariant \fBitemToInfo\fP (\fBQwtPlotItem\fP *) const"
 .br
-.RI "\fIBuild an information, that can be used to identify a plot item on the legend\&. \fP"
+.RI "Build an information, that can be used to identify a plot item on the legend\&. "
 .ti -1c
-.RI "virtual \fBQwtPlotItem\fP * \fBinfoToItem\fP (const QVariant &) const "
+.RI "virtual \fBQwtPlotItem\fP * \fBinfoToItem\fP (const QVariant &) const"
 .br
-.RI "\fIIdentify the plot item according to an item info object, that has bee generated from \fBitemToInfo()\fP\&. \fP"
+.RI "Identify the plot item according to an item info object, that has bee generated from \fBitemToInfo()\fP\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -326,28 +326,28 @@ The simpleplot example is a good starting point to see how to set up a plot widg
 The following example shows (schematically) the most simple way to use \fBQwtPlot\fP\&. By default, only the left and bottom axes are visible and their scales are computed automatically\&. 
 .PP
 .nf
-#include <qwt_plot.h>
-#include <qwt_plot_curve.h>
+#include <qwt_plot\&.h>
+#include <qwt_plot_curve\&.h>
 
-QwtPlot *myPlot = new QwtPlot("Two Curves", parent);
+QwtPlot *myPlot = new QwtPlot( "Two Curves", parent );
 
 // add curves
-QwtPlotCurve *curve1 = new QwtPlotCurve("Curve 1");
-QwtPlotCurve *curve2 = new QwtPlotCurve("Curve 2");
+QwtPlotCurve *curve1 = new QwtPlotCurve( "Curve 1" );
+QwtPlotCurve *curve2 = new QwtPlotCurve( "Curve 2" );
 
 // connect or copy the data to the curves
-curve1->setData(...);
-curve2->setData(...);
+curve1->setData( \&.\&.\&. );
+curve2->setData( \&.\&.\&. );
 
-curve1->attach(myPlot);
-curve2->attach(myPlot);
+curve1->attach( myPlot );
+curve2->attach( myPlot );
 
 // finally, refresh the plot
 myPlot->replot();
 
 .fi
 .PP
- 
+  
 .RE
 .PP
 
@@ -912,7 +912,7 @@ This method is intended for manipulating the plot widget from a specific editor 
 .PP
 \fBReturns:\fP
 .RS 4
-QString::null 
+QString() 
 .RE
 .PP
 \fBWarning:\fP

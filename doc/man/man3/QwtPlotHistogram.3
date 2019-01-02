@@ -1,4 +1,4 @@
-.TH "QwtPlotHistogram" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotHistogram" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,7 +22,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotHistogram\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotHistogram\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "\fBQwtPlotHistogram\fP (const \fBQwtText\fP &\fBtitle\fP)"
@@ -30,9 +30,9 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .ti -1c
 .RI "virtual \fB~QwtPlotHistogram\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -41,13 +41,13 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .RI "void \fBsetPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "const QPen & \fBpen\fP () const "
+.RI "const QPen & \fBpen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBrush\fP (const QBrush &)"
 .br
 .ti -1c
-.RI "const QBrush & \fBbrush\fP () const "
+.RI "const QBrush & \fBbrush\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (const QVector< \fBQwtIntervalSample\fP > &)"
@@ -56,52 +56,52 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > *)"
 .br
 .ti -1c
-.RI "void \fBsetBaseline\fP (double reference)"
+.RI "void \fBsetBaseline\fP (double)"
 .br
-.RI "\fISet the value of the baseline\&. \fP"
+.RI "Set the value of the baseline\&. "
 .ti -1c
-.RI "double \fBbaseline\fP () const "
+.RI "double \fBbaseline\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetStyle\fP (\fBHistogramStyle\fP \fBstyle\fP)"
 .br
 .ti -1c
-.RI "\fBHistogramStyle\fP \fBstyle\fP () const "
+.RI "\fBHistogramStyle\fP \fBstyle\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSymbol\fP (const \fBQwtColumnSymbol\fP *)"
 .br
-.RI "\fIAssign a symbol\&. \fP"
+.RI "Assign a symbol\&. "
 .ti -1c
-.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP () const "
+.RI "const \fBQwtColumnSymbol\fP * \fBsymbol\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const "
+.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual \fBQwtColumnRect\fP \fBcolumnRect\fP (const \fBQwtIntervalSample\fP &, const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const "
+.RI "virtual \fBQwtColumnRect\fP \fBcolumnRect\fP (const \fBQwtIntervalSample\fP &, const \fBQwtScaleMap\fP &, const \fBQwtScaleMap\fP &) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawColumn\fP (QPainter *, const \fBQwtColumnRect\fP &, const \fBQwtIntervalSample\fP &) const "
+.RI "virtual void \fBdrawColumn\fP (QPainter *, const \fBQwtColumnRect\fP &, const \fBQwtIntervalSample\fP &) const"
 .br
 .ti -1c
-.RI "void \fBdrawColumns\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const "
+.RI "void \fBdrawColumns\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const"
 .br
 .ti -1c
-.RI "void \fBdrawOutline\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const "
+.RI "void \fBdrawOutline\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const"
 .br
 .ti -1c
-.RI "void \fBdrawLines\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const "
+.RI "void \fBdrawLines\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, int from, int to) const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -149,7 +149,7 @@ Draw a simple line using the \fBpen()\fP for each interval\&.
 Styles >= UserStyle are reserved for derived classes that overload \fBdrawSeries()\fP with additional application specific ways to display a histogram\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotHistogram::QwtPlotHistogram (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotHistogram::QwtPlotHistogram (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP

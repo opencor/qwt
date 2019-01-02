@@ -1,4 +1,4 @@
-.TH "QwtPicker" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPicker" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,9 +20,9 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .RI "enum \fBRubberBand\fP { \fBNoRubberBand\fP = 0, \fBHLineRubberBand\fP, \fBVLineRubberBand\fP, \fBCrossRubberBand\fP, \fBRectRubberBand\fP, \fBEllipseRubberBand\fP, \fBPolygonRubberBand\fP, \fBUserRubberBand\fP = 100 }"
 .br
 .ti -1c
-.RI "enum \fBDisplayMode\fP { \fBAlwaysOff\fP, \fBAlwaysOn\fP, \fBActiveOnly\fP }
-.RI "\fIDisplay mode\&. \fP""
+.RI "enum \fBDisplayMode\fP { \fBAlwaysOff\fP, \fBAlwaysOn\fP, \fBActiveOnly\fP }"
 .br
+.RI "Display mode\&. "
 .ti -1c
 .RI "enum \fBResizeMode\fP { \fBStretch\fP, \fBKeepSize\fP }"
 .br
@@ -33,7 +33,7 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "void \fBsetEnabled\fP (bool)"
 .br
-.RI "\fIEn/disable the picker\&. \fP"
+.RI "En/disable the picker\&. "
 .in -1c
 .SS "Signals"
 
@@ -69,12 +69,12 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtPicker\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetStateMachine\fP (\fBQwtPickerMachine\fP *)"
 .br
 .ti -1c
-.RI "const \fBQwtPickerMachine\fP * \fBstateMachine\fP () const "
+.RI "const \fBQwtPickerMachine\fP * \fBstateMachine\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtPickerMachine\fP * \fBstateMachine\fP ()"
@@ -83,91 +83,91 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .RI "void \fBsetRubberBand\fP (\fBRubberBand\fP)"
 .br
 .ti -1c
-.RI "\fBRubberBand\fP \fBrubberBand\fP () const "
+.RI "\fBRubberBand\fP \fBrubberBand\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTrackerMode\fP (\fBDisplayMode\fP)"
 .br
-.RI "\fISet the display mode of the tracker\&. \fP"
+.RI "Set the display mode of the tracker\&. "
 .ti -1c
-.RI "\fBDisplayMode\fP \fBtrackerMode\fP () const "
+.RI "\fBDisplayMode\fP \fBtrackerMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetResizeMode\fP (\fBResizeMode\fP)"
 .br
-.RI "\fISet the resize mode\&. \fP"
+.RI "Set the resize mode\&. "
 .ti -1c
-.RI "\fBResizeMode\fP \fBresizeMode\fP () const "
+.RI "\fBResizeMode\fP \fBresizeMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRubberBandPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "QPen \fBrubberBandPen\fP () const "
+.RI "QPen \fBrubberBandPen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTrackerPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "QPen \fBtrackerPen\fP () const "
+.RI "QPen \fBtrackerPen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetTrackerFont\fP (const QFont &)"
 .br
 .ti -1c
-.RI "QFont \fBtrackerFont\fP () const "
+.RI "QFont \fBtrackerFont\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisEnabled\fP () const "
+.RI "bool \fBisEnabled\fP () const"
 .br
 .ti -1c
-.RI "bool \fBisActive\fP () const "
+.RI "bool \fBisActive\fP () const"
 .br
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .ti -1c
 .RI "QWidget * \fBparentWidget\fP ()"
 .br
-.RI "\fIReturn the parent widget, where the selection happens\&. \fP"
+.RI "Return the parent widget, where the selection happens\&. "
 .ti -1c
-.RI "const QWidget * \fBparentWidget\fP () const "
+.RI "const QWidget * \fBparentWidget\fP () const"
 .br
-.RI "\fIReturn the parent widget, where the selection happens\&. \fP"
+.RI "Return the parent widget, where the selection happens\&. "
 .ti -1c
-.RI "virtual QPainterPath \fBpickArea\fP () const "
-.br
-.ti -1c
-.RI "virtual void \fBdrawRubberBand\fP (QPainter *) const "
+.RI "virtual QPainterPath \fBpickArea\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawTracker\fP (QPainter *) const "
+.RI "virtual void \fBdrawRubberBand\fP (QPainter *) const"
 .br
 .ti -1c
-.RI "virtual QRegion \fBrubberBandMask\fP () const "
+.RI "virtual void \fBdrawTracker\fP (QPainter *) const"
 .br
 .ti -1c
-.RI "virtual \fBQwtText\fP \fBtrackerText\fP (const QPoint &pos) const "
-.br
-.RI "\fIReturn the label for a position\&. \fP"
-.ti -1c
-.RI "QPoint \fBtrackerPosition\fP () const "
+.RI "virtual QRegion \fBrubberBandMask\fP () const"
 .br
 .ti -1c
-.RI "virtual QRect \fBtrackerRect\fP (const QFont &) const "
+.RI "virtual \fBQwtText\fP \fBtrackerText\fP (const QPoint &pos) const"
+.br
+.RI "Return the label for a position\&. "
+.ti -1c
+.RI "QPoint \fBtrackerPosition\fP () const"
 .br
 .ti -1c
-.RI "QPolygon \fBselection\fP () const "
+.RI "virtual QRect \fBtrackerRect\fP (const QFont &) const"
+.br
+.ti -1c
+.RI "QPolygon \fBselection\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual QPolygon \fBadjustedPoints\fP (const QPolygon &) const "
+.RI "virtual QPolygon \fBadjustedPoints\fP (const QPolygon &) const"
 .br
-.RI "\fIMap the \fBpickedPoints()\fP into a \fBselection()\fP \fP"
+.RI "Map the \fBpickedPoints()\fP into a \fBselection()\fP "
 .ti -1c
 .RI "virtual void \fBtransition\fP (const QEvent *)"
 .br
@@ -186,11 +186,11 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "virtual bool \fBend\fP (bool ok=true)"
 .br
-.RI "\fIClose a selection setting the state to inactive\&. \fP"
+.RI "Close a selection setting the state to inactive\&. "
 .ti -1c
-.RI "virtual bool \fBaccept\fP (QPolygon &) const "
+.RI "virtual bool \fBaccept\fP (QPolygon &) const"
 .br
-.RI "\fIValidate and fix up the selection\&. \fP"
+.RI "Validate and fix up the selection\&. "
 .ti -1c
 .RI "virtual void \fBreset\fP ()"
 .br
@@ -227,15 +227,15 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "virtual void \fBupdateDisplay\fP ()"
 .br
-.RI "\fIUpdate the state of rubber band and tracker label\&. \fP"
+.RI "Update the state of rubber band and tracker label\&. "
 .ti -1c
-.RI "const \fBQwtWidgetOverlay\fP * \fBrubberBandOverlay\fP () const "
+.RI "const \fBQwtWidgetOverlay\fP * \fBrubberBandOverlay\fP () const"
 .br
 .ti -1c
-.RI "const \fBQwtWidgetOverlay\fP * \fBtrackerOverlay\fP () const "
+.RI "const \fBQwtWidgetOverlay\fP * \fBtrackerOverlay\fP () const"
 .br
 .ti -1c
-.RI "const QPolygon & \fBpickedPoints\fP () const "
+.RI "const QPolygon & \fBpickedPoints\fP () const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -275,19 +275,20 @@ Optionally \fBQwtPicker\fP support the process of collecting points by a rubber 
 
 .PP
 .nf
-#include <qwt_picker.h>
-#include <qwt_picker_machine.h>
+#include <qwt_picker\&.h>
+#include <qwt_picker_machine\&.h>
 
 QwtPicker *picker = new QwtPicker(widget);
 picker->setStateMachine(new QwtPickerDragRectMachine);
 picker->setTrackerMode(QwtPicker::ActiveOnly);
-picker->setRubberBand(QwtPicker::RectRubberBand); 
+picker->setRubberBand(QwtPicker::RectRubberBand);
+
 .fi
 .PP
-
-.br
- The state machine triggers the following commands:
+ 
 .RE
+.PP
+The state machine triggers the following commands:
 .PP
 .IP "\(bu" 2
 \fBbegin()\fP
@@ -468,42 +469,38 @@ The reason, why a \fBselection()\fP differs from the picked points depends on th
 .PP
 .IP "\(bu" 2
 A rectangular selection might need to have a specific aspect ratio only\&.
-.br
-
 .IP "\(bu" 2
 A selection could accept non intersecting polygons only\&.
-.br
-
 .IP "\(bu" 2
 \&.\&.\&.
-.br
- The example below is for a rectangular selection, where the first point is the center of the selected rectangle\&. 
+.PP
+.PP
+The example below is for a rectangular selection, where the first point is the center of the selected rectangle\&.
 .PP
 \fBExample\fP
 .RS 4
 
 .PP
 .nf
-QPolygon MyPicker::adjustedPoints(const QPolygon &points) const
+QPolygon MyPicker::adjustedPoints( const QPolygon &points ) const
 {
     QPolygon adjusted;
-    if ( points.size() == 2 )
+    if ( points\&.size() == 2 )
     {
-        const int width = qAbs(points[1].x() - points[0].x());
-        const int height = qAbs(points[1].y() - points[0].y());
+        const int width = qAbs( points[1]\&.x() - points[0]\&.x() );
+        const int height = qAbs( points[1]\&.y() - points[0]\&.y() );
 
-        QRect rect(0, 0, 2 * width, 2 * height);
-        rect.moveCenter(points[0]);
+        QRect rect( 0, 0, 2 * width, 2 * height );
+        rect\&.moveCenter( points[0] );
 
-        adjusted += rect.topLeft();
-        adjusted += rect.bottomRight();
+        adjusted += rect\&.topLeft();
+        adjusted += rect\&.bottomRight();
     }
     return adjusted;
 }
+
 .fi
 .PP
-
-.br
  
 .RE
 .PP
@@ -516,8 +513,6 @@ QPolygon MyPicker::adjustedPoints(const QPolygon &points) const
 .RS 4
 Selected points unmodified 
 .RE
-.PP
-
 .PP
 
 .SS "void QwtPicker::append (const QPoint & pos)\fC [protected]\fP, \fC [virtual]\fP"

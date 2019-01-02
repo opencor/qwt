@@ -1,4 +1,4 @@
-.TH "QwtPanner" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPanner" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -32,48 +32,48 @@ Inherited by \fBQwtPlotPanner\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtPanner\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetEnabled\fP (bool)"
 .br
-.RI "\fIEn/disable the panner\&. \fP"
+.RI "En/disable the panner\&. "
 .ti -1c
-.RI "bool \fBisEnabled\fP () const "
+.RI "bool \fBisEnabled\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMouseButton\fP (Qt::MouseButton, Qt::KeyboardModifiers=Qt::NoModifier)"
 .br
 .ti -1c
-.RI "void \fBgetMouseButton\fP (Qt::MouseButton &button, Qt::KeyboardModifiers &) const "
+.RI "void \fBgetMouseButton\fP (Qt::MouseButton &button, Qt::KeyboardModifiers &) const"
 .br
-.RI "\fIGet mouse button and modifiers used for panning\&. \fP"
+.RI "Get mouse button and modifiers used for panning\&. "
 .ti -1c
 .RI "void \fBsetAbortKey\fP (int key, Qt::KeyboardModifiers=Qt::NoModifier)"
 .br
 .ti -1c
-.RI "void \fBgetAbortKey\fP (int &key, Qt::KeyboardModifiers &) const "
+.RI "void \fBgetAbortKey\fP (int &key, Qt::KeyboardModifiers &) const"
 .br
-.RI "\fIGet the abort key and modifiers\&. \fP"
+.RI "Get the abort key and modifiers\&. "
 .ti -1c
 .RI "void \fBsetCursor\fP (const QCursor &)"
 .br
 .ti -1c
-.RI "const QCursor \fBcursor\fP () const "
+.RI "const QCursor \fBcursor\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetOrientations\fP (Qt::Orientations)"
 .br
 .ti -1c
-.RI "Qt::Orientations \fBorientations\fP () const "
+.RI "Qt::Orientations \fBorientations\fP () const"
 .br
-.RI "\fIReturn the orientation, where paning is enabled\&. \fP"
+.RI "Return the orientation, where paning is enabled\&. "
 .ti -1c
-.RI "bool \fBisOrientationEnabled\fP (Qt::Orientation) const "
+.RI "bool \fBisOrientationEnabled\fP (Qt::Orientation) const"
 .br
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -96,13 +96,13 @@ Inherited by \fBQwtPlotPanner\fP\&.
 .ti -1c
 .RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
 .br
-.RI "\fIPaint event\&. \fP"
+.RI "Paint event\&. "
 .ti -1c
-.RI "virtual QBitmap \fBcontentsMask\fP () const "
+.RI "virtual QBitmap \fBcontentsMask\fP () const"
 .br
-.RI "\fICalculate a mask for the contents of the panned widget\&. \fP"
+.RI "Calculate a mask for the contents of the panned widget\&. "
 .ti -1c
-.RI "virtual QPixmap \fBgrab\fP () const "
+.RI "virtual QPixmap \fBgrab\fP () const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -227,14 +227,14 @@ Signal emitted, while the widget moved, but panning is not finished\&.
 .RE
 .PP
 
-.SS "void QwtPanner::paintEvent (QPaintEvent * pe)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtPanner::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Paint event\&. Repaint the grabbed pixmap on its current position and fill the empty spaces by the background of the parent widget\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIpe\fP Paint event 
+\fIevent\fP Paint event 
 .RE
 .PP
 

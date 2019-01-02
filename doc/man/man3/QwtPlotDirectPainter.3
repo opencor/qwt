@@ -1,4 +1,4 @@
-.TH "QwtPlotDirectPainter" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotDirectPainter" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,13 +15,13 @@ Inherits QObject\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBAttribute\fP { \fBAtomicPainter\fP = 0x01, \fBFullRepaint\fP = 0x02, \fBCopyBackingStore\fP = 0x04 }
-.RI "\fIPaint attributes\&. \fP""
+.RI "enum \fBAttribute\fP { \fBAtomicPainter\fP = 0x01, \fBFullRepaint\fP = 0x02, \fBCopyBackingStore\fP = 0x04 }"
 .br
+.RI "Paint attributes\&. "
 .ti -1c
 .RI "typedef QFlags< \fBAttribute\fP > \fBAttributes\fP"
 .br
-.RI "\fIPaint attributes\&. \fP"
+.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -29,42 +29,42 @@ Inherits QObject\&.
 .ti -1c
 .RI "\fBQwtPlotDirectPainter\fP (QObject *parent=NULL)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotDirectPainter\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetAttribute\fP (\fBAttribute\fP, bool on)"
 .br
 .ti -1c
-.RI "bool \fBtestAttribute\fP (\fBAttribute\fP) const "
+.RI "bool \fBtestAttribute\fP (\fBAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetClipping\fP (bool)"
 .br
 .ti -1c
-.RI "bool \fBhasClipping\fP () const "
+.RI "bool \fBhasClipping\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetClipRegion\fP (const QRegion &)"
 .br
-.RI "\fIAssign a clip region and enable clipping\&. \fP"
+.RI "Assign a clip region and enable clipping\&. "
 .ti -1c
-.RI "QRegion \fBclipRegion\fP () const "
+.RI "QRegion \fBclipRegion\fP () const"
 .br
 .ti -1c
 .RI "void \fBdrawSeries\fP (\fBQwtPlotSeriesItem\fP *, int from, int to)"
 .br
-.RI "\fIDraw a set of points of a seriesItem\&. \fP"
+.RI "Draw a set of points of a seriesItem\&. "
 .ti -1c
 .RI "void \fBreset\fP ()"
 .br
-.RI "\fIClose the internal QPainter\&. \fP"
+.RI "Close the internal QPainter\&. "
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

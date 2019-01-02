@@ -1,4 +1,4 @@
-.TH "QwtLinearColorMap" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLinearColorMap" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,18 +25,18 @@ Inherits \fBQwtColorMap\fP\&.
 .RI "\fBQwtLinearColorMap\fP (\fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
 .br
 .ti -1c
-.RI "\fBQwtLinearColorMap\fP (const QColor &from, const QColor &to, \fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
+.RI "\fBQwtLinearColorMap\fP (const QColor &\fBcolor1\fP, const QColor &\fBcolor2\fP, \fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
 .br
 .ti -1c
 .RI "virtual \fB~QwtLinearColorMap\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetMode\fP (\fBMode\fP)"
 .br
-.RI "\fISet the mode of the color map\&. \fP"
+.RI "Set the mode of the color map\&. "
 .ti -1c
-.RI "\fBMode\fP \fBmode\fP () const "
+.RI "\fBMode\fP \fBmode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetColorInterval\fP (const QColor &\fBcolor1\fP, const QColor &\fBcolor2\fP)"
@@ -45,21 +45,21 @@ Inherits \fBQwtColorMap\fP\&.
 .RI "void \fBaddColorStop\fP (double value, const QColor &)"
 .br
 .ti -1c
-.RI "QVector< double > \fBcolorStops\fP () const "
+.RI "QVector< double > \fBcolorStops\fP () const"
 .br
 .ti -1c
-.RI "QColor \fBcolor1\fP () const "
+.RI "QColor \fBcolor1\fP () const"
 .br
 .ti -1c
-.RI "QColor \fBcolor2\fP () const "
+.RI "QColor \fBcolor2\fP () const"
 .br
 .ti -1c
-.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &, double value) const "
+.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &, double value) const"
 .br
 .ti -1c
-.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &, double value) const "
+.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &, double value) const"
 .br
-.RI "\fIMap a value of a given interval into a color index\&. \fP"
+.RI "Map a value of a given interval into a color index\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

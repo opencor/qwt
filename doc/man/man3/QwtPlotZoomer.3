@@ -1,4 +1,4 @@
-.TH "QwtPlotZoomer" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotZoomer" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherits \fBQwtPlotPicker\fP\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBmoveBy\fP (double x, double y)"
+.RI "void \fBmoveBy\fP (double dx, double dy)"
 .br
 .ti -1c
 .RI "virtual void \fBmoveTo\fP (const QPointF &)"
@@ -23,11 +23,11 @@ Inherits \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "virtual void \fBzoom\fP (const QRectF &)"
 .br
-.RI "\fIZoom in\&. \fP"
+.RI "Zoom in\&. "
 .ti -1c
-.RI "virtual void \fBzoom\fP (int up)"
+.RI "virtual void \fBzoom\fP (int offset)"
 .br
-.RI "\fIZoom in or out\&. \fP"
+.RI "Zoom in or out\&. "
 .in -1c
 .SS "Signals"
 
@@ -42,23 +42,23 @@ Inherits \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "\fBQwtPlotZoomer\fP (QWidget *, bool doReplot=true)"
 .br
-.RI "\fICreate a zoomer for a plot canvas\&. \fP"
+.RI "Create a zoomer for a plot canvas\&. "
 .ti -1c
 .RI "\fBQwtPlotZoomer\fP (int \fBxAxis\fP, int \fByAxis\fP, QWidget *, bool doReplot=true)"
 .br
-.RI "\fICreate a zoomer for a plot canvas\&. \fP"
+.RI "Create a zoomer for a plot canvas\&. "
 .ti -1c
 .RI "virtual void \fBsetZoomBase\fP (bool doReplot=true)"
 .br
 .ti -1c
 .RI "virtual void \fBsetZoomBase\fP (const QRectF &)"
 .br
-.RI "\fISet the initial size of the zoomer\&. \fP"
+.RI "Set the initial size of the zoomer\&. "
 .ti -1c
-.RI "QRectF \fBzoomBase\fP () const "
+.RI "QRectF \fBzoomBase\fP () const"
 .br
 .ti -1c
-.RI "QRectF \fBzoomRect\fP () const "
+.RI "QRectF \fBzoomRect\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBsetAxis\fP (int \fBxAxis\fP, int \fByAxis\fP)"
@@ -66,19 +66,19 @@ Inherits \fBQwtPlotPicker\fP\&.
 .ti -1c
 .RI "void \fBsetMaxStackDepth\fP (int)"
 .br
-.RI "\fILimit the number of recursive zoom operations to depth\&. \fP"
+.RI "Limit the number of recursive zoom operations to depth\&. "
 .ti -1c
-.RI "int \fBmaxStackDepth\fP () const "
+.RI "int \fBmaxStackDepth\fP () const"
 .br
 .ti -1c
-.RI "const QStack< QRectF > & \fBzoomStack\fP () const "
+.RI "const QStack< QRectF > & \fBzoomStack\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetZoomStack\fP (const QStack< QRectF > &, int \fBzoomRectIndex\fP=\-1)"
 .br
-.RI "\fIAssign a zoom stack\&. \fP"
+.RI "Assign a zoom stack\&. "
 .ti -1c
-.RI "uint \fBzoomRectIndex\fP () const "
+.RI "uint \fBzoomRectIndex\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -88,9 +88,9 @@ Inherits \fBQwtPlotPicker\fP\&.
 .RI "virtual void \fBrescale\fP ()"
 .br
 .ti -1c
-.RI "virtual QSizeF \fBminZoomSize\fP () const "
+.RI "virtual QSizeF \fBminZoomSize\fP () const"
 .br
-.RI "\fILimit zooming by a minimum rectangle\&. \fP"
+.RI "Limit zooming by a minimum rectangle\&. "
 .ti -1c
 .RI "virtual void \fBwidgetMouseReleaseEvent\fP (QMouseEvent *)"
 .br
@@ -104,9 +104,9 @@ Inherits \fBQwtPlotPicker\fP\&.
 .RI "virtual bool \fBend\fP (bool ok=true)"
 .br
 .ti -1c
-.RI "virtual bool \fBaccept\fP (QPolygon &) const "
+.RI "virtual bool \fBaccept\fP (QPolygon &) const"
 .br
-.RI "\fICheck and correct a selected rectangle\&. \fP"
+.RI "Check and correct a selected rectangle\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"

@@ -1,4 +1,4 @@
-.TH "QwtLegendData" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegendData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,13 +13,13 @@ QwtLegendData \- Attributes of an entry on a legend\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBMode\fP { \fBReadOnly\fP, \fBClickable\fP, \fBCheckable\fP }
-.RI "\fIMode defining how a legend entry interacts\&. \fP""
+.RI "enum \fBMode\fP { \fBReadOnly\fP, \fBClickable\fP, \fBCheckable\fP }"
 .br
+.RI "Mode defining how a legend entry interacts\&. "
 .ti -1c
-.RI "enum \fBRole\fP { \fBModeRole\fP, \fBTitleRole\fP, \fBIconRole\fP, \fBUserRole\fP = 32 }
-.RI "\fIIdentifier how to interprete a QVariant\&. \fP""
+.RI "enum \fBRole\fP { \fBModeRole\fP, \fBTitleRole\fP, \fBIconRole\fP, \fBUserRole\fP = 32 }"
 .br
+.RI "Identifier how to interprete a QVariant\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -27,37 +27,37 @@ QwtLegendData \- Attributes of an entry on a legend\&.
 .ti -1c
 .RI "\fBQwtLegendData\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fB~QwtLegendData\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetValues\fP (const QMap< int, QVariant > &)"
 .br
 .ti -1c
-.RI "const QMap< int, QVariant > & \fBvalues\fP () const "
+.RI "const QMap< int, QVariant > & \fBvalues\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetValue\fP (int role, const QVariant &)"
 .br
 .ti -1c
-.RI "QVariant \fBvalue\fP (int role) const "
+.RI "QVariant \fBvalue\fP (int role) const"
 .br
 .ti -1c
-.RI "bool \fBhasRole\fP (int role) const "
+.RI "bool \fBhasRole\fP (int role) const"
 .br
 .ti -1c
-.RI "bool \fBisValid\fP () const "
+.RI "bool \fBisValid\fP () const"
 .br
 .ti -1c
-.RI "\fBQwtGraphic\fP \fBicon\fP () const "
+.RI "\fBQwtGraphic\fP \fBicon\fP () const"
 .br
 .ti -1c
-.RI "\fBQwtText\fP \fBtitle\fP () const "
+.RI "\fBQwtText\fP \fBtitle\fP () const"
 .br
 .ti -1c
-.RI "\fBMode\fP \fBmode\fP () const "
+.RI "\fBMode\fP \fBmode\fP () const"
 .br
 .in -1c
 .SH "Detailed Description"

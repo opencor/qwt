@@ -1,4 +1,4 @@
-.TH "QwtPlotShapeItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotShapeItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,55 +18,55 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "enum \fBPaintAttribute\fP { \fBClipPolygons\fP = 0x01 }"
 .br
 .ti -1c
-.RI "enum \fBLegendMode\fP { \fBLegendShape\fP, \fBLegendColor\fP }
-.RI "\fIMode how to display the item on the legend\&. \fP""
+.RI "enum \fBLegendMode\fP { \fBLegendShape\fP, \fBLegendColor\fP }"
 .br
+.RI "Mode how to display the item on the legend\&. "
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "\fIPaint attributes\&. \fP"
+.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotShapeItem\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotShapeItem\fP (const QString &\fBtitle\fP=QString())"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtPlotShapeItem\fP (const \fBQwtText\fP &\fBtitle\fP)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotShapeItem\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const "
+.RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetLegendMode\fP (\fBLegendMode\fP)"
 .br
 .ti -1c
-.RI "\fBLegendMode\fP \fBlegendMode\fP () const "
+.RI "\fBLegendMode\fP \fBlegendMode\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRect\fP (const QRectF &)"
 .br
-.RI "\fISet a path built from a rectangle\&. \fP"
+.RI "Set a path built from a rectangle\&. "
 .ti -1c
 .RI "void \fBsetPolygon\fP (const QPolygonF &)"
 .br
-.RI "\fISet a path built from a polygon\&. \fP"
+.RI "Set a path built from a polygon\&. "
 .ti -1c
 .RI "void \fBsetShape\fP (const QPainterPath &)"
 .br
-.RI "\fISet the shape to be displayed\&. \fP"
+.RI "Set the shape to be displayed\&. "
 .ti -1c
-.RI "QPainterPath \fBshape\fP () const "
+.RI "QPainterPath \fBshape\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -74,35 +74,35 @@ Inherits \fBQwtPlotItem\fP\&.
 .ti -1c
 .RI "void \fBsetPen\fP (const QPen &)"
 .br
-.RI "\fIAssign a pen\&. \fP"
+.RI "Assign a pen\&. "
 .ti -1c
-.RI "QPen \fBpen\fP () const "
+.RI "QPen \fBpen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBrush\fP (const QBrush &)"
 .br
 .ti -1c
-.RI "QBrush \fBbrush\fP () const "
+.RI "QBrush \fBbrush\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetRenderTolerance\fP (double)"
 .br
-.RI "\fISet the tolerance for the weeding optimization\&. \fP"
+.RI "Set the tolerance for the weeding optimization\&. "
 .ti -1c
-.RI "double \fBrenderTolerance\fP () const "
+.RI "double \fBrenderTolerance\fP () const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
-.RI "\fIBounding rectangle of the shape\&. \fP"
+.RI "Bounding rectangle of the shape\&. "
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
-.br
-.ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
+.br
+.ti -1c
+.RI "virtual int \fBrtti\fP () const"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -154,7 +154,7 @@ Clip polygons before painting them\&. In situations, where points are far outsid
 But polygon clipping will convert the painter path into polygons what might introduce a negative impact on the performance of paths composed from curves or ellipses\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotShapeItem::QwtPlotShapeItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotShapeItem::QwtPlotShapeItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 
 .PP
 Constructor\&. Sets the following item attributes:

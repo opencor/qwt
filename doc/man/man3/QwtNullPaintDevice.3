@@ -1,4 +1,4 @@
-.TH "QwtNullPaintDevice" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtNullPaintDevice" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,9 +17,9 @@ Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBMode\fP { \fBNormalMode\fP, \fBPolygonPathMode\fP, \fBPathMode\fP }
-.RI "\fIRender mode\&. \fP""
+.RI "enum \fBMode\fP { \fBNormalMode\fP, \fBPolygonPathMode\fP, \fBPathMode\fP }"
 .br
+.RI "Render mode\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -27,94 +27,94 @@ Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
 .ti -1c
 .RI "\fBQwtNullPaintDevice\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtNullPaintDevice\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetMode\fP (\fBMode\fP)"
 .br
 .ti -1c
-.RI "\fBMode\fP \fBmode\fP () const "
+.RI "\fBMode\fP \fBmode\fP () const"
 .br
 .ti -1c
-.RI "virtual QPaintEngine * \fBpaintEngine\fP () const "
+.RI "virtual QPaintEngine * \fBpaintEngine\fP () const"
 .br
-.RI "\fISee QPaintDevice::paintEngine() \fP"
+.RI "See QPaintDevice::paintEngine() "
 .ti -1c
-.RI "virtual int \fBmetric\fP (PaintDeviceMetric metric) const "
+.RI "virtual int \fBmetric\fP (PaintDeviceMetric) const"
 .br
 .ti -1c
 .RI "virtual void \fBdrawRects\fP (const QRect *, int)"
 .br
-.RI "\fISee QPaintEngine::drawRects() \fP"
+.RI "See QPaintEngine::drawRects() "
 .ti -1c
 .RI "virtual void \fBdrawRects\fP (const QRectF *, int)"
 .br
-.RI "\fISee QPaintEngine::drawRects() \fP"
+.RI "See QPaintEngine::drawRects() "
 .ti -1c
 .RI "virtual void \fBdrawLines\fP (const QLine *, int)"
 .br
-.RI "\fISee QPaintEngine::drawLines() \fP"
+.RI "See QPaintEngine::drawLines() "
 .ti -1c
 .RI "virtual void \fBdrawLines\fP (const QLineF *, int)"
 .br
-.RI "\fISee QPaintEngine::drawLines() \fP"
+.RI "See QPaintEngine::drawLines() "
 .ti -1c
 .RI "virtual void \fBdrawEllipse\fP (const QRectF &)"
 .br
-.RI "\fISee QPaintEngine::drawEllipse() \fP"
+.RI "See QPaintEngine::drawEllipse() "
 .ti -1c
 .RI "virtual void \fBdrawEllipse\fP (const QRect &)"
 .br
-.RI "\fISee QPaintEngine::drawEllipse() \fP"
+.RI "See QPaintEngine::drawEllipse() "
 .ti -1c
 .RI "virtual void \fBdrawPath\fP (const QPainterPath &)"
 .br
-.RI "\fISee QPaintEngine::drawPath() \fP"
+.RI "See QPaintEngine::drawPath() "
 .ti -1c
 .RI "virtual void \fBdrawPoints\fP (const QPointF *, int)"
 .br
-.RI "\fISee QPaintEngine::drawPoints() \fP"
+.RI "See QPaintEngine::drawPoints() "
 .ti -1c
 .RI "virtual void \fBdrawPoints\fP (const QPoint *, int)"
 .br
-.RI "\fISee QPaintEngine::drawPoints() \fP"
+.RI "See QPaintEngine::drawPoints() "
 .ti -1c
 .RI "virtual void \fBdrawPolygon\fP (const QPointF *, int, QPaintEngine::PolygonDrawMode)"
 .br
-.RI "\fISee QPaintEngine::drawPolygon() \fP"
+.RI "See QPaintEngine::drawPolygon() "
 .ti -1c
 .RI "virtual void \fBdrawPolygon\fP (const QPoint *, int, QPaintEngine::PolygonDrawMode)"
 .br
-.RI "\fISee QPaintEngine::drawPolygon() \fP"
+.RI "See QPaintEngine::drawPolygon() "
 .ti -1c
 .RI "virtual void \fBdrawPixmap\fP (const QRectF &, const QPixmap &, const QRectF &)"
 .br
-.RI "\fISee QPaintEngine::drawPixmap() \fP"
+.RI "See QPaintEngine::drawPixmap() "
 .ti -1c
 .RI "virtual void \fBdrawTextItem\fP (const QPointF &, const QTextItem &)"
 .br
-.RI "\fISee QPaintEngine::drawTextItem() \fP"
+.RI "See QPaintEngine::drawTextItem() "
 .ti -1c
-.RI "virtual void \fBdrawTiledPixmap\fP (const QRectF &, const QPixmap &, const QPointF &s)"
+.RI "virtual void \fBdrawTiledPixmap\fP (const QRectF &, const QPixmap &, const QPointF &)"
 .br
-.RI "\fISee QPaintEngine::drawTiledPixmap() \fP"
+.RI "See QPaintEngine::drawTiledPixmap() "
 .ti -1c
 .RI "virtual void \fBdrawImage\fP (const QRectF &, const QImage &, const QRectF &, Qt::ImageConversionFlags)"
 .br
-.RI "\fISee QPaintEngine::drawImage() \fP"
+.RI "See QPaintEngine::drawImage() "
 .ti -1c
-.RI "virtual void \fBupdateState\fP (const QPaintEngineState &state)"
+.RI "virtual void \fBupdateState\fP (const QPaintEngineState &)"
 .br
-.RI "\fISee QPaintEngine::updateState() \fP"
+.RI "See QPaintEngine::updateState() "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual QSize \fBsizeMetrics\fP () const  =0"
+.RI "virtual QSize \fBsizeMetrics\fP () const =0"
 .br
 .in -1c
 .SH "Detailed Description"

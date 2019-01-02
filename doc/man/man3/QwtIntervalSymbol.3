@@ -1,4 +1,4 @@
-.TH "QwtIntervalSymbol" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtIntervalSymbol" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,9 +13,9 @@ QwtIntervalSymbol \- A drawing primitive for displaying an interval like an erro
 
 .in +1c
 .ti -1c
-.RI "enum \fBStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBBox\fP, \fBUserSymbol\fP = 1000 }
-.RI "\fISymbol style\&. \fP""
+.RI "enum \fBStyle\fP { \fBNoSymbol\fP = -1, \fBBar\fP, \fBBox\fP, \fBUserSymbol\fP = 1000 }"
 .br
+.RI "Symbol style\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -26,35 +26,35 @@ QwtIntervalSymbol \- A drawing primitive for displaying an interval like an erro
 .ti -1c
 .RI "\fBQwtIntervalSymbol\fP (const \fBQwtIntervalSymbol\fP &)"
 .br
-.RI "\fICopy constructor\&. \fP"
+.RI "Copy constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtIntervalSymbol\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "\fBQwtIntervalSymbol\fP & \fBoperator=\fP (const \fBQwtIntervalSymbol\fP &)"
 .br
-.RI "\fIAssignment operator\&. \fP"
+.RI "Assignment operator\&. "
 .ti -1c
-.RI "bool \fBoperator==\fP (const \fBQwtIntervalSymbol\fP &) const "
+.RI "bool \fBoperator==\fP (const \fBQwtIntervalSymbol\fP &) const"
 .br
-.RI "\fICompare two symbols\&. \fP"
+.RI "Compare two symbols\&. "
 .ti -1c
-.RI "bool \fBoperator!=\fP (const \fBQwtIntervalSymbol\fP &) const "
+.RI "bool \fBoperator!=\fP (const \fBQwtIntervalSymbol\fP &) const"
 .br
-.RI "\fICompare two symbols\&. \fP"
+.RI "Compare two symbols\&. "
 .ti -1c
 .RI "void \fBsetWidth\fP (int)"
 .br
 .ti -1c
-.RI "int \fBwidth\fP () const "
+.RI "int \fBwidth\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetBrush\fP (const QBrush &b)"
+.RI "void \fBsetBrush\fP (const QBrush &)"
 .br
-.RI "\fIAssign a brush\&. \fP"
+.RI "Assign a brush\&. "
 .ti -1c
-.RI "const QBrush & \fBbrush\fP () const "
+.RI "const QBrush & \fBbrush\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPen\fP (const QColor &, qreal \fBwidth\fP=0\&.0, Qt::PenStyle=Qt::SolidLine)"
@@ -63,16 +63,16 @@ QwtIntervalSymbol \- A drawing primitive for displaying an interval like an erro
 .RI "void \fBsetPen\fP (const QPen &)"
 .br
 .ti -1c
-.RI "const QPen & \fBpen\fP () const "
+.RI "const QPen & \fBpen\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetStyle\fP (\fBStyle\fP)"
 .br
 .ti -1c
-.RI "\fBStyle\fP \fBstyle\fP () const "
+.RI "\fBStyle\fP \fBstyle\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, Qt::Orientation, const QPointF &from, const QPointF &to) const "
+.RI "virtual void \fBdraw\fP (QPainter *, Qt::Orientation, const QPointF &from, const QPointF &to) const"
 .br
 .in -1c
 .SH "Detailed Description"

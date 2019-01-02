@@ -1,4 +1,4 @@
-.TH "QwtDynGridLayout" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDynGridLayout" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,89 +15,89 @@ Inherits QLayout\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtDynGridLayout\fP (QWidget *, int margin=0, int space=\-1)"
+.RI "\fBQwtDynGridLayout\fP (QWidget *, int margin=0, int spacing=\-1)"
 .br
 .ti -1c
-.RI "\fBQwtDynGridLayout\fP (int space=\-1)"
+.RI "\fBQwtDynGridLayout\fP (int spacing=\-1)"
 .br
 .ti -1c
 .RI "virtual \fB~QwtDynGridLayout\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "virtual void \fBinvalidate\fP ()"
 .br
-.RI "\fIInvalidate all internal caches\&. \fP"
+.RI "Invalidate all internal caches\&. "
 .ti -1c
-.RI "void \fBsetMaxColumns\fP (uint maxCols)"
+.RI "void \fBsetMaxColumns\fP (uint \fBmaxColumns\fP)"
 .br
 .ti -1c
-.RI "uint \fBmaxColumns\fP () const "
+.RI "uint \fBmaxColumns\fP () const"
 .br
-.RI "\fIReturn the upper limit for the number of columns\&. \fP"
+.RI "Return the upper limit for the number of columns\&. "
 .ti -1c
-.RI "uint \fBnumRows\fP () const "
+.RI "uint \fBnumRows\fP () const"
 .br
 .ti -1c
-.RI "uint \fBnumColumns\fP () const "
+.RI "uint \fBnumColumns\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBaddItem\fP (QLayoutItem *)"
 .br
-.RI "\fIAdd an item to the next free position\&. \fP"
+.RI "Add an item to the next free position\&. "
 .ti -1c
-.RI "virtual QLayoutItem * \fBitemAt\fP (int index) const "
+.RI "virtual QLayoutItem * \fBitemAt\fP (int index) const"
 .br
 .ti -1c
 .RI "virtual QLayoutItem * \fBtakeAt\fP (int index)"
 .br
 .ti -1c
-.RI "virtual int \fBcount\fP () const "
+.RI "virtual int \fBcount\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetExpandingDirections\fP (Qt::Orientations)"
 .br
 .ti -1c
-.RI "virtual Qt::Orientations \fBexpandingDirections\fP () const "
+.RI "virtual Qt::Orientations \fBexpandingDirections\fP () const"
 .br
-.RI "\fIReturns whether this layout can make use of more space than \fBsizeHint()\fP\&. \fP"
+.RI "Returns whether this layout can make use of more space than \fBsizeHint()\fP\&. "
 .ti -1c
-.RI "QList< QRect > \fBlayoutItems\fP (const QRect &, uint numCols) const "
+.RI "QList< QRect > \fBlayoutItems\fP (const QRect &, uint \fBnumColumns\fP) const"
 .br
 .ti -1c
-.RI "virtual int \fBmaxItemWidth\fP () const "
+.RI "virtual int \fBmaxItemWidth\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBsetGeometry\fP (const QRect &rect)"
 .br
 .ti -1c
-.RI "virtual bool \fBhasHeightForWidth\fP () const "
+.RI "virtual bool \fBhasHeightForWidth\fP () const"
 .br
 .ti -1c
-.RI "virtual int \fBheightForWidth\fP (int) const "
+.RI "virtual int \fBheightForWidth\fP (int) const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const "
+.RI "virtual QSize \fBsizeHint\fP () const"
 .br
 .ti -1c
-.RI "virtual bool \fBisEmpty\fP () const "
+.RI "virtual bool \fBisEmpty\fP () const"
 .br
 .ti -1c
-.RI "uint \fBitemCount\fP () const "
+.RI "uint \fBitemCount\fP () const"
 .br
 .ti -1c
-.RI "virtual uint \fBcolumnsForWidth\fP (int width) const "
+.RI "virtual uint \fBcolumnsForWidth\fP (int width) const"
 .br
-.RI "\fICalculate the number of columns for a given width\&. \fP"
+.RI "Calculate the number of columns for a given width\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBlayoutGrid\fP (uint numCols, QVector< int > &rowHeight, QVector< int > &colWidth) const "
+.RI "void \fBlayoutGrid\fP (uint \fBnumColumns\fP, QVector< int > &rowHeight, QVector< int > &colWidth) const"
 .br
 .ti -1c
-.RI "void \fBstretchGrid\fP (const QRect &rect, uint numCols, QVector< int > &rowHeight, QVector< int > &colWidth) const "
+.RI "void \fBstretchGrid\fP (const QRect &rect, uint \fBnumColumns\fP, QVector< int > &rowHeight, QVector< int > &colWidth) const"
 .br
 .in -1c
 .SH "Detailed Description"

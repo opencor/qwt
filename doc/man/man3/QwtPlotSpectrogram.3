@@ -1,4 +1,4 @@
-.TH "QwtPlotSpectrogram" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSpectrogram" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,29 +20,29 @@ Inherits \fBQwtPlotRasterItem\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBDisplayMode\fP > \fBDisplayModes\fP"
 .br
-.RI "\fIDisplay modes\&. \fP"
+.RI "Display modes\&. "
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotSpectrogram\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotSpectrogram\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "virtual \fB~QwtPlotSpectrogram\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetDisplayMode\fP (\fBDisplayMode\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestDisplayMode\fP (\fBDisplayMode\fP) const "
+.RI "bool \fBtestDisplayMode\fP (\fBDisplayMode\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetData\fP (\fBQwtRasterData\fP *\fBdata\fP)"
 .br
 .ti -1c
-.RI "const \fBQwtRasterData\fP * \fBdata\fP () const "
+.RI "const \fBQwtRasterData\fP * \fBdata\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtRasterData\fP * \fBdata\fP ()"
@@ -51,70 +51,70 @@ Inherits \fBQwtPlotRasterItem\fP\&.
 .RI "void \fBsetColorMap\fP (\fBQwtColorMap\fP *)"
 .br
 .ti -1c
-.RI "const \fBQwtColorMap\fP * \fBcolorMap\fP () const "
+.RI "const \fBQwtColorMap\fP * \fBcolorMap\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis) const "
+.RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const "
+.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const"
 .br
-.RI "\fIPixel hint\&. \fP"
+.RI "Pixel hint\&. "
 .ti -1c
 .RI "void \fBsetDefaultContourPen\fP (const QColor &, qreal width=0\&.0, Qt::PenStyle=Qt::SolidLine)"
 .br
 .ti -1c
 .RI "void \fBsetDefaultContourPen\fP (const QPen &)"
 .br
-.RI "\fISet the default pen for the contour lines\&. \fP"
+.RI "Set the default pen for the contour lines\&. "
 .ti -1c
-.RI "QPen \fBdefaultContourPen\fP () const "
+.RI "QPen \fBdefaultContourPen\fP () const"
 .br
 .ti -1c
-.RI "virtual QPen \fBcontourPen\fP (double level) const "
+.RI "virtual QPen \fBcontourPen\fP (double level) const"
 .br
-.RI "\fICalculate the pen for a contour line\&. \fP"
+.RI "Calculate the pen for a contour line\&. "
 .ti -1c
 .RI "void \fBsetConrecFlag\fP (\fBQwtRasterData::ConrecFlag\fP, bool on)"
 .br
 .ti -1c
-.RI "bool \fBtestConrecFlag\fP (\fBQwtRasterData::ConrecFlag\fP) const "
+.RI "bool \fBtestConrecFlag\fP (\fBQwtRasterData::ConrecFlag\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetContourLevels\fP (const QList< double > &)"
 .br
 .ti -1c
-.RI "QList< double > \fBcontourLevels\fP () const "
+.RI "QList< double > \fBcontourLevels\fP () const"
 .br
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
-.RI "\fIDraw the spectrogram\&. \fP"
+.RI "Draw the spectrogram\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const "
+.RI "virtual QImage \fBrenderImage\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &area, const QSize &imageSize) const"
 .br
-.RI "\fIRender an image from data and color map\&. \fP"
+.RI "Render an image from data and color map\&. "
 .ti -1c
-.RI "virtual QSize \fBcontourRasterSize\fP (const QRectF &, const QRect &) const "
+.RI "virtual QSize \fBcontourRasterSize\fP (const QRectF &, const QRect &) const"
 .br
-.RI "\fIReturn the raster to be used by the CONREC contour algorithm\&. \fP"
+.RI "Return the raster to be used by the CONREC contour algorithm\&. "
 .ti -1c
-.RI "virtual \fBQwtRasterData::ContourLines\fP \fBrenderContourLines\fP (const QRectF &rect, const QSize &raster) const "
-.br
-.ti -1c
-.RI "virtual void \fBdrawContourLines\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const \fBQwtRasterData::ContourLines\fP &lines) const "
+.RI "virtual \fBQwtRasterData::ContourLines\fP \fBrenderContourLines\fP (const QRectF &rect, const QSize &raster) const"
 .br
 .ti -1c
-.RI "void \fBrenderTile\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRect &imageRect, QImage *image) const "
+.RI "virtual void \fBdrawContourLines\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const \fBQwtRasterData::ContourLines\fP &) const"
 .br
-.RI "\fIRender a tile of an image\&. \fP"
+.ti -1c
+.RI "void \fBrenderTile\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRect &tile, QImage *) const"
+.br
+.RI "Render a tile of an image\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -155,7 +155,7 @@ The values are mapped to colors using a color map\&.
 The data is displayed using contour lines\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotSpectrogram::QwtPlotSpectrogram (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotSpectrogram::QwtPlotSpectrogram (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Sets the following item attributes:
 .IP "\(bu" 2
 \fBQwtPlotItem::AutoScale\fP: true

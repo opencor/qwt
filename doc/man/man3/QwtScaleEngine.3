@@ -1,4 +1,4 @@
-.TH "QwtScaleEngine" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,7 @@ Inherited by \fBQwtLinearScaleEngine\fP, and \fBQwtLogScaleEngine\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBAttribute\fP > \fBAttributes\fP"
 .br
-.RI "\fILayout attributes\&. \fP"
+.RI "Layout attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -31,72 +31,72 @@ Inherited by \fBQwtLinearScaleEngine\fP, and \fBQwtLogScaleEngine\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtScaleEngine\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetBase\fP (uint \fBbase\fP)"
 .br
 .ti -1c
-.RI "uint \fBbase\fP () const "
+.RI "uint \fBbase\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAttribute\fP (\fBAttribute\fP, bool on=true)"
 .br
 .ti -1c
-.RI "bool \fBtestAttribute\fP (\fBAttribute\fP) const "
+.RI "bool \fBtestAttribute\fP (\fBAttribute\fP) const"
 .br
 .ti -1c
 .RI "void \fBsetAttributes\fP (\fBAttributes\fP)"
 .br
 .ti -1c
-.RI "\fBAttributes\fP \fBattributes\fP () const "
+.RI "\fBAttributes\fP \fBattributes\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetReference\fP (double \fBreference\fP)"
+.RI "void \fBsetReference\fP (double)"
 .br
-.RI "\fISpecify a reference point\&. \fP"
+.RI "Specify a reference point\&. "
 .ti -1c
-.RI "double \fBreference\fP () const "
+.RI "double \fBreference\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMargins\fP (double lower, double upper)"
 .br
-.RI "\fISpecify margins at the scale's endpoints\&. \fP"
+.RI "Specify margins at the scale's endpoints\&. "
 .ti -1c
-.RI "double \fBlowerMargin\fP () const "
+.RI "double \fBlowerMargin\fP () const"
 .br
 .ti -1c
-.RI "double \fBupperMargin\fP () const "
+.RI "double \fBupperMargin\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBautoScale\fP (int maxNumSteps, double &x1, double &x2, double &stepSize) const  =0"
+.RI "virtual void \fBautoScale\fP (int maxNumSteps, double &x1, double &x2, double &stepSize) const =0"
 .br
 .ti -1c
-.RI "virtual \fBQwtScaleDiv\fP \fBdivideScale\fP (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0\&.0) const  =0"
+.RI "virtual \fBQwtScaleDiv\fP \fBdivideScale\fP (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0\&.0) const =0"
 .br
-.RI "\fICalculate a scale division\&. \fP"
+.RI "Calculate a scale division\&. "
 .ti -1c
 .RI "void \fBsetTransformation\fP (\fBQwtTransform\fP *)"
 .br
 .ti -1c
-.RI "\fBQwtTransform\fP * \fBtransformation\fP () const "
+.RI "\fBQwtTransform\fP * \fBtransformation\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "bool \fBcontains\fP (const \fBQwtInterval\fP &, double val) const "
+.RI "bool \fBcontains\fP (const \fBQwtInterval\fP &, double value) const"
 .br
 .ti -1c
-.RI "QList< double > \fBstrip\fP (const QList< double > &, const \fBQwtInterval\fP &) const "
+.RI "QList< double > \fBstrip\fP (const QList< double > &, const \fBQwtInterval\fP &) const"
 .br
 .ti -1c
-.RI "double \fBdivideInterval\fP (double interval, int numSteps) const "
+.RI "double \fBdivideInterval\fP (double intervalSize, int numSteps) const"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBbuildInterval\fP (double v) const "
+.RI "\fBQwtInterval\fP \fBbuildInterval\fP (double value) const"
 .br
-.RI "\fIBuild an interval around a value\&. \fP"
+.RI "Build an interval around a value\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -377,14 +377,14 @@ Margins can be used to leave a minimum amount of space between the enclosed inte
 .RE
 .PP
 
-.SS "void QwtScaleEngine::setReference (double r)"
+.SS "void QwtScaleEngine::setReference (double reference)"
 
 .PP
 Specify a reference point\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIr\fP new reference value
+\fIreference\fP New reference value
 .RE
 .PP
 The reference point is needed if options IncludeReference or Symmetric are active\&. Its default value is 0\&.0\&.

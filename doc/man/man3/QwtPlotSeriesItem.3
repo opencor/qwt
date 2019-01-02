@@ -1,4 +1,4 @@
-.TH "QwtPlotSeriesItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSeriesItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotSeriesItem\fP (const QString &\fBtitle\fP=QString::null)"
+.RI "\fBQwtPlotSeriesItem\fP (const QString &\fBtitle\fP=QString())"
 .br
 .ti -1c
 .RI "\fBQwtPlotSeriesItem\fP (const \fBQwtText\fP &\fBtitle\fP)"
@@ -25,27 +25,27 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 .ti -1c
 .RI "virtual \fB~QwtPlotSeriesItem\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetOrientation\fP (Qt::Orientation)"
 .br
 .ti -1c
-.RI "Qt::Orientation \fBorientation\fP () const "
+.RI "Qt::Orientation \fBorientation\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &) const"
 .br
-.RI "\fIDraw the complete series\&. \fP"
+.RI "Draw the complete series\&. "
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const  =0"
+.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const =0"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const "
+.RI "virtual QRectF \fBboundingRect\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBupdateScaleDiv\fP (const \fBQwtScaleDiv\fP &, const \fBQwtScaleDiv\fP &)"
 .br
-.RI "\fIUpdate the item to changes of the axes scale division\&. \fP"
+.RI "Update the item to changes of the axes scale division\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -53,7 +53,7 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 .ti -1c
 .RI "virtual void \fBdataChanged\fP ()"
 .br
-.RI "\fI\fBdataChanged()\fP indicates, that the series has been changed\&. \fP"
+.RI "\fBdataChanged()\fP indicates, that the series has been changed\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
@@ -61,7 +61,7 @@ Inherited by \fBQwtPlotAbstractBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotHistog
 Base class for plot items representing a series of samples\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const QString & title = \fCQString::null\fP)\fC [explicit]\fP"
+.SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters:\fP

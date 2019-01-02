@@ -1,4 +1,4 @@
-.TH "QwtScaleDraw" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleDraw" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,23 +26,23 @@ Inherited by \fBQwtDateScaleDraw\fP\&.
 .ti -1c
 .RI "\fBQwtScaleDraw\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtScaleDraw\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "void \fBgetBorderDistHint\fP (const QFont &, int &start, int &end) const "
+.RI "void \fBgetBorderDistHint\fP (const QFont &, int &start, int &end) const"
 .br
-.RI "\fIDetermine the minimum border distance\&. \fP"
+.RI "Determine the minimum border distance\&. "
 .ti -1c
-.RI "int \fBminLabelDist\fP (const QFont &) const "
-.br
-.ti -1c
-.RI "int \fBminLength\fP (const QFont &) const "
+.RI "int \fBminLabelDist\fP (const QFont &) const"
 .br
 .ti -1c
-.RI "virtual double \fBextent\fP (const QFont &) const "
+.RI "int \fBminLength\fP (const QFont &) const"
+.br
+.ti -1c
+.RI "virtual double \fBextent\fP (const QFont &) const"
 .br
 .ti -1c
 .RI "void \fBmove\fP (double x, double y)"
@@ -50,72 +50,72 @@ Inherited by \fBQwtDateScaleDraw\fP\&.
 .ti -1c
 .RI "void \fBmove\fP (const QPointF &)"
 .br
-.RI "\fIMove the position of the scale\&. \fP"
+.RI "Move the position of the scale\&. "
 .ti -1c
 .RI "void \fBsetLength\fP (double \fBlength\fP)"
 .br
 .ti -1c
-.RI "\fBAlignment\fP \fBalignment\fP () const "
+.RI "\fBAlignment\fP \fBalignment\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAlignment\fP (\fBAlignment\fP)"
 .br
 .ti -1c
-.RI "Qt::Orientation \fBorientation\fP () const "
+.RI "Qt::Orientation \fBorientation\fP () const"
 .br
 .ti -1c
-.RI "QPointF \fBpos\fP () const "
+.RI "QPointF \fBpos\fP () const"
 .br
 .ti -1c
-.RI "double \fBlength\fP () const "
+.RI "double \fBlength\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLabelAlignment\fP (Qt::Alignment)"
 .br
-.RI "\fIChange the label flags\&. \fP"
+.RI "Change the label flags\&. "
 .ti -1c
-.RI "Qt::Alignment \fBlabelAlignment\fP () const "
+.RI "Qt::Alignment \fBlabelAlignment\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLabelRotation\fP (double rotation)"
 .br
 .ti -1c
-.RI "double \fBlabelRotation\fP () const "
+.RI "double \fBlabelRotation\fP () const"
 .br
 .ti -1c
-.RI "int \fBmaxLabelHeight\fP (const QFont &) const "
+.RI "int \fBmaxLabelHeight\fP (const QFont &) const"
 .br
 .ti -1c
-.RI "int \fBmaxLabelWidth\fP (const QFont &) const "
+.RI "int \fBmaxLabelWidth\fP (const QFont &) const"
 .br
 .ti -1c
-.RI "QPointF \fBlabelPosition\fP (double val) const "
+.RI "QPointF \fBlabelPosition\fP (double value) const"
 .br
 .ti -1c
-.RI "QRectF \fBlabelRect\fP (const QFont &, double val) const "
+.RI "QRectF \fBlabelRect\fP (const QFont &, double value) const"
 .br
 .ti -1c
-.RI "QSizeF \fBlabelSize\fP (const QFont &, double val) const "
+.RI "QSizeF \fBlabelSize\fP (const QFont &, double value) const"
 .br
 .ti -1c
-.RI "QRect \fBboundingLabelRect\fP (const QFont &, double val) const "
+.RI "QRect \fBboundingLabelRect\fP (const QFont &, double value) const"
 .br
-.RI "\fIFind the bounding rectangle for the label\&. \fP"
+.RI "Find the bounding rectangle for the label\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "QTransform \fBlabelTransformation\fP (const QPointF &, const QSizeF &) const "
+.RI "QTransform \fBlabelTransformation\fP (const QPointF &, const QSizeF &) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawTick\fP (QPainter *, double val, double len) const "
+.RI "virtual void \fBdrawTick\fP (QPainter *, double value, double len) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawBackbone\fP (QPainter *) const "
+.RI "virtual void \fBdrawBackbone\fP (QPainter *) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawLabel\fP (QPainter *, double val) const "
+.RI "virtual void \fBdrawLabel\fP (QPainter *, double value) const"
 .br
 .in -1c
 .SH "Detailed Description"

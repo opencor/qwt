@@ -1,4 +1,4 @@
-.TH "QwtAbstractLegend" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractLegend" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,7 +19,7 @@ Inherited by \fBQwtLegend\fP\&.
 .ti -1c
 .RI "virtual void \fBupdateLegend\fP (const QVariant &itemInfo, const QList< \fBQwtLegendData\fP > &data)=0"
 .br
-.RI "\fIUpdate the entries for a plot item\&. \fP"
+.RI "Update the entries for a plot item\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -30,15 +30,15 @@ Inherited by \fBQwtLegend\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtAbstractLegend\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual void \fBrenderLegend\fP (QPainter *painter, const QRectF &rect, bool fillBackground) const  =0"
+.RI "virtual void \fBrenderLegend\fP (QPainter *painter, const QRectF &rect, bool fillBackground) const =0"
 .br
 .ti -1c
-.RI "virtual bool \fBisEmpty\fP () const  =0"
+.RI "virtual bool \fBisEmpty\fP () const =0"
 .br
 .ti -1c
-.RI "virtual int \fBscrollExtent\fP (Qt::Orientation) const "
+.RI "virtual int \fBscrollExtent\fP (Qt::Orientation) const"
 .br
 .in -1c
 .SH "Detailed Description"

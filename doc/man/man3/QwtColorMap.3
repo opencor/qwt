@@ -1,4 +1,4 @@
-.TH "QwtColorMap" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtColorMap" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,25 +24,25 @@ Inherited by \fBQwtAlphaColorMap\fP, and \fBQwtLinearColorMap\fP\&.
 .ti -1c
 .RI "\fBQwtColorMap\fP (\fBFormat\fP=\fBQwtColorMap::RGB\fP)"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtColorMap\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "\fBFormat\fP \fBformat\fP () const "
+.RI "\fBFormat\fP \fBformat\fP () const"
 .br
 .ti -1c
-.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &interval, double value) const  =0"
+.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &interval, double value) const =0"
 .br
 .ti -1c
-.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &interval, double value) const  =0"
+.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &interval, double value) const =0"
 .br
 .ti -1c
-.RI "QColor \fBcolor\fP (const \fBQwtInterval\fP &, double value) const "
+.RI "QColor \fBcolor\fP (const \fBQwtInterval\fP &, double value) const"
 .br
 .ti -1c
-.RI "virtual QVector< QRgb > \fBcolorTable\fP (const \fBQwtInterval\fP &) const "
+.RI "virtual QVector< QRgb > \fBcolorTable\fP (const \fBQwtInterval\fP &) const"
 .br
 .in -1c
 .SH "Detailed Description"

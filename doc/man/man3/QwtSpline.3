@@ -1,4 +1,4 @@
-.TH "QwtSpline" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSpline" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,9 +13,9 @@ QwtSpline \- A class for spline interpolation\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBSplineType\fP { \fBNatural\fP, \fBPeriodic\fP }
-.RI "\fISpline type\&. \fP""
+.RI "enum \fBSplineType\fP { \fBNatural\fP, \fBPeriodic\fP }"
 .br
+.RI "Spline type\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -23,14 +23,14 @@ QwtSpline \- A class for spline interpolation\&.
 .ti -1c
 .RI "\fBQwtSpline\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBQwtSpline\fP (const \fBQwtSpline\fP &)"
 .br
 .ti -1c
 .RI "\fB~QwtSpline\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "\fBQwtSpline\fP & \fBoperator=\fP (const \fBQwtSpline\fP &)"
 .br
@@ -38,34 +38,34 @@ QwtSpline \- A class for spline interpolation\&.
 .RI "void \fBsetSplineType\fP (\fBSplineType\fP)"
 .br
 .ti -1c
-.RI "\fBSplineType\fP \fBsplineType\fP () const "
+.RI "\fBSplineType\fP \fBsplineType\fP () const"
 .br
 .ti -1c
 .RI "bool \fBsetPoints\fP (const QPolygonF &\fBpoints\fP)"
 .br
-.RI "\fICalculate the spline coefficients\&. \fP"
+.RI "Calculate the spline coefficients\&. "
 .ti -1c
-.RI "QPolygonF \fBpoints\fP () const "
+.RI "QPolygonF \fBpoints\fP () const"
 .br
 .ti -1c
 .RI "void \fBreset\fP ()"
 .br
-.RI "\fIFree allocated memory and set size to 0\&. \fP"
+.RI "Free allocated memory and set size to 0\&. "
 .ti -1c
-.RI "bool \fBisValid\fP () const "
+.RI "bool \fBisValid\fP () const"
 .br
-.RI "\fITrue if valid\&. \fP"
+.RI "True if valid\&. "
 .ti -1c
-.RI "double \fBvalue\fP (double x) const "
-.br
-.ti -1c
-.RI "const QVector< double > & \fBcoefficientsA\fP () const "
+.RI "double \fBvalue\fP (double x) const"
 .br
 .ti -1c
-.RI "const QVector< double > & \fBcoefficientsB\fP () const "
+.RI "const QVector< double > & \fBcoefficientsA\fP () const"
 .br
 .ti -1c
-.RI "const QVector< double > & \fBcoefficientsC\fP () const "
+.RI "const QVector< double > & \fBcoefficientsB\fP () const"
+.br
+.ti -1c
+.RI "const QVector< double > & \fBcoefficientsC\fP () const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -74,11 +74,11 @@ QwtSpline \- A class for spline interpolation\&.
 .ti -1c
 .RI "bool \fBbuildNaturalSpline\fP (const QPolygonF &)"
 .br
-.RI "\fIDetermines the coefficients for a natural spline\&. \fP"
+.RI "Determines the coefficients for a natural spline\&. "
 .ti -1c
 .RI "bool \fBbuildPeriodicSpline\fP (const QPolygonF &)"
 .br
-.RI "\fIDetermines the coefficients for a periodic spline\&. \fP"
+.RI "Determines the coefficients for a periodic spline\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

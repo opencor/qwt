@@ -1,4 +1,4 @@
-.TH "QwtPlotAbstractBarChart" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotAbstractBarChart" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,9 +17,9 @@ Inherited by \fBQwtPlotBarChart\fP, and \fBQwtPlotMultiBarChart\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBLayoutPolicy\fP { \fBAutoAdjustSamples\fP, \fBScaleSamplesToAxes\fP, \fBScaleSampleToCanvas\fP, \fBFixedSampleSize\fP }
-.RI "\fIMode how to calculate the bar width\&. \fP""
+.RI "enum \fBLayoutPolicy\fP { \fBAutoAdjustSamples\fP, \fBScaleSamplesToAxes\fP, \fBScaleSampleToCanvas\fP, \fBFixedSampleSize\fP }"
 .br
+.RI "Mode how to calculate the bar width\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -30,50 +30,50 @@ Inherited by \fBQwtPlotBarChart\fP, and \fBQwtPlotMultiBarChart\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtPlotAbstractBarChart\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "void \fBsetLayoutPolicy\fP (\fBLayoutPolicy\fP)"
 .br
 .ti -1c
-.RI "\fBLayoutPolicy\fP \fBlayoutPolicy\fP () const "
+.RI "\fBLayoutPolicy\fP \fBlayoutPolicy\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetLayoutHint\fP (double)"
 .br
 .ti -1c
-.RI "double \fBlayoutHint\fP () const "
+.RI "double \fBlayoutHint\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetSpacing\fP (int)"
 .br
-.RI "\fISet the spacing\&. \fP"
+.RI "Set the spacing\&. "
 .ti -1c
-.RI "int \fBspacing\fP () const "
+.RI "int \fBspacing\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMargin\fP (int)"
 .br
-.RI "\fISet the margin\&. \fP"
+.RI "Set the margin\&. "
 .ti -1c
-.RI "int \fBmargin\fP () const "
+.RI "int \fBmargin\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetBaseline\fP (double)"
 .br
-.RI "\fISet the baseline\&. \fP"
+.RI "Set the baseline\&. "
 .ti -1c
-.RI "double \fBbaseline\fP () const "
+.RI "double \fBbaseline\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBgetCanvasMarginHint\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, double &left, double &top, double &right, double &bottom) const "
+.RI "virtual void \fBgetCanvasMarginHint\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, double &left, double &top, double &right, double &bottom) const"
 .br
-.RI "\fICalculate a hint for the canvas margin\&. \fP"
+.RI "Calculate a hint for the canvas margin\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "double \fBsampleWidth\fP (const \fBQwtScaleMap\fP &map, double canvasSize, double \fBdataSize\fP, double value) const "
+.RI "double \fBsampleWidth\fP (const \fBQwtScaleMap\fP &map, double canvasSize, double boundingSize, double value) const"
 .br
 .in -1c
 .SH "Detailed Description"

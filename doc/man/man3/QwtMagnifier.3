@@ -1,4 +1,4 @@
-.TH "QwtMagnifier" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMagnifier" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,71 +22,71 @@ Inherited by \fBQwtPlotMagnifier\fP\&.
 .ti -1c
 .RI "virtual \fB~QwtMagnifier\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "QWidget * \fBparentWidget\fP ()"
 .br
 .ti -1c
-.RI "const QWidget * \fBparentWidget\fP () const "
+.RI "const QWidget * \fBparentWidget\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetEnabled\fP (bool)"
 .br
-.RI "\fIEn/disable the magnifier\&. \fP"
+.RI "En/disable the magnifier\&. "
 .ti -1c
-.RI "bool \fBisEnabled\fP () const "
+.RI "bool \fBisEnabled\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMouseFactor\fP (double)"
 .br
-.RI "\fIChange the mouse factor\&. \fP"
+.RI "Change the mouse factor\&. "
 .ti -1c
-.RI "double \fBmouseFactor\fP () const "
+.RI "double \fBmouseFactor\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetMouseButton\fP (Qt::MouseButton, Qt::KeyboardModifiers=Qt::NoModifier)"
 .br
 .ti -1c
-.RI "void \fBgetMouseButton\fP (Qt::MouseButton &, Qt::KeyboardModifiers &) const "
+.RI "void \fBgetMouseButton\fP (Qt::MouseButton &, Qt::KeyboardModifiers &) const"
 .br
 .ti -1c
 .RI "void \fBsetWheelFactor\fP (double)"
 .br
-.RI "\fIChange the wheel factor\&. \fP"
+.RI "Change the wheel factor\&. "
 .ti -1c
-.RI "double \fBwheelFactor\fP () const "
+.RI "double \fBwheelFactor\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetWheelModifiers\fP (Qt::KeyboardModifiers)"
 .br
 .ti -1c
-.RI "Qt::KeyboardModifiers \fBwheelModifiers\fP () const "
+.RI "Qt::KeyboardModifiers \fBwheelModifiers\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetKeyFactor\fP (double)"
 .br
-.RI "\fIChange the key factor\&. \fP"
+.RI "Change the key factor\&. "
 .ti -1c
-.RI "double \fBkeyFactor\fP () const "
+.RI "double \fBkeyFactor\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetZoomInKey\fP (int key, Qt::KeyboardModifiers=Qt::NoModifier)"
 .br
 .ti -1c
-.RI "void \fBgetZoomInKey\fP (int &key, Qt::KeyboardModifiers &) const "
+.RI "void \fBgetZoomInKey\fP (int &key, Qt::KeyboardModifiers &) const"
 .br
-.RI "\fIRetrieve the settings of the zoom in key\&. \fP"
+.RI "Retrieve the settings of the zoom in key\&. "
 .ti -1c
 .RI "void \fBsetZoomOutKey\fP (int key, Qt::KeyboardModifiers=Qt::NoModifier)"
 .br
 .ti -1c
-.RI "void \fBgetZoomOutKey\fP (int &key, Qt::KeyboardModifiers &) const "
+.RI "void \fBgetZoomOutKey\fP (int &key, Qt::KeyboardModifiers &) const"
 .br
-.RI "\fIRetrieve the settings of the zoom out key\&. \fP"
+.RI "Retrieve the settings of the zoom out key\&. "
 .ti -1c
 .RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
 .br
-.RI "\fIEvent filter\&. \fP"
+.RI "Event filter\&. "
 .in -1c
 .SS "Protected Member Functions"
 

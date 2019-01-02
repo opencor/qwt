@@ -1,4 +1,4 @@
-.TH "QwtDialNeedle" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDialNeedle" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,32 +17,32 @@ Inherited by \fBQwtCompassMagnetNeedle\fP, \fBQwtCompassWindArrow\fP, and \fBQwt
 .ti -1c
 .RI "\fBQwtDialNeedle\fP ()"
 .br
-.RI "\fIConstructor\&. \fP"
+.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtDialNeedle\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
 .RI "virtual void \fBsetPalette\fP (const QPalette &)"
 .br
 .ti -1c
-.RI "const QPalette & \fBpalette\fP () const "
+.RI "const QPalette & \fBpalette\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const QPointF &center, double length, double direction, QPalette::ColorGroup=QPalette::Active) const "
+.RI "virtual void \fBdraw\fP (QPainter *painter, const QPointF &center, double length, double direction, QPalette::ColorGroup=QPalette::Active) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawNeedle\fP (QPainter *painter, double length, QPalette::ColorGroup colorGroup) const  =0"
+.RI "virtual void \fBdrawNeedle\fP (QPainter *painter, double length, QPalette::ColorGroup colorGroup) const =0"
 .br
-.RI "\fIDraw the needle\&. \fP"
+.RI "Draw the needle\&. "
 .ti -1c
-.RI "virtual void \fBdrawKnob\fP (QPainter *, double width, const QBrush &, bool sunken) const "
+.RI "virtual void \fBdrawKnob\fP (QPainter *, double width, const QBrush &, bool sunken) const"
 .br
-.RI "\fIDraw the knob\&. \fP"
+.RI "Draw the knob\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

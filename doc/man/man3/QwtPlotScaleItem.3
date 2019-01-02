@@ -1,4 +1,4 @@
-.TH "QwtPlotScaleItem" 3 "Mon Jun 13 2016" "Version 6.1.3" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotScaleItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,45 +17,45 @@ Inherits \fBQwtPlotItem\fP\&.
 .ti -1c
 .RI "\fBQwtPlotScaleItem\fP (\fBQwtScaleDraw::Alignment\fP=\fBQwtScaleDraw::BottomScale\fP, const double pos=0\&.0)"
 .br
-.RI "\fIConstructor for scale item at the position pos\&. \fP"
+.RI "Constructor for scale item at the position pos\&. "
 .ti -1c
 .RI "virtual \fB~QwtPlotScaleItem\fP ()"
 .br
-.RI "\fIDestructor\&. \fP"
+.RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const "
+.RI "virtual int \fBrtti\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDiv\fP (const \fBQwtScaleDiv\fP &)"
 .br
-.RI "\fIAssign a scale division\&. \fP"
+.RI "Assign a scale division\&. "
 .ti -1c
-.RI "const \fBQwtScaleDiv\fP & \fBscaleDiv\fP () const "
+.RI "const \fBQwtScaleDiv\fP & \fBscaleDiv\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDivFromAxis\fP (bool on)"
 .br
 .ti -1c
-.RI "bool \fBisScaleDivFromAxis\fP () const "
+.RI "bool \fBisScaleDivFromAxis\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetPalette\fP (const QPalette &)"
 .br
 .ti -1c
-.RI "QPalette \fBpalette\fP () const "
+.RI "QPalette \fBpalette\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetFont\fP (const QFont &)"
 .br
 .ti -1c
-.RI "QFont \fBfont\fP () const "
+.RI "QFont \fBfont\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtScaleDraw\fP *)"
 .br
-.RI "\fISet a scale draw\&. \fP"
+.RI "Set a scale draw\&. "
 .ti -1c
-.RI "const \fBQwtScaleDraw\fP * \fBscaleDraw\fP () const "
+.RI "const \fBQwtScaleDraw\fP * \fBscaleDraw\fP () const"
 .br
 .ti -1c
 .RI "\fBQwtScaleDraw\fP * \fBscaleDraw\fP ()"
@@ -64,26 +64,26 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "void \fBsetPosition\fP (double pos)"
 .br
 .ti -1c
-.RI "double \fBposition\fP () const "
+.RI "double \fBposition\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetBorderDistance\fP (int numPixels)"
+.RI "void \fBsetBorderDistance\fP (int)"
 .br
-.RI "\fIAlign the scale to the canvas\&. \fP"
+.RI "Align the scale to the canvas\&. "
 .ti -1c
-.RI "int \fBborderDistance\fP () const "
+.RI "int \fBborderDistance\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetAlignment\fP (\fBQwtScaleDraw::Alignment\fP)"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *p, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &rect) const "
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
 .br
-.RI "\fIDraw the scale\&. \fP"
+.RI "Draw the scale\&. "
 .ti -1c
 .RI "virtual void \fBupdateScaleDiv\fP (const \fBQwtScaleDiv\fP &, const \fBQwtScaleDiv\fP &)"
 .br
-.RI "\fIUpdate the item to changes of the axes scale division\&. \fP"
+.RI "Update the item to changes of the axes scale division\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
@@ -101,16 +101,15 @@ The scale might be at a specific position (f\&.e 0\&.0) or it might be aligned t
 The following example shows how to replace the left axis, by a scale item at the x position 0\&.0\&. 
 .PP
 .nf
-QwtPlotScaleItem *scaleItem =
-    new QwtPlotScaleItem(QwtScaleDraw::RightScale, 0.0);
-scaleItem->setFont(plot->axisWidget(QwtPlot::yLeft)->font());
+QwtPlotScaleItem *scaleItem = new QwtPlotScaleItem( QwtScaleDraw::RightScale, 0\&.0 );
+scaleItem->setFont( plot->axisWidget( QwtPlot::yLeft )->font() );
 scaleItem->attach(plot);
 
-plot->enableAxis(QwtPlot::yLeft, false);
+plot->enableAxis( QwtPlot::yLeft, false );
 
 .fi
 .PP
- 
+  
 .RE
 .PP
 
