@@ -1,4 +1,4 @@
-.TH "QwtMatrixRasterData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMatrixRasterData" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -91,12 +91,12 @@ Interpolate the value from the distances and values of the 4 surrounding values 
 .SS "int QwtMatrixRasterData::numColumns () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of columns of the value matrix 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalueMatrix()\fP, \fBnumRows()\fP, \fBsetValueMatrix()\fP 
 .RE
@@ -105,12 +105,12 @@ Number of columns of the value matrix
 .SS "int QwtMatrixRasterData::numRows () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of rows of the value matrix 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalueMatrix()\fP, \fBnumColumns()\fP, \fBsetValueMatrix()\fP 
 .RE
@@ -131,17 +131,17 @@ BilinearInterpolation
  Returns an empty rectangle recommending to render in target device ( f\&.e\&. screen ) resolution\&.
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIarea\fP Requested area, ignored 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated hint
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBResampleMode\fP, setMatrix(), \fBsetInterval()\fP 
 .RE
@@ -152,12 +152,12 @@ Reimplemented from \fBQwtRasterData\fP\&.
 .SS "\fBQwtMatrixRasterData::ResampleMode\fP QwtMatrixRasterData::resampleMode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 resampling algorithm 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetResampleMode()\fP, \fBvalue()\fP 
 .RE
@@ -168,14 +168,14 @@ resampling algorithm
 .PP
 Assign the bounding interval for an axis\&. Setting the bounding intervals for the X/Y axis is mandatory to define the positions for the values of the value matrix\&. The interval in Z direction defines the possible range for the values in the matrix, what is f\&.e used by \fBQwtPlotSpectrogram\fP to map values to colors\&. The Z-interval might be the bounding interval of the values in the matrix, but usually it isn't\&. ( f\&.e a interval of 0\&.0-100\&.0 for values in percentage )
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP X, Y or Z axis 
 .br
 \fIinterval\fP Interval
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtRasterData::interval()\fP, \fBsetValueMatrix()\fP 
 .RE
@@ -188,12 +188,12 @@ Reimplemented from \fBQwtRasterData\fP\&.
 .PP
 Set the resampling algorithm\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP Resampling mode 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBresampleMode()\fP, \fBvalue()\fP 
 .RE
@@ -204,7 +204,7 @@ Set the resampling algorithm\&.
 .PP
 Change a single value in the matrix\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrow\fP Row index 
 .br
@@ -213,7 +213,7 @@ Change a single value in the matrix\&.
 \fIvalue\fP New value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalue()\fP, \fBsetValueMatrix()\fP 
 .RE
@@ -224,14 +224,14 @@ Change a single value in the matrix\&.
 .PP
 Assign a value matrix\&. The positions of the values are calculated by dividing the bounding rectangle of the X/Y intervals into equidistant rectangles ( pixels )\&. Each value corresponds to the center of a pixel\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalues\fP Vector of values 
 .br
 \fInumColumns\fP Number of columns
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalueMatrix()\fP, \fBnumColumns()\fP, \fBnumRows()\fP, \fBsetInterval()\fP() 
 .RE
@@ -240,19 +240,19 @@ Assign a value matrix\&. The positions of the values are calculated by dividing 
 .SS "double QwtMatrixRasterData::value (double x, double y) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the value at a raster position
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP X value in plot coordinates 
 .br
 \fIy\fP Y value in plot coordinates
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBResampleMode\fP 
 .RE
@@ -263,12 +263,12 @@ Implements \fBQwtRasterData\fP\&.
 .SS "const QVector< double > QwtMatrixRasterData::valueMatrix () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value matrix 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValueMatrix()\fP, \fBnumColumns()\fP, \fBnumRows()\fP, \fBsetInterval()\fP 
 .RE

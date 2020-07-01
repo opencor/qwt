@@ -5,7 +5,7 @@
   <filterSection>
     <filterAttribute>doxygen</filterAttribute>
     <toc>
-      <section title="Qwt User&apos;s Guide 6.1.4" ref="index.html">
+      <section title="Qwt User&apos;s Guide 6.1.5" ref="index.html">
         <section title="Qwt - Qt Widgets for Technical Applications" ref="index.html" />
         <section title="Classes" ref="annotated.html">
           <section title="Class List" ref="annotated.html">
@@ -20,8 +20,8 @@
             <section title="QwtAbstractScale" ref="class_qwt_abstract_scale.html">
               <section title="QwtAbstractScale" ref="class_qwt_abstract_scale.html#a97fff64367cdbe7bc8dc56c41d5faf9e" />
               <section title="~QwtAbstractScale" ref="class_qwt_abstract_scale.html#a73890593efff11427ea7a42a3ebadefd" />
-              <section title="abstractScaleDraw" ref="class_qwt_abstract_scale.html#a473e84e72bd52afac58c04d004b5c06a" />
               <section title="abstractScaleDraw" ref="class_qwt_abstract_scale.html#aa61afdff037ef745a6dad686537cdb96" />
+              <section title="abstractScaleDraw" ref="class_qwt_abstract_scale.html#a473e84e72bd52afac58c04d004b5c06a" />
               <section title="invTransform" ref="class_qwt_abstract_scale.html#a50932c4bed140da5ce96b6718de2636b" />
               <section title="isInverted" ref="class_qwt_abstract_scale.html#a8c649b5b370b06f5028fb83b78189e4a" />
               <section title="lowerBound" ref="class_qwt_abstract_scale.html#a41b46b9bf8b6d7986cc64c766f3b667c" />
@@ -30,17 +30,17 @@
               <section title="rescale" ref="class_qwt_abstract_scale.html#a647e6458305a0967077f4b1f03811c14" />
               <section title="scaleChange" ref="class_qwt_abstract_scale.html#a0dbb7bdc557c0a7b163643e41970ed6a" />
               <section title="scaleDiv" ref="class_qwt_abstract_scale.html#a68d4d5a6f44ae4574d5ad8200aaa017f" />
-              <section title="scaleEngine" ref="class_qwt_abstract_scale.html#a5dc4f746d4dfacb8a1a57cf85deccf64" />
               <section title="scaleEngine" ref="class_qwt_abstract_scale.html#aea3b9d4912f1c28671f232e4100936d7" />
+              <section title="scaleEngine" ref="class_qwt_abstract_scale.html#a5dc4f746d4dfacb8a1a57cf85deccf64" />
               <section title="scaleMap" ref="class_qwt_abstract_scale.html#a116c7877f4d9fc3620ffa713b5bbdb96" />
               <section title="scaleMaxMajor" ref="class_qwt_abstract_scale.html#a951e85ddbf8b0edaa91a9d300a92dd4e" />
               <section title="scaleMaxMinor" ref="class_qwt_abstract_scale.html#ae6e5881dddd6d1340be4750c115d29dd" />
               <section title="scaleStepSize" ref="class_qwt_abstract_scale.html#a6fa69e27596cef1672cf8bf3c3dc547c" />
               <section title="setAbstractScaleDraw" ref="class_qwt_abstract_scale.html#a950c5bf521dc704b78f76c7951346288" />
               <section title="setLowerBound" ref="class_qwt_abstract_scale.html#aa1b73da4589370fc14fd2ef49b02d142" />
-              <section title="setScale" ref="class_qwt_abstract_scale.html#ae9640e814b5029d7dd79cb3ba752102b" />
               <section title="setScale" ref="class_qwt_abstract_scale.html#ab54877c80f0b00fdb6e4745448aee128" />
               <section title="setScale" ref="class_qwt_abstract_scale.html#ad002e1a352ecf85c1a8595a138d42db7" />
+              <section title="setScale" ref="class_qwt_abstract_scale.html#ae9640e814b5029d7dd79cb3ba752102b" />
               <section title="setScaleEngine" ref="class_qwt_abstract_scale.html#aa00f44140af3f2b7595cb6e23371198f" />
               <section title="setScaleMaxMajor" ref="class_qwt_abstract_scale.html#a40fdb4572ad8fdec8b93766ff5f8eda8" />
               <section title="setScaleMaxMinor" ref="class_qwt_abstract_scale.html#a6520bb1e52571f865b21b3710786a4db" />
@@ -71,8 +71,8 @@
               <section title="minimumExtent" ref="class_qwt_abstract_scale_draw.html#abdd97b4bedda111df8208ec96a894f8f" />
               <section title="penWidth" ref="class_qwt_abstract_scale_draw.html#a400719a9bf1b916224d744e75d527989" />
               <section title="scaleDiv" ref="class_qwt_abstract_scale_draw.html#ad15e796d2fd8bd1e2cfa66715bf58e2e" />
-              <section title="scaleMap" ref="class_qwt_abstract_scale_draw.html#a2582c30e82f8977877ac8044253f1fb8" />
               <section title="scaleMap" ref="class_qwt_abstract_scale_draw.html#ae7488eb63ad73a2e69acb29ff069c904" />
+              <section title="scaleMap" ref="class_qwt_abstract_scale_draw.html#a2582c30e82f8977877ac8044253f1fb8" />
               <section title="setMinimumExtent" ref="class_qwt_abstract_scale_draw.html#ac174255c334b995ca010a6964597d5f2" />
               <section title="setPenWidth" ref="class_qwt_abstract_scale_draw.html#a098e1f813077c9bb0c5f83266035943a" />
               <section title="setScaleDiv" ref="class_qwt_abstract_scale_draw.html#a149792f955cc3f05c16362338bcc98c4" />
@@ -147,8 +147,8 @@
               <section title="~QwtAnalogClock" ref="class_qwt_analog_clock.html#a3abdcecf88e3d3510d94e96e7e9e74ee" />
               <section title="drawHand" ref="class_qwt_analog_clock.html#a989638ce2b03e02fc0c549c16733f5ad" />
               <section title="drawNeedle" ref="class_qwt_analog_clock.html#a7542466f2d3ca3c310fb49292c6426c6" />
-              <section title="hand" ref="class_qwt_analog_clock.html#a4231bc54b5bd8a7530f03515aeec7689" />
               <section title="hand" ref="class_qwt_analog_clock.html#abb93bf8255bc00ef160165385bb6adce" />
+              <section title="hand" ref="class_qwt_analog_clock.html#a4231bc54b5bd8a7530f03515aeec7689" />
               <section title="setCurrentTime" ref="class_qwt_analog_clock.html#a1972a54ce59155ec7435103f11a775a7" />
               <section title="setHand" ref="class_qwt_analog_clock.html#a643101aafbe7a6fc91cb550203a7d3ee" />
               <section title="setTime" ref="class_qwt_analog_clock.html#aa99a628b290789583052bcec9163d95c" />
@@ -234,8 +234,8 @@
               <section title="drawRose" ref="class_qwt_compass.html#a9df297eca6d1da01e36fa14d1206831a" />
               <section title="drawScaleContents" ref="class_qwt_compass.html#adcbb727d0883286dfed0f29d1b6b339e" />
               <section title="keyPressEvent" ref="class_qwt_compass.html#ad4f31e6837ea045834fe67d192a4209d" />
-              <section title="rose" ref="class_qwt_compass.html#affc879be47d42b3499d642d7e28c3a4c" />
               <section title="rose" ref="class_qwt_compass.html#a99477d676bd866acd1a418615cba423b" />
+              <section title="rose" ref="class_qwt_compass.html#affc879be47d42b3499d642d7e28c3a4c" />
               <section title="setRose" ref="class_qwt_compass.html#a06456c0c52107bfa8b1d1267fba5b86f" />
             </section>
             <section title="QwtCompassMagnetNeedle" ref="class_qwt_compass_magnet_needle.html">
@@ -400,8 +400,8 @@
               <section title="minimumSizeHint" ref="class_qwt_dial.html#ae4cc434f680c4de4a14f9cc7039a7ce8" />
               <section title="minScaleArc" ref="class_qwt_dial.html#a136f3595868375bf35e48c1ef0a6519a" />
               <section title="mode" ref="class_qwt_dial.html#a7b35111549b198697fa24e8085342797" />
-              <section title="needle" ref="class_qwt_dial.html#a6926445d799b363de728615854623d9e" />
               <section title="needle" ref="class_qwt_dial.html#abbf494e72f6244e4ec88211354c739a4" />
+              <section title="needle" ref="class_qwt_dial.html#a6926445d799b363de728615854623d9e" />
               <section title="origin" ref="class_qwt_dial.html#a49356bf9512363f3233e9bf4018b8f30" />
               <section title="paintEvent" ref="class_qwt_dial.html#a11e50d714b9decb0f5d34e5acdde970d" />
               <section title="scaleChange" ref="class_qwt_dial.html#a0cee4448e2753ed259917f1874a3e158" />
@@ -505,18 +505,18 @@
               <section title="~QwtEventPattern" ref="class_qwt_event_pattern.html#a3f8c2a2cca991000bafefd924b47895d" />
               <section title="initKeyPattern" ref="class_qwt_event_pattern.html#a91c1acb96b5c3849b9518206290f7da8" />
               <section title="initMousePattern" ref="class_qwt_event_pattern.html#ab885e0f266fd5b574ccbc6272225f486" />
-              <section title="keyMatch" ref="class_qwt_event_pattern.html#a737a72838595ae3a99779f2254abcfc8" />
               <section title="keyMatch" ref="class_qwt_event_pattern.html#ac5029b310936997cf3268d1ae4fe14fe" />
-              <section title="keyPattern" ref="class_qwt_event_pattern.html#a6aac201f048e4bddea53920fe70579a4" />
+              <section title="keyMatch" ref="class_qwt_event_pattern.html#a737a72838595ae3a99779f2254abcfc8" />
               <section title="keyPattern" ref="class_qwt_event_pattern.html#a9d8ea5b5ffea570c1fed4c8ca8e5cfff" />
-              <section title="mouseMatch" ref="class_qwt_event_pattern.html#a3746870b5a06dfa3bfc15c51fed79138" />
+              <section title="keyPattern" ref="class_qwt_event_pattern.html#a6aac201f048e4bddea53920fe70579a4" />
               <section title="mouseMatch" ref="class_qwt_event_pattern.html#a70e0140c555e4ada8562cb1ec7893584" />
-              <section title="mousePattern" ref="class_qwt_event_pattern.html#a1818b4a1f4f2e281bee9b0e3a66467b1" />
+              <section title="mouseMatch" ref="class_qwt_event_pattern.html#a3746870b5a06dfa3bfc15c51fed79138" />
               <section title="mousePattern" ref="class_qwt_event_pattern.html#a141107868ed1c9cf1b34046873234390" />
-              <section title="setKeyPattern" ref="class_qwt_event_pattern.html#af8f1008ebe2565e5e851214e62b27fef" />
+              <section title="mousePattern" ref="class_qwt_event_pattern.html#a1818b4a1f4f2e281bee9b0e3a66467b1" />
               <section title="setKeyPattern" ref="class_qwt_event_pattern.html#a73cf4257902b8a9d95aef60fabd3f747" />
-              <section title="setMousePattern" ref="class_qwt_event_pattern.html#a0b786f31af2f8084ec361bc905beda3f" />
+              <section title="setKeyPattern" ref="class_qwt_event_pattern.html#af8f1008ebe2565e5e851214e62b27fef" />
               <section title="setMousePattern" ref="class_qwt_event_pattern.html#ad8e3b196c1026b038ccdf359f9a69d29" />
+              <section title="setMousePattern" ref="class_qwt_event_pattern.html#a0b786f31af2f8084ec361bc905beda3f" />
             </section>
             <section title="QwtGraphic" ref="class_qwt_graphic.html">
               <section title="RenderHints" ref="class_qwt_graphic.html#ac239a34c1c3fe47a3a57b70331c0d2fa" />
@@ -537,9 +537,9 @@
               <section title="isNull" ref="class_qwt_graphic.html#a4d9805fcf85568fc6f67293a6f805537" />
               <section title="operator=" ref="class_qwt_graphic.html#a56504c5384e140d199f73c6e729408ec" />
               <section title="render" ref="class_qwt_graphic.html#af9d87badcb71e2ada14d5d9721bb4eca" />
-              <section title="render" ref="class_qwt_graphic.html#a6727fabe2fe99a37ee3565fbcab4462f" />
-              <section title="render" ref="class_qwt_graphic.html#a456026c22a14e6ce37e3523ef450658e" />
               <section title="render" ref="class_qwt_graphic.html#af655bed28d56d2c0c7c8ed5eee7133e4" />
+              <section title="render" ref="class_qwt_graphic.html#a456026c22a14e6ce37e3523ef450658e" />
+              <section title="render" ref="class_qwt_graphic.html#a6727fabe2fe99a37ee3565fbcab4462f" />
               <section title="reset" ref="class_qwt_graphic.html#a441f351c6578deab715126586dd1ca21" />
               <section title="scaledBoundingRect" ref="class_qwt_graphic.html#a15ceddea362b94880b22d16c2d4089d9" />
               <section title="setCommands" ref="class_qwt_graphic.html#a22cd36c524b08834bac74337aea9f7e8" />
@@ -576,9 +576,9 @@
               <section title="maxValue" ref="class_qwt_interval.html#a44820fa5d6e6cefa59dc31ea0d522d61" />
               <section title="minValue" ref="class_qwt_interval.html#a0df143a36d76a677976d82987cab8a06" />
               <section title="normalized" ref="class_qwt_interval.html#a1d6e04b4c2c8e7fb513fbedd2f8984a6" />
-              <section title="operator &amp;" ref="class_qwt_interval.html#a5811f5ef4ec47dc5385aa0b978b12654" />
-              <section title="operator &amp;=" ref="class_qwt_interval.html#a990c929fa07f8a1c0f5fe541cd9c513b" />
               <section title="operator!=" ref="class_qwt_interval.html#a73fba3fdba3552ee297b3d54037a2c8b" />
+              <section title="operator&amp;" ref="class_qwt_interval.html#a8954431c349d726c26055cd2201ca9d2" />
+              <section title="operator&amp;=" ref="class_qwt_interval.html#a31b75687b9d2e1931ec82f61cc644222" />
               <section title="operator==" ref="class_qwt_interval.html#a703bbaca6b5031993bc07f8a02b12f73" />
               <section title="operator|" ref="class_qwt_interval.html#a15d4be800076713aaca0e00c4ca5975a" />
               <section title="operator|" ref="class_qwt_interval.html#a4a9a8b11346e611c976941b88906bbc2" />
@@ -661,8 +661,8 @@
               <section title="minimumSizeHint" ref="class_qwt_knob.html#a30793e9d13b2febc900fc1a25c5c87ea" />
               <section title="numTurns" ref="class_qwt_knob.html#addd1efaa458d378b07d2ce1699930595" />
               <section title="paintEvent" ref="class_qwt_knob.html#aac9eb31c18408aaa224f5ad040631384" />
-              <section title="scaleDraw" ref="class_qwt_knob.html#a75e38a6c20b85455630d72f9586355e3" />
               <section title="scaleDraw" ref="class_qwt_knob.html#a3154037eec8c76c24577b8bf1d92b871" />
+              <section title="scaleDraw" ref="class_qwt_knob.html#a75e38a6c20b85455630d72f9586355e3" />
               <section title="scrolledTo" ref="class_qwt_knob.html#ac7152ca1ac7217d84bcf30b072830284" />
               <section title="setAlignment" ref="class_qwt_knob.html#ab84683292e11b7c3de4855d844b5471c" />
               <section title="setBorderWidth" ref="class_qwt_knob.html#aed67501daa4221542249013cdef82bae" />
@@ -869,17 +869,17 @@
               </section>
               <section title="QwtNullPaintDevice" ref="class_qwt_null_paint_device.html#a7fc0a16619aba83241eab7ecb83c80ca" />
               <section title="~QwtNullPaintDevice" ref="class_qwt_null_paint_device.html#a050e40b6efff32a616f3e8326f4fd632" />
-              <section title="drawEllipse" ref="class_qwt_null_paint_device.html#a36dbf087d462f077808f7d0a4611e572" />
               <section title="drawEllipse" ref="class_qwt_null_paint_device.html#a3a58da653add416644b1ad4e6567871e" />
+              <section title="drawEllipse" ref="class_qwt_null_paint_device.html#a36dbf087d462f077808f7d0a4611e572" />
               <section title="drawImage" ref="class_qwt_null_paint_device.html#a6a18a677959e446b34419d398d4fc4c7" />
               <section title="drawLines" ref="class_qwt_null_paint_device.html#a3a8c7d120fb6d1aa8617037e34df1cf3" />
               <section title="drawLines" ref="class_qwt_null_paint_device.html#aa69ee4a20a2d5ff7f11b24db212bc636" />
               <section title="drawPath" ref="class_qwt_null_paint_device.html#a1df889689ff1e29a0f864be5ac809ada" />
               <section title="drawPixmap" ref="class_qwt_null_paint_device.html#a1a0a2f22ea26bdf74becd5e5813f8f6f" />
-              <section title="drawPoints" ref="class_qwt_null_paint_device.html#a5b0b40aed4fa6b4b193834cf89af2a3e" />
               <section title="drawPoints" ref="class_qwt_null_paint_device.html#a89f89b7398be0e9c3c24cdf7e37803e2" />
-              <section title="drawPolygon" ref="class_qwt_null_paint_device.html#ad8ccc7d13b3ed6011c4f986210912d02" />
+              <section title="drawPoints" ref="class_qwt_null_paint_device.html#a5b0b40aed4fa6b4b193834cf89af2a3e" />
               <section title="drawPolygon" ref="class_qwt_null_paint_device.html#a9bd92d6203a0c7ad70a529d59d685eb1" />
+              <section title="drawPolygon" ref="class_qwt_null_paint_device.html#ad8ccc7d13b3ed6011c4f986210912d02" />
               <section title="drawRects" ref="class_qwt_null_paint_device.html#a1ea5ece663be08bacd9b1b46230b5cbc" />
               <section title="drawRects" ref="class_qwt_null_paint_device.html#a78163254e4793afc26b1752178964336" />
               <section title="drawTextItem" ref="class_qwt_null_paint_device.html#a9c0566fc34422c4bd61534cebfb95d63" />
@@ -1025,8 +1025,8 @@
               <section title="setTrackerFont" ref="class_qwt_picker.html#a9f54cce7d2e3f6e06351315bf655d5d9" />
               <section title="setTrackerMode" ref="class_qwt_picker.html#a94fc60c7223cdc470ae63156f6446d6f" />
               <section title="setTrackerPen" ref="class_qwt_picker.html#af703bc51cda716e503cbd86731270e5b" />
-              <section title="stateMachine" ref="class_qwt_picker.html#ae1a5bb377fda165cd83ac1b318efe5e5" />
               <section title="stateMachine" ref="class_qwt_picker.html#afeb497069fb64ef3948f5dae605268ae" />
+              <section title="stateMachine" ref="class_qwt_picker.html#ae1a5bb377fda165cd83ac1b318efe5e5" />
               <section title="stretchSelection" ref="class_qwt_picker.html#a24b0e4bcf6a9b7f41c81ea19305105a8" />
               <section title="trackerFont" ref="class_qwt_picker.html#a065ae5042d5b720ecc2fdf5d2e9702cc" />
               <section title="trackerMode" ref="class_qwt_picker.html#aaa6987f2fbc65e6468891c779201461b" />
@@ -1142,14 +1142,14 @@
               <section title="axisMaxMajor" ref="class_qwt_plot.html#a663fd43f9ccecc4f5390dcd01baa46c0" />
               <section title="axisMaxMinor" ref="class_qwt_plot.html#a14afbe0622b1b30c0ad5f725e1fc6b2a" />
               <section title="axisScaleDiv" ref="class_qwt_plot.html#a5d2cf8fc69ee7e918c9478cc528d2eb0" />
-              <section title="axisScaleDraw" ref="class_qwt_plot.html#aaedfff42d8aee875d7bec082e1382f9f" />
               <section title="axisScaleDraw" ref="class_qwt_plot.html#abbb49f1730c3ea9f636c032f81e5a87e" />
+              <section title="axisScaleDraw" ref="class_qwt_plot.html#aaedfff42d8aee875d7bec082e1382f9f" />
               <section title="axisScaleEngine" ref="class_qwt_plot.html#a619b65bb95090ab5a528e33a5014ae4f" />
               <section title="axisScaleEngine" ref="class_qwt_plot.html#a358673463a8df0a65e58cd9d37223ff9" />
               <section title="axisStepSize" ref="class_qwt_plot.html#a85856d20d3904b0028b2f1ff7c65d113" />
               <section title="axisTitle" ref="class_qwt_plot.html#a0132283508f41bc16e559a6688b8e106" />
-              <section title="axisWidget" ref="class_qwt_plot.html#a8436c30175884d7643d68fd0dd236cd8" />
               <section title="axisWidget" ref="class_qwt_plot.html#ae3386e1d38f70864c4c019c0eb6a3d9d" />
+              <section title="axisWidget" ref="class_qwt_plot.html#a8436c30175884d7643d68fd0dd236cd8" />
               <section title="canvas" ref="class_qwt_plot.html#a53f836bb4ec09c766e3d871ea4be28f7" />
               <section title="canvas" ref="class_qwt_plot.html#a05d2cddc9bac3b467fe4f5b8efd74f1a" />
               <section title="canvasBackground" ref="class_qwt_plot.html#ab1a78279a89f9ce1f00601eff5ea552e" />
@@ -1249,8 +1249,8 @@
               <section title="legendMode" ref="class_qwt_plot_bar_chart.html#a2de8f809c9b8054b3276a40dce6f5a05" />
               <section title="rtti" ref="class_qwt_plot_bar_chart.html#a4b160c40fc125939c0dfe702a0c32a21" />
               <section title="setLegendMode" ref="class_qwt_plot_bar_chart.html#a1ba4d1347a2d493fe3859a1c0fac6a6d" />
-              <section title="setSamples" ref="class_qwt_plot_bar_chart.html#a669eb25dba458699465b317f2e96c1eb" />
               <section title="setSamples" ref="class_qwt_plot_bar_chart.html#a1b9e0f311a5570a93663994eb90b364f" />
+              <section title="setSamples" ref="class_qwt_plot_bar_chart.html#a669eb25dba458699465b317f2e96c1eb" />
               <section title="setSamples" ref="class_qwt_plot_bar_chart.html#adace4331eb8d9686401e193303199800" />
               <section title="setSymbol" ref="class_qwt_plot_bar_chart.html#a3e3c50c37484c3049dc9f433269e9a44" />
               <section title="specialSymbol" ref="class_qwt_plot_bar_chart.html#a413a67d1a58f2ed7ddd1ff6aade20012" />
@@ -1632,8 +1632,8 @@
               <section title="setCanvasMargin" ref="class_qwt_plot_layout.html#a11667dad6675a7a58cc60ab1597b1203" />
               <section title="setCanvasRect" ref="class_qwt_plot_layout.html#ab3d6614684b96a5879300476d2df8f8f" />
               <section title="setFooterRect" ref="class_qwt_plot_layout.html#a60698767fe44c86ee4bcef27c1b48d26" />
-              <section title="setLegendPosition" ref="class_qwt_plot_layout.html#a11c9695a68f95135841cb23212589f18" />
               <section title="setLegendPosition" ref="class_qwt_plot_layout.html#a001f1eca91803d0eaa9548efc50879eb" />
+              <section title="setLegendPosition" ref="class_qwt_plot_layout.html#a11c9695a68f95135841cb23212589f18" />
               <section title="setLegendRatio" ref="class_qwt_plot_layout.html#aabe9f952046139667e055c661bee4dbb" />
               <section title="setLegendRect" ref="class_qwt_plot_layout.html#a5d5c1dacdfff8281acf0a909acaf866c" />
               <section title="setScaleRect" ref="class_qwt_plot_layout.html#a842733777eb2b0bf2cacc4bb01c169c7" />
@@ -1668,7 +1668,7 @@
               <section title="margin" ref="class_qwt_plot_legend_item.html#addb541b96f80893b59a9b5c5a6902045" />
               <section title="maxColumns" ref="class_qwt_plot_legend_item.html#ac3adfd28befca5e9597779cedee66cfe" />
               <section title="minimumSize" ref="class_qwt_plot_legend_item.html#abbfe45a7fca3effba9c1339dc18c0d19" />
-              <section title="plotItems" ref="class_qwt_plot_legend_item.html#a827307dff731c479199043ea85ca72b6" />
+              <section title="plotItems" ref="class_qwt_plot_legend_item.html#a872dadf9f21f57a5369ad811e6dfa68a" />
               <section title="rtti" ref="class_qwt_plot_legend_item.html#a1b9961d07206415946dc178a16f0d507" />
               <section title="setAlignment" ref="class_qwt_plot_legend_item.html#a7f0bc77d242fe1977d8dee501fa5240f" />
               <section title="setBackgroundBrush" ref="class_qwt_plot_legend_item.html#a82c391eecd2752c3a85a274973f34b6e" />
@@ -1727,8 +1727,8 @@
               <section title="setLineStyle" ref="class_qwt_plot_marker.html#a201102756fc49728a2d0466339f4545a" />
               <section title="setSpacing" ref="class_qwt_plot_marker.html#a856c9c5c6e22d86461ee6df101534831" />
               <section title="setSymbol" ref="class_qwt_plot_marker.html#af44231c2b63bb277706e4f515297c7b1" />
-              <section title="setValue" ref="class_qwt_plot_marker.html#ad3a480c64192dabffd02bf5db31f917c" />
               <section title="setValue" ref="class_qwt_plot_marker.html#a290374903ca168104dbce7e2058774c3" />
+              <section title="setValue" ref="class_qwt_plot_marker.html#ad3a480c64192dabffd02bf5db31f917c" />
               <section title="setXValue" ref="class_qwt_plot_marker.html#a0d53b0e0ed8b48478c02a0ecaf5852b2" />
               <section title="setYValue" ref="class_qwt_plot_marker.html#a47d8e3c0708ad02a9c7cc6aaf985e278" />
               <section title="spacing" ref="class_qwt_plot_marker.html#a4aae568cd271f14ef965dbb7f52a52b7" />
@@ -1757,15 +1757,15 @@
               <section title="resetSymbolMap" ref="class_qwt_plot_multi_bar_chart.html#a2fac8a87796eb02ca1418ea806c0abb4" />
               <section title="rtti" ref="class_qwt_plot_multi_bar_chart.html#a882a53c53d43b7fa25a3225661494dcc" />
               <section title="setBarTitles" ref="class_qwt_plot_multi_bar_chart.html#ab519e583c3463e260c8f47be67aa9b8e" />
-              <section title="setSamples" ref="class_qwt_plot_multi_bar_chart.html#ad54633b91b7f602e376f3acb9e235e3c" />
               <section title="setSamples" ref="class_qwt_plot_multi_bar_chart.html#a95a17a8087bd87e5fea5ea4fbb910ecf" />
+              <section title="setSamples" ref="class_qwt_plot_multi_bar_chart.html#ad54633b91b7f602e376f3acb9e235e3c" />
               <section title="setSamples" ref="class_qwt_plot_multi_bar_chart.html#ab24b14666946b36e51bace7b5ecb0f81" />
               <section title="setStyle" ref="class_qwt_plot_multi_bar_chart.html#a4daa7bdd0043eeafe5ab6e5db290181d" />
               <section title="setSymbol" ref="class_qwt_plot_multi_bar_chart.html#a820bc704ccfc186b932c91e52f2f1836" />
               <section title="specialSymbol" ref="class_qwt_plot_multi_bar_chart.html#a1c41b38520d171e6fc9d48b3d36680eb" />
               <section title="style" ref="class_qwt_plot_multi_bar_chart.html#ad8d6ad8d2b4a8b51c32d708e53164e6c" />
-              <section title="symbol" ref="class_qwt_plot_multi_bar_chart.html#ac6b41f2f65e4d6ee49c1e2d328cb5d3c" />
               <section title="symbol" ref="class_qwt_plot_multi_bar_chart.html#aae118050cf9896a839a97ae144d92712" />
+              <section title="symbol" ref="class_qwt_plot_multi_bar_chart.html#ac6b41f2f65e4d6ee49c1e2d328cb5d3c" />
             </section>
             <section title="QwtPlotPanner" ref="class_qwt_plot_panner.html">
               <section title="QwtPlotPanner" ref="class_qwt_plot_panner.html#a94d661c312edbf7ef094dd32dff57d44" />
@@ -1790,8 +1790,8 @@
               <section title="canvas" ref="class_qwt_plot_picker.html#ad2a03a80f35826ed6256f039da2b4bf2" />
               <section title="canvas" ref="class_qwt_plot_picker.html#a6a914b1383a500894f1ab1f19f627490" />
               <section title="end" ref="class_qwt_plot_picker.html#a9fceb663542b6f9b0a358e9419406423" />
-              <section title="invTransform" ref="class_qwt_plot_picker.html#ac4d194a51dcee9d8b6329beaf74e01de" />
               <section title="invTransform" ref="class_qwt_plot_picker.html#a1680e8cae56014d0c4446e59e58db1f2" />
+              <section title="invTransform" ref="class_qwt_plot_picker.html#ac4d194a51dcee9d8b6329beaf74e01de" />
               <section title="move" ref="class_qwt_plot_picker.html#a7a979d23cd4d398e309409e76635bcf4" />
               <section title="moved" ref="class_qwt_plot_picker.html#a4a35d30f1c4c4f80c49e3c6647b34e12" />
               <section title="plot" ref="class_qwt_plot_picker.html#ac5906d5fe7543f3db7808da44d8197a9" />
@@ -1803,8 +1803,8 @@
               <section title="setAxis" ref="class_qwt_plot_picker.html#aa901c86543585c7056133a5cb6652e3d" />
               <section title="trackerText" ref="class_qwt_plot_picker.html#a1b1134e758f4827add976929fd557563" />
               <section title="trackerTextF" ref="class_qwt_plot_picker.html#ac14ba91cb5a41b228605e17d0af39a47" />
-              <section title="transform" ref="class_qwt_plot_picker.html#a0387b1ed9326a3e7d113dcfc225698db" />
               <section title="transform" ref="class_qwt_plot_picker.html#a8da18fb8cdcc1c336e99d4b69c338dfc" />
+              <section title="transform" ref="class_qwt_plot_picker.html#a0387b1ed9326a3e7d113dcfc225698db" />
               <section title="xAxis" ref="class_qwt_plot_picker.html#a721b1d74143839034c730556d0691c1e" />
               <section title="yAxis" ref="class_qwt_plot_picker.html#a3f2919671ab530b182a6b7ebd0c20f6f" />
             </section>
@@ -1863,8 +1863,8 @@
               <section title="renderLegend" ref="class_qwt_plot_renderer.html#a3ed865d898479d423c82fd305118f061" />
               <section title="renderScale" ref="class_qwt_plot_renderer.html#a7382b314e9bceb0fba0532c042002d74" />
               <section title="renderTitle" ref="class_qwt_plot_renderer.html#a85ccd01874593c6c17f619f036a6d799" />
-              <section title="renderTo" ref="class_qwt_plot_renderer.html#a0476ec7ab004d9661ca97db7130c92c9" />
               <section title="renderTo" ref="class_qwt_plot_renderer.html#aeff232d12dcc6c25ed0616860e1725d6" />
+              <section title="renderTo" ref="class_qwt_plot_renderer.html#a0476ec7ab004d9661ca97db7130c92c9" />
               <section title="setDiscardFlag" ref="class_qwt_plot_renderer.html#a33439eb1407f3ba78fdd7b50461bbafc" />
               <section title="setDiscardFlags" ref="class_qwt_plot_renderer.html#ac618f4d6605c2484c03140323e1bd639" />
               <section title="setLayoutFlag" ref="class_qwt_plot_renderer.html#ab06e26ebf2038b55e5f30bb14c90caec" />
@@ -1925,8 +1925,8 @@
               <section title="position" ref="class_qwt_plot_scale_item.html#a5220a5f93bd85222e4993d12289dce82" />
               <section title="rtti" ref="class_qwt_plot_scale_item.html#a3172170ca937e7b7161cd43bca4efd61" />
               <section title="scaleDiv" ref="class_qwt_plot_scale_item.html#a3b70b2b9a3fe31840f92c431288569be" />
-              <section title="scaleDraw" ref="class_qwt_plot_scale_item.html#a5ac9c0f71fb5e12166027d6e0b37c429" />
               <section title="scaleDraw" ref="class_qwt_plot_scale_item.html#ab75d17fe11c146b49ffa47940f512850" />
+              <section title="scaleDraw" ref="class_qwt_plot_scale_item.html#a5ac9c0f71fb5e12166027d6e0b37c429" />
               <section title="setAlignment" ref="class_qwt_plot_scale_item.html#af11343d14c4ee38e0527cedd52b3da85" />
               <section title="setBorderDistance" ref="class_qwt_plot_scale_item.html#ae6e2fc87f445357555a3b1b54da054fa" />
               <section title="setFont" ref="class_qwt_plot_scale_item.html#a8f2bc7a401bb3e1cf796ff024032e31d" />
@@ -2015,8 +2015,8 @@
               <section title="contourLevels" ref="class_qwt_plot_spectrogram.html#a30d8f32646e570e08b788709c1537237" />
               <section title="contourPen" ref="class_qwt_plot_spectrogram.html#a187aedfbbaac00151004b456fed52694" />
               <section title="contourRasterSize" ref="class_qwt_plot_spectrogram.html#a27741cdb8370313fed45143b366ba4a4" />
-              <section title="data" ref="class_qwt_plot_spectrogram.html#aaecfced36df660ddb5ecf9d9450cd661" />
               <section title="data" ref="class_qwt_plot_spectrogram.html#a4082962ff60af18a5212ea160f7b55ba" />
+              <section title="data" ref="class_qwt_plot_spectrogram.html#aaecfced36df660ddb5ecf9d9450cd661" />
               <section title="defaultContourPen" ref="class_qwt_plot_spectrogram.html#afd1ebcdd70da66632a996bb57f6102e3" />
               <section title="draw" ref="class_qwt_plot_spectrogram.html#a8b723a9f40c919b21094fb85ebf50309" />
               <section title="drawContourLines" ref="class_qwt_plot_spectrogram.html#a6fe73bad104b96aee6bfd89659ecf870" />
@@ -2045,8 +2045,8 @@
               <section title="loadData" ref="class_qwt_plot_svg_item.html#a9e611f0c845289ddfb9758fa4479e719" />
               <section title="loadFile" ref="class_qwt_plot_svg_item.html#aca9592f3d3dca512b7970851b159cf57" />
               <section title="render" ref="class_qwt_plot_svg_item.html#a25f149980cc1b64ed55292816d282755" />
-              <section title="renderer" ref="class_qwt_plot_svg_item.html#a93b46181d8e1b3a19111fd62ed65c956" />
               <section title="renderer" ref="class_qwt_plot_svg_item.html#a7263211f1f91f669d9abd8e6dd9529a3" />
+              <section title="renderer" ref="class_qwt_plot_svg_item.html#a93b46181d8e1b3a19111fd62ed65c956" />
               <section title="rtti" ref="class_qwt_plot_svg_item.html#a55cbae2059a056004995e3d3cc304123" />
               <section title="viewBox" ref="class_qwt_plot_svg_item.html#a2bd5bc480353c0936d17536fa4b32468" />
             </section>
@@ -2119,8 +2119,8 @@
               <section title="pen" ref="class_qwt_plot_zone_item.html#a1dbf4a71e483b32b6348ab3b3bdd1a64" />
               <section title="rtti" ref="class_qwt_plot_zone_item.html#a8721923580e3117601e5df443aa1e07a" />
               <section title="setBrush" ref="class_qwt_plot_zone_item.html#a29d7add8c10cde3c5710354cd0d033a8" />
-              <section title="setInterval" ref="class_qwt_plot_zone_item.html#acdf04297cd78f586e447318db60334e6" />
               <section title="setInterval" ref="class_qwt_plot_zone_item.html#ad963f6a8301525c35add92c509fef44c" />
+              <section title="setInterval" ref="class_qwt_plot_zone_item.html#acdf04297cd78f586e447318db60334e6" />
               <section title="setOrientation" ref="class_qwt_plot_zone_item.html#a0e957d092637846d8c7e7f6d1282e8ac" />
               <section title="setPen" ref="class_qwt_plot_zone_item.html#a76a86eb41801930e5733bc509966ee4d" />
               <section title="setPen" ref="class_qwt_plot_zone_item.html#a29e88c47cdde211812df6d1073ab5c69" />
@@ -2267,8 +2267,8 @@
               <section title="drawLabel" ref="class_qwt_round_scale_draw.html#a9bc205a3ee35d458f9546317b7651fa8" />
               <section title="drawTick" ref="class_qwt_round_scale_draw.html#a57f677663aaa5e27f8fa10d3012343dd" />
               <section title="extent" ref="class_qwt_round_scale_draw.html#a8d528cfed37736b60b14f0e82b05d7a3" />
-              <section title="moveCenter" ref="class_qwt_round_scale_draw.html#af7e08b85826c5e1e5b1762fa07830107" />
               <section title="moveCenter" ref="class_qwt_round_scale_draw.html#a7be4951c2998474a79e4f1d621ea412a" />
+              <section title="moveCenter" ref="class_qwt_round_scale_draw.html#af7e08b85826c5e1e5b1762fa07830107" />
               <section title="radius" ref="class_qwt_round_scale_draw.html#a981fb525cffd8ee5b28e659f7f046b65" />
               <section title="setAngleRange" ref="class_qwt_round_scale_draw.html#a5d85678fdb9fbb4d622425aab9ecc681" />
               <section title="setRadius" ref="class_qwt_round_scale_draw.html#a219e0db15594f297ae6ff769fd6c0485" />
@@ -2307,8 +2307,8 @@
               <section title="operator!=" ref="class_qwt_scale_div.html#a72d49307e2aa0d15d7d7c11efcf45a9e" />
               <section title="operator==" ref="class_qwt_scale_div.html#a22344fd8c7833fd7b0a7cfacf52ad433" />
               <section title="range" ref="class_qwt_scale_div.html#a4cb22839c45170952182d7039b54e4c2" />
-              <section title="setInterval" ref="class_qwt_scale_div.html#aa5c61a5fef5f83f2735e4e1b8e545f0b" />
               <section title="setInterval" ref="class_qwt_scale_div.html#ad335ddb86f5c635324cd0e8d00430ac4" />
+              <section title="setInterval" ref="class_qwt_scale_div.html#aa5c61a5fef5f83f2735e4e1b8e545f0b" />
               <section title="setLowerBound" ref="class_qwt_scale_div.html#a7d334df11402bf3a5146a8232144bdf8" />
               <section title="setTicks" ref="class_qwt_scale_div.html#af67401fd5d16138eddede3381c559964" />
               <section title="setUpperBound" ref="class_qwt_scale_div.html#a56545b9c67dcfb4bd0c7b5fc430ab70d" />
@@ -2342,8 +2342,8 @@
               <section title="maxLabelWidth" ref="class_qwt_scale_draw.html#ac02b38e5900d797d9c28f76aac318755" />
               <section title="minLabelDist" ref="class_qwt_scale_draw.html#ad98730a91c8257ea60246a0e332f0f02" />
               <section title="minLength" ref="class_qwt_scale_draw.html#a443d2574ddeedc7bfeb507ee67ec47e2" />
-              <section title="move" ref="class_qwt_scale_draw.html#a15f91bdd71ec87abe618e00cf18aa3f1" />
               <section title="move" ref="class_qwt_scale_draw.html#a61f1b2112eb1fdd2bdeef429f7fc24d9" />
+              <section title="move" ref="class_qwt_scale_draw.html#a15f91bdd71ec87abe618e00cf18aa3f1" />
               <section title="orientation" ref="class_qwt_scale_draw.html#aba3a8530871137eb5f977e1eb3fe4975" />
               <section title="pos" ref="class_qwt_scale_draw.html#a674f57dd07fa6d7a3ffbf63d6e64e0bf" />
               <section title="setAlignment" ref="class_qwt_scale_draw.html#a7a4de0055dc1358e55c3357366a54091" />
@@ -2429,8 +2429,8 @@
               <section title="resizeEvent" ref="class_qwt_scale_widget.html#a9072385d42de47fec634989134d1cd98" />
               <section title="scaleChange" ref="class_qwt_scale_widget.html#af151a963ea3cb7f04815db93e8f4882d" />
               <section title="scaleDivChanged" ref="class_qwt_scale_widget.html#a55c52717ede368069f5f44b9901e3400" />
-              <section title="scaleDraw" ref="class_qwt_scale_widget.html#a2f6d30104f89c45d4d18f060ebabb8b9" />
               <section title="scaleDraw" ref="class_qwt_scale_widget.html#a6ccb7e3a4537396f59fc30c7d76cc20d" />
+              <section title="scaleDraw" ref="class_qwt_scale_widget.html#a2f6d30104f89c45d4d18f060ebabb8b9" />
               <section title="setAlignment" ref="class_qwt_scale_widget.html#ab6421ace2bd56d5559689522336556e0" />
               <section title="setBorderDist" ref="class_qwt_scale_widget.html#abbbd5a501ab683e170d52250463c61bb" />
               <section title="setColorBarEnabled" ref="class_qwt_scale_widget.html#aeb337b8e67fc00ca98bf39a6d70aea61" />
@@ -2579,8 +2579,8 @@
               <section title="setFitMode" ref="class_qwt_spline_curve_fitter.html#a8381be57ee16b5a2bdacafbd5d71908b" />
               <section title="setSpline" ref="class_qwt_spline_curve_fitter.html#a7f819ad010b19d58179655e4ceb1c6f1" />
               <section title="setSplineSize" ref="class_qwt_spline_curve_fitter.html#af468f8218d57a2e8d07f4bf6aafda8dc" />
-              <section title="spline" ref="class_qwt_spline_curve_fitter.html#a968c67ccf4ebf4642ceb9cf749e3642d" />
               <section title="spline" ref="class_qwt_spline_curve_fitter.html#ac501260a25953e1ded6bbc84c3250fa8" />
+              <section title="spline" ref="class_qwt_spline_curve_fitter.html#a968c67ccf4ebf4642ceb9cf749e3642d" />
               <section title="splineSize" ref="class_qwt_spline_curve_fitter.html#af7cc3a6b3dc82736e643bf5b346b2c6e" />
             </section>
             <section title="QwtSymbol" ref="class_qwt_symbol.html">
@@ -2619,10 +2619,10 @@
               <section title="boundingRect" ref="class_qwt_symbol.html#a5a6f161bb68df7237224519e5877203b" />
               <section title="brush" ref="class_qwt_symbol.html#a0c1d941275544c732bfad4b7fb7a0cc2" />
               <section title="cachePolicy" ref="class_qwt_symbol.html#adf0ebf3e9b9c0382801ba70c97a1af4f" />
-              <section title="drawSymbol" ref="class_qwt_symbol.html#a39d74c66ffeeac05e34b6a8be4dca95e" />
               <section title="drawSymbol" ref="class_qwt_symbol.html#a112bda84ffbfcbf526613cda04054484" />
-              <section title="drawSymbols" ref="class_qwt_symbol.html#a623997cd980c29e7d9cac3718e21cefc" />
+              <section title="drawSymbol" ref="class_qwt_symbol.html#a39d74c66ffeeac05e34b6a8be4dca95e" />
               <section title="drawSymbols" ref="class_qwt_symbol.html#a59caca3ad7fe21a0a97d025a15b0f05d" />
+              <section title="drawSymbols" ref="class_qwt_symbol.html#a623997cd980c29e7d9cac3718e21cefc" />
               <section title="graphic" ref="class_qwt_symbol.html#ae0d2c7643ae294a66eb0622bbdad4711" />
               <section title="invalidateCache" ref="class_qwt_symbol.html#a781dee5e5db701df592378eb71d84088" />
               <section title="isPinPointEnabled" ref="class_qwt_symbol.html#aaef171154b150807a33c3daffcc45894" />
@@ -2785,8 +2785,8 @@
               <section title="rangeFlags" ref="class_qwt_thermo.html#a97df48b3bb00fc5e7af5719d2b5e6ae3" />
               <section title="resizeEvent" ref="class_qwt_thermo.html#a31ea86c3ab9c6925752dc8d6215fd9f0" />
               <section title="scaleChange" ref="class_qwt_thermo.html#a3f2f5077580235a5a776805a9721c8ba" />
-              <section title="scaleDraw" ref="class_qwt_thermo.html#a33b8af6538a01433f73971f3532d0ce0" />
               <section title="scaleDraw" ref="class_qwt_thermo.html#a7d0f262032c034c5da703ec2f2d120b7" />
+              <section title="scaleDraw" ref="class_qwt_thermo.html#a33b8af6538a01433f73971f3532d0ce0" />
               <section title="scalePosition" ref="class_qwt_thermo.html#ae8f4e4ceb3c3c6798d026190e9946e8d" />
               <section title="setAlarmBrush" ref="class_qwt_thermo.html#a3d2e1c17d3630cd9dda66bcf913a7a60" />
               <section title="setAlarmEnabled" ref="class_qwt_thermo.html#a0ebd05c24f051ac7d6b98f9e8a0c3035" />
@@ -3164,7 +3164,7 @@
               <section title="x" ref="functions_x.html" />
               <section title="y" ref="functions_y.html" />
               <section title="z" ref="functions_z.html" />
-              <section title="~" ref="functions_0x7e.html" />
+              <section title="~" ref="functions_~.html" />
             </section>
             <section title="Functions" ref="functions_func.html">
               <section title="a" ref="functions_func.html" />
@@ -3191,7 +3191,7 @@
               <section title="x" ref="functions_func_x.html" />
               <section title="y" ref="functions_func_y.html" />
               <section title="z" ref="functions_func_z.html" />
-              <section title="~" ref="functions_func_0x7e.html" />
+              <section title="~" ref="functions_func_~.html" />
             </section>
             <section title="Variables" ref="functions_vars.html" />
             <section title="Typedefs" ref="functions_type.html" />
@@ -4199,9 +4199,9 @@
       <keyword name="intersect" id="QwtInterval::intersect" ref="class_qwt_interval.html#ac4e5b30c3a1fb1d808de112a36bba4f7" />
       <keyword name="unite" id="QwtInterval::unite" ref="class_qwt_interval.html#a5e67ab7a363a6eafce33899e7cb14aac" />
       <keyword name="operator|" id="QwtInterval::operator|" ref="class_qwt_interval.html#a15d4be800076713aaca0e00c4ca5975a" />
-      <keyword name="operator &amp;" id="QwtInterval::operator &amp;" ref="class_qwt_interval.html#a5811f5ef4ec47dc5385aa0b978b12654" />
+      <keyword name="operator&amp;" id="QwtInterval::operator&amp;" ref="class_qwt_interval.html#a8954431c349d726c26055cd2201ca9d2" />
       <keyword name="operator|=" id="QwtInterval::operator|=" ref="class_qwt_interval.html#a980e6449437b689893bd8ec7370e91e0" />
-      <keyword name="operator &amp;=" id="QwtInterval::operator &amp;=" ref="class_qwt_interval.html#a990c929fa07f8a1c0f5fe541cd9c513b" />
+      <keyword name="operator&amp;=" id="QwtInterval::operator&amp;=" ref="class_qwt_interval.html#a31b75687b9d2e1931ec82f61cc644222" />
       <keyword name="extend" id="QwtInterval::extend" ref="class_qwt_interval.html#aa9802cc2bd58eab078197eeda3b53708" />
       <keyword name="operator|" id="QwtInterval::operator|" ref="class_qwt_interval.html#a4a9a8b11346e611c976941b88906bbc2" />
       <keyword name="operator|=" id="QwtInterval::operator|=" ref="class_qwt_interval.html#a86a2785d0fc6860e15cfc277c14e7a09" />
@@ -5788,7 +5788,7 @@
       <keyword name="geometry" id="QwtPlotLegendItem::geometry" ref="class_qwt_plot_legend_item.html#a399e911ba6cf2670456f0c3ce8067485" />
       <keyword name="minimumSize" id="QwtPlotLegendItem::minimumSize" ref="class_qwt_plot_legend_item.html#abbfe45a7fca3effba9c1339dc18c0d19" />
       <keyword name="heightForWidth" id="QwtPlotLegendItem::heightForWidth" ref="class_qwt_plot_legend_item.html#a9f38136dea7b4a19bd86a481849a4651" />
-      <keyword name="plotItems" id="QwtPlotLegendItem::plotItems" ref="class_qwt_plot_legend_item.html#a827307dff731c479199043ea85ca72b6" />
+      <keyword name="plotItems" id="QwtPlotLegendItem::plotItems" ref="class_qwt_plot_legend_item.html#a872dadf9f21f57a5369ad811e6dfa68a" />
       <keyword name="legendGeometries" id="QwtPlotLegendItem::legendGeometries" ref="class_qwt_plot_legend_item.html#a77ed43325a316da51fd9ec068e36907e" />
       <keyword name="QwtPlotItem" id="QwtPlotItem::QwtPlotItem" ref="class_qwt_plot_item.html#a5d892ac856fb9176515c5f2d806161dc" />
       <keyword name="~QwtPlotItem" id="QwtPlotItem::~QwtPlotItem" ref="class_qwt_plot_item.html#a282a1d0424a06737f80e1fe83ccf7a0c" />
@@ -6567,6 +6567,16 @@
       <keyword name="paintRect" id="QwtPlotItem::paintRect" ref="class_qwt_plot_item.html#a08deefbedf8742f4877841b2dfd85822" />
       <keyword name="legendData" id="QwtPlotItem::legendData" ref="class_qwt_plot_item.html#a367ed5160b8475daf6b5b06558310f98" />
       <keyword name="legendIcon" id="QwtPlotItem::legendIcon" ref="class_qwt_plot_item.html#a1a0d7f4328741d7396f1959e44e63412" />
+      <keyword name="QwtSeriesStore" id="QwtSeriesStore&lt; QwtPoint3D &gt;::QwtSeriesStore" ref="class_qwt_series_store.html#aa23545f522f87da936c0f095ee07c80e" />
+      <keyword name="~QwtSeriesStore" id="QwtSeriesStore&lt; QwtPoint3D &gt;::~QwtSeriesStore" ref="class_qwt_series_store.html#ae500a3787e77e16d096f4e6c1d292101" />
+      <keyword name="setData" id="QwtSeriesStore&lt; QwtPoint3D &gt;::setData" ref="class_qwt_series_store.html#add3ce83fe90e976b75a0ebaa79caee4c" />
+      <keyword name="data" id="QwtSeriesStore&lt; QwtPoint3D &gt;::data" ref="class_qwt_series_store.html#aae258d330c8d1bd2057b1f0bc13700f9" />
+      <keyword name="data" id="QwtSeriesStore&lt; QwtPoint3D &gt;::data" ref="class_qwt_series_store.html#a6836f39d0a702cc02e765d884cc2899d" />
+      <keyword name="sample" id="QwtSeriesStore&lt; QwtPoint3D &gt;::sample" ref="class_qwt_series_store.html#a09f98212173ac6de604d8b63ebf6bb0a" />
+      <keyword name="dataSize" id="QwtSeriesStore&lt; QwtPoint3D &gt;::dataSize" ref="class_qwt_series_store.html#a911568a1e4610e35e4657e52aeb5d4d1" />
+      <keyword name="dataRect" id="QwtSeriesStore&lt; QwtPoint3D &gt;::dataRect" ref="class_qwt_series_store.html#aaea33c78640e0a161e132a7718bfa286" />
+      <keyword name="setRectOfInterest" id="QwtSeriesStore&lt; QwtPoint3D &gt;::setRectOfInterest" ref="class_qwt_series_store.html#a64971dd5eaed045b88ac06c9cd8fd6e9" />
+      <keyword name="swapData" id="QwtSeriesStore&lt; QwtPoint3D &gt;::swapData" ref="class_qwt_series_store.html#a5f47997d53d580e6a12a6ca61b7225b0" />
       <keyword name="drawDots" id="QwtPlotSpectroCurve::drawDots" ref="class_qwt_plot_spectro_curve.html#a859a76f4c5e85e5d64bb2dbc24079811" />
       <keyword name="dataChanged" id="QwtPlotSeriesItem::dataChanged" ref="class_qwt_plot_series_item.html#a8eaf7453ca8b3e8f522433149ba4c80d" />
       <keyword name="defaultIcon" id="QwtPlotItem::defaultIcon" ref="class_qwt_plot_item.html#a9a86df9a56ed5fea2cee81026e45f375" />
@@ -6838,6 +6848,16 @@
       <keyword name="scaleRect" id="QwtPlotItem::scaleRect" ref="class_qwt_plot_item.html#a43930f6c9bf9338130d2e098834732f4" />
       <keyword name="paintRect" id="QwtPlotItem::paintRect" ref="class_qwt_plot_item.html#a08deefbedf8742f4877841b2dfd85822" />
       <keyword name="legendData" id="QwtPlotItem::legendData" ref="class_qwt_plot_item.html#a367ed5160b8475daf6b5b06558310f98" />
+      <keyword name="QwtSeriesStore" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::QwtSeriesStore" ref="class_qwt_series_store.html#aa23545f522f87da936c0f095ee07c80e" />
+      <keyword name="~QwtSeriesStore" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::~QwtSeriesStore" ref="class_qwt_series_store.html#ae500a3787e77e16d096f4e6c1d292101" />
+      <keyword name="setData" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::setData" ref="class_qwt_series_store.html#add3ce83fe90e976b75a0ebaa79caee4c" />
+      <keyword name="data" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::data" ref="class_qwt_series_store.html#aae258d330c8d1bd2057b1f0bc13700f9" />
+      <keyword name="data" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::data" ref="class_qwt_series_store.html#a6836f39d0a702cc02e765d884cc2899d" />
+      <keyword name="sample" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::sample" ref="class_qwt_series_store.html#a09f98212173ac6de604d8b63ebf6bb0a" />
+      <keyword name="dataSize" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::dataSize" ref="class_qwt_series_store.html#a911568a1e4610e35e4657e52aeb5d4d1" />
+      <keyword name="dataRect" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::dataRect" ref="class_qwt_series_store.html#aaea33c78640e0a161e132a7718bfa286" />
+      <keyword name="setRectOfInterest" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::setRectOfInterest" ref="class_qwt_series_store.html#a64971dd5eaed045b88ac06c9cd8fd6e9" />
+      <keyword name="swapData" id="QwtSeriesStore&lt; QwtOHLCSample &gt;::swapData" ref="class_qwt_series_store.html#a5f47997d53d580e6a12a6ca61b7225b0" />
       <keyword name="init" id="QwtPlotTradingCurve::init" ref="class_qwt_plot_trading_curve.html#a9fdb6082069ae913ed988137da1d57dd" />
       <keyword name="drawSymbols" id="QwtPlotTradingCurve::drawSymbols" ref="class_qwt_plot_trading_curve.html#a73030fbd4367f64d5a3f75cc9bcb0ed3" />
       <keyword name="drawUserSymbol" id="QwtPlotTradingCurve::drawUserSymbol" ref="class_qwt_plot_trading_curve.html#a546674cc32f6be4c83dbfb0b76aae067" />
@@ -8091,46 +8111,46 @@
       <file>dials2.png</file>
       <file>class_qwt_abstract_legend.html</file>
       <file>class_qwt_abstract_legend__inherit__graph.png</file>
-      <file>class_qwt_abstract_legend__inherit__graph.png</file>
+      <file>class_qwt_abstract_legend__inherit__graph.pdf</file>
       <file>class_qwt_abstract_legend-members.html</file>
       <file>class_qwt_abstract_scale.html</file>
       <file>class_qwt_abstract_scale__inherit__graph.png</file>
-      <file>class_qwt_abstract_scale__inherit__graph.png</file>
+      <file>class_qwt_abstract_scale__inherit__graph.pdf</file>
       <file>class_qwt_abstract_scale-members.html</file>
       <file>class_qwt_abstract_scale_draw.html</file>
       <file>class_qwt_abstract_scale_draw__inherit__graph.png</file>
-      <file>class_qwt_abstract_scale_draw__inherit__graph.png</file>
+      <file>class_qwt_abstract_scale_draw__inherit__graph.pdf</file>
       <file>class_qwt_abstract_scale_draw-members.html</file>
       <file>class_qwt_abstract_series_store.html</file>
       <file>class_qwt_abstract_series_store__inherit__graph.png</file>
-      <file>class_qwt_abstract_series_store__inherit__graph.png</file>
+      <file>class_qwt_abstract_series_store__inherit__graph.pdf</file>
       <file>class_qwt_abstract_series_store-members.html</file>
       <file>class_qwt_abstract_slider.html</file>
       <file>class_qwt_abstract_slider__inherit__graph.png</file>
-      <file>class_qwt_abstract_slider__inherit__graph.png</file>
+      <file>class_qwt_abstract_slider__inherit__graph.pdf</file>
       <file>class_qwt_abstract_slider-members.html</file>
       <file>class_qwt_alpha_color_map.html</file>
       <file>class_qwt_alpha_color_map__inherit__graph.png</file>
-      <file>class_qwt_alpha_color_map__inherit__graph.png</file>
+      <file>class_qwt_alpha_color_map__inherit__graph.pdf</file>
       <file>class_qwt_alpha_color_map-members.html</file>
       <file>class_qwt_analog_clock.html</file>
       <file>class_qwt_analog_clock__inherit__graph.png</file>
-      <file>class_qwt_analog_clock__inherit__graph.png</file>
+      <file>class_qwt_analog_clock__inherit__graph.pdf</file>
       <file>analogclock.png</file>
       <file>class_qwt_analog_clock-members.html</file>
       <file>class_qwt_array_series_data.html</file>
       <file>class_qwt_array_series_data__inherit__graph.png</file>
-      <file>class_qwt_array_series_data__inherit__graph.png</file>
+      <file>class_qwt_array_series_data__inherit__graph.pdf</file>
       <file>class_qwt_array_series_data-members.html</file>
       <file>class_qwt_arrow_button.html</file>
       <file>class_qwt_arrow_button__inherit__graph.png</file>
-      <file>class_qwt_arrow_button__inherit__graph.png</file>
+      <file>class_qwt_arrow_button__inherit__graph.pdf</file>
       <file>class_qwt_arrow_button-members.html</file>
       <file>class_qwt_clipper.html</file>
       <file>class_qwt_clipper-members.html</file>
       <file>class_qwt_color_map.html</file>
       <file>class_qwt_color_map__inherit__graph.png</file>
-      <file>class_qwt_color_map__inherit__graph.png</file>
+      <file>class_qwt_color_map__inherit__graph.pdf</file>
       <file>class_qwt_color_map-members.html</file>
       <file>class_qwt_column_rect.html</file>
       <file>class_qwt_column_rect-members.html</file>
@@ -8138,67 +8158,67 @@
       <file>class_qwt_column_symbol-members.html</file>
       <file>class_qwt_compass.html</file>
       <file>class_qwt_compass__inherit__graph.png</file>
-      <file>class_qwt_compass__inherit__graph.png</file>
+      <file>class_qwt_compass__inherit__graph.pdf</file>
       <file>dials1.png</file>
       <file>class_qwt_compass-members.html</file>
       <file>class_qwt_compass_magnet_needle.html</file>
       <file>class_qwt_compass_magnet_needle__inherit__graph.png</file>
-      <file>class_qwt_compass_magnet_needle__inherit__graph.png</file>
+      <file>class_qwt_compass_magnet_needle__inherit__graph.pdf</file>
       <file>class_qwt_compass_magnet_needle-members.html</file>
       <file>class_qwt_compass_rose.html</file>
       <file>class_qwt_compass_rose__inherit__graph.png</file>
-      <file>class_qwt_compass_rose__inherit__graph.png</file>
+      <file>class_qwt_compass_rose__inherit__graph.pdf</file>
       <file>class_qwt_compass_rose-members.html</file>
       <file>class_qwt_compass_scale_draw.html</file>
       <file>class_qwt_compass_scale_draw__inherit__graph.png</file>
-      <file>class_qwt_compass_scale_draw__inherit__graph.png</file>
+      <file>class_qwt_compass_scale_draw__inherit__graph.pdf</file>
       <file>class_qwt_compass_scale_draw-members.html</file>
       <file>class_qwt_compass_wind_arrow.html</file>
       <file>class_qwt_compass_wind_arrow__inherit__graph.png</file>
-      <file>class_qwt_compass_wind_arrow__inherit__graph.png</file>
+      <file>class_qwt_compass_wind_arrow__inherit__graph.pdf</file>
       <file>class_qwt_compass_wind_arrow-members.html</file>
       <file>class_qwt_counter.html</file>
       <file>class_qwt_counter__inherit__graph.png</file>
-      <file>class_qwt_counter__inherit__graph.png</file>
+      <file>class_qwt_counter__inherit__graph.pdf</file>
       <file>class_qwt_counter-members.html</file>
       <file>class_qwt_c_pointer_data.html</file>
       <file>class_qwt_c_pointer_data__inherit__graph.png</file>
-      <file>class_qwt_c_pointer_data__inherit__graph.png</file>
+      <file>class_qwt_c_pointer_data__inherit__graph.pdf</file>
       <file>class_qwt_c_pointer_data-members.html</file>
       <file>class_qwt_curve_fitter.html</file>
       <file>class_qwt_curve_fitter__inherit__graph.png</file>
-      <file>class_qwt_curve_fitter__inherit__graph.png</file>
+      <file>class_qwt_curve_fitter__inherit__graph.pdf</file>
       <file>class_qwt_curve_fitter-members.html</file>
       <file>class_qwt_date.html</file>
       <file>class_qwt_date-members.html</file>
       <file>class_qwt_date_scale_draw.html</file>
       <file>class_qwt_date_scale_draw__inherit__graph.png</file>
-      <file>class_qwt_date_scale_draw__inherit__graph.png</file>
+      <file>class_qwt_date_scale_draw__inherit__graph.pdf</file>
       <file>class_qwt_date_scale_draw-members.html</file>
       <file>class_qwt_date_scale_engine.html</file>
       <file>class_qwt_date_scale_engine__inherit__graph.png</file>
-      <file>class_qwt_date_scale_engine__inherit__graph.png</file>
+      <file>class_qwt_date_scale_engine__inherit__graph.pdf</file>
       <file>class_qwt_date_scale_engine-members.html</file>
       <file>class_qwt_dial.html</file>
       <file>class_qwt_dial__inherit__graph.png</file>
-      <file>class_qwt_dial__inherit__graph.png</file>
+      <file>class_qwt_dial__inherit__graph.pdf</file>
       <file>dials2.png</file>
       <file>class_qwt_dial-members.html</file>
       <file>class_qwt_dial_needle.html</file>
       <file>class_qwt_dial_needle__inherit__graph.png</file>
-      <file>class_qwt_dial_needle__inherit__graph.png</file>
+      <file>class_qwt_dial_needle__inherit__graph.pdf</file>
       <file>class_qwt_dial_needle-members.html</file>
       <file>class_qwt_dial_simple_needle.html</file>
       <file>class_qwt_dial_simple_needle__inherit__graph.png</file>
-      <file>class_qwt_dial_simple_needle__inherit__graph.png</file>
+      <file>class_qwt_dial_simple_needle__inherit__graph.pdf</file>
       <file>class_qwt_dial_simple_needle-members.html</file>
       <file>class_qwt_dyn_grid_layout.html</file>
       <file>class_qwt_dyn_grid_layout__inherit__graph.png</file>
-      <file>class_qwt_dyn_grid_layout__inherit__graph.png</file>
+      <file>class_qwt_dyn_grid_layout__inherit__graph.pdf</file>
       <file>class_qwt_dyn_grid_layout-members.html</file>
       <file>class_qwt_event_pattern.html</file>
       <file>class_qwt_event_pattern__inherit__graph.png</file>
-      <file>class_qwt_event_pattern__inherit__graph.png</file>
+      <file>class_qwt_event_pattern__inherit__graph.pdf</file>
       <file>class_qwt_event_pattern-members.html</file>
       <file>class_qwt_event_pattern_1_1_key_pattern.html</file>
       <file>class_qwt_event_pattern_1_1_key_pattern-members.html</file>
@@ -8206,7 +8226,7 @@
       <file>class_qwt_event_pattern_1_1_mouse_pattern-members.html</file>
       <file>class_qwt_graphic.html</file>
       <file>class_qwt_graphic__inherit__graph.png</file>
-      <file>class_qwt_graphic__inherit__graph.png</file>
+      <file>class_qwt_graphic__inherit__graph.pdf</file>
       <file>class_qwt_graphic-members.html</file>
       <file>class_qwt_interval.html</file>
       <file>class_qwt_interval-members.html</file>
@@ -8214,60 +8234,60 @@
       <file>class_qwt_interval_sample-members.html</file>
       <file>class_qwt_interval_series_data.html</file>
       <file>class_qwt_interval_series_data__inherit__graph.png</file>
-      <file>class_qwt_interval_series_data__inherit__graph.png</file>
+      <file>class_qwt_interval_series_data__inherit__graph.pdf</file>
       <file>class_qwt_interval_series_data-members.html</file>
       <file>class_qwt_interval_symbol.html</file>
       <file>class_qwt_interval_symbol-members.html</file>
       <file>class_qwt_knob.html</file>
       <file>class_qwt_knob__inherit__graph.png</file>
-      <file>class_qwt_knob__inherit__graph.png</file>
+      <file>class_qwt_knob__inherit__graph.pdf</file>
       <file>knob.png</file>
       <file>class_qwt_knob-members.html</file>
       <file>class_qwt_legend.html</file>
       <file>class_qwt_legend__inherit__graph.png</file>
-      <file>class_qwt_legend__inherit__graph.png</file>
+      <file>class_qwt_legend__inherit__graph.pdf</file>
       <file>class_qwt_legend-members.html</file>
       <file>class_qwt_legend_data.html</file>
       <file>class_qwt_legend_data-members.html</file>
       <file>class_qwt_legend_label.html</file>
       <file>class_qwt_legend_label__inherit__graph.png</file>
-      <file>class_qwt_legend_label__inherit__graph.png</file>
+      <file>class_qwt_legend_label__inherit__graph.pdf</file>
       <file>class_qwt_legend_label-members.html</file>
       <file>class_qwt_linear_color_map.html</file>
       <file>class_qwt_linear_color_map__inherit__graph.png</file>
-      <file>class_qwt_linear_color_map__inherit__graph.png</file>
+      <file>class_qwt_linear_color_map__inherit__graph.pdf</file>
       <file>class_qwt_linear_color_map-members.html</file>
       <file>class_qwt_linear_scale_engine.html</file>
       <file>class_qwt_linear_scale_engine__inherit__graph.png</file>
-      <file>class_qwt_linear_scale_engine__inherit__graph.png</file>
+      <file>class_qwt_linear_scale_engine__inherit__graph.pdf</file>
       <file>class_qwt_linear_scale_engine-members.html</file>
       <file>class_qwt_log_scale_engine.html</file>
       <file>class_qwt_log_scale_engine__inherit__graph.png</file>
-      <file>class_qwt_log_scale_engine__inherit__graph.png</file>
+      <file>class_qwt_log_scale_engine__inherit__graph.pdf</file>
       <file>class_qwt_log_scale_engine-members.html</file>
       <file>class_qwt_log_transform.html</file>
       <file>class_qwt_log_transform__inherit__graph.png</file>
-      <file>class_qwt_log_transform__inherit__graph.png</file>
+      <file>class_qwt_log_transform__inherit__graph.pdf</file>
       <file>class_qwt_log_transform-members.html</file>
       <file>class_qwt_magnifier.html</file>
       <file>class_qwt_magnifier__inherit__graph.png</file>
-      <file>class_qwt_magnifier__inherit__graph.png</file>
+      <file>class_qwt_magnifier__inherit__graph.pdf</file>
       <file>class_qwt_magnifier-members.html</file>
       <file>class_qwt_math_m_l_text_engine.html</file>
       <file>class_qwt_math_m_l_text_engine__inherit__graph.png</file>
-      <file>class_qwt_math_m_l_text_engine__inherit__graph.png</file>
+      <file>class_qwt_math_m_l_text_engine__inherit__graph.pdf</file>
       <file>class_qwt_math_m_l_text_engine-members.html</file>
       <file>class_qwt_matrix_raster_data.html</file>
       <file>class_qwt_matrix_raster_data__inherit__graph.png</file>
-      <file>class_qwt_matrix_raster_data__inherit__graph.png</file>
+      <file>class_qwt_matrix_raster_data__inherit__graph.pdf</file>
       <file>class_qwt_matrix_raster_data-members.html</file>
       <file>class_qwt_null_paint_device.html</file>
       <file>class_qwt_null_paint_device__inherit__graph.png</file>
-      <file>class_qwt_null_paint_device__inherit__graph.png</file>
+      <file>class_qwt_null_paint_device__inherit__graph.pdf</file>
       <file>class_qwt_null_paint_device-members.html</file>
       <file>class_qwt_null_transform.html</file>
       <file>class_qwt_null_transform__inherit__graph.png</file>
-      <file>class_qwt_null_transform__inherit__graph.png</file>
+      <file>class_qwt_null_transform__inherit__graph.pdf</file>
       <file>class_qwt_null_transform-members.html</file>
       <file>class_qwt_o_h_l_c_sample.html</file>
       <file>class_qwt_o_h_l_c_sample-members.html</file>
@@ -8277,188 +8297,188 @@
       <file>class_qwt_painter_command-members.html</file>
       <file>class_qwt_panner.html</file>
       <file>class_qwt_panner__inherit__graph.png</file>
-      <file>class_qwt_panner__inherit__graph.png</file>
+      <file>class_qwt_panner__inherit__graph.pdf</file>
       <file>class_qwt_panner-members.html</file>
       <file>class_qwt_picker.html</file>
       <file>class_qwt_picker__inherit__graph.png</file>
-      <file>class_qwt_picker__inherit__graph.png</file>
+      <file>class_qwt_picker__inherit__graph.pdf</file>
       <file>class_qwt_picker-members.html</file>
       <file>class_qwt_picker_click_point_machine.html</file>
       <file>class_qwt_picker_click_point_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_click_point_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_click_point_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_click_point_machine-members.html</file>
       <file>class_qwt_picker_click_rect_machine.html</file>
       <file>class_qwt_picker_click_rect_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_click_rect_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_click_rect_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_click_rect_machine-members.html</file>
       <file>class_qwt_picker_drag_line_machine.html</file>
       <file>class_qwt_picker_drag_line_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_drag_line_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_drag_line_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_drag_line_machine-members.html</file>
       <file>class_qwt_picker_drag_point_machine.html</file>
       <file>class_qwt_picker_drag_point_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_drag_point_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_drag_point_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_drag_point_machine-members.html</file>
       <file>class_qwt_picker_drag_rect_machine.html</file>
       <file>class_qwt_picker_drag_rect_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_drag_rect_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_drag_rect_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_drag_rect_machine-members.html</file>
       <file>class_qwt_picker_machine.html</file>
       <file>class_qwt_picker_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_machine-members.html</file>
       <file>class_qwt_picker_polygon_machine.html</file>
       <file>class_qwt_picker_polygon_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_polygon_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_polygon_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_polygon_machine-members.html</file>
       <file>class_qwt_picker_tracker_machine.html</file>
       <file>class_qwt_picker_tracker_machine__inherit__graph.png</file>
-      <file>class_qwt_picker_tracker_machine__inherit__graph.png</file>
+      <file>class_qwt_picker_tracker_machine__inherit__graph.pdf</file>
       <file>class_qwt_picker_tracker_machine-members.html</file>
       <file>class_qwt_pixel_matrix.html</file>
       <file>class_qwt_pixel_matrix__inherit__graph.png</file>
-      <file>class_qwt_pixel_matrix__inherit__graph.png</file>
+      <file>class_qwt_pixel_matrix__inherit__graph.pdf</file>
       <file>class_qwt_pixel_matrix-members.html</file>
       <file>class_qwt_plain_text_engine.html</file>
       <file>class_qwt_plain_text_engine__inherit__graph.png</file>
-      <file>class_qwt_plain_text_engine__inherit__graph.png</file>
+      <file>class_qwt_plain_text_engine__inherit__graph.pdf</file>
       <file>class_qwt_plain_text_engine-members.html</file>
       <file>class_qwt_plot.html</file>
       <file>class_qwt_plot__inherit__graph.png</file>
-      <file>class_qwt_plot__inherit__graph.png</file>
+      <file>class_qwt_plot__inherit__graph.pdf</file>
       <file>plot.png</file>
       <file>class_qwt_plot-members.html</file>
       <file>class_qwt_plot_abstract_bar_chart.html</file>
       <file>class_qwt_plot_abstract_bar_chart__inherit__graph.png</file>
-      <file>class_qwt_plot_abstract_bar_chart__inherit__graph.png</file>
+      <file>class_qwt_plot_abstract_bar_chart__inherit__graph.pdf</file>
       <file>class_qwt_plot_abstract_bar_chart-members.html</file>
       <file>class_qwt_plot_bar_chart.html</file>
       <file>class_qwt_plot_bar_chart__inherit__graph.png</file>
-      <file>class_qwt_plot_bar_chart__inherit__graph.png</file>
+      <file>class_qwt_plot_bar_chart__inherit__graph.pdf</file>
       <file>class_qwt_plot_bar_chart-members.html</file>
       <file>class_qwt_plot_canvas.html</file>
       <file>class_qwt_plot_canvas__inherit__graph.png</file>
-      <file>class_qwt_plot_canvas__inherit__graph.png</file>
+      <file>class_qwt_plot_canvas__inherit__graph.pdf</file>
       <file>class_qwt_plot_canvas-members.html</file>
       <file>class_qwt_plot_curve.html</file>
       <file>class_qwt_plot_curve__inherit__graph.png</file>
-      <file>class_qwt_plot_curve__inherit__graph.png</file>
+      <file>class_qwt_plot_curve__inherit__graph.pdf</file>
       <file>class_qwt_plot_curve-members.html</file>
       <file>class_qwt_plot_dict.html</file>
       <file>class_qwt_plot_dict__inherit__graph.png</file>
-      <file>class_qwt_plot_dict__inherit__graph.png</file>
+      <file>class_qwt_plot_dict__inherit__graph.pdf</file>
       <file>class_qwt_plot_dict-members.html</file>
       <file>class_qwt_plot_direct_painter.html</file>
       <file>class_qwt_plot_direct_painter__inherit__graph.png</file>
-      <file>class_qwt_plot_direct_painter__inherit__graph.png</file>
+      <file>class_qwt_plot_direct_painter__inherit__graph.pdf</file>
       <file>class_qwt_plot_direct_painter-members.html</file>
       <file>class_qwt_plot_g_l_canvas.html</file>
       <file>class_qwt_plot_g_l_canvas__inherit__graph.png</file>
-      <file>class_qwt_plot_g_l_canvas__inherit__graph.png</file>
+      <file>class_qwt_plot_g_l_canvas__inherit__graph.pdf</file>
       <file>class_qwt_plot_g_l_canvas-members.html</file>
       <file>class_qwt_plot_grid.html</file>
       <file>class_qwt_plot_grid__inherit__graph.png</file>
-      <file>class_qwt_plot_grid__inherit__graph.png</file>
+      <file>class_qwt_plot_grid__inherit__graph.pdf</file>
       <file>class_qwt_plot_grid-members.html</file>
       <file>class_qwt_plot_histogram.html</file>
       <file>class_qwt_plot_histogram__inherit__graph.png</file>
-      <file>class_qwt_plot_histogram__inherit__graph.png</file>
+      <file>class_qwt_plot_histogram__inherit__graph.pdf</file>
       <file>class_qwt_plot_histogram-members.html</file>
       <file>class_qwt_plot_interval_curve.html</file>
       <file>class_qwt_plot_interval_curve__inherit__graph.png</file>
-      <file>class_qwt_plot_interval_curve__inherit__graph.png</file>
+      <file>class_qwt_plot_interval_curve__inherit__graph.pdf</file>
       <file>class_qwt_plot_interval_curve-members.html</file>
       <file>class_qwt_plot_item.html</file>
       <file>class_qwt_plot_item__inherit__graph.png</file>
-      <file>class_qwt_plot_item__inherit__graph.png</file>
+      <file>class_qwt_plot_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_item-members.html</file>
       <file>class_qwt_plot_layout.html</file>
       <file>class_qwt_plot_layout-members.html</file>
       <file>class_qwt_plot_legend_item.html</file>
       <file>class_qwt_plot_legend_item__inherit__graph.png</file>
-      <file>class_qwt_plot_legend_item__inherit__graph.png</file>
+      <file>class_qwt_plot_legend_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_legend_item-members.html</file>
       <file>class_qwt_plot_magnifier.html</file>
       <file>class_qwt_plot_magnifier__inherit__graph.png</file>
-      <file>class_qwt_plot_magnifier__inherit__graph.png</file>
+      <file>class_qwt_plot_magnifier__inherit__graph.pdf</file>
       <file>class_qwt_plot_magnifier-members.html</file>
       <file>class_qwt_plot_marker.html</file>
       <file>class_qwt_plot_marker__inherit__graph.png</file>
-      <file>class_qwt_plot_marker__inherit__graph.png</file>
+      <file>class_qwt_plot_marker__inherit__graph.pdf</file>
       <file>class_qwt_plot_marker-members.html</file>
       <file>class_qwt_plot_multi_bar_chart.html</file>
       <file>class_qwt_plot_multi_bar_chart__inherit__graph.png</file>
-      <file>class_qwt_plot_multi_bar_chart__inherit__graph.png</file>
+      <file>class_qwt_plot_multi_bar_chart__inherit__graph.pdf</file>
       <file>class_qwt_plot_multi_bar_chart-members.html</file>
       <file>class_qwt_plot_panner.html</file>
       <file>class_qwt_plot_panner__inherit__graph.png</file>
-      <file>class_qwt_plot_panner__inherit__graph.png</file>
+      <file>class_qwt_plot_panner__inherit__graph.pdf</file>
       <file>class_qwt_plot_panner-members.html</file>
       <file>class_qwt_plot_picker.html</file>
       <file>class_qwt_plot_picker__inherit__graph.png</file>
-      <file>class_qwt_plot_picker__inherit__graph.png</file>
+      <file>class_qwt_plot_picker__inherit__graph.pdf</file>
       <file>class_qwt_plot_picker-members.html</file>
       <file>class_qwt_plot_raster_item.html</file>
       <file>class_qwt_plot_raster_item__inherit__graph.png</file>
-      <file>class_qwt_plot_raster_item__inherit__graph.png</file>
+      <file>class_qwt_plot_raster_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_raster_item-members.html</file>
       <file>class_qwt_plot_renderer.html</file>
       <file>class_qwt_plot_renderer__inherit__graph.png</file>
-      <file>class_qwt_plot_renderer__inherit__graph.png</file>
+      <file>class_qwt_plot_renderer__inherit__graph.pdf</file>
       <file>class_qwt_plot_renderer-members.html</file>
       <file>class_qwt_plot_rescaler.html</file>
       <file>class_qwt_plot_rescaler__inherit__graph.png</file>
-      <file>class_qwt_plot_rescaler__inherit__graph.png</file>
+      <file>class_qwt_plot_rescaler__inherit__graph.pdf</file>
       <file>class_qwt_plot_rescaler-members.html</file>
       <file>class_qwt_plot_scale_item.html</file>
       <file>class_qwt_plot_scale_item__inherit__graph.png</file>
-      <file>class_qwt_plot_scale_item__inherit__graph.png</file>
+      <file>class_qwt_plot_scale_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_scale_item-members.html</file>
       <file>class_qwt_plot_series_item.html</file>
       <file>class_qwt_plot_series_item__inherit__graph.png</file>
-      <file>class_qwt_plot_series_item__inherit__graph.png</file>
+      <file>class_qwt_plot_series_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_series_item-members.html</file>
       <file>class_qwt_plot_shape_item.html</file>
       <file>class_qwt_plot_shape_item__inherit__graph.png</file>
-      <file>class_qwt_plot_shape_item__inherit__graph.png</file>
+      <file>class_qwt_plot_shape_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_shape_item-members.html</file>
       <file>class_qwt_plot_spectro_curve.html</file>
       <file>class_qwt_plot_spectro_curve__inherit__graph.png</file>
-      <file>class_qwt_plot_spectro_curve__inherit__graph.png</file>
+      <file>class_qwt_plot_spectro_curve__inherit__graph.pdf</file>
       <file>class_qwt_plot_spectro_curve-members.html</file>
       <file>class_qwt_plot_spectrogram.html</file>
       <file>class_qwt_plot_spectrogram__inherit__graph.png</file>
-      <file>class_qwt_plot_spectrogram__inherit__graph.png</file>
+      <file>class_qwt_plot_spectrogram__inherit__graph.pdf</file>
       <file>class_qwt_plot_spectrogram-members.html</file>
       <file>class_qwt_plot_svg_item.html</file>
       <file>class_qwt_plot_svg_item__inherit__graph.png</file>
-      <file>class_qwt_plot_svg_item__inherit__graph.png</file>
+      <file>class_qwt_plot_svg_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_svg_item-members.html</file>
       <file>class_qwt_plot_text_label.html</file>
       <file>class_qwt_plot_text_label__inherit__graph.png</file>
-      <file>class_qwt_plot_text_label__inherit__graph.png</file>
+      <file>class_qwt_plot_text_label__inherit__graph.pdf</file>
       <file>class_qwt_plot_text_label-members.html</file>
       <file>class_qwt_plot_trading_curve.html</file>
       <file>class_qwt_plot_trading_curve__inherit__graph.png</file>
-      <file>class_qwt_plot_trading_curve__inherit__graph.png</file>
+      <file>class_qwt_plot_trading_curve__inherit__graph.pdf</file>
       <file>class_qwt_plot_trading_curve-members.html</file>
       <file>class_qwt_plot_zone_item.html</file>
       <file>class_qwt_plot_zone_item__inherit__graph.png</file>
-      <file>class_qwt_plot_zone_item__inherit__graph.png</file>
+      <file>class_qwt_plot_zone_item__inherit__graph.pdf</file>
       <file>class_qwt_plot_zone_item-members.html</file>
       <file>class_qwt_plot_zoomer.html</file>
       <file>class_qwt_plot_zoomer__inherit__graph.png</file>
-      <file>class_qwt_plot_zoomer__inherit__graph.png</file>
+      <file>class_qwt_plot_zoomer__inherit__graph.pdf</file>
       <file>class_qwt_plot_zoomer-members.html</file>
       <file>class_qwt_point3_d.html</file>
       <file>class_qwt_point3_d-members.html</file>
       <file>class_qwt_point3_d_series_data.html</file>
       <file>class_qwt_point3_d_series_data__inherit__graph.png</file>
-      <file>class_qwt_point3_d_series_data__inherit__graph.png</file>
+      <file>class_qwt_point3_d_series_data__inherit__graph.pdf</file>
       <file>class_qwt_point3_d_series_data-members.html</file>
       <file>class_qwt_point_array_data.html</file>
       <file>class_qwt_point_array_data__inherit__graph.png</file>
-      <file>class_qwt_point_array_data__inherit__graph.png</file>
+      <file>class_qwt_point_array_data__inherit__graph.pdf</file>
       <file>class_qwt_point_array_data-members.html</file>
       <file>class_qwt_point_mapper.html</file>
       <file>class_qwt_point_mapper-members.html</file>
@@ -8466,27 +8486,27 @@
       <file>class_qwt_point_polar-members.html</file>
       <file>class_qwt_point_series_data.html</file>
       <file>class_qwt_point_series_data__inherit__graph.png</file>
-      <file>class_qwt_point_series_data__inherit__graph.png</file>
+      <file>class_qwt_point_series_data__inherit__graph.pdf</file>
       <file>class_qwt_point_series_data-members.html</file>
       <file>class_qwt_power_transform.html</file>
       <file>class_qwt_power_transform__inherit__graph.png</file>
-      <file>class_qwt_power_transform__inherit__graph.png</file>
+      <file>class_qwt_power_transform__inherit__graph.pdf</file>
       <file>class_qwt_power_transform-members.html</file>
       <file>class_qwt_raster_data.html</file>
       <file>class_qwt_raster_data__inherit__graph.png</file>
-      <file>class_qwt_raster_data__inherit__graph.png</file>
+      <file>class_qwt_raster_data__inherit__graph.pdf</file>
       <file>class_qwt_raster_data-members.html</file>
       <file>class_qwt_rich_text_engine.html</file>
       <file>class_qwt_rich_text_engine__inherit__graph.png</file>
-      <file>class_qwt_rich_text_engine__inherit__graph.png</file>
+      <file>class_qwt_rich_text_engine__inherit__graph.pdf</file>
       <file>class_qwt_rich_text_engine-members.html</file>
       <file>class_qwt_round_scale_draw.html</file>
       <file>class_qwt_round_scale_draw__inherit__graph.png</file>
-      <file>class_qwt_round_scale_draw__inherit__graph.png</file>
+      <file>class_qwt_round_scale_draw__inherit__graph.pdf</file>
       <file>class_qwt_round_scale_draw-members.html</file>
       <file>class_qwt_sampling_thread.html</file>
       <file>class_qwt_sampling_thread__inherit__graph.png</file>
-      <file>class_qwt_sampling_thread__inherit__graph.png</file>
+      <file>class_qwt_sampling_thread__inherit__graph.pdf</file>
       <file>class_qwt_sampling_thread-members.html</file>
       <file>class_qwt_scale_arithmetic.html</file>
       <file>class_qwt_scale_arithmetic-members.html</file>
@@ -8494,52 +8514,52 @@
       <file>class_qwt_scale_div-members.html</file>
       <file>class_qwt_scale_draw.html</file>
       <file>class_qwt_scale_draw__inherit__graph.png</file>
-      <file>class_qwt_scale_draw__inherit__graph.png</file>
+      <file>class_qwt_scale_draw__inherit__graph.pdf</file>
       <file>class_qwt_scale_draw-members.html</file>
       <file>class_qwt_scale_engine.html</file>
       <file>class_qwt_scale_engine__inherit__graph.png</file>
-      <file>class_qwt_scale_engine__inherit__graph.png</file>
+      <file>class_qwt_scale_engine__inherit__graph.pdf</file>
       <file>class_qwt_scale_engine-members.html</file>
       <file>class_qwt_scale_map.html</file>
       <file>class_qwt_scale_map-members.html</file>
       <file>class_qwt_scale_widget.html</file>
       <file>class_qwt_scale_widget__inherit__graph.png</file>
-      <file>class_qwt_scale_widget__inherit__graph.png</file>
+      <file>class_qwt_scale_widget__inherit__graph.pdf</file>
       <file>class_qwt_scale_widget-members.html</file>
       <file>class_qwt_series_data.html</file>
       <file>class_qwt_series_data__inherit__graph.png</file>
-      <file>class_qwt_series_data__inherit__graph.png</file>
+      <file>class_qwt_series_data__inherit__graph.pdf</file>
       <file>class_qwt_series_data-members.html</file>
       <file>class_qwt_series_store.html</file>
       <file>class_qwt_series_store__inherit__graph.png</file>
-      <file>class_qwt_series_store__inherit__graph.png</file>
+      <file>class_qwt_series_store__inherit__graph.pdf</file>
       <file>class_qwt_series_store-members.html</file>
       <file>class_qwt_set_sample.html</file>
       <file>class_qwt_set_sample-members.html</file>
       <file>class_qwt_set_series_data.html</file>
       <file>class_qwt_set_series_data__inherit__graph.png</file>
-      <file>class_qwt_set_series_data__inherit__graph.png</file>
+      <file>class_qwt_set_series_data__inherit__graph.pdf</file>
       <file>class_qwt_set_series_data-members.html</file>
       <file>class_qwt_simple_compass_rose.html</file>
       <file>class_qwt_simple_compass_rose__inherit__graph.png</file>
-      <file>class_qwt_simple_compass_rose__inherit__graph.png</file>
+      <file>class_qwt_simple_compass_rose__inherit__graph.pdf</file>
       <file>class_qwt_simple_compass_rose-members.html</file>
       <file>class_qwt_slider.html</file>
       <file>class_qwt_slider__inherit__graph.png</file>
-      <file>class_qwt_slider__inherit__graph.png</file>
+      <file>class_qwt_slider__inherit__graph.pdf</file>
       <file>sliders.png</file>
       <file>class_qwt_slider-members.html</file>
       <file>class_qwt_spline.html</file>
       <file>class_qwt_spline-members.html</file>
       <file>class_qwt_spline_curve_fitter.html</file>
       <file>class_qwt_spline_curve_fitter__inherit__graph.png</file>
-      <file>class_qwt_spline_curve_fitter__inherit__graph.png</file>
+      <file>class_qwt_spline_curve_fitter__inherit__graph.pdf</file>
       <file>class_qwt_spline_curve_fitter-members.html</file>
       <file>class_qwt_symbol.html</file>
       <file>class_qwt_symbol-members.html</file>
       <file>class_qwt_synthetic_point_data.html</file>
       <file>class_qwt_synthetic_point_data__inherit__graph.png</file>
-      <file>class_qwt_synthetic_point_data__inherit__graph.png</file>
+      <file>class_qwt_synthetic_point_data__inherit__graph.pdf</file>
       <file>class_qwt_synthetic_point_data-members.html</file>
       <file>class_qwt_system_clock.html</file>
       <file>class_qwt_system_clock-members.html</file>
@@ -8547,36 +8567,36 @@
       <file>class_qwt_text-members.html</file>
       <file>class_qwt_text_engine.html</file>
       <file>class_qwt_text_engine__inherit__graph.png</file>
-      <file>class_qwt_text_engine__inherit__graph.png</file>
+      <file>class_qwt_text_engine__inherit__graph.pdf</file>
       <file>class_qwt_text_engine-members.html</file>
       <file>class_qwt_text_label.html</file>
       <file>class_qwt_text_label__inherit__graph.png</file>
-      <file>class_qwt_text_label__inherit__graph.png</file>
+      <file>class_qwt_text_label__inherit__graph.pdf</file>
       <file>class_qwt_text_label-members.html</file>
       <file>class_qwt_thermo.html</file>
       <file>class_qwt_thermo__inherit__graph.png</file>
-      <file>class_qwt_thermo__inherit__graph.png</file>
+      <file>class_qwt_thermo__inherit__graph.pdf</file>
       <file>sysinfo.png</file>
       <file>class_qwt_thermo-members.html</file>
       <file>class_qwt_trading_chart_data.html</file>
       <file>class_qwt_trading_chart_data__inherit__graph.png</file>
-      <file>class_qwt_trading_chart_data__inherit__graph.png</file>
+      <file>class_qwt_trading_chart_data__inherit__graph.pdf</file>
       <file>class_qwt_trading_chart_data-members.html</file>
       <file>class_qwt_transform.html</file>
       <file>class_qwt_transform__inherit__graph.png</file>
-      <file>class_qwt_transform__inherit__graph.png</file>
+      <file>class_qwt_transform__inherit__graph.pdf</file>
       <file>class_qwt_transform-members.html</file>
       <file>class_qwt_weeding_curve_fitter.html</file>
       <file>class_qwt_weeding_curve_fitter__inherit__graph.png</file>
-      <file>class_qwt_weeding_curve_fitter__inherit__graph.png</file>
+      <file>class_qwt_weeding_curve_fitter__inherit__graph.pdf</file>
       <file>class_qwt_weeding_curve_fitter-members.html</file>
       <file>class_qwt_wheel.html</file>
       <file>class_qwt_wheel__inherit__graph.png</file>
-      <file>class_qwt_wheel__inherit__graph.png</file>
+      <file>class_qwt_wheel__inherit__graph.pdf</file>
       <file>class_qwt_wheel-members.html</file>
       <file>class_qwt_widget_overlay.html</file>
       <file>class_qwt_widget_overlay__inherit__graph.png</file>
-      <file>class_qwt_widget_overlay__inherit__graph.png</file>
+      <file>class_qwt_widget_overlay__inherit__graph.pdf</file>
       <file>class_qwt_widget_overlay-members.html</file>
       <file>graph_legend.png</file>
       <file>graph_legend.html</file>
@@ -8673,7 +8693,7 @@
       <file>functions_x.html</file>
       <file>functions_y.html</file>
       <file>functions_z.html</file>
-      <file>functions_0x7e.html</file>
+      <file>functions_~.html</file>
       <file>functions_func.html</file>
       <file>functions_func_b.html</file>
       <file>functions_func_c.html</file>
@@ -8698,7 +8718,7 @@
       <file>functions_func_x.html</file>
       <file>functions_func_y.html</file>
       <file>functions_func_z.html</file>
-      <file>functions_func_0x7e.html</file>
+      <file>functions_func_~.html</file>
       <file>functions_vars.html</file>
       <file>functions_vars.html</file>
       <file>functions_vars.html</file>

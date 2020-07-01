@@ -1,4 +1,4 @@
-.TH "QwtColorMap" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtColorMap" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -62,7 +62,7 @@ QImage::Format_ARGB32
 .br
  
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotSpectrogram\fP, \fBQwtScaleWidget\fP 
 .RE
@@ -75,7 +75,7 @@ QImage::Format_ARGB32
 .SS "enum \fBQwtColorMap::Format\fP"
 Format for color mapping 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrgb()\fP, \fBcolorIndex()\fP, \fBcolorTable()\fP 
 .RE
@@ -95,19 +95,19 @@ The map is intended to map into 8 bit values, that are indices into the color ta
 .SS "QColor QwtColorMap::color (const \fBQwtInterval\fP & interval, double value) const\fC [inline]\fP"
 Map a value into a color
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Valid interval for values 
 .br
 \fIvalue\fP Value
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Color corresponding to value
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 This method is slow for Indexed color maps\&. If it is necessary to map many values, its better to get the color table once and find the color using \fBcolorIndex()\fP\&. 
 .RE
@@ -116,14 +116,14 @@ This method is slow for Indexed color maps\&. If it is necessary to map many val
 .SS "virtual unsigned char QwtColorMap::colorIndex (const \fBQwtInterval\fP & interval, double value) const\fC [pure virtual]\fP"
 Map a value of a given interval into a color index
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Range for the values 
 .br
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 color index, corresponding to value 
 .RE
@@ -136,12 +136,12 @@ Build and return a color map of 256 colors
 .PP
 The color table is needed for rendering indexed images in combination with using \fBcolorIndex()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Range for the values 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A color table, that can be used for a QImage 
 .RE
@@ -150,12 +150,12 @@ A color table, that can be used for a QImage
 .SS "\fBQwtColorMap::Format\fP QwtColorMap::format () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Intended format of the color map 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBFormat\fP 
 .RE
@@ -164,14 +164,14 @@ Intended format of the color map
 .SS "virtual QRgb QwtColorMap::rgb (const \fBQwtInterval\fP & interval, double value) const\fC [pure virtual]\fP"
 Map a value of a given interval into a RGB value\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Range for the values 
 .br
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 RGB value, corresponding to value 
 .RE

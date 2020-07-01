@@ -28,16 +28,16 @@ var class_qwt_event_pattern =
     [ "~QwtEventPattern", "class_qwt_event_pattern.html#a3f8c2a2cca991000bafefd924b47895d", null ],
     [ "initKeyPattern", "class_qwt_event_pattern.html#a91c1acb96b5c3849b9518206290f7da8", null ],
     [ "initMousePattern", "class_qwt_event_pattern.html#ab885e0f266fd5b574ccbc6272225f486", null ],
-    [ "keyMatch", "class_qwt_event_pattern.html#a737a72838595ae3a99779f2254abcfc8", null ],
     [ "keyMatch", "class_qwt_event_pattern.html#ac5029b310936997cf3268d1ae4fe14fe", null ],
-    [ "keyPattern", "class_qwt_event_pattern.html#a6aac201f048e4bddea53920fe70579a4", null ],
+    [ "keyMatch", "class_qwt_event_pattern.html#a737a72838595ae3a99779f2254abcfc8", null ],
     [ "keyPattern", "class_qwt_event_pattern.html#a9d8ea5b5ffea570c1fed4c8ca8e5cfff", null ],
-    [ "mouseMatch", "class_qwt_event_pattern.html#a3746870b5a06dfa3bfc15c51fed79138", null ],
+    [ "keyPattern", "class_qwt_event_pattern.html#a6aac201f048e4bddea53920fe70579a4", null ],
     [ "mouseMatch", "class_qwt_event_pattern.html#a70e0140c555e4ada8562cb1ec7893584", null ],
-    [ "mousePattern", "class_qwt_event_pattern.html#a1818b4a1f4f2e281bee9b0e3a66467b1", null ],
+    [ "mouseMatch", "class_qwt_event_pattern.html#a3746870b5a06dfa3bfc15c51fed79138", null ],
     [ "mousePattern", "class_qwt_event_pattern.html#a141107868ed1c9cf1b34046873234390", null ],
-    [ "setKeyPattern", "class_qwt_event_pattern.html#af8f1008ebe2565e5e851214e62b27fef", null ],
+    [ "mousePattern", "class_qwt_event_pattern.html#a1818b4a1f4f2e281bee9b0e3a66467b1", null ],
     [ "setKeyPattern", "class_qwt_event_pattern.html#a73cf4257902b8a9d95aef60fabd3f747", null ],
-    [ "setMousePattern", "class_qwt_event_pattern.html#a0b786f31af2f8084ec361bc905beda3f", null ],
-    [ "setMousePattern", "class_qwt_event_pattern.html#ad8e3b196c1026b038ccdf359f9a69d29", null ]
+    [ "setKeyPattern", "class_qwt_event_pattern.html#af8f1008ebe2565e5e851214e62b27fef", null ],
+    [ "setMousePattern", "class_qwt_event_pattern.html#ad8e3b196c1026b038ccdf359f9a69d29", null ],
+    [ "setMousePattern", "class_qwt_event_pattern.html#a0b786f31af2f8084ec361bc905beda3f", null ]
 ];

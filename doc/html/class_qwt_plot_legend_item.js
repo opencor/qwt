@@ -25,7 +25,7 @@ var class_qwt_plot_legend_item =
     [ "margin", "class_qwt_plot_legend_item.html#addb541b96f80893b59a9b5c5a6902045", null ],
     [ "maxColumns", "class_qwt_plot_legend_item.html#ac3adfd28befca5e9597779cedee66cfe", null ],
     [ "minimumSize", "class_qwt_plot_legend_item.html#abbfe45a7fca3effba9c1339dc18c0d19", null ],
-    [ "plotItems", "class_qwt_plot_legend_item.html#a827307dff731c479199043ea85ca72b6", null ],
+    [ "plotItems", "class_qwt_plot_legend_item.html#a872dadf9f21f57a5369ad811e6dfa68a", null ],
     [ "rtti", "class_qwt_plot_legend_item.html#a1b9961d07206415946dc178a16f0d507", null ],
     [ "setAlignment", "class_qwt_plot_legend_item.html#a7f0bc77d242fe1977d8dee501fa5240f", null ],
     [ "setBackgroundBrush", "class_qwt_plot_legend_item.html#a82c391eecd2752c3a85a274973f34b6e", null ],

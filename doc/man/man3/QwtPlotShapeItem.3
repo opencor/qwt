@@ -1,4 +1,4 @@
-.TH "QwtPlotShapeItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotShapeItem" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -114,7 +114,7 @@ A QPainterPath is a shape composed from intersecting and uniting regions, rectan
 .PP
 \fBQwtPlotShapeItem\fP offers a couple of optimizations like clipping or weeding\&. These algorithms need to convert the painter path into polygons that might be less performant for paths built from curves and ellipses\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QwtPlotZone 
 .RE
@@ -138,7 +138,7 @@ Display a filled rectangle\&.
 .SS "enum \fBQwtPlotShapeItem::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. The default disables all attributes
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPaintAttribute()\fP, \fBtestPaintAttribute()\fP 
 .RE
@@ -164,7 +164,7 @@ Constructor\&. Sets the following item attributes:
 \fBQwtPlotItem::Legend\fP: false
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title 
 .RE
@@ -180,7 +180,7 @@ Constructor\&. Sets the following item attributes:
 \fBQwtPlotItem::Legend\fP: false
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title 
 .RE
@@ -191,12 +191,12 @@ Constructor\&. Sets the following item attributes:
 .SS "QBrush QwtPlotShapeItem::brush () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Brush used to fill the shape 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBrush()\fP, \fBpen()\fP 
 .RE
@@ -205,7 +205,7 @@ Brush used to fill the shape
 .SS "void QwtPlotShapeItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
 Draw the shape item
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -222,19 +222,19 @@ Implements \fBQwtPlotItem\fP\&.
 .SS "\fBQwtGraphic\fP QwtPlotShapeItem::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A rectangle filled with the color of the brush ( or the pen )
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index of the legend entry ( usually there is only one ) 
 .br
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLegendIconSize()\fP, \fBlegendData()\fP 
 .RE
@@ -245,12 +245,12 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 .SS "\fBQwtPlotShapeItem::LegendMode\fP QwtPlotShapeItem::legendMode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Mode how to represent the item on the legend 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlegendMode()\fP 
 .RE
@@ -259,12 +259,12 @@ Mode how to represent the item on the legend
 .SS "QPen QwtPlotShapeItem::pen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pen used to draw the outline of the shape 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -273,12 +273,12 @@ Pen used to draw the outline of the shape
 .SS "double QwtPlotShapeItem::renderTolerance () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Tolerance for the weeding optimization 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRenderTolerance()\fP 
 .RE
@@ -287,7 +287,7 @@ Tolerance for the weeding optimization
 .SS "int QwtPlotShapeItem::rtti () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBQwtPlotItem::Rtti_PlotShape\fP 
 .RE
@@ -300,12 +300,12 @@ Assign a brush\&.
 .PP
 The brush is used to fill the path
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbrush\fP Brush 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbrush()\fP, \fBpen()\fP 
 .RE
@@ -314,12 +314,12 @@ The brush is used to fill the path
 .SS "void QwtPlotShapeItem::setLegendMode (\fBLegendMode\fP mode)"
 Set the mode how to represent the item on the legend
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP Mode 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlegendMode()\fP 
 .RE
@@ -328,14 +328,14 @@ Set the mode how to represent the item on the legend
 .SS "void QwtPlotShapeItem::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the shape
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Paint attribute 
 .br
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestPaintAttribute()\fP 
 .RE
@@ -346,7 +346,7 @@ Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -355,7 +355,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
@@ -366,12 +366,12 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 .PP
 Assign a pen\&. The pen is used to draw the outline of the shape
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
@@ -382,12 +382,12 @@ Assign a pen\&. The pen is used to draw the outline of the shape
 .PP
 Set a path built from a polygon\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpolygon\fP Polygon 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetShape()\fP, \fBsetRect()\fP, \fBshape()\fP 
 .RE
@@ -398,12 +398,12 @@ Set a path built from a polygon\&.
 .PP
 Set a path built from a rectangle\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Rectangle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetShape()\fP, \fBsetPolygon()\fP, \fBshape()\fP 
 .RE
@@ -416,12 +416,12 @@ Set the tolerance for the weeding optimization\&. After translating the shape in
 .PP
 For shapes built from curves and ellipses weeding might have the opposite effect because they have to be expanded to polygons\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItolerance\fP Accepted error when reducing the number of points A value <= 0\&.0 disables weeding\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrenderTolerance()\fP, \fBQwtWeedingCurveFitter\fP 
 .RE
@@ -432,12 +432,12 @@ For shapes built from curves and ellipses weeding might have the opposite effect
 .PP
 Set the shape to be displayed\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIshape\fP Shape 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetShape()\fP, \fBshape()\fP 
 .RE
@@ -446,12 +446,12 @@ Set the shape to be displayed\&.
 .SS "QPainterPath QwtPlotShapeItem::shape () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Shape to be displayed 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetShape()\fP 
 .RE
@@ -460,12 +460,12 @@ Shape to be displayed
 .SS "bool QwtPlotShapeItem::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPaintAttribute()\fP 
 .RE

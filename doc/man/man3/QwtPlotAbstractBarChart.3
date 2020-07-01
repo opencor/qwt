@@ -1,4 +1,4 @@
-.TH "QwtPlotAbstractBarChart" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotAbstractBarChart" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -94,7 +94,7 @@ Mode how to calculate the bar width\&. \fBsetLayoutPolicy()\fP, \fBsetLayoutHint
 \fB\fIAutoAdjustSamples \fP\fP
 The sample width is calculated by dividing the bounding rectangle by the number of samples\&. The \fBlayoutHint()\fP is used as a minimum width in paint device coordinates\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 boundingRectangle() 
 .RE
@@ -107,7 +107,7 @@ boundingRectangle()
 \fB\fIScaleSampleToCanvas \fP\fP
 The bar width is calculated by multiplying \fBlayoutHint()\fP with the height or width of the canvas\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 boundingRectangle() 
 .RE
@@ -121,7 +121,7 @@ boundingRectangle()
 .SS "QwtPlotAbstractBarChart::QwtPlotAbstractBarChart (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the chart 
 .RE
@@ -132,12 +132,12 @@ Constructor
 .SS "double QwtPlotAbstractBarChart::baseline () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value for the origin of the bar chart 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBaseline()\fP, \fBQwtPlotSeriesItem::orientation()\fP 
 .RE
@@ -150,7 +150,7 @@ Calculate a hint for the canvas margin\&. Bar charts need to reserve some space 
 .PP
 The margins are in target device coordinates ( pixels on screen )
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP Maps x-values into pixel coordinates\&. 
 .br
@@ -167,12 +167,12 @@ The margins are in target device coordinates ( pixels on screen )
 \fIbottom\fP Returns the bottom margin
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Margin
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlayoutPolicy()\fP, \fBlayoutHint()\fP, \fBQwtPlotItem::Margins\fP \fBQwtPlot::getCanvasMarginsHint()\fP, \fBQwtPlot::updateCanvasMargins()\fP 
 .RE
@@ -183,12 +183,12 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 .SS "double QwtPlotAbstractBarChart::layoutHint () const"
 The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the width of the bars is calculated
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Layout policy of the chart item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBLayoutPolicy\fP, \fBsetLayoutHint()\fP, \fBlayoutPolicy()\fP 
 .RE
@@ -197,12 +197,12 @@ Layout policy of the chart item
 .SS "\fBQwtPlotAbstractBarChart::LayoutPolicy\fP QwtPlotAbstractBarChart::layoutPolicy () const"
 The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the width of the bars is calculated
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Layout policy of the chart item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLayoutPolicy()\fP, \fBlayoutHint()\fP 
 .RE
@@ -211,12 +211,12 @@ Layout policy of the chart item
 .SS "int QwtPlotAbstractBarChart::margin () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Margin between the outmost bars and the contentsRect() of the canvas\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMargin()\fP, \fBspacing()\fP 
 .RE
@@ -225,7 +225,7 @@ Margin between the outmost bars and the contentsRect() of the canvas\&.
 .SS "double QwtPlotAbstractBarChart::sampleWidth (const \fBQwtScaleMap\fP & map, double canvasSize, double boundingSize, double value) const\fC [protected]\fP"
 Calculate the width for a sample in paint device coordinates
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImap\fP Scale map for the corresponding scale 
 .br
@@ -236,12 +236,12 @@ Calculate the width for a sample in paint device coordinates
 \fIvalue\fP Value of the sample
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Sample width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlayoutPolicy()\fP, \fBlayoutHint()\fP 
 .RE
@@ -254,12 +254,12 @@ Set the baseline\&. The baseline is the origin for the chart\&. Each bar is pain
 .PP
 The default value for the baseline is 0\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value for the baseline
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbaseline()\fP, \fBQwtPlotSeriesItem::orientation()\fP 
 .RE
@@ -268,12 +268,12 @@ The default value for the baseline is 0\&.
 .SS "void QwtPlotAbstractBarChart::setLayoutHint (double hint)"
 The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the width of the bars is calculated
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIhint\fP Layout hint
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBLayoutPolicy\fP, \fBlayoutPolicy()\fP, \fBlayoutHint()\fP 
 .RE
@@ -282,12 +282,12 @@ The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the wi
 .SS "void QwtPlotAbstractBarChart::setLayoutPolicy (\fBLayoutPolicy\fP policy)"
 The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the width of the bars is calculated
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpolicy\fP Layout policy
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlayoutPolicy()\fP, \fBlayoutHint()\fP 
 .RE
@@ -298,12 +298,12 @@ The combination of \fBlayoutPolicy()\fP and \fBlayoutHint()\fP define how the wi
 .PP
 Set the margin\&. The margin is the distance between the outmost bars and the contentsRect() of the canvas\&. The default setting is 5 pixels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImargin\fP Margin
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBspacing()\fP, \fBmargin()\fP 
 .RE
@@ -314,7 +314,7 @@ Set the margin\&. The margin is the distance between the outmost bars and the co
 .PP
 Set the spacing\&. The spacing is the distance between 2 samples ( bars for \fBQwtPlotBarChart\fP or a group of bars for \fBQwtPlotMultiBarChart\fP ) in paint device coordinates\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBspacing()\fP 
 .RE
@@ -323,12 +323,12 @@ Set the spacing\&. The spacing is the distance between 2 samples ( bars for \fBQ
 .SS "int QwtPlotAbstractBarChart::spacing () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Spacing between 2 samples ( bars or groups of bars ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSpacing()\fP, \fBmargin()\fP 
 .RE

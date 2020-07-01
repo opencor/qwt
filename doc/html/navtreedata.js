@@ -1,18 +1,17 @@
 /*
-@ @licstart  The following is the entire license notice for the
+@licstart  The following is the entire license notice for the
 JavaScript code in this file.
 
-Copyright (C) 1997-2017 by Dimitri van Heesch
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
 This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
@@ -54,7 +53,7 @@ var NAVTREEINDEX =
 "class_qwt_point3_d_series_data.html#a4410e3dea4acccfdde70eb1f99829c16",
 "class_qwt_scale_widget.html#ac96de8de4bd3c9a72ff433bc73f9c06b",
 "class_qwt_text.html#ad94fd632f61b1e5d9f68ce65c445982e",
-"functions_j.html"
+"functions_k.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -4,6 +4,7 @@
 #include <qevent.h>
 #include <qpainter.h>
 #include <qpolygon.h>
+#include <qpainterpath.h>
 
 AttitudeIndicatorNeedle::AttitudeIndicatorNeedle( const QColor &color )
 {

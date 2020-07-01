@@ -1,4 +1,4 @@
-.TH "QwtPlotGrid" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotGrid" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -110,7 +110,7 @@ The \fBQwtPlotGrid\fP class can be used to draw a coordinate grid\&. A coordinat
 .PP
 Draw the grid\&. The grid is drawn into the bounding rectangle such that grid lines begin and end at the rectangle's borders\&. The X and Y maps are used to map the scale divisions into the drawing region screen\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -129,12 +129,12 @@ Implements \fBQwtPlotItem\fP\&.
 .PP
 Enable or disable vertical grid lines\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enable (true) or disable
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 Minor grid lines can be enabled or disabled with \fBenableXMin()\fP 
 .RE
@@ -145,12 +145,12 @@ Minor grid lines can be enabled or disabled with \fBenableXMin()\fP
 .PP
 Enable or disable minor vertical grid lines\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enable (true) or disable 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableX()\fP 
 .RE
@@ -161,12 +161,12 @@ Enable or disable minor vertical grid lines\&.
 .PP
 Enable or disable horizontal grid lines\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enable (true) or disable 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 Minor grid lines can be enabled or disabled with \fBenableYMin()\fP 
 .RE
@@ -177,12 +177,12 @@ Minor grid lines can be enabled or disabled with \fBenableYMin()\fP
 .PP
 Enable or disable minor horizontal grid lines\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enable (true) or disable 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableY()\fP 
 .RE
@@ -191,12 +191,12 @@ Enable or disable minor horizontal grid lines\&.
 .SS "const QPen & QwtPlotGrid::majorPen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the pen for the major grid lines 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMajorPen()\fP, \fBsetMinorPen()\fP, \fBsetPen()\fP 
 .RE
@@ -205,12 +205,12 @@ the pen for the major grid lines
 .SS "const QPen & QwtPlotGrid::minorPen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the pen for the minor grid lines 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMinorPen()\fP, \fBsetMajorPen()\fP, \fBsetPen()\fP 
 .RE
@@ -219,7 +219,7 @@ the pen for the minor grid lines
 .SS "int QwtPlotGrid::rtti () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBQwtPlotItem::Rtti_PlotGrid\fP 
 .RE
@@ -232,7 +232,7 @@ Build and assign a pen for both major grid lines
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -241,7 +241,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 pen(), brush() 
 .RE
@@ -250,12 +250,12 @@ pen(), brush()
 .SS "void QwtPlotGrid::setMajorPen (const QPen & pen)"
 Assign a pen for the major grid lines
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmajorPen()\fP, \fBsetMinorPen()\fP, \fBsetPen()\fP 
 .RE
@@ -266,7 +266,7 @@ Build and assign a pen for the minor grid lines
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -275,7 +275,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 pen(), brush() 
 .RE
@@ -284,12 +284,12 @@ pen(), brush()
 .SS "void QwtPlotGrid::setMinorPen (const QPen & pen)"
 Assign a pen for the minor grid lines
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBminorPen()\fP, \fBsetMajorPen()\fP, \fBsetPen()\fP 
 .RE
@@ -300,7 +300,7 @@ Build and assign a pen for both major and minor grid lines
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -309,7 +309,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 pen(), brush() 
 .RE
@@ -318,12 +318,12 @@ pen(), brush()
 .SS "void QwtPlotGrid::setPen (const QPen & pen)"
 Assign a pen for both major and minor grid lines
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMajorPen()\fP, \fBsetMinorPen()\fP 
 .RE
@@ -332,7 +332,7 @@ Assign a pen for both major and minor grid lines
 .SS "void QwtPlotGrid::setXDiv (const \fBQwtScaleDiv\fP & scaleDiv)"
 Assign an x axis scale division
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIscaleDiv\fP Scale division 
 .RE
@@ -341,7 +341,7 @@ Assign an x axis scale division
 .SS "void QwtPlotGrid::setYDiv (const \fBQwtScaleDiv\fP & scaleDiv)"
 Assign a y axis division
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIscaleDiv\fP Scale division 
 .RE
@@ -350,14 +350,14 @@ Assign a y axis division
 .SS "void QwtPlotGrid::updateScaleDiv (const \fBQwtScaleDiv\fP & xScaleDiv, const \fBQwtScaleDiv\fP & yScaleDiv)\fC [virtual]\fP"
 Update the grid to changes of the axes scale division
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxScaleDiv\fP Scale division of the x-axis 
 .br
 \fIyScaleDiv\fP Scale division of the y-axis
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::updateAxes()\fP 
 .RE
@@ -368,12 +368,12 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 .SS "bool QwtPlotGrid::xEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if vertical grid lines are enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableX()\fP 
 .RE
@@ -382,12 +382,12 @@ true if vertical grid lines are enabled
 .SS "bool QwtPlotGrid::xMinEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if minor vertical grid lines are enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableXMin()\fP 
 .RE
@@ -396,7 +396,7 @@ true if minor vertical grid lines are enabled
 .SS "const \fBQwtScaleDiv\fP & QwtPlotGrid::xScaleDiv () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the scale division of the x axis 
 .RE
@@ -405,12 +405,12 @@ the scale division of the x axis
 .SS "bool QwtPlotGrid::yEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if horizontal grid lines are enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableY()\fP 
 .RE
@@ -419,12 +419,12 @@ true if horizontal grid lines are enabled
 .SS "bool QwtPlotGrid::yMinEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if minor horizontal grid lines are enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBenableYMin()\fP 
 .RE
@@ -433,7 +433,7 @@ true if minor horizontal grid lines are enabled
 .SS "const \fBQwtScaleDiv\fP & QwtPlotGrid::yScaleDiv () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the scale division of the y axis 
 .RE

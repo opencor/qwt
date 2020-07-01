@@ -1,4 +1,4 @@
-.TH "QwtAbstractLegend" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractLegend" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,12 +47,12 @@ Abstract base class for legend widgets\&.
 
 Legends, that need to be under control of the \fBQwtPlot\fP layout system need to be derived from \fBQwtAbstractLegend\fP\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Other type of legends can be implemented by connecting to the \fBQwtPlot::legendDataChanged()\fP signal\&. But as these legends are unknown to the plot layout system the layout code ( on screen and for \fBQwtPlotRenderer\fP ) need to be organized in application code\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtLegend\fP 
 .RE
@@ -63,7 +63,7 @@ Other type of legends can be implemented by connecting to the \fBQwtPlot::legend
 .SS "QwtAbstractLegend::QwtAbstractLegend (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .RE
@@ -74,7 +74,7 @@ Constructor
 .SS "virtual bool QwtAbstractLegend::isEmpty () const\fC [pure virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when no plot item is inserted 
 .RE
@@ -85,7 +85,7 @@ Implemented in \fBQwtLegend\fP\&.
 .SS "virtual void QwtAbstractLegend::renderLegend (QPainter * painter, const QRectF & rect, bool fillBackground) const\fC [pure virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -94,7 +94,7 @@ Render the legend into a given rectangle\&.
 \fIfillBackground\fP When true, fill rect with the widget background
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrenderLegend()\fP is used by \fBQwtPlotRenderer\fP 
 .RE
@@ -105,12 +105,12 @@ Implemented in \fBQwtLegend\fP\&.
 .SS "int QwtAbstractLegend::scrollExtent (Qt::Orientation orientation) const\fC [virtual]\fP"
 Return the extent, that is needed for elements to scroll the legend ( usually scrollbars ),
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIorientation\fP Orientation 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Extent of the corresponding scroll element 
 .RE
@@ -123,7 +123,7 @@ Reimplemented in \fBQwtLegend\fP\&.
 .PP
 Update the entries for a plot item\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info about an item 
 .br

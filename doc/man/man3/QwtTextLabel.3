@@ -1,4 +1,4 @@
-.TH "QwtTextLabel" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTextLabel" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -102,7 +102,7 @@ A Widget which displays a \fBQwtText\fP\&.
 .SS "QwtTextLabel::QwtTextLabel (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructs an empty label\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .RE
@@ -111,7 +111,7 @@ Constructs an empty label\&.
 .SS "QwtTextLabel::QwtTextLabel (const \fBQwtText\fP & text, QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructs a label that displays the text, text 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .br
@@ -124,12 +124,12 @@ Constructs a label that displays the text, text
 .SS "int QwtTextLabel::heightForWidth (int width) const\fC [virtual]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Width 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Preferred height for this widget, given the width\&. 
 .RE
@@ -138,7 +138,7 @@ Preferred height for this widget, given the width\&.
 .SS "void QwtTextLabel::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Qt paint event 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Paint event 
 .RE
@@ -149,12 +149,12 @@ Reimplemented in \fBQwtLegendLabel\fP\&.
 .SS "QString QwtTextLabel::plainText () const"
 Interface for the designer plugin
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Text as plain text 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPlainText()\fP, \fBtext()\fP 
 .RE
@@ -163,7 +163,7 @@ Text as plain text
 .SS "void QwtTextLabel::setIndent (int indent)"
 Set label's text indent in pixels 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindent\fP Indentation in pixels 
 .RE
@@ -172,7 +172,7 @@ Set label's text indent in pixels
 .SS "void QwtTextLabel::setMargin (int margin)"
 Set label's margin in pixels 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImargin\fP Margin in pixels 
 .RE
@@ -181,7 +181,7 @@ Set label's margin in pixels
 .SS "void QwtTextLabel::setPlainText (const QString & text)"
 Interface for the designer plugin - does the same as \fBsetText()\fP 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBplainText()\fP 
 .RE
@@ -190,14 +190,14 @@ Interface for the designer plugin - does the same as \fBsetText()\fP
 .SS "void QwtTextLabel::setText (const QString & text, \fBQwtText::TextFormat\fP textFormat = \fC\fBQwtText::AutoText\fP\fP)\fC [slot]\fP"
 Change the label's text, keeping all other \fBQwtText\fP attributes 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP New text 
 .br
 \fItextFormat\fP Format of text
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtText\fP 
 .RE
@@ -206,7 +206,7 @@ Change the label's text, keeping all other \fBQwtText\fP attributes
 .SS "void QwtTextLabel::setText (const \fBQwtText\fP & text)\fC [virtual]\fP, \fC [slot]\fP"
 Change the label's text 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP New text 
 .RE
@@ -217,7 +217,7 @@ Reimplemented in \fBQwtLegendLabel\fP\&.
 .SS "QRect QwtTextLabel::textRect () const"
 Calculate geometry for the text in widget coordinates 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Geometry for the text 
 .RE

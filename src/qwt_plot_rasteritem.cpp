@@ -158,7 +158,9 @@ static QImage qwtExpandImage(const QImage &image,
     }
     py0 += strippedRect.top() - paintRect.top();
 
-    QImage expanded(sz, image.format());
+    QImage expanded( sz, image.format() );
+    if ( image.format() == QImage::Format_Indexed8 )
+        expanded.setColorTable( image.colorTable() );
 
     switch( image.depth() )
     {
@@ -936,7 +938,7 @@ QwtScaleMap QwtPlotRasterItem::imageMap(
         s2 = area.bottom();
     }
 
-    if ( pixelSize > 0.0 )
+    if ( pixelSize > 0.0 || p2 == 1.0 )
     {
         double off = 0.5 * pixelSize;
         if ( map.isInverting() )

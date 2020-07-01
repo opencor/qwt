@@ -1,4 +1,4 @@
-.TH "QwtSyntheticPointData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSyntheticPointData" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -110,14 +110,14 @@ int main(int argc, char **argv)
 .SS "QwtSyntheticPointData::QwtSyntheticPointData (size_t size, const \fBQwtInterval\fP & interval = \fC\fBQwtInterval\fP()\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Number of points 
 .br
 \fIinterval\fP Bounding interval for the points
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetInterval()\fP, \fBsetSize()\fP 
 .RE
@@ -130,7 +130,7 @@ Constructor
 .PP
 Calculate the bounding rectangle\&. This implementation iterates over all points, what could often be implemented much faster using the characteristics of the series\&. When there are many points it is recommended to overload and reimplement this method using the characteristics of the series ( if possible )\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
@@ -141,12 +141,12 @@ Implements \fBQwtSeriesData< QPointF >\fP\&.
 .SS "\fBQwtInterval\fP QwtSyntheticPointData::interval () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding interval 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetInterval()\fP, \fBsize()\fP 
 .RE
@@ -155,12 +155,12 @@ Bounding interval
 .SS "QRectF QwtSyntheticPointData::rectOfInterest () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 'rectangle of interest' 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRectOfInterest()\fP 
 .RE
@@ -169,17 +169,17 @@ Bounding interval
 .SS "QPointF QwtSyntheticPointData::sample (size_t index) const\fC [virtual]\fP"
 Calculate the point from an index
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 QPointF(x(index), y(x(index)));
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 For invalid indices ( index < 0 || index >= \fBsize()\fP ) (0, 0) is returned\&. 
 .RE
@@ -190,12 +190,12 @@ Implements \fBQwtSeriesData< QPointF >\fP\&.
 .SS "void QwtSyntheticPointData::setInterval (const \fBQwtInterval\fP & interval)"
 Set the bounding interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinterval()\fP, \fBsetSize()\fP 
 .RE
@@ -208,7 +208,7 @@ Set a the 'rectangle of interest'
 .PP
 If \fBinterval()\fP\&.isValid() == false the x values are calculated in the interval rect\&.left() -> rect\&.right()\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrectOfInterest()\fP 
 .RE
@@ -219,12 +219,12 @@ Reimplemented from \fBQwtSeriesData< QPointF >\fP\&.
 .SS "void QwtSyntheticPointData::setSize (size_t size)"
 Change the number of points
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Number of points 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsize()\fP, \fBsetInterval()\fP 
 .RE
@@ -233,12 +233,12 @@ Change the number of points
 .SS "size_t QwtSyntheticPointData::size () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of points 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSize()\fP, \fBinterval()\fP 
 .RE
@@ -251,17 +251,17 @@ Calculate a x-value from an index
 .PP
 x values are calculated by dividing an interval into equidistant steps\&. If !interval()\&.isValid() the interval is calculated from the 'rectangle of interest'\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index of the requested point 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated x coordinate
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinterval()\fP, \fBrectOfInterest()\fP, \fBy()\fP 
 .RE
@@ -270,12 +270,12 @@ Calculated x coordinate
 .SS "virtual double QwtSyntheticPointData::y (double x) const\fC [pure virtual]\fP"
 Calculate a y value for a x value
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP x value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Corresponding y value 
 .RE

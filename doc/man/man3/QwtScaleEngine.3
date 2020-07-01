@@ -1,4 +1,4 @@
-.TH "QwtScaleEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -112,7 +112,7 @@ Qwt offers implementations for logarithmic and linear scales\&.
 .SS "enum \fBQwtScaleEngine::Attribute\fP"
 Layout attributes 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAttribute()\fP, \fBtestAttribute()\fP, \fBreference()\fP, \fBlowerMargin()\fP, \fBupperMargin()\fP 
 .RE
@@ -141,12 +141,12 @@ Turn the scale upside down\&.
 .SS "QwtScaleEngine::QwtScaleEngine (uint base = \fC10\fP)\fC [explicit]\fP"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbase\fP Base of the scale engine 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBase()\fP 
 .RE
@@ -157,12 +157,12 @@ Constructor
 .SS "\fBQwtScaleEngine::Attributes\fP QwtScaleEngine::attributes () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Scale attributes 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBsetAttributes()\fP, \fBtestAttribute()\fP 
 .RE
@@ -171,7 +171,7 @@ Scale attributes
 .SS "virtual void QwtScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [pure virtual]\fP"
 Align and divide an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImaxNumSteps\fP Max\&. number of steps 
 .br
@@ -188,12 +188,12 @@ Implemented in \fBQwtLogScaleEngine\fP, \fBQwtLinearScaleEngine\fP, and \fBQwtDa
 .SS "uint QwtScaleEngine::base () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 base Base of the scale engine 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBase()\fP 
 .RE
@@ -204,12 +204,12 @@ base Base of the scale engine
 .PP
 Build an interval around a value\&. In case of v == 0\&.0 the interval is [-0\&.5, 0\&.5], otherwide it is [0\&.5 * v, 1\&.5 * v]
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Initial value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated interval 
 .RE
@@ -218,14 +218,14 @@ Calculated interval
 .SS "bool QwtScaleEngine::contains (const \fBQwtInterval\fP & interval, double value) const\fC [protected]\fP"
 Check if an interval 'contains' a value
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval 
 .br
 \fIvalue\fP Value
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the value is inside the interval 
 .RE
@@ -234,14 +234,14 @@ True, when the value is inside the interval
 .SS "double QwtScaleEngine::divideInterval (double intervalSize, int numSteps) const\fC [protected]\fP"
 Calculate a step size for an interval size
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIintervalSize\fP Interval size 
 .br
 \fInumSteps\fP Number of steps
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Step size 
 .RE
@@ -252,7 +252,7 @@ Step size
 .PP
 Calculate a scale division\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx1\fP First interval limit 
 .br
@@ -265,7 +265,7 @@ Calculate a scale division\&.
 \fIstepSize\fP Step size\&. If stepSize == 0\&.0, the scaleEngine calculates one\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated scale division 
 .RE
@@ -276,12 +276,12 @@ Implemented in \fBQwtLogScaleEngine\fP, \fBQwtLinearScaleEngine\fP, and \fBQwtDa
 .SS "double QwtScaleEngine::lowerMargin () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the margin at the lower end of the scale The default margin is 0\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMargins()\fP 
 .RE
@@ -290,12 +290,12 @@ the margin at the lower end of the scale The default margin is 0\&.
 .SS "double QwtScaleEngine::reference () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the reference value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetReference()\fP, \fBsetAttribute()\fP 
 .RE
@@ -304,14 +304,14 @@ the reference value
 .SS "void QwtScaleEngine::setAttribute (\fBAttribute\fP attribute, bool on = \fCtrue\fP)"
 Change a scale attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute to change 
 .br
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBtestAttribute()\fP 
 .RE
@@ -320,12 +320,12 @@ Change a scale attribute
 .SS "void QwtScaleEngine::setAttributes (\fBAttributes\fP attributes)"
 Change the scale attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattributes\fP Set scale attributes 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBattributes()\fP 
 .RE
@@ -338,12 +338,12 @@ While a base of 10 is what 99\&.9% of all applications need certain scales might
 .PP
 The default setting is 10
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbase\fP Base of the engine
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbase()\fP 
 .RE
@@ -354,7 +354,7 @@ The default setting is 10
 .PP
 Specify margins at the scale's endpoints\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIlower\fP minimum distance between the scale's lower boundary and the smallest enclosed value 
 .br
@@ -363,7 +363,7 @@ Specify margins at the scale's endpoints\&.
 .PP
 Margins can be used to leave a minimum amount of space between the enclosed intervals and the boundaries of the scale\&.
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 .PD 0
 .IP "\(bu" 2
@@ -371,7 +371,7 @@ Margins can be used to leave a minimum amount of space between the enclosed inte
 .PP
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBupperMargin()\fP, \fBlowerMargin()\fP 
 .RE
@@ -382,14 +382,14 @@ Margins can be used to leave a minimum amount of space between the enclosed inte
 .PP
 Specify a reference point\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIreference\fP New reference value
 .RE
 .PP
 The reference point is needed if options IncludeReference or Symmetric are active\&. Its default value is 0\&.0\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP 
 .RE
@@ -398,7 +398,7 @@ The reference point is needed if options IncludeReference or Symmetric are activ
 .SS "void QwtScaleEngine::setTransformation (\fBQwtTransform\fP * transform)"
 Assign a transformation
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItransform\fP Transformation
 .RE
@@ -407,7 +407,7 @@ The transformation object is used as factory for clones that are returned by \fB
 .PP
 The scale engine takes ownership of the transformation\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtTransform::copy()\fP, \fBtransformation()\fP 
 .RE
@@ -416,14 +416,14 @@ The scale engine takes ownership of the transformation\&.
 .SS "QList< double > QwtScaleEngine::strip (const QList< double > & ticks, const \fBQwtInterval\fP & interval) const\fC [protected]\fP"
 Remove ticks from a list, that are not inside an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIticks\fP Tick list 
 .br
 \fIinterval\fP Interval
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Stripped tick list 
 .RE
@@ -432,17 +432,17 @@ Stripped tick list
 .SS "bool QwtScaleEngine::testAttribute (\fBAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, if attribute is enabled\&.
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute to be tested 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBsetAttribute()\fP 
 .RE
@@ -451,12 +451,12 @@ True, if attribute is enabled\&.
 .SS "\fBQwtTransform\fP * QwtScaleEngine::transformation () const"
 Create and return a clone of the transformation of the engine\&. When the engine has no special transformation NULL is returned, indicating no transformation\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A clone of the transfomation 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTransformation()\fP 
 .RE
@@ -465,12 +465,12 @@ A clone of the transfomation
 .SS "double QwtScaleEngine::upperMargin () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the margin at the upper end of the scale The default margin is 0\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMargins()\fP 
 .RE

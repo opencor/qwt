@@ -8,8 +8,8 @@ var class_qwt_plot_svg_item =
     [ "loadData", "class_qwt_plot_svg_item.html#a9e611f0c845289ddfb9758fa4479e719", null ],
     [ "loadFile", "class_qwt_plot_svg_item.html#aca9592f3d3dca512b7970851b159cf57", null ],
     [ "render", "class_qwt_plot_svg_item.html#a25f149980cc1b64ed55292816d282755", null ],
-    [ "renderer", "class_qwt_plot_svg_item.html#a93b46181d8e1b3a19111fd62ed65c956", null ],
     [ "renderer", "class_qwt_plot_svg_item.html#a7263211f1f91f669d9abd8e6dd9529a3", null ],
+    [ "renderer", "class_qwt_plot_svg_item.html#a93b46181d8e1b3a19111fd62ed65c956", null ],
     [ "rtti", "class_qwt_plot_svg_item.html#a55cbae2059a056004995e3d3cc304123", null ],
     [ "viewBox", "class_qwt_plot_svg_item.html#a2bd5bc480353c0936d17536fa4b32468", null ]
 ];

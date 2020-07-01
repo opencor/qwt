@@ -1,4 +1,4 @@
-.TH "QwtLogTransform" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLogTransform" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ Logarithmic transformation\&.
 
 \fBQwtLogTransform\fP modifies the values using log() and exp()\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 In the calculations of \fBQwtScaleMap\fP the base of the log function has no effect on the mapping\&. So \fBQwtLogTransform\fP can be used for log2(), log10() or any other logarithmic scale\&. 
 .RE
@@ -64,12 +64,12 @@ In the calculations of \fBQwtScaleMap\fP the base of the log function has no eff
 .SS "double QwtLogTransform::bounded (double value) const\fC [virtual]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be bounded 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 qBound( LogMin, value, LogMax ) 
 .RE
@@ -80,7 +80,7 @@ Reimplemented from \fBQwtTransform\fP\&.
 .SS "\fBQwtTransform\fP * QwtLogTransform::copy () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Clone of the transformation 
 .RE
@@ -91,12 +91,12 @@ Implements \fBQwtTransform\fP\&.
 .SS "double QwtLogTransform::invTransform (double value) const\fC [virtual]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be transformed 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 exp( value ) 
 .RE
@@ -107,12 +107,12 @@ Implements \fBQwtTransform\fP\&.
 .SS "double QwtLogTransform::transform (double value) const\fC [virtual]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be transformed 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 log( value ) 
 .RE

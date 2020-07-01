@@ -22,7 +22,7 @@ class QwtColorMap;
            mapped to a color.
 */
 class QWT_EXPORT QwtPlotSpectroCurve:
-    public QwtPlotSeriesItem, QwtSeriesStore<QwtPoint3D>
+    public QwtPlotSeriesItem, public QwtSeriesStore<QwtPoint3D>
 {
 public:
     //! Paint attributes

@@ -1,4 +1,4 @@
-.TH "QwtCompass" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompass" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ A Compass Widget\&.
 \fBQwtCompass\fP is a widget to display and enter directions\&. It consists of a scale, an optional needle and rose\&.
 .PP
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The examples/dials example shows how to use \fBQwtCompass\fP\&. 
 .RE
@@ -66,7 +66,7 @@ The examples/dials example shows how to use \fBQwtCompass\fP\&.
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget
 .RE
@@ -77,7 +77,7 @@ Create a compass widget with a scale, no needle and no rose\&. The default origi
 .SS "void QwtCompass::drawRose (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the compass rose
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -94,7 +94,7 @@ Draw the compass rose
 .SS "void QwtCompass::drawScaleContents (QPainter * painter, const QPointF & center, double radius) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the contents of the scale
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -111,7 +111,7 @@ Handles key events
 .PP
 Beside the keys described in \fBQwtDial::keyPressEvent\fP numbers from 1-9 (without 5) set the direction according to their position on the num pad\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisReadOnly()\fP 
 .RE
@@ -119,29 +119,29 @@ Beside the keys described in \fBQwtDial::keyPressEvent\fP numbers from 1-9 (with
 
 .PP
 Reimplemented from \fBQwtAbstractSlider\fP\&.
-.SS "const \fBQwtCompassRose\fP * QwtCompass::rose () const"
+.SS "\fBQwtCompassRose\fP * QwtCompass::rose ()"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 rose 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRose()\fP 
 .RE
 .PP
 
-.SS "\fBQwtCompassRose\fP * QwtCompass::rose ()"
+.SS "const \fBQwtCompassRose\fP * QwtCompass::rose () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 rose 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRose()\fP 
 .RE
@@ -150,17 +150,17 @@ rose
 .SS "void QwtCompass::setRose (\fBQwtCompassRose\fP * rose)"
 Set a rose for the compass 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrose\fP Compass rose 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The rose will be deleted, when a different rose is set or in ~QwtCompass 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrose()\fP 
 .RE

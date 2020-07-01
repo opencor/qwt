@@ -1,5 +1,6 @@
 #include <qapplication.h>
 #include <qpainter.h>
+#include <qpainterpath.h>
 #include <qbuffer.h>
 #ifdef QT_SVG_LIB
 #include <qsvggenerator.h>

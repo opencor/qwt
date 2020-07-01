@@ -140,8 +140,8 @@ New symbol types have been introduced:
 QwtSymbol autodetect the most performant paint strategy for a paint device
 what is in most situations using a QPixmap cache.
 
-QwtSymbol::setPinPoint() allows to align the symbol individually, f.e to the position
-of the peak of an arrow.
+QwtSymbol::setPinPoint() allows one to align the symbol individually, f.e to the
+position of the peak of an arrow.
 
 \section PLOTCURVE QwtPlotCurve
 

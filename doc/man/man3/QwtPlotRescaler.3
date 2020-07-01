@@ -1,4 +1,4 @@
-.TH "QwtPlotRescaler" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRescaler" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -147,7 +147,7 @@ Both limits of the scale are adjusted\&.
 .SS "enum \fBQwtPlotRescaler::RescalePolicy\fP"
 The rescale policy defines how to rescale the reference axis and their depending axes\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBExpandingDirection\fP, \fBsetIntervalHint()\fP 
 .RE
@@ -172,7 +172,7 @@ The intervals of the axes are calculated, so that all axes include their interva
 .SS "QwtPlotRescaler::QwtPlotRescaler (QWidget * canvas, int referenceAxis = \fC\fBQwtPlot::xBottom\fP\fP, \fBRescalePolicy\fP policy = \fC\fBExpanding\fP\fP)\fC [explicit]\fP"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcanvas\fP Canvas 
 .br
@@ -181,7 +181,7 @@ Constructor
 \fIpolicy\fP Rescale policy
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRescalePolicy()\fP, \fBsetReferenceAxis()\fP 
 .RE
@@ -192,17 +192,17 @@ Constructor
 .SS "double QwtPlotRescaler::aspectRatio (int axis) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Aspect ratio between an axis and the reference axis\&.
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAspectRatio()\fP 
 .RE
@@ -211,7 +211,7 @@ Aspect ratio between an axis and the reference axis\&.
 .SS "QWidget * QwtPlotRescaler::canvas ()"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 plot canvas 
 .RE
@@ -220,7 +220,7 @@ plot canvas
 .SS "const QWidget * QwtPlotRescaler::canvas () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 plot canvas 
 .RE
@@ -229,12 +229,12 @@ plot canvas
 .SS "void QwtPlotRescaler::canvasResizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Event handler for resize events of the plot canvas
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Resize event 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrescale()\fP 
 .RE
@@ -243,17 +243,17 @@ Event handler for resize events of the plot canvas
 .SS "\fBQwtPlotRescaler::ExpandingDirection\fP QwtPlotRescaler::expandingDirection (int axis) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Direction in which an axis should be expanded
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetExpandingDirection()\fP 
 .RE
@@ -262,7 +262,7 @@ Direction in which an axis should be expanded
 .SS "\fBQwtInterval\fP QwtPlotRescaler::expandInterval (const \fBQwtInterval\fP & interval, double width, \fBExpandingDirection\fP direction) const\fC [protected]\fP"
 Expand the interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval to be expanded 
 .br
@@ -271,7 +271,7 @@ Expand the interval
 \fIdirection\fP Direction of the expand operation
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Expanded interval 
 .RE
@@ -280,7 +280,7 @@ Expanded interval
 .SS "\fBQwtInterval\fP QwtPlotRescaler::expandScale (int axis, const QSize & oldSize, const QSize & newSize) const\fC [protected]\fP, \fC [virtual]\fP"
 Calculate the new scale interval of a plot axis
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .br
@@ -289,7 +289,7 @@ Calculate the new scale interval of a plot axis
 \fInewSize\fP New size of the canvas
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated new interval for the axis 
 .RE
@@ -298,12 +298,12 @@ Calculated new interval for the axis
 .SS "\fBQwtInterval\fP QwtPlotRescaler::interval (int axis) const\fC [protected]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Normalized interval of an axis 
 .RE
@@ -312,17 +312,17 @@ Normalized interval of an axis
 .SS "\fBQwtInterval\fP QwtPlotRescaler::intervalHint (int axis) const"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Interval hint 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetIntervalHint()\fP, \fBRescalePolicy\fP 
 .RE
@@ -331,12 +331,12 @@ Interval hint
 .SS "bool QwtPlotRescaler::isEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true when enabled, false otherwise 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetEnabled\fP, \fBeventFilter()\fP 
 .RE
@@ -345,12 +345,12 @@ true when enabled, false otherwise
 .SS "Qt::Orientation QwtPlotRescaler::orientation (int axis) const\fC [protected]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Orientation of an axis 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .RE
@@ -359,7 +359,7 @@ Orientation of an axis
 .SS "\fBQwtPlot\fP * QwtPlotRescaler::plot ()"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 plot widget 
 .RE
@@ -368,7 +368,7 @@ plot widget
 .SS "const \fBQwtPlot\fP * QwtPlotRescaler::plot () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 plot widget 
 .RE
@@ -377,12 +377,12 @@ plot widget
 .SS "int QwtPlotRescaler::referenceAxis () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference axis ( see RescalePolicy ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetReferenceAxis()\fP 
 .RE
@@ -391,7 +391,7 @@ Reference axis ( see RescalePolicy )
 .SS "void QwtPlotRescaler::rescale (const QSize & oldSize, const QSize & newSize) const\fC [protected]\fP, \fC [virtual]\fP"
 Adjust the plot axes scales
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIoldSize\fP Previous size of the canvas 
 .br
@@ -402,12 +402,12 @@ Adjust the plot axes scales
 .SS "\fBQwtPlotRescaler::RescalePolicy\fP QwtPlotRescaler::rescalePolicy () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Rescale policy 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRescalePolicy()\fP 
 .RE
@@ -416,12 +416,12 @@ Rescale policy
 .SS "void QwtPlotRescaler::setAspectRatio (double ratio)"
 Set the aspect ratio between the scale of the reference axis and the other scales\&. The default ratio is 1\&.0
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIratio\fP Aspect ratio 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBaspectRatio()\fP 
 .RE
@@ -430,14 +430,14 @@ Set the aspect ratio between the scale of the reference axis and the other scale
 .SS "void QwtPlotRescaler::setAspectRatio (int axis, double ratio)"
 Set the aspect ratio between the scale of the reference axis and another scale\&. The default ratio is 1\&.0
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .br
 \fIratio\fP Aspect ratio 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBaspectRatio()\fP 
 .RE
@@ -448,12 +448,12 @@ Set the aspect ratio between the scale of the reference axis and another scale\&
 .PP
 En/disable the rescaler\&. When enabled is true an event filter is installed for the canvas, otherwise the event filter is removed\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP true or false 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisEnabled()\fP, \fBeventFilter()\fP 
 .RE
@@ -462,12 +462,12 @@ En/disable the rescaler\&. When enabled is true an event filter is installed for
 .SS "void QwtPlotRescaler::setExpandingDirection (\fBExpandingDirection\fP direction)"
 Set the direction in which all axis should be expanded
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdirection\fP Direction 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBexpandingDirection()\fP 
 .RE
@@ -476,14 +476,14 @@ Set the direction in which all axis should be expanded
 .SS "void QwtPlotRescaler::setExpandingDirection (int axis, \fBExpandingDirection\fP direction)"
 Set the direction in which an axis should be expanded
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .br
 \fIdirection\fP Direction 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBexpandingDirection()\fP 
 .RE
@@ -494,14 +494,14 @@ Set an interval hint for an axis
 .PP
 In Fitting mode, the hint is used as minimal interval that always needs to be displayed\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .br
 \fIinterval\fP Axis 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBintervalHint()\fP, \fBRescalePolicy\fP 
 .RE
@@ -510,12 +510,12 @@ In Fitting mode, the hint is used as minimal interval that always needs to be di
 .SS "void QwtPlotRescaler::setReferenceAxis (int axis)"
 Set the reference axis ( see RescalePolicy )
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( \fBQwtPlot::Axis\fP ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBreferenceAxis()\fP 
 .RE
@@ -524,12 +524,12 @@ Set the reference axis ( see RescalePolicy )
 .SS "void QwtPlotRescaler::setRescalePolicy (\fBRescalePolicy\fP policy)"
 Change the rescale policy
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpolicy\fP Rescale policy 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrescalePolicy()\fP 
 .RE
@@ -538,7 +538,7 @@ Change the rescale policy
 .SS "\fBQwtInterval\fP QwtPlotRescaler::syncScale (int axis, const \fBQwtInterval\fP & reference, const QSize & size) const\fC [protected]\fP, \fC [virtual]\fP"
 Synchronize an axis scale according to the scale of the reference axis
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis index ( see QwtPlot::AxisId ) 
 .br
@@ -547,7 +547,7 @@ Synchronize an axis scale according to the scale of the reference axis
 \fIsize\fP Size of the canvas
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 New interval for axis 
 .RE
@@ -556,7 +556,7 @@ New interval for axis
 .SS "void QwtPlotRescaler::updateScales (\fBQwtInterval\fP intervals[QwtPlot::axisCnt]) const\fC [protected]\fP, \fC [virtual]\fP"
 Update the axes scales
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIintervals\fP Scale intervals 
 .RE

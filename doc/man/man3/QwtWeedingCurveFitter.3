@@ -1,4 +1,4 @@
-.TH "QwtWeedingCurveFitter" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWeedingCurveFitter" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -54,12 +54,12 @@ In opposite to \fBQwtSplineCurveFitter\fP the Douglas and Peucker algorithm redu
 .SS "QwtWeedingCurveFitter::QwtWeedingCurveFitter (double tolerance = \fC1\&.0\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItolerance\fP Tolerance 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTolerance()\fP, \fBtolerance()\fP 
 .RE
@@ -70,12 +70,12 @@ Constructor
 .SS "uint QwtWeedingCurveFitter::chunkSize () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Maximum for the number of points passed to a run of the algorithm - or 0, when unlimited 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetChunkSize()\fP 
 .RE
@@ -84,12 +84,12 @@ Maximum for the number of points passed to a run of the algorithm - or 0, when u
 .SS "QPolygonF QwtWeedingCurveFitter::fitCurve (const QPolygonF & points) const\fC [virtual]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpoints\fP Series of data points 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Curve points 
 .RE
@@ -102,12 +102,12 @@ Limit the number of points passed to a run of the algorithm
 .PP
 The runtime of the Douglas Peucker algorithm increases non linear with the number of points\&. For a chunk size > 0 the polygon is split into pieces passed to the algorithm one by one\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumPoints\fP Maximum for the number of points passed to the algorithm
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBchunkSize()\fP 
 .RE
@@ -120,12 +120,12 @@ The tolerance is the maximum distance, that is acceptable between the original c
 .PP
 Increasing the tolerance will reduce the number of the resulting points\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItolerance\fP Tolerance
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtolerance()\fP 
 .RE
@@ -134,12 +134,12 @@ Increasing the tolerance will reduce the number of the resulting points\&.
 .SS "double QwtWeedingCurveFitter::tolerance () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Tolerance 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTolerance()\fP 
 .RE

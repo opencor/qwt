@@ -1,4 +1,4 @@
-.TH "QwtScaleArithmetic" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleArithmetic" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,19 +34,19 @@ Arithmetic including a tolerance\&.
 .SS "double QwtScaleArithmetic::ceilEps (double value, double intervalSize)\fC [static]\fP"
 Ceil a value, relative to an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be ceiled 
 .br
 \fIintervalSize\fP Interval size
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Rounded value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBfloorEps()\fP 
 .RE
@@ -57,14 +57,14 @@ Rounded value
 .PP
 Divide an interval into steps\&. $stepSize = (intervalSize - intervalSize * 10e^{-6}) / numSteps$
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIintervalSize\fP Interval size 
 .br
 \fInumSteps\fP Number of steps 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Step size 
 .RE
@@ -73,7 +73,7 @@ Step size
 .SS "double QwtScaleArithmetic::divideInterval (double intervalSize, int numSteps, uint base)\fC [static]\fP"
 Calculate a step size for a given interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIintervalSize\fP Interval size 
 .br
@@ -82,7 +82,7 @@ Calculate a step size for a given interval
 \fIbase\fP Base for the division ( usually 10 )
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated step size 
 .RE
@@ -91,19 +91,19 @@ Calculated step size
 .SS "double QwtScaleArithmetic::floorEps (double value, double intervalSize)\fC [static]\fP"
 Floor a value, relative to an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be floored 
 .br
 \fIintervalSize\fP Interval size
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Rounded value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBfloorEps()\fP 
 .RE

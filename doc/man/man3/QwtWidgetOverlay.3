@@ -1,4 +1,4 @@
-.TH "QwtWidgetOverlay" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWidgetOverlay" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -92,7 +92,7 @@ F\&.e\&. in combination with the plot canvas an overlay avoid replots as the con
 .PP
 Internally \fBQwtPlotPicker\fP uses overlays for displaying the rubber band and the tracker text\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotCanvas::BackingStore\fP 
 .RE
@@ -109,7 +109,7 @@ If and how to mask depends on how expensive the calculation of the mask is and h
 .PP
 The default setting is MaskHint\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMaskMode()\fP, \fBmaskMode()\fP 
 .RE
@@ -136,7 +136,7 @@ Render mode\&. For calculating the alpha mask the overlay has already been paint
 .PP
 On graphic systems using the raster paint engine ( QWS, Windows ) it means usually copying some memory only\&. On X11 it results in an expensive operation building a pixmap and for simple overlays it might not be recommended\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The render mode has no effect, when \fBmaskMode()\fP != AlphaMask\&. 
 .RE
@@ -161,7 +161,7 @@ Never copy the buffer\&.
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidget\fP Parent widget, where the overlay is aligned to 
 .RE
@@ -172,7 +172,7 @@ Constructor\&.
 .SS "virtual void QwtWidgetOverlay::drawOverlay (QPainter * painter) const\fC [protected]\fP, \fC [pure virtual]\fP"
 Draw the widget overlay 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .RE
@@ -183,14 +183,14 @@ Draw the widget overlay
 .PP
 Event filter\&. Resize the overlay according to the size of the parent widget\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIobject\fP Object to be filtered 
 .br
 \fIevent\fP Event
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 See QObject::eventFilter() 
 .RE
@@ -210,7 +210,7 @@ NoMask The hint is unused\&.
 .PP
 The default implementation returns an invalid region indicating no hint\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Hint for the mask 
 .RE
@@ -219,12 +219,12 @@ Hint for the mask
 .SS "\fBQwtWidgetOverlay::MaskMode\fP QwtWidgetOverlay::maskMode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Mode how to find the mask for the overlay 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMaskMode()\fP 
 .RE
@@ -233,12 +233,12 @@ Mode how to find the mask for the overlay
 .SS "void QwtWidgetOverlay::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Paint event 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Paint event
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawOverlay()\fP 
 .RE
@@ -247,12 +247,12 @@ Paint event
 .SS "\fBQwtWidgetOverlay::RenderMode\fP QwtWidgetOverlay::renderMode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Render mode 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRenderMode\fP, \fBsetRenderMode()\fP 
 .RE
@@ -261,7 +261,7 @@ Render mode
 .SS "void QwtWidgetOverlay::resizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Resize event 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Resize event 
 .RE
@@ -272,12 +272,12 @@ Resize event
 .PP
 Specify how to find the mask for the overlay\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP New mode 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmaskMode()\fP 
 .RE
@@ -286,12 +286,12 @@ Specify how to find the mask for the overlay\&.
 .SS "void QwtWidgetOverlay::setRenderMode (\fBRenderMode\fP mode)"
 Set the render mode 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP Render mode
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRenderMode\fP, \fBrenderMode()\fP 
 .RE

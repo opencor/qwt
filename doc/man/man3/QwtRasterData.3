@@ -1,4 +1,4 @@
-.TH "QwtRasterData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRasterData" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -90,7 +90,7 @@ Ignore all values, that are out of range\&.
 .SS "\fBQwtRasterData::ContourLines\fP QwtRasterData::contourLines (const QRectF & rect, const QSize & raster, const QList< double > & levels, \fBConrecFlags\fP flags) const\fC [virtual]\fP"
 Calculate contour lines
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Bounding rectangle for the contour lines 
 .br
@@ -101,7 +101,7 @@ Calculate contour lines
 \fIflags\fP Flags to customize the contouring algorithm
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated contour lines
 .RE
@@ -114,7 +114,7 @@ Discard a raster\&. After the composition of an image \fBQwtPlotSpectrogram\fP c
 .PP
 The default implementation does nothing, but if data has been loaded in \fBinitRaster()\fP, it could deleted now\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinitRaster()\fP, \fBvalue()\fP 
 .RE
@@ -127,14 +127,14 @@ Initialize a raster\&. Before the composition of an image \fBQwtPlotSpectrogram\
 .PP
 The default implementation does nothing, but for data sets that are stored in files, it might be good idea to reimplement \fBinitRaster()\fP, where the data is resampled and loaded into memory\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIarea\fP Area of the raster 
 .br
 \fIraster\fP Number of horizontal and vertical pixels
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinitRaster()\fP, \fBvalue()\fP 
 .RE
@@ -143,12 +143,12 @@ The default implementation does nothing, but for data sets that are stored in fi
 .SS "const \fBQwtInterval\fP & QwtRasterData::interval (Qt::Axis axis) const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding interval for a axis 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetInterval\fP 
 .RE
@@ -167,12 +167,12 @@ Limiting the resolution of the image might significantly improve the performance
 .PP
 The default implementation returns an empty rectangle recommending to render in target device ( f\&.e\&. screen ) resolution\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIarea\fP In most implementations the resolution of the data doesn't depend on the requested area\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle of a pixel 
 .RE
@@ -183,14 +183,14 @@ Reimplemented in \fBQwtMatrixRasterData\fP\&.
 .SS "void QwtRasterData::setInterval (Qt::Axis axis, const \fBQwtInterval\fP & interval)\fC [virtual]\fP"
 Set the bounding interval for the x, y or z coordinates\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis 
 .br
 \fIinterval\fP Bounding interval
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinterval()\fP 
 .RE
@@ -201,12 +201,12 @@ Reimplemented in \fBQwtMatrixRasterData\fP\&.
 .SS "virtual double QwtRasterData::value (double x, double y) const\fC [pure virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the value at a raster position 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP X value in plot coordinates 
 .br

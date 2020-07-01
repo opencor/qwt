@@ -1,4 +1,4 @@
-.TH "QwtCPointerData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCPointerData" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -43,7 +43,7 @@ Data class containing two pointers to memory blocks of doubles\&.
 .SS "QwtCPointerData::QwtCPointerData (const double * x, const double * y, size_t size)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Array of x values 
 .br
@@ -52,12 +52,12 @@ Constructor
 \fIsize\fP Size of the x and y arrays
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The programmer must assure that the memory blocks referenced by the pointers remain valid during the lifetime of the QwtPlotCPointer object\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotCurve::setData()\fP, \fBQwtPlotCurve::setRawSamples()\fP 
 .RE
@@ -70,7 +70,7 @@ The programmer must assure that the memory blocks referenced by the pointers rem
 .PP
 Calculate the bounding rectangle\&. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
@@ -81,12 +81,12 @@ Implements \fBQwtSeriesData< QPointF >\fP\&.
 .SS "QPointF QwtCPointerData::sample (size_t index) const\fC [virtual]\fP"
 Return the sample at position i
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Sample at position i 
 .RE
@@ -97,7 +97,7 @@ Implements \fBQwtSeriesData< QPointF >\fP\&.
 .SS "size_t QwtCPointerData::size () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Size of the data set 
 .RE
@@ -108,7 +108,7 @@ Implements \fBQwtSeriesData< QPointF >\fP\&.
 .SS "const double * QwtCPointerData::xData () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Array of the x-values 
 .RE
@@ -117,7 +117,7 @@ Array of the x-values
 .SS "const double * QwtCPointerData::yData () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Array of the y-values 
 .RE

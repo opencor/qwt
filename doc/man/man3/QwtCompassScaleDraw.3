@@ -1,4 +1,4 @@
-.TH "QwtCompassScaleDraw" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassScaleDraw" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,7 +42,7 @@ A special scale draw made for \fBQwtCompass\fP\&.
 .PP
 The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtCompass\fP 
 .RE
@@ -59,7 +59,7 @@ Constructor\&. Initializes a label map for multiples of 45 degrees
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImap\fP Value to label map 
 .RE
@@ -70,19 +70,19 @@ Constructor\&.
 .SS "\fBQwtText\fP QwtCompassScaleDraw::label (double value) const\fC [virtual]\fP"
 Map a value to a corresponding label
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value that will be mapped
 .RE
 .PP
 \fBlabel()\fP looks in the \fBlabelMap()\fP for a corresponding label for value or returns an null text\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Label 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlabelMap()\fP, \fBsetLabelMap()\fP 
 .RE
@@ -93,12 +93,12 @@ Reimplemented from \fBQwtAbstractScaleDraw\fP\&.
 .SS "QMap< double, QString > QwtCompassScaleDraw::labelMap () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 map, mapping values to labels 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLabelMap()\fP 
 .RE
@@ -109,19 +109,19 @@ map, mapping values to labels
 .PP
 Set a map, mapping values to labels\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImap\fP Value to label map
 .RE
 .PP
 The values of the major ticks are found by looking into this map\&. The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The map will have no effect for values that are no major tick values\&. Major ticks can be changed by QwtScaleDraw::setScale
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlabelMap()\fP, scaleDraw(), setScale() 
 .RE

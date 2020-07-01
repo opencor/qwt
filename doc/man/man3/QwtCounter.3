@@ -1,4 +1,4 @@
-.TH "QwtCounter" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCounter" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -208,7 +208,7 @@ Button 2: 10 steps
 .IP "\(bu" 2
 Button 3: 100 steps
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP 
 .RE
@@ -219,7 +219,7 @@ Button 3: 100 steps
 .SS "void QwtCounter::buttonReleased (double value)\fC [signal]\fP"
 This signal is emitted when a button has been released 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP The new value 
 .RE
@@ -228,12 +228,12 @@ This signal is emitted when a button has been released
 .SS "bool QwtCounter::event (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handle QEvent::PolishRequest events 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Event 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 see QWidget::event() 
 .RE
@@ -242,17 +242,17 @@ see QWidget::event()
 .SS "int QwtCounter::incSteps (\fBQwtCounter::Button\fP button) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The number of steps by which a specified button increments the value or 0 if the button is invalid\&. 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbutton\fP Button index
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetIncSteps()\fP 
 .RE
@@ -261,12 +261,12 @@ The number of steps by which a specified button increments the value or 0 if the
 .SS "bool QwtCounter::isReadOnly () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the line line edit is read only\&. (default is no) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetReadOnly()\fP 
 .RE
@@ -275,12 +275,12 @@ True, when the line line edit is read only\&. (default is no)
 .SS "bool QwtCounter::isValid () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, if the value is valid 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValid()\fP, \fBsetValue()\fP 
 .RE
@@ -323,7 +323,7 @@ Shift + Qt::Key_PageDown
  Decrement by incSteps(QwtCounter::Button3)
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Key event 
 .RE
@@ -332,12 +332,12 @@ Shift + Qt::Key_PageDown
 .SS "double QwtCounter::maximum () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The maximum of the range 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMaximum()\fP, \fBminimum()\fP 
 .RE
@@ -346,12 +346,12 @@ The maximum of the range
 .SS "double QwtCounter::minimum () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The minimum of the range 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMinimum()\fP, \fBmaximum()\fP 
 .RE
@@ -360,12 +360,12 @@ The minimum of the range
 .SS "int QwtCounter::numButtons () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The number of buttons on each side of the widget\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetNumButtons()\fP 
 .RE
@@ -374,14 +374,14 @@ The number of buttons on each side of the widget\&.
 .SS "void QwtCounter::setIncSteps (\fBQwtCounter::Button\fP button, int numSteps)"
 Specify the number of steps by which the value is incremented or decremented when a specified button is pushed\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbutton\fP Button index 
 .br
 \fInumSteps\fP Number of steps
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBincSteps()\fP 
 .RE
@@ -390,12 +390,12 @@ Specify the number of steps by which the value is incremented or decremented whe
 .SS "void QwtCounter::setMaximum (double value)"
 Set the maximum value of the range
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Maximum value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMinimum()\fP, \fBmaximum()\fP 
 .RE
@@ -404,17 +404,17 @@ Set the maximum value of the range
 .SS "void QwtCounter::setMinimum (double value)"
 Set the minimum value of the range
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Minimum value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRange()\fP, \fBsetMaximum()\fP, \fBminimum()\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The maximum is adjusted if necessary to ensure that the range remains valid\&. 
 .RE
@@ -423,12 +423,12 @@ The maximum is adjusted if necessary to ensure that the range remains valid\&.
 .SS "void QwtCounter::setNumButtons (int numButtons)"
 Specify the number of buttons on each side of the label
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumButtons\fP Number of buttons 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnumButtons()\fP 
 .RE
@@ -439,14 +439,14 @@ Specify the number of buttons on each side of the label
 .PP
 Set the minimum and maximum values\&. The maximum is adjusted if necessary to ensure that the range remains valid\&. The value might be modified to be inside of the range\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImin\fP Minimum value 
 .br
 \fImax\fP Maximum value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBminimum()\fP, \fBmaximum()\fP 
 .RE
@@ -457,12 +457,12 @@ Set the minimum and maximum values\&. The maximum is adjusted if necessary to en
 .PP
 Allow/disallow the user to manually edit the value\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP True disable editing 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisReadOnly()\fP 
 .RE
@@ -473,12 +473,12 @@ Allow/disallow the user to manually edit the value\&.
 .PP
 Set the step size of the counter\&. A value <= 0\&.0 disables stepping
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstepSize\fP Single step size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsingleStep()\fP 
 .RE
@@ -487,7 +487,7 @@ Set the step size of the counter\&. A value <= 0\&.0 disables stepping
 .SS "void QwtCounter::setStepButton1 (int nSteps)"
 Set the number of increment steps for button 1 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInSteps\fP Number of steps 
 .RE
@@ -496,7 +496,7 @@ Set the number of increment steps for button 1
 .SS "void QwtCounter::setStepButton2 (int nSteps)"
 Set the number of increment steps for button 2 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInSteps\fP Number of steps 
 .RE
@@ -505,7 +505,7 @@ Set the number of increment steps for button 2
 .SS "void QwtCounter::setStepButton3 (int nSteps)"
 Set the number of increment steps for button 3 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInSteps\fP Number of steps 
 .RE
@@ -516,12 +516,12 @@ Set the counter to be in valid/invalid state
 .PP
 When the counter is set to invalid, no numbers are displayed and the buttons are disabled\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP If true the counter will be set as valid
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValue()\fP, \fBisValid()\fP 
 .RE
@@ -532,17 +532,17 @@ When the counter is set to invalid, no numbers are displayed and the buttons are
 .PP
 Set a new value without adjusting to the step raster\&. The state of the counter is set to be valid\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP New value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP, \fBvalue()\fP, \fBvalueChanged()\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The value is clipped when it lies outside the range\&. 
 .RE
@@ -553,12 +553,12 @@ The value is clipped when it lies outside the range\&.
 .PP
 En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP value will take you to the \fBminimum()\fP value and vice versa\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP En/Disable wrapping 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBwrapping()\fP 
 .RE
@@ -567,12 +567,12 @@ En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP valu
 .SS "double QwtCounter::singleStep () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Single step size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSingleStep()\fP 
 .RE
@@ -581,12 +581,12 @@ Single step size
 .SS "double QwtCounter::value () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current value of the counter 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValue()\fP, \fBvalueChanged()\fP 
 .RE
@@ -595,7 +595,7 @@ Current value of the counter
 .SS "void QwtCounter::valueChanged (double value)\fC [signal]\fP"
 This signal is emitted when the counter's value has changed 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP The new value 
 .RE
@@ -604,7 +604,7 @@ This signal is emitted when the counter's value has changed
 .SS "void QwtCounter::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handle wheel events 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Wheel event 
 .RE
@@ -613,12 +613,12 @@ Handle wheel events
 .SS "bool QwtCounter::wrapping () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when wrapping is set 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetWrapping()\fP 
 .RE

@@ -1,4 +1,4 @@
-.TH "QwtPlotItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotItem" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -234,7 +234,7 @@ Depending on the \fBQwtPlotItem::ItemAttribute\fP flags, an item is included int
 .PP
 Before misusing the existing item classes it might be better to implement a new type of plot item ( don't implement a watermark as spectrogram )\&. Deriving a new type of \fBQwtPlotItem\fP primarily means to implement the YourPlotItem::draw() method\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 The cpuplot example shows the implementation of additional \fBplot\fP items\&. 
 .RE
@@ -247,7 +247,7 @@ The cpuplot example shows the implementation of additional \fBplot\fP items\&.
 .PP
 Plot Item Attributes\&. Various aspects of a plot widget depend on the attributes of the attached plot items\&. If and how a single plot item participates in these updates depends on its attributes\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetItemAttribute()\fP, \fBtestItemAttribute()\fP, \fBItemInterest\fP 
 .RE
@@ -266,7 +266,7 @@ The \fBboundingRect()\fP of the item is included in the autoscaling calculation 
 \fB\fIMargins \fP\fP
 The item needs extra space to display something outside its bounding rectangle\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBgetCanvasMarginHint()\fP 
 .RE
@@ -277,7 +277,7 @@ The item needs extra space to display something outside its bounding rectangle\&
 .PP
 Plot Item Interests\&. Plot items might depend on the situation of the corresponding plot widget\&. By enabling an interest the plot item will be notified, when the corresponding attribute of the plot widgets has changed\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetItemAttribute()\fP, \fBtestItemAttribute()\fP, \fBItemInterest\fP 
 .RE
@@ -290,7 +290,7 @@ Plot Item Interests\&. Plot items might depend on the situation of the correspon
 \fB\fIScaleInterest \fP\fP
 The item is interested in updates of the scales 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBupdateScaleDiv()\fP 
 .RE
@@ -300,12 +300,12 @@ The item is interested in updates of the scales
 \fB\fILegendInterest \fP\fP
 The item is interested in updates of the legend ( of other items ) This flag is intended for items, that want to implement a legend for displaying entries of other plot item\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 If the plot item wants to be represented on a legend enable \fBQwtPlotItem::Legend\fP instead\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBupdateLegend()\fP 
 .RE
@@ -387,7 +387,7 @@ Values >= Rtti_PlotUserItem are reserved for plot items not implemented in the Q
 .SS "QwtPlotItem::QwtPlotItem (const \fBQwtText\fP & title = \fC\fBQwtText\fP()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the item 
 .RE
@@ -400,12 +400,12 @@ Constructor
 .PP
 Attach the item to a plot\&. This method will attach a \fBQwtPlotItem\fP to the \fBQwtPlot\fP argument\&. It will first detach the \fBQwtPlotItem\fP from any plot from a previous call to attach (if necessary)\&. If a NULL argument is passed, it will detach from any \fBQwtPlot\fP it was attached to\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIplot\fP Plot widget 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdetach()\fP 
 .RE
@@ -414,12 +414,12 @@ Attach the item to a plot\&. This method will attach a \fBQwtPlotItem\fP to the 
 .SS "QRectF QwtPlotItem::boundingRect () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 An invalid bounding rect: QRectF(1\&.0, 1\&.0, -2\&.0, -2\&.0) 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 A width or height < 0\&.0 is ignored by the autoscaler 
 .RE
@@ -432,14 +432,14 @@ Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotMarker\fP, \fBQwtPlotInter
 .PP
 Return a default icon from a brush\&. The default icon is a filled rectangle used in several derived classes as \fBlegendIcon()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbrush\fP Fill brush 
 .br
 \fIsize\fP Icon size
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A filled rectangle 
 .RE
@@ -450,7 +450,7 @@ A filled rectangle
 .PP
 This method detaches a \fBQwtPlotItem\fP from any \fBQwtPlot\fP it has been associated with\&. \fBdetach()\fP is equivalent to calling attach( NULL ) 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBattach()\fP 
 .RE
@@ -461,7 +461,7 @@ This method detaches a \fBQwtPlotItem\fP from any \fBQwtPlot\fP it has been asso
 .PP
 Draw the item\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -474,7 +474,7 @@ Draw the item\&.
 .PP
 
 .PP
-Implemented in \fBQwtPlotMarker\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotTextLabel\fP, \fBQwtPlotZoneItem\fP, \fBQwtPlotSvgItem\fP, and \fBQwtPlotSeriesItem\fP\&.
+Implemented in \fBQwtPlotLegendItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotTextLabel\fP, and \fBQwtPlotZoneItem\fP\&.
 .SS "void QwtPlotItem::getCanvasMarginHint (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, double & left, double & top, double & right, double & bottom) const\fC [virtual]\fP"
 
 .PP
@@ -482,7 +482,7 @@ Calculate a hint for the canvas margin\&. When the \fBQwtPlotItem::Margins\fP fl
 .PP
 The margins are in target device coordinates ( pixels on screen )
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP Maps x-values into pixel coordinates\&. 
 .br
@@ -501,7 +501,7 @@ The margins are in target device coordinates ( pixels on screen )
 .PP
 The default implementation returns 0 for all margins
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::getCanvasMarginsHint()\fP, \fBQwtPlot::updateCanvasMargins()\fP 
 .RE
@@ -512,12 +512,12 @@ Reimplemented in \fBQwtPlotAbstractBarChart\fP\&.
 .SS "bool QwtPlotItem::isVisible () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if visible 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetVisible()\fP, \fBshow()\fP, \fBhide()\fP 
 .RE
@@ -526,7 +526,7 @@ true if visible
 .SS "void QwtPlotItem::itemChanged ()\fC [virtual]\fP"
 Update the legend and call \fBQwtPlot::autoRefresh()\fP for the parent plot\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QwtPlot::legendChanged(), \fBQwtPlot::autoRefresh()\fP 
 .RE
@@ -535,7 +535,7 @@ QwtPlot::legendChanged(), \fBQwtPlot::autoRefresh()\fP
 .SS "void QwtPlotItem::legendChanged ()\fC [virtual]\fP"
 Update the legend of the parent plot\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::updateLegend()\fP, \fBitemChanged()\fP 
 .RE
@@ -550,12 +550,12 @@ Return all information, that is needed to represent the item on the legend\&. Mo
 .PP
 The default implementation returns one entry with the \fBtitle()\fP of the item and the \fBlegendIcon()\fP\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Data, that is needed to represent the item on the legend 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtitle()\fP, \fBlegendIcon()\fP, \fBQwtLegend\fP, \fBQwtPlotLegendItem\fP 
 .RE
@@ -566,21 +566,21 @@ Reimplemented in \fBQwtPlotBarChart\fP, and \fBQwtPlotMultiBarChart\fP\&.
 .SS "\fBQwtGraphic\fP QwtPlotItem::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Icon representing the item on the legend
 .RE
 .PP
 The default implementation returns an invalid icon
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index of the legend entry ( usually there is only one ) 
 .br
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLegendIconSize()\fP, \fBlegendData()\fP 
 .RE
@@ -591,12 +591,12 @@ Reimplemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotMarker
 .SS "QSize QwtPlotItem::legendIconSize () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Legend icon size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLegendIconSize()\fP, \fBlegendIcon()\fP 
 .RE
@@ -607,14 +607,14 @@ Legend icon size
 .PP
 Calculate the bounding paint rectangle of 2 maps\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP Maps x-values into pixel coordinates\&. 
 .br
 \fIyMap\fP Maps y-values into pixel coordinates\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding paint rectangle of the scale maps, not normalized 
 .RE
@@ -623,7 +623,7 @@ Bounding paint rectangle of the scale maps, not normalized
 .SS "uint QwtPlotItem::renderThreadCount () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of threads to be used for rendering\&. If numThreads() is set to 0, the system specific ideal thread count is used\&. 
 .RE
@@ -634,12 +634,12 @@ Return rtti for the specific class represented\&. \fBQwtPlotItem\fP is simply a 
 .PP
 The rtti value is useful for environments, where the runtime type information is disabled and it is not possible to do a dynamic_cast<\&.\&.\&.>\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 rtti value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRttiValues\fP 
 .RE
@@ -652,14 +652,14 @@ Reimplemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeI
 .PP
 Calculate the bounding scale rectangle of 2 maps\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP Maps x-values into pixel coordinates\&. 
 .br
 \fIyMap\fP Maps y-values into pixel coordinates\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding scale rect of the scale maps, not normalized 
 .RE
@@ -670,14 +670,14 @@ Set X and Y axis
 .PP
 The item will painted according to the coordinates of its Axes\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxAxis\fP X Axis ( \fBQwtPlot::xBottom\fP or \fBQwtPlot::xTop\fP ) 
 .br
 \fIyAxis\fP Y Axis ( \fBQwtPlot::yLeft\fP or \fBQwtPlot::yRight\fP )
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetXAxis()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP, \fByAxis()\fP, \fBQwtPlot::Axis\fP 
 .RE
@@ -686,14 +686,14 @@ The item will painted according to the coordinates of its Axes\&.
 .SS "void QwtPlotItem::setItemAttribute (\fBItemAttribute\fP attribute, bool on = \fCtrue\fP)"
 Toggle an item attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute type 
 .br
 \fIon\fP true/false
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestItemAttribute()\fP, \fBItemInterest\fP 
 .RE
@@ -702,14 +702,14 @@ Toggle an item attribute
 .SS "void QwtPlotItem::setItemInterest (\fBItemInterest\fP interest, bool on = \fCtrue\fP)"
 Toggle an item interest
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterest\fP Interest type 
 .br
 \fIon\fP true/false
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestItemInterest()\fP, \fBItemAttribute\fP 
 .RE
@@ -720,12 +720,12 @@ Set the size of the legend icon
 .PP
 The default setting is 8x8 pixels
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlegendIconSize()\fP, \fBlegendIcon()\fP 
 .RE
@@ -734,14 +734,14 @@ The default setting is 8x8 pixels
 .SS "void QwtPlotItem::setRenderHint (\fBRenderHint\fP hint, bool on = \fCtrue\fP)"
 Toggle an render hint
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIhint\fP Render hint 
 .br
 \fIon\fP true/false
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestRenderHint()\fP, \fBRenderHint\fP 
 .RE
@@ -752,7 +752,7 @@ On multi core systems rendering of certain plot item ( f\&.e \fBQwtPlotRasterIte
 .PP
 The default setting is set to 1\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumThreads\fP Number of threads to be used for rendering\&. If numThreads is set to 0, the system specific ideal thread count is used\&.
 .RE
@@ -761,12 +761,12 @@ The default thread count is 1 ( = no additional threads )
 .SS "void QwtPlotItem::setTitle (const QString & title)"
 Set a new title
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtitle()\fP 
 .RE
@@ -775,12 +775,12 @@ Set a new title
 .SS "void QwtPlotItem::setTitle (const \fBQwtText\fP & title)"
 Set a new title
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtitle()\fP 
 .RE
@@ -789,12 +789,12 @@ Set a new title
 .SS "void QwtPlotItem::setVisible (bool on)\fC [virtual]\fP"
 Show/Hide the item
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Show if true, otherwise hide 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisVisible()\fP, \fBshow()\fP, \fBhide()\fP 
 .RE
@@ -805,12 +805,12 @@ Set the X axis
 .PP
 The item will painted according to the coordinates its Axes\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP X Axis ( \fBQwtPlot::xBottom\fP or \fBQwtPlot::xTop\fP ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAxes()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP, \fBQwtPlot::Axis\fP 
 .RE
@@ -821,12 +821,12 @@ Set the Y axis
 .PP
 The item will painted according to the coordinates its Axes\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Y Axis ( \fBQwtPlot::yLeft\fP or \fBQwtPlot::yRight\fP ) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAxes()\fP, \fBsetXAxis()\fP, \fByAxis()\fP, \fBQwtPlot::Axis\fP 
 .RE
@@ -837,12 +837,12 @@ The item will painted according to the coordinates its Axes\&.
 .PP
 Set the z value\&. Plot items are painted in increasing z-order\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIz\fP Z-value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBz()\fP, \fBQwtPlotDict::itemList()\fP 
 .RE
@@ -851,17 +851,17 @@ Set the z value\&. Plot items are painted in increasing z-order\&.
 .SS "bool QwtPlotItem::testItemAttribute (\fBItemAttribute\fP attribute) const"
 Test an item attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute type 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true/false 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetItemAttribute()\fP, \fBItemInterest\fP 
 .RE
@@ -870,17 +870,17 @@ true/false
 .SS "bool QwtPlotItem::testItemInterest (\fBItemInterest\fP interest) const"
 Test an item interest
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterest\fP Interest type 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true/false 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetItemInterest()\fP, \fBItemAttribute\fP 
 .RE
@@ -889,17 +889,17 @@ true/false
 .SS "bool QwtPlotItem::testRenderHint (\fBRenderHint\fP hint) const"
 Test a render hint
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIhint\fP Render hint 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true/false 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRenderHint()\fP, \fBRenderHint\fP 
 .RE
@@ -908,12 +908,12 @@ true/false
 .SS "const \fBQwtText\fP & QwtPlotItem::title () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Title of the item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTitle()\fP 
 .RE
@@ -926,19 +926,19 @@ Update the item to changes of the legend info\&. Plot items that want to display
 .PP
 \fBupdateLegend()\fP is only called when the LegendInterest interest is enabled\&. The default implementation does nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitem\fP Plot item to be displayed on a legend 
 .br
 \fIdata\fP Attributes how to display item on the legend
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotLegendItem\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Plot items, that want to be displayed on a legend need to enable the \fBQwtPlotItem::Legend\fP flag and to implement \fBlegendData()\fP and \fBlegendIcon()\fP 
 .RE
@@ -953,25 +953,25 @@ Update the item to changes of the axes scale division\&. Update the item, when t
 .PP
 \fBupdateScaleDiv()\fP is only called when the ScaleInterest interest is enabled\&. The default implementation does nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxScaleDiv\fP Scale division of the x-axis 
 .br
 \fIyScaleDiv\fP Scale division of the y-axis
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::updateAxes()\fP, \fBScaleInterest\fP 
 .RE
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotScaleItem\fP, \fBQwtPlotGrid\fP, and \fBQwtPlotSeriesItem\fP\&.
+Reimplemented in \fBQwtPlotGrid\fP, \fBQwtPlotScaleItem\fP, and \fBQwtPlotSeriesItem\fP\&.
 .SS "double QwtPlotItem::z () const"
 Plot items are painted in increasing z-order\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBsetZ()\fP, \fBQwtPlotDict::itemList()\fP 
 .RE

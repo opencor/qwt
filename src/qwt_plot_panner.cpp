@@ -14,6 +14,7 @@
 #include <qbitmap.h>
 #include <qstyle.h>
 #include <qstyleoption.h>
+#include <qpainterpath.h>
 
 #if QT_VERSION >= 0x050000
 #if QT_VERSION < 0x050100

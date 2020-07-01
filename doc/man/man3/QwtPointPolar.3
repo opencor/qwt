@@ -1,4 +1,4 @@
-.TH "QwtPointPolar" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointPolar" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -83,7 +83,7 @@ In polar coordinates a point is determined by an angle and a distance\&. See htt
 .SS "QwtPointPolar::QwtPointPolar ()\fC [inline]\fP"
 Constructs a null point, with a radius and azimuth set to 0\&.0\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QPointF::isNull() 
 .RE
@@ -92,7 +92,7 @@ QPointF::isNull()
 .SS "QwtPointPolar::QwtPointPolar (double azimuth, double radius)\fC [inline]\fP"
 Constructs a point with coordinates specified by radius and azimuth\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIazimuth\fP Azimuth 
 .br
@@ -103,7 +103,7 @@ Constructs a point with coordinates specified by radius and azimuth\&.
 .SS "QwtPointPolar::QwtPointPolar (const \fBQwtPointPolar\fP & other)\fC [inline]\fP"
 Constructs a point using the values of the point specified\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Other point 
 .RE
@@ -112,12 +112,12 @@ Constructs a point using the values of the point specified\&.
 .SS "QwtPointPolar::QwtPointPolar (const QPointF & p)"
 Convert and assign values from a point in Cartesian coordinates
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIp\fP Point in Cartesian coordinates 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPoint()\fP, \fBtoPoint()\fP 
 .RE
@@ -130,7 +130,7 @@ Normalize radius and azimuth
 .PP
 When the radius is < 0\&.0 it is set to 0\&.0\&. The azimuth is a value >= 0\&.0 and < 2 * M_PI\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Normalized point 
 .RE
@@ -141,12 +141,12 @@ Compare 2 points
 .PP
 Two points are equal to each other if radius and azimuth-coordinates are the same\&. Points are not equal, when the azimuth differs, but other\&.azimuth() == \fBazimuth()\fP % (2 * PI)\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True if the point is not equal to other; otherwise return false\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnormalized()\fP 
 .RE
@@ -157,12 +157,12 @@ True if the point is not equal to other; otherwise return false\&.
 .PP
 Compare 2 points\&. Two points are equal to each other if radius and azimuth-coordinates are the same\&. Points are not equal, when the azimuth differs, but other\&.azimuth() == \fBazimuth()\fP % (2 * PI)\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True if the point is equal to other; otherwise return false\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnormalized()\fP 
 .RE
@@ -171,7 +171,7 @@ True if the point is equal to other; otherwise return false\&.
 .SS "void QwtPointPolar::setPoint (const QPointF & p)"
 Convert and assign values from a point in Cartesian coordinates 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIp\fP Point in Cartesian coordinates 
 .RE
@@ -180,17 +180,17 @@ Convert and assign values from a point in Cartesian coordinates
 .SS "QPointF QwtPointPolar::toPoint () const"
 Convert and return values in Cartesian coordinates
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Converted point in Cartesian coordinates
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Invalid or null points will be returned as QPointF(0\&.0, 0\&.0) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP, \fBisNull()\fP 
 .RE

@@ -20,6 +20,7 @@
 #include <qmath.h>
 #include <qstyle.h>
 #include <qstyleoption.h>
+#include <qapplication.h>
 
 class QwtScaleWidget::PrivateData
 {
@@ -575,6 +576,23 @@ void QwtScaleWidget::layoutScale( bool update_geometry )
     if ( update_geometry )
     {
         updateGeometry();
+
+#if 1
+        /*
+            for some reason updateGeometry does not send a LayoutRequest event
+            when the parent is not visible and has no layout
+         */
+
+        if ( QWidget* w = parentWidget() )
+        {
+            if ( !w->isVisible() && w->layout() == NULL )
+            {
+                if ( w->testAttribute( Qt::WA_WState_Polished ) )
+                    QApplication::postEvent( w, new QEvent( QEvent::LayoutRequest ) );
+            }
+        }
+#endif
+
         update();
     }
 }

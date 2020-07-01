@@ -1,4 +1,4 @@
-.TH "QwtPointMapper" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointMapper" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -83,7 +83,7 @@ A helper class for translating a series of points\&.
 .PP
 Flags affecting the transformation process\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFlag()\fP, \fBsetFlags()\fP 
 .RE
@@ -96,7 +96,7 @@ Flags affecting the transformation process\&.
 .PP
 Flags affecting the transformation process\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFlag()\fP, \fBsetFlags()\fP 
 .RE
@@ -116,12 +116,12 @@ Try to remove points, that are translated to the same position\&.
 .SS "QRectF QwtPointMapper::boundingRect () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBoundingRect()\fP 
 .RE
@@ -130,12 +130,12 @@ Bounding rectangle
 .SS "\fBQwtPointMapper::TransformationFlags\fP QwtPointMapper::flags () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Flags affecting the transformation process 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFlags()\fP, \fBsetFlag()\fP 
 .RE
@@ -146,12 +146,12 @@ Set a bounding rectangle for the point mapping algorithm
 .PP
 A valid bounding rectangle can be used for optimizations
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Bounding rectangle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBboundingRect()\fP 
 .RE
@@ -160,14 +160,14 @@ A valid bounding rectangle can be used for optimizations
 .SS "void QwtPointMapper::setFlag (\fBTransformationFlag\fP flag, bool on = \fCtrue\fP)"
 Modify a flag affecting the transformation process
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIflag\fP Flag type 
 .br
 \fIon\fP Value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 flag(), \fBsetFlags()\fP 
 .RE
@@ -176,12 +176,12 @@ flag(), \fBsetFlags()\fP
 .SS "void QwtPointMapper::setFlags (\fBTransformationFlags\fP flags)"
 Set the flags affecting the transformation process
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIflags\fP Flags 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBflags()\fP, \fBsetFlag()\fP 
 .RE
@@ -190,17 +190,17 @@ Set the flags affecting the transformation process
 .SS "bool QwtPointMapper::testFlag (\fBTransformationFlag\fP flag) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the flag is set 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIflag\fP Flag type 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFlag()\fP, \fBsetFlags()\fP 
 .RE
@@ -211,7 +211,7 @@ True, when the flag is set
 .PP
 Translate a series into a QImage\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP x map 
 .br
@@ -230,7 +230,7 @@ Translate a series into a QImage\&.
 \fInumThreads\fP Number of threads to be used for rendering\&. If numThreads is set to 0, the system specific ideal thread count is used\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Image displaying the series 
 .RE
@@ -248,7 +248,7 @@ WeedOutPoints & !boundingRect()\&.isValid() All consecutive points that are mapp
 !WeedOutPoints & \fBboundingRect()\fP\&.isValid() Points outside of the bounding rectangle are ignored\&.
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP x map 
 .br
@@ -261,7 +261,7 @@ WeedOutPoints & !boundingRect()\&.isValid() All consecutive points that are mapp
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Translated polygon 
 .RE
@@ -283,7 +283,7 @@ WeedOutPoints & !RoundPoints All consecutive points that are mapped to the same 
 .PP
 When RoundPoints is set all points are rounded to integers but returned as PolygonF - what only makes sense when the further processing of the values need a QPolygonF\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP x map 
 .br
@@ -296,7 +296,7 @@ When RoundPoints is set all points are rounded to integers but returned as Polyg
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Translated polygon 
 .RE
@@ -307,7 +307,7 @@ Translated polygon
 .PP
 Translate a series of points into a QPolygon\&. When the WeedOutPoints flag is enabled consecutive points, that are mapped to the same position will be one point\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP x map 
 .br
@@ -320,7 +320,7 @@ Translate a series of points into a QPolygon\&. When the WeedOutPoints flag is e
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Translated polygon 
 .RE
@@ -333,7 +333,7 @@ Translate a series of points into a QPolygonF\&. When the WeedOutPoints flag is 
 .PP
 When RoundPoints is set all points are rounded to integers but returned as PolygonF - what only makes sense when the further processing of the values need a QPolygonF\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP x map 
 .br
@@ -346,7 +346,7 @@ When RoundPoints is set all points are rounded to integers but returned as Polyg
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Translated polygon 
 .RE

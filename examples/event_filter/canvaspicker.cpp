@@ -297,7 +297,7 @@ void CanvasPicker::showCursor( bool showIt )
 
     const QBrush brush = symbol->brush();
     if ( showIt )
-        symbol->setBrush( symbol->brush().color().dark( 180 ) );
+        symbol->setBrush( symbol->brush().color().darker( 180 ) );
 
     QwtPlotDirectPainter directPainter;
     directPainter.drawSeries( d_selectedCurve, d_selectedPoint, d_selectedPoint );

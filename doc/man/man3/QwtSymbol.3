@@ -1,4 +1,4 @@
-.TH "QwtSymbol" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSymbol" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -155,17 +155,17 @@ F\&.e\&. the raster paint engine is a pure software renderer where in cache mode
 .PP
 The default setting is AutoCache
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCachePolicy()\fP, \fBcachePolicy()\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The policy has no effect, when the symbol is painted to a vector graphics format ( PDF, SVG )\&. 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 Since Qt 4\&.8 raster is the default backend on X11 
 .RE
@@ -191,7 +191,7 @@ The symbol is rendered with the software renderer ( QPaintEngine::Raster )
 .SS "enum \fBQwtSymbol::Style\fP"
 Symbol Style 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP 
 .RE
@@ -252,7 +252,7 @@ Hexagon\&.
 \fB\fIPath \fP\fP
 The symbol is represented by a painter path, where the origin ( 0, 0 ) of the path coordinate system is mapped to the position of the symbol\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPath()\fP, \fBpath()\fP 
 .RE
@@ -262,7 +262,7 @@ The symbol is represented by a painter path, where the origin ( 0, 0 ) of the pa
 \fB\fIPixmap \fP\fP
 The symbol is represented by a pixmap\&. The pixmap is centered or aligned to its pin point\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP 
 .RE
@@ -272,7 +272,7 @@ The symbol is represented by a pixmap\&. The pixmap is centered or aligned to it
 \fB\fIGraphic \fP\fP
 The symbol is represented by a graphic\&. The graphic is centered or aligned to its pin point\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP 
 .RE
@@ -282,7 +282,7 @@ The symbol is represented by a graphic\&. The graphic is centered or aligned to 
 \fB\fISvgDocument \fP\fP
 The symbol is represented by a SVG graphic\&. The graphic is centered or aligned to its pin point\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP 
 .RE
@@ -296,7 +296,7 @@ Styles >= QwtSymbol::UserSymbol are reserved for derived classes of \fBQwtSymbol
 .SS "QwtSymbol::QwtSymbol (\fBStyle\fP style = \fC\fBNoSymbol\fP\fP)"
 Default Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Symbol Style
 .RE
@@ -307,7 +307,7 @@ The symbol is constructed with gray interior, black outline with zero width, no 
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Symbol Style 
 .br
@@ -318,7 +318,7 @@ Constructor\&.
 \fIsize\fP size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP, \fBsetBrush()\fP, \fBsetPen()\fP, \fBsetSize()\fP 
 .RE
@@ -329,7 +329,7 @@ Constructor\&.
 .PP
 Constructor\&. The symbol gets initialized by a painter path\&. The style is set to \fBQwtSymbol::Path\fP, the size is set to empty ( the path is displayed unscaled )\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpath\fP painter path 
 .br
@@ -338,7 +338,7 @@ Constructor\&. The symbol gets initialized by a painter path\&. The style is set
 \fIpen\fP outline pen
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPath()\fP, \fBsetBrush()\fP, \fBsetPen()\fP, \fBsetSize()\fP 
 .RE
@@ -349,7 +349,7 @@ Constructor\&. The symbol gets initialized by a painter path\&. The style is set
 .SS "QRect QwtSymbol::boundingRect () const\fC [virtual]\fP"
 Calculate the bounding rectangle for a symbol at position (0,0)\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
@@ -358,12 +358,12 @@ Bounding rectangle
 .SS "const QBrush & QwtSymbol::brush () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Brush 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBrush()\fP 
 .RE
@@ -372,14 +372,27 @@ Brush
 .SS "\fBQwtSymbol::CachePolicy\fP QwtSymbol::cachePolicy () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Cache policy 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBCachePolicy\fP, \fBsetCachePolicy()\fP 
+.RE
+.PP
+
+.SS "void QwtSymbol::drawSymbol (QPainter * painter, const QPointF & pos) const\fC [inline]\fP"
+
+.PP
+Draw the symbol at a specified position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Painter 
+.br
+\fIpos\fP Position of the symbol in screen coordinates 
 .RE
 .PP
 
@@ -390,37 +403,11 @@ Draw the symbol into a rectangle\&. The symbol is painted centered and scaled in
 .PP
 This method is primarily intended for drawing a symbol to the legend\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
 \fIrect\fP Target rectangle for the symbol 
-.RE
-.PP
-
-.SS "void QwtSymbol::drawSymbol (QPainter * painter, const QPointF & pos) const\fC [inline]\fP"
-
-.PP
-Draw the symbol at a specified position\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIpainter\fP Painter 
-.br
-\fIpos\fP Position of the symbol in screen coordinates 
-.RE
-.PP
-
-.SS "void QwtSymbol::drawSymbols (QPainter * painter, const QPolygonF & points) const\fC [inline]\fP"
-
-.PP
-Draw symbols at the specified points\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIpainter\fP Painter 
-.br
-\fIpoints\fP Positions of the symbols in screen coordinates 
 .RE
 .PP
 
@@ -429,7 +416,7 @@ Render an array of symbols
 .PP
 Painting several symbols is more effective than drawing symbols one by one, as a couple of layout calculations and setting of pen/brush can be done once for the complete array\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -439,15 +426,28 @@ Painting several symbols is more effective than drawing symbols one by one, as a
 .RE
 .PP
 
+.SS "void QwtSymbol::drawSymbols (QPainter * painter, const QPolygonF & points) const\fC [inline]\fP"
+
+.PP
+Draw symbols at the specified points\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Painter 
+.br
+\fIpoints\fP Positions of the symbols in screen coordinates 
+.RE
+.PP
+
 .SS "const \fBQwtGraphic\fP & QwtSymbol::graphic () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Assigned graphic 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetGraphic()\fP 
 .RE
@@ -458,7 +458,7 @@ Invalidate the cached symbol pixmap
 .PP
 The symbol invalidates its cache, whenever an attribute is changed that has an effect ob how to display a symbol\&. In case of derived classes with individual styles ( >= \fBQwtSymbol::UserStyle\fP ) it might be necessary to call \fBinvalidateCache()\fP for attributes that are relevant for this style\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBCachePolicy\fP, \fBsetCachePolicy()\fP, \fBdrawSymbols()\fP 
 .RE
@@ -467,12 +467,12 @@ The symbol invalidates its cache, whenever an attribute is changed that has an e
 .SS "bool QwtSymbol::isPinPointEnabled () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the pin point translation is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP, \fBsetPinPointEnabled()\fP 
 .RE
@@ -481,12 +481,12 @@ True, when the pin point translation is enabled
 .SS "const QPainterPath & QwtSymbol::path () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Painter path for displaying the symbol 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPath()\fP 
 .RE
@@ -495,12 +495,12 @@ Painter path for displaying the symbol
 .SS "const QPen & QwtSymbol::pen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -509,12 +509,12 @@ Pen
 .SS "QPointF QwtSymbol::pinPoint () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pin point 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP, \fBsetPinPointEnabled()\fP 
 .RE
@@ -523,12 +523,12 @@ Pin point
 .SS "const QPixmap & QwtSymbol::pixmap () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Assigned pixmap 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPixmap()\fP 
 .RE
@@ -537,7 +537,7 @@ Assigned pixmap
 .SS "void QwtSymbol::renderSymbols (QPainter * painter, const QPointF * points, int numPoints) const\fC [protected]\fP, \fC [virtual]\fP"
 Render the symbol to series of points
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Qt painter 
 .br
@@ -552,12 +552,12 @@ Render the symbol to series of points
 .PP
 Assign a brush\&. The brush is used to draw the interior of the symbol\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbrush\fP Brush
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbrush()\fP 
 .RE
@@ -568,12 +568,12 @@ Change the cache policy
 .PP
 The default policy is AutoCache
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpolicy\fP Cache policy 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBCachePolicy\fP, \fBcachePolicy()\fP 
 .RE
@@ -584,12 +584,12 @@ The default policy is AutoCache
 .PP
 Set the color of the symbol\&. Change the color of the brush for symbol types with a filled area\&. For all other symbol types the color will be assigned to the pen\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Color
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBrush()\fP, \fBsetPen()\fP, \fBbrush()\fP, \fBpen()\fP 
 .RE
@@ -598,17 +598,17 @@ Set the color of the symbol\&. Change the color of the brush for symbol types wi
 .SS "void QwtSymbol::setGraphic (const \fBQwtGraphic\fP & graphic)"
 Set a graphic as symbol
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIgraphic\fP Graphic
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBgraphic()\fP, \fBsetPixmap()\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 the \fBstyle()\fP is set to \fBQwtSymbol::Graphic\fP 
 .PP
@@ -658,19 +658,19 @@ symbol->setPinPoint( QPointF( 0\&.0, 0\&.0 ) );
 setSize( 10, 14 );
 .fi
 .PP
- 
+ \\endpar
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpath\fP Painter path
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The style is implicitely set to \fBQwtSymbol::Path\fP\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpath()\fP, \fBsetSize()\fP 
 .RE
@@ -681,7 +681,7 @@ Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -690,7 +690,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
@@ -701,12 +701,12 @@ Assign a pen
 .PP
 The pen is used to draw the symbol's outline\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBsetBrush()\fP 
 .RE
@@ -717,14 +717,14 @@ The pen is used to draw the symbol's outline\&.
 .PP
 Set and enable a pin point\&. The position of a complex symbol is not always aligned to its center ( f\&.e an arrow, where the peak points to a position )\&. The pin point defines the position inside of a Pixmap, Graphic, SvgDocument or PainterPath symbol where the represented point has to be aligned to\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Position 
 .br
 \fIenable\fP En/Disable the pin point alignment
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpinPoint()\fP, \fBsetPinPointEnabled()\fP 
 .RE
@@ -733,12 +733,12 @@ Set and enable a pin point\&. The position of a complex symbol is not always ali
 .SS "void QwtSymbol::setPinPointEnabled (bool on)"
 En/Disable the pin point alignment
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enabled, when on is true 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPinPoint()\fP, \fBisPinPointEnabled()\fP 
 .RE
@@ -747,17 +747,17 @@ En/Disable the pin point alignment
 .SS "void QwtSymbol::setPixmap (const QPixmap & pixmap)"
 Set a pixmap as symbol
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpixmap\fP Pixmap
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpixmap()\fP, \fBsetGraphic()\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 the \fBstyle()\fP is set to \fBQwtSymbol::Pixmap\fP 
 .PP
@@ -768,12 +768,12 @@ the \fBstyle()\fP is set to \fBQwtSymbol::Pixmap\fP
 .SS "void QwtSymbol::setSize (const QSize & size)"
 Set the symbol's size 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsize()\fP 
 .RE
@@ -784,14 +784,14 @@ Set the symbol's size
 .PP
 Specify the symbol's size\&. If the 'h' parameter is left out or less than 0, and the 'w' parameter is greater than or equal to 0, the symbol size will be set to (w,w)\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Width 
 .br
 \fIheight\fP Height (defaults to -1)
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsize()\fP 
 .RE
@@ -800,12 +800,12 @@ Specify the symbol's size\&. If the 'h' parameter is left out or less than 0, an
 .SS "void QwtSymbol::setStyle (\fBQwtSymbol::Style\fP style)"
 Specify the symbol style
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBstyle()\fP 
 .RE
@@ -814,17 +814,17 @@ Specify the symbol style
 .SS "void QwtSymbol::setSvgDocument (const QByteArray & svgDocument)"
 Set a SVG icon as symbol
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsvgDocument\fP SVG icon
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetGraphic()\fP, \fBsetPixmap()\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 the \fBstyle()\fP is set to \fBQwtSymbol::SvgDocument\fP 
 .PP
@@ -835,12 +835,12 @@ the \fBstyle()\fP is set to \fBQwtSymbol::SvgDocument\fP
 .SS "const QSize & QwtSymbol::size () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSize()\fP 
 .RE
@@ -849,12 +849,12 @@ Size
 .SS "\fBQwtSymbol::Style\fP QwtSymbol::style () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current symbol style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP 
 .RE

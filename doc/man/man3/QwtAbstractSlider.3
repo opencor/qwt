@@ -1,4 +1,4 @@
-.TH "QwtAbstractSlider" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractSlider" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -170,7 +170,7 @@ Constructor\&. The scale is initialized to [0\&.0, 100\&.0], the number of steps
 .PP
 The initial value is invalid\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .RE
@@ -181,14 +181,14 @@ The initial value is invalid\&.
 .SS "double QwtAbstractSlider::incrementedValue (double value, int stepCount) const\fC [protected]\fP"
 Increment a value
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .br
 \fIstepCount\fP Number of steps
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Incremented value 
 .RE
@@ -199,12 +199,12 @@ Increment the slider
 .PP
 The step size depends on the number of \fBtotalSteps()\fP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstepCount\fP Number of steps 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTotalSteps()\fP, \fBincrementedValue()\fP 
 .RE
@@ -213,12 +213,12 @@ The step size depends on the number of \fBtotalSteps()\fP
 .SS "bool QwtAbstractSlider::invertedControls () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the controls are inverted 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetInvertedControls()\fP 
 .RE
@@ -227,12 +227,12 @@ True, when the controls are inverted
 .SS "bool QwtAbstractSlider::isReadOnly () const"
 In read only mode the slider can't be controlled by mouse or keyboard\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if read only 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetReadOnly()\fP 
 .RE
@@ -243,17 +243,17 @@ true if read only
 .PP
 Determine what to do when the user presses a mouse button\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturn values:\fP
+\fBReturn values\fP
 .RS 4
 \fITrue,when\fP pos is a valid scroll position 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBscrolledTo()\fP 
 .RE
@@ -264,12 +264,12 @@ Implemented in \fBQwtKnob\fP, \fBQwtDial\fP, and \fBQwtSlider\fP\&.
 .SS "bool QwtAbstractSlider::isTracking () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when tracking has been enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTracking()\fP 
 .RE
@@ -278,7 +278,7 @@ True, when tracking has been enabled
 .SS "bool QwtAbstractSlider::isValid () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the value is invalid 
 .RE
@@ -323,12 +323,12 @@ Qt::Key_End
  Set the value to the \fBmaximum()\fP
 .PP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Key event 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisReadOnly()\fP 
 .RE
@@ -339,7 +339,7 @@ Reimplemented in \fBQwtCompass\fP\&.
 .SS "void QwtAbstractSlider::mouseMoveEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Mouse Move Event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -348,7 +348,7 @@ Mouse Move Event handler
 .SS "void QwtAbstractSlider::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Mouse press event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -359,7 +359,7 @@ Reimplemented in \fBQwtSlider\fP\&.
 .SS "void QwtAbstractSlider::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Mouse Release Event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -370,12 +370,12 @@ Reimplemented in \fBQwtSlider\fP\&.
 .SS "uint QwtAbstractSlider::pageSteps () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of steps 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPageSteps()\fP, \fBtotalSteps()\fP, \fBsingleSteps()\fP 
 .RE
@@ -392,17 +392,17 @@ Reimplemented in \fBQwtDial\fP, and \fBQwtSlider\fP\&.
 .PP
 Determine the value for a new position of the movable part of the slider\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value for the mouse position 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisScrollPosition()\fP 
 .RE
@@ -417,12 +417,12 @@ Usually scrolling the mouse wheel 'up' and using keys like page up will increase
 .PP
 Inverting the controls might be f\&.e\&. useful for a vertical slider with an inverted scale ( decreasing from top to bottom )\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Invert controls, when true
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinvertedControls()\fP, keyEvent(), \fBwheelEvent()\fP 
 .RE
@@ -433,12 +433,12 @@ Inverting the controls might be f\&.e\&. useful for a vertical slider with an in
 .PP
 Set the number of steps for a page increment\&. The range of the slider is divided into a number of steps from which the value increments according to user inputs depend\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstepCount\fP Number of steps
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpageSteps()\fP, \fBsetTotalSteps()\fP, \fBsetSingleSteps()\fP 
 .RE
@@ -449,17 +449,17 @@ En/Disable read only mode
 .PP
 In read only mode the slider can't be controlled by mouse or keyboard\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enables in case of true 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisReadOnly()\fP
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The focus policy is set to Qt::StrongFocus or Qt::NoFocus 
 .RE
@@ -470,12 +470,12 @@ The focus policy is set to Qt::StrongFocus or Qt::NoFocus
 .PP
 Set the number of steps for a single increment\&. The range of the slider is divided into a number of steps from which the value increments according to user inputs depend\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstepCount\fP Number of steps
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsingleSteps()\fP, \fBsetTotalSteps()\fP, \fBsetPageSteps()\fP 
 .RE
@@ -486,12 +486,12 @@ Set the number of steps for a single increment\&. The range of the slider is div
 .PP
 Enable step alignment\&. When step alignment is enabled values resulting from slider movements are aligned to the step size\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP Enable step alignment when true 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBstepAlignment()\fP 
 .RE
@@ -504,12 +504,12 @@ Set the number of steps\&. The range of the slider is divided into a number of s
 .PP
 The default setting is 100\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstepCount\fP Number of steps
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtotalSteps()\fP, \fBsetSingleSteps()\fP, \fBsetPageSteps()\fP 
 .RE
@@ -522,12 +522,12 @@ Enables or disables tracking\&. If tracking is enabled, the slider emits the \fB
 .PP
 Tracking is enabled by default\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP \fCtrue\fP (enable) or \fCfalse\fP (disable) tracking\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisTracking()\fP, \fBsliderMoved()\fP 
 .RE
@@ -536,12 +536,12 @@ Tracking is enabled by default\&.
 .SS "void QwtAbstractSlider::setValid (bool on)"
 Set the value to be valid/invalid
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP When true, the value is invalidated
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValue()\fP 
 .RE
@@ -550,12 +550,12 @@ Set the value to be valid/invalid
 .SS "void QwtAbstractSlider::setValue (double value)\fC [slot]\fP"
 Set the slider to the specified value
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP New value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValid()\fP, \fBsliderChange()\fP, \fBvalueChanged()\fP 
 .RE
@@ -564,12 +564,12 @@ Set the slider to the specified value
 .SS "void QwtAbstractSlider::setWrapping (bool on)"
 If wrapping is true stepping up from \fBupperBound()\fP value will take you to the \fBminimum()\fP value and vice versa\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP En/Disable wrapping 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBwrapping()\fP 
 .RE
@@ -578,12 +578,12 @@ If wrapping is true stepping up from \fBupperBound()\fP value will take you to t
 .SS "uint QwtAbstractSlider::singleSteps () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of steps 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSingleSteps()\fP, \fBtotalSteps()\fP, \fBpageSteps()\fP 
 .RE
@@ -592,12 +592,12 @@ Number of steps
 .SS "void QwtAbstractSlider::sliderMoved (double value)\fC [signal]\fP"
 This signal is emitted when the user moves the slider with the mouse\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP New value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalueChanged()\fP 
 .RE
@@ -610,12 +610,12 @@ This signal is emitted when the user releases the movable part of the slider\&.
 .SS "bool QwtAbstractSlider::stepAlignment () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when step alignment is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStepAlignment()\fP 
 .RE
@@ -624,12 +624,12 @@ True, when step alignment is enabled
 .SS "uint QwtAbstractSlider::totalSteps () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of steps 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTotalSteps()\fP, \fBsingleSteps()\fP, \fBpageSteps()\fP 
 .RE
@@ -640,12 +640,12 @@ Number of steps
 .PP
 Notify a change of value\&. When tracking is enabled (default setting), this signal will be emitted every time the value changes\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP New value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTracking()\fP, \fBsliderMoved()\fP 
 .RE
@@ -658,7 +658,7 @@ In/decreases the value by s number of steps\&. The direction depends on the \fBi
 .PP
 When the control or shift modifier is pressed the wheel delta ( divided by 120 ) is mapped to an increment according to \fBpageSteps()\fP\&. Otherwise it is mapped to \fBsingleSteps()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Wheel event 
 .RE
@@ -669,12 +669,12 @@ Reimplemented in \fBQwtDial\fP\&.
 .SS "bool QwtAbstractSlider::wrapping () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when wrapping is set 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetWrapping()\fP 
 .RE

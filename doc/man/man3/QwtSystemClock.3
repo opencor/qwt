@@ -1,4 +1,4 @@
-.TH "QwtSystemClock" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSystemClock" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -43,7 +43,7 @@ Precision and time intervals are multiples of milliseconds (ms)\&.
 .PP
 ( \fBQwtSystemClock\fP is obsolete since Qt 4\&.8 as QElapsedTimer offers the same precision )
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The implementation uses high-resolution performance counter on Windows, mach_absolute_time() on the Mac or POSIX timers on other systems\&. If none is available it falls back on QTimer\&. 
 .RE
@@ -54,7 +54,7 @@ The implementation uses high-resolution performance counter on Windows, mach_abs
 .SS "double QwtSystemClock::elapsed () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of milliseconds that have elapsed since the last time \fBstart()\fP or \fBrestart()\fP was called or 0\&.0 for null clocks\&. 
 .RE
@@ -63,7 +63,7 @@ Number of milliseconds that have elapsed since the last time \fBstart()\fP or \f
 .SS "bool QwtSystemClock::isNull () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if the clock has never been started\&. 
 .RE
@@ -72,7 +72,7 @@ true if the clock has never been started\&.
 .SS "double QwtSystemClock::restart ()"
 Set the start time to the current time 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Time, that is elapsed since the previous start time\&. 
 .RE

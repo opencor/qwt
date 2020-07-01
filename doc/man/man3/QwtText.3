@@ -1,4 +1,4 @@
-.TH "QwtText" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtText" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -180,7 +180,7 @@ Render Flags
  Flags from Qt::AlignmentFlag and Qt::TextFlag used like in QPainter::drawText()\&.
 .PP
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtTextEngine\fP, \fBQwtTextLabel\fP 
 .RE
@@ -219,7 +219,7 @@ The text has an individual background\&.
 .PP
 Text format\&. The text format defines the \fBQwtTextEngine\fP, that is used to render the text\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtTextEngine\fP, \fBsetTextEngine()\fP 
 .RE
@@ -258,7 +258,7 @@ The number of text formats can be extended using setTextEngine\&. Formats >= \fB
 .SS "QwtText::QwtText (const QString & text = \fCQString()\fP, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text content 
 .br
@@ -271,12 +271,12 @@ Constructor
 .SS "QBrush QwtText::backgroundBrush () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Background brush 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBackgroundBrush()\fP, \fBborderPen()\fP 
 .RE
@@ -285,12 +285,12 @@ Background brush
 .SS "QPen QwtText::borderPen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Background pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBorderPen()\fP, \fBbackgroundBrush()\fP 
 .RE
@@ -299,12 +299,12 @@ Background pen
 .SS "double QwtText::borderRadius () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Radius for the corners of the border frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBorderRadius()\fP, \fBborderPen()\fP, \fBbackgroundBrush()\fP 
 .RE
@@ -313,7 +313,7 @@ Radius for the corners of the border frame
 .SS "void QwtText::draw (QPainter * painter, const QRectF & rect) const"
 Draw a text into a rectangle
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -324,14 +324,14 @@ Draw a text into a rectangle
 .SS "double QwtText::heightForWidth (double width, const QFont & defaultFont = \fCQFont()\fP) const"
 Find the height for a given width
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdefaultFont\fP Font, used for the calculation if the text has no font 
 .br
 \fIwidth\fP Width
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated height 
 .RE
@@ -340,7 +340,7 @@ Calculated height
 .SS "bool QwtText::isEmpty () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBtext()\fP\&.\fBisEmpty()\fP 
 .RE
@@ -349,7 +349,7 @@ Calculated height
 .SS "bool QwtText::isNull () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBtext()\fP\&.\fBisNull()\fP 
 .RE
@@ -358,12 +358,12 @@ Calculated height
 .SS "int QwtText::renderFlags () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Render flags 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRenderFlags()\fP 
 .RE
@@ -372,12 +372,12 @@ Render flags
 .SS "void QwtText::setBackgroundBrush (const QBrush & brush)"
 Set the background brush
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbrush\fP Background brush 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbackgroundBrush()\fP, \fBsetBorderPen()\fP 
 .RE
@@ -386,12 +386,12 @@ Set the background brush
 .SS "void QwtText::setBorderPen (const QPen & pen)"
 Set the background pen
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP Background pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBborderPen()\fP, \fBsetBackgroundBrush()\fP 
 .RE
@@ -400,12 +400,12 @@ Set the background pen
 .SS "void QwtText::setBorderRadius (double radius)"
 Set the radius for the corners of the border frame
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIradius\fP Radius of a rounded corner 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBborderRadius()\fP, \fBsetBorderPen()\fP, \fBsetBackgroundBrush()\fP 
 .RE
@@ -414,12 +414,12 @@ Set the radius for the corners of the border frame
 .SS "void QwtText::setColor (const QColor & color)"
 Set the pen color used for drawing the text\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Color 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Setting the color might have no effect, when the text contains control sequences for setting colors\&. 
 .RE
@@ -428,12 +428,12 @@ Setting the color might have no effect, when the text contains control sequences
 .SS "void QwtText::setFont (const QFont & font)"
 Set the font\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Setting the font might have no effect, when the text contains control sequences for setting fonts\&. 
 .RE
@@ -442,14 +442,14 @@ Setting the font might have no effect, when the text contains control sequences 
 .SS "void QwtText::setLayoutAttribute (\fBLayoutAttribute\fP attribute, bool on = \fCtrue\fP)"
 Change a layout attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Layout attribute 
 .br
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestLayoutAttribute()\fP 
 .RE
@@ -458,19 +458,19 @@ Change a layout attribute
 .SS "void QwtText::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Change a paint attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Paint attribute 
 .br
 \fIon\fP On/Off
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Used by \fBsetFont()\fP, \fBsetColor()\fP, \fBsetBorderPen()\fP and \fBsetBackgroundBrush()\fP 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestPaintAttribute()\fP 
 .RE
@@ -481,17 +481,17 @@ Used by \fBsetFont()\fP, \fBsetColor()\fP, \fBsetBorderPen()\fP and \fBsetBackgr
 .PP
 Change the render flags\&. The default setting is Qt::AlignCenter
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrenderFlags\fP Bitwise OR of the flags used like in QPainter::drawText()
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrenderFlags()\fP, \fBQwtTextEngine::draw()\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Some renderFlags might have no effect, depending on the text format\&. 
 .RE
@@ -500,14 +500,14 @@ Some renderFlags might have no effect, depending on the text format\&.
 .SS "void QwtText::setText (const QString & text, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
 Assign a new text content
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text content 
 .br
 \fItextFormat\fP Text format
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtext()\fP 
 .RE
@@ -520,19 +520,19 @@ With setTextEngine it is possible to extend Qwt with other types of text formats
 .PP
 For \fBQwtText::PlainText\fP it is not allowed to assign a engine == NULL\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIformat\fP Text format 
 .br
 \fIengine\fP Text engine
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtMathMLTextEngine\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 Using \fBQwtText::AutoText\fP does nothing\&. 
 .RE
@@ -541,17 +541,17 @@ Using \fBQwtText::AutoText\fP does nothing\&.
 .SS "bool QwtText::testLayoutAttribute (\fBLayoutAttribute\fP attribute) const"
 Test a layout attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Layout attribute 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if attribute is enabled
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLayoutAttribute()\fP 
 .RE
@@ -560,17 +560,17 @@ true, if attribute is enabled
 .SS "bool QwtText::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 Test a paint attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Paint attribute 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if attribute is enabled
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPaintAttribute()\fP 
 .RE
@@ -579,12 +579,12 @@ true, if attribute is enabled
 .SS "QString QwtText::text () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Text as QString\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetText()\fP 
 .RE
@@ -597,14 +597,14 @@ In case of \fBQwtText::AutoText\fP the first text engine (beside \fBQwtPlainText
 .PP
 If no text engine is registered for the format \fBQwtPlainTextEngine\fP is returnd\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text, needed in case of AutoText 
 .br
 \fIformat\fP Text format
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Corresponding text engine 
 .RE
@@ -615,12 +615,12 @@ Corresponding text engine
 .PP
 Find the text engine for a text format\&. textEngine can be used to find out if a text format is supported\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIformat\fP Text format 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The text engine, or NULL if no engine is available\&. 
 .RE
@@ -629,12 +629,12 @@ The text engine, or NULL if no engine is available\&.
 .SS "QSizeF QwtText::textSize (const QFont & defaultFont = \fCQFont()\fP) const"
 Returns the size, that is needed to render text
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdefaultFont\fP Font of the text 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated size 
 .RE
@@ -643,17 +643,17 @@ Calculated size
 .SS "QColor QwtText::usedColor (const QColor & defaultColor) const"
 Return the color of the text, if it has one\&. Otherwise return defaultColor\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdefaultColor\fP Default color 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Color used for drawing the text
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetColor()\fP, \fBcolor()\fP, \fBPaintAttributes\fP 
 .RE
@@ -662,17 +662,17 @@ Color used for drawing the text
 .SS "QFont QwtText::usedFont (const QFont & defaultFont) const"
 Return the font of the text, if it has one\&. Otherwise return defaultFont\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdefaultFont\fP Default font 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Font used for drawing the text
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFont()\fP, \fBfont()\fP, \fBPaintAttributes\fP 
 .RE

@@ -1,4 +1,4 @@
-.TH "QwtScaleMap" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleMap" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -101,52 +101,10 @@ Constructor\&. The scale and paint device intervals are both set to [0,1]\&.
 Destructor 
 .SH "Member Function Documentation"
 .PP 
-.SS "double QwtScaleMap::invTransform (double p) const\fC [inline]\fP"
-Transform an paint device value into a value in the interval of the scale\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIp\fP Value relative to the coordinates of the paint device 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Transformed value
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBtransform()\fP 
-.RE
-.PP
-
-.SS "QRectF QwtScaleMap::invTransform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
-Transform a rectangle from paint to scale coordinates
-.PP
-\fBParameters:\fP
-.RS 4
-\fIxMap\fP X map 
-.br
-\fIyMap\fP Y map 
-.br
-\fIrect\fP Rectangle in paint coordinates 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Rectangle in scale coordinates 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBtransform()\fP 
-.RE
-.PP
-
 .SS "QPointF QwtScaleMap::invTransform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QPointF & pos)\fC [static]\fP"
 Transform a rectangle from paint to scale coordinates
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP X map 
 .br
@@ -155,12 +113,54 @@ Transform a rectangle from paint to scale coordinates
 \fIpos\fP Position in paint coordinates 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Position in scale coordinates 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
+.RS 4
+\fBtransform()\fP 
+.RE
+.PP
+
+.SS "QRectF QwtScaleMap::invTransform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
+Transform a rectangle from paint to scale coordinates
+.PP
+\fBParameters\fP
+.RS 4
+\fIxMap\fP X map 
+.br
+\fIyMap\fP Y map 
+.br
+\fIrect\fP Rectangle in paint coordinates 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Rectangle in scale coordinates 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBtransform()\fP 
+.RE
+.PP
+
+.SS "double QwtScaleMap::invTransform (double p) const\fC [inline]\fP"
+Transform an paint device value into a value in the interval of the scale\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Value relative to the coordinates of the paint device 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Transformed value
+.RE
+.PP
+\fBSee also\fP
 .RS 4
 \fBtransform()\fP 
 .RE
@@ -169,7 +169,7 @@ Position in scale coordinates
 .SS "bool QwtScaleMap::isInverting () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when ( \fBp1()\fP < \fBp2()\fP ) != ( \fBs1()\fP < \fBs2()\fP ) 
 .RE
@@ -178,7 +178,7 @@ True, when ( \fBp1()\fP < \fBp2()\fP ) != ( \fBs1()\fP < \fBs2()\fP )
 .SS "double QwtScaleMap::p1 () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 First border of the paint interval 
 .RE
@@ -187,7 +187,7 @@ First border of the paint interval
 .SS "double QwtScaleMap::p2 () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Second border of the paint interval 
 .RE
@@ -196,7 +196,7 @@ Second border of the paint interval
 .SS "double QwtScaleMap::pDist () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 qwtAbs(\fBp2()\fP - \fBp1()\fP) 
 .RE
@@ -205,7 +205,7 @@ qwtAbs(\fBp2()\fP - \fBp1()\fP)
 .SS "double QwtScaleMap::s1 () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 First border of the scale interval 
 .RE
@@ -214,7 +214,7 @@ First border of the scale interval
 .SS "double QwtScaleMap::s2 () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Second border of the scale interval 
 .RE
@@ -223,7 +223,7 @@ Second border of the scale interval
 .SS "double QwtScaleMap::sDist () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 qwtAbs(\fBs2()\fP - \fBs1()\fP) 
 .RE
@@ -234,7 +234,7 @@ qwtAbs(\fBs2()\fP - \fBs1()\fP)
 .PP
 Specify the borders of the paint device interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIp1\fP first border 
 .br
@@ -247,14 +247,14 @@ Specify the borders of the paint device interval\&.
 .PP
 Specify the borders of the scale interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs1\fP first border 
 .br
 \fIs2\fP second border 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 scales might be aligned to transformation depending boundaries 
 .RE
@@ -262,52 +262,10 @@ scales might be aligned to transformation depending boundaries
 
 .SS "void QwtScaleMap::setTransformation (\fBQwtTransform\fP * transform)"
 Initialize the map with a transformation 
-.SS "double QwtScaleMap::transform (double s) const\fC [inline]\fP"
-Transform a point related to the scale interval into an point related to the interval of the paint device
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Value relative to the coordinates of the scale 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Transformed value
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBinvTransform()\fP 
-.RE
-.PP
-
-.SS "QRectF QwtScaleMap::transform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
-Transform a rectangle from scale to paint coordinates
-.PP
-\fBParameters:\fP
-.RS 4
-\fIxMap\fP X map 
-.br
-\fIyMap\fP Y map 
-.br
-\fIrect\fP Rectangle in scale coordinates 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Rectangle in paint coordinates
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBinvTransform()\fP 
-.RE
-.PP
-
 .SS "QPointF QwtScaleMap::transform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QPointF & pos)\fC [static]\fP"
 Transform a point from scale to paint coordinates
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxMap\fP X map 
 .br
@@ -316,12 +274,54 @@ Transform a point from scale to paint coordinates
 \fIpos\fP Position in scale coordinates 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Position in paint coordinates
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
+.RS 4
+\fBinvTransform()\fP 
+.RE
+.PP
+
+.SS "QRectF QwtScaleMap::transform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
+Transform a rectangle from scale to paint coordinates
+.PP
+\fBParameters\fP
+.RS 4
+\fIxMap\fP X map 
+.br
+\fIyMap\fP Y map 
+.br
+\fIrect\fP Rectangle in scale coordinates 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Rectangle in paint coordinates
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBinvTransform()\fP 
+.RE
+.PP
+
+.SS "double QwtScaleMap::transform (double s) const\fC [inline]\fP"
+Transform a point related to the scale interval into an point related to the interval of the paint device
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP Value relative to the coordinates of the scale 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Transformed value
+.RE
+.PP
+\fBSee also\fP
 .RS 4
 \fBinvTransform()\fP 
 .RE

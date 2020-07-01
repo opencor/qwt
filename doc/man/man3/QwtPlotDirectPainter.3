@@ -1,4 +1,4 @@
-.TH "QwtPlotDirectPainter" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotDirectPainter" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -76,7 +76,7 @@ Often applications want to display samples while they are collected\&. When ther
 .PP
 On certain environments it might be important to calculate a proper clip region before painting\&. F\&.e\&. for Qt Embedded only the clipped part of the backing store will be copied to a ( maybe unaccelerated ) frame buffer\&.
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 Incremental painting will only help when no replot is triggered by another operation ( like changing scales ) and nothing needs to be erased\&. 
 .RE
@@ -89,7 +89,7 @@ Incremental painting will only help when no replot is triggered by another opera
 .PP
 Paint attributes\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAttribute()\fP, \fBtestAttribute()\fP, \fBdrawSeries()\fP 
 .RE
@@ -112,12 +112,12 @@ When \fBQwtPlotCanvas::BackingStore\fP is enabled the painter has to paint to th
 .SS "QRegion QwtPlotDirectPainter::clipRegion () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Currently set clip region\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetClipRegion()\fP, \fBsetClipping()\fP, \fBhasClipping()\fP 
 .RE
@@ -130,7 +130,7 @@ Draw a set of points of a seriesItem\&. When observing an measurement while it i
 .PP
 Setting plot()->canvas()->setAttribute(Qt::WA_PaintOutsidePaintEvent, true); will result in faster painting, if the paint engine of the canvas widget supports this feature\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIseriesItem\fP Item to be painted 
 .br
@@ -143,12 +143,12 @@ Setting plot()->canvas()->setAttribute(Qt::WA_PaintOutsidePaintEvent, true); wil
 .SS "bool QwtPlotDirectPainter::hasClipping () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, when clipping is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetClipping()\fP, \fBclipRegion()\fP, \fBsetClipRegion()\fP 
 .RE
@@ -157,14 +157,14 @@ true, when clipping is enabled
 .SS "void QwtPlotDirectPainter::setAttribute (\fBAttribute\fP attribute, bool on)"
 Change an attribute
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute to change 
 .br
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBtestAttribute()\fP 
 .RE
@@ -173,12 +173,12 @@ Change an attribute
 .SS "void QwtPlotDirectPainter::setClipping (bool enable)"
 En/Disables clipping
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIenable\fP Enables clipping is true, disable it otherwise 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhasClipping()\fP, \fBclipRegion()\fP, \fBsetClipRegion()\fP 
 .RE
@@ -189,12 +189,12 @@ En/Disables clipping
 .PP
 Assign a clip region and enable clipping\&. Depending on the environment setting a proper clip region might improve the performance heavily\&. F\&.e\&. on Qt embedded only the clipped part of the backing store will be copied to a ( maybe unaccelerated ) frame buffer device\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIregion\fP Clip region 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBclipRegion()\fP, \fBhasClipping()\fP, \fBsetClipping()\fP 
 .RE
@@ -203,17 +203,17 @@ Assign a clip region and enable clipping\&. Depending on the environment setting
 .SS "bool QwtPlotDirectPainter::testAttribute (\fBAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when attribute is enabled 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute to be tested 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBAttribute\fP, \fBsetAttribute()\fP 
 .RE

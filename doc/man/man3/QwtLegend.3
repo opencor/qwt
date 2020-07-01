@@ -1,4 +1,4 @@
-.TH "QwtLegend" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegend" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -125,7 +125,7 @@ The legend widget\&.
 
 The \fBQwtLegend\fP widget is a tabular arrangement of legend items\&. Legend items might be any type of widget, but in general they will be a \fBQwtLegendLabel\fP\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtLegendLabel\fP, \fBQwtPlotItem\fP, \fBQwtPlot\fP 
 .RE
@@ -136,7 +136,7 @@ The \fBQwtLegend\fP widget is a tabular arrangement of legend items\&. Legend it
 .SS "QwtLegend::QwtLegend (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .RE
@@ -147,7 +147,7 @@ Constructor
 .SS "void QwtLegend::checked (const QVariant & itemInfo, bool on, int index)\fC [signal]\fP"
 A signal which is emitted when the user has clicked on a legend label, which is in \fBQwtLegendData::Checkable\fP mode
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info for the item of the selected legend label 
 .br
@@ -156,12 +156,12 @@ A signal which is emitted when the user has clicked on a legend label, which is 
 \fIon\fP True when the legend label is checked
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 clicks are disabled as default 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetDefaultItemMode()\fP, \fBdefaultItemMode()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -170,19 +170,19 @@ clicks are disabled as default
 .SS "void QwtLegend::clicked (const QVariant & itemInfo, int index)\fC [signal]\fP"
 A signal which is emitted when the user has clicked on a legend label, which is in \fBQwtLegendData::Clickable\fP mode\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info for the item item of the selected legend item 
 .br
 \fIindex\fP Index of the legend label in the list of widgets that are associated with the plot item
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 clicks are disabled as default 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetDefaultItemMode()\fP, \fBdefaultItemMode()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -191,7 +191,7 @@ clicks are disabled as default
 .SS "QWidget * QwtLegend::contentsWidget ()"
 The contents widget is the only child of the viewport of the internal QScrollArea and the parent widget of all legend items\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Container widget of the legend items 
 .RE
@@ -200,7 +200,7 @@ Container widget of the legend items
 .SS "const QWidget * QwtLegend::contentsWidget () const"
 The contents widget is the only child of the viewport of the internal QScrollArea and the parent widget of all legend items\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Container widget of the legend items 
 .RE
@@ -211,17 +211,17 @@ Container widget of the legend items
 .PP
 Create a widget to be inserted into the legend\&. The default implementation returns a \fBQwtLegendLabel\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIlegendData\fP Attributes of the legend entry 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Widget representing data on the legend
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 \fBupdateWidget()\fP will called soon after \fBcreateWidget()\fP with the same attributes\&. 
 .RE
@@ -230,12 +230,12 @@ Widget representing data on the legend
 .SS "\fBQwtLegendData::Mode\fP QwtLegend::defaultItemMode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Default item mode 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetDefaultItemMode()\fP 
 .RE
@@ -244,14 +244,14 @@ Default item mode
 .SS "bool QwtLegend::eventFilter (QObject * object, QEvent * event)\fC [virtual]\fP"
 Handle QEvent::ChildRemoved andQEvent::LayoutRequest events for the \fBcontentsWidget()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIobject\fP Object to be filtered 
 .br
 \fIevent\fP Event
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Forwarded to QwtAbstractLegend::eventFilter() 
 .RE
@@ -260,12 +260,12 @@ Forwarded to QwtAbstractLegend::eventFilter()
 .SS "int QwtLegend::heightForWidth (int width) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The preferred height, for a width\&. 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Width 
 .RE
@@ -274,12 +274,12 @@ The preferred height, for a width\&.
 .SS "QScrollBar * QwtLegend::horizontalScrollBar () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Horizontal scrollbar 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBverticalScrollBar()\fP 
 .RE
@@ -288,7 +288,7 @@ Horizontal scrollbar
 .SS "bool QwtLegend::isEmpty () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when no item is inserted 
 .RE
@@ -303,17 +303,17 @@ Called internally when the legend has been clicked on\&. Emits a \fBclicked()\fP
 .SS "QVariant QwtLegend::itemInfo (const QWidget * widget) const"
 Find the item that is associated to a widget
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidget\fP Widget on the legend 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Associated item info 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlegendWidget()\fP 
 .RE
@@ -322,22 +322,22 @@ Associated item info
 .SS "QWidget * QwtLegend::legendWidget (const QVariant & itemInfo) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 First widget in the list of widgets associated to an item 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info about an item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBitemInfo()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Almost all types of items have only one widget 
 .RE
@@ -346,17 +346,17 @@ Almost all types of items have only one widget
 .SS "QList< QWidget * > QwtLegend::legendWidgets (const QVariant & itemInfo) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 List of widgets associated to a item 
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info about an item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlegendWidget()\fP, \fBitemInfo()\fP, \fBQwtPlot::itemToInfo()\fP 
 .RE
@@ -365,12 +365,12 @@ List of widgets associated to a item
 .SS "uint QwtLegend::maxColumns () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Maximum number of entries in a row 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMaxColumns()\fP, \fBQwtDynGridLayout::maxColumns()\fP 
 .RE
@@ -379,7 +379,7 @@ Maximum number of entries in a row
 .SS "void QwtLegend::renderItem (QPainter * painter, const QWidget * widget, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
 Render a legend entry into a given rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -390,7 +390,7 @@ Render a legend entry into a given rectangle\&.
 \fIfillBackground\fP When true, fill rect with the widget background
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 When widget is not derived from \fBQwtLegendLabel\fP renderItem does nothing beside the background 
 .RE
@@ -399,7 +399,7 @@ When widget is not derived from \fBQwtLegendLabel\fP renderItem does nothing bes
 .SS "void QwtLegend::renderLegend (QPainter * painter, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -408,7 +408,7 @@ Render the legend into a given rectangle\&.
 \fIfillBackground\fP When true, fill rect with the widget background
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrenderLegend()\fP is used by \fBQwtPlotRenderer\fP - not by \fBQwtLegend\fP itself 
 .RE
@@ -419,12 +419,12 @@ Implements \fBQwtAbstractLegend\fP\&.
 .SS "int QwtLegend::scrollExtent (Qt::Orientation orientation) const\fC [virtual]\fP"
 Return the extent, that is needed for the scrollbars
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIorientation\fP Orientation 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The width of the vertical scrollbar for Qt::Horizontal and v\&.v\&. 
 .RE
@@ -437,17 +437,17 @@ Reimplemented from \fBQwtAbstractLegend\fP\&.
 .PP
 Set the default mode for legend labels\&. Legend labels will be constructed according to the attributes in a \fBQwtLegendData\fP object\&. When it doesn't contain a value for the QwtLegendData::ModeRole the label will be initialized with the default mode of the legend\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP Default item mode
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 itemMode(), \fBQwtLegendData::value()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Changing the mode doesn't have any effect on existing labels\&. 
 .RE
@@ -458,12 +458,12 @@ Changing the mode doesn't have any effect on existing labels\&.
 .PP
 Set the maximum number of entries in a row\&. F\&.e when the maximum is set to 1 all items are aligned vertically\&. 0 means unlimited
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumColums\fP Maximum number of entries in a row
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmaxColumns()\fP, \fBQwtDynGridLayout::setMaxColumns()\fP 
 .RE
@@ -474,7 +474,7 @@ Set the maximum number of entries in a row\&. F\&.e when the maximum is set to 1
 .PP
 Update the entries for an item\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitemInfo\fP Info for an item 
 .br
@@ -487,19 +487,19 @@ Update the entries for an item\&.
 .PP
 Update the widget\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidget\fP Usually a \fBQwtLegendLabel\fP 
 .br
 \fIlegendData\fP Attributes to be displayed
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBcreateWidget()\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 When widget is no \fBQwtLegendLabel\fP \fBupdateWidget()\fP does nothing\&. 
 .RE
@@ -508,12 +508,12 @@ When widget is no \fBQwtLegendLabel\fP \fBupdateWidget()\fP does nothing\&.
 .SS "QScrollBar * QwtLegend::verticalScrollBar () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Vertical scrollbar 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhorizontalScrollBar()\fP 
 .RE
