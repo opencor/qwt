@@ -1,4 +1,4 @@
-.TH "QwtLegendData" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegendData" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -68,12 +68,12 @@ Attributes of an entry on a legend\&.
 .PP
 By overloading \fBQwtPlotItem::legendData()\fP any other set of attributes could be used, that can be handled by a modified ( or completely different ) implementation of a legend\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtLegend\fP, \fBQwtPlotLegendItem\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The stockchart example implements a legend as a tree with checkable items 
 .RE
@@ -102,12 +102,12 @@ The legend item is checkable, like a checkable button\&.
 .SS "bool QwtLegendData::hasRole (int role) const"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrole\fP Attribute role 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the internal map has an entry for role 
 .RE
@@ -116,7 +116,7 @@ True, when the internal map has an entry for role
 .SS "\fBQwtGraphic\fP QwtLegendData::icon () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value of the IconRole attribute 
 .RE
@@ -125,7 +125,7 @@ Value of the IconRole attribute
 .SS "bool QwtLegendData::isValid () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the internal map is empty 
 .RE
@@ -134,7 +134,7 @@ True, when the internal map is empty
 .SS "\fBQwtLegendData::Mode\fP QwtLegendData::mode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value of the ModeRole attribute 
 .RE
@@ -143,14 +143,14 @@ Value of the ModeRole attribute
 .SS "void QwtLegendData::setValue (int role, const QVariant & data)"
 Set an attribute value
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrole\fP Attribute role 
 .br
 \fIdata\fP Attribute value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalue()\fP 
 .RE
@@ -161,12 +161,12 @@ Set the legend attributes
 .PP
 \fBQwtLegendData\fP actually is a QMap<int, QVariant> with some convenience interfaces
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImap\fP Values 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBvalues()\fP 
 .RE
@@ -175,7 +175,7 @@ Set the legend attributes
 .SS "\fBQwtText\fP QwtLegendData::title () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value of the TitleRole attribute 
 .RE
@@ -184,12 +184,12 @@ Value of the TitleRole attribute
 .SS "QVariant QwtLegendData::value (int role) const"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrole\fP Attribute role 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Attribute value for a specific role 
 .RE
@@ -198,12 +198,12 @@ Attribute value for a specific role
 .SS "const QMap< int, QVariant > & QwtLegendData::values () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Legend attributes 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetValues()\fP 
 .RE

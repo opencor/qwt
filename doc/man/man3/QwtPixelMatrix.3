@@ -1,4 +1,4 @@
-.TH "QwtPixelMatrix" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPixelMatrix" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ A bit field corresponding to the pixels of a rectangle\&.
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Bounding rectangle for the matrix 
 .RE
@@ -66,14 +66,14 @@ Constructor\&.
 .PP
 Calculate the index in the bit field corresponding to a position\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP X-coordinate 
 .br
 \fIy\fP Y-coordinate 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Index, when \fBrect()\fP contains pos - otherwise -1\&. 
 .RE
@@ -82,7 +82,7 @@ Index, when \fBrect()\fP contains pos - otherwise -1\&.
 .SS "QRect QwtPixelMatrix::rect () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
@@ -91,12 +91,12 @@ Bounding rectangle
 .SS "void QwtPixelMatrix::setRect (const QRect & rect)"
 Set the bounding rectangle of the matrix
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Bounding rectangle
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 All bits are cleared 
 .RE
@@ -107,7 +107,7 @@ All bits are cleared
 .PP
 Set a pixel and test if a pixel has been set before\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP X-coordinate 
 .br
@@ -116,7 +116,7 @@ Set a pixel and test if a pixel has been set before\&.
 \fIon\fP Set/Clear the pixel
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, when pos is outside of \fBrect()\fP, or when the pixel was set before\&. 
 .RE
@@ -127,14 +127,14 @@ true, when pos is outside of \fBrect()\fP, or when the pixel was set before\&.
 .PP
 Test if a pixel has been set\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP X-coordinate 
 .br
 \fIy\fP Y-coordinate
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, when pos is outside of \fBrect()\fP, or when the pixel has already been set\&. 
 .RE

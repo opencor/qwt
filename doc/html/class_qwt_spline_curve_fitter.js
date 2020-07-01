@@ -12,7 +12,7 @@ var class_qwt_spline_curve_fitter =
     [ "setFitMode", "class_qwt_spline_curve_fitter.html#a8381be57ee16b5a2bdacafbd5d71908b", null ],
     [ "setSpline", "class_qwt_spline_curve_fitter.html#a7f819ad010b19d58179655e4ceb1c6f1", null ],
     [ "setSplineSize", "class_qwt_spline_curve_fitter.html#af468f8218d57a2e8d07f4bf6aafda8dc", null ],
-    [ "spline", "class_qwt_spline_curve_fitter.html#a968c67ccf4ebf4642ceb9cf749e3642d", null ],
     [ "spline", "class_qwt_spline_curve_fitter.html#ac501260a25953e1ded6bbc84c3250fa8", null ],
+    [ "spline", "class_qwt_spline_curve_fitter.html#a968c67ccf4ebf4642ceb9cf749e3642d", null ],
     [ "splineSize", "class_qwt_spline_curve_fitter.html#af7cc3a6b3dc82736e643bf5b346b2c6e", null ]
 ];

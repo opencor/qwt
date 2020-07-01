@@ -1,4 +1,4 @@
-.TH "QwtDial" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDial" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -173,12 +173,12 @@ A dial contains a scale and a needle indicating the current value of the dial\&.
 .PP
 Often dials have to be updated very often according to values from external devices\&. For these high refresh rates \fBQwtDial\fP caches as much as possible\&. For derived classes it might be necessary to clear these caches manually according to attribute changes using \fBinvalidateCache()\fP\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtCompass\fP, \fBQwtAnalogClock\fP, \fBQwtDialNeedle\fP 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The controls and dials examples shows different types of dials\&. 
 .PP
@@ -224,7 +224,7 @@ QFrame::Sunken\&.
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget
 .RE
@@ -239,12 +239,12 @@ The default mode is \fBQwtDial::RotateNeedle\fP\&.
 .SS "QRect QwtDial::boundingRect () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 bounding rectangle of the dial including the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBscaleInnerRect()\fP, \fBinnerRect()\fP 
 .RE
@@ -253,7 +253,7 @@ bounding rectangle of the dial including the frame
 .SS "void QwtDial::changeEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Change Event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Change event
 .RE
@@ -264,12 +264,12 @@ Invalidates internal paint caches if necessary
 .PP
 Draw the contents inside the frame\&. QPalette::Window is the background color outside of the frame\&. QPalette::Base is the background color inside the frame\&. QPalette::WindowText is the background color inside the scale\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBboundingRect()\fP, \fBinnerRect()\fP, \fBscaleInnerRect()\fP, QWidget::setPalette() 
 .RE
@@ -278,7 +278,7 @@ Draw the contents inside the frame\&. QPalette::Window is the background color o
 .SS "void QwtDial::drawFocusIndicator (QPainter * painter) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the focus indicator 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .RE
@@ -287,12 +287,12 @@ Draw the focus indicator
 .SS "void QwtDial::drawFrame (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the frame around the dial
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlineWidth()\fP, \fBframeShadow()\fP 
 .RE
@@ -301,7 +301,7 @@ Draw the frame around the dial
 .SS "void QwtDial::drawNeedle (QPainter * painter, const QPointF & center, double radius, double direction, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -320,7 +320,7 @@ Reimplemented in \fBQwtAnalogClock\fP\&.
 .SS "void QwtDial::drawScale (QPainter * painter, const QPointF & center, double radius) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the scale
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -335,7 +335,7 @@ Draw the contents inside the scale
 .PP
 Paints nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -350,7 +350,7 @@ Reimplemented in \fBQwtCompass\fP\&.
 .SS "\fBQwtDial::Shadow\fP QwtDial::frameShadow () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Frame shadow /sa \fBsetFrameShadow()\fP, \fBlineWidth()\fP, QFrame::frameShadow() 
 .RE
@@ -359,12 +359,12 @@ Frame shadow /sa \fBsetFrameShadow()\fP, \fBlineWidth()\fP, QFrame::frameShadow(
 .SS "QRect QwtDial::innerRect () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 bounding rectangle of the circle inside the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBscaleInnerRect()\fP, \fBboundingRect()\fP 
 .RE
@@ -377,17 +377,17 @@ Invalidate the internal caches used to speed up repainting
 .PP
 Determine what to do when the user presses a mouse button\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturn values:\fP
+\fBReturn values\fP
 .RS 4
 \fITrue,when\fP the inner circle contains pos 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBscrolledTo()\fP 
 .RE
@@ -398,12 +398,12 @@ Implements \fBQwtAbstractSlider\fP\&.
 .SS "int QwtDial::lineWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Line width of the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBframeShadow()\fP, \fBlineWidth()\fP 
 .RE
@@ -412,12 +412,12 @@ Line width of the frame
 .SS "double QwtDial::maxScaleArc () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Upper limit of the scale arc 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScaleArc()\fP 
 .RE
@@ -426,12 +426,12 @@ Upper limit of the scale arc
 .SS "QSize QwtDial::minimumSizeHint () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Minimum size hint 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsizeHint()\fP 
 .RE
@@ -440,12 +440,12 @@ Minimum size hint
 .SS "double QwtDial::minScaleArc () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Lower limit of the scale arc 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScaleArc()\fP 
 .RE
@@ -454,40 +454,40 @@ Lower limit of the scale arc
 .SS "\fBQwtDial::Mode\fP QwtDial::mode () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Mode of the dial\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMode()\fP, \fBorigin()\fP, \fBsetScaleArc()\fP, \fBvalue()\fP 
-.RE
-.PP
-
-.SS "const \fBQwtDialNeedle\fP * QwtDial::needle () const"
-
-.PP
-\fBReturns:\fP
-.RS 4
-needle 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBsetNeedle()\fP 
 .RE
 .PP
 
 .SS "\fBQwtDialNeedle\fP * QwtDial::needle ()"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 needle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
+.RS 4
+\fBsetNeedle()\fP 
+.RE
+.PP
+
+.SS "const \fBQwtDialNeedle\fP * QwtDial::needle () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+needle 
+.RE
+.PP
+\fBSee also\fP
 .RS 4
 \fBsetNeedle()\fP 
 .RE
@@ -496,12 +496,12 @@ needle
 .SS "double QwtDial::origin () const"
 The origin is the angle where scale and needle is relative to\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Origin of the dial 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetOrigin()\fP 
 .RE
@@ -510,7 +510,7 @@ Origin of the dial
 .SS "void QwtDial::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Paint the dial 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Paint event 
 .RE
@@ -523,7 +523,7 @@ Reimplemented from \fBQwtAbstractSlider\fP\&.
 .SS "\fBQwtRoundScaleDraw\fP * QwtDial::scaleDraw ()"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the scale draw 
 .RE
@@ -532,7 +532,7 @@ the scale draw
 .SS "const \fBQwtRoundScaleDraw\fP * QwtDial::scaleDraw () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the scale draw 
 .RE
@@ -541,12 +541,12 @@ the scale draw
 .SS "QRect QwtDial::scaleInnerRect () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 rectangle inside the scale 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBboundingRect()\fP, \fBinnerRect()\fP 
 .RE
@@ -557,17 +557,17 @@ rectangle inside the scale
 .PP
 Determine the value for a new position of the slider handle\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value for the mouse position 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisScrollPosition()\fP 
 .RE
@@ -578,12 +578,12 @@ Implements \fBQwtAbstractSlider\fP\&.
 .SS "void QwtDial::setFrameShadow (\fBShadow\fP shadow)"
 Sets the frame shadow value from the frame style\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIshadow\fP Frame shadow 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, QFrame::setFrameShadow() 
 .RE
@@ -592,12 +592,12 @@ Sets the frame shadow value from the frame style\&.
 .SS "void QwtDial::setLineWidth (int lineWidth)"
 Sets the line width of the frame
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIlineWidth\fP Line width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFrameShadow()\fP 
 .RE
@@ -606,12 +606,12 @@ Sets the line width of the frame
 .SS "void QwtDial::setMaxScaleArc (double max)"
 Set the upper limit for the scale arc
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImax\fP Upper limit of the scale arc 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScaleArc()\fP, \fBsetMinScaleArc()\fP 
 .RE
@@ -620,12 +620,12 @@ Set the upper limit for the scale arc
 .SS "void QwtDial::setMinScaleArc (double min)"
 Set the lower limit for the scale arc
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImin\fP Lower limit of the scale arc 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScaleArc()\fP, \fBsetMaxScaleArc()\fP 
 .RE
@@ -636,7 +636,7 @@ Set the lower limit for the scale arc
 .PP
 Change the mode of the dial\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImode\fP New mode
 .RE
@@ -645,7 +645,7 @@ In case of \fBQwtDial::RotateNeedle\fP the needle is rotating, in case of \fBQwt
 .PP
 The default mode is \fBQwtDial::RotateNeedle\fP\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmode()\fP, \fBsetValue()\fP, \fBsetOrigin()\fP 
 .RE
@@ -654,12 +654,12 @@ The default mode is \fBQwtDial::RotateNeedle\fP\&.
 .SS "void QwtDial::setNeedle (\fBQwtDialNeedle\fP * needle)"
 Set a needle for the dial
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIneedle\fP Needle
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The needle will be deleted, when a different needle is set or in \fB~QwtDial()\fP 
 .RE
@@ -670,12 +670,12 @@ The needle will be deleted, when a different needle is set or in \fB~QwtDial()\f
 .PP
 Change the origin\&. The origin is the angle where scale and needle is relative to\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIorigin\fP New origin 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBorigin()\fP 
 .RE
@@ -684,14 +684,14 @@ Change the origin\&. The origin is the angle where scale and needle is relative 
 .SS "void QwtDial::setScaleArc (double minArc, double maxArc)"
 Change the arc of the scale
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIminArc\fP Lower limit 
 .br
 \fImaxArc\fP Upper limit
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBminScaleArc()\fP, \fBmaxScaleArc()\fP 
 .RE
@@ -702,12 +702,12 @@ Set an individual scale draw
 .PP
 The motivation for setting a scale draw is often to overload \fBQwtRoundScaleDraw::label()\fP to return individual tick labels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIscaleDraw\fP Scale draw 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The previous scale draw is deleted 
 .RE
@@ -716,12 +716,12 @@ The previous scale draw is deleted
 .SS "QSize QwtDial::sizeHint () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Size hint 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBminimumSizeHint()\fP 
 .RE
@@ -730,7 +730,7 @@ Size hint
 .SS "void QwtDial::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Wheel Event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Wheel event 
 .RE

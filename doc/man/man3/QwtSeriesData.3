@@ -1,4 +1,4 @@
-.TH "QwtSeriesData< T >" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSeriesData< T >" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -78,7 +78,7 @@ The bounding rect is necessary for autoscaling and can be used for a couple of p
 .PP
 qwtBoundingRect(\&.\&.\&.) offers slow implementations iterating over the samples\&. For large sets it is recommended to implement something faster f\&.e\&. by caching the bounding rectangle\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle 
 .RE
@@ -89,12 +89,12 @@ Implemented in \fBQwtTradingChartData\fP, \fBQwtSetSeriesData\fP, \fBQwtInterval
 .SS "template<typename T> virtual T \fBQwtSeriesData\fP< T >::sample (size_t i) const\fC [pure virtual]\fP"
 Return a sample 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIi\fP Index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Sample at position i 
 .RE
@@ -109,7 +109,7 @@ Set a the 'rect of interest'
 .PP
 The default implementation does nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Rectangle of interest 
 .RE
@@ -120,7 +120,7 @@ Reimplemented in \fBQwtSyntheticPointData\fP\&.
 .SS "template<typename T> virtual size_t \fBQwtSeriesData\fP< T >::size () const\fC [pure virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of samples 
 .RE

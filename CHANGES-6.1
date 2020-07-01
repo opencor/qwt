@@ -1,4 +1,25 @@
 =========
+Qwt 6.1.5
+=========
+
+1) Maintenance
+
+	- Avoid using some of the deprecated Qt APIs
+	- Missing includes of QPainterPath ( Qt 5.15 ) added
+	- QwtPlotSpectroCurve: missing public inheritance
+	- QwtPlotTradingCurve: missing public inheritance
+
+2) Bug fixes
+
+	- QwtLinearColorMap: handling of alpha values in color stops fixed
+
+	- QwtPlotRasterItem: missing color table initialization for
+                         QImage::Format_Indexed8
+
+	- QwtScaleWidget: missing QEvent::LayoutRequest added
+	- QwtSetSample: bound rectangle fixed for empty sets
+
+=========
 Qwt 6.1.4
 =========
 

@@ -1,4 +1,4 @@
-.TH "QwtGraphic" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtGraphic" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -173,7 +173,7 @@ bounding rectangle
 .PP
 Because the offset for drawing the outline depends on the shape of the painter path ( the peak of a triangle is different than the flat side ) scaling with a fixed aspect ratio always needs to be calculated from the control point rectangle\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPainterCommand\fP 
 .RE
@@ -190,7 +190,7 @@ Render hints\&. The default setting is to disable all hints
 .SS "enum \fBQwtGraphic::RenderHint\fP"
 Hint how to render a graphic 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRenderHint()\fP, \fBtestRenderHint()\fP 
 .RE
@@ -205,7 +205,7 @@ When rendering a \fBQwtGraphic\fP a specific scaling between the \fBcontrolPoint
 .PP
 When RenderPensUnscaled is set this specific scaling is applied for the control points only, but not for the pens\&. All other painter transformations ( set up by application code ) are supposed to work like usual\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBrender()\fP; 
 .RE
@@ -218,7 +218,7 @@ When RenderPensUnscaled is set this specific scaling is applied for the control 
 .PP
 Constructor\&. Initializes a null graphic 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisNull()\fP 
 .RE
@@ -229,12 +229,12 @@ Constructor\&. Initializes a null graphic
 .PP
 Copy constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Source 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBoperator=()\fP 
 .RE
@@ -245,12 +245,12 @@ Copy constructor\&.
 .SS "QRectF QwtGraphic::boundingRect () const"
 The bounding rectangle is the \fBcontrolPointRect()\fP extended by the areas needed for rendering the outlines with unscaled pens\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle of the graphic 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBcontrolPointRect()\fP, \fBscaledBoundingRect()\fP 
 .RE
@@ -259,12 +259,12 @@ Bounding rectangle of the graphic
 .SS "const QVector< \fBQwtPainterCommand\fP > & QwtGraphic::commands () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 List of recorded paint commands 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCommands()\fP 
 .RE
@@ -273,12 +273,12 @@ List of recorded paint commands
 .SS "QRectF QwtGraphic::controlPointRect () const"
 The control point rectangle is the bounding rectangle of all control points of the paths and the target rectangles of the images/pixmaps\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Control point rectangle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBboundingRect()\fP, \fBscaledBoundingRect()\fP 
 .RE
@@ -291,12 +291,12 @@ Default size\&. When a non empty size has been assigned by \fBsetDefaultSize()\f
 .PP
 The default size is used in all methods rendering the graphic, where no size is explicitly specified\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Default size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetDefaultSize()\fP, \fBboundingRect()\fP 
 .RE
@@ -307,7 +307,7 @@ Default size
 .PP
 Store a image command in the command list\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP traget rectangle 
 .br
@@ -318,7 +318,7 @@ Store a image command in the command list\&.
 \fIflags\fP Image conversion flags
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QPaintEngine::drawImage() 
 .RE
@@ -329,12 +329,12 @@ Reimplemented from \fBQwtNullPaintDevice\fP\&.
 .SS "void QwtGraphic::drawPath (const QPainterPath & path)\fC [protected]\fP, \fC [virtual]\fP"
 Store a path command in the command list
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpath\fP Painter path 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QPaintEngine::drawPath() 
 .RE
@@ -347,7 +347,7 @@ Reimplemented from \fBQwtNullPaintDevice\fP\&.
 .PP
 Store a pixmap command in the command list\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP target rectangle 
 .br
@@ -356,7 +356,7 @@ Store a pixmap command in the command list\&.
 \fIsubRect\fP Reactangle of the pixmap to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QPaintEngine::drawPixmap() 
 .RE
@@ -367,12 +367,12 @@ Reimplemented from \fBQwtNullPaintDevice\fP\&.
 .SS "bool QwtGraphic::isEmpty () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the bounding rectangle is empty 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBboundingRect()\fP, \fBisNull()\fP 
 .RE
@@ -381,12 +381,12 @@ True, when the bounding rectangle is empty
 .SS "bool QwtGraphic::isNull () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when no painter commands have been stored 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisEmpty()\fP, \fBcommands()\fP 
 .RE
@@ -397,12 +397,12 @@ True, when no painter commands have been stored
 .PP
 Assignment operator\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Source 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A reference of this object 
 .RE
@@ -413,39 +413,9 @@ A reference of this object
 .PP
 Replay all recorded painter commands\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Qt painter 
-.RE
-.PP
-
-.SS "void QwtGraphic::render (QPainter * painter, const QSizeF & size, Qt::AspectRatioMode aspectRatioMode = \fCQt::IgnoreAspectRatio\fP) const"
-
-.PP
-Replay all recorded painter commands\&. The graphic is scaled to fit into the rectangle of the given size starting at ( 0, 0 )\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIpainter\fP Qt painter 
-.br
-\fIsize\fP Size for the scaled graphic 
-.br
-\fIaspectRatioMode\fP Mode how to scale - See Qt::AspectRatioMode 
-.RE
-.PP
-
-.SS "void QwtGraphic::render (QPainter * painter, const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = \fCQt::IgnoreAspectRatio\fP) const"
-
-.PP
-Replay all recorded painter commands\&. The graphic is scaled to fit into the given rectangle
-.PP
-\fBParameters:\fP
-.RS 4
-\fIpainter\fP Qt painter 
-.br
-\fIrect\fP Rectangle for the scaled graphic 
-.br
-\fIaspectRatioMode\fP Mode how to scale - See Qt::AspectRatioMode 
 .RE
 .PP
 
@@ -454,7 +424,7 @@ Replay all recorded painter commands\&. The graphic is scaled to fit into the gi
 .PP
 Replay all recorded painter commands\&. The graphic is scaled to the \fBdefaultSize()\fP and aligned to a position\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Qt painter 
 .br
@@ -464,12 +434,42 @@ Replay all recorded painter commands\&. The graphic is scaled to the \fBdefaultS
 .RE
 .PP
 
+.SS "void QwtGraphic::render (QPainter * painter, const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = \fCQt::IgnoreAspectRatio\fP) const"
+
+.PP
+Replay all recorded painter commands\&. The graphic is scaled to fit into the given rectangle
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Qt painter 
+.br
+\fIrect\fP Rectangle for the scaled graphic 
+.br
+\fIaspectRatioMode\fP Mode how to scale - See Qt::AspectRatioMode 
+.RE
+.PP
+
+.SS "void QwtGraphic::render (QPainter * painter, const QSizeF & size, Qt::AspectRatioMode aspectRatioMode = \fCQt::IgnoreAspectRatio\fP) const"
+
+.PP
+Replay all recorded painter commands\&. The graphic is scaled to fit into the rectangle of the given size starting at ( 0, 0 )\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Qt painter 
+.br
+\fIsize\fP Size for the scaled graphic 
+.br
+\fIaspectRatioMode\fP Mode how to scale - See Qt::AspectRatioMode 
+.RE
+.PP
+
 .SS "void QwtGraphic::reset ()"
 
 .PP
 Clear all stored commands\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisNull()\fP 
 .RE
@@ -480,24 +480,24 @@ Clear all stored commands\&.
 .PP
 Calculate the target rectangle for scaling the graphic\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsx\fP Horizontal scaling factor 
 .br
 \fIsy\fP Vertical scaling factor
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 In case of paths that are painted with a cosmetic pen ( see QPen::isCosmetic() ) the target rectangle is different to multiplying the bounding rectangle\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Scaled bounding rectangle 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBboundingRect()\fP, \fBcontrolPointRect()\fP 
 .RE
@@ -508,12 +508,12 @@ Scaled bounding rectangle
 .PP
 Append paint commands\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcommands\fP Paint commands 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBcommands()\fP 
 .RE
@@ -526,12 +526,12 @@ Set a default size\&. The default size is used in all methods rendering the grap
 .PP
 The default setting is an empty size\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Default size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdefaultSize()\fP, \fBboundingRect()\fP 
 .RE
@@ -540,14 +540,14 @@ The default setting is an empty size\&.
 .SS "void QwtGraphic::setRenderHint (\fBRenderHint\fP hint, bool on = \fCtrue\fP)"
 Toggle an render hint
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIhint\fP Render hint 
 .br
 \fIon\fP true/false
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestRenderHint()\fP, \fBRenderHint\fP 
 .RE
@@ -556,7 +556,7 @@ Toggle an render hint
 .SS "QSize QwtGraphic::sizeMetrics () const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Ceiled \fBdefaultSize()\fP 
 .RE
@@ -567,17 +567,17 @@ Implements \fBQwtNullPaintDevice\fP\&.
 .SS "bool QwtGraphic::testRenderHint (\fBRenderHint\fP hint) const"
 Test a render hint
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIhint\fP Render hint 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true/false 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRenderHint()\fP, \fBRenderHint\fP 
 .RE
@@ -592,12 +592,12 @@ The format of the image is QImage::Format_ARGB32_Premultiplied\&.
 .PP
 The size of the image is the default size ( ceiled to integers ) of the graphic\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The graphic as image in default size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdefaultSize()\fP, \fBtoPixmap()\fP, \fBrender()\fP 
 .RE
@@ -610,19 +610,19 @@ Convert the graphic to a QImage\&. All pixels of the image get initialized by 0 
 .PP
 The format of the image is QImage::Format_ARGB32_Premultiplied\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Size of the image 
 .br
 \fIaspectRatioMode\fP Aspect ratio how to scale the graphic
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The graphic as image 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtoPixmap()\fP, \fBrender()\fP 
 .RE
@@ -635,12 +635,12 @@ Convert the graphic to a QPixmap\&. All pixels of the pixmap get initialized by 
 .PP
 The size of the pixmap is the default size ( ceiled to integers ) of the graphic\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The graphic as pixmap in default size 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdefaultSize()\fP, \fBtoImage()\fP, \fBrender()\fP 
 .RE
@@ -651,19 +651,19 @@ The graphic as pixmap in default size
 .PP
 Convert the graphic to a QPixmap\&. All pixels of the pixmap get initialized by Qt::transparent before the graphic is scaled and rendered on it\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP Size of the image 
 .br
 \fIaspectRatioMode\fP Aspect ratio how to scale the graphic
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The graphic as pixmap 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtoImage()\fP, \fBrender()\fP 
 .RE
@@ -674,12 +674,12 @@ The graphic as pixmap
 .PP
 Store a state command in the command list\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstate\fP State to be stored 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 QPaintEngine::updateState() 
 .RE

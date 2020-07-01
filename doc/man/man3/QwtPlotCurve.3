@@ -1,4 +1,4 @@
-.TH "QwtPlotCurve" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotCurve" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -216,7 +216,7 @@ See \fBQwtPlotItem::attach()\fP
 see examples/bode
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPointSeriesData\fP, \fBQwtSymbol\fP, \fBQwtScaleMap\fP 
 .RE
@@ -227,7 +227,7 @@ see examples/bode
 .SS "enum \fBQwtPlotCurve::CurveAttribute\fP"
 Attribute for drawing the curve 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCurveAttribute()\fP, \fBtestCurveAttribute()\fP, \fBcurveFitter()\fP 
 .RE
@@ -243,7 +243,7 @@ For \fBQwtPlotCurve::Steps\fP only\&. Draws a step function from the right to th
 \fB\fIFitted \fP\fP
 Only in combination with \fBQwtPlotCurve::Lines\fP A \fBQwtCurveFitter\fP tries to interpolate/smooth the curve, before it is painted\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 Curve fitting requires temporary memory for calculating coefficients and additional points\&. If painting in \fBQwtPlotCurve::Fitted\fP mode is slow it might be better to fit the points, before they are passed to \fBQwtPlotCurve\fP\&. 
 .RE
@@ -252,7 +252,7 @@ Curve fitting requires temporary memory for calculating coefficients and additio
 .SS "enum \fBQwtPlotCurve::CurveStyle\fP"
 Curve styles\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP 
 .RE
@@ -282,7 +282,7 @@ Styles >= \fBQwtPlotCurve::UserCurve\fP are reserved for derived classes of \fBQ
 .SS "enum \fBQwtPlotCurve::LegendAttribute\fP"
 Attributes how to represent the curve on the legend
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLegendAttribute()\fP, \fBtestLegendAttribute()\fP, \fBQwtPlotItem::legendData()\fP, \fBlegendIcon()\fP 
 .RE
@@ -306,7 +306,7 @@ If the curve has a brush a rectangle filled with the curve \fBbrush()\fP is pain
 .SS "enum \fBQwtPlotCurve::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. The default setting enables ClipPolygons | FilterPoints
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPaintAttribute()\fP, \fBtestPaintAttribute()\fP 
 .RE
@@ -332,7 +332,7 @@ Render the points to a temporary image and paint the image\&. This is a very spe
 .SS "QwtPlotCurve::QwtPlotCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -341,7 +341,7 @@ Constructor
 .SS "QwtPlotCurve::QwtPlotCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -352,12 +352,12 @@ Constructor
 .SS "double QwtPlotCurve::baseline () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value of the baseline 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBaseline()\fP 
 .RE
@@ -366,12 +366,12 @@ Value of the baseline
 .SS "const QBrush & QwtPlotCurve::brush () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Brush used to fill the area between lines and the baseline 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBrush()\fP, \fBsetBaseline()\fP, \fBbaseline()\fP 
 .RE
@@ -382,7 +382,7 @@ Brush used to fill the area between lines and the baseline
 .PP
 Complete a polygon to be a closed polygon including the area between the original polygon and the baseline\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -397,19 +397,19 @@ Complete a polygon to be a closed polygon including the area between the origina
 .SS "int QwtPlotCurve::closestPoint (const QPoint & pos, double * dist = \fCNULL\fP) const"
 Find the closest curve point for a specific position
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Position, where to look for the closest curve point 
 .br
 \fIdist\fP If dist != NULL, \fBclosestPoint()\fP returns the distance between the position and the closest curve point 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Index of the closest curve point, or -1 if none can be found ( f\&.e when the curve has no points ) 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 \fBclosestPoint()\fP implements a dumb algorithm, that iterates over all points 
 .RE
@@ -418,12 +418,12 @@ Index of the closest curve point, or -1 if none can be found ( f\&.e when the cu
 .SS "\fBQwtCurveFitter\fP * QwtPlotCurve::curveFitter () const"
 Get the curve fitter\&. If curve fitting is disabled NULL is returned\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Curve fitter 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCurveFitter()\fP, \fBFitted\fP 
 .RE
@@ -434,7 +434,7 @@ Curve fitter
 .PP
 Draw the line part (without symbols) of a curve interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -451,7 +451,7 @@ Draw the line part (without symbols) of a curve interval\&.
 \fIto\fP index of the last point to be painted 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdraw()\fP, \fBdrawDots()\fP, \fBdrawLines()\fP, \fBdrawSteps()\fP, \fBdrawSticks()\fP 
 .RE
@@ -460,7 +460,7 @@ Draw the line part (without symbols) of a curve interval\&.
 .SS "void QwtPlotCurve::drawDots (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw dots
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -475,7 +475,7 @@ Draw dots
 \fIto\fP index of the last point to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdraw()\fP, \fBdrawCurve()\fP, \fBdrawSticks()\fP, \fBdrawLines()\fP, \fBdrawSteps()\fP 
 .RE
@@ -486,7 +486,7 @@ Draw dots
 .PP
 Draw lines\&. If the CurveAttribute Fitted is enabled a \fBQwtCurveFitter\fP tries to interpolate/smooth the curve, before it is painted\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -501,7 +501,7 @@ Draw lines\&. If the CurveAttribute Fitted is enabled a \fBQwtCurveFitter\fP tri
 \fIto\fP index of the last point to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCurveAttribute()\fP, \fBsetCurveFitter()\fP, \fBdraw()\fP, \fBdrawLines()\fP, \fBdrawDots()\fP, \fBdrawSteps()\fP, \fBdrawSticks()\fP 
 .RE
@@ -510,7 +510,7 @@ Draw lines\&. If the CurveAttribute Fitted is enabled a \fBQwtCurveFitter\fP tri
 .SS "void QwtPlotCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
 Draw an interval of the curve
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -525,7 +525,7 @@ Draw an interval of the curve
 \fIto\fP Index of the last point to be painted\&. If to < 0 the curve will be painted to its last point\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawCurve()\fP, \fBdrawSymbols()\fP, 
 .RE
@@ -538,7 +538,7 @@ Draw step function
 .PP
 The direction of the steps depends on Inverted attribute\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -553,7 +553,7 @@ The direction of the steps depends on Inverted attribute\&.
 \fIto\fP index of the last point to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBCurveAttribute\fP, \fBsetCurveAttribute()\fP, \fBdraw()\fP, \fBdrawCurve()\fP, \fBdrawDots()\fP, \fBdrawLines()\fP, \fBdrawSticks()\fP 
 .RE
@@ -562,7 +562,7 @@ The direction of the steps depends on Inverted attribute\&.
 .SS "void QwtPlotCurve::drawSticks (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw sticks
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -577,7 +577,7 @@ Draw sticks
 \fIto\fP index of the last point to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdraw()\fP, \fBdrawCurve()\fP, \fBdrawDots()\fP, \fBdrawLines()\fP, \fBdrawSteps()\fP 
 .RE
@@ -586,7 +586,7 @@ Draw sticks
 .SS "void QwtPlotCurve::drawSymbols (QPainter * painter, const \fBQwtSymbol\fP & symbol, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw symbols
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -603,7 +603,7 @@ Draw symbols
 \fIto\fP Index of the last point to be painted
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSymbol()\fP, \fBdrawSeries()\fP, \fBdrawCurve()\fP 
 .RE
@@ -612,7 +612,7 @@ Draw symbols
 .SS "void QwtPlotCurve::fillCurve (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, QPolygonF & polygon) const\fC [protected]\fP, \fC [virtual]\fP"
 Fill the area between the curve and the baseline with the curve brush
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -625,7 +625,7 @@ Fill the area between the curve and the baseline with the curve brush
 \fIpolygon\fP Polygon - will be modified !
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBrush()\fP, \fBsetBaseline()\fP, \fBsetStyle()\fP 
 .RE
@@ -634,19 +634,19 @@ Fill the area between the curve and the baseline with the curve brush
 .SS "\fBQwtGraphic\fP QwtPlotCurve::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Icon representing the curve on the legend
 .RE
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index of the legend entry ( ignored as there is only one ) 
 .br
 \fIsize\fP Icon size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotItem::setLegendIconSize()\fP, \fBQwtPlotItem::legendData()\fP 
 .RE
@@ -657,12 +657,12 @@ Reimplemented from \fBQwtPlotItem\fP\&.
 .SS "const QPen & QwtPlotCurve::pen () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pen used to draw the lines 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPen()\fP, \fBbrush()\fP 
 .RE
@@ -671,7 +671,7 @@ Pen used to draw the lines
 .SS "int QwtPlotCurve::rtti () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBQwtPlotItem::Rtti_PlotCurve\fP 
 .RE
@@ -688,12 +688,12 @@ The interpretation of the baseline depends on the \fBorientation()\fP\&. With Qt
 .PP
 The default value is 0\&.0\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value of the baseline 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbaseline()\fP, \fBsetBrush()\fP, \fBsetStyle()\fP, QwtPlotAbstractSeriesItem::orientation() 
 .RE
@@ -706,12 +706,12 @@ Assign a brush\&. In case of brush\&.style() != QBrush::NoBrush and \fBstyle()\f
 .PP
 In case !brush\&.color()\&.isValid() the area will be filled by pen\&.color()\&. The fill algorithm simply connects the first and the last curve point to the baseline\&. So the curve data has to be sorted (ascending or descending)\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbrush\fP New brush 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbrush()\fP, \fBsetBaseline()\fP, \fBbaseline()\fP 
 .RE
@@ -720,7 +720,7 @@ In case !brush\&.color()\&.isValid() the area will be filled by pen\&.color()\&.
 .SS "void QwtPlotCurve::setCurveAttribute (\fBCurveAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute for drawing the curve
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Curve attribute 
 .br
@@ -737,12 +737,12 @@ The curve fitter operates on the translated points ( = widget coordinates) to be
 .PP
 For situations, where curve fitting is used to improve the performance of painting huge series of points it might be better to execute the fitter on the curve points once and to cache the result in the \fBQwtSeriesData\fP object\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fI\fBcurveFitter()\fP\fP Curve fitter 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBFitted\fP 
 .RE
@@ -751,7 +751,7 @@ For situations, where curve fitting is used to improve the performance of painti
 .SS "void QwtPlotCurve::setLegendAttribute (\fBLegendAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the legend icon
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Attribute 
 .br
@@ -762,14 +762,14 @@ Specify an attribute how to draw the legend icon
 .SS "void QwtPlotCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Paint attribute 
 .br
 \fIon\fP On/Off 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtestPaintAttribute()\fP 
 .RE
@@ -780,7 +780,7 @@ Build and assign a pen
 .PP
 In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() )\&. This method has been introduced to hide this incompatibility\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolor\fP Pen color 
 .br
@@ -789,7 +789,7 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 \fIstyle\fP Pen style
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
@@ -798,12 +798,12 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 .SS "void QwtPlotCurve::setPen (const QPen & pen)"
 Assign a pen
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpen\fP New pen 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpen()\fP, \fBbrush()\fP 
 .RE
@@ -814,7 +814,7 @@ Assign a pen
 .PP
 Initialize the data by pointing to memory blocks which are not managed by \fBQwtPlotCurve\fP\&. setRawSamples is provided for efficiency\&. It is important to keep the pointers during the lifetime of the underlying \fBQwtCPointerData\fP class\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxData\fP pointer to x data 
 .br
@@ -823,7 +823,7 @@ Initialize the data by pointing to memory blocks which are not managed by \fBQwt
 \fIsize\fP size of x and y
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtCPointerData\fP 
 .RE
@@ -832,7 +832,7 @@ Initialize the data by pointing to memory blocks which are not managed by \fBQwt
 .SS "void QwtPlotCurve::setSamples (const double * xData, const double * yData, int size)"
 Set data by copying x- and y-values from specified memory blocks\&. Contrary to \fBsetRawSamples()\fP, this function makes a 'deep copy' of the data\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxData\fP pointer to x values 
 .br
@@ -841,7 +841,7 @@ Set data by copying x- and y-values from specified memory blocks\&. Contrary to 
 \fIsize\fP size of xData and yData
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPointArrayData\fP 
 .RE
@@ -852,14 +852,14 @@ Set data by copying x- and y-values from specified memory blocks\&. Contrary to 
 .PP
 Initialize data with x- and y-arrays (explicitly shared) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxData\fP x data 
 .br
 \fIyData\fP y data
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPointArrayData\fP 
 .RE
@@ -868,12 +868,12 @@ Initialize data with x- and y-arrays (explicitly shared)
 .SS "void QwtPlotCurve::setSamples (const QVector< QPointF > & samples)"
 Initialize data with an array of points\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsamples\fP Vector of points 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 QVector is implicitly shared 
 .PP
@@ -886,12 +886,12 @@ Assign a series of points
 .PP
 \fBsetSamples()\fP is just a wrapper for \fBsetData()\fP without any additional value - beside that it is easier to find for the developer\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdata\fP Data 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The item takes ownership of the data object, deleting it when its not used anymore\&. 
 .RE
@@ -900,12 +900,12 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .SS "void QwtPlotCurve::setStyle (\fBCurveStyle\fP style)"
 Set the curve's drawing style
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Curve style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBstyle()\fP 
 .RE
@@ -916,12 +916,12 @@ Set the curve's drawing style
 .PP
 Assign a symbol\&. The curve will take the ownership of the symbol, hence the previously set symbol will be delete by setting a new one\&. If \fCsymbol\fP is \fCNULL\fP no symbol will be drawn\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsymbol\fP Symbol 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsymbol()\fP 
 .RE
@@ -930,12 +930,12 @@ Assign a symbol\&. The curve will take the ownership of the symbol, hence the pr
 .SS "\fBQwtPlotCurve::CurveStyle\fP QwtPlotCurve::style () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Style of the curve 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP 
 .RE
@@ -944,12 +944,12 @@ Style of the curve
 .SS "const \fBQwtSymbol\fP * QwtPlotCurve::symbol () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current symbol or NULL, when no symbol has been assigned 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSymbol()\fP 
 .RE
@@ -958,12 +958,12 @@ Current symbol or NULL, when no symbol has been assigned
 .SS "bool QwtPlotCurve::testCurveAttribute (\fBCurveAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if attribute is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetCurveAttribute()\fP 
 .RE
@@ -972,12 +972,12 @@ true, if attribute is enabled
 .SS "bool QwtPlotCurve::testLegendAttribute (\fBLegendAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLegendAttribute()\fP 
 .RE
@@ -986,12 +986,12 @@ True, when attribute is enabled
 .SS "bool QwtPlotCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPaintAttribute()\fP 
 .RE

@@ -9,8 +9,8 @@ var class_qwt_plot_picker =
     [ "canvas", "class_qwt_plot_picker.html#ad2a03a80f35826ed6256f039da2b4bf2", null ],
     [ "canvas", "class_qwt_plot_picker.html#a6a914b1383a500894f1ab1f19f627490", null ],
     [ "end", "class_qwt_plot_picker.html#a9fceb663542b6f9b0a358e9419406423", null ],
-    [ "invTransform", "class_qwt_plot_picker.html#ac4d194a51dcee9d8b6329beaf74e01de", null ],
     [ "invTransform", "class_qwt_plot_picker.html#a1680e8cae56014d0c4446e59e58db1f2", null ],
+    [ "invTransform", "class_qwt_plot_picker.html#ac4d194a51dcee9d8b6329beaf74e01de", null ],
     [ "move", "class_qwt_plot_picker.html#a7a979d23cd4d398e309409e76635bcf4", null ],
     [ "moved", "class_qwt_plot_picker.html#a4a35d30f1c4c4f80c49e3c6647b34e12", null ],
     [ "plot", "class_qwt_plot_picker.html#ac5906d5fe7543f3db7808da44d8197a9", null ],
@@ -22,8 +22,8 @@ var class_qwt_plot_picker =
     [ "setAxis", "class_qwt_plot_picker.html#aa901c86543585c7056133a5cb6652e3d", null ],
     [ "trackerText", "class_qwt_plot_picker.html#a1b1134e758f4827add976929fd557563", null ],
     [ "trackerTextF", "class_qwt_plot_picker.html#ac14ba91cb5a41b228605e17d0af39a47", null ],
-    [ "transform", "class_qwt_plot_picker.html#a0387b1ed9326a3e7d113dcfc225698db", null ],
     [ "transform", "class_qwt_plot_picker.html#a8da18fb8cdcc1c336e99d4b69c338dfc", null ],
+    [ "transform", "class_qwt_plot_picker.html#a0387b1ed9326a3e7d113dcfc225698db", null ],
     [ "xAxis", "class_qwt_plot_picker.html#a721b1d74143839034c730556d0691c1e", null ],
     [ "yAxis", "class_qwt_plot_picker.html#a3f2919671ab530b182a6b7ebd0c20f6f", null ]
 ];

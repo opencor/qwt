@@ -1,4 +1,4 @@
-.TH "QwtSimpleCompassRose" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSimpleCompassRose" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -64,7 +64,7 @@ A simple rose for \fBQwtCompass\fP\&.
 .SS "QwtSimpleCompassRose::QwtSimpleCompassRose (int numThorns = \fC8\fP, int numThornLevels = \fC\-1\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumThorns\fP Number of thorns 
 .br
@@ -77,7 +77,7 @@ Constructor
 .SS "void QwtSimpleCompassRose::draw (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg = \fCQPalette::Active\fP) const\fC [virtual]\fP"
 Draw the rose
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -96,7 +96,7 @@ Implements \fBQwtCompassRose\fP\&.
 .SS "void QwtSimpleCompassRose::drawRose (QPainter * painter, const QPalette & palette, const QPointF & center, double radius, double north, double width, int numThorns, int numThornLevels, double shrinkFactor)\fC [static]\fP"
 Draw the rose
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -121,12 +121,12 @@ Draw the rose
 .SS "int QwtSimpleCompassRose::numThornLevels () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of thorn levels 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetNumThorns()\fP, \fBsetNumThornLevels()\fP 
 .RE
@@ -135,12 +135,12 @@ Number of thorn levels
 .SS "int QwtSimpleCompassRose::numThorns () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of thorns 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetNumThorns()\fP, \fBsetNumThornLevels()\fP 
 .RE
@@ -149,12 +149,12 @@ Number of thorns
 .SS "void QwtSimpleCompassRose::setNumThornLevels (int numThornLevels)"
 Set the of thorns levels
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumThornLevels\fP Number of thorns levels 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetNumThorns()\fP, \fBnumThornLevels()\fP 
 .RE
@@ -163,12 +163,12 @@ Set the of thorns levels
 .SS "void QwtSimpleCompassRose::setNumThorns (int numThorns)"
 Set the number of thorns on one level The number is aligned to a multiple of 4, with a minimum of 4
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumThorns\fP Number of thorns 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnumThorns()\fP, \fBsetNumThornLevels()\fP 
 .RE
@@ -177,12 +177,12 @@ Set the number of thorns on one level The number is aligned to a multiple of 4, 
 .SS "void QwtSimpleCompassRose::setShrinkFactor (double factor)"
 Set the Factor how to shrink the thorns with each level The default value is 0\&.9\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfactor\fP Shrink factor 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBshrinkFactor()\fP 
 .RE
@@ -191,7 +191,7 @@ Set the Factor how to shrink the thorns with each level The default value is 0\&
 .SS "void QwtSimpleCompassRose::setWidth (double width)"
 Set the width of the rose heads\&. Lower value make thinner heads\&. The range is limited from 0\&.03 to 0\&.4\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Width 
 .RE
@@ -200,12 +200,12 @@ Set the width of the rose heads\&. Lower value make thinner heads\&. The range i
 .SS "double QwtSimpleCompassRose::shrinkFactor () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Factor how to shrink the thorns with each level 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetShrinkFactor()\fP 
 .RE
@@ -214,12 +214,12 @@ Factor how to shrink the thorns with each level
 .SS "double QwtSimpleCompassRose::width () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Width of the rose 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetWidth()\fP 
 .RE

@@ -1,4 +1,4 @@
-.TH "QwtColumnSymbol" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtColumnSymbol" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -72,7 +72,7 @@ A drawing primitive for columns\&.
 .SS "enum \fBQwtColumnSymbol::FrameStyle\fP"
 Frame Style used in Box \fBstyle()\fP\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBStyle\fP, \fBsetFrameStyle()\fP, \fBframeStyle()\fP, \fBsetStyle()\fP, \fBsetPalette()\fP 
 .RE
@@ -93,7 +93,7 @@ A raised frame style\&.
 .SS "enum \fBQwtColumnSymbol::Style\fP"
 Style 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP 
 .RE
@@ -116,12 +116,12 @@ Styles >= \fBQwtColumnSymbol::UserStyle\fP are reserved for derived classes of \
 .SS "QwtColumnSymbol::QwtColumnSymbol (\fBStyle\fP style = \fC\fBNoStyle\fP\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Style of the symbol 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP, \fBstyle()\fP, \fBStyle\fP 
 .RE
@@ -132,14 +132,14 @@ Constructor
 .SS "void QwtColumnSymbol::draw (QPainter * painter, const \fBQwtColumnRect\fP & rect) const\fC [virtual]\fP"
 Draw the symbol depending on its style\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
 \fIrect\fP Directed rectangle
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawBox()\fP 
 .RE
@@ -148,14 +148,14 @@ Draw the symbol depending on its style\&.
 .SS "void QwtColumnSymbol::drawBox (QPainter * painter, const \fBQwtColumnRect\fP & rect) const\fC [protected]\fP"
 Draw the symbol when it is in Box style\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
 \fIrect\fP Directed rectangle
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdraw()\fP 
 .RE
@@ -164,12 +164,12 @@ Draw the symbol when it is in Box style\&.
 .SS "\fBQwtColumnSymbol::FrameStyle\fP QwtColumnSymbol::frameStyle () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current frame style, that is used for the Box style\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFrameStyle()\fP, \fBlineWidth()\fP, \fBsetStyle()\fP 
 .RE
@@ -178,12 +178,12 @@ Current frame style, that is used for the Box style\&.
 .SS "int QwtColumnSymbol::lineWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Line width of the frame, that is used for the Box style\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBframeStyle()\fP, \fBsetStyle()\fP 
 .RE
@@ -192,12 +192,12 @@ Line width of the frame, that is used for the Box style\&.
 .SS "const QPalette & QwtColumnSymbol::palette () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current palette 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPalette()\fP 
 .RE
@@ -206,12 +206,12 @@ Current palette
 .SS "void QwtColumnSymbol::setFrameStyle (\fBFrameStyle\fP frameStyle)"
 Set the frame, that is used for the Box style\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIframeStyle\fP Frame style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBframeStyle()\fP, \fBsetLineWidth()\fP, \fBsetStyle()\fP 
 .RE
@@ -220,12 +220,12 @@ Set the frame, that is used for the Box style\&.
 .SS "void QwtColumnSymbol::setLineWidth (int width)"
 Set the line width of the frame, that is used for the Box style\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlineWidth()\fP, \fBsetFrameStyle()\fP 
 .RE
@@ -234,12 +234,12 @@ Set the line width of the frame, that is used for the Box style\&.
 .SS "void QwtColumnSymbol::setPalette (const QPalette & palette)"
 Assign a palette for the symbol
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpalette\fP Palette 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpalette()\fP, \fBsetStyle()\fP 
 .RE
@@ -248,12 +248,12 @@ Assign a palette for the symbol
 .SS "void QwtColumnSymbol::setStyle (\fBStyle\fP style)"
 Specify the symbol style
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP Style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBstyle()\fP, \fBsetPalette()\fP 
 .RE
@@ -262,12 +262,12 @@ Specify the symbol style
 .SS "\fBQwtColumnSymbol::Style\fP QwtColumnSymbol::style () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Current symbol style 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetStyle()\fP 
 .RE

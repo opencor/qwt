@@ -1,4 +1,4 @@
-.TH "QwtTextEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTextEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -50,7 +50,7 @@ A text engine is responsible for rendering texts for a specific text format\&. T
 .PP
 \fBQwtPlainTextEngine\fP and \fBQwtRichTextEngine\fP are part of the Qwt library\&. The implementation of \fBQwtMathMLTextEngine\fP uses code from the Qt solution package\&. Because of license implications it is built into a separate library\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtText::setTextEngine()\fP 
 .RE
@@ -61,7 +61,7 @@ A text engine is responsible for rendering texts for a specific text format\&. T
 .SS "virtual void QwtTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [pure virtual]\fP"
 Draw the text in a clipping rectangle
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -78,7 +78,7 @@ Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMath
 .SS "virtual double QwtTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [pure virtual]\fP"
 Find the height for a given width
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -89,7 +89,7 @@ Find the height for a given width
 \fIwidth\fP Width
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated height 
 .RE
@@ -100,12 +100,12 @@ Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMath
 .SS "virtual bool QwtTextEngine::mightRender (const QString & text) const\fC [pure virtual]\fP"
 Test if a string can be rendered by this text engine
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text to be tested 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if it can be rendered 
 .RE
@@ -118,7 +118,7 @@ Return margins around the texts
 .PP
 The textSize might include margins around the text, like QFontMetrics::descent()\&. In situations where texts need to be aligned in detail, knowing these margins might improve the layout calculations\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -139,7 +139,7 @@ Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMath
 .SS "virtual QSizeF QwtTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [pure virtual]\fP"
 Returns the size, that is needed to render text
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -148,7 +148,7 @@ Returns the size, that is needed to render text
 \fItext\fP Text to be rendered
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated size 
 .RE

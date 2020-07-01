@@ -1,4 +1,4 @@
-.TH "QwtSlider" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSlider" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -160,7 +160,7 @@ The slider can be customized by having a through, a groove - or both\&.
 .SS "enum \fBQwtSlider::ScalePosition\fP"
 Position of the scale 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtSlider()\fP, \fBsetScalePosition()\fP, \fBsetOrientation()\fP 
 .RE
@@ -185,12 +185,12 @@ Construct vertical slider in QwtSlider::Trough style with a scale to the left\&.
 .PP
 The scale is initialized to [0\&.0, 100\&.0] and the value set to 0\&.0\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetOrientation()\fP, \fBsetScalePosition()\fP, setBackgroundStyle() 
 .RE
@@ -203,7 +203,7 @@ When orientation is Qt::Vertical the scale will be aligned to the left - otherwi
 .PP
 The scale is initialized to [0\&.0, 100\&.0] and the value set to 0\&.0\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .br
@@ -216,12 +216,12 @@ The scale is initialized to [0\&.0, 100\&.0] and the value set to 0\&.0\&.
 .SS "int QwtSlider::borderWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the border width\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBorderWidth()\fP 
 .RE
@@ -230,7 +230,7 @@ the border width\&.
 .SS "void QwtSlider::changeEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handles QEvent::StyleChange and QEvent::FontChange events 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Change event 
 .RE
@@ -239,7 +239,7 @@ Handles QEvent::StyleChange and QEvent::FontChange events
 .SS "void QwtSlider::drawHandle (QPainter * painter, const QRect & handleRect, int pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the thumb at a position
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -252,7 +252,7 @@ Draw the thumb at a position
 .SS "void QwtSlider::drawSlider (QPainter * painter, const QRect & sliderRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the slider into the specified rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -263,7 +263,7 @@ Draw the slider into the specified rectangle\&.
 .SS "QRect QwtSlider::handleRect () const\fC [protected]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle of the slider handle 
 .RE
@@ -272,12 +272,12 @@ Bounding rectangle of the slider handle
 .SS "QSize QwtSlider::handleSize () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Size of the handle\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetHandleSize()\fP 
 .RE
@@ -286,12 +286,12 @@ Size of the handle\&.
 .SS "bool QwtSlider::hasGroove () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the groove is visisble 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetGroove()\fP, \fBhasTrough()\fP 
 .RE
@@ -300,12 +300,12 @@ True, when the groove is visisble
 .SS "bool QwtSlider::hasTrough () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the trough is visisble 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetTrough()\fP, \fBhasGroove()\fP 
 .RE
@@ -316,17 +316,17 @@ True, when the trough is visisble
 .PP
 Determine what to do when the user presses a mouse button\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturn values:\fP
+\fBReturn values\fP
 .RS 4
 \fITrue,when\fP \fBhandleRect()\fP contains pos 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBscrolledTo()\fP 
 .RE
@@ -337,12 +337,12 @@ Implements \fBQwtAbstractSlider\fP\&.
 .SS "QSize QwtSlider::minimumSizeHint () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Minimum size hint 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsizeHint()\fP 
 .RE
@@ -351,7 +351,7 @@ Minimum size hint
 .SS "void QwtSlider::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Mouse press event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -362,7 +362,7 @@ Reimplemented from \fBQwtAbstractSlider\fP\&.
 .SS "void QwtSlider::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Mouse release event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -373,12 +373,12 @@ Reimplemented from \fBQwtAbstractSlider\fP\&.
 .SS "Qt::Orientation QwtSlider::orientation () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Orientation 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetOrientation()\fP 
 .RE
@@ -387,7 +387,7 @@ Orientation
 .SS "void QwtSlider::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Qt paint event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Paint event 
 .RE
@@ -396,7 +396,7 @@ Qt paint event handler
 .SS "void QwtSlider::resizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Qt resize event handler 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Resize event 
 .RE
@@ -405,12 +405,12 @@ Qt resize event handler
 .SS "const \fBQwtScaleDraw\fP * QwtSlider::scaleDraw () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the scale draw of the slider 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScaleDraw()\fP 
 .RE
@@ -419,12 +419,12 @@ the scale draw of the slider
 .SS "\fBQwtSlider::ScalePosition\fP QwtSlider::scalePosition () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Position of the scale 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetScalePosition()\fP 
 .RE
@@ -435,17 +435,17 @@ Position of the scale
 .PP
 Determine the value for a new position of the slider handle\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpos\fP Mouse position
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value for the mouse position 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisScrollPosition()\fP 
 .RE
@@ -458,12 +458,12 @@ Implements \fBQwtAbstractSlider\fP\&.
 .PP
 Change the slider's border width\&. The border width is used for drawing the slider handle and the trough\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Border width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBborderWidth()\fP 
 .RE
@@ -474,12 +474,12 @@ En/Disable the groove
 .PP
 The slider can be cutomized by showing a groove for the handle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP When true, the groove is visible 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhasGroove()\fP, setThrough() 
 .RE
@@ -490,12 +490,12 @@ The slider can be cutomized by showing a groove for the handle\&.
 .PP
 Set the slider's handle size\&. When the size is empty the slider handle will be painted with a default size depending on its \fBorientation()\fP and backgroundStyle()\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsize\fP New size
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhandleSize()\fP 
 .RE
@@ -506,12 +506,12 @@ Set the slider's handle size\&. When the size is empty the slider handle will be
 .PP
 Set the orientation\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIorientation\fP Allowed values are Qt::Horizontal and Qt::Vertical\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBorientation()\fP, \fBscalePosition()\fP 
 .RE
@@ -522,12 +522,12 @@ Set the orientation\&.
 .PP
 Set a scale draw\&. For changing the labels of the scales, it is necessary to derive from \fBQwtScaleDraw\fP and overload \fBQwtScaleDraw::label()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIscaleDraw\fP ScaleDraw object, that has to be created with new and will be deleted in \fB~QwtSlider()\fP or the next call of \fBsetScaleDraw()\fP\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 scaleDraw() 
 .RE
@@ -538,12 +538,12 @@ scaleDraw()
 .PP
 Change the position of the scale\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIscalePosition\fP Position of the scale\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBScalePosition\fP, \fBscalePosition()\fP 
 .RE
@@ -556,12 +556,12 @@ Change the spacing between trough and scale\&. A spacing of 0 means, that the ba
 .PP
 The default setting is 4 pixels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIspacing\fP Number of pixels 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBspacing()\fP; 
 .RE
@@ -572,12 +572,12 @@ En/Disable the trough
 .PP
 The slider can be cutomized by showing a trough for the handle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIon\fP When true, the groove is visible 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhasTrough()\fP, \fBsetGroove()\fP 
 .RE
@@ -588,12 +588,12 @@ The slider can be cutomized by showing a trough for the handle\&.
 .PP
 Specify the update interval for automatic scrolling\&. The minimal accepted value is 50 ms\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Update interval in milliseconds
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetUpdateInterval()\fP 
 .RE
@@ -602,7 +602,7 @@ Specify the update interval for automatic scrolling\&. The minimal accepted valu
 .SS "QSize QwtSlider::sizeHint () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBminimumSizeHint()\fP 
 .RE
@@ -611,7 +611,7 @@ Specify the update interval for automatic scrolling\&. The minimal accepted valu
 .SS "QRect QwtSlider::sliderRect () const\fC [protected]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Bounding rectangle of the slider - without the scale 
 .RE
@@ -620,12 +620,12 @@ Bounding rectangle of the slider - without the scale
 .SS "int QwtSlider::spacing () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of pixels between slider and scale 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSpacing()\fP 
 .RE
@@ -636,7 +636,7 @@ Timer event handler
 .PP
 Handles the timer, when the mouse stays pressed inside the \fBsliderRect()\fP\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Mouse event 
 .RE
@@ -645,12 +645,12 @@ Handles the timer, when the mouse stays pressed inside the \fBsliderRect()\fP\&.
 .SS "int QwtSlider::updateInterval () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Update interval in milliseconds for automatic scrolling 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetUpdateInterval()\fP 
 .RE

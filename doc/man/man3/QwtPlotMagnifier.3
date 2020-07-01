@@ -1,4 +1,4 @@
-.TH "QwtPlotMagnifier" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotMagnifier" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -60,7 +60,7 @@ Using \fBQwtPlotMagnifier\fP a plot can be zoomed in/out in steps using keys, th
 .PP
 Together with \fBQwtPlotZoomer\fP and \fBQwtPlotPanner\fP it is possible to implement individual and powerful navigation of the plot canvas\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotZoomer\fP, \fBQwtPlotPanner\fP, \fBQwtPlot\fP 
 .RE
@@ -71,7 +71,7 @@ Together with \fBQwtPlotZoomer\fP and \fBQwtPlotPanner\fP it is possible to impl
 .SS "QwtPlotMagnifier::QwtPlotMagnifier (QWidget * canvas)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcanvas\fP Plot canvas to be magnified 
 .RE
@@ -82,17 +82,17 @@ Constructor
 .SS "bool QwtPlotMagnifier::isAxisEnabled (int axis) const"
 Test if an axis is enabled
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, if the axis is enabled
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAxisEnabled()\fP 
 .RE
@@ -101,7 +101,7 @@ True, if the axis is enabled
 .SS "void QwtPlotMagnifier::rescale (double factor)\fC [protected]\fP, \fC [virtual]\fP"
 Zoom in/out the axes scales 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfactor\fP A value < 1\&.0 zooms in, a value > 1\&.0 zooms out\&. 
 .RE
@@ -114,14 +114,14 @@ Implements \fBQwtMagnifier\fP\&.
 .PP
 En/Disable an axis\&. Only Axes that are enabled will be zoomed\&. All other axes will remain unchanged\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .br
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisAxisEnabled()\fP 
 .RE

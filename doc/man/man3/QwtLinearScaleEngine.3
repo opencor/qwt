@@ -1,4 +1,4 @@
-.TH "QwtLinearScaleEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLinearScaleEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -62,12 +62,12 @@ The step size will fit into the pattern $\left\{ 1,2,5\right\} \cdot 10^{n}$, wh
 .SS "QwtLinearScaleEngine::QwtLinearScaleEngine (uint base = \fC10\fP)"
 Constructor
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIbase\fP Base of the scale engine 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBase()\fP 
 .RE
@@ -80,14 +80,14 @@ Constructor
 .PP
 Align an interval to a step size\&. The limits of an interval are aligned that both are integer multiples of the step size\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval 
 .br
 \fIstepSize\fP Step size
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Aligned interval 
 .RE
@@ -96,7 +96,7 @@ Aligned interval
 .SS "void QwtLinearScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [virtual]\fP"
 Align and divide an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImaxNumSteps\fP Max\&. number of steps 
 .br
@@ -107,7 +107,7 @@ Align and divide an interval
 \fIstepSize\fP Step size (Out)
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAttribute()\fP 
 .RE
@@ -122,14 +122,14 @@ Reimplemented in \fBQwtDateScaleEngine\fP\&.
 .PP
 Calculate major ticks for an interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval 
 .br
 \fIstepSize\fP Step size
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated ticks 
 .RE
@@ -140,7 +140,7 @@ Calculated ticks
 .PP
 Calculate minor/medium ticks for major ticks\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImajorTicks\fP Major ticks 
 .br
@@ -159,7 +159,7 @@ Calculate minor/medium ticks for major ticks\&.
 .PP
 Calculate ticks for an interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP Interval 
 .br
@@ -170,7 +170,7 @@ Calculate ticks for an interval\&.
 \fIticks\fP Arrays to be filled with the calculated ticks
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBbuildMajorTicks()\fP, \fBbuildMinorTicks\fP 
 .RE
@@ -181,7 +181,7 @@ Calculate ticks for an interval\&.
 .PP
 Calculate a scale division for an interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx1\fP First interval limit 
 .br
@@ -194,7 +194,7 @@ Calculate a scale division for an interval\&.
 \fIstepSize\fP Step size\&. If stepSize == 0, the engine calculates one\&.
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated scale division 
 .RE

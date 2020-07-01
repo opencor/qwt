@@ -1,4 +1,4 @@
-.TH "QwtDynGridLayout" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDynGridLayout" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -110,7 +110,7 @@ The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the numbe
 .SS "QwtDynGridLayout::QwtDynGridLayout (QWidget * parent, int margin = \fC0\fP, int spacing = \fC\-1\fP)\fC [explicit]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIparent\fP Parent widget 
 .br
@@ -123,7 +123,7 @@ The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the numbe
 .SS "QwtDynGridLayout::QwtDynGridLayout (int spacing = \fC\-1\fP)\fC [explicit]\fP"
 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIspacing\fP Spacing 
 .RE
@@ -136,7 +136,7 @@ The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the numbe
 .PP
 Add an item to the next free position\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIitem\fP Layout item 
 .RE
@@ -147,17 +147,17 @@ Add an item to the next free position\&.
 .PP
 Calculate the number of columns for a given width\&. The calculation tries to use as many columns as possible ( limited by \fBmaxColumns()\fP )
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Available width for all columns 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of columns for a given width
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmaxColumns()\fP, \fBsetMaxColumns()\fP 
 .RE
@@ -166,7 +166,7 @@ Number of columns for a given width
 .SS "int QwtDynGridLayout::count () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of items in the layout 
 .RE
@@ -177,12 +177,12 @@ Number of items in the layout
 .PP
 Returns whether this layout can make use of more space than \fBsizeHint()\fP\&. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Orientations, where the layout expands 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetExpandingDirections()\fP 
 .RE
@@ -191,12 +191,12 @@ Orientations, where the layout expands
 .SS "bool QwtDynGridLayout::hasHeightForWidth () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true: \fBQwtDynGridLayout\fP implements \fBheightForWidth()\fP\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBheightForWidth()\fP 
 .RE
@@ -205,12 +205,12 @@ true: \fBQwtDynGridLayout\fP implements \fBheightForWidth()\fP\&.
 .SS "int QwtDynGridLayout::heightForWidth (int width) const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The preferred height for this layout, given a width\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBhasHeightForWidth()\fP 
 .RE
@@ -219,7 +219,7 @@ The preferred height for this layout, given a width\&.
 .SS "bool QwtDynGridLayout::isEmpty () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if this layout is empty\&. 
 .RE
@@ -228,17 +228,17 @@ true if this layout is empty\&.
 .SS "QLayoutItem * QwtDynGridLayout::itemAt (int index) const\fC [virtual]\fP"
 Find the item at a specific index
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Item at a specific index 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtakeAt()\fP 
 .RE
@@ -247,7 +247,7 @@ Item at a specific index
 .SS "uint QwtDynGridLayout::itemCount () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 number of layout items 
 .RE
@@ -256,7 +256,7 @@ number of layout items
 .SS "void QwtDynGridLayout::layoutGrid (uint numColumns, QVector< int > & rowHeight, QVector< int > & colWidth) const\fC [protected]\fP"
 Calculate the dimensions for the columns and rows for a grid of numColumns columns\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fInumColumns\fP Number of columns\&. 
 .br
@@ -269,14 +269,14 @@ Calculate the dimensions for the columns and rows for a grid of numColumns colum
 .SS "QList< QRect > QwtDynGridLayout::layoutItems (const QRect & rect, uint numColumns) const"
 Calculate the geometries of the layout items for a layout with numColumns columns and a given rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Rect where to place the items 
 .br
 \fInumColumns\fP Number of columns 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 item geometries 
 .RE
@@ -287,12 +287,12 @@ item geometries
 .PP
 Return the upper limit for the number of columns\&. 0 means unlimited, what is the default\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Upper limit for the number of columns 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMaxColumns()\fP 
 .RE
@@ -301,7 +301,7 @@ Upper limit for the number of columns
 .SS "int QwtDynGridLayout::maxItemWidth () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the maximum width of all layout items 
 .RE
@@ -310,17 +310,17 @@ the maximum width of all layout items
 .SS "uint QwtDynGridLayout::numColumns () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of columns of the current layout\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnumRows()\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The number of columns might change whenever the geometry changes 
 .RE
@@ -329,17 +329,17 @@ The number of columns might change whenever the geometry changes
 .SS "uint QwtDynGridLayout::numRows () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Number of rows of the current layout\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnumColumns()\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The number of rows might change whenever the geometry changes 
 .RE
@@ -348,12 +348,12 @@ The number of rows might change whenever the geometry changes
 .SS "void QwtDynGridLayout::setExpandingDirections (Qt::Orientations expanding)"
 Set whether this layout can make use of more space than \fBsizeHint()\fP\&. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions\&. The default value is 0\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIexpanding\fP Or'd orientations 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBexpandingDirections()\fP 
 .RE
@@ -362,7 +362,7 @@ Set whether this layout can make use of more space than \fBsizeHint()\fP\&. A va
 .SS "void QwtDynGridLayout::setGeometry (const QRect & rect)\fC [virtual]\fP"
 Reorganizes columns and rows and resizes managed items within a rectangle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Layout geometry 
 .RE
@@ -371,12 +371,12 @@ Reorganizes columns and rows and resizes managed items within a rectangle\&.
 .SS "void QwtDynGridLayout::setMaxColumns (uint maxColumns)"
 Limit the number of columns\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImaxColumns\fP upper limit, 0 means unlimited 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmaxColumns()\fP 
 .RE
@@ -385,12 +385,12 @@ Limit the number of columns\&.
 .SS "QSize QwtDynGridLayout::sizeHint () const\fC [virtual]\fP"
 Return the size hint\&. If \fBmaxColumns()\fP > 0 it is the size for a grid with \fBmaxColumns()\fP columns, otherwise it is the size for a grid with only one row\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Size hint 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmaxColumns()\fP, \fBsetMaxColumns()\fP 
 .RE
@@ -399,7 +399,7 @@ Size hint
 .SS "void QwtDynGridLayout::stretchGrid (const QRect & rect, uint numColumns, QVector< int > & rowHeight, QVector< int > & colWidth) const\fC [protected]\fP"
 Stretch columns in case of expanding() & QSizePolicy::Horizontal and rows in case of expanding() & QSizePolicy::Vertical to fill the entire rect\&. Rows and columns are stretched with the same factor\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrect\fP Bounding rectangle 
 .br
@@ -410,7 +410,7 @@ Stretch columns in case of expanding() & QSizePolicy::Horizontal and rows in cas
 \fIcolWidth\fP Array to be filled with the calculated column widths
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 setExpanding(), expanding() 
 .RE
@@ -419,17 +419,17 @@ setExpanding(), expanding()
 .SS "QLayoutItem * QwtDynGridLayout::takeAt (int index)\fC [virtual]\fP"
 Find the item at a specific index and remove it from the layout
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIindex\fP Index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Layout item, removed from the layout 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBitemAt()\fP 
 .RE

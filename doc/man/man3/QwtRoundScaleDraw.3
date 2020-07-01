@@ -1,4 +1,4 @@
-.TH "QwtRoundScaleDraw" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRoundScaleDraw" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -81,12 +81,12 @@ Constructor\&. The range of the scale is initialized to [0, 100], The center is 
 .SS "void QwtRoundScaleDraw::drawBackbone (QPainter * painter) const\fC [protected]\fP, \fC [virtual]\fP"
 Draws the baseline of the scale 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawTick()\fP, \fBdrawLabel()\fP 
 .RE
@@ -97,14 +97,14 @@ Implements \fBQwtAbstractScaleDraw\fP\&.
 .SS "void QwtRoundScaleDraw::drawLabel (QPainter * painter, double value) const\fC [protected]\fP, \fC [virtual]\fP"
 Draws the label for a major scale tick
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
 \fIvalue\fP Value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawTick()\fP, \fBdrawBackbone()\fP 
 .RE
@@ -115,16 +115,16 @@ Implements \fBQwtAbstractScaleDraw\fP\&.
 .SS "void QwtRoundScaleDraw::drawTick (QPainter * painter, double value, double len) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a tick
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
 \fIvalue\fP Value of the tick 
 .br
-\fIlen\fP Lenght of the tick
+\fIlen\fP Length of the tick
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawBackbone()\fP, \fBdrawLabel()\fP 
 .RE
@@ -137,22 +137,22 @@ Calculate the extent of the scale
 .PP
 The extent is the distance between the baseline to the outermost pixel of the scale draw\&. \fBradius()\fP + \fBextent()\fP is an upper limit for the radius of the bounding circle\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font used for painting the labels 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated extent
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMinimumExtent()\fP, \fBminimumExtent()\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The implemented algorithm is not too smart and calculates only an upper limit, that might be a few pixels too large 
 .RE
@@ -163,12 +163,12 @@ Implements \fBQwtAbstractScaleDraw\fP\&.
 .SS "void QwtRoundScaleDraw::moveCenter (const QPointF & center)"
 Move the center of the scale draw, leaving the radius unchanged
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcenter\fP New center 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRadius()\fP 
 .RE
@@ -179,12 +179,12 @@ Get the radius
 .PP
 Radius is the radius of the backbone without ticks and labels\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Radius of the scale 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetRadius()\fP, \fBextent()\fP 
 .RE
@@ -195,14 +195,14 @@ Radius of the scale
 .PP
 Adjust the baseline circle segment for round scales\&. The baseline will be drawn from min(angle1,angle2) to max(angle1, angle2)\&. The default setting is [ -135, 135 ]\&. An angle of 0 degrees corresponds to the 12 o'clock position, and positive angles count in a clockwise direction\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIangle1\fP 
 .br
 \fIangle2\fP boundaries of the angle interval in degrees\&. 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 .PD 0
 .IP "\(bu" 2
@@ -220,12 +220,12 @@ Change of radius the scale
 .PP
 Radius is the radius of the backbone without ticks and labels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIradius\fP New Radius 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmoveCenter()\fP 
 .RE

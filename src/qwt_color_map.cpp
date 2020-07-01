@@ -345,7 +345,7 @@ QVector<double> QwtLinearColorMap::colorStops() const
 */
 QColor QwtLinearColorMap::color1() const
 {
-    return QColor( d_data->colorStops.rgb( d_data->mode, 0.0 ) );
+    return QColor::fromRgba( d_data->colorStops.rgb( d_data->mode, 0.0 ) );
 }
 
 /*!
@@ -354,7 +354,7 @@ QColor QwtLinearColorMap::color1() const
 */
 QColor QwtLinearColorMap::color2() const
 {
-    return QColor( d_data->colorStops.rgb( d_data->mode, 1.0 ) );
+    return QColor::fromRgba( d_data->colorStops.rgb( d_data->mode, 1.0 ) );
 }
 
 /*!

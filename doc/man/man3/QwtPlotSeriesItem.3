@@ -1,4 +1,4 @@
-.TH "QwtPlotSeriesItem" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSeriesItem" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -64,7 +64,7 @@ Base class for plot items representing a series of samples\&.
 .SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -73,7 +73,7 @@ Constructor
 .SS "QwtPlotSeriesItem::QwtPlotSeriesItem (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -84,12 +84,12 @@ Constructor
 .SS "QRectF QwtPlotSeriesItem::boundingRect () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 An invalid bounding rect: QRectF(1\&.0, 1\&.0, -2\&.0, -2\&.0) 
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 A width or height < 0\&.0 is ignored by the autoscaler 
 .RE
@@ -104,7 +104,7 @@ Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPl
 .PP
 Draw the complete series\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -121,7 +121,7 @@ Implements \fBQwtPlotItem\fP\&.
 .SS "virtual void QwtPlotSeriesItem::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [pure virtual]\fP"
 Draw a subset of the samples
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -138,16 +138,16 @@ Draw a subset of the samples
 .PP
 
 .PP
-Implemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotBarChart\fP, \fBQwtPlotMultiBarChart\fP, and \fBQwtPlotSpectroCurve\fP\&.
+Implemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotBarChart\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotCurve\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, and \fBQwtPlotSpectroCurve\fP\&.
 .SS "Qt::Orientation QwtPlotSeriesItem::orientation () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Orientation of the plot item 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetOrientation()\fP 
 .RE
@@ -158,7 +158,7 @@ Set the orientation of the item\&.
 .PP
 The \fBorientation()\fP might be used in specific way by a plot item\&. F\&.e\&. a \fBQwtPlotCurve\fP uses it to identify how to display the curve int \fBQwtPlotCurve::Steps\fP or \fBQwtPlotCurve::Sticks\fP style\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBorientation()\fP 
 .RE
@@ -171,14 +171,14 @@ Update the item to changes of the axes scale division\&. Update the item, when t
 .PP
 \fBupdateScaleDiv()\fP is only called when the ScaleInterest interest is enabled\&. The default implementation does nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIxScaleDiv\fP Scale division of the x-axis 
 .br
 \fIyScaleDiv\fP Scale division of the y-axis
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::updateAxes()\fP, \fBScaleInterest\fP 
 .RE

@@ -1,4 +1,4 @@
-.TH "QwtSpline" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSpline" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -150,7 +150,7 @@ A periodic spline\&.
 .SS "QwtSpline::QwtSpline (const \fBQwtSpline\fP & other)"
 Copy constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Spline used for initialization 
 .RE
@@ -163,7 +163,7 @@ Copy constructor
 .PP
 Determines the coefficients for a natural spline\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if successful 
 .RE
@@ -174,7 +174,7 @@ true if successful
 .PP
 Determines the coefficients for a periodic spline\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if successful 
 .RE
@@ -183,7 +183,7 @@ true if successful
 .SS "const QVector< double > & QwtSpline::coefficientsA () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A coefficients 
 .RE
@@ -192,7 +192,7 @@ A coefficients
 .SS "const QVector< double > & QwtSpline::coefficientsB () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 B coefficients 
 .RE
@@ -201,7 +201,7 @@ B coefficients
 .SS "const QVector< double > & QwtSpline::coefficientsC () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 C coefficients 
 .RE
@@ -210,12 +210,12 @@ C coefficients
 .SS "\fBQwtSpline\fP & QwtSpline::operator= (const \fBQwtSpline\fP & other)"
 Assignment operator 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Spline used for initialization 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 *this 
 .RE
@@ -224,7 +224,7 @@ Assignment operator
 .SS "QPolygonF QwtSpline::points () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Points, that have been by \fBsetPoints()\fP 
 .RE
@@ -235,17 +235,17 @@ Points, that have been by \fBsetPoints()\fP
 .PP
 Calculate the spline coefficients\&. Depending on the value of \fIperiodic\fP, this function will determine the coefficients for a natural or a periodic spline and store them internally\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpoints\fP Points 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if successful 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The sequence of x (but not y) values has to be strictly monotone increasing, which means \fCpoints[i]\&.x() < points[i+1]\&.x()\fP\&. If this is not the case, the function will return false 
 .RE
@@ -254,12 +254,12 @@ The sequence of x (but not y) values has to be strictly monotone increasing, whi
 .SS "void QwtSpline::setSplineType (\fBSplineType\fP splineType)"
 Select the algorithm used for calculating the spline
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsplineType\fP Spline type 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsplineType()\fP 
 .RE
@@ -268,12 +268,12 @@ Select the algorithm used for calculating the spline
 .SS "\fBQwtSpline::SplineType\fP QwtSpline::splineType () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the spline type 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetSplineType()\fP 
 .RE
@@ -282,12 +282,12 @@ the spline type
 .SS "double QwtSpline::value (double x) const"
 Calculate the interpolated function value corresponding to a given argument x\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Coordinate 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Interpolated coordinate 
 .RE

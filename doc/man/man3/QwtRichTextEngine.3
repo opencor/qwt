@@ -1,4 +1,4 @@
-.TH "QwtRichTextEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRichTextEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -45,7 +45,7 @@ A text engine for Qt rich texts\&.
 .SS "void QwtRichTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [virtual]\fP"
 Draw the text in a clipping rectangle
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -62,7 +62,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "double QwtRichTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [virtual]\fP"
 Find the height for a given width
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -73,7 +73,7 @@ Find the height for a given width
 \fIwidth\fP Width
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated height 
 .RE
@@ -84,12 +84,12 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "bool QwtRichTextEngine::mightRender (const QString & text) const\fC [virtual]\fP"
 Test if a string can be rendered by this text engine
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text to be tested 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Qt::mightBeRichText(text); 
 .RE
@@ -100,7 +100,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "void QwtRichTextEngine::textMargins (const QFont &, const QString &, double & left, double & right, double & top, double & bottom) const\fC [virtual]\fP"
 Return margins around the texts
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIleft\fP Return 0 
 .br
@@ -117,7 +117,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "QSizeF QwtRichTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [virtual]\fP"
 Returns the size, that is needed to render text
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -126,7 +126,7 @@ Returns the size, that is needed to render text
 \fItext\fP Text to be rendered
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated size 
 .RE

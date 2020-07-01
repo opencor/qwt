@@ -1,4 +1,4 @@
-.TH "QwtPlotSpectroCurve" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSpectroCurve" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -100,7 +100,7 @@ Clip points outside the canvas rectangle\&.
 .SS "QwtPlotSpectroCurve::QwtPlotSpectroCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -109,7 +109,7 @@ Constructor
 .SS "QwtPlotSpectroCurve::QwtPlotSpectroCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItitle\fP Title of the curve 
 .RE
@@ -120,12 +120,12 @@ Constructor
 .SS "const \fBQwtColorMap\fP * QwtPlotSpectroCurve::colorMap () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Color Map used for mapping the intensity values to colors 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetColorMap()\fP, \fBsetColorRange()\fP, \fBQwtColorMap::color()\fP 
 .RE
@@ -134,12 +134,12 @@ Color Map used for mapping the intensity values to colors
 .SS "\fBQwtInterval\fP & QwtPlotSpectroCurve::colorRange () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Value interval, that corresponds to the color map 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetColorRange()\fP, \fBsetColorMap()\fP, \fBQwtColorMap::color()\fP 
 .RE
@@ -148,7 +148,7 @@ Value interval, that corresponds to the color map
 .SS "void QwtPlotSpectroCurve::drawDots (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a subset of the points
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -163,7 +163,7 @@ Draw a subset of the points
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the series will be painted to its last sample\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawSeries()\fP 
 .RE
@@ -172,7 +172,7 @@ Draw a subset of the points
 .SS "void QwtPlotSpectroCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
 Draw a subset of the points
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -187,7 +187,7 @@ Draw a subset of the points
 \fIto\fP Index of the last sample to be painted\&. If to < 0 the series will be painted to its last sample\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBdrawDots()\fP 
 .RE
@@ -198,12 +198,12 @@ Implements \fBQwtPlotSeriesItem\fP\&.
 .SS "double QwtPlotSpectroCurve::penWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pen width used to draw a dot 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetPenWidth()\fP 
 .RE
@@ -212,7 +212,7 @@ Pen width used to draw a dot
 .SS "int QwtPlotSpectroCurve::rtti () const\fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBQwtPlotItem::Rtti_PlotSpectroCurve\fP 
 .RE
@@ -225,12 +225,12 @@ Change the color map
 .PP
 Often it is useful to display the mapping between intensities and colors as an additional plot axis, showing a color bar\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcolorMap\fP Color Map
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBcolorMap()\fP, \fBsetColorRange()\fP, \fBQwtColorMap::color()\fP, \fBQwtScaleWidget::setColorBarEnabled()\fP, \fBQwtScaleWidget::setColorMap()\fP 
 .RE
@@ -239,12 +239,12 @@ Often it is useful to display the mapping between intensities and colors as an a
 .SS "void QwtPlotSpectroCurve::setColorRange (const \fBQwtInterval\fP & interval)"
 Set the value interval, that corresponds to the color map
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIinterval\fP interval\&.minValue() corresponds to 0\&.0, interval\&.maxValue() to 1\&.0 on the color map\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBcolorRange()\fP, \fBsetColorMap()\fP, \fBQwtColorMap::color()\fP 
 .RE
@@ -253,7 +253,7 @@ Set the value interval, that corresponds to the color map
 .SS "void QwtPlotSpectroCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIattribute\fP Paint attribute 
 .br
@@ -264,12 +264,12 @@ Specify an attribute how to draw the curve
 .SS "void QwtPlotSpectroCurve::setPenWidth (double penWidth)"
 Assign a pen width
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpenWidth\fP New pen width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBpenWidth()\fP 
 .RE
@@ -278,7 +278,7 @@ Assign a pen width
 .SS "void QwtPlotSpectroCurve::setSamples (const QVector< \fBQwtPoint3D\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIsamples\fP Vector of points 
 .RE
@@ -289,12 +289,12 @@ Assign a series of samples
 .PP
 \fBsetSamples()\fP is just a wrapper for \fBsetData()\fP without any additional value - beside that it is easier to find for the developer\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdata\fP Data 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 The item takes ownership of the data object, deleting it when its not used anymore\&. 
 .RE
@@ -303,12 +303,12 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .SS "bool QwtPlotSpectroCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when attribute is enabled 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBPaintAttribute\fP, \fBsetPaintAttribute()\fP 
 .RE

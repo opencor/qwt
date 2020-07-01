@@ -184,7 +184,7 @@ void QwtRoundScaleDraw::drawLabel( QPainter *painter, double value ) const
 
    \param painter Painter
    \param value Value of the tick
-   \param len Lenght of the tick
+   \param len Length of the tick
 
    \sa drawBackbone(), drawLabel()
 */

@@ -1,4 +1,4 @@
-.TH "QwtInterval" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtInterval" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -92,15 +92,17 @@ QwtInterval \- A class representing an interval\&.
 .RI "\fBQwtInterval\fP \fBoperator|\fP (const \fBQwtInterval\fP &) const"
 .br
 .ti -1c
-.RI "\fBQwtInterval\fP \fBoperator &\fP (const \fBQwtInterval\fP &) const"
+.RI "\fBQwtInterval\fP \fBoperator&\fP (const \fBQwtInterval\fP &) const"
 .br
+.RI "Intersection of two intervals\&. "
 .ti -1c
 .RI "\fBQwtInterval\fP & \fBoperator|=\fP (const \fBQwtInterval\fP &)"
 .br
 .RI "Unite this interval with the given interval\&. "
 .ti -1c
-.RI "\fBQwtInterval\fP & \fBoperator &=\fP (const \fBQwtInterval\fP &)"
+.RI "\fBQwtInterval\fP & \fBoperator&=\fP (const \fBQwtInterval\fP &)"
 .br
+.RI "Intersect this interval with the given interval\&. "
 .ti -1c
 .RI "\fBQwtInterval\fP \fBextend\fP (double value) const"
 .br
@@ -134,7 +136,7 @@ The interval is represented by 2 doubles, the lower and the upper limit\&.
 .SS "enum \fBQwtInterval::BorderFlag\fP"
 Flag indicating if a border is included or excluded 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBorderFlags()\fP, \fBborderFlags()\fP 
 .RE
@@ -162,7 +164,7 @@ Min/Max values are not included in the interval\&.
 .PP
 Default Constructor\&. Creates an invalid interval [0\&.0, -1\&.0] 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetInterval()\fP, \fBisValid()\fP 
 .RE
@@ -173,7 +175,7 @@ Constructor
 .PP
 Build an interval with from min/max values
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIminValue\fP Minimum value 
 .br
@@ -188,12 +190,12 @@ Build an interval with from min/max values
 .SS "\fBQwtInterval::BorderFlags\fP QwtInterval::borderFlags () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Border flags 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetBorderFlags()\fP 
 .RE
@@ -202,12 +204,12 @@ Border flags
 .SS "bool QwtInterval::contains (double value) const"
 Test if a value is inside an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if value >= \fBminValue()\fP && value <= \fBmaxValue()\fP 
 .RE
@@ -220,17 +222,17 @@ Extend the interval\&. If value is below \fBminValue()\fP, value becomes the low
 .PP
 \fBextend()\fP has no effect for invalid intervals
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 extended interval
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP 
 .RE
@@ -241,12 +243,12 @@ extended interval
 .PP
 Intersect 2 intervals\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval to be intersect with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Intersection 
 .RE
@@ -257,12 +259,12 @@ Intersection
 .PP
 Test if two intervals overlap\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the intervals are intersecting 
 .RE
@@ -273,7 +275,7 @@ Invalidate the interval
 .PP
 The limits are set to interval [0\&.0, -1\&.0] 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP 
 .RE
@@ -282,12 +284,12 @@ The limits are set to interval [0\&.0, -1\&.0]
 .SS "\fBQwtInterval\fP QwtInterval::inverted () const"
 Invert the limits of the interval 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Inverted interval 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBnormalized()\fP 
 .RE
@@ -296,7 +298,7 @@ Inverted interval
 .SS "bool QwtInterval::isNull () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if \fBisValid()\fP && (\fBminValue()\fP >= \fBmaxValue()\fP) 
 .RE
@@ -305,7 +307,7 @@ true, if \fBisValid()\fP && (\fBminValue()\fP >= \fBmaxValue()\fP)
 .SS "bool QwtInterval::isValid () const\fC [inline]\fP"
 A interval is valid when \fBminValue()\fP <= \fBmaxValue()\fP\&. In case of \fBQwtInterval::ExcludeBorders\fP it is true when \fBminValue()\fP < \fBmaxValue()\fP
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when the interval is valid 
 .RE
@@ -314,14 +316,14 @@ True, when the interval is valid
 .SS "\fBQwtInterval\fP QwtInterval::limited (double lowerBound, double upperBound) const"
 Limit the interval, keeping the border modes
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIlowerBound\fP Lower limit 
 .br
 \fIupperBound\fP Upper limit
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Limited interval 
 .RE
@@ -330,7 +332,7 @@ Limited interval
 .SS "double QwtInterval::maxValue () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Upper limit of the interval 
 .RE
@@ -339,7 +341,7 @@ Upper limit of the interval
 .SS "double QwtInterval::minValue () const\fC [inline]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Lower limit of the interval 
 .RE
@@ -350,12 +352,12 @@ Lower limit of the interval
 .PP
 Normalize the limits of the interval\&. If \fBmaxValue()\fP < \fBminValue()\fP the limits will be inverted\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Normalized interval
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP, \fBinverted()\fP 
 .RE
@@ -366,14 +368,51 @@ Normalized interval
 .PP
 Compare two intervals\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval to compare with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when this and other are not equal 
+.RE
+.PP
+
+.SS "\fBQwtInterval\fP QwtInterval::operator& (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
+
+.PP
+Intersection of two intervals\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP Interval to intersect with 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Intersection of this and other
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBintersect()\fP 
+.RE
+.PP
+
+.SS "\fBQwtInterval\fP & QwtInterval::operator&= (const \fBQwtInterval\fP & other)"
+
+.PP
+Intersect this interval with the given interval\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP Interval to be intersected with 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+This interval 
 .RE
 .PP
 
@@ -382,12 +421,12 @@ True, when this and other are not equal
 .PP
 Compare two intervals\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval to compare with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, when this and other are equal 
 .RE
@@ -396,17 +435,17 @@ True, when this and other are equal
 .SS "\fBQwtInterval\fP QwtInterval::operator| (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 Union of two intervals
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval to unite with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Union of this and other
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBunite()\fP 
 .RE
@@ -415,17 +454,17 @@ Union of this and other
 .SS "\fBQwtInterval\fP QwtInterval::operator| (double value) const\fC [inline]\fP"
 Extend an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Extended interval 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBextend()\fP 
 .RE
@@ -436,12 +475,12 @@ Extended interval
 .PP
 Unite this interval with the given interval\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIother\fP Interval to be united with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 This interval 
 .RE
@@ -450,17 +489,17 @@ This interval
 .SS "\fBQwtInterval\fP & QwtInterval::operator|= (double value)"
 Extend an interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference of the extended interval
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBextend()\fP 
 .RE
@@ -469,12 +508,12 @@ Reference of the extended interval
 .SS "void QwtInterval::setBorderFlags (\fBBorderFlags\fP borderFlags)\fC [inline]\fP"
 Change the border flags
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIborderFlags\fP Or'd BorderMode flags 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBborderFlags()\fP 
 .RE
@@ -483,7 +522,7 @@ Change the border flags
 .SS "void QwtInterval::setInterval (double minValue, double maxValue, \fBBorderFlags\fP borderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
 Assign the limits of the interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIminValue\fP Minimum value 
 .br
@@ -496,7 +535,7 @@ Assign the limits of the interval
 .SS "void QwtInterval::setMaxValue (double maxValue)\fC [inline]\fP"
 Assign the upper limit of the interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImaxValue\fP Maximum value 
 .RE
@@ -505,7 +544,7 @@ Assign the upper limit of the interval
 .SS "void QwtInterval::setMinValue (double minValue)\fC [inline]\fP"
 Assign the lower limit of the interval
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIminValue\fP Minimum value 
 .RE
@@ -514,12 +553,12 @@ Assign the lower limit of the interval
 .SS "\fBQwtInterval\fP QwtInterval::symmetrize (double value) const"
 Adjust the limit that is closer to value, so that value becomes the center of the interval\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Center 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Interval with value as center 
 .RE
@@ -530,12 +569,12 @@ Interval with value as center
 .PP
 Return the width of an interval\&. The width of invalid intervals is 0\&.0, otherwise the result is \fBmaxValue()\fP - \fBminValue()\fP\&.
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Interval width 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisValid()\fP 
 .RE

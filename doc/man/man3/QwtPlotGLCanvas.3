@@ -1,4 +1,4 @@
-.TH "QwtPlotGLCanvas" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotGLCanvas" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -109,12 +109,12 @@ An alternative canvas for a \fBQwtPlot\fP derived from QGLWidget\&.
 .PP
 Even if \fBQwtPlotGLCanvas\fP is not derived from QFrame it imitates its API\&. When using style sheets it supports the box model - beside backgrounds with rounded borders\&.
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::setCanvas()\fP, \fBQwtPlotCanvas\fP
 .RE
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 With Qt4 you might want to use the QPaintEngine::OpenGL paint engine ( see QGL::setPreferredPaintEngine() )\&. On a Linux test system QPaintEngine::OpenGL2 shows very basic problems like translated geometries\&. 
 .RE
@@ -143,7 +143,7 @@ QFrame::Sunken\&.
 .PP
 Frame shape\&. Unfortunately it is not possible to use QFrame::Shape as a property of a widget that is not derived from QFrame\&. The following enum is made for the designer only\&. It is safe to use QFrame::Shadow instead\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 QFrame::StyledPanel and QFrame::WinPanel are unsupported and will be displayed as QFrame::Panel\&. 
 .RE
@@ -156,12 +156,12 @@ QFrame::StyledPanel and QFrame::WinPanel are unsupported and will be displayed a
 .PP
 Constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIplot\fP Parent plot widget 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::setCanvas()\fP 
 .RE
@@ -172,7 +172,7 @@ Constructor\&.
 .SS "QPainterPath QwtPlotGLCanvas::borderPath (const QRect & rect) const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Empty path 
 .RE
@@ -181,7 +181,7 @@ Empty path
 .SS "void QwtPlotGLCanvas::drawBackground (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the background of the canvas 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .RE
@@ -190,7 +190,7 @@ Draw the background of the canvas
 .SS "void QwtPlotGLCanvas::drawBorder (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the border of the canvas 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .RE
@@ -199,12 +199,12 @@ Draw the border of the canvas
 .SS "void QwtPlotGLCanvas::drawItems (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the plot items 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::drawCanvas()\fP 
 .RE
@@ -213,12 +213,12 @@ Draw the plot items
 .SS "bool QwtPlotGLCanvas::event (QEvent * event)\fC [virtual]\fP"
 Qt event handler for QEvent::PolishRequest and QEvent::StyleChange 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Qt Event 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 See QGLWidget::event() 
 .RE
@@ -227,7 +227,7 @@ See QGLWidget::event()
 .SS "QRect QwtPlotGLCanvas::frameRect () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The rectangle where the frame is drawn in\&. 
 .RE
@@ -236,12 +236,12 @@ The rectangle where the frame is drawn in\&.
 .SS "\fBQwtPlotGLCanvas::Shadow\fP QwtPlotGLCanvas::frameShadow () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Frame shadow 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFrameShadow()\fP, QFrame::setFrameShadow() 
 .RE
@@ -250,12 +250,12 @@ Frame shadow
 .SS "\fBQwtPlotGLCanvas::Shape\fP QwtPlotGLCanvas::frameShape () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Frame shape 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFrameShape()\fP, QFrame::frameShape() 
 .RE
@@ -264,12 +264,12 @@ Frame shape
 .SS "int QwtPlotGLCanvas::frameStyle () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The bitwise OR between a \fBframeShape()\fP and a \fBframeShadow()\fP 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetFrameStyle()\fP, QFrame::frameStyle() 
 .RE
@@ -278,7 +278,7 @@ The bitwise OR between a \fBframeShape()\fP and a \fBframeShadow()\fP
 .SS "int QwtPlotGLCanvas::frameWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Frame width depending on the style, line width and midline width\&. 
 .RE
@@ -287,12 +287,12 @@ Frame width depending on the style, line width and midline width\&.
 .SS "int QwtPlotGLCanvas::lineWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Line width of the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetLineWidth()\fP, \fBmidLineWidth()\fP 
 .RE
@@ -301,12 +301,12 @@ Line width of the frame
 .SS "int QwtPlotGLCanvas::midLineWidth () const"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Midline width of the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetMidLineWidth()\fP, \fBlineWidth()\fP 
 .RE
@@ -315,12 +315,12 @@ Midline width of the frame
 .SS "void QwtPlotGLCanvas::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Paint event
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIevent\fP Paint event 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlot::drawCanvas()\fP 
 .RE
@@ -329,12 +329,12 @@ Paint event
 .SS "void QwtPlotGLCanvas::setFrameShadow (\fBShadow\fP shadow)"
 Set the frame shadow
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIshadow\fP Frame shadow 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBframeShadow()\fP, \fBsetFrameShape()\fP, QFrame::setFrameShadow() 
 .RE
@@ -343,12 +343,12 @@ Set the frame shadow
 .SS "void QwtPlotGLCanvas::setFrameShape (\fBShape\fP shape)"
 Set the frame shape
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIshape\fP Frame shape 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBframeShape()\fP, \fBsetFrameShadow()\fP, QFrame::frameShape() 
 .RE
@@ -357,12 +357,12 @@ Set the frame shape
 .SS "void QwtPlotGLCanvas::setFrameStyle (int style)"
 Set the frame style
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstyle\fP The bitwise OR between a shape and a shadow\&.
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBframeStyle()\fP, QFrame::setFrameStyle(), \fBsetFrameShadow()\fP, \fBsetFrameShape()\fP 
 .RE
@@ -373,12 +373,12 @@ Set the frame line width
 .PP
 The default line width is 2 pixels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Line width of the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBlineWidth()\fP, \fBsetMidLineWidth()\fP 
 .RE
@@ -389,12 +389,12 @@ Set the frame mid line width
 .PP
 The default midline width is 0 pixels\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIwidth\fP Midline width of the frame 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBmidLineWidth()\fP, \fBsetLineWidth()\fP 
 .RE

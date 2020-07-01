@@ -1,4 +1,4 @@
-.TH "qwtinstall" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "qwtinstall" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,22 +8,22 @@ qwtinstall \- Installing Qwt
 .PP
 Stable Qwt releases are available from the Qwt \fCproject page\fP\&.
 .PP
-Qwt-6\&.1\&.4 consists of 4 files:
+Qwt-6\&.1\&.5 consists of 4 files:
 .PP
 .IP "\(bu" 2
-qwt-6\&.1\&.4\&.zip
+qwt-6\&.1\&.5\&.zip
 .br
  Zip file with the Qwt sources and the html documentation for Windows
 .IP "\(bu" 2
-qwt-6\&.1\&.4\&.tar\&.bz2
+qwt-6\&.1\&.5\&.tar\&.bz2
 .br
  Compressed tar file with the Qwt sources and the html documentation for UNIX systems ( Linux, Mac, \&.\&.\&. )
 .IP "\(bu" 2
-qwt-6\&.1\&.4\&.pdf
+qwt-6\&.1\&.5\&.pdf
 .br
  Qwt documentation as PDF document\&.
 .IP "\(bu" 2
-qwt-6\&.1\&.4\&.qch
+qwt-6\&.1\&.5\&.qch
 .br
  Qwt documentation as Qt Compressed Help document, that can be loaded into the Qt Assistant or Creator\&. In the Qt Creator context sensitive help will be available like for Qt classes\&.
 .PP
@@ -31,7 +31,7 @@ qwt-6\&.1\&.4\&.qch
 Precompiled Qwt Designer plugins, that are compatible with some binary packages of the Qt Creator:
 .PP
 .IP "\(bu" 2
-qwtdesigner-6\&.1\&.4-*\&.zip
+qwtdesigner-6\&.1\&.5-*\&.zip
 .PP
 .SH "Installing Qwt"
 .PP
@@ -42,11 +42,11 @@ All files will be copied to an installation directory, that is configurable by e
 .IP "\(bu" 2
 Windows
 .br
- C:\\Qwt-6\&.1\&.4
+ C:\\Qwt-6\&.1\&.5
 .IP "\(bu" 2
 Unix like systems
 .br
- /usr/local/qwt-6\&.1\&.4
+ /usr/local/qwt-6\&.1\&.5
 .PP
 .PP
 For the rest of the document this install path will be written as \fI${QWT_ROOT}\fP and needs to be replaced by the real path in all commands below\&.
@@ -93,7 +93,7 @@ The default setting of qmake is to generate a makefile that builds Qwt for the s
 .PP
 .PP
 .nf
-cd qwt-6\&.1\&.4
+cd qwt-6\&.1\&.5
 /usr/local/Qt-5\&.0\&.1/bin/qmake qwt\&.pro
 .fi
 .PP
@@ -122,7 +122,7 @@ Creating a makefile usually means something like:
 .PP
 .PP
 .nf
-cd qwt-6\&.1\&.4
+cd qwt-6\&.1\&.5
 qmake qwt\&.pro
 .fi
 .PP
@@ -196,7 +196,7 @@ open the settings dialog from the \fITools->Options\fP menu
 .IP "\(bu" 2
 raise the tab 'Help->Documentation'\&.
 .IP "\(bu" 2
-press the \fIAdd\fP button and select qwt-6\&.1\&.4\&.qch\&.
+press the \fIAdd\fP button and select qwt-6\&.1\&.5\&.qch\&.
 .PP
 .PP
 Now the context sensitive help ( \fIF1\fP ) works for Qwt classes\&.
@@ -208,7 +208,7 @@ open the settings dialog from the \fIEdit->Preferences\fP menu
 .IP "\(bu" 2
 raise the tab \fIDocumentation\fP\&.
 .IP "\(bu" 2
-press the \fIAdd\fP button and select qwt-6\&.1\&.4\&.qch\&.
+press the \fIAdd\fP button and select qwt-6\&.1\&.5\&.qch\&.
 .PP
 .SH "Building a Qwt application"
 .PP

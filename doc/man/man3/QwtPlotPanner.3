@@ -1,4 +1,4 @@
-.TH "QwtPlotPanner" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotPanner" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -72,12 +72,12 @@ Inherits \fBQwtPanner\fP\&.
 .PP
 Together with \fBQwtPlotZoomer\fP and \fBQwtPlotMagnifier\fP powerful ways of navigating on a \fBQwtPlot\fP widget can be implemented easily\&.
 .PP
-\fBNote:\fP
+\fBNote\fP
 .RS 4
 The axes are not updated, while dragging the canvas 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotZoomer\fP, \fBQwtPlotMagnifier\fP 
 .RE
@@ -90,12 +90,12 @@ The axes are not updated, while dragging the canvas
 .PP
 A panner for the canvas of a \fBQwtPlot\fP\&. The panner is enabled for all axes
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcanvas\fP Plot canvas to pan, also the parent object
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAxisEnabled()\fP 
 .RE
@@ -106,12 +106,12 @@ A panner for the canvas of a \fBQwtPlot\fP\&. The panner is enabled for all axes
 .SS "QBitmap QwtPlotPanner::contentsMask () const\fC [protected]\fP, \fC [virtual]\fP"
 Calculate a mask from the border path of the canvas
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Mask as bitmap 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPlotCanvas::borderPath()\fP 
 .RE
@@ -122,7 +122,7 @@ Reimplemented from \fBQwtPanner\fP\&.
 .SS "QPixmap QwtPlotPanner::grab () const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pixmap with the content of the canvas 
 .RE
@@ -133,17 +133,17 @@ Reimplemented from \fBQwtPanner\fP\&.
 .SS "bool QwtPlotPanner::isAxisEnabled (int axis) const"
 Test if an axis is enabled
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 True, if the axis is enabled
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBsetAxisEnabled()\fP, \fBmoveCanvas()\fP 
 .RE
@@ -152,14 +152,14 @@ True, if the axis is enabled
 .SS "void QwtPlotPanner::moveCanvas (int dx, int dy)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
 Adjust the enabled axes according to dx/dy
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIdx\fP Pixel offset in x direction 
 .br
 \fIdy\fP Pixel offset in y direction
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtPanner::panned()\fP 
 .RE
@@ -170,14 +170,14 @@ Adjust the enabled axes according to dx/dy
 .PP
 En/Disable an axis\&. Axes that are enabled will be synchronized to the result of panning\&. All other axes will remain unchanged\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
 .br
 \fIon\fP On/Off
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBisAxisEnabled()\fP, \fBmoveCanvas()\fP 
 .RE

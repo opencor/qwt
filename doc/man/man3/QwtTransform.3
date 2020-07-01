@@ -1,4 +1,4 @@
-.TH "QwtTransform" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTransform" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,12 +65,12 @@ s = invT ( T( s1 ) + ( T( s2 ) - T( s1 ) ) * ( p - p1 ) / ( p2 - p1 ) );
 .SS "double QwtTransform::bounded (double value) const\fC [virtual]\fP"
 Modify value to be a valid value for the transformation\&. The default implementation does nothing\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value to be bounded 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 value unmodified 
 .RE
@@ -81,17 +81,17 @@ Reimplemented in \fBQwtLogTransform\fP\&.
 .SS "virtual double QwtTransform::invTransform (double value) const\fC [pure virtual]\fP"
 Inverse transformation function
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Modified value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBtransform()\fP 
 .RE
@@ -102,17 +102,17 @@ Implemented in \fBQwtPowerTransform\fP, \fBQwtLogTransform\fP, and \fBQwtNullTra
 .SS "virtual double QwtTransform::transform (double value) const\fC [pure virtual]\fP"
 Transformation function
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP Value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Modified value
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBinvTransform()\fP 
 .RE

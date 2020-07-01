@@ -1,4 +1,4 @@
-.TH "QwtMathMLTextEngine" 3 "Wed Jan 2 2019" "Version 6.1.4" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMathMLTextEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,12 +53,12 @@ QwtText::setTextEngine( QwtText::MathMLText, new QwtMathMLTextEngine() );
 .fi
 .PP
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBQwtTextEngine\fP, \fBQwtText::setTextEngine\fP 
 .RE
 .PP
-\fBWarning:\fP
+\fBWarning\fP
 .RS 4
 Unfortunately the MathML renderer doesn't support rotating of texts\&. 
 .RE
@@ -69,7 +69,7 @@ Unfortunately the MathML renderer doesn't support rotating of texts\&.
 .SS "void QwtMathMLTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [virtual]\fP"
 Draw the text in a clipping rectangle
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIpainter\fP Painter 
 .br
@@ -86,7 +86,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "double QwtMathMLTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [virtual]\fP"
 Find the height for a given width
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -97,7 +97,7 @@ Find the height for a given width
 \fIwidth\fP Width
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated height 
 .RE
@@ -108,12 +108,12 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "bool QwtMathMLTextEngine::mightRender (const QString & text) const\fC [virtual]\fP"
 Test if a string can be rendered by \fBQwtMathMLTextEngine\fP
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fItext\fP Text to be tested 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true, if text begins with '<math>'\&. 
 .RE
@@ -124,7 +124,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "void QwtMathMLTextEngine::textMargins (const QFont &, const QString &, double & left, double & right, double & top, double & bottom) const\fC [virtual]\fP"
 Return margins around the texts
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIleft\fP Return 0 
 .br
@@ -141,7 +141,7 @@ Implements \fBQwtTextEngine\fP\&.
 .SS "QSizeF QwtMathMLTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [virtual]\fP"
 Returns the size, that is needed to render text
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIfont\fP Font of the text 
 .br
@@ -150,7 +150,7 @@ Returns the size, that is needed to render text
 \fItext\fP Text to be rendered
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Caluclated size 
 .RE
