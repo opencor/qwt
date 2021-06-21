@@ -29,7 +29,7 @@ var searchData=
   ['tickcount_1359',['tickCount',['../class_qwt_wheel.html#af93ce9073b6333908e3faf9eb3e04427',1,'QwtWheel']]],
   ['ticklabel_1360',['tickLabel',['../class_qwt_abstract_scale_draw.html#a9325b265f351e9135cdbb9368e53f68a',1,'QwtAbstractScaleDraw']]],
   ['ticklength_1361',['tickLength',['../class_qwt_abstract_scale_draw.html#a52fe17714fe96564b0d88af27e96e58f',1,'QwtAbstractScaleDraw']]],
-  ['ticks_1362',['ticks',['../class_qwt_scale_div.html#a838db100c7f0f8454bf8559e89cb4d41',1,'QwtScaleDiv::ticks()'],['../class_qwt_abstract_scale_draw.html#a26215d06a4d48adf401d0aa05d4193c5a1f23d080ce1229a0c4f70469e88acce0',1,'QwtAbstractScaleDraw::Ticks()']]],
+  ['ticks_1362',['Ticks',['../class_qwt_abstract_scale_draw.html#a26215d06a4d48adf401d0aa05d4193c5a1f23d080ce1229a0c4f70469e88acce0',1,'QwtAbstractScaleDraw::Ticks()'],['../class_qwt_scale_div.html#a838db100c7f0f8454bf8559e89cb4d41',1,'QwtScaleDiv::ticks()']]],
   ['ticktype_1363',['TickType',['../class_qwt_scale_div.html#af21aedaa886dd5e067cf63505838736c',1,'QwtScaleDiv']]],
   ['time_1364',['time',['../class_qwt_o_h_l_c_sample.html#a7d457c0a7d71f90539bf6233a19c1df4',1,'QwtOHLCSample']]],
   ['timerevent_1365',['timerEvent',['../class_qwt_slider.html#ab42a98053119570e1fd8d68f5e2d2166',1,'QwtSlider::timerEvent()'],['../class_qwt_wheel.html#a8ca7e27c6afacdc520342f7324ecd6eb',1,'QwtWheel::timerEvent()']]],
@@ -73,5 +73,5 @@ var searchData=
   ['triangle_1403',['Triangle',['../class_qwt_knob.html#a7254d94e76a74228637931fb75939b95a69258df5bb213fe4f7da5362470d8f85',1,'QwtKnob::Triangle()'],['../class_qwt_symbol.html#a62f457952470c2076962e83ef2c24d2fa559fad30c36d3e3e2ecad4a21122be79',1,'QwtSymbol::Triangle()']]],
   ['trianglestyle_1404',['TriangleStyle',['../class_qwt_compass_magnet_needle.html#aee1d882c6ec8b680b94b59b5710a92a5ad2ba960c4dae88e36da39f6b62798f3b',1,'QwtCompassMagnetNeedle']]],
   ['tube_1405',['Tube',['../class_qwt_plot_interval_curve.html#aaef834575b923e1b317f4a86b2d97cd2a786c87eb6dcc86d0fea802043904a647',1,'QwtPlotIntervalCurve']]],
-  ['type_1406',['type',['../class_qwt_painter_command.html#a9a916635d802e0906ac60d17585257d1',1,'QwtPainterCommand::type() const'],['../class_qwt_painter_command.html#a6619a454c4332c02412611467935b7ba',1,'QwtPainterCommand::Type()']]]
+  ['type_1406',['Type',['../class_qwt_painter_command.html#a6619a454c4332c02412611467935b7ba',1,'QwtPainterCommand::Type()'],['../class_qwt_painter_command.html#a9a916635d802e0906ac60d17585257d1',1,'QwtPainterCommand::type() const']]]
 ];

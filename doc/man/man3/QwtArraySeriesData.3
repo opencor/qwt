@@ -1,4 +1,4 @@
-.TH "QwtArraySeriesData< T >" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtArraySeriesData< T >" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ Template class for data, that is organized as QVector\&.
 QVector uses implicit data sharing and can be passed around as argument efficiently\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename T> \fBQwtArraySeriesData\fP< T >::\fBQwtArraySeriesData\fP (const QVector< T > & samples)"
+.SS "template<typename T > \fBQwtArraySeriesData\fP< T >::\fBQwtArraySeriesData\fP (const QVector< T > & samples)"
 Constructor 
 .PP
 \fBParameters\fP
@@ -85,7 +85,7 @@ Sample at position index
 
 .PP
 Implements \fBQwtSeriesData< T >\fP\&.
-.SS "template<typename T > const QVector< T > \fBQwtArraySeriesData\fP< T >::samples () const"
+.SS "template<typename T > const QVector< T > \fBQwtArraySeriesData\fP< T >::samples"
 
 .PP
 \fBReturns\fP
@@ -94,7 +94,7 @@ Array of samples
 .RE
 .PP
 
-.SS "template<typename T> void \fBQwtArraySeriesData\fP< T >::setSamples (const QVector< T > & samples)"
+.SS "template<typename T > void \fBQwtArraySeriesData\fP< T >::setSamples (const QVector< T > & samples)"
 Assign an array of samples 
 .PP
 \fBParameters\fP
@@ -103,7 +103,7 @@ Assign an array of samples
 .RE
 .PP
 
-.SS "template<typename T > size_t \fBQwtArraySeriesData\fP< T >::size () const\fC [virtual]\fP"
+.SS "template<typename T > size_t \fBQwtArraySeriesData\fP< T >::size\fC [virtual]\fP"
 
 .PP
 \fBReturns\fP

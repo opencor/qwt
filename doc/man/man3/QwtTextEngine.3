@@ -1,4 +1,4 @@
-.TH "QwtTextEngine" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTextEngine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -74,7 +74,7 @@ Draw the text in a clipping rectangle
 .PP
 
 .PP
-Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMathMLTextEngine\fP\&.
+Implemented in \fBQwtMathMLTextEngine\fP, \fBQwtRichTextEngine\fP, and \fBQwtPlainTextEngine\fP\&.
 .SS "virtual double QwtTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [pure virtual]\fP"
 Find the height for a given width
 .PP
@@ -96,7 +96,7 @@ Calculated height
 .PP
 
 .PP
-Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMathMLTextEngine\fP\&.
+Implemented in \fBQwtMathMLTextEngine\fP, \fBQwtRichTextEngine\fP, and \fBQwtPlainTextEngine\fP\&.
 .SS "virtual bool QwtTextEngine::mightRender (const QString & text) const\fC [pure virtual]\fP"
 Test if a string can be rendered by this text engine
 .PP
@@ -112,7 +112,7 @@ true, if it can be rendered
 .PP
 
 .PP
-Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMathMLTextEngine\fP\&.
+Implemented in \fBQwtMathMLTextEngine\fP, \fBQwtRichTextEngine\fP, and \fBQwtPlainTextEngine\fP\&.
 .SS "virtual void QwtTextEngine::textMargins (const QFont & font, const QString & text, double & left, double & right, double & top, double & bottom) const\fC [pure virtual]\fP"
 Return margins around the texts
 .PP
@@ -135,7 +135,7 @@ The textSize might include margins around the text, like QFontMetrics::descent()
 .PP
 
 .PP
-Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMathMLTextEngine\fP\&.
+Implemented in \fBQwtMathMLTextEngine\fP, \fBQwtRichTextEngine\fP, and \fBQwtPlainTextEngine\fP\&.
 .SS "virtual QSizeF QwtTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [pure virtual]\fP"
 Returns the size, that is needed to render text
 .PP
@@ -155,7 +155,7 @@ Calculated size
 .PP
 
 .PP
-Implemented in \fBQwtRichTextEngine\fP, \fBQwtPlainTextEngine\fP, and \fBQwtMathMLTextEngine\fP\&.
+Implemented in \fBQwtMathMLTextEngine\fP, \fBQwtRichTextEngine\fP, and \fBQwtPlainTextEngine\fP\&.
 
 .SH "Author"
 .PP 

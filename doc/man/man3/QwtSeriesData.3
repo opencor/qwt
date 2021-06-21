@@ -1,4 +1,4 @@
-.TH "QwtSeriesData< T >" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSeriesData< T >" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,7 +71,7 @@ A subclass of \fBQwtSeriesData<QPointF>\fP must implement:
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename T> virtual QRectF \fBQwtSeriesData\fP< T >::boundingRect () const\fC [pure virtual]\fP"
+.SS "template<typename T > virtual QRectF \fBQwtSeriesData\fP< T >::boundingRect () const\fC [pure virtual]\fP"
 Calculate the bounding rect of all samples
 .PP
 The bounding rect is necessary for autoscaling and can be used for a couple of painting optimizations\&.
@@ -84,9 +84,7 @@ Bounding rectangle
 .RE
 .PP
 
-.PP
-Implemented in \fBQwtTradingChartData\fP, \fBQwtSetSeriesData\fP, \fBQwtIntervalSeriesData\fP, \fBQwtPoint3DSeriesData\fP, \fBQwtPointSeriesData\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerData\fP, and \fBQwtPointArrayData\fP\&.
-.SS "template<typename T> virtual T \fBQwtSeriesData\fP< T >::sample (size_t i) const\fC [pure virtual]\fP"
+.SS "template<typename T > virtual T \fBQwtSeriesData\fP< T >::sample (size_t i) const\fC [pure virtual]\fP"
 Return a sample 
 .PP
 \fBParameters\fP
@@ -117,7 +115,7 @@ The default implementation does nothing\&.
 
 .PP
 Reimplemented in \fBQwtSyntheticPointData\fP\&.
-.SS "template<typename T> virtual size_t \fBQwtSeriesData\fP< T >::size () const\fC [pure virtual]\fP"
+.SS "template<typename T > virtual size_t \fBQwtSeriesData\fP< T >::size () const\fC [pure virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -127,7 +125,7 @@ Number of samples
 .PP
 
 .PP
-Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerData\fP, and \fBQwtPointArrayData\fP\&.
+Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, and \fBQwtArraySeriesData< QwtSetSample >\fP\&.
 
 .SH "Author"
 .PP 
