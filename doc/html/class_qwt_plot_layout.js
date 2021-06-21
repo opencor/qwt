@@ -11,7 +11,7 @@ var class_qwt_plot_layout =
     ] ],
     [ "QwtPlotLayout", "class_qwt_plot_layout.html#ac89596fb2a3d3a92901f124821045a47", null ],
     [ "~QwtPlotLayout", "class_qwt_plot_layout.html#a39653485c638535bc11f50d2e5ef936d", null ],
-    [ "activate", "class_qwt_plot_layout.html#a0e1fc2ebc7d88f76ef0020a16e5dc2d7", null ],
+    [ "activate", "class_qwt_plot_layout.html#ad206e470175a66eac8b1ff0eb1002899", null ],
     [ "alignCanvasToScale", "class_qwt_plot_layout.html#a4aaca10c99faff613fd2fe2d554a2e0c", null ],
     [ "alignLegend", "class_qwt_plot_layout.html#a128ca0c9c9eb95e466ecbc0aa9121e53", null ],
     [ "alignScales", "class_qwt_plot_layout.html#abb79b564eca29b88a51effb13eb8530e", null ],

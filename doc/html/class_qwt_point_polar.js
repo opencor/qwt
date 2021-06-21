@@ -2,7 +2,6 @@ var class_qwt_point_polar =
 [
     [ "QwtPointPolar", "class_qwt_point_polar.html#a365875acf86a9f052e12784b5f2f7d44", null ],
     [ "QwtPointPolar", "class_qwt_point_polar.html#af1c77f9730d441937e52ff5beee04975", null ],
-    [ "QwtPointPolar", "class_qwt_point_polar.html#ae5cd7e8ab0505672748f779c9668fe29", null ],
     [ "QwtPointPolar", "class_qwt_point_polar.html#a269241ca9f94f641063fe896cdd77165", null ],
     [ "azimuth", "class_qwt_point_polar.html#a4b3ebfcbe0d9b6a7e0b39e50d2895510", null ],
     [ "isNull", "class_qwt_point_polar.html#a56afb57bde562399ff68043fd9251ebe", null ],

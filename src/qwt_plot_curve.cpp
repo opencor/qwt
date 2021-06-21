@@ -975,8 +975,8 @@ void QwtPlotCurve::drawSymbols( QPainter *painter, const QwtSymbol &symbol,
   the Sticks drawing style.
 
   The interpretation of the baseline depends on the orientation().
-  With Qt::Horizontal, the baseline is interpreted as a horizontal line
-  at y = baseline(), with Qt::Vertical, it is interpreted as a vertical
+  With Qt::Vertical, the baseline is interpreted as a horizontal line
+  at y = baseline(), with Qt::Horizontal, it is interpreted as a vertical
   line at x = baseline().
 
   The default value is 0.0.

@@ -1,4 +1,4 @@
-.TH "QwtPlotLayout" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotLayout" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -74,7 +74,7 @@ QwtPlotLayout \- Layout engine for \fBQwtPlot\fP\&.
 .RI "virtual QSize \fBminimumSizeHint\fP (const \fBQwtPlot\fP *) const"
 .br
 .ti -1c
-.RI "virtual void \fBactivate\fP (const \fBQwtPlot\fP *, const QRectF &plotRect, \fBOptions\fP options=0x00)"
+.RI "virtual void \fBactivate\fP (const \fBQwtPlot\fP *, const QRectF &plotRect, \fBOptions\fP options=\fBOptions\fP())"
 .br
 .RI "Recalculate the geometry of all components\&. "
 .ti -1c
@@ -178,7 +178,7 @@ Ignore the title\&.
 Ignore the footer\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtPlotLayout::activate (const \fBQwtPlot\fP * plot, const QRectF & plotRect, \fBOptions\fP options = \fC0x00\fP)\fC [virtual]\fP"
+.SS "void QwtPlotLayout::activate (const \fBQwtPlot\fP * plot, const QRectF & plotRect, \fBOptions\fP options = \fC\fBOptions\fP()\fP)\fC [virtual]\fP"
 
 .PP
 Recalculate the geometry of all components\&. 

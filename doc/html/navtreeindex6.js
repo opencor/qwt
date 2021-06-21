@@ -1,9 +1,9 @@
 var NAVTREEINDEX6 =
 {
-"class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221da813736a8e614f8f24db773081642b74c":[1,0,74,1,1],
 "class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221da9036bf7de40018a2f12d456a04949c6b":[1,0,74,1,2],
 "class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221daa7237e2be1e8fc41a8b3156b57b95ed3":[1,0,74,1,3],
 "class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221daf92cc90a2b68a8788a813807d379b95a":[1,0,74,1,0],
+"class_qwt_plot_layout.html#ad206e470175a66eac8b1ff0eb1002899":[1,0,74,4],
 "class_qwt_plot_layout.html#ad243b9afc9b5ce9530b500dc35096d67":[1,0,74,19],
 "class_qwt_plot_layout.html#afd7a889fcb51a7a5a88942d595baa223":[1,0,74,10],
 "class_qwt_plot_legend_item.html":[1,0,75],

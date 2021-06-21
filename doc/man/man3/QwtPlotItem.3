@@ -1,4 +1,4 @@
-.TH "QwtPlotItem" 3 "Mon Jun 1 2020" "Version 6.1.5" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotItem" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -426,7 +426,7 @@ A width or height < 0\&.0 is ignored by the autoscaler
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotBarChart\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotZoneItem\fP, \fBQwtPlotSeriesItem\fP, and \fBQwtPlotSvgItem\fP\&.
+Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, and \fBQwtPlotBarChart\fP\&.
 .SS "\fBQwtGraphic\fP QwtPlotItem::defaultIcon (const QBrush & brush, const QSizeF & size) const\fC [protected]\fP"
 
 .PP
@@ -474,7 +474,7 @@ Draw the item\&.
 .PP
 
 .PP
-Implemented in \fBQwtPlotLegendItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotTextLabel\fP, and \fBQwtPlotZoneItem\fP\&.
+Implemented in \fBQwtPlotSvgItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotZoneItem\fP, and \fBQwtPlotTextLabel\fP\&.
 .SS "void QwtPlotItem::getCanvasMarginHint (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, double & left, double & top, double & right, double & bottom) const\fC [virtual]\fP"
 
 .PP
@@ -562,7 +562,7 @@ Data, that is needed to represent the item on the legend
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotBarChart\fP, and \fBQwtPlotMultiBarChart\fP\&.
+Reimplemented in \fBQwtPlotMultiBarChart\fP, and \fBQwtPlotBarChart\fP\&.
 .SS "\fBQwtGraphic\fP QwtPlotItem::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
@@ -587,7 +587,7 @@ The default implementation returns an invalid icon
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotBarChart\fP, \fBQwtPlotShapeItem\fP, and \fBQwtPlotMultiBarChart\fP\&.
+Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
 .SS "QSize QwtPlotItem::legendIconSize () const"
 
 .PP
@@ -646,7 +646,7 @@ rtti value
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotCurve\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotMarker\fP, \fBQwtPlotBarChart\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotTextLabel\fP, \fBQwtPlotSpectroCurve\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotGrid\fP, and \fBQwtPlotZoneItem\fP\&.
+Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotTextLabel\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotSpectroCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotGrid\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
 .SS "QRectF QwtPlotItem::scaleRect (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap) const"
 
 .PP
@@ -967,7 +967,7 @@ Update the item to changes of the axes scale division\&. Update the item, when t
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotGrid\fP, \fBQwtPlotScaleItem\fP, and \fBQwtPlotSeriesItem\fP\&.
+Reimplemented in \fBQwtPlotGrid\fP, \fBQwtPlotSeriesItem\fP, and \fBQwtPlotScaleItem\fP\&.
 .SS "double QwtPlotItem::z () const"
 Plot items are painted in increasing z-order\&.
 .PP
