@@ -1,4 +1,4 @@
-.TH "QwtDialSimpleNeedle" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDialSimpleNeedle" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,7 +36,7 @@ Inherits \fBQwtDialNeedle\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const"
+.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -61,6 +61,8 @@ QPalette::Base
 .RE
 .PP
 
+.PP
+Definition at line 81 of file qwt_dial_needle\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtDialSimpleNeedle::Style\fP"
@@ -76,6 +78,8 @@ Arrow\&.
 .TP
 \fB\fIRay \fP\fP
 A straight line from the center\&. 
+.PP
+Definition at line 85 of file qwt_dial_needle\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtDialSimpleNeedle::QwtDialSimpleNeedle (\fBStyle\fP style, bool hasKnob = \fCtrue\fP, const QColor & mid = \fCQt::gray\fP, const QColor & base = \fCQt::darkGray\fP)"
@@ -93,9 +97,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 273 of file qwt_dial_needle\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtDialSimpleNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtDialSimpleNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
 \fBParameters\fP
@@ -110,6 +116,8 @@ Draw the needle
 
 .PP
 Implements \fBQwtDialNeedle\fP\&.
+.PP
+Definition at line 312 of file qwt_dial_needle\&.cpp\&.
 .SS "void QwtDialSimpleNeedle::setWidth (double width)"
 Set the width of the needle 
 .PP
@@ -124,6 +132,8 @@ Set the width of the needle
 .RE
 .PP
 
+.PP
+Definition at line 291 of file qwt_dial_needle\&.cpp\&.
 .SS "double QwtDialSimpleNeedle::width () const"
 
 .PP
@@ -138,6 +148,8 @@ the width of the needle
 .RE
 .PP
 
+.PP
+Definition at line 300 of file qwt_dial_needle\&.cpp\&.
 
 .SH "Author"
 .PP 

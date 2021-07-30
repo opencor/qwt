@@ -1,4 +1,4 @@
-.TH "QwtScaleMap" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleMap" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -91,14 +91,20 @@ QwtScaleMap \- A scale map\&.
 A scale map\&. 
 
 \fBQwtScaleMap\fP offers transformations from the coordinate system of a scale into the linear coordinate system of a paint device and vice versa\&. 
+.PP
+Definition at line 26 of file qwt_scale_map\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtScaleMap::QwtScaleMap ()"
 
 .PP
 Constructor\&. The scale and paint device intervals are both set to [0,1]\&. 
+.PP
+Definition at line 21 of file qwt_scale_map\&.cpp\&.
 .SS "QwtScaleMap::~QwtScaleMap ()"
 Destructor 
+.PP
+Definition at line 49 of file qwt_scale_map\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QPointF QwtScaleMap::invTransform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QPointF & pos)\fC [static]\fP"
@@ -124,6 +130,8 @@ Position in scale coordinates
 .RE
 .PP
 
+.PP
+Definition at line 187 of file qwt_scale_map\&.cpp\&.
 .SS "QRectF QwtScaleMap::invTransform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
 Transform a rectangle from paint to scale coordinates
 .PP
@@ -147,6 +155,8 @@ Rectangle in scale coordinates
 .RE
 .PP
 
+.PP
+Definition at line 224 of file qwt_scale_map\&.cpp\&.
 .SS "double QwtScaleMap::invTransform (double p) const\fC [inline]\fP"
 Transform an paint device value into a value in the interval of the scale\&.
 .PP
@@ -166,6 +176,8 @@ Transformed value
 .RE
 .PP
 
+.PP
+Definition at line 154 of file qwt_scale_map\&.h\&.
 .SS "bool QwtScaleMap::isInverting () const\fC [inline]\fP"
 
 .PP
@@ -175,6 +187,8 @@ True, when ( \fBp1()\fP < \fBp2()\fP ) != ( \fBs1()\fP < \fBs2()\fP )
 .RE
 .PP
 
+.PP
+Definition at line 164 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::p1 () const\fC [inline]\fP"
 
 .PP
@@ -184,6 +198,8 @@ First border of the paint interval
 .RE
 .PP
 
+.PP
+Definition at line 99 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::p2 () const\fC [inline]\fP"
 
 .PP
@@ -193,6 +209,8 @@ Second border of the paint interval
 .RE
 .PP
 
+.PP
+Definition at line 107 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::pDist () const\fC [inline]\fP"
 
 .PP
@@ -202,6 +220,8 @@ qwtAbs(\fBp2()\fP - \fBp1()\fP)
 .RE
 .PP
 
+.PP
+Definition at line 115 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::s1 () const\fC [inline]\fP"
 
 .PP
@@ -211,6 +231,8 @@ First border of the scale interval
 .RE
 .PP
 
+.PP
+Definition at line 83 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::s2 () const\fC [inline]\fP"
 
 .PP
@@ -220,6 +242,8 @@ Second border of the scale interval
 .RE
 .PP
 
+.PP
+Definition at line 91 of file qwt_scale_map\&.h\&.
 .SS "double QwtScaleMap::sDist () const\fC [inline]\fP"
 
 .PP
@@ -229,6 +253,8 @@ qwtAbs(\fBs2()\fP - \fBs1()\fP)
 .RE
 .PP
 
+.PP
+Definition at line 123 of file qwt_scale_map\&.h\&.
 .SS "void QwtScaleMap::setPaintInterval (double p1, double p2)"
 
 .PP
@@ -242,6 +268,8 @@ Specify the borders of the paint device interval\&.
 .RE
 .PP
 
+.PP
+Definition at line 119 of file qwt_scale_map\&.cpp\&.
 .SS "void QwtScaleMap::setScaleInterval (double s1, double s2)"
 
 .PP
@@ -260,8 +288,12 @@ scales might be aligned to transformation depending boundaries
 .RE
 .PP
 
+.PP
+Definition at line 100 of file qwt_scale_map\&.cpp\&.
 .SS "void QwtScaleMap::setTransformation (\fBQwtTransform\fP * transform)"
 Initialize the map with a transformation 
+.PP
+Definition at line 76 of file qwt_scale_map\&.cpp\&.
 .SS "QPointF QwtScaleMap::transform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QPointF & pos)\fC [static]\fP"
 Transform a point from scale to paint coordinates
 .PP
@@ -285,6 +317,8 @@ Position in paint coordinates
 .RE
 .PP
 
+.PP
+Definition at line 206 of file qwt_scale_map\&.cpp\&.
 .SS "QRectF QwtScaleMap::transform (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & rect)\fC [static]\fP"
 Transform a rectangle from scale to paint coordinates
 .PP
@@ -308,6 +342,8 @@ Rectangle in paint coordinates
 .RE
 .PP
 
+.PP
+Definition at line 153 of file qwt_scale_map\&.cpp\&.
 .SS "double QwtScaleMap::transform (double s) const\fC [inline]\fP"
 Transform a point related to the scale interval into an point related to the interval of the paint device
 .PP
@@ -327,6 +363,8 @@ Transformed value
 .RE
 .PP
 
+.PP
+Definition at line 137 of file qwt_scale_map\&.h\&.
 
 .SH "Author"
 .PP 

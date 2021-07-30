@@ -1,4 +1,4 @@
-.TH "QwtNullTransform" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtNullTransform" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,13 +23,13 @@ Inherits \fBQwtTransform\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual double \fBtransform\fP (double value) const"
+.RI "virtual double \fBtransform\fP (double value) const override"
 .br
 .ti -1c
-.RI "virtual double \fBinvTransform\fP (double value) const"
+.RI "virtual double \fBinvTransform\fP (double value) const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const"
+.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -37,9 +37,11 @@ Inherits \fBQwtTransform\fP\&.
 Null transformation\&. 
 
 \fBQwtNullTransform\fP returns the values unmodified\&. 
+.PP
+Definition at line 80 of file qwt_transform\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtTransform\fP * QwtNullTransform::copy () const\fC [virtual]\fP"
+.SS "\fBQwtTransform\fP * QwtNullTransform::copy () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -50,7 +52,9 @@ Clone of the transformation
 
 .PP
 Implements \fBQwtTransform\fP\&.
-.SS "double QwtNullTransform::invTransform (double value) const\fC [virtual]\fP"
+.PP
+Definition at line 68 of file qwt_transform\&.cpp\&.
+.SS "double QwtNullTransform::invTransform (double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -66,7 +70,9 @@ value unmodified
 
 .PP
 Implements \fBQwtTransform\fP\&.
-.SS "double QwtNullTransform::transform (double value) const\fC [virtual]\fP"
+.PP
+Definition at line 62 of file qwt_transform\&.cpp\&.
+.SS "double QwtNullTransform::transform (double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -82,6 +88,8 @@ value unmodified
 
 .PP
 Implements \fBQwtTransform\fP\&.
+.PP
+Definition at line 53 of file qwt_transform\&.cpp\&.
 
 .SH "Author"
 .PP 

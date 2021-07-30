@@ -1,4 +1,4 @@
-.TH "QwtPlotItem" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotItem" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,12 +10,12 @@ QwtPlotItem \- Base class for items on the plot canvas\&.
 .PP
 \fC#include <qwt_plot_item\&.h>\fP
 .PP
-Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotTextLabel\fP, and \fBQwtPlotZoneItem\fP\&.
+Inherited by \fBQwtPlotGraphicItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotTextLabel\fP, and \fBQwtPlotZoneItem\fP\&.
 .SS "Public Types"
 
 .in +1c
 .ti -1c
-.RI "enum \fBRttiValues\fP { \fBRtti_PlotItem\fP = 0, \fBRtti_PlotGrid\fP, \fBRtti_PlotScale\fP, \fBRtti_PlotLegend\fP, \fBRtti_PlotMarker\fP, \fBRtti_PlotCurve\fP, \fBRtti_PlotSpectroCurve\fP, \fBRtti_PlotIntervalCurve\fP, \fBRtti_PlotHistogram\fP, \fBRtti_PlotSpectrogram\fP, \fBRtti_PlotSVG\fP, \fBRtti_PlotTradingCurve\fP, \fBRtti_PlotBarChart\fP, \fBRtti_PlotMultiBarChart\fP, \fBRtti_PlotShape\fP, \fBRtti_PlotTextLabel\fP, \fBRtti_PlotZone\fP, \fBRtti_PlotUserItem\fP = 1000 }"
+.RI "enum \fBRttiValues\fP { \fBRtti_PlotItem\fP = 0, \fBRtti_PlotGrid\fP, \fBRtti_PlotScale\fP, \fBRtti_PlotLegend\fP, \fBRtti_PlotMarker\fP, \fBRtti_PlotCurve\fP, \fBRtti_PlotSpectroCurve\fP, \fBRtti_PlotIntervalCurve\fP, \fBRtti_PlotHistogram\fP, \fBRtti_PlotSpectrogram\fP, \fBRtti_PlotGraphic\fP, \fBRtti_PlotTradingCurve\fP, \fBRtti_PlotBarChart\fP, \fBRtti_PlotMultiBarChart\fP, \fBRtti_PlotShape\fP, \fBRtti_PlotTextLabel\fP, \fBRtti_PlotZone\fP, \fBRtti_PlotVectorField\fP, \fBRtti_PlotUserItem\fP = 1000 }"
 .br
 .RI "Runtime type information\&. "
 .ti -1c
@@ -33,21 +33,24 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .ti -1c
 .RI "typedef QFlags< \fBItemAttribute\fP > \fBItemAttributes\fP"
 .br
-.RI "Plot Item Attributes\&. "
 .ti -1c
 .RI "typedef QFlags< \fBItemInterest\fP > \fBItemInterests\fP"
 .br
-.RI "Plot Item Interests\&. "
 .ti -1c
 .RI "typedef QFlags< \fBRenderHint\fP > \fBRenderHints\fP"
 .br
-.RI "Render hints\&. "
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotItem\fP (const \fBQwtText\fP &\fBtitle\fP=\fBQwtText\fP())"
+.RI "\fBQwtPlotItem\fP ()"
+.br
+.ti -1c
+.RI "\fBQwtPlotItem\fP (const QString &\fBtitle\fP)"
+.br
+.ti -1c
+.RI "\fBQwtPlotItem\fP (const \fBQwtText\fP &\fBtitle\fP)"
 .br
 .ti -1c
 .RI "virtual \fB~QwtPlotItem\fP ()"
@@ -129,20 +132,20 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .RI "bool \fBisVisible\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetAxes\fP (int \fBxAxis\fP, int \fByAxis\fP)"
+.RI "void \fBsetAxes\fP (QwtAxisId \fBxAxis\fP, QwtAxisId \fByAxis\fP)"
 .br
 .ti -1c
-.RI "void \fBsetXAxis\fP (int axis)"
+.RI "void \fBsetXAxis\fP (QwtAxisId)"
 .br
 .ti -1c
-.RI "int \fBxAxis\fP () const"
+.RI "QwtAxisId \fBxAxis\fP () const"
 .br
 .RI "Return xAxis\&. "
 .ti -1c
-.RI "void \fBsetYAxis\fP (int axis)"
+.RI "void \fBsetYAxis\fP (QwtAxisId)"
 .br
 .ti -1c
-.RI "int \fByAxis\fP () const"
+.RI "QwtAxisId \fByAxis\fP () const"
 .br
 .RI "Return yAxis\&. "
 .ti -1c
@@ -167,7 +170,7 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .br
 .RI "Update the item to changes of the axes scale division\&. "
 .ti -1c
-.RI "virtual void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *, const QList< \fBQwtLegendData\fP > &)"
+.RI "virtual void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *, const \fBQList\fP< \fBQwtLegendData\fP > &)"
 .br
 .RI "Update the item to changes of the legend info\&. "
 .ti -1c
@@ -179,7 +182,7 @@ Inherited by \fBQwtPlotGrid\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotMarker\fP, \f
 .br
 .RI "Calculate the bounding paint rectangle of 2 maps\&. "
 .ti -1c
-.RI "virtual QList< \fBQwtLegendData\fP > \fBlegendData\fP () const"
+.RI "virtual \fBQList\fP< \fBQwtLegendData\fP > \fBlegendData\fP () const"
 .br
 .RI "Return all information, that is needed to represent the item on the legend\&. "
 .ti -1c
@@ -240,6 +243,22 @@ The cpuplot example shows the implementation of additional \fBplot\fP items\&.
 .RE
 .PP
 
+.PP
+Definition at line 66 of file qwt_plot_item\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBItemAttribute\fP > \fBQwtPlotItem::ItemAttributes\fP"
+An ORed combination of \fBItemAttribute\fP values\&. 
+.PP
+Definition at line 167 of file qwt_plot_item\&.h\&.
+.SS "typedef QFlags<\fBItemInterest\fP > \fBQwtPlotItem::ItemInterests\fP"
+An ORed combination of \fBItemInterest\fP values\&. 
+.PP
+Definition at line 200 of file qwt_plot_item\&.h\&.
+.SS "typedef QFlags<\fBRenderHint\fP > \fBQwtPlotItem::RenderHints\fP"
+An ORed combination of \fBRenderHint\fP values\&. 
+.PP
+Definition at line 209 of file qwt_plot_item\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotItem::ItemAttribute\fP"
@@ -272,6 +291,8 @@ The item needs extra space to display something outside its bounding rectangle\&
 .RE
 .PP
 
+.PP
+Definition at line 147 of file qwt_plot_item\&.h\&.
 .SS "enum \fBQwtPlotItem::ItemInterest\fP"
 
 .PP
@@ -311,6 +332,8 @@ If the plot item wants to be represented on a legend enable \fBQwtPlotItem::Lege
 .RE
 .PP
 
+.PP
+Definition at line 179 of file qwt_plot_item\&.h\&.
 .SS "enum \fBQwtPlotItem::RenderHint\fP"
 
 .PP
@@ -321,6 +344,8 @@ Render hints\&.
 .TP
 \fB\fIRenderAntialiased \fP\fP
 Enable antialiasing\&. 
+.PP
+Definition at line 203 of file qwt_plot_item\&.h\&.
 .SS "enum \fBQwtPlotItem::RttiValues\fP"
 
 .PP
@@ -359,8 +384,8 @@ For \fBQwtPlotHistogram\fP\&.
 \fB\fIRtti_PlotSpectrogram \fP\fP
 For \fBQwtPlotSpectrogram\fP\&. 
 .TP
-\fB\fIRtti_PlotSVG \fP\fP
-For \fBQwtPlotSvgItem\fP\&. 
+\fB\fIRtti_PlotGraphic \fP\fP
+For \fBQwtPlotGraphicItem\fP, \fBQwtPlotSvgItem\fP\&. 
 .TP
 \fB\fIRtti_PlotTradingCurve \fP\fP
 For \fBQwtPlotTradingCurve\fP\&. 
@@ -380,11 +405,20 @@ For \fBQwtPlotTextLabel\fP\&.
 \fB\fIRtti_PlotZone \fP\fP
 For \fBQwtPlotZoneItem\fP\&. 
 .TP
+\fB\fIRtti_PlotVectorField \fP\fP
+For \fBQwtPlotVectorField\fP\&. 
+.TP
 \fB\fIRtti_PlotUserItem \fP\fP
 Values >= Rtti_PlotUserItem are reserved for plot items not implemented in the Qwt library\&. 
+.PP
+Definition at line 75 of file qwt_plot_item\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPlotItem::QwtPlotItem (const \fBQwtText\fP & title = \fC\fBQwtText\fP()\fP)\fC [explicit]\fP"
+.SS "QwtPlotItem::QwtPlotItem ()\fC [explicit]\fP"
+Constructor 
+.PP
+Definition at line 55 of file qwt_plot_item\&.cpp\&.
+.SS "QwtPlotItem::QwtPlotItem (const QString & title)\fC [explicit]\fP"
 Constructor 
 .PP
 \fBParameters\fP
@@ -393,6 +427,19 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 64 of file qwt_plot_item\&.cpp\&.
+.SS "QwtPlotItem::QwtPlotItem (const \fBQwtText\fP & title)\fC [explicit]\fP"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP Title of the item 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file qwt_plot_item\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtPlotItem::attach (\fBQwtPlot\fP * plot)"
@@ -411,6 +458,8 @@ Attach the item to a plot\&. This method will attach a \fBQwtPlotItem\fP to the 
 .RE
 .PP
 
+.PP
+Definition at line 98 of file qwt_plot_item\&.cpp\&.
 .SS "QRectF QwtPlotItem::boundingRect () const\fC [virtual]\fP"
 
 .PP
@@ -426,7 +475,9 @@ A width or height < 0\&.0 is ignored by the autoscaler
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, and \fBQwtPlotBarChart\fP\&.
+Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotVectorField\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotGraphicItem\fP, and \fBQwtPlotBarChart\fP\&.
+.PP
+Definition at line 568 of file qwt_plot_item\&.cpp\&.
 .SS "\fBQwtGraphic\fP QwtPlotItem::defaultIcon (const QBrush & brush, const QSizeF & size) const\fC [protected]\fP"
 
 .PP
@@ -445,6 +496,8 @@ A filled rectangle
 .RE
 .PP
 
+.PP
+Definition at line 422 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::detach ()"
 
 .PP
@@ -456,6 +509,8 @@ This method detaches a \fBQwtPlotItem\fP from any \fBQwtPlot\fP it has been asso
 .RE
 .PP
 
+.PP
+Definition at line 119 of file qwt_plot_item\&.cpp\&.
 .SS "virtual void QwtPlotItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [pure virtual]\fP"
 
 .PP
@@ -474,7 +529,7 @@ Draw the item\&.
 .PP
 
 .PP
-Implemented in \fBQwtPlotSvgItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotZoneItem\fP, and \fBQwtPlotTextLabel\fP\&.
+Implemented in \fBQwtPlotSpectrogram\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotSeriesItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotRasterItem\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotGrid\fP, \fBQwtPlotGraphicItem\fP, \fBQwtPlotMarker\fP, \fBQwtPlotZoneItem\fP, and \fBQwtPlotTextLabel\fP\&.
 .SS "void QwtPlotItem::getCanvasMarginHint (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, double & left, double & top, double & right, double & bottom) const\fC [virtual]\fP"
 
 .PP
@@ -509,6 +564,8 @@ The default implementation returns 0 for all margins
 
 .PP
 Reimplemented in \fBQwtPlotAbstractBarChart\fP\&.
+.PP
+Definition at line 595 of file qwt_plot_item\&.cpp\&.
 .SS "bool QwtPlotItem::isVisible () const"
 
 .PP
@@ -523,6 +580,8 @@ true if visible
 .RE
 .PP
 
+.PP
+Definition at line 470 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::itemChanged ()\fC [virtual]\fP"
 Update the legend and call \fBQwtPlot::autoRefresh()\fP for the parent plot\&.
 .PP
@@ -532,6 +591,8 @@ QwtPlot::legendChanged(), \fBQwtPlot::autoRefresh()\fP
 .RE
 .PP
 
+.PP
+Definition at line 481 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::legendChanged ()\fC [virtual]\fP"
 Update the legend of the parent plot\&. 
 .PP
@@ -541,7 +602,9 @@ Update the legend of the parent plot\&.
 .RE
 .PP
 
-.SS "QList< \fBQwtLegendData\fP > QwtPlotItem::legendData () const\fC [virtual]\fP"
+.PP
+Definition at line 491 of file qwt_plot_item\&.cpp\&.
+.SS "\fBQList\fP< \fBQwtLegendData\fP > QwtPlotItem::legendData () const\fC [virtual]\fP"
 
 .PP
 Return all information, that is needed to represent the item on the legend\&. Most items are represented by one entry on the legend showing an icon and a text, but f\&.e\&. \fBQwtPlotMultiBarChart\fP displays one entry for each bar\&.
@@ -563,6 +626,8 @@ Data, that is needed to represent the item on the legend
 
 .PP
 Reimplemented in \fBQwtPlotMultiBarChart\fP, and \fBQwtPlotBarChart\fP\&.
+.PP
+Definition at line 626 of file qwt_plot_item\&.cpp\&.
 .SS "\fBQwtGraphic\fP QwtPlotItem::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
 
 .PP
@@ -587,7 +652,9 @@ The default implementation returns an invalid icon
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
+Reimplemented in \fBQwtPlotVectorField\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
+.PP
+Definition at line 402 of file qwt_plot_item\&.cpp\&.
 .SS "QSize QwtPlotItem::legendIconSize () const"
 
 .PP
@@ -602,6 +669,8 @@ Legend icon size
 .RE
 .PP
 
+.PP
+Definition at line 386 of file qwt_plot_item\&.cpp\&.
 .SS "QRectF QwtPlotItem::paintRect (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap) const"
 
 .PP
@@ -620,6 +689,8 @@ Bounding paint rectangle of the scale maps, not normalized
 .RE
 .PP
 
+.PP
+Definition at line 720 of file qwt_plot_item\&.cpp\&.
 .SS "uint QwtPlotItem::renderThreadCount () const"
 
 .PP
@@ -629,6 +700,8 @@ Number of threads to be used for rendering\&. If numThreads() is set to 0, the s
 .RE
 .PP
 
+.PP
+Definition at line 360 of file qwt_plot_item\&.cpp\&.
 .SS "int QwtPlotItem::rtti () const\fC [virtual]\fP"
 Return rtti for the specific class represented\&. \fBQwtPlotItem\fP is simply a virtual interface class, and base classes will implement this method with specific rtti values so a user can differentiate them\&.
 .PP
@@ -646,7 +719,9 @@ rtti value
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotTextLabel\fP, \fBQwtPlotSvgItem\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotSpectroCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotGrid\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
+Reimplemented in \fBQwtPlotZoneItem\fP, \fBQwtPlotVectorField\fP, \fBQwtPlotTradingCurve\fP, \fBQwtPlotTextLabel\fP, \fBQwtPlotSpectrogram\fP, \fBQwtPlotSpectroCurve\fP, \fBQwtPlotShapeItem\fP, \fBQwtPlotScaleItem\fP, \fBQwtPlotMultiBarChart\fP, \fBQwtPlotMarker\fP, \fBQwtPlotLegendItem\fP, \fBQwtPlotIntervalCurve\fP, \fBQwtPlotHistogram\fP, \fBQwtPlotGrid\fP, \fBQwtPlotGraphicItem\fP, \fBQwtPlotCurve\fP, and \fBQwtPlotBarChart\fP\&.
+.PP
+Definition at line 136 of file qwt_plot_item\&.cpp\&.
 .SS "QRectF QwtPlotItem::scaleRect (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap) const"
 
 .PP
@@ -665,24 +740,28 @@ Bounding scale rect of the scale maps, not normalized
 .RE
 .PP
 
-.SS "void QwtPlotItem::setAxes (int xAxis, int yAxis)"
+.PP
+Definition at line 705 of file qwt_plot_item\&.cpp\&.
+.SS "void QwtPlotItem::setAxes (QwtAxisId xAxisId, QwtAxisId yAxisId)"
 Set X and Y axis
 .PP
 The item will painted according to the coordinates of its Axes\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIxAxis\fP X Axis ( \fBQwtPlot::xBottom\fP or \fBQwtPlot::xTop\fP ) 
+\fIxAxisId\fP X Axis 
 .br
-\fIyAxis\fP Y Axis ( \fBQwtPlot::yLeft\fP or \fBQwtPlot::yRight\fP )
+\fIyAxisId\fP Y Axis
 .RE
 .PP
 \fBSee also\fP
 .RS 4
-\fBsetXAxis()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP, \fByAxis()\fP, \fBQwtPlot::Axis\fP 
+\fBsetXAxis()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP, \fByAxis()\fP 
 .RE
 .PP
 
+.PP
+Definition at line 507 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setItemAttribute (\fBItemAttribute\fP attribute, bool on = \fCtrue\fP)"
 Toggle an item attribute
 .PP
@@ -699,6 +778,8 @@ Toggle an item attribute
 .RE
 .PP
 
+.PP
+Definition at line 228 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setItemInterest (\fBItemInterest\fP interest, bool on = \fCtrue\fP)"
 Toggle an item interest
 .PP
@@ -715,6 +796,8 @@ Toggle an item interest
 .RE
 .PP
 
+.PP
+Definition at line 279 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setLegendIconSize (const QSize & size)"
 Set the size of the legend icon
 .PP
@@ -731,6 +814,8 @@ The default setting is 8x8 pixels
 .RE
 .PP
 
+.PP
+Definition at line 373 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setRenderHint (\fBRenderHint\fP hint, bool on = \fCtrue\fP)"
 Toggle an render hint
 .PP
@@ -747,6 +832,8 @@ Toggle an render hint
 .RE
 .PP
 
+.PP
+Definition at line 312 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setRenderThreadCount (uint numThreads)"
 On multi core systems rendering of certain plot item ( f\&.e \fBQwtPlotRasterItem\fP ) can be done in parallel in several threads\&.
 .PP
@@ -758,6 +845,8 @@ The default setting is set to 1\&.
 .RE
 .PP
 The default thread count is 1 ( = no additional threads ) 
+.PP
+Definition at line 350 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setTitle (const QString & title)"
 Set a new title
 .PP
@@ -772,6 +861,8 @@ Set a new title
 .RE
 .PP
 
+.PP
+Definition at line 187 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setTitle (const \fBQwtText\fP & title)"
 Set a new title
 .PP
@@ -786,6 +877,8 @@ Set a new title
 .RE
 .PP
 
+.PP
+Definition at line 198 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setVisible (bool on)\fC [virtual]\fP"
 Show/Hide the item
 .PP
@@ -800,38 +893,44 @@ Show/Hide the item
 .RE
 .PP
 
-.SS "void QwtPlotItem::setXAxis (int axis)"
+.PP
+Definition at line 457 of file qwt_plot_item\&.cpp\&.
+.SS "void QwtPlotItem::setXAxis (QwtAxisId axisId)"
 Set the X axis
 .PP
 The item will painted according to the coordinates its Axes\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP X Axis ( \fBQwtPlot::xBottom\fP or \fBQwtPlot::xTop\fP ) 
+\fIaxisId\fP X Axis 
 .RE
 .PP
 \fBSee also\fP
 .RS 4
-\fBsetAxes()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP, \fBQwtPlot::Axis\fP 
+\fBsetAxes()\fP, \fBsetYAxis()\fP, \fBxAxis()\fP 
 .RE
 .PP
 
-.SS "void QwtPlotItem::setYAxis (int axis)"
+.PP
+Definition at line 526 of file qwt_plot_item\&.cpp\&.
+.SS "void QwtPlotItem::setYAxis (QwtAxisId axisId)"
 Set the Y axis
 .PP
 The item will painted according to the coordinates its Axes\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP Y Axis ( \fBQwtPlot::yLeft\fP or \fBQwtPlot::yRight\fP ) 
+\fIaxisId\fP Y Axis 
 .RE
 .PP
 \fBSee also\fP
 .RS 4
-\fBsetAxes()\fP, \fBsetXAxis()\fP, \fByAxis()\fP, \fBQwtPlot::Axis\fP 
+\fBsetAxes()\fP, \fBsetXAxis()\fP, \fByAxis()\fP 
 .RE
 .PP
 
+.PP
+Definition at line 543 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::setZ (double z)"
 
 .PP
@@ -848,6 +947,8 @@ Set the z value\&. Plot items are painted in increasing z-order\&.
 .RE
 .PP
 
+.PP
+Definition at line 165 of file qwt_plot_item\&.cpp\&.
 .SS "bool QwtPlotItem::testItemAttribute (\fBItemAttribute\fP attribute) const"
 Test an item attribute
 .PP
@@ -867,6 +968,8 @@ true/false
 .RE
 .PP
 
+.PP
+Definition at line 266 of file qwt_plot_item\&.cpp\&.
 .SS "bool QwtPlotItem::testItemInterest (\fBItemInterest\fP interest) const"
 Test an item interest
 .PP
@@ -886,6 +989,8 @@ true/false
 .RE
 .PP
 
+.PP
+Definition at line 299 of file qwt_plot_item\&.cpp\&.
 .SS "bool QwtPlotItem::testRenderHint (\fBRenderHint\fP hint) const"
 Test a render hint
 .PP
@@ -905,6 +1010,8 @@ true/false
 .RE
 .PP
 
+.PP
+Definition at line 332 of file qwt_plot_item\&.cpp\&.
 .SS "const \fBQwtText\fP & QwtPlotItem::title () const"
 
 .PP
@@ -919,7 +1026,9 @@ Title of the item
 .RE
 .PP
 
-.SS "void QwtPlotItem::updateLegend (const \fBQwtPlotItem\fP * item, const QList< \fBQwtLegendData\fP > & data)\fC [virtual]\fP"
+.PP
+Definition at line 215 of file qwt_plot_item\&.cpp\&.
+.SS "void QwtPlotItem::updateLegend (const \fBQwtPlotItem\fP * item, const \fBQList\fP< \fBQwtLegendData\fP > & data)\fC [virtual]\fP"
 
 .PP
 Update the item to changes of the legend info\&. Plot items that want to display a legend ( not those, that want to be displayed on a legend ! ) will have to implement \fBupdateLegend()\fP\&.
@@ -946,6 +1055,8 @@ Plot items, that want to be displayed on a legend need to enable the \fBQwtPlotI
 
 .PP
 Reimplemented in \fBQwtPlotLegendItem\fP\&.
+.PP
+Definition at line 690 of file qwt_plot_item\&.cpp\&.
 .SS "void QwtPlotItem::updateScaleDiv (const \fBQwtScaleDiv\fP & xScaleDiv, const \fBQwtScaleDiv\fP & yScaleDiv)\fC [virtual]\fP"
 
 .PP
@@ -968,6 +1079,8 @@ Update the item to changes of the axes scale division\&. Update the item, when t
 
 .PP
 Reimplemented in \fBQwtPlotGrid\fP, \fBQwtPlotSeriesItem\fP, and \fBQwtPlotScaleItem\fP\&.
+.PP
+Definition at line 665 of file qwt_plot_item\&.cpp\&.
 .SS "double QwtPlotItem::z () const"
 Plot items are painted in increasing z-order\&.
 .PP
@@ -977,6 +1090,8 @@ Plot items are painted in increasing z-order\&.
 .RE
 .PP
 
+.PP
+Definition at line 152 of file qwt_plot_item\&.cpp\&.
 
 .SH "Author"
 .PP 

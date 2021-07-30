@@ -1,4 +1,4 @@
-.TH "QwtPlotRasterItem" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotRasterItem" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,7 +26,6 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -66,7 +65,7 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 .RI "void \fBinvalidateCache\fP ()"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const override"
 .br
 .RI "Draw the raster data\&. "
 .ti -1c
@@ -77,7 +76,7 @@ Inherited by \fBQwtPlotSpectrogram\fP\&.
 .RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis) const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -108,6 +107,14 @@ Often a plot has several types of raster data organized in layers\&. ( f\&.e a g
 .RE
 .PP
 
+.PP
+Definition at line 37 of file qwt_plot_rasteritem\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtPlotRasterItem::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 83 of file qwt_plot_rasteritem\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotRasterItem::CachePolicy\fP"
@@ -125,6 +132,8 @@ Cache policy The default policy is NoCache\&.
 \fBrenderImage()\fP is called, whenever the image cache is not valid, or the scales, or the size of the canvas has changed\&.
 .PP
 This type of cache is useful for improving the performance of hide/show operations or manipulations of the alpha value\&. All other situations are handled by the canvas backing store\&. 
+.PP
+Definition at line 44 of file qwt_plot_rasteritem\&.h\&.
 .SS "enum \fBQwtPlotRasterItem::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
@@ -140,6 +149,8 @@ Attributes to modify the drawing algorithm\&.
 .TP
 \fB\fIPaintInDeviceResolution \fP\fP
 When the image is rendered according to the data pixels ( \fBQwtRasterData::pixelHint()\fP ) it can be expanded to paint device resolution before it is passed to QPainter\&. The expansion algorithm rounds the pixel borders in the same way as the axis ticks, what is usually better than the scaling algorithm implemented in Qt\&. Disabling this flag might make sense, to reduce the size of a document/file\&. If this is possible for a document format depends on the implementation of the specific QPaintEngine\&. 
+.PP
+Definition at line 66 of file qwt_plot_rasteritem\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int QwtPlotRasterItem::alpha () const"
@@ -156,7 +167,9 @@ Alpha value of the raster item
 .RE
 .PP
 
-.SS "QRectF QwtPlotRasterItem::boundingRect () const\fC [virtual]\fP"
+.PP
+Definition at line 530 of file qwt_plot_rasteritem\&.cpp\&.
+.SS "QRectF QwtPlotRasterItem::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -172,6 +185,8 @@ Bounding rectangle of the data
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 788 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "\fBQwtPlotRasterItem::CachePolicy\fP QwtPlotRasterItem::cachePolicy () const"
 
 .PP
@@ -186,7 +201,9 @@ Cache policy
 .RE
 .PP
 
-.SS "void QwtPlotRasterItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
+.PP
+Definition at line 559 of file qwt_plot_rasteritem\&.cpp\&.
+.SS "void QwtPlotRasterItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Draw the raster data\&. 
@@ -207,6 +224,8 @@ Draw the raster data\&.
 Implements \fBQwtPlotItem\fP\&.
 .PP
 Reimplemented in \fBQwtPlotSpectrogram\fP\&.
+.PP
+Definition at line 614 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "\fBQwtScaleMap\fP QwtPlotRasterItem::imageMap (Qt::Orientation orientation, const \fBQwtScaleMap\fP & map, const QRectF & area, const QSize & imageSize, double pixelSize) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -231,6 +250,8 @@ Calculated scale map
 .RE
 .PP
 
+.PP
+Definition at line 927 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "\fBQwtInterval\fP QwtPlotRasterItem::interval (Qt::Axis axis) const\fC [virtual]\fP"
 
 .PP
@@ -249,6 +270,8 @@ This method is intended to be reimplemented by derived classes\&. The default im
 
 .PP
 Reimplemented in \fBQwtPlotSpectrogram\fP\&.
+.PP
+Definition at line 778 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "void QwtPlotRasterItem::invalidateCache ()"
 Invalidate the paint cache 
 .PP
@@ -258,6 +281,8 @@ Invalidate the paint cache
 .RE
 .PP
 
+.PP
+Definition at line 568 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "QRectF QwtPlotRasterItem::pixelHint (const QRectF & area) const\fC [virtual]\fP"
 
 .PP
@@ -287,6 +312,8 @@ render(), \fBrenderImage()\fP
 
 .PP
 Reimplemented in \fBQwtPlotSpectrogram\fP\&.
+.PP
+Definition at line 601 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "virtual QImage QwtPlotRasterItem::renderImage (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & area, const QSize & imageSize) const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
@@ -339,6 +366,8 @@ The default alpha value is -1\&.
 .RE
 .PP
 
+.PP
+Definition at line 510 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "void QwtPlotRasterItem::setCachePolicy (\fBQwtPlotRasterItem::CachePolicy\fP policy)"
 Change the cache policy
 .PP
@@ -355,6 +384,8 @@ The default policy is NoCache
 .RE
 .PP
 
+.PP
+Definition at line 543 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "void QwtPlotRasterItem::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the raster item
 .PP
@@ -366,6 +397,8 @@ Specify an attribute how to draw the raster item
 .RE
 .PP
 
+.PP
+Definition at line 470 of file qwt_plot_rasteritem\&.cpp\&.
 .SS "bool QwtPlotRasterItem::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
@@ -380,6 +413,8 @@ True, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 482 of file qwt_plot_rasteritem\&.cpp\&.
 
 .SH "Author"
 .PP 

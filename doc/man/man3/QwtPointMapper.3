@@ -1,4 +1,4 @@
-.TH "QwtPointMapper" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointMapper" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,13 +13,12 @@ QwtPointMapper \- A helper class for translating a series of points\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBTransformationFlag\fP { \fBRoundPoints\fP = 0x01, \fBWeedOutPoints\fP = 0x02 }"
+.RI "enum \fBTransformationFlag\fP { \fBRoundPoints\fP = 0x01, \fBWeedOutPoints\fP = 0x02, \fBWeedOutIntermediatePoints\fP = 0x04 }"
 .br
 .RI "Flags affecting the transformation process\&. "
 .ti -1c
 .RI "typedef QFlags< \fBTransformationFlag\fP > \fBTransformationFlags\fP"
 .br
-.RI "Flags affecting the transformation process\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -76,19 +75,14 @@ QwtPointMapper \- A helper class for translating a series of points\&.
 A helper class for translating a series of points\&. 
 
 \fBQwtPointMapper\fP is a collection of methods and optimizations for translating a series of points into paint device coordinates\&. It is used by \fBQwtPlotCurve\fP but might also be useful for similar plot items displaying a \fBQwtSeriesData<QPointF>\fP\&. 
+.PP
+Definition at line 32 of file qwt_point_mapper\&.h\&.
 .SH "Member Typedef Documentation"
 .PP 
-.SS "typedef QFlags<\fBTransformationFlag\fP> \fBQwtPointMapper::TransformationFlags\fP"
-
+.SS "typedef QFlags<\fBTransformationFlag\fP > \fBQwtPointMapper::TransformationFlags\fP"
+An ORed combination of \fBTransformationFlag\fP values\&. 
 .PP
-Flags affecting the transformation process\&. 
-.PP
-\fBSee also\fP
-.RS 4
-\fBsetFlag()\fP, \fBsetFlags()\fP 
-.RE
-.PP
-
+Definition at line 71 of file qwt_point_mapper\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPointMapper::TransformationFlag\fP"
@@ -111,6 +105,27 @@ Round points to integer values\&.
 .TP
 \fB\fIWeedOutPoints \fP\fP
 Try to remove points, that are translated to the same position\&. 
+.TP
+\fB\fIWeedOutIntermediatePoints \fP\fP
+An even more aggressive weeding algorithm, that can be used in \fBtoPolygon()\fP\&.
+.PP
+A consecutive chunk of points being mapped to the same x coordinate is reduced to 4 points:
+.PP
+.IP "\(bu" 2
+first point
+.IP "\(bu" 2
+point with the minimum y coordinate
+.IP "\(bu" 2
+point with the maximum y coordinate
+.IP "\(bu" 2
+last point
+.PP
+.PP
+In the worst case ( first and last points are never one of the extremes ) the number of points will be 4 times the width\&.
+.PP
+As the algorithm is fast it can be used inside of a polyline render cycle\&. 
+.PP
+Definition at line 39 of file qwt_point_mapper\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QRectF QwtPointMapper::boundingRect () const"
@@ -127,6 +142,8 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Definition at line 621 of file qwt_point_mapper\&.cpp\&.
 .SS "\fBQwtPointMapper::TransformationFlags\fP QwtPointMapper::flags () const"
 
 .PP
@@ -141,6 +158,8 @@ Flags affecting the transformation process
 .RE
 .PP
 
+.PP
+Definition at line 573 of file qwt_point_mapper\&.cpp\&.
 .SS "void QwtPointMapper::setBoundingRect (const QRectF & rect)"
 Set a bounding rectangle for the point mapping algorithm
 .PP
@@ -157,6 +176,8 @@ A valid bounding rectangle can be used for optimizations
 .RE
 .PP
 
+.PP
+Definition at line 612 of file qwt_point_mapper\&.cpp\&.
 .SS "void QwtPointMapper::setFlag (\fBTransformationFlag\fP flag, bool on = \fCtrue\fP)"
 Modify a flag affecting the transformation process
 .PP
@@ -173,6 +194,8 @@ flag(), \fBsetFlags()\fP
 .RE
 .PP
 
+.PP
+Definition at line 586 of file qwt_point_mapper\&.cpp\&.
 .SS "void QwtPointMapper::setFlags (\fBTransformationFlags\fP flags)"
 Set the flags affecting the transformation process
 .PP
@@ -187,6 +210,8 @@ Set the flags affecting the transformation process
 .RE
 .PP
 
+.PP
+Definition at line 564 of file qwt_point_mapper\&.cpp\&.
 .SS "bool QwtPointMapper::testFlag (\fBTransformationFlag\fP flag) const"
 
 .PP
@@ -206,6 +231,8 @@ True, when the flag is set
 .RE
 .PP
 
+.PP
+Definition at line 599 of file qwt_point_mapper\&.cpp\&.
 .SS "QImage QwtPointMapper::toImage (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const \fBQwtSeriesData\fP< QPointF > * series, int from, int to, const QPen & pen, bool antialiased, uint numThreads) const"
 
 .PP
@@ -236,6 +263,8 @@ Image displaying the series
 .RE
 .PP
 
+.PP
+Definition at line 883 of file qwt_point_mapper\&.cpp\&.
 .SS "QPolygon QwtPointMapper::toPoints (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const \fBQwtSeriesData\fP< QPointF > * series, int from, int to) const"
 
 .PP
@@ -267,6 +296,8 @@ Translated polygon
 .RE
 .PP
 
+.PP
+Definition at line 833 of file qwt_point_mapper\&.cpp\&.
 .SS "QPolygonF QwtPointMapper::toPointsF (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const \fBQwtSeriesData\fP< QPointF > * series, int from, int to) const"
 
 .PP
@@ -302,6 +333,8 @@ Translated polygon
 .RE
 .PP
 
+.PP
+Definition at line 759 of file qwt_point_mapper\&.cpp\&.
 .SS "QPolygon QwtPointMapper::toPolygon (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const \fBQwtSeriesData\fP< QPointF > * series, int from, int to) const"
 
 .PP
@@ -326,12 +359,16 @@ Translated polygon
 .RE
 .PP
 
+.PP
+Definition at line 702 of file qwt_point_mapper\&.cpp\&.
 .SS "QPolygonF QwtPointMapper::toPolygonF (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const \fBQwtSeriesData\fP< QPointF > * series, int from, int to) const"
 
 .PP
 Translate a series of points into a QPolygonF\&. When the WeedOutPoints flag is enabled consecutive points, that are mapped to the same position will be one point\&.
 .PP
 When RoundPoints is set all points are rounded to integers but returned as PolygonF - what only makes sense when the further processing of the values need a QPolygonF\&.
+.PP
+When RoundPoints & WeedOutIntermediatePoints is enabled an even more aggressive weeding algorithm is enabled\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -352,6 +389,8 @@ Translated polygon
 .RE
 .PP
 
+.PP
+Definition at line 647 of file qwt_point_mapper\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,7 +1,7 @@
 var class_qwt_text =
 [
-    [ "LayoutAttributes", "class_qwt_text.html#aadd451b81d506c5bbefdddb8a100b9a3", null ],
-    [ "PaintAttributes", "class_qwt_text.html#a0d239ca5c8e0cd3c748325ad453bb13f", null ],
+    [ "LayoutAttributes", "class_qwt_text.html#a805159bacb9298cfabbaed30f9676af2", null ],
+    [ "PaintAttributes", "class_qwt_text.html#ae35175c671a39f4fae178c162a5a8132", null ],
     [ "LayoutAttribute", "class_qwt_text.html#a0953aabc098f410dba89bbada47f2e5a", [
       [ "MinimumLayout", "class_qwt_text.html#a0953aabc098f410dba89bbada47f2e5aa35990c4c74747580e9357d490ebce42f", null ]
     ] ],
@@ -18,7 +18,8 @@ var class_qwt_text =
       [ "TeXText", "class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76af31a767faf2f7e322941866c6140ddc6", null ],
       [ "OtherFormat", "class_qwt_text.html#a63e0d6a59a427a37ed0bfa71b782fd76ad69e3155611ef96eb14ed0cfeb69fd3d", null ]
     ] ],
-    [ "QwtText", "class_qwt_text.html#a8c141207783c1e88b50df383a616c132", null ],
+    [ "QwtText", "class_qwt_text.html#a1ba10b4e535424a5ecedda45e0eff0b5", null ],
+    [ "QwtText", "class_qwt_text.html#a6c8d493f6131751831d81554b071b552", null ],
     [ "QwtText", "class_qwt_text.html#af88b42733c420574fa76b2d58b965313", null ],
     [ "~QwtText", "class_qwt_text.html#aba243ac11b91979ad3f2ee7d3c700195", null ],
     [ "backgroundBrush", "class_qwt_text.html#a0f23d507c59b16d81b96ecf1e79131a8", null ],
@@ -27,7 +28,8 @@ var class_qwt_text =
     [ "color", "class_qwt_text.html#a731bc1eca7825f55f3026f840c0fa42f", null ],
     [ "draw", "class_qwt_text.html#ad81ee227016361a0362081bc67c301da", null ],
     [ "font", "class_qwt_text.html#a67039ac189d3a9683801851ac70e87a6", null ],
-    [ "heightForWidth", "class_qwt_text.html#a712268214db7f3c4a3be47f7d6d13d1d", null ],
+    [ "heightForWidth", "class_qwt_text.html#afc82666c1dd9ede2445c981a2a835171", null ],
+    [ "heightForWidth", "class_qwt_text.html#ae862b6b04f4e147f4878409916abf6d4", null ],
     [ "isEmpty", "class_qwt_text.html#aa7a14283b812f50234fa0ee960e65307", null ],
     [ "isNull", "class_qwt_text.html#ad9947790e30eb555a651872ed97757ef", null ],
     [ "operator!=", "class_qwt_text.html#ab00c5b829e19d18d96d296840b3de5d8", null ],
@@ -46,7 +48,8 @@ var class_qwt_text =
     [ "testLayoutAttribute", "class_qwt_text.html#ad6b2a300b29b5f0ee90289e962c68f39", null ],
     [ "testPaintAttribute", "class_qwt_text.html#a390f10d5fccfb7070fe0c1ace8fdd0ce", null ],
     [ "text", "class_qwt_text.html#ad94fd632f61b1e5d9f68ce65c445982e", null ],
-    [ "textSize", "class_qwt_text.html#a126221f5dbf46d03806498b262c493c5", null ],
+    [ "textSize", "class_qwt_text.html#a40ec54788db82cfb2941cff8c4621c15", null ],
+    [ "textSize", "class_qwt_text.html#ac697758296644829ddf72095d37b6433", null ],
     [ "usedColor", "class_qwt_text.html#a19bc6e3baa215dccab7993cd211ed975", null ],
     [ "usedFont", "class_qwt_text.html#affd35b4cd92e45659b895c5614e3eedd", null ]
 ];

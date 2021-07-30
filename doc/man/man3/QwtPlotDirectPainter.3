@@ -1,4 +1,4 @@
-.TH "QwtPlotDirectPainter" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotDirectPainter" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,6 @@ Inherits QObject\&.
 .ti -1c
 .RI "typedef QFlags< \fBAttribute\fP > \fBAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -62,7 +61,7 @@ Inherits QObject\&.
 .br
 .RI "Close the internal QPainter\&. "
 .ti -1c
-.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
+.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *) override"
 .br
 .RI "Event filter\&. "
 .in -1c
@@ -82,6 +81,14 @@ Incremental painting will only help when no replot is triggered by another opera
 .RE
 .PP
 
+.PP
+Definition at line 39 of file qwt_plot_directpainter\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBAttribute\fP > \fBQwtPlotDirectPainter::Attributes\fP"
+An ORed combination of \fBAttribute\fP values\&. 
+.PP
+Definition at line 73 of file qwt_plot_directpainter\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotDirectPainter::Attribute\fP"
@@ -107,6 +114,8 @@ When FullRepaint is set the plot canvas is explicitly repainted after the sample
 .TP
 \fB\fICopyBackingStore \fP\fP
 When \fBQwtPlotCanvas::BackingStore\fP is enabled the painter has to paint to the backing store and the widget\&. In certain situations/environments it might be faster to paint to the backing store only and then copy the backing store to the canvas\&. This flag can also be useful for settings, where Qt fills the the clip region with the widget background\&. 
+.PP
+Definition at line 46 of file qwt_plot_directpainter\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QRegion QwtPlotDirectPainter::clipRegion () const"
@@ -123,6 +132,8 @@ Currently set clip region\&.
 .RE
 .PP
 
+.PP
+Definition at line 151 of file qwt_plot_directpainter\&.cpp\&.
 .SS "void QwtPlotDirectPainter::drawSeries (\fBQwtPlotSeriesItem\fP * seriesItem, int from, int to)"
 
 .PP
@@ -140,6 +151,8 @@ Setting plot()->canvas()->setAttribute(Qt::WA_PaintOutsidePaintEvent, true); wil
 .RE
 .PP
 
+.PP
+Definition at line 172 of file qwt_plot_directpainter\&.cpp\&.
 .SS "bool QwtPlotDirectPainter::hasClipping () const"
 
 .PP
@@ -154,6 +167,8 @@ true, when clipping is enabled
 .RE
 .PP
 
+.PP
+Definition at line 125 of file qwt_plot_directpainter\&.cpp\&.
 .SS "void QwtPlotDirectPainter::setAttribute (\fBAttribute\fP attribute, bool on)"
 Change an attribute
 .PP
@@ -170,6 +185,8 @@ Change an attribute
 .RE
 .PP
 
+.PP
+Definition at line 86 of file qwt_plot_directpainter\&.cpp\&.
 .SS "void QwtPlotDirectPainter::setClipping (bool enable)"
 En/Disables clipping
 .PP
@@ -184,6 +201,8 @@ En/Disables clipping
 .RE
 .PP
 
+.PP
+Definition at line 116 of file qwt_plot_directpainter\&.cpp\&.
 .SS "void QwtPlotDirectPainter::setClipRegion (const QRegion & region)"
 
 .PP
@@ -200,6 +219,8 @@ Assign a clip region and enable clipping\&. Depending on the environment setting
 .RE
 .PP
 
+.PP
+Definition at line 141 of file qwt_plot_directpainter\&.cpp\&.
 .SS "bool QwtPlotDirectPainter::testAttribute (\fBAttribute\fP attribute) const"
 
 .PP
@@ -219,6 +240,8 @@ True, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 105 of file qwt_plot_directpainter\&.cpp\&.
 
 .SH "Author"
 .PP 

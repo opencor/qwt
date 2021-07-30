@@ -1,4 +1,4 @@
-.TH "QwtPainterCommand" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPainterCommand" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -102,6 +102,8 @@ It is used by \fBQwtGraphic\fP to record and replay paint operations
 .RE
 .PP
 
+.PP
+Definition at line 32 of file qwt_painter_command\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPainterCommand::Type\fP"
@@ -126,6 +128,8 @@ Draw a QImage\&.
 .TP
 \fB\fIState \fP\fP
 QPainter state change\&. 
+.PP
+Definition at line 36 of file qwt_painter_command\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPainterCommand::QwtPainterCommand (const \fBQwtPainterCommand\fP & other)"
@@ -137,6 +141,8 @@ Copy constructor
 .RE
 .PP
 
+.PP
+Definition at line 128 of file qwt_painter_command\&.cpp\&.
 .SS "QwtPainterCommand::QwtPainterCommand (const QRectF & rect, const QPixmap & pixmap, const QRectF & subRect)"
 Constructor for Pixmap paint operation
 .PP
@@ -155,6 +161,8 @@ QPainter::drawPixmap()
 .RE
 .PP
 
+.PP
+Definition at line 34 of file qwt_painter_command\&.cpp\&.
 .SS "QwtPainterCommand::QwtPainterCommand (const QRectF & rect, const QImage & image, const QRectF & subRect, Qt::ImageConversionFlags flags)"
 Constructor for Image paint operation
 .PP
@@ -175,7 +183,9 @@ QPainter::drawImage()
 .RE
 .PP
 
-.SS "QwtPainterCommand::QwtPainterCommand (const QPaintEngineState & state)"
+.PP
+Definition at line 54 of file qwt_painter_command\&.cpp\&.
+.SS "QwtPainterCommand::QwtPainterCommand (const QPaintEngineState & state)\fC [explicit]\fP"
 Constructor for State paint operation 
 .PP
 \fBParameters\fP
@@ -184,6 +194,8 @@ Constructor for State paint operation
 .RE
 .PP
 
+.PP
+Definition at line 70 of file qwt_painter_command\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QwtPainterCommand::ImageData * QwtPainterCommand::imageData ()"
@@ -195,6 +207,8 @@ Attributes how to paint a QImage
 .RE
 .PP
 
+.PP
+Definition at line 228 of file qwt_painter_command\&.cpp\&.
 .SS "const QwtPainterCommand::ImageData * QwtPainterCommand::imageData () const\fC [inline]\fP"
 
 .PP
@@ -204,6 +218,8 @@ Attributes how to paint a QImage
 .RE
 .PP
 
+.PP
+Definition at line 162 of file qwt_painter_command\&.h\&.
 .SS "\fBQwtPainterCommand\fP & QwtPainterCommand::operator= (const \fBQwtPainterCommand\fP & other)"
 Assignment operator
 .PP
@@ -218,6 +234,8 @@ Modified command
 .RE
 .PP
 
+.PP
+Definition at line 145 of file qwt_painter_command\&.cpp\&.
 .SS "QPainterPath * QwtPainterCommand::path ()"
 
 .PP
@@ -227,6 +245,8 @@ Painter path to be painted
 .RE
 .PP
 
+.PP
+Definition at line 216 of file qwt_painter_command\&.cpp\&.
 .SS "const QPainterPath * QwtPainterCommand::path () const\fC [inline]\fP"
 
 .PP
@@ -236,6 +256,8 @@ Painter path to be painted
 .RE
 .PP
 
+.PP
+Definition at line 148 of file qwt_painter_command\&.h\&.
 .SS "QwtPainterCommand::PixmapData * QwtPainterCommand::pixmapData ()"
 
 .PP
@@ -245,6 +267,8 @@ Attributes how to paint a QPixmap
 .RE
 .PP
 
+.PP
+Definition at line 222 of file qwt_painter_command\&.cpp\&.
 .SS "const QwtPainterCommand::PixmapData * QwtPainterCommand::pixmapData () const\fC [inline]\fP"
 
 .PP
@@ -254,6 +278,8 @@ Attributes how to paint a QPixmap
 .RE
 .PP
 
+.PP
+Definition at line 155 of file qwt_painter_command\&.h\&.
 .SS "QwtPainterCommand::StateData * QwtPainterCommand::stateData ()"
 
 .PP
@@ -263,6 +289,8 @@ Attributes of a state change
 .RE
 .PP
 
+.PP
+Definition at line 234 of file qwt_painter_command\&.cpp\&.
 .SS "const QwtPainterCommand::StateData * QwtPainterCommand::stateData () const\fC [inline]\fP"
 
 .PP
@@ -272,6 +300,8 @@ Attributes of a state change
 .RE
 .PP
 
+.PP
+Definition at line 169 of file qwt_painter_command\&.h\&.
 .SS "\fBQwtPainterCommand::Type\fP QwtPainterCommand::type () const\fC [inline]\fP"
 
 .PP
@@ -281,6 +311,8 @@ Type of the command
 .RE
 .PP
 
+.PP
+Definition at line 142 of file qwt_painter_command\&.h\&.
 
 .SH "Author"
 .PP 

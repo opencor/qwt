@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['markerstyle_3048',['MarkerStyle',['../class_qwt_knob.html#a7254d94e76a74228637931fb75939b95',1,'QwtKnob']]],
-  ['maskmode_3049',['MaskMode',['../class_qwt_widget_overlay.html#a413679fb15e072d5a404f237062b75fc',1,'QwtWidgetOverlay']]],
-  ['mode_3050',['Mode',['../class_qwt_linear_color_map.html#ac8c5f1991f533b1d25a9a0a0874b7d54',1,'QwtLinearColorMap::Mode()'],['../class_qwt_dial.html#a7376f53193014b91643350e6e6bc85ad',1,'QwtDial::Mode()'],['../class_qwt_legend_data.html#aaa33cc8e6aec17440df5d4c38d7545b7',1,'QwtLegendData::Mode()'],['../class_qwt_null_paint_device.html#a1e605d04e468e2e7fc45c639251a053a',1,'QwtNullPaintDevice::Mode()']]],
-  ['mousepatterncode_3051',['MousePatternCode',['../class_qwt_event_pattern.html#af48dc808ac5e125eeed41a4c0285d1ea',1,'QwtEventPattern']]]
+  ['layoutattribute_3655',['LayoutAttribute',['../class_qwt_text.html#a0953aabc098f410dba89bbada47f2e5a',1,'QwtText']]],
+  ['layoutflag_3656',['LayoutFlag',['../class_qwt_plot_renderer.html#a111b4db55d3f620a33e75f6b398e4b4a',1,'QwtPlotRenderer::LayoutFlag()'],['../class_qwt_scale_widget.html#a95903255246c9da84e7388b567354c8f',1,'QwtScaleWidget::LayoutFlag()']]],
+  ['layoutpolicy_3657',['LayoutPolicy',['../class_qwt_plot_abstract_bar_chart.html#ae1db0e1606747ef46c863c54c210e53a',1,'QwtPlotAbstractBarChart']]],
+  ['legendattribute_3658',['LegendAttribute',['../class_qwt_plot_curve.html#a6c1ac1ca99c06598c4044dd2ceeb9fd7',1,'QwtPlotCurve::LegendAttribute()'],['../class_qwt_polar_curve.html#a48eb3748b6a9b6533386c09fe27f8e89',1,'QwtPolarCurve::LegendAttribute()']]],
+  ['legendmode_3659',['LegendMode',['../class_qwt_plot_bar_chart.html#a5648ff170b563218111d022993b1d6a3',1,'QwtPlotBarChart::LegendMode()'],['../class_qwt_plot_shape_item.html#a2cf398a73f125044df9b83ba421c47cd',1,'QwtPlotShapeItem::LegendMode()']]],
+  ['legendposition_3660',['LegendPosition',['../class_qwt_plot.html#a31aacb65b5c049dde8c34a0d8482661b',1,'QwtPlot::LegendPosition()'],['../class_qwt_polar_plot.html#aeb082672b319273c14f49332d8426d2e',1,'QwtPolarPlot::LegendPosition()']]],
+  ['linestyle_3661',['LineStyle',['../class_qwt_plot_marker.html#a297efa835423bfa5a870bbc8ff1c623b',1,'QwtPlotMarker']]]
 ];

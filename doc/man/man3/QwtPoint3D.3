@@ -1,4 +1,4 @@
-.TH "QwtPoint3D" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPoint3D" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,9 +19,6 @@ QwtPoint3D \- \fBQwtPoint3D\fP class defines a 3D point in double coordinates\&.
 .RI "\fBQwtPoint3D\fP (double \fBx\fP, double \fBy\fP, double \fBz\fP)"
 .br
 .RI "Constructs a point with coordinates specified by x, y and z\&. "
-.ti -1c
-.RI "\fBQwtPoint3D\fP (const \fBQwtPoint3D\fP &)"
-.br
 .ti -1c
 .RI "\fBQwtPoint3D\fP (const QPointF &)"
 .br
@@ -71,6 +68,8 @@ QwtPoint3D \- \fBQwtPoint3D\fP class defines a 3D point in double coordinates\&.
 .SH "Detailed Description"
 .PP 
 \fBQwtPoint3D\fP class defines a 3D point in double coordinates\&. 
+.PP
+Definition at line 22 of file qwt_point_3d\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPoint3D::QwtPoint3D ()\fC [inline]\fP"
@@ -82,10 +81,12 @@ Constructs a null point\&.
 .RE
 .PP
 
-.SS "QwtPoint3D::QwtPoint3D (const \fBQwtPoint3D\fP & other)\fC [inline]\fP"
-Copy constructor\&. Constructs a point using the values of the point specified\&. 
+.PP
+Definition at line 65 of file qwt_point_3d\&.h\&.
 .SS "QwtPoint3D::QwtPoint3D (const QPointF & other)\fC [inline]\fP"
 Constructs a point with x and y coordinates from a 2D point, and a z coordinate of 0\&. 
+.PP
+Definition at line 84 of file qwt_point_3d\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "bool QwtPoint3D::isNull () const\fC [inline]\fP"
@@ -97,6 +98,8 @@ True if the point is null; otherwise returns false\&.
 .RE
 .PP
 A point is considered to be null if x, y and z-coordinates are equal to zero\&. 
+.PP
+Definition at line 97 of file qwt_point_3d\&.h\&.
 .SS "bool QwtPoint3D::operator!= (const \fBQwtPoint3D\fP & other) const\fC [inline]\fP"
 
 .PP
@@ -106,6 +109,8 @@ True if this rect and other are different; otherwise returns false\&.
 .RE
 .PP
 
+.PP
+Definition at line 171 of file qwt_point_3d\&.h\&.
 .SS "bool QwtPoint3D::operator== (const \fBQwtPoint3D\fP & other) const\fC [inline]\fP"
 
 .PP
@@ -115,6 +120,8 @@ True, if this point and other are equal; otherwise returns false\&.
 .RE
 .PP
 
+.PP
+Definition at line 165 of file qwt_point_3d\&.h\&.
 .SS "double & QwtPoint3D::rx ()\fC [inline]\fP"
 
 .PP
@@ -124,6 +131,8 @@ A reference to the x-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 121 of file qwt_point_3d\&.h\&.
 .SS "double & QwtPoint3D::ry ()\fC [inline]\fP"
 
 .PP
@@ -133,6 +142,8 @@ A reference to the y-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 127 of file qwt_point_3d\&.h\&.
 .SS "double & QwtPoint3D::rz ()\fC [inline]\fP"
 
 .PP
@@ -142,6 +153,8 @@ A reference to the z-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 133 of file qwt_point_3d\&.h\&.
 .SS "QPointF QwtPoint3D::toPoint () const\fC [inline]\fP"
 
 .PP
@@ -151,6 +164,8 @@ A reference to the z-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 159 of file qwt_point_3d\&.h\&.
 .SS "double QwtPoint3D::x () const\fC [inline]\fP"
 
 .PP
@@ -160,6 +175,8 @@ The x-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 103 of file qwt_point_3d\&.h\&.
 .SS "double QwtPoint3D::y () const\fC [inline]\fP"
 
 .PP
@@ -169,6 +186,8 @@ The y-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 109 of file qwt_point_3d\&.h\&.
 .SS "double QwtPoint3D::z () const\fC [inline]\fP"
 
 .PP
@@ -178,6 +197,8 @@ The z-coordinate of the point\&.
 .RE
 .PP
 
+.PP
+Definition at line 115 of file qwt_point_3d\&.h\&.
 
 .SH "Author"
 .PP 

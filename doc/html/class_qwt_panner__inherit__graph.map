@@ -1,5 +1,6 @@
 <map id="QwtPanner" name="QwtPanner">
-<area shape="rect" id="node1" title="QwtPanner provides panning of a widget." alt="" coords="17,80,104,107"/>
+<area shape="rect" id="node1" title="QwtPanner provides panning of a widget." alt="" coords="87,80,173,107"/>
 <area shape="rect" id="node3" href="$class_qwt_plot_panner.html" title="QwtPlotPanner provides panning of a plot canvas." alt="" coords="5,155,116,181"/>
-<area shape="rect" id="node2" title=" " alt="" coords="24,5,97,32"/>
+<area shape="rect" id="node4" href="$class_qwt_polar_panner.html" title="QwtPolarPanner provides panning of a polar plot canvas." alt="" coords="141,155,258,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="93,5,167,32"/>
 </map>

@@ -1,4 +1,4 @@
-.TH "QwtTradingChartData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTradingChartData" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,10 +14,10 @@ Inherits \fBQwtArraySeriesData< QwtOHLCSample >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtTradingChartData\fP (const QVector< \fBQwtOHLCSample\fP > &=QVector< \fBQwtOHLCSample\fP >())"
+.RI "\fBQwtTradingChartData\fP (const \fBQVector\fP< \fBQwtOHLCSample\fP > &=\fBQVector\fP< \fBQwtOHLCSample\fP >())"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .RI "Calculate the bounding rectangle\&. "
 .in -1c
@@ -25,9 +25,11 @@ Inherits \fBQwtArraySeriesData< QwtOHLCSample >\fP\&.
 .SH "Detailed Description"
 .PP 
 Interface for iterating over an array of OHLC samples 
+.PP
+Definition at line 261 of file qwt_series_data\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtTradingChartData::QwtTradingChartData (const QVector< \fBQwtOHLCSample\fP > & samples = \fCQVector<\fBQwtOHLCSample\fP>()\fP)"
+.SS "QwtTradingChartData::QwtTradingChartData (const \fBQVector\fP< \fBQwtOHLCSample\fP > & samples = \fC\fBQVector\fP< \fBQwtOHLCSample\fP >( )\fP)"
 Constructor 
 .PP
 \fBParameters\fP
@@ -36,9 +38,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 378 of file qwt_series_data\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtTradingChartData::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtTradingChartData::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate the bounding rectangle\&. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests\&.
@@ -49,6 +53,10 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Implements \fBQwtSeriesData< T >\fP\&.
+.PP
+Definition at line 391 of file qwt_series_data\&.cpp\&.
 
 .SH "Author"
 .PP 

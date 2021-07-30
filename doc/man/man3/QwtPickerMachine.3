@@ -1,4 +1,4 @@
-.TH "QwtPickerMachine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPickerMachine" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,7 +34,7 @@ Inherited by \fBQwtPickerClickPointMachine\fP, \fBQwtPickerClickRectMachine\fP, 
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual QList< \fBCommand\fP > \fBtransition\fP (const \fBQwtEventPattern\fP &, const QEvent *)=0"
+.RI "virtual \fBQList\fP< \fBCommand\fP > \fBtransition\fP (const \fBQwtEventPattern\fP &, const QEvent *)=0"
 .br
 .RI "Transition\&. "
 .ti -1c
@@ -66,6 +66,8 @@ A state machine for \fBQwtPicker\fP selections\&.
 .RE
 .PP
 
+.PP
+Definition at line 28 of file qwt_picker_machine\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPickerMachine::SelectionType\fP"
@@ -92,6 +94,8 @@ The state machine is for selecting a rectangle (2 points)\&.
 .TP
 \fB\fIPolygonSelection \fP\fP
 The state machine is for selecting a polygon (many points)\&. 
+.PP
+Definition at line 35 of file qwt_picker_machine\&.h\&.
 
 .SH "Author"
 .PP 

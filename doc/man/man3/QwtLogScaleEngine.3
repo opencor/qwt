@@ -1,4 +1,4 @@
-.TH "QwtLogScaleEngine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLogScaleEngine" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,10 +22,10 @@ Inherits \fBQwtScaleEngine\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual void \fBautoScale\fP (int maxNumSteps, double &x1, double &x2, double &stepSize) const"
+.RI "virtual void \fBautoScale\fP (int maxNumSteps, double &x1, double &x2, double &stepSize) const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtScaleDiv\fP \fBdivideScale\fP (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0\&.0) const"
+.RI "virtual \fBQwtScaleDiv\fP \fBdivideScale\fP (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize=0\&.0) const override"
 .br
 .RI "Calculate a scale division for an interval\&. "
 .in -1c
@@ -37,15 +37,15 @@ Inherits \fBQwtScaleEngine\fP\&.
 .br
 .RI "Align an interval to a step size\&. "
 .ti -1c
-.RI "void \fBbuildTicks\fP (const \fBQwtInterval\fP &, double stepSize, int maxMinorSteps, QList< double > ticks[\fBQwtScaleDiv::NTickTypes\fP]) const"
+.RI "void \fBbuildTicks\fP (const \fBQwtInterval\fP &, double stepSize, int maxMinorSteps, \fBQList\fP< double > ticks[\fBQwtScaleDiv::NTickTypes\fP]) const"
 .br
 .RI "Calculate ticks for an interval\&. "
 .ti -1c
-.RI "QList< double > \fBbuildMajorTicks\fP (const \fBQwtInterval\fP &interval, double stepSize) const"
+.RI "\fBQList\fP< double > \fBbuildMajorTicks\fP (const \fBQwtInterval\fP &interval, double stepSize) const"
 .br
 .RI "Calculate major ticks for an interval\&. "
 .ti -1c
-.RI "void \fBbuildMinorTicks\fP (const QList< double > &majorTicks, int maxMinorSteps, double stepSize, QList< double > &minorTicks, QList< double > &mediumTicks) const"
+.RI "void \fBbuildMinorTicks\fP (const \fBQList\fP< double > &majorTicks, int maxMinorSteps, double stepSize, \fBQList\fP< double > &minorTicks, \fBQList\fP< double > &mediumTicks) const"
 .br
 .RI "Calculate minor/medium ticks for major ticks\&. "
 .in -1c
@@ -62,9 +62,11 @@ the step size as well as the margins are measured in \fIdecades\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 191 of file qwt_scale_engine\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLogScaleEngine::QwtLogScaleEngine (uint base = \fC10\fP)"
+.SS "QwtLogScaleEngine::QwtLogScaleEngine (uint base = \fC10\fP)\fC [explicit]\fP"
 Constructor
 .PP
 \fBParameters\fP
@@ -78,6 +80,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 776 of file qwt_scale_engine\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBQwtInterval\fP QwtLogScaleEngine::align (const \fBQwtInterval\fP & interval, double stepSize) const\fC [protected]\fP"
@@ -98,7 +102,9 @@ Aligned interval
 .RE
 .PP
 
-.SS "void QwtLogScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [virtual]\fP"
+.PP
+Definition at line 1106 of file qwt_scale_engine\&.cpp\&.
+.SS "void QwtLogScaleEngine::autoScale (int maxNumSteps, double & x1, double & x2, double & stepSize) const\fC [override]\fP, \fC [virtual]\fP"
 Align and divide an interval
 .PP
 \fBParameters\fP
@@ -120,7 +126,9 @@ Align and divide an interval
 
 .PP
 Implements \fBQwtScaleEngine\fP\&.
-.SS "QList< double > QwtLogScaleEngine::buildMajorTicks (const \fBQwtInterval\fP & interval, double stepSize) const\fC [protected]\fP"
+.PP
+Definition at line 797 of file qwt_scale_engine\&.cpp\&.
+.SS "\fBQList\fP< double > QwtLogScaleEngine::buildMajorTicks (const \fBQwtInterval\fP & interval, double stepSize) const\fC [protected]\fP"
 
 .PP
 Calculate major ticks for an interval\&. 
@@ -138,7 +146,9 @@ Calculated ticks
 .RE
 .PP
 
-.SS "void QwtLogScaleEngine::buildMinorTicks (const QList< double > & majorTicks, int maxMinorSteps, double stepSize, QList< double > & minorTicks, QList< double > & mediumTicks) const\fC [protected]\fP"
+.PP
+Definition at line 967 of file qwt_scale_engine\&.cpp\&.
+.SS "void QwtLogScaleEngine::buildMinorTicks (const \fBQList\fP< double > & majorTicks, int maxMinorSteps, double stepSize, \fBQList\fP< double > & minorTicks, \fBQList\fP< double > & mediumTicks) const\fC [protected]\fP"
 
 .PP
 Calculate minor/medium ticks for major ticks\&. 
@@ -157,7 +167,9 @@ Calculate minor/medium ticks for major ticks\&.
 .RE
 .PP
 
-.SS "void QwtLogScaleEngine::buildTicks (const \fBQwtInterval\fP & interval, double stepSize, int maxMinorSteps, QList< double > ticks[QwtScaleDiv::NTickTypes]) const\fC [protected]\fP"
+.PP
+Definition at line 1002 of file qwt_scale_engine\&.cpp\&.
+.SS "void QwtLogScaleEngine::buildTicks (const \fBQwtInterval\fP & interval, double stepSize, int maxMinorSteps, \fBQList\fP< double > ticks[QwtScaleDiv::NTickTypes]) const\fC [protected]\fP"
 
 .PP
 Calculate ticks for an interval\&. 
@@ -179,7 +191,9 @@ Calculate ticks for an interval\&.
 .RE
 .PP
 
-.SS "\fBQwtScaleDiv\fP QwtLogScaleEngine::divideScale (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize = \fC0\&.0\fP) const\fC [virtual]\fP"
+.PP
+Definition at line 940 of file qwt_scale_engine\&.cpp\&.
+.SS "\fBQwtScaleDiv\fP QwtLogScaleEngine::divideScale (double x1, double x2, int maxMajorSteps, int maxMinorSteps, double stepSize = \fC0\&.0\fP) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate a scale division for an interval\&. 
@@ -205,6 +219,8 @@ Calculated scale division
 
 .PP
 Implements \fBQwtScaleEngine\fP\&.
+.PP
+Definition at line 879 of file qwt_scale_engine\&.cpp\&.
 
 .SH "Author"
 .PP 

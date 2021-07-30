@@ -1,4 +1,4 @@
-.TH "QwtCounter" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCounter" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -80,7 +80,7 @@ Inherits QWidget\&.
 .RI "int \fBincSteps\fP (\fBQwtCounter::Button\fP) const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .RI "A size hint\&. "
 .ti -1c
@@ -135,13 +135,13 @@ Inherits QWidget\&.
 
 .in +1c
 .ti -1c
-.RI "virtual bool \fBevent\fP (QEvent *)"
+.RI "virtual bool \fBevent\fP (QEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBwheelEvent\fP (QWheelEvent *)"
+.RI "virtual void \fBwheelEvent\fP (QWheelEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -159,19 +159,21 @@ Example:
 .nf
 #include <qwt_counter\&.h>
 
-QwtCounter *counter = new QwtCounter(parent);
+  QwtCounter *counter = new QwtCounter(parent);
 
-counter->setRange(0\&.0, 100\&.0);                  // From 0\&.0 to 100
-counter->setSingleStep( 1\&.0 );                  // Step size 1\&.0
-counter->setNumButtons(2);                      // Two buttons each side
-counter->setIncSteps(QwtCounter::Button1, 1);   // Button 1 increments 1 step
-counter->setIncSteps(QwtCounter::Button2, 20);  // Button 2 increments 20 steps
+  counter->setRange(0\&.0, 100\&.0);                  // From 0\&.0 to 100
+  counter->setSingleStep( 1\&.0 );                  // Step size 1\&.0
+  counter->setNumButtons(2);                      // Two buttons each side
+  counter->setIncSteps(QwtCounter::Button1, 1);   // Button 1 increments 1 step
+  counter->setIncSteps(QwtCounter::Button2, 20);  // Button 2 increments 20 steps
 
-connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));
+  connect(counter, SIGNAL(valueChanged(double)), myClass, SLOT(newValue(double)));
 
 .fi
 .PP
  
+.PP
+Definition at line 48 of file qwt_counter\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtCounter::Button\fP"
@@ -193,6 +195,8 @@ Button intended for large steps\&.
 .TP
 \fB\fIButtonCnt \fP\fP
 Number of buttons\&. 
+.PP
+Definition at line 67 of file qwt_counter\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtCounter::QwtCounter (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -214,6 +218,8 @@ Button 3: 100 steps
 .RE
 .PP
 
+.PP
+Definition at line 65 of file qwt_counter\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtCounter::buttonReleased (double value)\fC [signal]\fP"
@@ -225,7 +231,7 @@ This signal is emitted when a button has been released
 .RE
 .PP
 
-.SS "bool QwtCounter::event (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "bool QwtCounter::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handle QEvent::PolishRequest events 
 .PP
 \fBParameters\fP
@@ -239,6 +245,8 @@ see QWidget::event()
 .RE
 .PP
 
+.PP
+Definition at line 485 of file qwt_counter\&.cpp\&.
 .SS "int QwtCounter::incSteps (\fBQwtCounter::Button\fP button) const"
 
 .PP
@@ -258,6 +266,8 @@ The number of steps by which a specified button increments the value or 0 if the
 .RE
 .PP
 
+.PP
+Definition at line 416 of file qwt_counter\&.cpp\&.
 .SS "bool QwtCounter::isReadOnly () const"
 
 .PP
@@ -272,6 +282,8 @@ True, when the line line edit is read only\&. (default is no)
 .RE
 .PP
 
+.PP
+Definition at line 186 of file qwt_counter\&.cpp\&.
 .SS "bool QwtCounter::isValid () const"
 
 .PP
@@ -286,7 +298,9 @@ True, if the value is valid
 .RE
 .PP
 
-.SS "void QwtCounter::keyPressEvent (QKeyEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 166 of file qwt_counter\&.cpp\&.
+.SS "void QwtCounter::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handle key events
 .PP
 .IP "\(bu" 2
@@ -329,6 +343,8 @@ Shift + Qt::Key_PageDown
 .RE
 .PP
 
+.PP
+Definition at line 524 of file qwt_counter\&.cpp\&.
 .SS "double QwtCounter::maximum () const"
 
 .PP
@@ -343,6 +359,8 @@ The maximum of the range
 .RE
 .PP
 
+.PP
+Definition at line 306 of file qwt_counter\&.cpp\&.
 .SS "double QwtCounter::minimum () const"
 
 .PP
@@ -357,6 +375,8 @@ The minimum of the range
 .RE
 .PP
 
+.PP
+Definition at line 286 of file qwt_counter\&.cpp\&.
 .SS "int QwtCounter::numButtons () const"
 
 .PP
@@ -371,6 +391,8 @@ The number of buttons on each side of the widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 388 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setIncSteps (\fBQwtCounter::Button\fP button, int numSteps)"
 Specify the number of steps by which the value is incremented or decremented when a specified button is pushed\&.
 .PP
@@ -387,6 +409,8 @@ Specify the number of steps by which the value is incremented or decremented whe
 .RE
 .PP
 
+.PP
+Definition at line 403 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setMaximum (double value)"
 Set the maximum value of the range
 .PP
@@ -401,6 +425,8 @@ Set the maximum value of the range
 .RE
 .PP
 
+.PP
+Definition at line 297 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setMinimum (double value)"
 Set the minimum value of the range
 .PP
@@ -420,6 +446,8 @@ The maximum is adjusted if necessary to ensure that the range remains valid\&.
 .RE
 .PP
 
+.PP
+Definition at line 277 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setNumButtons (int numButtons)"
 Specify the number of buttons on each side of the label
 .PP
@@ -434,6 +462,8 @@ Specify the number of buttons on each side of the label
 .RE
 .PP
 
+.PP
+Definition at line 362 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setRange (double min, double max)"
 
 .PP
@@ -452,6 +482,8 @@ Set the minimum and maximum values\&. The maximum is adjusted if necessary to en
 .RE
 .PP
 
+.PP
+Definition at line 241 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setReadOnly (bool on)"
 
 .PP
@@ -468,6 +500,8 @@ Allow/disallow the user to manually edit the value\&.
 .RE
 .PP
 
+.PP
+Definition at line 177 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setSingleStep (double stepSize)"
 
 .PP
@@ -484,6 +518,8 @@ Set the step size of the counter\&. A value <= 0\&.0 disables stepping
 .RE
 .PP
 
+.PP
+Definition at line 319 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setStepButton1 (int nSteps)"
 Set the number of increment steps for button 1 
 .PP
@@ -493,6 +529,8 @@ Set the number of increment steps for button 1
 .RE
 .PP
 
+.PP
+Definition at line 429 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setStepButton2 (int nSteps)"
 Set the number of increment steps for button 2 
 .PP
@@ -502,6 +540,8 @@ Set the number of increment steps for button 2
 .RE
 .PP
 
+.PP
+Definition at line 444 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setStepButton3 (int nSteps)"
 Set the number of increment steps for button 3 
 .PP
@@ -511,6 +551,8 @@ Set the number of increment steps for button 3
 .RE
 .PP
 
+.PP
+Definition at line 459 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setValid (bool on)"
 Set the counter to be in valid/invalid state
 .PP
@@ -527,6 +569,8 @@ When the counter is set to invalid, no numbers are displayed and the buttons are
 .RE
 .PP
 
+.PP
+Definition at line 142 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setValue (double value)\fC [slot]\fP"
 
 .PP
@@ -548,6 +592,8 @@ The value is clipped when it lies outside the range\&.
 .RE
 .PP
 
+.PP
+Definition at line 202 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::setWrapping (bool on)"
 
 .PP
@@ -564,6 +610,8 @@ En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP valu
 .RE
 .PP
 
+.PP
+Definition at line 342 of file qwt_counter\&.cpp\&.
 .SS "double QwtCounter::singleStep () const"
 
 .PP
@@ -578,6 +626,8 @@ Single step size
 .RE
 .PP
 
+.PP
+Definition at line 328 of file qwt_counter\&.cpp\&.
 .SS "double QwtCounter::value () const"
 
 .PP
@@ -592,6 +642,8 @@ Current value of the counter
 .RE
 .PP
 
+.PP
+Definition at line 225 of file qwt_counter\&.cpp\&.
 .SS "void QwtCounter::valueChanged (double value)\fC [signal]\fP"
 This signal is emitted when the counter's value has changed 
 .PP
@@ -601,7 +653,7 @@ This signal is emitted when the counter's value has changed
 .RE
 .PP
 
-.SS "void QwtCounter::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCounter::wheelEvent (QWheelEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handle wheel events 
 .PP
 \fBParameters\fP
@@ -610,6 +662,8 @@ Handle wheel events
 .RE
 .PP
 
+.PP
+Definition at line 591 of file qwt_counter\&.cpp\&.
 .SS "bool QwtCounter::wrapping () const"
 
 .PP
@@ -624,6 +678,8 @@ True, when wrapping is set
 .RE
 .PP
 
+.PP
+Definition at line 351 of file qwt_counter\&.cpp\&.
 
 .SH "Author"
 .PP 

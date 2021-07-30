@@ -1,4 +1,4 @@
-.TH "QwtMagnifier" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMagnifier" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ QwtMagnifier \- \fBQwtMagnifier\fP provides zooming, by magnifying in steps\&.
 .PP
 Inherits QObject\&.
 .PP
-Inherited by \fBQwtPlotMagnifier\fP\&.
+Inherited by \fBQwtPlotMagnifier\fP, and \fBQwtPolarMagnifier\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -84,7 +84,7 @@ Inherited by \fBQwtPlotMagnifier\fP\&.
 .br
 .RI "Retrieve the settings of the zoom out key\&. "
 .ti -1c
-.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
+.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *) override"
 .br
 .RI "Event filter\&. "
 .in -1c
@@ -118,6 +118,8 @@ Inherited by \fBQwtPlotMagnifier\fP\&.
 \fBQwtMagnifier\fP provides zooming, by magnifying in steps\&. 
 
 Using \fBQwtMagnifier\fP a plot can be zoomed in/out in steps using keys, the mouse wheel or moving a mouse button in vertical direction\&. 
+.PP
+Definition at line 27 of file qwt_magnifier\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtMagnifier::QwtMagnifier (QWidget * parent)\fC [explicit]\fP"
@@ -129,9 +131,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 63 of file qwt_magnifier\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "bool QwtMagnifier::eventFilter (QObject * object, QEvent * event)\fC [virtual]\fP"
+.SS "bool QwtMagnifier::eventFilter (QObject * object, QEvent * event)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Event filter\&. When \fBisEnabled()\fP is true, the mouse events of the observed widget are filtered\&.
@@ -154,6 +158,8 @@ Forwarded to QObject::eventFilter()
 .RE
 .PP
 
+.PP
+Definition at line 317 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::getMouseButton (Qt::MouseButton & button, Qt::KeyboardModifiers & modifiers) const"
 
 .PP
@@ -163,6 +169,8 @@ Forwarded to QObject::eventFilter()
 .RE
 .PP
 
+.PP
+Definition at line 210 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::getZoomInKey (int & key, Qt::KeyboardModifiers & modifiers) const"
 
 .PP
@@ -181,6 +189,8 @@ Retrieve the settings of the zoom in key\&.
 .RE
 .PP
 
+.PP
+Definition at line 265 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::getZoomOutKey (int & key, Qt::KeyboardModifiers & modifiers) const"
 
 .PP
@@ -199,6 +209,8 @@ Retrieve the settings of the zoom out key\&.
 .RE
 .PP
 
+.PP
+Definition at line 295 of file qwt_magnifier\&.cpp\&.
 .SS "bool QwtMagnifier::isEnabled () const"
 
 .PP
@@ -213,6 +225,8 @@ true when enabled, false otherwise
 .RE
 .PP
 
+.PP
+Definition at line 113 of file qwt_magnifier\&.cpp\&.
 .SS "double QwtMagnifier::keyFactor () const"
 
 .PP
@@ -227,6 +241,8 @@ Key factor
 .RE
 .PP
 
+.PP
+Definition at line 237 of file qwt_magnifier\&.cpp\&.
 .SS "double QwtMagnifier::mouseFactor () const"
 
 .PP
@@ -241,6 +257,8 @@ Mouse factor
 .RE
 .PP
 
+.PP
+Definition at line 188 of file qwt_magnifier\&.cpp\&.
 .SS "QWidget * QwtMagnifier::parentWidget ()"
 
 .PP
@@ -250,6 +268,8 @@ Parent widget, where the rescaling happens
 .RE
 .PP
 
+.PP
+Definition at line 499 of file qwt_magnifier\&.cpp\&.
 .SS "const QWidget * QwtMagnifier::parentWidget () const"
 
 .PP
@@ -259,6 +279,8 @@ Parent widget, where the rescaling happens
 .RE
 .PP
 
+.PP
+Definition at line 505 of file qwt_magnifier\&.cpp\&.
 .SS "virtual void QwtMagnifier::rescale (double factor)\fC [protected]\fP, \fC [pure virtual]\fP"
 Rescale the parent widget 
 .PP
@@ -268,8 +290,6 @@ Rescale the parent widget
 .RE
 .PP
 
-.PP
-Implemented in \fBQwtPlotMagnifier\fP\&.
 .SS "void QwtMagnifier::setEnabled (bool on)"
 
 .PP
@@ -286,6 +306,8 @@ En/disable the magnifier\&. When enabled is true an event filter is installed fo
 .RE
 .PP
 
+.PP
+Definition at line 92 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setKeyFactor (double factor)"
 
 .PP
@@ -302,6 +324,8 @@ Change the key factor\&. The key factor defines the ratio between the current ra
 .RE
 .PP
 
+.PP
+Definition at line 228 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setMouseButton (Qt::MouseButton button, Qt::KeyboardModifiers modifiers = \fCQt::NoModifier\fP)"
 Assign the mouse button, that is used for zooming in/out\&. The default value is Qt::RightButton\&.
 .PP
@@ -318,6 +342,8 @@ Assign the mouse button, that is used for zooming in/out\&. The default value is
 .RE
 .PP
 
+.PP
+Definition at line 202 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setMouseFactor (double factor)"
 
 .PP
@@ -334,6 +360,8 @@ Change the mouse factor\&. The mouse factor defines the ratio between the curren
 .RE
 .PP
 
+.PP
+Definition at line 179 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setWheelFactor (double factor)"
 
 .PP
@@ -354,6 +382,8 @@ The default value is 0\&.9\&.
 .RE
 .PP
 
+.PP
+Definition at line 134 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setWheelModifiers (Qt::KeyboardModifiers modifiers)"
 Assign keyboard modifiers for zooming in/out using the wheel\&. The default modifiers are Qt::NoModifiers\&.
 .PP
@@ -368,6 +398,8 @@ Assign keyboard modifiers for zooming in/out using the wheel\&. The default modi
 .RE
 .PP
 
+.PP
+Definition at line 155 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setZoomInKey (int key, Qt::KeyboardModifiers modifiers = \fCQt::NoModifier\fP)"
 Assign the key, that is used for zooming in\&. The default combination is Qt::Key_Plus + Qt::NoModifier\&.
 .PP
@@ -384,6 +416,8 @@ Assign the key, that is used for zooming in\&. The default combination is Qt::Ke
 .RE
 .PP
 
+.PP
+Definition at line 250 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::setZoomOutKey (int key, Qt::KeyboardModifiers modifiers = \fCQt::NoModifier\fP)"
 Assign the key, that is used for zooming out\&. The default combination is Qt::Key_Minus + Qt::NoModifier\&.
 .PP
@@ -400,6 +434,8 @@ Assign the key, that is used for zooming out\&. The default combination is Qt::K
 .RE
 .PP
 
+.PP
+Definition at line 280 of file qwt_magnifier\&.cpp\&.
 .SS "double QwtMagnifier::wheelFactor () const"
 
 .PP
@@ -414,6 +450,8 @@ Wheel factor
 .RE
 .PP
 
+.PP
+Definition at line 143 of file qwt_magnifier\&.cpp\&.
 .SS "Qt::KeyboardModifiers QwtMagnifier::wheelModifiers () const"
 
 .PP
@@ -428,6 +466,8 @@ Wheel modifiers
 .RE
 .PP
 
+.PP
+Definition at line 164 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetKeyPressEvent (QKeyEvent * keyEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a key press event for the observed widget\&.
 .PP
@@ -442,6 +482,10 @@ Handle a key press event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Reimplemented in \fBQwtPolarMagnifier\fP\&.
+.PP
+Definition at line 473 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetKeyReleaseEvent (QKeyEvent * keyEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a key release event for the observed widget\&.
 .PP
@@ -456,6 +500,8 @@ Handle a key release event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 493 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetMouseMoveEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse move event for the observed widget\&.
 .PP
@@ -470,6 +516,8 @@ Handle a mouse move event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 407 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetMousePressEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse press event for the observed widget\&.
 .PP
@@ -484,6 +532,8 @@ Handle a mouse press event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 365 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetMouseReleaseEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse release event for the observed widget\&.
 .PP
@@ -498,6 +548,8 @@ Handle a mouse release event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 390 of file qwt_magnifier\&.cpp\&.
 .SS "void QwtMagnifier::widgetWheelEvent (QWheelEvent * wheelEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a wheel event for the observed widget\&.
 .PP
@@ -512,6 +564,8 @@ Handle a wheel event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 431 of file qwt_magnifier\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtDynGridLayout" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDynGridLayout" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ Inherits QLayout\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual void \fBinvalidate\fP ()"
+.RI "virtual void \fBinvalidate\fP () override"
 .br
 .RI "Invalidate all internal caches\&. "
 .ti -1c
@@ -42,45 +42,45 @@ Inherits QLayout\&.
 .RI "uint \fBnumColumns\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBaddItem\fP (QLayoutItem *)"
+.RI "virtual void \fBaddItem\fP (QLayoutItem *) override"
 .br
 .RI "Add an item to the next free position\&. "
 .ti -1c
-.RI "virtual QLayoutItem * \fBitemAt\fP (int index) const"
+.RI "virtual QLayoutItem * \fBitemAt\fP (int index) const override"
 .br
 .ti -1c
-.RI "virtual QLayoutItem * \fBtakeAt\fP (int index)"
+.RI "virtual QLayoutItem * \fBtakeAt\fP (int index) override"
 .br
 .ti -1c
-.RI "virtual int \fBcount\fP () const"
+.RI "virtual int \fBcount\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetExpandingDirections\fP (Qt::Orientations)"
 .br
 .ti -1c
-.RI "virtual Qt::Orientations \fBexpandingDirections\fP () const"
+.RI "virtual Qt::Orientations \fBexpandingDirections\fP () const override"
 .br
 .RI "Returns whether this layout can make use of more space than \fBsizeHint()\fP\&. "
 .ti -1c
-.RI "QList< QRect > \fBlayoutItems\fP (const QRect &, uint \fBnumColumns\fP) const"
+.RI "\fBQList\fP< QRect > \fBlayoutItems\fP (const QRect &, uint \fBnumColumns\fP) const"
 .br
 .ti -1c
 .RI "virtual int \fBmaxItemWidth\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBsetGeometry\fP (const QRect &rect)"
+.RI "virtual void \fBsetGeometry\fP (const QRect &) override"
 .br
 .ti -1c
-.RI "virtual bool \fBhasHeightForWidth\fP () const"
+.RI "virtual bool \fBhasHeightForWidth\fP () const override"
 .br
 .ti -1c
-.RI "virtual int \fBheightForWidth\fP (int) const"
+.RI "virtual int \fBheightForWidth\fP (int) const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual bool \fBisEmpty\fP () const"
+.RI "virtual bool \fBisEmpty\fP () const override"
 .br
 .ti -1c
 .RI "uint \fBitemCount\fP () const"
@@ -94,10 +94,10 @@ Inherits QLayout\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBlayoutGrid\fP (uint \fBnumColumns\fP, QVector< int > &rowHeight, QVector< int > &colWidth) const"
+.RI "void \fBlayoutGrid\fP (uint \fBnumColumns\fP, \fBQVector\fP< int > &rowHeight, \fBQVector\fP< int > &colWidth) const"
 .br
 .ti -1c
-.RI "void \fBstretchGrid\fP (const QRect &rect, uint \fBnumColumns\fP, QVector< int > &rowHeight, QVector< int > &colWidth) const"
+.RI "void \fBstretchGrid\fP (const QRect &rect, uint \fBnumColumns\fP, \fBQVector\fP< int > &rowHeight, \fBQVector\fP< int > &colWidth) const"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -105,6 +105,8 @@ Inherits QLayout\&.
 The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the number of columns and rows to the current size\&. 
 
 \fBQwtDynGridLayout\fP takes the space it gets, divides it up into rows and columns, and puts each of the widgets it manages into the correct cell(s)\&. It lays out as many number of columns as possible (limited by \fBmaxColumns()\fP)\&. 
+.PP
+Definition at line 27 of file qwt_dyngrid_layout\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtDynGridLayout::QwtDynGridLayout (QWidget * parent, int margin = \fC0\fP, int spacing = \fC\-1\fP)\fC [explicit]\fP"
@@ -120,6 +122,8 @@ The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the numbe
 .RE
 .PP
 
+.PP
+Definition at line 58 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "QwtDynGridLayout::QwtDynGridLayout (int spacing = \fC\-1\fP)\fC [explicit]\fP"
 
 .PP
@@ -129,9 +133,11 @@ The \fBQwtDynGridLayout\fP class lays out widgets in a grid, adjusting the numbe
 .RE
 .PP
 
+.PP
+Definition at line 71 of file qwt_dyngrid_layout\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtDynGridLayout::addItem (QLayoutItem * item)\fC [virtual]\fP"
+.SS "void QwtDynGridLayout::addItem (QLayoutItem * item)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Add an item to the next free position\&. 
@@ -142,6 +148,8 @@ Add an item to the next free position\&.
 .RE
 .PP
 
+.PP
+Definition at line 128 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "uint QwtDynGridLayout::columnsForWidth (int width) const\fC [virtual]\fP"
 
 .PP
@@ -163,7 +171,9 @@ Number of columns for a given width
 .RE
 .PP
 
-.SS "int QwtDynGridLayout::count () const\fC [virtual]\fP"
+.PP
+Definition at line 256 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "int QwtDynGridLayout::count () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -172,7 +182,9 @@ Number of items in the layout
 .RE
 .PP
 
-.SS "Qt::Orientations QwtDynGridLayout::expandingDirections () const\fC [virtual]\fP"
+.PP
+Definition at line 182 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "Qt::Orientations QwtDynGridLayout::expandingDirections () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Returns whether this layout can make use of more space than \fBsizeHint()\fP\&. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions\&.
@@ -188,7 +200,9 @@ Orientations, where the layout expands
 .RE
 .PP
 
-.SS "bool QwtDynGridLayout::hasHeightForWidth () const\fC [virtual]\fP"
+.PP
+Definition at line 211 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "bool QwtDynGridLayout::hasHeightForWidth () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -202,7 +216,9 @@ true: \fBQwtDynGridLayout\fP implements \fBheightForWidth()\fP\&.
 .RE
 .PP
 
-.SS "int QwtDynGridLayout::heightForWidth (int width) const\fC [virtual]\fP"
+.PP
+Definition at line 446 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "int QwtDynGridLayout::heightForWidth (int width) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -216,7 +232,9 @@ The preferred height for this layout, given a width\&.
 .RE
 .PP
 
-.SS "bool QwtDynGridLayout::isEmpty () const\fC [virtual]\fP"
+.PP
+Definition at line 455 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "bool QwtDynGridLayout::isEmpty () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -225,7 +243,9 @@ true if this layout is empty\&.
 .RE
 .PP
 
-.SS "QLayoutItem * QwtDynGridLayout::itemAt (int index) const\fC [virtual]\fP"
+.PP
+Definition at line 137 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "QLayoutItem * QwtDynGridLayout::itemAt (int index) const\fC [override]\fP, \fC [virtual]\fP"
 Find the item at a specific index
 .PP
 \fBParameters\fP
@@ -244,6 +264,8 @@ Item at a specific index
 .RE
 .PP
 
+.PP
+Definition at line 157 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "uint QwtDynGridLayout::itemCount () const"
 
 .PP
@@ -253,7 +275,9 @@ number of layout items
 .RE
 .PP
 
-.SS "void QwtDynGridLayout::layoutGrid (uint numColumns, QVector< int > & rowHeight, QVector< int > & colWidth) const\fC [protected]\fP"
+.PP
+Definition at line 145 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "void QwtDynGridLayout::layoutGrid (uint numColumns, \fBQVector\fP< int > & rowHeight, \fBQVector\fP< int > & colWidth) const\fC [protected]\fP"
 Calculate the dimensions for the columns and rows for a grid of numColumns columns\&.
 .PP
 \fBParameters\fP
@@ -266,7 +290,9 @@ Calculate the dimensions for the columns and rows for a grid of numColumns colum
 .RE
 .PP
 
-.SS "QList< QRect > QwtDynGridLayout::layoutItems (const QRect & rect, uint numColumns) const"
+.PP
+Definition at line 419 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "\fBQList\fP< QRect > QwtDynGridLayout::layoutItems (const QRect & rect, uint numColumns) const"
 Calculate the geometries of the layout items for a layout with numColumns columns and a given rectangle\&.
 .PP
 \fBParameters\fP
@@ -282,6 +308,8 @@ item geometries
 .RE
 .PP
 
+.PP
+Definition at line 344 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "uint QwtDynGridLayout::maxColumns () const"
 
 .PP
@@ -298,6 +326,8 @@ Upper limit for the number of columns
 .RE
 .PP
 
+.PP
+Definition at line 119 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "int QwtDynGridLayout::maxItemWidth () const\fC [virtual]\fP"
 
 .PP
@@ -307,6 +337,8 @@ the maximum width of all layout items
 .RE
 .PP
 
+.PP
+Definition at line 316 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "uint QwtDynGridLayout::numColumns () const"
 
 .PP
@@ -326,6 +358,8 @@ The number of columns might change whenever the geometry changes
 .RE
 .PP
 
+.PP
+Definition at line 596 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "uint QwtDynGridLayout::numRows () const"
 
 .PP
@@ -345,6 +379,8 @@ The number of rows might change whenever the geometry changes
 .RE
 .PP
 
+.PP
+Definition at line 586 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "void QwtDynGridLayout::setExpandingDirections (Qt::Orientations expanding)"
 Set whether this layout can make use of more space than \fBsizeHint()\fP\&. A value of Qt::Vertical or Qt::Horizontal means that it wants to grow in only one dimension, while Qt::Vertical | Qt::Horizontal means that it wants to grow in both dimensions\&. The default value is 0\&.
 .PP
@@ -359,7 +395,9 @@ Set whether this layout can make use of more space than \fBsizeHint()\fP\&. A va
 .RE
 .PP
 
-.SS "void QwtDynGridLayout::setGeometry (const QRect & rect)\fC [virtual]\fP"
+.PP
+Definition at line 196 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "void QwtDynGridLayout::setGeometry (const QRect & rect)\fC [override]\fP, \fC [virtual]\fP"
 Reorganizes columns and rows and resizes managed items within a rectangle\&.
 .PP
 \fBParameters\fP
@@ -368,6 +406,8 @@ Reorganizes columns and rows and resizes managed items within a rectangle\&.
 .RE
 .PP
 
+.PP
+Definition at line 222 of file qwt_dyngrid_layout\&.cpp\&.
 .SS "void QwtDynGridLayout::setMaxColumns (uint maxColumns)"
 Limit the number of columns\&. 
 .PP
@@ -382,7 +422,9 @@ Limit the number of columns\&.
 .RE
 .PP
 
-.SS "QSize QwtDynGridLayout::sizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 106 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "QSize QwtDynGridLayout::sizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 Return the size hint\&. If \fBmaxColumns()\fP > 0 it is the size for a grid with \fBmaxColumns()\fP columns, otherwise it is the size for a grid with only one row\&.
 .PP
 \fBReturns\fP
@@ -396,7 +438,9 @@ Size hint
 .RE
 .PP
 
-.SS "void QwtDynGridLayout::stretchGrid (const QRect & rect, uint numColumns, QVector< int > & rowHeight, QVector< int > & colWidth) const\fC [protected]\fP"
+.PP
+Definition at line 550 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "void QwtDynGridLayout::stretchGrid (const QRect & rect, uint numColumns, \fBQVector\fP< int > & rowHeight, \fBQVector\fP< int > & colWidth) const\fC [protected]\fP"
 Stretch columns in case of expanding() & QSizePolicy::Horizontal and rows in case of expanding() & QSizePolicy::Vertical to fill the entire rect\&. Rows and columns are stretched with the same factor\&.
 .PP
 \fBParameters\fP
@@ -416,7 +460,9 @@ setExpanding(), expanding()
 .RE
 .PP
 
-.SS "QLayoutItem * QwtDynGridLayout::takeAt (int index)\fC [virtual]\fP"
+.PP
+Definition at line 491 of file qwt_dyngrid_layout\&.cpp\&.
+.SS "QLayoutItem * QwtDynGridLayout::takeAt (int index)\fC [override]\fP, \fC [virtual]\fP"
 Find the item at a specific index and remove it from the layout
 .PP
 \fBParameters\fP
@@ -435,6 +481,8 @@ Layout item, removed from the layout
 .RE
 .PP
 
+.PP
+Definition at line 172 of file qwt_dyngrid_layout\&.cpp\&.
 
 .SH "Author"
 .PP 

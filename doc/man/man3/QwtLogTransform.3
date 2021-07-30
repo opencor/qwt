@@ -1,4 +1,4 @@
-.TH "QwtLogTransform" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLogTransform" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,27 +23,27 @@ Inherits \fBQwtTransform\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual double \fBtransform\fP (double value) const"
+.RI "virtual double \fBtransform\fP (double value) const override"
 .br
 .ti -1c
-.RI "virtual double \fBinvTransform\fP (double value) const"
+.RI "virtual double \fBinvTransform\fP (double value) const override"
 .br
 .ti -1c
-.RI "virtual double \fBbounded\fP (double value) const"
+.RI "virtual double \fBbounded\fP (double value) const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const"
+.RI "virtual \fBQwtTransform\fP * \fBcopy\fP () const override"
 .br
 .in -1c
-.SS "Public Attributes"
+.SS "Static Public Attributes"
 
 .in +1c
 .ti -1c
-.RI "QT_STATIC_CONST double \fBLogMin\fP = 1\&.0e\-150"
+.RI "static const double \fBLogMin\fP = 1\&.0e\-150"
 .br
 .RI "Smallest allowed value for logarithmic scales: 1\&.0e-150\&. "
 .ti -1c
-.RI "QT_STATIC_CONST double \fBLogMax\fP = 1\&.0e150"
+.RI "static const double \fBLogMax\fP = 1\&.0e150"
 .br
 .RI "Largest allowed value for logarithmic scales: 1\&.0e150\&. "
 .in -1c
@@ -59,9 +59,11 @@ In the calculations of \fBQwtScaleMap\fP the base of the log function has no eff
 .RE
 .PP
 
+.PP
+Definition at line 100 of file qwt_transform\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "double QwtLogTransform::bounded (double value) const\fC [virtual]\fP"
+.SS "double QwtLogTransform::bounded (double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -77,7 +79,9 @@ qBound( LogMin, value, LogMax )
 
 .PP
 Reimplemented from \fBQwtTransform\fP\&.
-.SS "\fBQwtTransform\fP * QwtLogTransform::copy () const\fC [virtual]\fP"
+.PP
+Definition at line 106 of file qwt_transform\&.cpp\&.
+.SS "\fBQwtTransform\fP * QwtLogTransform::copy () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -88,7 +92,9 @@ Clone of the transformation
 
 .PP
 Implements \fBQwtTransform\fP\&.
-.SS "double QwtLogTransform::invTransform (double value) const\fC [virtual]\fP"
+.PP
+Definition at line 112 of file qwt_transform\&.cpp\&.
+.SS "double QwtLogTransform::invTransform (double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -104,7 +110,9 @@ exp( value )
 
 .PP
 Implements \fBQwtTransform\fP\&.
-.SS "double QwtLogTransform::transform (double value) const\fC [virtual]\fP"
+.PP
+Definition at line 97 of file qwt_transform\&.cpp\&.
+.SS "double QwtLogTransform::transform (double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -120,6 +128,8 @@ log( value )
 
 .PP
 Implements \fBQwtTransform\fP\&.
+.PP
+Definition at line 88 of file qwt_transform\&.cpp\&.
 
 .SH "Author"
 .PP 

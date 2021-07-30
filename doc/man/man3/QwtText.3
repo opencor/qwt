@@ -1,4 +1,4 @@
-.TH "QwtText" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtText" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,17 +27,18 @@ QwtText \- A class representing a text\&.
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .ti -1c
 .RI "typedef QFlags< \fBLayoutAttribute\fP > \fBLayoutAttributes\fP"
 .br
-.RI "Layout attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtText\fP (const QString &=QString(), \fBTextFormat\fP textFormat=\fBAutoText\fP)"
+.RI "\fBQwtText\fP ()"
+.br
+.ti -1c
+.RI "\fBQwtText\fP (const QString &, \fBTextFormat\fP textFormat=\fBAutoText\fP)"
 .br
 .ti -1c
 .RI "\fBQwtText\fP (const \fBQwtText\fP &)"
@@ -129,10 +130,16 @@ QwtText \- A class representing a text\&.
 .RI "bool \fBtestLayoutAttribute\fP (\fBLayoutAttribute\fP) const"
 .br
 .ti -1c
-.RI "double \fBheightForWidth\fP (double width, const QFont &=QFont()) const"
+.RI "double \fBheightForWidth\fP (double width) const"
 .br
 .ti -1c
-.RI "QSizeF \fBtextSize\fP (const QFont &=QFont()) const"
+.RI "double \fBheightForWidth\fP (double width, const QFont &) const"
+.br
+.ti -1c
+.RI "QSizeF \fBtextSize\fP () const"
+.br
+.ti -1c
+.RI "QSizeF \fBtextSize\fP (const QFont &) const"
 .br
 .ti -1c
 .RI "void \fBdraw\fP (QPainter *painter, const QRectF &rect) const"
@@ -186,6 +193,18 @@ Render Flags
 .RE
 .PP
 
+.PP
+Definition at line 51 of file qwt_text\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBLayoutAttribute\fP > \fBQwtText::LayoutAttributes\fP"
+An ORed combination of \fBLayoutAttribute\fP values\&. 
+.PP
+Definition at line 143 of file qwt_text\&.h\&.
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtText::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 126 of file qwt_text\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtText::LayoutAttribute\fP"
@@ -198,6 +217,8 @@ Layout Attributes The layout attributes affects some aspects of the layout of th
 .TP
 \fB\fIMinimumLayout \fP\fP
 Layout the text without its margins\&. This mode is useful if a text needs to be aligned accurately, like the tick labels of a scale\&. If \fBQwtTextEngine::textMargins\fP is not implemented for the format of the text, MinimumLayout has no effect\&. 
+.PP
+Definition at line 132 of file qwt_text\&.h\&.
 .SS "enum \fBQwtText::PaintAttribute\fP"
 
 .PP
@@ -214,6 +235,8 @@ The text has an individual color\&.
 .TP
 \fB\fIPaintBackground \fP\fP
 The text has an individual background\&. 
+.PP
+Definition at line 114 of file qwt_text\&.h\&.
 .SS "enum \fBQwtText::TextFormat\fP"
 
 .PP
@@ -239,7 +262,9 @@ Draw the text as it is, using a \fBQwtPlainTextEngine\fP\&.
 Use the Scribe framework (Qt Rich Text) to render the text\&. 
 .TP
 \fB\fIMathMLText \fP\fP
-Use a MathML (http://en.wikipedia.org/wiki/MathML) render engine to display the text\&. The Qwt MathML extension offers such an engine based on the MathML renderer of the former Qt solutions package\&. To enable MathML support the following code needs to be added to the application:
+Use a MathML (http://en.wikipedia.org/wiki/MathML) render engine to display the text\&. In earlier versions of Qwt such an engine was included - since Qwt 6\&.2 it can be found here: https://github.com/uwerat/qwt-mml-dev
+.PP
+To enable MathML support the following code needs to be added to the application:
 .PP
 .PP
 .nf
@@ -253,9 +278,15 @@ Use a TeX (http://en.wikipedia.org/wiki/TeX) render engine to display the text (
 .TP
 \fB\fIOtherFormat \fP\fP
 The number of text formats can be extended using setTextEngine\&. Formats >= \fBQwtText::OtherFormat\fP are not used by Qwt\&. 
+.PP
+Definition at line 64 of file qwt_text\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtText::QwtText (const QString & text = \fCQString()\fP, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
+.SS "QwtText::QwtText ()"
+Constructor 
+.PP
+Definition at line 201 of file qwt_text\&.cpp\&.
+.SS "QwtText::QwtText (const QString & text, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
 Constructor
 .PP
 \fBParameters\fP
@@ -266,6 +297,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 215 of file qwt_text\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QBrush QwtText::backgroundBrush () const"
@@ -282,6 +315,8 @@ Background brush
 .RE
 .PP
 
+.PP
+Definition at line 451 of file qwt_text\&.cpp\&.
 .SS "QPen QwtText::borderPen () const"
 
 .PP
@@ -296,6 +331,8 @@ Background pen
 .RE
 .PP
 
+.PP
+Definition at line 430 of file qwt_text\&.cpp\&.
 .SS "double QwtText::borderRadius () const"
 
 .PP
@@ -310,6 +347,8 @@ Radius for the corners of the border frame
 .RE
 .PP
 
+.PP
+Definition at line 409 of file qwt_text\&.cpp\&.
 .SS "void QwtText::draw (QPainter * painter, const QRectF & rect) const"
 Draw a text into a rectangle
 .PP
@@ -321,7 +360,25 @@ Draw a text into a rectangle
 .RE
 .PP
 
-.SS "double QwtText::heightForWidth (double width, const QFont & defaultFont = \fCQFont()\fP) const"
+.PP
+Definition at line 615 of file qwt_text\&.cpp\&.
+.SS "double QwtText::heightForWidth (double width) const"
+Find the height for a given width
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP Width 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Calculated height 
+.RE
+.PP
+
+.PP
+Definition at line 522 of file qwt_text\&.cpp\&.
+.SS "double QwtText::heightForWidth (double width, const QFont & defaultFont) const"
 Find the height for a given width
 .PP
 \fBParameters\fP
@@ -337,7 +394,9 @@ Calculated height
 .RE
 .PP
 
-.SS "bool QwtText::isEmpty () const\fC [inline]\fP"
+.PP
+Definition at line 535 of file qwt_text\&.cpp\&.
+.SS "bool QwtText::isEmpty () const"
 
 .PP
 \fBReturns\fP
@@ -346,7 +405,9 @@ Calculated height
 .RE
 .PP
 
-.SS "bool QwtText::isNull () const\fC [inline]\fP"
+.PP
+Definition at line 739 of file qwt_text\&.cpp\&.
+.SS "bool QwtText::isNull () const"
 
 .PP
 \fBReturns\fP
@@ -355,6 +416,8 @@ Calculated height
 .RE
 .PP
 
+.PP
+Definition at line 733 of file qwt_text\&.cpp\&.
 .SS "int QwtText::renderFlags () const"
 
 .PP
@@ -369,6 +432,8 @@ Render flags
 .RE
 .PP
 
+.PP
+Definition at line 317 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setBackgroundBrush (const QBrush & brush)"
 Set the background brush
 .PP
@@ -383,6 +448,8 @@ Set the background brush
 .RE
 .PP
 
+.PP
+Definition at line 441 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setBorderPen (const QPen & pen)"
 Set the background pen
 .PP
@@ -397,6 +464,8 @@ Set the background pen
 .RE
 .PP
 
+.PP
+Definition at line 420 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setBorderRadius (double radius)"
 Set the radius for the corners of the border frame
 .PP
@@ -411,6 +480,8 @@ Set the radius for the corners of the border frame
 .RE
 .PP
 
+.PP
+Definition at line 400 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setColor (const QColor & color)"
 Set the pen color used for drawing the text\&.
 .PP
@@ -425,6 +496,8 @@ Setting the color might have no effect, when the text contains control sequences
 .RE
 .PP
 
+.PP
+Definition at line 365 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setFont (const QFont & font)"
 Set the font\&.
 .PP
@@ -439,6 +512,8 @@ Setting the font might have no effect, when the text contains control sequences 
 .RE
 .PP
 
+.PP
+Definition at line 329 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setLayoutAttribute (\fBLayoutAttribute\fP attribute, bool on = \fCtrue\fP)"
 Change a layout attribute
 .PP
@@ -455,6 +530,8 @@ Change a layout attribute
 .RE
 .PP
 
+.PP
+Definition at line 494 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Change a paint attribute
 .PP
@@ -476,6 +553,8 @@ Used by \fBsetFont()\fP, \fBsetColor()\fP, \fBsetBorderPen()\fP and \fBsetBackgr
 .RE
 .PP
 
+.PP
+Definition at line 466 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setRenderFlags (int renderFlags)"
 
 .PP
@@ -497,6 +576,8 @@ Some renderFlags might have no effect, depending on the text format\&.
 .RE
 .PP
 
+.PP
+Definition at line 304 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setText (const QString & text, \fBQwtText::TextFormat\fP textFormat = \fC\fBAutoText\fP\fP)"
 Assign a new text content
 .PP
@@ -513,6 +594,8 @@ Assign a new text content
 .RE
 .PP
 
+.PP
+Definition at line 277 of file qwt_text\&.cpp\&.
 .SS "void QwtText::setTextEngine (\fBQwtText::TextFormat\fP format, \fBQwtTextEngine\fP * engine)\fC [static]\fP"
 Assign/Replace a text engine for a text format
 .PP
@@ -527,17 +610,14 @@ For \fBQwtText::PlainText\fP it is not allowed to assign a engine == NULL\&.
 \fIengine\fP Text engine
 .RE
 .PP
-\fBSee also\fP
-.RS 4
-\fBQwtMathMLTextEngine\fP 
-.RE
-.PP
 \fBWarning\fP
 .RS 4
 Using \fBQwtText::AutoText\fP does nothing\&. 
 .RE
 .PP
 
+.PP
+Definition at line 713 of file qwt_text\&.cpp\&.
 .SS "bool QwtText::testLayoutAttribute (\fBLayoutAttribute\fP attribute) const"
 Test a layout attribute
 .PP
@@ -557,6 +637,8 @@ true, if attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 510 of file qwt_text\&.cpp\&.
 .SS "bool QwtText::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 Test a paint attribute
 .PP
@@ -576,6 +658,8 @@ true, if attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 482 of file qwt_text\&.cpp\&.
 .SS "QString QwtText::text () const"
 
 .PP
@@ -590,12 +674,14 @@ Text as QString\&.
 .RE
 .PP
 
+.PP
+Definition at line 289 of file qwt_text\&.cpp\&.
 .SS "const \fBQwtTextEngine\fP * QwtText::textEngine (const QString & text, \fBQwtText::TextFormat\fP format = \fC\fBAutoText\fP\fP)\fC [static]\fP"
 Find the text engine for a text format
 .PP
 In case of \fBQwtText::AutoText\fP the first text engine (beside \fBQwtPlainTextEngine\fP) is returned, where \fBQwtTextEngine::mightRender\fP returns true\&. If there is none \fBQwtPlainTextEngine\fP is returned\&.
 .PP
-If no text engine is registered for the format \fBQwtPlainTextEngine\fP is returnd\&.
+If no text engine is registered for the format \fBQwtPlainTextEngine\fP is returned\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -610,6 +696,8 @@ Corresponding text engine
 .RE
 .PP
 
+.PP
+Definition at line 694 of file qwt_text\&.cpp\&.
 .SS "const \fBQwtTextEngine\fP * QwtText::textEngine (\fBQwtText::TextFormat\fP format)\fC [static]\fP"
 
 .PP
@@ -626,7 +714,20 @@ The text engine, or NULL if no engine is available\&.
 .RE
 .PP
 
-.SS "QSizeF QwtText::textSize (const QFont & defaultFont = \fCQFont()\fP) const"
+.PP
+Definition at line 727 of file qwt_text\&.cpp\&.
+.SS "QSizeF QwtText::textSize () const"
+Returns the size, that is needed to render text
+.PP
+\fBReturns\fP
+.RS 4
+Calculated size 
+.RE
+.PP
+
+.PP
+Definition at line 570 of file qwt_text\&.cpp\&.
+.SS "QSizeF QwtText::textSize (const QFont & defaultFont) const"
 Returns the size, that is needed to render text
 .PP
 \fBParameters\fP
@@ -640,6 +741,8 @@ Calculated size
 .RE
 .PP
 
+.PP
+Definition at line 581 of file qwt_text\&.cpp\&.
 .SS "QColor QwtText::usedColor (const QColor & defaultColor) const"
 Return the color of the text, if it has one\&. Otherwise return defaultColor\&.
 .PP
@@ -659,6 +762,8 @@ Color used for drawing the text
 .RE
 .PP
 
+.PP
+Definition at line 386 of file qwt_text\&.cpp\&.
 .SS "QFont QwtText::usedFont (const QFont & defaultFont) const"
 Return the font of the text, if it has one\&. Otherwise return defaultFont\&.
 .PP
@@ -678,6 +783,8 @@ Font used for drawing the text
 .RE
 .PP
 
+.PP
+Definition at line 350 of file qwt_text\&.cpp\&.
 
 .SH "Author"
 .PP 

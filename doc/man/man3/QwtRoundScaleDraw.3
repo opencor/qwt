@@ -1,4 +1,4 @@
-.TH "QwtRoundScaleDraw" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRoundScaleDraw" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ QwtRoundScaleDraw \- A class for drawing round scales\&.
 .PP
 Inherits \fBQwtAbstractScaleDraw\fP\&.
 .PP
-Inherited by QwtAnalogClockScaleDraw, and \fBQwtCompassScaleDraw\fP\&.
+Inherited by \fBQwtCompassScaleDraw\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -46,20 +46,20 @@ Inherited by QwtAnalogClockScaleDraw, and \fBQwtCompassScaleDraw\fP\&.
 .br
 .RI "Adjust the baseline circle segment for round scales\&. "
 .ti -1c
-.RI "virtual double \fBextent\fP (const QFont &) const"
+.RI "virtual double \fBextent\fP (const QFont &) const override"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawTick\fP (QPainter *, double value, double len) const"
+.RI "virtual void \fBdrawTick\fP (QPainter *, double value, double len) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdrawBackbone\fP (QPainter *) const"
+.RI "virtual void \fBdrawBackbone\fP (QPainter *) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdrawLabel\fP (QPainter *, double val) const"
+.RI "virtual void \fBdrawLabel\fP (QPainter *, double value) const override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -70,15 +70,19 @@ A class for drawing round scales\&.
 \fBQwtRoundScaleDraw\fP can be used to draw round scales\&. The circle segment can be adjusted by \fBsetAngleRange()\fP\&. The geometry of the scale can be specified with \fBmoveCenter()\fP and \fBsetRadius()\fP\&.
 .PP
 After a scale division has been specified as a \fBQwtScaleDiv\fP object using \fBQwtAbstractScaleDraw::setScaleDiv(const QwtScaleDiv &s)\fP, the scale can be drawn with the \fBQwtAbstractScaleDraw::draw()\fP member\&. 
+.PP
+Definition at line 31 of file qwt_round_scale_draw\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtRoundScaleDraw::QwtRoundScaleDraw ()"
 
 .PP
 Constructor\&. The range of the scale is initialized to [0, 100], The center is set to (50, 50) with a radius of 50\&. The angle range is set to [-135, 135]\&. 
+.PP
+Definition at line 44 of file qwt_round_scale_draw\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtRoundScaleDraw::drawBackbone (QPainter * painter) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtRoundScaleDraw::drawBackbone (QPainter * painter) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draws the baseline of the scale 
 .PP
 \fBParameters\fP
@@ -94,7 +98,9 @@ Draws the baseline of the scale
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "void QwtRoundScaleDraw::drawLabel (QPainter * painter, double value) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 224 of file qwt_round_scale_draw\&.cpp\&.
+.SS "void QwtRoundScaleDraw::drawLabel (QPainter * painter, double value) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draws the label for a major scale tick
 .PP
 \fBParameters\fP
@@ -112,7 +118,9 @@ Draws the label for a major scale tick
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "void QwtRoundScaleDraw::drawTick (QPainter * painter, double value, double len) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 145 of file qwt_round_scale_draw\&.cpp\&.
+.SS "void QwtRoundScaleDraw::drawTick (QPainter * painter, double value, double len) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw a tick
 .PP
 \fBParameters\fP
@@ -132,7 +140,9 @@ Draw a tick
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "double QwtRoundScaleDraw::extent (const QFont & font) const\fC [virtual]\fP"
+.PP
+Definition at line 190 of file qwt_round_scale_draw\&.cpp\&.
+.SS "double QwtRoundScaleDraw::extent (const QFont & font) const\fC [override]\fP, \fC [virtual]\fP"
 Calculate the extent of the scale
 .PP
 The extent is the distance between the baseline to the outermost pixel of the scale draw\&. \fBradius()\fP + \fBextent()\fP is an upper limit for the radius of the bounding circle\&.
@@ -160,6 +170,8 @@ The implemented algorithm is not too smart and calculates only an upper limit, t
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
+.PP
+Definition at line 255 of file qwt_round_scale_draw\&.cpp\&.
 .SS "void QwtRoundScaleDraw::moveCenter (const QPointF & center)"
 Move the center of the scale draw, leaving the radius unchanged
 .PP
@@ -174,6 +186,8 @@ Move the center of the scale draw, leaving the radius unchanged
 .RE
 .PP
 
+.PP
+Definition at line 90 of file qwt_round_scale_draw\&.cpp\&.
 .SS "double QwtRoundScaleDraw::radius () const"
 Get the radius
 .PP
@@ -190,6 +204,8 @@ Radius of the scale
 .RE
 .PP
 
+.PP
+Definition at line 79 of file qwt_round_scale_draw\&.cpp\&.
 .SS "void QwtRoundScaleDraw::setAngleRange (double angle1, double angle2)"
 
 .PP
@@ -215,6 +231,8 @@ If you need a counterclockwise scale, use \fBQwtScaleDiv::setInterval()\fP
 .RE
 .PP
 
+.PP
+Definition at line 118 of file qwt_round_scale_draw\&.cpp\&.
 .SS "void QwtRoundScaleDraw::setRadius (double radius)"
 Change of radius the scale
 .PP
@@ -231,6 +249,8 @@ Radius is the radius of the backbone without ticks and labels\&.
 .RE
 .PP
 
+.PP
+Definition at line 66 of file qwt_round_scale_draw\&.cpp\&.
 
 .SH "Author"
 .PP 

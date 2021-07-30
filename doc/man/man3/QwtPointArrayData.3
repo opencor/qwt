@@ -1,8 +1,8 @@
-.TH "QwtPointArrayData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointArrayData< T >" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-QwtPointArrayData \- Interface for iterating over two QVector<double> objects\&.  
+QwtPointArrayData< T > \- Interface for iterating over two QVector<T> objects\&.  
 
 .SH SYNOPSIS
 .br
@@ -10,40 +10,42 @@ QwtPointArrayData \- Interface for iterating over two QVector<double> objects\&.
 .PP
 \fC#include <qwt_point_data\&.h>\fP
 .PP
-Inherits \fBQwtSeriesData< QPointF >\fP\&.
+Inherits \fBQwtPointSeriesData\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPointArrayData\fP (const QVector< double > &x, const QVector< double > &y)"
+.RI "\fBQwtPointArrayData\fP (const \fBQVector\fP< T > &x, const \fBQVector\fP< T > &y)"
 .br
 .ti -1c
-.RI "\fBQwtPointArrayData\fP (const double *x, const double *y, size_t \fBsize\fP)"
+.RI "\fBQwtPointArrayData\fP (const T *x, const T *y, size_t \fBsize\fP)"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
-.br
-.RI "Calculate the bounding rectangle\&. "
-.ti -1c
-.RI "virtual size_t \fBsize\fP () const"
+.RI "virtual size_t \fBsize\fP () const override"
 .br
 .ti -1c
-.RI "virtual QPointF \fBsample\fP (size_t index) const"
+.RI "virtual QPointF \fBsample\fP (size_t index) const override"
 .br
 .ti -1c
-.RI "const QVector< double > & \fBxData\fP () const"
+.RI "const \fBQVector\fP< T > & \fBxData\fP () const"
 .br
 .ti -1c
-.RI "const QVector< double > & \fByData\fP () const"
+.RI "const \fBQVector\fP< T > & \fByData\fP () const"
 .br
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
-Interface for iterating over two QVector<double> objects\&. 
+
+.SS "template<typename T>
+.br
+class QwtPointArrayData< T >"
+Interface for iterating over two QVector<T> objects\&. 
+.PP
+Definition at line 22 of file qwt_point_data\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPointArrayData::QwtPointArrayData (const QVector< double > & x, const QVector< double > & y)"
+.SS "template<typename T > \fBQwtPointArrayData\fP< T >::\fBQwtPointArrayData\fP (const \fBQVector\fP< T > & x, const \fBQVector\fP< T > & y)"
 Constructor
 .PP
 \fBParameters\fP
@@ -59,7 +61,9 @@ Constructor
 .RE
 .PP
 
-.SS "QwtPointArrayData::QwtPointArrayData (const double * x, const double * y, size_t size)"
+.PP
+Definition at line 200 of file qwt_point_data\&.h\&.
+.SS "template<typename T > \fBQwtPointArrayData\fP< T >::\fBQwtPointArrayData\fP (const T * x, const T * y, size_t size)"
 Constructor
 .PP
 \fBParameters\fP
@@ -77,20 +81,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 216 of file qwt_point_data\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtPointArrayData::boundingRect () const\fC [virtual]\fP"
-
-.PP
-Calculate the bounding rectangle\&. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests\&.
-.PP
-\fBReturns\fP
-.RS 4
-Bounding rectangle 
-.RE
-.PP
-
-.SS "QPointF QwtPointArrayData::sample (size_t index) const\fC [virtual]\fP"
+.SS "template<typename T > QPointF \fBQwtPointArrayData\fP< T >::sample (size_t index) const\fC [override]\fP, \fC [virtual]\fP"
 Return the sample at position i
 .PP
 \fBParameters\fP
@@ -105,8 +100,10 @@ Sample at position i
 .PP
 
 .PP
-Implements \fBQwtSeriesData< QPointF >\fP\&.
-.SS "size_t QwtPointArrayData::size () const\fC [virtual]\fP"
+Reimplemented from \fBQwtArraySeriesData< QPointF >\fP\&.
+.PP
+Definition at line 239 of file qwt_point_data\&.h\&.
+.SS "template<typename T > size_t \fBQwtPointArrayData\fP< T >::size\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -115,7 +112,11 @@ Size of the data set
 .RE
 .PP
 
-.SS "const QVector< double > & QwtPointArrayData::xData () const"
+.PP
+Reimplemented from \fBQwtArraySeriesData< QPointF >\fP\&.
+.PP
+Definition at line 227 of file qwt_point_data\&.h\&.
+.SS "template<typename T > const \fBQVector\fP< T > & \fBQwtPointArrayData\fP< T >::xData"
 
 .PP
 \fBReturns\fP
@@ -124,7 +125,9 @@ Array of the x-values
 .RE
 .PP
 
-.SS "const QVector< double > & QwtPointArrayData::yData () const"
+.PP
+Definition at line 246 of file qwt_point_data\&.h\&.
+.SS "template<typename T > const \fBQVector\fP< T > & \fBQwtPointArrayData\fP< T >::yData"
 
 .PP
 \fBReturns\fP
@@ -133,6 +136,8 @@ Array of the y-values
 .RE
 .PP
 
+.PP
+Definition at line 253 of file qwt_point_data\&.h\&.
 
 .SH "Author"
 .PP 

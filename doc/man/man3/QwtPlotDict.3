@@ -1,4 +1,4 @@
-.TH "QwtPlotDict" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotDict" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,11 +27,11 @@ Inherited by \fBQwtPlot\fP\&.
 .RI "bool \fBautoDelete\fP () const"
 .br
 .ti -1c
-.RI "const QwtPlotItemList & \fBitemList\fP () const"
+.RI "const \fBQwtPlotItemList\fP & \fBitemList\fP () const"
 .br
 .RI "A QwtPlotItemList of all attached plot items\&. "
 .ti -1c
-.RI "QwtPlotItemList \fBitemList\fP (int rtti) const"
+.RI "\fBQwtPlotItemList\fP \fBitemList\fP (int rtti) const"
 .br
 .ti -1c
 .RI "void \fBdetachItems\fP (int rtti=\fBQwtPlotItem::Rtti_PlotItem\fP, bool \fBautoDelete\fP=true)"
@@ -59,6 +59,8 @@ A dictionary for plot items\&.
 .RE
 .PP
 
+.PP
+Definition at line 32 of file qwt_plot_dict\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotDict::QwtPlotDict ()\fC [explicit]\fP"
@@ -72,6 +74,8 @@ Auto deletion is enabled\&.
 .RE
 .PP
 
+.PP
+Definition at line 69 of file qwt_plot_dict\&.cpp\&.
 .SS "QwtPlotDict::~QwtPlotDict ()\fC [virtual]\fP"
 Destructor
 .PP
@@ -83,6 +87,8 @@ If \fBautoDelete()\fP is on, all attached items will be deleted
 .RE
 .PP
 
+.PP
+Definition at line 81 of file qwt_plot_dict\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "bool QwtPlotDict::autoDelete () const"
@@ -99,6 +105,8 @@ true if auto deletion is enabled
 .RE
 .PP
 
+.PP
+Definition at line 104 of file qwt_plot_dict\&.cpp\&.
 .SS "void QwtPlotDict::detachItems (int rtti = \fC\fBQwtPlotItem::Rtti_PlotItem\fP\fP, bool autoDelete = \fCtrue\fP)"
 Detach items from the dictionary
 .PP
@@ -110,6 +118,8 @@ Detach items from the dictionary
 .RE
 .PP
 
+.PP
+Definition at line 138 of file qwt_plot_dict\&.cpp\&.
 .SS "void QwtPlotDict::insertItem (\fBQwtPlotItem\fP * item)\fC [protected]\fP"
 Insert a plot item
 .PP
@@ -124,7 +134,9 @@ Insert a plot item
 .RE
 .PP
 
-.SS "const QwtPlotItemList & QwtPlotDict::itemList () const"
+.PP
+Definition at line 115 of file qwt_plot_dict\&.cpp\&.
+.SS "const \fBQwtPlotItemList\fP & QwtPlotDict::itemList () const"
 
 .PP
 A QwtPlotItemList of all attached plot items\&. Use caution when iterating these lists, as removing/detaching an item will invalidate the iterator\&. Instead you can place pointers to objects to be removed in a removal list, and traverse that list later\&.
@@ -135,7 +147,9 @@ List of all attached plot items\&.
 .RE
 .PP
 
-.SS "QwtPlotItemList QwtPlotDict::itemList (int rtti) const"
+.PP
+Definition at line 166 of file qwt_plot_dict\&.cpp\&.
+.SS "\fBQwtPlotItemList\fP QwtPlotDict::itemList (int rtti) const"
 
 .PP
 \fBReturns\fP
@@ -154,6 +168,8 @@ List of all attached plot items of a specific type\&.
 .RE
 .PP
 
+.PP
+Definition at line 176 of file qwt_plot_dict\&.cpp\&.
 .SS "void QwtPlotDict::removeItem (\fBQwtPlotItem\fP * item)\fC [protected]\fP"
 Remove a plot item
 .PP
@@ -168,6 +184,8 @@ Remove a plot item
 .RE
 .PP
 
+.PP
+Definition at line 126 of file qwt_plot_dict\&.cpp\&.
 .SS "void QwtPlotDict::setAutoDelete (bool autoDelete)"
 En/Disable Auto deletion
 .PP
@@ -179,6 +197,8 @@ If Auto deletion is on all attached plot items will be deleted in the destructor
 .RE
 .PP
 
+.PP
+Definition at line 95 of file qwt_plot_dict\&.cpp\&.
 
 .SH "Author"
 .PP 

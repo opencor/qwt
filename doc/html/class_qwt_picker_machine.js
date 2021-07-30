@@ -19,5 +19,5 @@ var class_qwt_picker_machine =
     [ "selectionType", "class_qwt_picker_machine.html#a9020aadf1a13436b4ea072b9ab57d112", null ],
     [ "setState", "class_qwt_picker_machine.html#a569c426543e4a6aa15c221eb7c4910f0", null ],
     [ "state", "class_qwt_picker_machine.html#a36293ce5cc8fc0ca68740ba928e8f049", null ],
-    [ "transition", "class_qwt_picker_machine.html#acf7b57003bec437ce1ecf83e6d544968", null ]
+    [ "transition", "class_qwt_picker_machine.html#aac62463edae82e479fb424788c6d0f57", null ]
 ];

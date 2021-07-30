@@ -1,4 +1,4 @@
-.TH "QwtCompassWindArrow" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassWindArrow" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,7 +30,7 @@ Inherits \fBQwtDialNeedle\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const"
+.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -55,6 +55,8 @@ QPalette::Dark
 .RE
 .PP
 
+.PP
+Definition at line 164 of file qwt_dial_needle\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtCompassWindArrow::Style\fP"
@@ -70,6 +72,8 @@ A needle pointing to the center\&.
 .TP
 \fB\fIStyle2 \fP\fP
 A needle pointing to the center\&. 
+.PP
+Definition at line 168 of file qwt_dial_needle\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtCompassWindArrow::QwtCompassWindArrow (\fBStyle\fP style, const QColor & light = \fCQt::white\fP, const QColor & dark = \fCQt::gray\fP)"
@@ -85,9 +89,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 409 of file qwt_dial_needle\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtCompassWindArrow::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompassWindArrow::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
 \fBParameters\fP
@@ -102,6 +108,8 @@ Draw the needle
 
 .PP
 Implements \fBQwtDialNeedle\fP\&.
+.PP
+Definition at line 427 of file qwt_dial_needle\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,9 +1,9 @@
 var class_qwt_rich_text_engine =
 [
     [ "QwtRichTextEngine", "class_qwt_rich_text_engine.html#aa4c1d5a1ee88d7406ba1d6453005b46a", null ],
-    [ "draw", "class_qwt_rich_text_engine.html#a06a4adbfd09b33896c8df14d861311ae", null ],
-    [ "heightForWidth", "class_qwt_rich_text_engine.html#aba12fcba7303a187128cb01d06ecb382", null ],
-    [ "mightRender", "class_qwt_rich_text_engine.html#a597cd0341d44bc364dab2f5e70cd0674", null ],
-    [ "textMargins", "class_qwt_rich_text_engine.html#a8aaca45963ed5ab76bfe6161e0ebc964", null ],
-    [ "textSize", "class_qwt_rich_text_engine.html#ad644bf615cf2f27bc51e941d9bdcb509", null ]
+    [ "draw", "class_qwt_rich_text_engine.html#abdcff7491057afe90c168c49c339b01d", null ],
+    [ "heightForWidth", "class_qwt_rich_text_engine.html#a6f771bfd843aa0b73054b9614d581cd0", null ],
+    [ "mightRender", "class_qwt_rich_text_engine.html#a548d48e5e5a2202e83c51e7b61ae7328", null ],
+    [ "textMargins", "class_qwt_rich_text_engine.html#a2790acb2618c446ed6707a07d1a4c811", null ],
+    [ "textSize", "class_qwt_rich_text_engine.html#a0d1f78b85935ecbff2bf5ea8cb84ba14", null ]
 ];

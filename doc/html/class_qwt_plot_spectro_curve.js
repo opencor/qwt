@@ -1,6 +1,6 @@
 var class_qwt_plot_spectro_curve =
 [
-    [ "PaintAttributes", "class_qwt_plot_spectro_curve.html#a78b3bf4c7d055f2f00bd371e9ddc4f2f", null ],
+    [ "PaintAttributes", "class_qwt_plot_spectro_curve.html#af77b34db0252290eea5786d58a4f852c", null ],
     [ "PaintAttribute", "class_qwt_plot_spectro_curve.html#af6d4c6ae392f3f521db710484a059625", [
       [ "ClipPoints", "class_qwt_plot_spectro_curve.html#af6d4c6ae392f3f521db710484a059625ab8586d2301ec1e0888f852bca84c2501", null ]
     ] ],
@@ -10,9 +10,9 @@ var class_qwt_plot_spectro_curve =
     [ "colorMap", "class_qwt_plot_spectro_curve.html#a30929df3ca02880543798bf66bae1181", null ],
     [ "colorRange", "class_qwt_plot_spectro_curve.html#abbaadb09d2aae1d11562a46bcd1a3685", null ],
     [ "drawDots", "class_qwt_plot_spectro_curve.html#a859a76f4c5e85e5d64bb2dbc24079811", null ],
-    [ "drawSeries", "class_qwt_plot_spectro_curve.html#ac443e0533ebba67f21f53fb7370f5fa5", null ],
+    [ "drawSeries", "class_qwt_plot_spectro_curve.html#a24415620a4f777f67ee3735902c398c1", null ],
     [ "penWidth", "class_qwt_plot_spectro_curve.html#aafb4e49d92780bd8c090b3765b7e0503", null ],
-    [ "rtti", "class_qwt_plot_spectro_curve.html#aeff0a87d9c8b9fd90576fe4ce05aee08", null ],
+    [ "rtti", "class_qwt_plot_spectro_curve.html#acff37758bea45d5f67c84f3607bb815e", null ],
     [ "setColorMap", "class_qwt_plot_spectro_curve.html#a67d046af16feeddc9bec08c698b46446", null ],
     [ "setColorRange", "class_qwt_plot_spectro_curve.html#a133f4117e925a1faed456bd9524477e4", null ],
     [ "setPaintAttribute", "class_qwt_plot_spectro_curve.html#a3a2ddc8e46bc4414b5ce104e7c70f9b4", null ],

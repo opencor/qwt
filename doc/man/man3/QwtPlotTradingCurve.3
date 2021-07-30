@@ -1,4 +1,4 @@
-.TH "QwtPlotTradingCurve" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotTradingCurve" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,7 +28,6 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -44,7 +43,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
@@ -53,7 +52,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (const QVector< \fBQwtOHLCSample\fP > &)"
+.RI "void \fBsetSamples\fP (const \fBQVector\fP< \fBQwtOHLCSample\fP > &)"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< \fBQwtOHLCSample\fP > *)"
@@ -100,13 +99,13 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .RI "double \fBmaxSymbolWidth\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
+.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const override"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const override"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -124,7 +123,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtOHLCSample >\fP\&.
 .br
 .RI "Draw a symbol for a symbol style >= UserSymbol\&. "
 .ti -1c
-.RI "void \fBdrawBar\fP (QPainter *painter, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double width) const"
+.RI "void \fBdrawBar\fP (QPainter *, const \fBQwtOHLCSample\fP &, Qt::Orientation, bool inverted, double width) const"
 .br
 .RI "Draw a bar\&. "
 .ti -1c
@@ -152,6 +151,14 @@ setSymbolMaxWidth()
 .PP
 .PP
 The extent is a size in scale coordinates, so that the symbol width is increasing when the plot is zoomed in\&. Minimum/Maximum width is in widget coordinates independent from the zoom level\&. When setting the minimum and maximum to the same value, the width of the symbol is fixed\&. 
+.PP
+Definition at line 37 of file qwt_plot_tradingcurve\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtPlotTradingCurve::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 101 of file qwt_plot_tradingcurve\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotTradingCurve::Direction\fP"
@@ -167,6 +174,8 @@ The closing price is higher than the opening price\&.
 .TP
 \fB\fIDecreasing \fP\fP
 The closing price is lower than the opening price\&. 
+.PP
+Definition at line 82 of file qwt_plot_tradingcurve\&.h\&.
 .SS "enum \fBQwtPlotTradingCurve::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
@@ -182,6 +191,8 @@ Attributes to modify the drawing algorithm\&.
 .TP
 \fB\fIClipSymbols \fP\fP
 Check if a symbol is on the plot canvas before painting it\&. 
+.PP
+Definition at line 95 of file qwt_plot_tradingcurve\&.h\&.
 .SS "enum \fBQwtPlotTradingCurve::SymbolStyle\fP"
 
 .PP
@@ -215,6 +226,8 @@ SymbolTypes >= UserSymbol are displayed by \fBdrawUserSymbol()\fP, that needs to
 .RE
 .PP
 
+.PP
+Definition at line 48 of file qwt_plot_tradingcurve\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
@@ -226,6 +239,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 70 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "QwtPlotTradingCurve::QwtPlotTradingCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
@@ -235,9 +250,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 60 of file qwt_plot_tradingcurve\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtPlotTradingCurve::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtPlotTradingCurve::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -248,6 +265,8 @@ Bounding rectangle of all samples\&. For an empty series the rectangle is invali
 
 .PP
 Reimplemented from \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 365 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::drawBar (QPainter * painter, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, bool inverted, double width) const\fC [protected]\fP"
 
 .PP
@@ -272,6 +291,8 @@ Draw a bar\&.
 .RE
 .PP
 
+.PP
+Definition at line 562 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::drawCandleStick (QPainter * painter, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, double width) const\fC [protected]\fP"
 
 .PP
@@ -294,7 +315,9 @@ Draw a candle stick\&.
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
+.PP
+Definition at line 601 of file qwt_plot_tradingcurve\&.cpp\&.
+.SS "void QwtPlotTradingCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [override]\fP, \fC [virtual]\fP"
 Draw an interval of the curve
 .PP
 \fBParameters\fP
@@ -320,6 +343,8 @@ Draw an interval of the curve
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 387 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::drawSymbols (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw symbols
 .PP
@@ -344,6 +369,8 @@ Draw symbols
 .RE
 .PP
 
+.PP
+Definition at line 420 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::drawUserSymbol (QPainter * painter, \fBSymbolStyle\fP symbolStyle, const \fBQwtOHLCSample\fP & sample, Qt::Orientation orientation, bool inverted, double symbolWidth) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -365,7 +392,9 @@ Draw a symbol for a symbol style >= UserSymbol\&. The implementation does nothin
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotTradingCurve::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
+.PP
+Definition at line 534 of file qwt_plot_tradingcurve\&.cpp\&.
+.SS "\fBQwtGraphic\fP QwtPlotTradingCurve::legendIcon (int index, const QSizeF & size) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -388,6 +417,8 @@ A rectangle filled with the color of the symbol pen
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 642 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "double QwtPlotTradingCurve::maxSymbolWidth () const"
 
 .PP
@@ -402,6 +433,8 @@ Maximum for the symbol width
 .RE
 .PP
 
+.PP
+Definition at line 356 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "double QwtPlotTradingCurve::minSymbolWidth () const"
 
 .PP
@@ -416,7 +449,9 @@ Minmum for the symbol width
 .RE
 .PP
 
-.SS "int QwtPlotTradingCurve::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 328 of file qwt_plot_tradingcurve\&.cpp\&.
+.SS "int QwtPlotTradingCurve::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -427,6 +462,8 @@ Minmum for the symbol width
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 95 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "double QwtPlotTradingCurve::scaledSymbolWidth (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Calculate the symbol width in paint coordinates
 .PP
@@ -452,6 +489,8 @@ Symbol width in paint coordinates
 .RE
 .PP
 
+.PP
+Definition at line 664 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setMaxSymbolWidth (double width)"
 Set a maximum for the symbol width
 .PP
@@ -468,6 +507,8 @@ A value <= 0\&.0 means an unlimited width
 .RE
 .PP
 
+.PP
+Definition at line 341 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setMinSymbolWidth (double width)"
 Set a minimum for the symbol width
 .PP
@@ -482,6 +523,8 @@ Set a minimum for the symbol width
 .RE
 .PP
 
+.PP
+Definition at line 312 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
@@ -498,7 +541,9 @@ Specify an attribute how to draw the curve
 .RE
 .PP
 
-.SS "void QwtPlotTradingCurve::setSamples (const QVector< \fBQwtOHLCSample\fP > & samples)"
+.PP
+Definition at line 107 of file qwt_plot_tradingcurve\&.cpp\&.
+.SS "void QwtPlotTradingCurve::setSamples (const \fBQVector\fP< \fBQwtOHLCSample\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters\fP
@@ -512,6 +557,8 @@ QwtPlotSeriesItem::setData()
 .RE
 .PP
 
+.PP
+Definition at line 132 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtOHLCSample\fP > * data)"
 Assign a series of samples
 .PP
@@ -528,6 +575,8 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
+.PP
+Definition at line 148 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSymbolBrush (\fBDirection\fP direction, const QBrush & brush)"
 Set the symbol brush
 .PP
@@ -544,6 +593,8 @@ Set the symbol brush
 .RE
 .PP
 
+.PP
+Definition at line 238 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSymbolExtent (double extent)"
 
 .PP
@@ -560,6 +611,8 @@ Set the extent of the symbol\&. The width of the symbol is given in scale coordi
 .RE
 .PP
 
+.PP
+Definition at line 284 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSymbolPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign the symbol pen
 .PP
@@ -580,6 +633,8 @@ pen(), brush()
 .RE
 .PP
 
+.PP
+Definition at line 195 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSymbolPen (const QPen & pen)"
 
 .PP
@@ -591,6 +646,8 @@ Set the symbol pen\&. The symbol pen is used for rendering the lines of the bar 
 .RE
 .PP
 
+.PP
+Definition at line 209 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "void QwtPlotTradingCurve::setSymbolStyle (\fBSymbolStyle\fP style)"
 Set the symbol style
 .PP
@@ -605,6 +662,8 @@ Set the symbol style
 .RE
 .PP
 
+.PP
+Definition at line 162 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "QBrush QwtPlotTradingCurve::symbolBrush (\fBDirection\fP direction) const"
 
 .PP
@@ -624,6 +683,8 @@ Brush used to fill the body of all candlestick symbols with the direction
 .RE
 .PP
 
+.PP
+Definition at line 262 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "double QwtPlotTradingCurve::symbolExtent () const"
 
 .PP
@@ -638,6 +699,8 @@ Extent of a symbol in scale coordinates
 .RE
 .PP
 
+.PP
+Definition at line 301 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "QPen QwtPlotTradingCurve::symbolPen () const"
 
 .PP
@@ -652,6 +715,8 @@ Symbol pen
 .RE
 .PP
 
+.PP
+Definition at line 224 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "\fBQwtPlotTradingCurve::SymbolStyle\fP QwtPlotTradingCurve::symbolStyle () const"
 
 .PP
@@ -666,6 +731,8 @@ Symbol style
 .RE
 .PP
 
+.PP
+Definition at line 177 of file qwt_plot_tradingcurve\&.cpp\&.
 .SS "bool QwtPlotTradingCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
@@ -680,6 +747,8 @@ True, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 120 of file qwt_plot_tradingcurve\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtSeriesStore< T >" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSeriesStore< T >" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -35,13 +35,13 @@ Inherits \fBQwtAbstractSeriesStore\fP\&.
 .RI "T \fBsample\fP (int index) const"
 .br
 .ti -1c
-.RI "virtual size_t \fBdataSize\fP () const"
+.RI "virtual size_t \fBdataSize\fP () const override"
 .br
 .ti -1c
-.RI "virtual QRectF \fBdataRect\fP () const"
+.RI "virtual QRectF \fBdataRect\fP () const override"
 .br
 .ti -1c
-.RI "virtual void \fBsetRectOfInterest\fP (const QRectF &rect)"
+.RI "virtual void \fBsetRectOfInterest\fP (const QRectF &rect) override"
 .br
 .ti -1c
 .RI "\fBQwtSeriesData\fP< T > * \fBswapData\fP (\fBQwtSeriesData\fP< T > *series)"
@@ -59,6 +59,8 @@ Class storing a \fBQwtSeriesData\fP object\&.
 \fBQwtSeriesStore\fP and \fBQwtPlotSeriesItem\fP are intended as base classes for all plot items iterating over a series of samples\&. Both classes share a virtual base class ( \fBQwtAbstractSeriesStore\fP ) to bridge between them\&.
 .PP
 \fBQwtSeriesStore\fP offers the template based part for the plot item API, so that \fBQwtPlotSeriesItem\fP can be derived without any hassle with templates\&. 
+.PP
+Definition at line 66 of file qwt_series_store\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "template<typename T > \fBQwtSeriesData\fP< T > * \fBQwtSeriesStore\fP< T >::data\fC [inline]\fP"
@@ -70,6 +72,8 @@ the the series data
 .RE
 .PP
 
+.PP
+Definition at line 146 of file qwt_series_store\&.h\&.
 .SS "template<typename T > const \fBQwtSeriesData\fP< T > * \fBQwtSeriesStore\fP< T >::data\fC [inline]\fP"
 
 .PP
@@ -79,7 +83,9 @@ the the series data
 .RE
 .PP
 
-.SS "template<typename T > QRectF \fBQwtSeriesStore\fP< T >::dataRect\fC [virtual]\fP"
+.PP
+Definition at line 152 of file qwt_series_store\&.h\&.
+.SS "template<typename T > QRectF \fBQwtSeriesStore\fP< T >::dataRect\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -95,7 +101,9 @@ Bounding rectangle of the series or an invalid rectangle, when no series is stor
 
 .PP
 Implements \fBQwtAbstractSeriesStore\fP\&.
-.SS "template<typename T > size_t \fBQwtSeriesStore\fP< T >::dataSize\fC [virtual]\fP"
+.PP
+Definition at line 184 of file qwt_series_store\&.h\&.
+.SS "template<typename T > size_t \fBQwtSeriesStore\fP< T >::dataSize\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -111,6 +119,8 @@ Number of samples of the series
 
 .PP
 Implements \fBQwtAbstractSeriesStore\fP\&.
+.PP
+Definition at line 175 of file qwt_series_store\&.h\&.
 .SS "template<typename T > T \fBQwtSeriesStore\fP< T >::sample (int index) const\fC [inline]\fP"
 
 .PP
@@ -125,6 +135,8 @@ Sample at position index
 .RE
 .PP
 
+.PP
+Definition at line 158 of file qwt_series_store\&.h\&.
 .SS "template<typename T > void \fBQwtSeriesStore\fP< T >::setData (\fBQwtSeriesData\fP< T > * series)"
 Assign a series of samples
 .PP
@@ -139,7 +151,9 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
-.SS "template<typename T > void \fBQwtSeriesStore\fP< T >::setRectOfInterest (const QRectF & rect)\fC [virtual]\fP"
+.PP
+Definition at line 164 of file qwt_series_store\&.h\&.
+.SS "template<typename T > void \fBQwtSeriesStore\fP< T >::setRectOfInterest (const QRectF & rect)\fC [override]\fP, \fC [virtual]\fP"
 Set a the 'rect of interest' for the series
 .PP
 \fBParameters\fP
@@ -155,6 +169,8 @@ Set a the 'rect of interest' for the series
 
 .PP
 Implements \fBQwtAbstractSeriesStore\fP\&.
+.PP
+Definition at line 193 of file qwt_series_store\&.h\&.
 .SS "template<typename T > \fBQwtSeriesData\fP< T > * \fBQwtSeriesStore\fP< T >::swapData (\fBQwtSeriesData\fP< T > * series)"
 Replace a series without deleting the previous one
 .PP
@@ -169,6 +185,8 @@ Previously assigned series
 .RE
 .PP
 
+.PP
+Definition at line 200 of file qwt_series_store\&.h\&.
 
 .SH "Author"
 .PP 

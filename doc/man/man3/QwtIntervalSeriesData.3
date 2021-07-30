@@ -1,4 +1,4 @@
-.TH "QwtIntervalSeriesData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtIntervalSeriesData" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,10 +15,10 @@ Inherits \fBQwtArraySeriesData< QwtIntervalSample >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtIntervalSeriesData\fP (const QVector< \fBQwtIntervalSample\fP > &=QVector< \fBQwtIntervalSample\fP >())"
+.RI "\fBQwtIntervalSeriesData\fP (const \fBQVector\fP< \fBQwtIntervalSample\fP > &=\fBQVector\fP< \fBQwtIntervalSample\fP >())"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .RI "Calculate the bounding rectangle\&. "
 .in -1c
@@ -26,9 +26,11 @@ Inherits \fBQwtArraySeriesData< QwtIntervalSample >\fP\&.
 .SH "Detailed Description"
 .PP 
 Interface for iterating over an array of intervals\&. 
+.PP
+Definition at line 229 of file qwt_series_data\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtIntervalSeriesData::QwtIntervalSeriesData (const QVector< \fBQwtIntervalSample\fP > & samples = \fCQVector<\fBQwtIntervalSample\fP>()\fP)"
+.SS "QwtIntervalSeriesData::QwtIntervalSeriesData (const \fBQVector\fP< \fBQwtIntervalSample\fP > & samples = \fC\fBQVector\fP< \fBQwtIntervalSample\fP >( )\fP)"
 Constructor 
 .PP
 \fBParameters\fP
@@ -37,9 +39,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 301 of file qwt_series_data\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtIntervalSeriesData::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtIntervalSeriesData::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate the bounding rectangle\&. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests\&.
@@ -50,6 +54,10 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Implements \fBQwtSeriesData< T >\fP\&.
+.PP
+Definition at line 315 of file qwt_series_data\&.cpp\&.
 
 .SH "Author"
 .PP 

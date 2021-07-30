@@ -1,7 +1,7 @@
 var class_qwt_plot_renderer =
 [
-    [ "DiscardFlags", "class_qwt_plot_renderer.html#aa61638c08ef926c0148dd12c9f830b2d", null ],
-    [ "LayoutFlags", "class_qwt_plot_renderer.html#a20cf36bbea6b03a023d34c25b8b4b295", null ],
+    [ "DiscardFlags", "class_qwt_plot_renderer.html#ab27c00bb77f5621847bde29201140fae", null ],
+    [ "LayoutFlags", "class_qwt_plot_renderer.html#aafda4ba4906b197b4d316d301af8aef0", null ],
     [ "DiscardFlag", "class_qwt_plot_renderer.html#a34d2aa9911e93cb7871e6ce4210e41cd", [
       [ "DiscardNone", "class_qwt_plot_renderer.html#a34d2aa9911e93cb7871e6ce4210e41cdaf2b5ab01146a2e3f85454741465f1f16", null ],
       [ "DiscardBackground", "class_qwt_plot_renderer.html#a34d2aa9911e93cb7871e6ce4210e41cda8520c4587d5b11708b5b314936a07288", null ],
@@ -26,7 +26,7 @@ var class_qwt_plot_renderer =
     [ "renderDocument", "class_qwt_plot_renderer.html#a983cfb85dc7896deedcda562141e8225", null ],
     [ "renderFooter", "class_qwt_plot_renderer.html#a31660c28fac2cefb741b9154c8945ffe", null ],
     [ "renderLegend", "class_qwt_plot_renderer.html#a3ed865d898479d423c82fd305118f061", null ],
-    [ "renderScale", "class_qwt_plot_renderer.html#a7382b314e9bceb0fba0532c042002d74", null ],
+    [ "renderScale", "class_qwt_plot_renderer.html#a627d6b16150f7fd87ca73870b86d532b", null ],
     [ "renderTitle", "class_qwt_plot_renderer.html#a85ccd01874593c6c17f619f036a6d799", null ],
     [ "renderTo", "class_qwt_plot_renderer.html#aeff232d12dcc6c25ed0616860e1725d6", null ],
     [ "renderTo", "class_qwt_plot_renderer.html#a0476ec7ab004d9661ca97db7130c92c9", null ],

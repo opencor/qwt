@@ -1,4 +1,4 @@
-.TH "QwtSeriesData< T >" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSeriesData< T >" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ QwtSeriesData< T > \- Abstract interface for iterating over samples\&.
 .PP
 \fC#include <qwt_series_data\&.h>\fP
 .PP
-Inherited by \fBQwtArraySeriesData< T >\fP\&.
+Inherited by \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtVectorFieldSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, and \fBQwtArraySeriesData< T >\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -39,7 +39,7 @@ Inherited by \fBQwtArraySeriesData< T >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "QRectF \fBd_boundingRect\fP"
+.RI "QRectF \fBcachedBoundingRect\fP"
 .br
 .RI "Can be used to cache a calculated bounding rectangle\&. "
 .in -1c
@@ -66,9 +66,11 @@ A subclass of \fBQwtSeriesData<QPointF>\fP must implement:
 .IP "\(bu" 2
 \fBboundingRect()\fP
 .br
- Should return the bounding rectangle of the data series\&. It is used for autoscaling and might help certain algorithms for displaying the data\&. You can use qwtBoundingRect() for an implementation but often it is possible to implement a more efficient algorithm depending on the characteristics of the series\&. The member d_boundingRect is intended for caching the calculated rectangle\&. 
+ Should return the bounding rectangle of the data series\&. It is used for autoscaling and might help certain algorithms for displaying the data\&. You can use qwtBoundingRect() for an implementation but often it is possible to implement a more efficient algorithm depending on the characteristics of the series\&. The member cachedBoundingRect is intended for caching the calculated rectangle\&. 
 .PP
 
+.PP
+Definition at line 49 of file qwt_series_data\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "template<typename T > virtual QRectF \fBQwtSeriesData\fP< T >::boundingRect () const\fC [pure virtual]\fP"
@@ -84,6 +86,8 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Implemented in \fBQwtTradingChartData\fP, \fBQwtVectorFieldData\fP, \fBQwtSetSeriesData\fP, \fBQwtIntervalSeriesData\fP, \fBQwtPoint3DSeriesData\fP, \fBQwtPointSeriesData\fP, and \fBQwtSyntheticPointData\fP\&.
 .SS "template<typename T > virtual T \fBQwtSeriesData\fP< T >::sample (size_t i) const\fC [pure virtual]\fP"
 Return a sample 
 .PP
@@ -99,7 +103,7 @@ Sample at position i
 .PP
 
 .PP
-Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerData\fP, and \fBQwtPointArrayData\fP\&.
+Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtVectorFieldSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerValueData< T >\fP, \fBQwtValuePointData< T >\fP, \fBQwtCPointerData< T >\fP, and \fBQwtPointArrayData< T >\fP\&.
 .SS "template<typename T > void \fBQwtSeriesData\fP< T >::setRectOfInterest (const QRectF & rect)\fC [virtual]\fP"
 Set a the 'rect of interest'
 .PP
@@ -115,6 +119,8 @@ The default implementation does nothing\&.
 
 .PP
 Reimplemented in \fBQwtSyntheticPointData\fP\&.
+.PP
+Definition at line 124 of file qwt_series_data\&.h\&.
 .SS "template<typename T > virtual size_t \fBQwtSeriesData\fP< T >::size () const\fC [pure virtual]\fP"
 
 .PP
@@ -125,7 +131,7 @@ Number of samples
 .PP
 
 .PP
-Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, and \fBQwtArraySeriesData< QwtSetSample >\fP\&.
+Implemented in \fBQwtArraySeriesData< T >\fP, \fBQwtArraySeriesData< QwtIntervalSample >\fP, \fBQwtArraySeriesData< QwtVectorFieldSample >\fP, \fBQwtArraySeriesData< QwtOHLCSample >\fP, \fBQwtArraySeriesData< QPointF >\fP, \fBQwtArraySeriesData< QwtSetSample >\fP, \fBQwtArraySeriesData< QwtPoint3D >\fP, \fBQwtSyntheticPointData\fP, \fBQwtCPointerValueData< T >\fP, \fBQwtValuePointData< T >\fP, \fBQwtCPointerData< T >\fP, and \fBQwtPointArrayData< T >\fP\&.
 
 .SH "Author"
 .PP 

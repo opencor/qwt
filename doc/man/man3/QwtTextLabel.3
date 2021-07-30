@@ -1,4 +1,4 @@
-.TH "QwtTextLabel" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTextLabel" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,15 +65,15 @@ Inherited by \fBQwtLegendLabel\fP\&.
 .RI "void \fBsetMargin\fP (int)"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .RI "Return a size hint\&. "
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .RI "Return a minimum size hint\&. "
 .ti -1c
-.RI "virtual int \fBheightForWidth\fP (int) const"
+.RI "virtual int \fBheightForWidth\fP (int) const override"
 .br
 .ti -1c
 .RI "QRect \fBtextRect\fP () const"
@@ -87,7 +87,7 @@ Inherited by \fBQwtLegendLabel\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .ti -1c
 .RI "virtual void \fBdrawContents\fP (QPainter *)"
@@ -97,6 +97,8 @@ Inherited by \fBQwtLegendLabel\fP\&.
 .SH "Detailed Description"
 .PP 
 A Widget which displays a \fBQwtText\fP\&. 
+.PP
+Definition at line 26 of file qwt_text_label\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtTextLabel::QwtTextLabel (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -108,6 +110,8 @@ Constructs an empty label\&.
 .RE
 .PP
 
+.PP
+Definition at line 39 of file qwt_text_label\&.cpp\&.
 .SS "QwtTextLabel::QwtTextLabel (const \fBQwtText\fP & text, QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Constructs a label that displays the text, text 
 .PP
@@ -119,9 +123,11 @@ Constructs a label that displays the text, text
 .RE
 .PP
 
+.PP
+Definition at line 50 of file qwt_text_label\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "int QwtTextLabel::heightForWidth (int width) const\fC [virtual]\fP"
+.SS "int QwtTextLabel::heightForWidth (int width) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBParameters\fP
@@ -135,7 +141,9 @@ Preferred height for this widget, given the width\&.
 .RE
 .PP
 
-.SS "void QwtTextLabel::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 209 of file qwt_text_label\&.cpp\&.
+.SS "void QwtTextLabel::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Qt paint event 
 .PP
 \fBParameters\fP
@@ -146,6 +154,8 @@ Qt paint event
 
 .PP
 Reimplemented in \fBQwtLegendLabel\fP\&.
+.PP
+Definition at line 236 of file qwt_text_label\&.cpp\&.
 .SS "QString QwtTextLabel::plainText () const"
 Interface for the designer plugin
 .PP
@@ -160,6 +170,8 @@ Text as plain text
 .RE
 .PP
 
+.PP
+Definition at line 84 of file qwt_text_label\&.cpp\&.
 .SS "void QwtTextLabel::setIndent (int indent)"
 Set label's text indent in pixels 
 .PP
@@ -169,6 +181,8 @@ Set label's text indent in pixels
 .RE
 .PP
 
+.PP
+Definition at line 142 of file qwt_text_label\&.cpp\&.
 .SS "void QwtTextLabel::setMargin (int margin)"
 Set label's margin in pixels 
 .PP
@@ -178,6 +192,8 @@ Set label's margin in pixels
 .RE
 .PP
 
+.PP
+Definition at line 163 of file qwt_text_label\&.cpp\&.
 .SS "void QwtTextLabel::setPlainText (const QString & text)"
 Interface for the designer plugin - does the same as \fBsetText()\fP 
 .PP
@@ -187,6 +203,8 @@ Interface for the designer plugin - does the same as \fBsetText()\fP
 .RE
 .PP
 
+.PP
+Definition at line 73 of file qwt_text_label\&.cpp\&.
 .SS "void QwtTextLabel::setText (const QString & text, \fBQwtText::TextFormat\fP textFormat = \fC\fBQwtText::AutoText\fP\fP)\fC [slot]\fP"
 Change the label's text, keeping all other \fBQwtText\fP attributes 
 .PP
@@ -203,6 +221,8 @@ Change the label's text, keeping all other \fBQwtText\fP attributes
 .RE
 .PP
 
+.PP
+Definition at line 96 of file qwt_text_label\&.cpp\&.
 .SS "void QwtTextLabel::setText (const \fBQwtText\fP & text)\fC [virtual]\fP, \fC [slot]\fP"
 Change the label's text 
 .PP
@@ -214,6 +234,8 @@ Change the label's text
 
 .PP
 Reimplemented in \fBQwtLegendLabel\fP\&.
+.PP
+Definition at line 109 of file qwt_text_label\&.cpp\&.
 .SS "QRect QwtTextLabel::textRect () const"
 Calculate geometry for the text in widget coordinates 
 .PP
@@ -223,6 +245,8 @@ Geometry for the text
 .RE
 .PP
 
+.PP
+Definition at line 288 of file qwt_text_label\&.cpp\&.
 
 .SH "Author"
 .PP 

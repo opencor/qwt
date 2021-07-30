@@ -9,7 +9,7 @@ var class_qwt_plot_abstract_bar_chart =
     [ "QwtPlotAbstractBarChart", "class_qwt_plot_abstract_bar_chart.html#a1eed4138383e5f0d118d518fd0255711", null ],
     [ "~QwtPlotAbstractBarChart", "class_qwt_plot_abstract_bar_chart.html#a80176eb6c7f95c5f5b9b90e595e1fdcd", null ],
     [ "baseline", "class_qwt_plot_abstract_bar_chart.html#a4f6d60ce854bf008fce4e581e942ea51", null ],
-    [ "getCanvasMarginHint", "class_qwt_plot_abstract_bar_chart.html#a32d47f6c91b5489cddbb8fcd9c83ba85", null ],
+    [ "getCanvasMarginHint", "class_qwt_plot_abstract_bar_chart.html#a9e9dd569100c1e04c913f4c4d957dd60", null ],
     [ "layoutHint", "class_qwt_plot_abstract_bar_chart.html#a1e656005c75874656527c70fe7648203", null ],
     [ "layoutPolicy", "class_qwt_plot_abstract_bar_chart.html#aa54354ec5bf93e08b96110d8a8b5da86", null ],
     [ "margin", "class_qwt_plot_abstract_bar_chart.html#a8df1fbf69687f78f9859fd77a4963907", null ],

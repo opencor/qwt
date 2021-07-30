@@ -1,4 +1,4 @@
-.TH "QwtSyntheticPointData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSyntheticPointData" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ QwtSyntheticPointData \- Synthetic point data\&.
 .PP
 \fC#include <qwt_point_data\&.h>\fP
 .PP
-Inherits \fBQwtSeriesData< QPointF >\fP\&.
+Inherits \fBQwtPointSeriesData\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -21,7 +21,7 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 .RI "void \fBsetSize\fP (size_t \fBsize\fP)"
 .br
 .ti -1c
-.RI "virtual size_t \fBsize\fP () const"
+.RI "virtual size_t \fBsize\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetInterval\fP (const \fBQwtInterval\fP &)"
@@ -30,11 +30,11 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 .RI "\fBQwtInterval\fP \fBinterval\fP () const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .RI "Calculate the bounding rectangle\&. "
 .ti -1c
-.RI "virtual QPointF \fBsample\fP (size_t index) const"
+.RI "virtual QPointF \fBsample\fP (size_t index) const override"
 .br
 .ti -1c
 .RI "virtual double \fBy\fP (double \fBx\fP) const =0"
@@ -43,7 +43,7 @@ Inherits \fBQwtSeriesData< QPointF >\fP\&.
 .RI "virtual double \fBx\fP (uint index) const"
 .br
 .ti -1c
-.RI "virtual void \fBsetRectOfInterest\fP (const QRectF &)"
+.RI "virtual void \fBsetRectOfInterest\fP (const QRectF &) override"
 .br
 .ti -1c
 .RI "QRectF \fBrectOfInterest\fP () const"
@@ -73,38 +73,40 @@ The following example shows how to implement a sinus curve\&.
 #include <qwt_plot\&.h>
 #include <qapplication\&.h>
 
-class SinusData: public QwtSyntheticPointData
-{
-public:
-    SinusData():
-        QwtSyntheticPointData( 100 )
-    {
-    }
+  class SinusData: public QwtSyntheticPointData
+  {
+  public:
+   SinusData():
+       QwtSyntheticPointData( 100 )
+   {
+   }
 
-    virtual double y( double x ) const
-    {
-        return qSin( x );
-    }
-};
+   virtual double y( double x ) const
+   {
+       return qSin( x );
+   }
+  };
 
-int main(int argc, char **argv)
-{
-    QApplication a( argc, argv );
+  int main(int argc, char **argv)
+  {
+   QApplication a( argc, argv );
 
-    QwtPlot plot;
-    plot\&.setAxisScale( QwtPlot::xBottom, 0\&.0, 10\&.0 );
-    plot\&.setAxisScale( QwtPlot::yLeft, -1\&.0, 1\&.0 );
+   QwtPlot plot;
+   plot\&.setAxisScale( QwtAxis::XBottom, 0\&.0, 10\&.0 );
+   plot\&.setAxisScale( QwtAxis::YLeft, -1\&.0, 1\&.0 );
 
-    QwtPlotCurve *curve = new QwtPlotCurve( "y = sin(x)" );
-    curve->setData( new SinusData() );
-    curve->attach( &plot );
+   QwtPlotCurve *curve = new QwtPlotCurve( "y = sin(x)" );
+   curve->setData( new SinusData() );
+   curve->attach( &plot );
 
-    plot\&.show();
-    return a\&.exec();
-}
+   plot\&.show();
+   return a\&.exec();
+  }
 .fi
 .PP
  
+.PP
+Definition at line 157 of file qwt_point_data\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtSyntheticPointData::QwtSyntheticPointData (size_t size, const \fBQwtInterval\fP & interval = \fC\fBQwtInterval\fP()\fP)"
@@ -123,9 +125,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 20 of file qwt_point_data\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtSyntheticPointData::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtSyntheticPointData::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate the bounding rectangle\&. This implementation iterates over all points, what could often be implemented much faster using the characteristics of the series\&. When there are many points it is recommended to overload and reimplement this method using the characteristics of the series ( if possible )\&.
@@ -136,6 +140,10 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Reimplemented from \fBQwtPointSeriesData\fP\&.
+.PP
+Definition at line 105 of file qwt_point_data\&.cpp\&.
 .SS "\fBQwtInterval\fP QwtSyntheticPointData::interval () const"
 
 .PP
@@ -150,6 +158,8 @@ Bounding interval
 .RE
 .PP
 
+.PP
+Definition at line 62 of file qwt_point_data\&.cpp\&.
 .SS "QRectF QwtSyntheticPointData::rectOfInterest () const"
 
 .PP
@@ -164,7 +174,9 @@ Bounding interval
 .RE
 .PP
 
-.SS "QPointF QwtSyntheticPointData::sample (size_t index) const\fC [virtual]\fP"
+.PP
+Definition at line 89 of file qwt_point_data\&.cpp\&.
+.SS "QPointF QwtSyntheticPointData::sample (size_t index) const\fC [override]\fP, \fC [virtual]\fP"
 Calculate the point from an index
 .PP
 \fBParameters\fP
@@ -184,7 +196,9 @@ For invalid indices ( index < 0 || index >= \fBsize()\fP ) (0, 0) is returned\&.
 .PP
 
 .PP
-Implements \fBQwtSeriesData< QPointF >\fP\&.
+Reimplemented from \fBQwtArraySeriesData< QPointF >\fP\&.
+.PP
+Definition at line 125 of file qwt_point_data\&.cpp\&.
 .SS "void QwtSyntheticPointData::setInterval (const \fBQwtInterval\fP & interval)"
 Set the bounding interval
 .PP
@@ -199,7 +213,9 @@ Set the bounding interval
 .RE
 .PP
 
-.SS "void QwtSyntheticPointData::setRectOfInterest (const QRectF & rect)\fC [virtual]\fP"
+.PP
+Definition at line 53 of file qwt_point_data\&.cpp\&.
+.SS "void QwtSyntheticPointData::setRectOfInterest (const QRectF & rect)\fC [override]\fP, \fC [virtual]\fP"
 Set a the 'rectangle of interest'
 .PP
 \fBQwtPlotSeriesItem\fP defines the current area of the plot canvas as 'rect of interest' ( \fBQwtPlotSeriesItem::updateScaleDiv()\fP )\&.
@@ -214,6 +230,8 @@ If \fBinterval()\fP\&.isValid() == false the x values are calculated in the inte
 
 .PP
 Reimplemented from \fBQwtSeriesData< QPointF >\fP\&.
+.PP
+Definition at line 78 of file qwt_point_data\&.cpp\&.
 .SS "void QwtSyntheticPointData::setSize (size_t size)"
 Change the number of points
 .PP
@@ -228,7 +246,9 @@ Change the number of points
 .RE
 .PP
 
-.SS "size_t QwtSyntheticPointData::size () const\fC [virtual]\fP"
+.PP
+Definition at line 33 of file qwt_point_data\&.cpp\&.
+.SS "size_t QwtSyntheticPointData::size () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -242,6 +262,10 @@ Number of points
 .RE
 .PP
 
+.PP
+Reimplemented from \fBQwtArraySeriesData< QPointF >\fP\&.
+.PP
+Definition at line 42 of file qwt_point_data\&.cpp\&.
 .SS "double QwtSyntheticPointData::x (uint index) const\fC [virtual]\fP"
 Calculate a x-value from an index
 .PP
@@ -263,6 +287,8 @@ Calculated x coordinate
 .RE
 .PP
 
+.PP
+Definition at line 148 of file qwt_point_data\&.cpp\&.
 .SS "virtual double QwtSyntheticPointData::y (double x) const\fC [pure virtual]\fP"
 Calculate a y value for a x value
 .PP

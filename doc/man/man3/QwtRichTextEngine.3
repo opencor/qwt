@@ -1,4 +1,4 @@
-.TH "QwtRichTextEngine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtRichTextEngine" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,19 +19,19 @@ Inherits \fBQwtTextEngine\fP\&.
 .br
 .RI "Constructor\&. "
 .ti -1c
-.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const"
+.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const override"
 .br
 .ti -1c
-.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const"
+.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const QRectF &rect, int flags, const QString &text) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const QRectF &rect, int flags, const QString &text) const override"
 .br
 .ti -1c
-.RI "virtual bool \fBmightRender\fP (const QString &) const"
+.RI "virtual bool \fBmightRender\fP (const QString &) const override"
 .br
 .ti -1c
-.RI "virtual void \fBtextMargins\fP (const QFont &, const QString &, double &left, double &right, double &top, double &bottom) const"
+.RI "virtual void \fBtextMargins\fP (const QFont &, const QString &, double &left, double &right, double &top, double &bottom) const override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -40,9 +40,11 @@ Inherits \fBQwtTextEngine\fP\&.
 A text engine for Qt rich texts\&. 
 
 \fBQwtRichTextEngine\fP renders Qt rich texts using the classes of the Scribe framework of Qt\&. 
+.PP
+Definition at line 147 of file qwt_text_engine\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtRichTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [virtual]\fP"
+.SS "void QwtRichTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [override]\fP, \fC [virtual]\fP"
 Draw the text in a clipping rectangle
 .PP
 \fBParameters\fP
@@ -59,7 +61,9 @@ Draw the text in a clipping rectangle
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "double QwtRichTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [virtual]\fP"
+.PP
+Definition at line 305 of file qwt_text_engine\&.cpp\&.
+.SS "double QwtRichTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [override]\fP, \fC [virtual]\fP"
 Find the height for a given width
 .PP
 \fBParameters\fP
@@ -81,7 +85,9 @@ Calculated height
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "bool QwtRichTextEngine::mightRender (const QString & text) const\fC [virtual]\fP"
+.PP
+Definition at line 262 of file qwt_text_engine\&.cpp\&.
+.SS "bool QwtRichTextEngine::mightRender (const QString & text) const\fC [override]\fP, \fC [virtual]\fP"
 Test if a string can be rendered by this text engine
 .PP
 \fBParameters\fP
@@ -97,7 +103,9 @@ Qt::mightBeRichText(text);
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "void QwtRichTextEngine::textMargins (const QFont &, const QString &, double & left, double & right, double & top, double & bottom) const\fC [virtual]\fP"
+.PP
+Definition at line 331 of file qwt_text_engine\&.cpp\&.
+.SS "void QwtRichTextEngine::textMargins (const QFont &, const QString &, double & left, double & right, double & top, double & bottom) const\fC [override]\fP, \fC [virtual]\fP"
 Return margins around the texts
 .PP
 \fBParameters\fP
@@ -114,7 +122,9 @@ Return margins around the texts
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "QSizeF QwtRichTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [virtual]\fP"
+.PP
+Definition at line 344 of file qwt_text_engine\&.cpp\&.
+.SS "QSizeF QwtRichTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [override]\fP, \fC [virtual]\fP"
 Returns the size, that is needed to render text
 .PP
 \fBParameters\fP
@@ -134,6 +144,8 @@ Calculated size
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
+.PP
+Definition at line 281 of file qwt_text_engine\&.cpp\&.
 
 .SH "Author"
 .PP 

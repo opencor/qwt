@@ -1,4 +1,4 @@
-.TH "QwtWheel" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtWheel" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -176,30 +176,30 @@ Inherits QWidget\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .RI "Qt Paint Event\&. "
 .ti -1c
-.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *) override"
 .br
 .RI "Mouse press event handler\&. "
 .ti -1c
-.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
 .br
 .RI "Mouse Release Event handler\&. "
 .ti -1c
-.RI "virtual void \fBmouseMoveEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseMoveEvent\fP (QMouseEvent *) override"
 .br
 .RI "Mouse Move Event handler\&. "
 .ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBwheelEvent\fP (QWheelEvent *)"
+.RI "virtual void \fBwheelEvent\fP (QWheelEvent *) override"
 .br
 .RI "Handle wheel events\&. "
 .ti -1c
-.RI "virtual void \fBtimerEvent\fP (QTimerEvent *)"
+.RI "virtual void \fBtimerEvent\fP (QTimerEvent *) override"
 .br
 .RI "Qt timer event\&. "
 .ti -1c
@@ -210,10 +210,10 @@ Inherits QWidget\&.
 .RI "QRect \fBwheelRect\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .ti -1c
 .RI "virtual void \fBdrawTicks\fP (QPainter *, const QRectF &)"
@@ -239,6 +239,8 @@ The radio example\&.
 .RE
 .PP
 
+.PP
+Definition at line 27 of file qwt_wheel\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int QwtWheel::borderWidth () const"
@@ -255,6 +257,8 @@ Border width
 .RE
 .PP
 
+.PP
+Definition at line 586 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::drawTicks (QPainter * painter, const QRectF & rect)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the Wheel's ticks
 .PP
@@ -266,6 +270,8 @@ Draw the Wheel's ticks
 .RE
 .PP
 
+.PP
+Definition at line 817 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::drawWheelBackground (QPainter * painter, const QRectF & rect)\fC [protected]\fP, \fC [virtual]\fP"
 Draw the Wheel's background gradient
 .PP
@@ -277,6 +283,8 @@ Draw the Wheel's background gradient
 .RE
 .PP
 
+.PP
+Definition at line 761 of file qwt_wheel\&.cpp\&.
 .SS "bool QwtWheel::isInverted () const"
 
 .PP
@@ -291,6 +299,8 @@ True, when the wheel is inverted
 .RE
 .PP
 
+.PP
+Definition at line 1176 of file qwt_wheel\&.cpp\&.
 .SS "bool QwtWheel::isTracking () const"
 
 .PP
@@ -305,7 +315,9 @@ True, when tracking is enabled
 .RE
 .PP
 
-.SS "void QwtWheel::keyPressEvent (QKeyEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 129 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handle key events
 .PP
 .IP "\(bu" 2
@@ -340,6 +352,8 @@ Qt::Key_PageDown
 .RE
 .PP
 
+.PP
+Definition at line 409 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::mass () const"
 
 .PP
@@ -354,6 +368,8 @@ mass
 .RE
 .PP
 
+.PP
+Definition at line 1240 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::maximum () const"
 
 .PP
@@ -368,6 +384,8 @@ The maximum of the range
 .RE
 .PP
 
+.PP
+Definition at line 1114 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::minimum () const"
 
 .PP
@@ -382,7 +400,9 @@ The minimum of the range
 .RE
 .PP
 
-.SS "QSize QwtWheel::minimumSizeHint () const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 1094 of file qwt_wheel\&.cpp\&.
+.SS "QSize QwtWheel::minimumSizeHint () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -396,7 +416,9 @@ The return value is based on the wheel width\&.
 .RE
 .PP
 
-.SS "void QwtWheel::mouseMoveEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 962 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::mouseMoveEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse Move Event handler\&. Turn the wheel according to the mouse position
@@ -407,7 +429,9 @@ Mouse Move Event handler\&. Turn the wheel according to the mouse position
 .RE
 .PP
 
-.SS "void QwtWheel::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 188 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::mousePressEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse press event handler\&. Start movement of the wheel\&.
@@ -418,7 +442,9 @@ Mouse press event handler\&. Start movement of the wheel\&.
 .RE
 .PP
 
-.SS "void QwtWheel::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 163 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::mouseReleaseEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Mouse Release Event handler\&. When the wheel has no mass the movement of the wheel stops, otherwise it starts flying\&.
@@ -429,6 +455,8 @@ Mouse Release Event handler\&. When the wheel has no mass the movement of the wh
 .RE
 .PP
 
+.PP
+Definition at line 237 of file qwt_wheel\&.cpp\&.
 .SS "Qt::Orientation QwtWheel::orientation () const"
 
 .PP
@@ -443,6 +471,8 @@ Orientation
 .RE
 .PP
 
+.PP
+Definition at line 661 of file qwt_wheel\&.cpp\&.
 .SS "int QwtWheel::pageStepCount () const"
 
 .PP
@@ -457,7 +487,9 @@ Page step count
 .RE
 .PP
 
-.SS "void QwtWheel::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 1043 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Qt Paint Event\&. 
@@ -468,6 +500,8 @@ Qt Paint Event\&.
 .RE
 .PP
 
+.PP
+Definition at line 736 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setBorderWidth (int width)"
 
 .PP
@@ -484,6 +518,8 @@ Set the border width\&. The border defaults to 2\&.
 .RE
 .PP
 
+.PP
+Definition at line 576 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setInverted (bool on)"
 
 .PP
@@ -500,6 +536,8 @@ En/Disable inverted appearance\&. An inverted wheel increases its values in the 
 .RE
 .PP
 
+.PP
+Definition at line 1163 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setMass (double mass)\fC [slot]\fP"
 
 .PP
@@ -518,6 +556,8 @@ Derived widgets may overload this function to make it public\&.
 .RE
 .PP
 
+.PP
+Definition at line 1221 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setMaximum (double value)"
 Set the maximum value of the range
 .PP
@@ -532,6 +572,8 @@ Set the maximum value of the range
 .RE
 .PP
 
+.PP
+Definition at line 1105 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setMinimum (double value)"
 Set the minimum value of the range
 .PP
@@ -551,6 +593,8 @@ The maximum is adjusted if necessary to ensure that the range remains valid\&.
 .RE
 .PP
 
+.PP
+Definition at line 1085 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setOrientation (Qt::Orientation orientation)"
 
 .PP
@@ -567,6 +611,8 @@ Set the wheel's orientation\&. The default orientation is Qt::Horizontal\&.
 .RE
 .PP
 
+.PP
+Definition at line 639 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setPageStepCount (int count)"
 
 .PP
@@ -587,6 +633,8 @@ The default value is 1\&.
 .RE
 .PP
 
+.PP
+Definition at line 1034 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setRange (double min, double max)"
 
 .PP
@@ -605,6 +653,8 @@ Set the minimum and maximum values\&. The maximum is adjusted if necessary to en
 .RE
 .PP
 
+.PP
+Definition at line 1059 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setSingleStep (double stepSize)"
 
 .PP
@@ -621,6 +671,8 @@ Set the step size of the counter\&. A value <= 0\&.0 disables stepping
 .RE
 .PP
 
+.PP
+Definition at line 980 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setStepAlignment (bool on)"
 
 .PP
@@ -637,6 +689,8 @@ En/Disable step alignment\&. When step alignment is enabled value changes initia
 .RE
 .PP
 
+.PP
+Definition at line 1004 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setTickCount (int count)"
 
 .PP
@@ -653,6 +707,8 @@ Adjust the number of grooves in the wheel's surface\&. The number of grooves is 
 .RE
 .PP
 
+.PP
+Definition at line 519 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setTotalAngle (double angle)\fC [slot]\fP"
 
 .PP
@@ -671,6 +727,8 @@ The default setting of the total angle is 360 degrees\&.
 .RE
 .PP
 
+.PP
+Definition at line 613 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setTracking (bool enable)"
 
 .PP
@@ -689,6 +747,8 @@ The \fBwheelMoved()\fP signal is emitted regardless id tracking is enabled or no
 .RE
 .PP
 
+.PP
+Definition at line 120 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setUpdateInterval (int interval)"
 
 .PP
@@ -705,6 +765,8 @@ Specify the update interval when the wheel is flying\&. Default and minimum valu
 .RE
 .PP
 
+.PP
+Definition at line 142 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setValue (double value)\fC [slot]\fP"
 
 .PP
@@ -726,6 +788,8 @@ The value is clipped when it lies outside the range\&.
 .RE
 .PP
 
+.PP
+Definition at line 1127 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setViewAngle (double angle)\fC [slot]\fP"
 
 .PP
@@ -742,6 +806,8 @@ Specify the visible portion of the wheel\&. You may use this function for fine-t
 .RE
 .PP
 
+.PP
+Definition at line 676 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setWheelBorderWidth (int borderWidth)"
 
 .PP
@@ -760,6 +826,8 @@ internalBorder()
 .RE
 .PP
 
+.PP
+Definition at line 551 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setWheelWidth (int width)"
 
 .PP
@@ -776,6 +844,8 @@ Set the width of the wheel\&. Corresponds to the wheel height for horizontal ori
 .RE
 .PP
 
+.PP
+Definition at line 934 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::setWrapping (bool on)"
 
 .PP
@@ -792,6 +862,8 @@ En/Disable wrapping\&. If wrapping is true stepping up from \fBmaximum()\fP valu
 .RE
 .PP
 
+.PP
+Definition at line 1190 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::singleStep () const"
 
 .PP
@@ -806,7 +878,9 @@ Single step size
 .RE
 .PP
 
-.SS "QSize QwtWheel::sizeHint () const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 989 of file qwt_wheel\&.cpp\&.
+.SS "QSize QwtWheel::sizeHint () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -815,6 +889,8 @@ a size hint
 .RE
 .PP
 
+.PP
+Definition at line 952 of file qwt_wheel\&.cpp\&.
 .SS "bool QwtWheel::stepAlignment () const"
 
 .PP
@@ -829,6 +905,8 @@ True, when the step alignment is enabled
 .RE
 .PP
 
+.PP
+Definition at line 1016 of file qwt_wheel\&.cpp\&.
 .SS "int QwtWheel::tickCount () const"
 
 .PP
@@ -843,7 +921,9 @@ setTickCnt()
 .RE
 .PP
 
-.SS "void QwtWheel::timerEvent (QTimerEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 534 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::timerEvent (QTimerEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Qt timer event\&. The flying wheel effect is implemented using a timer
@@ -859,6 +939,8 @@ Qt timer event\&. The flying wheel effect is implemented using a timer
 .RE
 .PP
 
+.PP
+Definition at line 283 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::totalAngle () const"
 
 .PP
@@ -873,6 +955,8 @@ Total angle which the wheel can be turned\&.
 .RE
 .PP
 
+.PP
+Definition at line 626 of file qwt_wheel\&.cpp\&.
 .SS "int QwtWheel::updateInterval () const"
 
 .PP
@@ -887,6 +971,8 @@ Update interval when the wheel is flying
 .RE
 .PP
 
+.PP
+Definition at line 151 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::value () const"
 
 .PP
@@ -901,6 +987,8 @@ Current value of the wheel
 .RE
 .PP
 
+.PP
+Definition at line 1147 of file qwt_wheel\&.cpp\&.
 .SS "double QwtWheel::valueAt (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Determine the value corresponding to a specified point
 .PP
@@ -915,6 +1003,8 @@ Value corresponding to pos
 .RE
 .PP
 
+.PP
+Definition at line 697 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::valueChanged (double value)\fC [signal]\fP"
 
 .PP
@@ -945,6 +1035,8 @@ Visible portion of the wheel
 .RE
 .PP
 
+.PP
+Definition at line 686 of file qwt_wheel\&.cpp\&.
 .SS "int QwtWheel::wheelBorderWidth () const"
 
 .PP
@@ -959,7 +1051,9 @@ Wheel border width
 .RE
 .PP
 
-.SS "void QwtWheel::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 563 of file qwt_wheel\&.cpp\&.
+.SS "void QwtWheel::wheelEvent (QWheelEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Handle wheel events\&. In/Decrement the value
@@ -970,6 +1064,8 @@ Handle wheel events\&. In/Decrement the value
 .RE
 .PP
 
+.PP
+Definition at line 324 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::wheelMoved (double value)\fC [signal]\fP"
 This signal is emitted when the user moves the wheel with the mouse\&.
 .PP
@@ -990,6 +1086,8 @@ Rectangle of the wheel without the outer border
 .RE
 .PP
 
+.PP
+Definition at line 594 of file qwt_wheel\&.cpp\&.
 .SS "void QwtWheel::wheelReleased ()\fC [signal]\fP"
 This signal is emitted when the user releases the mouse 
 .SS "int QwtWheel::wheelWidth () const"
@@ -1006,6 +1104,8 @@ Width of the wheel
 .RE
 .PP
 
+.PP
+Definition at line 944 of file qwt_wheel\&.cpp\&.
 .SS "bool QwtWheel::wrapping () const"
 
 .PP
@@ -1020,6 +1120,8 @@ True, when wrapping is set
 .RE
 .PP
 
+.PP
+Definition at line 1199 of file qwt_wheel\&.cpp\&.
 
 .SH "Author"
 .PP 

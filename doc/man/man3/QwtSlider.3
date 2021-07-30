@@ -1,4 +1,4 @@
-.TH "QwtSlider" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSlider" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -79,10 +79,10 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .RI "int \fBspacing\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtScaleDraw\fP *)"
@@ -103,11 +103,11 @@ Inherits \fBQwtAbstractSlider\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual double \fBscrolledTo\fP (const QPoint &) const"
+.RI "virtual double \fBscrolledTo\fP (const QPoint &) const override"
 .br
 .RI "Determine the value for a new position of the slider handle\&. "
 .ti -1c
-.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const"
+.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const override"
 .br
 .RI "Determine what to do when the user presses a mouse button\&. "
 .ti -1c
@@ -117,25 +117,28 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .RI "virtual void \fBdrawHandle\fP (QPainter *, const QRect &, int pos) const"
 .br
 .ti -1c
-.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBresizeEvent\fP (QResizeEvent *)"
+.RI "virtual void \fBresizeEvent\fP (QResizeEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBchangeEvent\fP (QEvent *)"
+.RI "virtual void \fBchangeEvent\fP (QEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBtimerEvent\fP (QTimerEvent *)"
+.RI "virtual void \fBtimerEvent\fP (QTimerEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBscaleChange\fP ()"
+.RI "virtual bool \fBevent\fP (QEvent *) override"
+.br
+.ti -1c
+.RI "virtual void \fBscaleChange\fP () override"
 .br
 .RI "Notify changed scale\&. "
 .ti -1c
@@ -155,6 +158,8 @@ The Slider Widget\&.
 The slider can be customized by having a through, a groove - or both\&.
 .PP
  
+.PP
+Definition at line 30 of file qwt_slider\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtSlider::ScalePosition\fP"
@@ -178,6 +183,8 @@ The scale is right of a vertical or below a horizontal slider\&.
 .TP
 \fB\fITrailingScale \fP\fP
 The scale is left of a vertical or above a horizontal slider\&. 
+.PP
+Definition at line 54 of file qwt_slider\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtSlider::QwtSlider (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -196,6 +203,8 @@ The scale is initialized to [0\&.0, 100\&.0] and the value set to 0\&.0\&.
 .RE
 .PP
 
+.PP
+Definition at line 119 of file qwt_slider\&.cpp\&.
 .SS "QwtSlider::QwtSlider (Qt::Orientation orientation, QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
 Construct a slider in QwtSlider::Trough style
 .PP
@@ -211,6 +220,8 @@ The scale is initialized to [0\&.0, 100\&.0] and the value set to 0\&.0\&.
 .RE
 .PP
 
+.PP
+Definition at line 136 of file qwt_slider\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "int QwtSlider::borderWidth () const"
@@ -227,7 +238,9 @@ the border width\&.
 .RE
 .PP
 
-.SS "void QwtSlider::changeEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 262 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::changeEvent (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handles QEvent::StyleChange and QEvent::FontChange events 
 .PP
 \fBParameters\fP
@@ -236,6 +249,10 @@ Handles QEvent::StyleChange and QEvent::FontChange events
 .RE
 .PP
 
+.PP
+Reimplemented from \fBQwtAbstractScale\fP\&.
+.PP
+Definition at line 724 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::drawHandle (QPainter * painter, const QRect & handleRect, int pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the thumb at a position
 .PP
@@ -249,6 +266,8 @@ Draw the thumb at a position
 .RE
 .PP
 
+.PP
+Definition at line 473 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::drawSlider (QPainter * painter, const QRect & sliderRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the slider into the specified rectangle\&.
 .PP
@@ -260,6 +279,24 @@ Draw the slider into the specified rectangle\&.
 .RE
 .PP
 
+.PP
+Definition at line 415 of file qwt_slider\&.cpp\&.
+.SS "bool QwtSlider::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Qt event handler 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Event
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true, if event was recognized and processed 
+.RE
+.PP
+
+.PP
+Definition at line 712 of file qwt_slider\&.cpp\&.
 .SS "QRect QwtSlider::handleRect () const\fC [protected]\fP"
 
 .PP
@@ -269,6 +306,8 @@ Bounding rectangle of the slider handle
 .RE
 .PP
 
+.PP
+Definition at line 990 of file qwt_slider\&.cpp\&.
 .SS "QSize QwtSlider::handleSize () const"
 
 .PP
@@ -283,12 +322,14 @@ Size of the handle\&.
 .RE
 .PP
 
+.PP
+Definition at line 326 of file qwt_slider\&.cpp\&.
 .SS "bool QwtSlider::hasGroove () const"
 
 .PP
 \fBReturns\fP
 .RS 4
-True, when the groove is visisble 
+True, when the groove is visible 
 .RE
 .PP
 \fBSee also\fP
@@ -297,12 +338,14 @@ True, when the groove is visisble
 .RE
 .PP
 
+.PP
+Definition at line 904 of file qwt_slider\&.cpp\&.
 .SS "bool QwtSlider::hasTrough () const"
 
 .PP
 \fBReturns\fP
 .RS 4
-True, when the trough is visisble 
+True, when the trough is visible 
 .RE
 .PP
 \fBSee also\fP
@@ -311,7 +354,9 @@ True, when the trough is visisble
 .RE
 .PP
 
-.SS "bool QwtSlider::isScrollPosition (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 875 of file qwt_slider\&.cpp\&.
+.SS "bool QwtSlider::isScrollPosition (const QPoint & pos) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Determine what to do when the user presses a mouse button\&. 
@@ -334,7 +379,9 @@ Determine what to do when the user presses a mouse button\&.
 
 .PP
 Implements \fBQwtAbstractSlider\fP\&.
-.SS "QSize QwtSlider::minimumSizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 503 of file qwt_slider\&.cpp\&.
+.SS "QSize QwtSlider::minimumSizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -348,7 +395,9 @@ Minimum size hint
 .RE
 .PP
 
-.SS "void QwtSlider::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 922 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::mousePressEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Mouse press event handler 
 .PP
 \fBParameters\fP
@@ -359,7 +408,9 @@ Mouse press event handler
 
 .PP
 Reimplemented from \fBQwtAbstractSlider\fP\&.
-.SS "void QwtSlider::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 547 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::mouseReleaseEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Mouse release event handler 
 .PP
 \fBParameters\fP
@@ -370,6 +421,8 @@ Mouse release event handler
 
 .PP
 Reimplemented from \fBQwtAbstractSlider\fP\&.
+.PP
+Definition at line 606 of file qwt_slider\&.cpp\&.
 .SS "Qt::Orientation QwtSlider::orientation () const"
 
 .PP
@@ -384,7 +437,9 @@ Orientation
 .RE
 .PP
 
-.SS "void QwtSlider::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 202 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Qt paint event handler 
 .PP
 \fBParameters\fP
@@ -393,7 +448,9 @@ Qt paint event handler
 .RE
 .PP
 
-.SS "void QwtSlider::resizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 675 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::resizeEvent (QResizeEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Qt resize event handler 
 .PP
 \fBParameters\fP
@@ -402,6 +459,8 @@ Qt resize event handler
 .RE
 .PP
 
+.PP
+Definition at line 700 of file qwt_slider\&.cpp\&.
 .SS "const \fBQwtScaleDraw\fP * QwtSlider::scaleDraw () const"
 
 .PP
@@ -416,6 +475,8 @@ the scale draw of the slider
 .RE
 .PP
 
+.PP
+Definition at line 363 of file qwt_slider\&.cpp\&.
 .SS "\fBQwtSlider::ScalePosition\fP QwtSlider::scalePosition () const"
 
 .PP
@@ -430,7 +491,9 @@ Position of the scale
 .RE
 .PP
 
-.SS "double QwtSlider::scrolledTo (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 230 of file qwt_slider\&.cpp\&.
+.SS "double QwtSlider::scrolledTo (const QPoint & pos) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Determine the value for a new position of the slider handle\&. 
@@ -453,6 +516,8 @@ Value for the mouse position
 
 .PP
 Implements \fBQwtAbstractSlider\fP\&.
+.PP
+Definition at line 526 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setBorderWidth (int width)"
 
 .PP
@@ -469,10 +534,12 @@ Change the slider's border width\&. The border width is used for drawing the sli
 .RE
 .PP
 
+.PP
+Definition at line 244 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setGroove (bool on)"
 En/Disable the groove
 .PP
-The slider can be cutomized by showing a groove for the handle\&.
+The slider can be customized by showing a groove for the handle\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -485,6 +552,8 @@ The slider can be cutomized by showing a groove for the handle\&.
 .RE
 .PP
 
+.PP
+Definition at line 889 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setHandleSize (const QSize & size)"
 
 .PP
@@ -501,6 +570,8 @@ Set the slider's handle size\&. When the size is empty the slider handle will be
 .RE
 .PP
 
+.PP
+Definition at line 311 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setOrientation (Qt::Orientation orientation)"
 
 .PP
@@ -517,6 +588,8 @@ Set the orientation\&.
 .RE
 .PP
 
+.PP
+Definition at line 175 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setScaleDraw (\fBQwtScaleDraw\fP * scaleDraw)"
 
 .PP
@@ -533,6 +606,8 @@ scaleDraw()
 .RE
 .PP
 
+.PP
+Definition at line 344 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setScalePosition (\fBScalePosition\fP scalePosition)"
 
 .PP
@@ -549,6 +624,8 @@ Change the position of the scale\&.
 .RE
 .PP
 
+.PP
+Definition at line 213 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setSpacing (int spacing)"
 
 .PP
@@ -567,10 +644,12 @@ The default setting is 4 pixels\&.
 .RE
 .PP
 
+.PP
+Definition at line 278 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setTrough (bool on)"
 En/Disable the trough
 .PP
-The slider can be cutomized by showing a trough for the handle\&.
+The slider can be customized by showing a trough for the handle\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -583,6 +662,8 @@ The slider can be cutomized by showing a trough for the handle\&.
 .RE
 .PP
 
+.PP
+Definition at line 860 of file qwt_slider\&.cpp\&.
 .SS "void QwtSlider::setUpdateInterval (int interval)"
 
 .PP
@@ -599,7 +680,9 @@ Specify the update interval for automatic scrolling\&. The minimal accepted valu
 .RE
 .PP
 
-.SS "QSize QwtSlider::sizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 395 of file qwt_slider\&.cpp\&.
+.SS "QSize QwtSlider::sizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -608,6 +691,8 @@ Specify the update interval for automatic scrolling\&. The minimal accepted valu
 .RE
 .PP
 
+.PP
+Definition at line 912 of file qwt_slider\&.cpp\&.
 .SS "QRect QwtSlider::sliderRect () const\fC [protected]\fP"
 
 .PP
@@ -617,6 +702,8 @@ Bounding rectangle of the slider - without the scale
 .RE
 .PP
 
+.PP
+Definition at line 1014 of file qwt_slider\&.cpp\&.
 .SS "int QwtSlider::spacing () const"
 
 .PP
@@ -631,7 +718,9 @@ Number of pixels between slider and scale
 .RE
 .PP
 
-.SS "void QwtSlider::timerEvent (QTimerEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 296 of file qwt_slider\&.cpp\&.
+.SS "void QwtSlider::timerEvent (QTimerEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Timer event handler
 .PP
 Handles the timer, when the mouse stays pressed inside the \fBsliderRect()\fP\&.
@@ -642,6 +731,8 @@ Handles the timer, when the mouse stays pressed inside the \fBsliderRect()\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 633 of file qwt_slider\&.cpp\&.
 .SS "int QwtSlider::updateInterval () const"
 
 .PP
@@ -656,6 +747,8 @@ Update interval in milliseconds for automatic scrolling
 .RE
 .PP
 
+.PP
+Definition at line 404 of file qwt_slider\&.cpp\&.
 
 .SH "Author"
 .PP 

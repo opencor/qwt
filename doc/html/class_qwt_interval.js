@@ -1,6 +1,6 @@
 var class_qwt_interval =
 [
-    [ "BorderFlags", "class_qwt_interval.html#a678a26fcaa91cca596d9aebcbf5776c9", null ],
+    [ "BorderFlags", "class_qwt_interval.html#aed8121e9a5992e790926d85cd20220a3", null ],
     [ "BorderFlag", "class_qwt_interval.html#a3a4b4e49495108c660fc07a62af7ac54", [
       [ "IncludeBorders", "class_qwt_interval.html#a3a4b4e49495108c660fc07a62af7ac54ad8a550b5eb1062cd84bcba22c60e5e60", null ],
       [ "ExcludeMinimum", "class_qwt_interval.html#a3a4b4e49495108c660fc07a62af7ac54aa7fde04c41d882187bb13f0104da7240", null ],
@@ -10,6 +10,7 @@ var class_qwt_interval =
     [ "QwtInterval", "class_qwt_interval.html#acd8699b69f46bcea31fa225d1425add3", null ],
     [ "QwtInterval", "class_qwt_interval.html#a6c48e99ff0a44784a4084dd8b1bc3fec", null ],
     [ "borderFlags", "class_qwt_interval.html#ac7378d58eb684a9befde1cb6d6e88b45", null ],
+    [ "contains", "class_qwt_interval.html#af81eb94cf6a66be8f7db2e28c57a1779", null ],
     [ "contains", "class_qwt_interval.html#ae6a7b6025679010bad8e0a6ade4a2eec", null ],
     [ "extend", "class_qwt_interval.html#aa9802cc2bd58eab078197eeda3b53708", null ],
     [ "intersect", "class_qwt_interval.html#ac4e5b30c3a1fb1d808de112a36bba4f7", null ],
@@ -36,5 +37,6 @@ var class_qwt_interval =
     [ "setMinValue", "class_qwt_interval.html#ab993dac41ca70402e0cb4f9f980d90f0", null ],
     [ "symmetrize", "class_qwt_interval.html#af830a4e9be34b82eb66b96c5f4276279", null ],
     [ "unite", "class_qwt_interval.html#a5e67ab7a363a6eafce33899e7cb14aac", null ],
-    [ "width", "class_qwt_interval.html#a200b2674f992802666b785a941b26612", null ]
+    [ "width", "class_qwt_interval.html#a200b2674f992802666b785a941b26612", null ],
+    [ "widthL", "class_qwt_interval.html#a3d1ed6d69dcc482c0c18b6e8e5779cf0", null ]
 ];

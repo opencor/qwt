@@ -1,4 +1,4 @@
-.TH "QwtDialNeedle" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDialNeedle" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,7 +29,7 @@ Inherited by \fBQwtCompassMagnetNeedle\fP, \fBQwtCompassWindArrow\fP, and \fBQwt
 .RI "const QPalette & \fBpalette\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const QPointF &center, double length, double direction, QPalette::ColorGroup=QPalette::Active) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const QPointF &center, double length, double direction, QPalette::ColorGroup=QPalette::Active) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -56,6 +56,8 @@ Base class for needles that can be used in a \fBQwtDial\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 27 of file qwt_dial_needle\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtDialNeedle::draw (QPainter * painter, const QPointF & center, double length, double direction, QPalette::ColorGroup colorGroup = \fCQPalette::Active\fP) const\fC [virtual]\fP"
@@ -75,6 +77,8 @@ Draw the needle
 .RE
 .PP
 
+.PP
+Definition at line 219 of file qwt_dial_needle\&.cpp\&.
 .SS "virtual void QwtDialNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
@@ -108,6 +112,8 @@ the palette of the needle\&.
 .RE
 .PP
 
+.PP
+Definition at line 205 of file qwt_dial_needle\&.cpp\&.
 .SS "void QwtDialNeedle::setPalette (const QPalette & palette)\fC [virtual]\fP"
 Sets the palette for the needle\&.
 .PP
@@ -117,6 +123,8 @@ Sets the palette for the needle\&.
 .RE
 .PP
 
+.PP
+Definition at line 197 of file qwt_dial_needle\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtPlotMarker" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotMarker" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,7 +22,11 @@ Inherits \fBQwtPlotItem\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPlotMarker\fP (const QString &\fBtitle\fP=QString())"
+.RI "\fBQwtPlotMarker\fP ()"
+.br
+.RI "Sets alignment to Qt::AlignCenter, and style to \fBQwtPlotMarker::NoLine\fP\&. "
+.ti -1c
+.RI "\fBQwtPlotMarker\fP (const QString &\fBtitle\fP)"
 .br
 .RI "Sets alignment to Qt::AlignCenter, and style to \fBQwtPlotMarker::NoLine\fP\&. "
 .ti -1c
@@ -34,7 +38,7 @@ Inherits \fBQwtPlotItem\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
 .RI "double \fBxValue\fP () const"
@@ -116,13 +120,13 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "int \fBspacing\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &) const override"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const override"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -130,6 +134,9 @@ Inherits \fBQwtPlotItem\fP\&.
 .in +1c
 .ti -1c
 .RI "virtual void \fBdrawLines\fP (QPainter *, const QRectF &, const QPointF &) const"
+.br
+.ti -1c
+.RI "virtual void \fBdrawSymbol\fP (QPainter *, const QRectF &, const QPointF &) const"
 .br
 .ti -1c
 .RI "virtual void \fBdrawLabel\fP (QPainter *, const QRectF &, const QPointF &) const"
@@ -151,6 +158,8 @@ With \fBsetLabel()\fP, a label can be assigned to the marker\&. The \fBsetLabelA
 .RE
 .PP
 
+.PP
+Definition at line 45 of file qwt_plot_marker\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotMarker::LineStyle\fP"
@@ -177,9 +186,11 @@ A vertical line\&.
 .TP
 \fB\fICross \fP\fP
 A crosshair\&. 
+.PP
+Definition at line 53 of file qwt_plot_marker\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtPlotMarker::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtPlotMarker::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -195,7 +206,9 @@ A width or height < 0\&.0 is ignored by the autoscaler
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotMarker::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
+.PP
+Definition at line 572 of file qwt_plot_marker\&.cpp\&.
+.SS "void QwtPlotMarker::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [override]\fP, \fC [virtual]\fP"
 Draw the marker
 .PP
 \fBParameters\fP
@@ -212,6 +225,8 @@ Draw the marker
 
 .PP
 Implements \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 142 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::drawLabel (QPainter * painter, const QRectF & canvasRect, const QPointF & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Align and draw the text label of the marker
 .PP
@@ -226,12 +241,34 @@ Align and draw the text label of the marker
 .PP
 \fBSee also\fP
 .RS 4
-\fBdrawLabel()\fP, \fBQwtSymbol::drawSymbol()\fP 
+\fBdrawLabel()\fP, \fBdrawSymbol()\fP 
 .RE
 .PP
 
+.PP
+Definition at line 232 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::drawLines (QPainter * painter, const QRectF & canvasRect, const QPointF & pos) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the lines marker
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Painter 
+.br
+\fIcanvasRect\fP Contents rectangle of the canvas in painter coordinates 
+.br
+\fIpos\fP Position of the marker, translated into widget coordinates
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBdrawLabel()\fP, \fBdrawSymbol()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 163 of file qwt_plot_marker\&.cpp\&.
+.SS "void QwtPlotMarker::drawSymbol (QPainter * painter, const QRectF & canvasRect, const QPointF & pos) const\fC [protected]\fP, \fC [virtual]\fP"
+Draw the symbol of the marker
 .PP
 \fBParameters\fP
 .RS 4
@@ -248,6 +285,8 @@ Draw the lines marker
 .RE
 .PP
 
+.PP
+Definition at line 203 of file qwt_plot_marker\&.cpp\&.
 .SS "\fBQwtText\fP QwtPlotMarker::label () const"
 
 .PP
@@ -262,6 +301,8 @@ the label
 .RE
 .PP
 
+.PP
+Definition at line 433 of file qwt_plot_marker\&.cpp\&.
 .SS "Qt::Alignment QwtPlotMarker::labelAlignment () const"
 
 .PP
@@ -276,6 +317,8 @@ the label alignment
 .RE
 .PP
 
+.PP
+Definition at line 465 of file qwt_plot_marker\&.cpp\&.
 .SS "Qt::Orientation QwtPlotMarker::labelOrientation () const"
 
 .PP
@@ -290,7 +333,9 @@ the label orientation
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotMarker::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
+.PP
+Definition at line 493 of file qwt_plot_marker\&.cpp\&.
+.SS "\fBQwtGraphic\fP QwtPlotMarker::legendIcon (int index, const QSizeF & size) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -313,6 +358,8 @@ Icon representing the marker on the legend
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 598 of file qwt_plot_marker\&.cpp\&.
 .SS "const QPen & QwtPlotMarker::linePen () const"
 
 .PP
@@ -327,6 +374,8 @@ the line pen
 .RE
 .PP
 
+.PP
+Definition at line 567 of file qwt_plot_marker\&.cpp\&.
 .SS "\fBQwtPlotMarker::LineStyle\fP QwtPlotMarker::lineStyle () const"
 
 .PP
@@ -341,7 +390,9 @@ the line style
 .RE
 .PP
 
-.SS "int QwtPlotMarker::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 381 of file qwt_plot_marker\&.cpp\&.
+.SS "int QwtPlotMarker::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -352,6 +403,8 @@ the line style
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 82 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLabel (const \fBQwtText\fP & label)"
 
 .PP
@@ -368,6 +421,8 @@ Set the label\&.
 .RE
 .PP
 
+.PP
+Definition at line 420 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLabelAlignment (Qt::Alignment align)"
 
 .PP
@@ -386,6 +441,8 @@ In all other styles the alignment is relative to the marker's position\&.
 .RE
 .PP
 
+.PP
+Definition at line 452 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLabelOrientation (Qt::Orientation orientation)"
 
 .PP
@@ -402,6 +459,8 @@ Set the orientation of the label\&. When orientation is Qt::Vertical the label i
 .RE
 .PP
 
+.PP
+Definition at line 480 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLinePen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a line pen
 .PP
@@ -422,6 +481,8 @@ pen(), brush()
 .RE
 .PP
 
+.PP
+Definition at line 541 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLinePen (const QPen & pen)"
 Specify a pen for the line\&.
 .PP
@@ -436,6 +497,8 @@ Specify a pen for the line\&.
 .RE
 .PP
 
+.PP
+Definition at line 552 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setLineStyle (\fBLineStyle\fP style)"
 
 .PP
@@ -452,6 +515,8 @@ Set the line style\&.
 .RE
 .PP
 
+.PP
+Definition at line 366 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setSpacing (int spacing)"
 
 .PP
@@ -468,6 +533,8 @@ Set the spacing\&. When the label is not centered on the marker position, the sp
 .RE
 .PP
 
+.PP
+Definition at line 507 of file qwt_plot_marker\&.cpp\&.
 .SS "void QwtPlotMarker::setSymbol (const \fBQwtSymbol\fP * symbol)"
 
 .PP
@@ -484,6 +551,8 @@ Assign a symbol\&.
 .RE
 .PP
 
+.PP
+Definition at line 391 of file qwt_plot_marker\&.cpp\&.
 .SS "int QwtPlotMarker::spacing () const"
 
 .PP
@@ -498,6 +567,8 @@ the spacing
 .RE
 .PP
 
+.PP
+Definition at line 523 of file qwt_plot_marker\&.cpp\&.
 .SS "const \fBQwtSymbol\fP * QwtPlotMarker::symbol () const"
 
 .PP
@@ -512,6 +583,8 @@ the symbol
 .RE
 .PP
 
+.PP
+Definition at line 410 of file qwt_plot_marker\&.cpp\&.
 
 .SH "Author"
 .PP 

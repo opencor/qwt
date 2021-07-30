@@ -1,4 +1,4 @@
-.TH "QwtPlotMagnifier" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotMagnifier" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,13 @@ QwtPlotMagnifier \- \fBQwtPlotMagnifier\fP provides zooming, by magnifying in st
 \fC#include <qwt_plot_magnifier\&.h>\fP
 .PP
 Inherits \fBQwtMagnifier\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBrescale\fP (double factor) override"
+.br
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
@@ -22,11 +29,11 @@ Inherits \fBQwtMagnifier\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "void \fBsetAxisEnabled\fP (int axis, bool on)"
+.RI "void \fBsetAxisEnabled\fP (QwtAxisId, bool on)"
 .br
 .RI "En/Disable an axis\&. "
 .ti -1c
-.RI "bool \fBisAxisEnabled\fP (int axis) const"
+.RI "bool \fBisAxisEnabled\fP (QwtAxisId) const"
 .br
 .ti -1c
 .RI "QWidget * \fBcanvas\fP ()"
@@ -45,13 +52,7 @@ Inherits \fBQwtMagnifier\fP\&.
 .br
 .RI "Return plot widget, containing the observed plot canvas\&. "
 .in -1c
-.SS "Protected Member Functions"
-
-.in +1c
-.ti -1c
-.RI "virtual void \fBrescale\fP (double factor)"
-.br
-.in -1c
+.SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
 \fBQwtPlotMagnifier\fP provides zooming, by magnifying in steps\&. 
@@ -66,6 +67,8 @@ Together with \fBQwtPlotZoomer\fP and \fBQwtPlotPanner\fP it is possible to impl
 .RE
 .PP
 
+.PP
+Definition at line 30 of file qwt_plot_magnifier\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotMagnifier::QwtPlotMagnifier (QWidget * canvas)\fC [explicit]\fP"
@@ -77,14 +80,16 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 30 of file qwt_plot_magnifier\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "bool QwtPlotMagnifier::isAxisEnabled (int axis) const"
+.SS "bool QwtPlotMagnifier::isAxisEnabled (QwtAxisId axisId) const"
 Test if an axis is enabled
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
+\fIaxisId\fP Axis 
 .RE
 .PP
 \fBReturns\fP
@@ -98,7 +103,9 @@ True, if the axis is enabled
 .RE
 .PP
 
-.SS "void QwtPlotMagnifier::rescale (double factor)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 67 of file qwt_plot_magnifier\&.cpp\&.
+.SS "void QwtPlotMagnifier::rescale (double factor)\fC [override]\fP, \fC [virtual]\fP, \fC [slot]\fP"
 Zoom in/out the axes scales 
 .PP
 \fBParameters\fP
@@ -108,15 +115,15 @@ Zoom in/out the axes scales
 .PP
 
 .PP
-Implements \fBQwtMagnifier\fP\&.
-.SS "void QwtPlotMagnifier::setAxisEnabled (int axis, bool on)"
+Definition at line 111 of file qwt_plot_magnifier\&.cpp\&.
+.SS "void QwtPlotMagnifier::setAxisEnabled (QwtAxisId axisId, bool on)"
 
 .PP
 En/Disable an axis\&. Only Axes that are enabled will be zoomed\&. All other axes will remain unchanged\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
+\fIaxisId\fP Axis 
 .br
 \fIon\fP On/Off
 .RE
@@ -127,6 +134,8 @@ En/Disable an axis\&. Only Axes that are enabled will be zoomed\&. All other axe
 .RE
 .PP
 
+.PP
+Definition at line 53 of file qwt_plot_magnifier\&.cpp\&.
 
 .SH "Author"
 .PP 

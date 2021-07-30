@@ -2,7 +2,6 @@ var class_qwt_point3_d =
 [
     [ "QwtPoint3D", "class_qwt_point3_d.html#acd7ec5a157397ce719225592b32cc510", null ],
     [ "QwtPoint3D", "class_qwt_point3_d.html#a33b9fa088b750e1f4ded65c23fb62868", null ],
-    [ "QwtPoint3D", "class_qwt_point3_d.html#a3847545c69e11d4c33891c5d9218afee", null ],
     [ "QwtPoint3D", "class_qwt_point3_d.html#a6747ac88e709543e57fc285e84181f49", null ],
     [ "isNull", "class_qwt_point3_d.html#af7a0291c9ff021e4424d5e1026917cb0", null ],
     [ "operator!=", "class_qwt_point3_d.html#a54dde2686323a4620bf98a67b42620aa", null ],

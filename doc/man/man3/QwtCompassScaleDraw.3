@@ -1,4 +1,4 @@
-.TH "QwtCompassScaleDraw" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassScaleDraw" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,18 +19,22 @@ Inherits \fBQwtRoundScaleDraw\fP\&.
 .br
 .RI "Constructor\&. "
 .ti -1c
-.RI "\fBQwtCompassScaleDraw\fP (const QMap< double, QString > &map)"
+.RI "\fBQwtCompassScaleDraw\fP (const \fBQMap\fP< double, QString > &map)"
 .br
 .RI "Constructor\&. "
 .ti -1c
-.RI "void \fBsetLabelMap\fP (const QMap< double, QString > &map)"
+.RI "virtual \fB~QwtCompassScaleDraw\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "void \fBsetLabelMap\fP (const \fBQMap\fP< double, QString > &map)"
 .br
 .RI "Set a map, mapping values to labels\&. "
 .ti -1c
-.RI "QMap< double, QString > \fBlabelMap\fP () const"
+.RI "\fBQMap\fP< double, QString > \fBlabelMap\fP () const"
 .br
 .ti -1c
-.RI "virtual \fBQwtText\fP \fBlabel\fP (double value) const"
+.RI "virtual \fBQwtText\fP \fBlabel\fP (double value) const override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -48,13 +52,17 @@ The default map consists of the labels N, NE, E, SE, S, SW, W, NW\&.
 .RE
 .PP
 
+.PP
+Definition at line 32 of file qwt_compass\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtCompassScaleDraw::QwtCompassScaleDraw ()\fC [explicit]\fP"
 
 .PP
 Constructor\&. Initializes a label map for multiples of 45 degrees 
-.SS "QwtCompassScaleDraw::QwtCompassScaleDraw (const QMap< double, QString > & map)\fC [explicit]\fP"
+.PP
+Definition at line 28 of file qwt_compass\&.cpp\&.
+.SS "QwtCompassScaleDraw::QwtCompassScaleDraw (const \fBQMap\fP< double, QString > & map)\fC [explicit]\fP"
 
 .PP
 Constructor\&. 
@@ -65,9 +73,11 @@ Constructor\&.
 .RE
 .PP
 
+.PP
+Definition at line 63 of file qwt_compass\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBQwtText\fP QwtCompassScaleDraw::label (double value) const\fC [virtual]\fP"
+.SS "\fBQwtText\fP QwtCompassScaleDraw::label (double value) const\fC [override]\fP, \fC [virtual]\fP"
 Map a value to a corresponding label
 .PP
 \fBParameters\fP
@@ -90,7 +100,9 @@ Label
 
 .PP
 Reimplemented from \fBQwtAbstractScaleDraw\fP\&.
-.SS "QMap< double, QString > QwtCompassScaleDraw::labelMap () const"
+.PP
+Definition at line 116 of file qwt_compass\&.cpp\&.
+.SS "\fBQMap\fP< double, QString > QwtCompassScaleDraw::labelMap () const"
 
 .PP
 \fBReturns\fP
@@ -104,7 +116,9 @@ map, mapping values to labels
 .RE
 .PP
 
-.SS "void QwtCompassScaleDraw::setLabelMap (const QMap< double, QString > & map)"
+.PP
+Definition at line 99 of file qwt_compass\&.cpp\&.
+.SS "void QwtCompassScaleDraw::setLabelMap (const \fBQMap\fP< double, QString > & map)"
 
 .PP
 Set a map, mapping values to labels\&. 
@@ -127,6 +141,8 @@ The map will have no effect for values that are no major tick values\&. Major ti
 .RE
 .PP
 
+.PP
+Definition at line 90 of file qwt_compass\&.cpp\&.
 
 .SH "Author"
 .PP 

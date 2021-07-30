@@ -1,4 +1,4 @@
-.TH "QwtPointPolar" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPointPolar" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -58,7 +58,7 @@ QwtPointPolar \- A point in polar coordinates\&.
 .ti -1c
 .RI "void \fBsetAzimuth\fP (double)"
 .br
-.RI "Sets the atimuth to atimuth\&. "
+.RI "Sets the azimuth to azimuth\&. "
 .ti -1c
 .RI "bool \fBoperator==\fP (const \fBQwtPointPolar\fP &) const"
 .br
@@ -75,6 +75,8 @@ QwtPointPolar \- A point in polar coordinates\&.
 A point in polar coordinates\&. 
 
 In polar coordinates a point is determined by an angle and a distance\&. See http://en.wikipedia.org/wiki/Polar_coordinate_system 
+.PP
+Definition at line 28 of file qwt_point_polar\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPointPolar::QwtPointPolar ()\fC [inline]\fP"
@@ -86,6 +88,8 @@ QPointF::isNull()
 .RE
 .PP
 
+.PP
+Definition at line 71 of file qwt_point_polar\&.h\&.
 .SS "QwtPointPolar::QwtPointPolar (double azimuth, double radius)\fC [inline]\fP"
 Constructs a point with coordinates specified by radius and azimuth\&.
 .PP
@@ -97,6 +101,8 @@ Constructs a point with coordinates specified by radius and azimuth\&.
 .RE
 .PP
 
+.PP
+Definition at line 83 of file qwt_point_polar\&.h\&.
 .SS "QwtPointPolar::QwtPointPolar (const QPointF & p)"
 Convert and assign values from a point in Cartesian coordinates
 .PP
@@ -111,6 +117,8 @@ Convert and assign values from a point in Cartesian coordinates
 .RE
 .PP
 
+.PP
+Definition at line 44 of file qwt_point_polar\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBQwtPointPolar\fP QwtPointPolar::normalized () const"
@@ -124,6 +132,8 @@ Normalized point
 .RE
 .PP
 
+.PP
+Definition at line 118 of file qwt_point_polar\&.cpp\&.
 .SS "bool QwtPointPolar::operator!= (const \fBQwtPointPolar\fP & other) const"
 Compare 2 points
 .PP
@@ -140,6 +150,8 @@ True if the point is not equal to other; otherwise return false\&.
 .RE
 .PP
 
+.PP
+Definition at line 105 of file qwt_point_polar\&.cpp\&.
 .SS "bool QwtPointPolar::operator== (const \fBQwtPointPolar\fP & other) const"
 
 .PP
@@ -156,6 +168,8 @@ True if the point is equal to other; otherwise return false\&.
 .RE
 .PP
 
+.PP
+Definition at line 90 of file qwt_point_polar\&.cpp\&.
 .SS "void QwtPointPolar::setPoint (const QPointF & p)"
 Convert and assign values from a point in Cartesian coordinates 
 .PP
@@ -165,6 +179,8 @@ Convert and assign values from a point in Cartesian coordinates
 .RE
 .PP
 
+.PP
+Definition at line 54 of file qwt_point_polar\&.cpp\&.
 .SS "QPointF QwtPointPolar::toPoint () const"
 Convert and return values in Cartesian coordinates
 .PP
@@ -184,6 +200,8 @@ Invalid or null points will be returned as QPointF(0\&.0, 0\&.0)
 .RE
 .PP
 
+.PP
+Definition at line 68 of file qwt_point_polar\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtLegend" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegend" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherits \fBQwtAbstractLegend\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBupdateLegend\fP (const QVariant &, const QList< \fBQwtLegendData\fP > &)"
+.RI "virtual void \fBupdateLegend\fP (const QVariant &, const \fBQList\fP< \fBQwtLegendData\fP > &) override"
 .br
 .RI "Update the entries for an item\&. "
 .in -1c
@@ -63,20 +63,20 @@ Inherits \fBQwtAbstractLegend\fP\&.
 .RI "QWidget * \fBlegendWidget\fP (const QVariant &) const"
 .br
 .ti -1c
-.RI "QList< QWidget * > \fBlegendWidgets\fP (const QVariant &) const"
+.RI "\fBQList\fP< QWidget * > \fBlegendWidgets\fP (const QVariant &) const"
 .br
 .ti -1c
 .RI "QVariant \fBitemInfo\fP (const QWidget *) const"
 .br
 .ti -1c
-.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
+.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *) override"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .RI "Return a size hint\&. "
 .ti -1c
-.RI "virtual int \fBheightForWidth\fP (int width) const"
+.RI "virtual int \fBheightForWidth\fP (int w) const override"
 .br
 .ti -1c
 .RI "QScrollBar * \fBhorizontalScrollBar\fP () const"
@@ -85,16 +85,16 @@ Inherits \fBQwtAbstractLegend\fP\&.
 .RI "QScrollBar * \fBverticalScrollBar\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBrenderLegend\fP (QPainter *, const QRectF &, bool fillBackground) const"
+.RI "virtual void \fBrenderLegend\fP (QPainter *, const QRectF &, bool fillBackground) const override"
 .br
 .ti -1c
 .RI "virtual void \fBrenderItem\fP (QPainter *, const QWidget *, const QRectF &, bool fillBackground) const"
 .br
 .ti -1c
-.RI "virtual bool \fBisEmpty\fP () const"
+.RI "virtual bool \fBisEmpty\fP () const override"
 .br
 .ti -1c
-.RI "virtual int \fBscrollExtent\fP (Qt::Orientation) const"
+.RI "virtual int \fBscrollExtent\fP (Qt::Orientation) const override"
 .br
 .in -1c
 .SS "Protected Slots"
@@ -115,7 +115,7 @@ Inherits \fBQwtAbstractLegend\fP\&.
 .br
 .RI "Create a widget to be inserted into the legend\&. "
 .ti -1c
-.RI "virtual void \fBupdateWidget\fP (QWidget *widget, const \fBQwtLegendData\fP &)"
+.RI "virtual void \fBupdateWidget\fP (QWidget *, const \fBQwtLegendData\fP &)"
 .br
 .RI "Update the widget\&. "
 .in -1c
@@ -131,6 +131,8 @@ The \fBQwtLegend\fP widget is a tabular arrangement of legend items\&. Legend it
 .RE
 .PP
 
+.PP
+Definition at line 31 of file qwt_legend\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtLegend::QwtLegend (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -142,6 +144,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 258 of file qwt_legend\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtLegend::checked (const QVariant & itemInfo, bool on, int index)\fC [signal]\fP"
@@ -197,6 +201,8 @@ Container widget of the legend items
 .RE
 .PP
 
+.PP
+Definition at line 355 of file qwt_legend\&.cpp\&.
 .SS "const QWidget * QwtLegend::contentsWidget () const"
 The contents widget is the only child of the viewport of the internal QScrollArea and the parent widget of all legend items\&.
 .PP
@@ -206,6 +212,8 @@ Container widget of the legend items
 .RE
 .PP
 
+.PP
+Definition at line 385 of file qwt_legend\&.cpp\&.
 .SS "QWidget * QwtLegend::createWidget (const \fBQwtLegendData\fP & legendData) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -227,6 +235,8 @@ Widget representing data on the legend
 .RE
 .PP
 
+.PP
+Definition at line 467 of file qwt_legend\&.cpp\&.
 .SS "\fBQwtLegendData::Mode\fP QwtLegend::defaultItemMode () const"
 
 .PP
@@ -241,8 +251,10 @@ Default item mode
 .RE
 .PP
 
-.SS "bool QwtLegend::eventFilter (QObject * object, QEvent * event)\fC [virtual]\fP"
-Handle QEvent::ChildRemoved andQEvent::LayoutRequest events for the \fBcontentsWidget()\fP\&.
+.PP
+Definition at line 344 of file qwt_legend\&.cpp\&.
+.SS "bool QwtLegend::eventFilter (QObject * object, QEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+Handle QEvent::ChildRemoved and QEvent::LayoutRequest events for the \fBcontentsWidget()\fP\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -257,7 +269,9 @@ Forwarded to QwtAbstractLegend::eventFilter()
 .RE
 .PP
 
-.SS "int QwtLegend::heightForWidth (int width) const\fC [virtual]\fP"
+.PP
+Definition at line 559 of file qwt_legend\&.cpp\&.
+.SS "int QwtLegend::heightForWidth (int width) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -271,6 +285,8 @@ The preferred height, for a width\&.
 .RE
 .PP
 
+.PP
+Definition at line 538 of file qwt_legend\&.cpp\&.
 .SS "QScrollBar * QwtLegend::horizontalScrollBar () const"
 
 .PP
@@ -285,7 +301,9 @@ Horizontal scrollbar
 .RE
 .PP
 
-.SS "bool QwtLegend::isEmpty () const\fC [virtual]\fP"
+.PP
+Definition at line 364 of file qwt_legend\&.cpp\&.
+.SS "bool QwtLegend::isEmpty () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -296,10 +314,16 @@ True, when no item is inserted
 
 .PP
 Implements \fBQwtAbstractLegend\fP\&.
+.PP
+Definition at line 810 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::itemChecked (bool on)\fC [protected]\fP, \fC [slot]\fP"
 Called internally when the legend has been checked Emits a \fBchecked()\fP signal\&. 
+.PP
+Definition at line 638 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::itemClicked ()\fC [protected]\fP, \fC [slot]\fP"
 Called internally when the legend has been clicked on\&. Emits a \fBclicked()\fP signal\&. 
+.PP
+Definition at line 616 of file qwt_legend\&.cpp\&.
 .SS "QVariant QwtLegend::itemInfo (const QWidget * widget) const"
 Find the item that is associated to a widget
 .PP
@@ -319,6 +343,8 @@ Associated item info
 .RE
 .PP
 
+.PP
+Definition at line 804 of file qwt_legend\&.cpp\&.
 .SS "QWidget * QwtLegend::legendWidget (const QVariant & itemInfo) const"
 
 .PP
@@ -343,7 +369,9 @@ Almost all types of items have only one widget
 .RE
 .PP
 
-.SS "QList< QWidget * > QwtLegend::legendWidgets (const QVariant & itemInfo) const"
+.PP
+Definition at line 788 of file qwt_legend\&.cpp\&.
+.SS "\fBQList\fP< QWidget * > QwtLegend::legendWidgets (const QVariant & itemInfo) const"
 
 .PP
 \fBReturns\fP
@@ -362,6 +390,8 @@ List of widgets associated to a item
 .RE
 .PP
 
+.PP
+Definition at line 777 of file qwt_legend\&.cpp\&.
 .SS "uint QwtLegend::maxColumns () const"
 
 .PP
@@ -376,6 +406,8 @@ Maximum number of entries in a row
 .RE
 .PP
 
+.PP
+Definition at line 310 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::renderItem (QPainter * painter, const QWidget * widget, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
 Render a legend entry into a given rectangle\&.
 .PP
@@ -396,7 +428,9 @@ When widget is not derived from \fBQwtLegendLabel\fP renderItem does nothing bes
 .RE
 .PP
 
-.SS "void QwtLegend::renderLegend (QPainter * painter, const QRectF & rect, bool fillBackground) const\fC [virtual]\fP"
+.PP
+Definition at line 727 of file qwt_legend\&.cpp\&.
+.SS "void QwtLegend::renderLegend (QPainter * painter, const QRectF & rect, bool fillBackground) const\fC [override]\fP, \fC [virtual]\fP"
 Render the legend into a given rectangle\&.
 .PP
 \fBParameters\fP
@@ -416,7 +450,9 @@ Render the legend into a given rectangle\&.
 
 .PP
 Implements \fBQwtAbstractLegend\fP\&.
-.SS "int QwtLegend::scrollExtent (Qt::Orientation orientation) const\fC [virtual]\fP"
+.PP
+Definition at line 665 of file qwt_legend\&.cpp\&.
+.SS "int QwtLegend::scrollExtent (Qt::Orientation orientation) const\fC [override]\fP, \fC [virtual]\fP"
 Return the extent, that is needed for the scrollbars
 .PP
 \fBParameters\fP
@@ -432,6 +468,8 @@ The width of the vertical scrollbar for Qt::Horizontal and v\&.v\&.
 
 .PP
 Reimplemented from \fBQwtAbstractLegend\fP\&.
+.PP
+Definition at line 821 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::setDefaultItemMode (\fBQwtLegendData::Mode\fP mode)"
 
 .PP
@@ -453,6 +491,8 @@ Changing the mode doesn't have any effect on existing labels\&.
 .RE
 .PP
 
+.PP
+Definition at line 335 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::setMaxColumns (uint numColums)"
 
 .PP
@@ -469,7 +509,9 @@ Set the maximum number of entries in a row\&. F\&.e when the maximum is set to 1
 .RE
 .PP
 
-.SS "void QwtLegend::updateLegend (const QVariant & itemInfo, const QList< \fBQwtLegendData\fP > & legendData)\fC [virtual]\fP, \fC [slot]\fP"
+.PP
+Definition at line 296 of file qwt_legend\&.cpp\&.
+.SS "void QwtLegend::updateLegend (const QVariant & itemInfo, const \fBQList\fP< \fBQwtLegendData\fP > & legendData)\fC [override]\fP, \fC [virtual]\fP, \fC [slot]\fP"
 
 .PP
 Update the entries for an item\&. 
@@ -482,6 +524,8 @@ Update the entries for an item\&.
 .RE
 .PP
 
+.PP
+Definition at line 396 of file qwt_legend\&.cpp\&.
 .SS "void QwtLegend::updateWidget (QWidget * widget, const \fBQwtLegendData\fP & legendData)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -505,6 +549,8 @@ When widget is no \fBQwtLegendLabel\fP \fBupdateWidget()\fP does nothing\&.
 .RE
 .PP
 
+.PP
+Definition at line 489 of file qwt_legend\&.cpp\&.
 .SS "QScrollBar * QwtLegend::verticalScrollBar () const"
 
 .PP
@@ -519,6 +565,8 @@ Vertical scrollbar
 .RE
 .PP
 
+.PP
+Definition at line 373 of file qwt_legend\&.cpp\&.
 
 .SH "Author"
 .PP 

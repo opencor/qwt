@@ -1,4 +1,4 @@
-.TH "QwtLinearColorMap" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLinearColorMap" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ Inherits \fBQwtColorMap\fP\&.
 .RI "\fBQwtLinearColorMap\fP (\fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
 .br
 .ti -1c
-.RI "\fBQwtLinearColorMap\fP (const QColor &\fBcolor1\fP, const QColor &\fBcolor2\fP, \fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
+.RI "\fBQwtLinearColorMap\fP (\fBconst\fP QColor &from, \fBconst\fP QColor &to, \fBQwtColorMap::Format\fP=\fBQwtColorMap::RGB\fP)"
 .br
 .ti -1c
 .RI "virtual \fB~QwtLinearColorMap\fP ()"
@@ -36,36 +36,39 @@ Inherits \fBQwtColorMap\fP\&.
 .br
 .RI "Set the mode of the color map\&. "
 .ti -1c
-.RI "\fBMode\fP \fBmode\fP () const"
+.RI "\fBMode\fP \fBmode\fP () \fBconst\fP"
 .br
 .ti -1c
-.RI "void \fBsetColorInterval\fP (const QColor &\fBcolor1\fP, const QColor &\fBcolor2\fP)"
+.RI "void \fBsetColorInterval\fP (\fBconst\fP QColor &\fBcolor1\fP, \fBconst\fP QColor &\fBcolor2\fP)"
 .br
 .ti -1c
-.RI "void \fBaddColorStop\fP (double value, const QColor &)"
+.RI "void \fBaddColorStop\fP (double value, \fBconst\fP QColor &)"
 .br
 .ti -1c
-.RI "QVector< double > \fBcolorStops\fP () const"
+.RI "\fBQVector\fP< double > \fBcolorStops\fP () \fBconst\fP"
 .br
 .ti -1c
-.RI "QColor \fBcolor1\fP () const"
+.RI "QColor \fBcolor1\fP () \fBconst\fP"
 .br
 .ti -1c
-.RI "QColor \fBcolor2\fP () const"
+.RI "QColor \fBcolor2\fP () \fBconst\fP"
 .br
 .ti -1c
-.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &, double value) const"
+.RI "virtual QRgb \fBrgb\fP (\fBconst\fP \fBQwtInterval\fP &, double value) \fBconst\fP override"
 .br
 .ti -1c
-.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &, double value) const"
+.RI "virtual uint \fBcolorIndex\fP (int numColors, \fBconst\fP \fBQwtInterval\fP &, double value) \fBconst\fP override"
 .br
 .RI "Map a value of a given interval into a color index\&. "
 .in -1c
+.SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
 \fBQwtLinearColorMap\fP builds a color map from color stops\&. 
 
 A color stop is a color at a specific position\&. The valid range for the positions is [0\&.0, 1\&.0]\&. When mapping a value into a color it is translated into this interval according to \fBmode()\fP\&. 
+.PP
+Definition at line 98 of file qwt_color_map\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtLinearColorMap::Mode\fP"
@@ -86,9 +89,11 @@ Return the color from the next lower color stop\&.
 .TP
 \fB\fIScaledColors \fP\fP
 Interpolating the colors of the adjacent stops\&. 
+.PP
+Definition at line 105 of file qwt_color_map\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtLinearColorMap::QwtLinearColorMap (\fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)"
+.SS "QwtLinearColorMap::QwtLinearColorMap (\fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)\fC [explicit]\fP"
 Build a color map with two stops at 0\&.0 and 1\&.0\&. The color at 0\&.0 is Qt::blue, at 1\&.0 it is Qt::yellow\&.
 .PP
 \fBParameters\fP
@@ -97,7 +102,9 @@ Build a color map with two stops at 0\&.0 and 1\&.0\&. The color at 0\&.0 is Qt:
 .RE
 .PP
 
-.SS "QwtLinearColorMap::QwtLinearColorMap (const QColor & color1, const QColor & color2, \fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)"
+.PP
+Definition at line 351 of file qwt_color_map\&.cpp\&.
+.SS "QwtLinearColorMap::QwtLinearColorMap (\fBconst\fP QColor & color1, \fBconst\fP QColor & color2, \fBQwtColorMap::Format\fP format = \fC\fBQwtColorMap::RGB\fP\fP)"
 Build a color map with two stops at 0\&.0 and 1\&.0\&.
 .PP
 \fBParameters\fP
@@ -110,9 +117,11 @@ Build a color map with two stops at 0\&.0 and 1\&.0\&.
 .RE
 .PP
 
+.PP
+Definition at line 367 of file qwt_color_map\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtLinearColorMap::addColorStop (double value, const QColor & color)"
+.SS "void QwtLinearColorMap::addColorStop (double value, \fBconst\fP QColor & color)"
 Add a color stop
 .PP
 The value has to be in the range [0\&.0, 1\&.0]\&. F\&.e\&. a stop at position 17\&.0 for a range [10\&.0,20\&.0] must be passed as: (17\&.0 - 10\&.0) / (20\&.0 - 10\&.0)
@@ -125,6 +134,8 @@ The value has to be in the range [0\&.0, 1\&.0]\&. F\&.e\&. a stop at position 1
 .RE
 .PP
 
+.PP
+Definition at line 433 of file qwt_color_map\&.cpp\&.
 .SS "QColor QwtLinearColorMap::color1 () const"
 
 .PP
@@ -139,6 +150,8 @@ the first color of the color range
 .RE
 .PP
 
+.PP
+Definition at line 451 of file qwt_color_map\&.cpp\&.
 .SS "QColor QwtLinearColorMap::color2 () const"
 
 .PP
@@ -153,13 +166,17 @@ the second color of the color range
 .RE
 .PP
 
-.SS "unsigned char QwtLinearColorMap::colorIndex (const \fBQwtInterval\fP & interval, double value) const\fC [virtual]\fP"
+.PP
+Definition at line 460 of file qwt_color_map\&.cpp\&.
+.SS "uint QwtLinearColorMap::colorIndex (int numColors, \fBconst\fP \fBQwtInterval\fP & interval, double value) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Map a value of a given interval into a color index\&. 
 .PP
 \fBParameters\fP
 .RS 4
+\fInumColors\fP Size of the color table 
+.br
 \fIinterval\fP Range for all values 
 .br
 \fIvalue\fP Value to map into a color index
@@ -170,10 +187,17 @@ Map a value of a given interval into a color index\&.
 Index, between 0 and 255 
 .RE
 .PP
+\fBNote\fP
+.RS 4
+NaN values are mapped to 0 
+.RE
+.PP
 
 .PP
-Implements \fBQwtColorMap\fP\&.
-.SS "QVector< double > QwtLinearColorMap::colorStops () const"
+Reimplemented from \fBQwtColorMap\fP\&.
+.PP
+Definition at line 494 of file qwt_color_map\&.cpp\&.
+.SS "\fBQVector\fP< double > QwtLinearColorMap::colorStops () const"
 
 .PP
 \fBReturns\fP
@@ -182,6 +206,8 @@ Positions of color stops in increasing order
 .RE
 .PP
 
+.PP
+Definition at line 442 of file qwt_color_map\&.cpp\&.
 .SS "\fBQwtLinearColorMap::Mode\fP QwtLinearColorMap::mode () const"
 
 .PP
@@ -196,7 +222,9 @@ Mode of the color map
 .RE
 .PP
 
-.SS "QRgb QwtLinearColorMap::rgb (const \fBQwtInterval\fP & interval, double value) const\fC [virtual]\fP"
+.PP
+Definition at line 400 of file qwt_color_map\&.cpp\&.
+.SS "QRgb QwtLinearColorMap::rgb (\fBconst\fP \fBQwtInterval\fP & interval, double value) const\fC [override]\fP, \fC [virtual]\fP"
 Map a value of a given interval into a RGB value
 .PP
 \fBParameters\fP
@@ -214,7 +242,9 @@ RGB value for value
 
 .PP
 Implements \fBQwtColorMap\fP\&.
-.SS "void QwtLinearColorMap::setColorInterval (const QColor & color1, const QColor & color2)"
+.PP
+Definition at line 473 of file qwt_color_map\&.cpp\&.
+.SS "void QwtLinearColorMap::setColorInterval (\fBconst\fP QColor & color1, \fBconst\fP QColor & color2)"
 Set the color range
 .PP
 Add stops at 0\&.0 and 1\&.0\&.
@@ -232,6 +262,8 @@ Add stops at 0\&.0 and 1\&.0\&.
 .RE
 .PP
 
+.PP
+Definition at line 415 of file qwt_color_map\&.cpp\&.
 .SS "void QwtLinearColorMap::setMode (\fBMode\fP mode)"
 
 .PP
@@ -243,6 +275,8 @@ Set the mode of the color map\&. FixedColors means the color is calculated from 
 .RE
 .PP
 
+.PP
+Definition at line 391 of file qwt_color_map\&.cpp\&.
 
 .SH "Author"
 .PP 

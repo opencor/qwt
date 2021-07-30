@@ -1,4 +1,4 @@
-.TH "QwtAbstractSlider" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractSlider" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -116,19 +116,19 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBmouseMoveEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseMoveEvent\fP (QMouseEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBwheelEvent\fP (QWheelEvent *)"
+.RI "virtual void \fBwheelEvent\fP (QWheelEvent *) override"
 .br
 .ti -1c
 .RI "virtual bool \fBisScrollPosition\fP (const QPoint &pos) const =0"
@@ -142,7 +142,7 @@ Inherited by \fBQwtDial\fP, \fBQwtKnob\fP, and \fBQwtSlider\fP\&.
 .RI "void \fBincrementValue\fP (int stepCount)"
 .br
 .ti -1c
-.RI "virtual void \fBscaleChange\fP ()"
+.RI "virtual void \fBscaleChange\fP () override"
 .br
 .ti -1c
 .RI "virtual void \fBsliderChange\fP ()"
@@ -161,6 +161,8 @@ A slider widget displays a value according to a scale\&. The class is designed a
 When the slider is nor readOnly() its value can be modified by keyboard, mouse and wheel inputs\&.
 .PP
 The range of the slider is divided into a number of steps from which the value increments according to user inputs depend\&. Only for linear scales the number of steps correspond with a fixed step size\&. 
+.PP
+Definition at line 32 of file qwt_abstract_slider\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtAbstractSlider::QwtAbstractSlider (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -176,6 +178,8 @@ The initial value is invalid\&.
 .RE
 .PP
 
+.PP
+Definition at line 91 of file qwt_abstract_slider\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "double QwtAbstractSlider::incrementedValue (double value, int stepCount) const\fC [protected]\fP"
@@ -194,6 +198,8 @@ Incremented value
 .RE
 .PP
 
+.PP
+Definition at line 670 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::incrementValue (int stepCount)\fC [protected]\fP"
 Increment the slider
 .PP
@@ -210,6 +216,8 @@ The step size depends on the number of \fBtotalSteps()\fP
 .RE
 .PP
 
+.PP
+Definition at line 650 of file qwt_abstract_slider\&.cpp\&.
 .SS "bool QwtAbstractSlider::invertedControls () const"
 
 .PP
@@ -224,6 +232,8 @@ True, when the controls are inverted
 .RE
 .PP
 
+.PP
+Definition at line 637 of file qwt_abstract_slider\&.cpp\&.
 .SS "bool QwtAbstractSlider::isReadOnly () const"
 In read only mode the slider can't be controlled by mouse or keyboard\&.
 .PP
@@ -238,6 +248,8 @@ true if read only
 .RE
 .PP
 
+.PP
+Definition at line 159 of file qwt_abstract_slider\&.cpp\&.
 .SS "virtual bool QwtAbstractSlider::isScrollPosition (const QPoint & pos) const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
@@ -275,6 +287,8 @@ True, when tracking has been enabled
 .RE
 .PP
 
+.PP
+Definition at line 186 of file qwt_abstract_slider\&.cpp\&.
 .SS "bool QwtAbstractSlider::isValid () const"
 
 .PP
@@ -284,7 +298,9 @@ True, when the value is invalid
 .RE
 .PP
 
-.SS "void QwtAbstractSlider::keyPressEvent (QKeyEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 125 of file qwt_abstract_slider\&.cpp\&.
+.SS "void QwtAbstractSlider::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handles key events
 .PP
 \fBQwtAbstractSlider\fP handles the following keys:
@@ -336,7 +352,9 @@ Qt::Key_End
 
 .PP
 Reimplemented in \fBQwtCompass\fP\&.
-.SS "void QwtAbstractSlider::mouseMoveEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 370 of file qwt_abstract_slider\&.cpp\&.
+.SS "void QwtAbstractSlider::mouseMoveEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Mouse Move Event handler 
 .PP
 \fBParameters\fP
@@ -345,7 +363,9 @@ Mouse Move Event handler
 .RE
 .PP
 
-.SS "void QwtAbstractSlider::mousePressEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 220 of file qwt_abstract_slider\&.cpp\&.
+.SS "void QwtAbstractSlider::mousePressEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Mouse press event handler 
 .PP
 \fBParameters\fP
@@ -356,7 +376,9 @@ Mouse press event handler
 
 .PP
 Reimplemented in \fBQwtSlider\fP\&.
-.SS "void QwtAbstractSlider::mouseReleaseEvent (QMouseEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 195 of file qwt_abstract_slider\&.cpp\&.
+.SS "void QwtAbstractSlider::mouseReleaseEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Mouse Release Event handler 
 .PP
 \fBParameters\fP
@@ -367,6 +389,8 @@ Mouse Release Event handler
 
 .PP
 Reimplemented in \fBQwtSlider\fP\&.
+.PP
+Definition at line 265 of file qwt_abstract_slider\&.cpp\&.
 .SS "uint QwtAbstractSlider::pageSteps () const"
 
 .PP
@@ -381,12 +405,16 @@ Number of steps
 .RE
 .PP
 
-.SS "void QwtAbstractSlider::scaleChange ()\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 533 of file qwt_abstract_slider\&.cpp\&.
+.SS "void QwtAbstractSlider::scaleChange ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Update the slider according to modifications of the scale 
 .PP
 Reimplemented from \fBQwtAbstractScale\fP\&.
 .PP
 Reimplemented in \fBQwtSlider\fP, and \fBQwtDial\fP\&.
+.PP
+Definition at line 811 of file qwt_abstract_slider\&.cpp\&.
 .SS "virtual double QwtAbstractSlider::scrolledTo (const QPoint & pos) const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
@@ -428,6 +456,8 @@ Inverting the controls might be f\&.e\&. useful for a vertical slider with an in
 .RE
 .PP
 
+.PP
+Definition at line 628 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setPageSteps (uint stepCount)"
 
 .PP
@@ -444,6 +474,8 @@ Set the number of steps for a page increment\&. The range of the slider is divid
 .RE
 .PP
 
+.PP
+Definition at line 524 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setReadOnly (bool on)"
 En/Disable read only mode
 .PP
@@ -465,6 +497,8 @@ The focus policy is set to Qt::StrongFocus or Qt::NoFocus
 .RE
 .PP
 
+.PP
+Definition at line 141 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setSingleSteps (uint stepCount)"
 
 .PP
@@ -481,6 +515,8 @@ Set the number of steps for a single increment\&. The range of the slider is div
 .RE
 .PP
 
+.PP
+Definition at line 499 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setStepAlignment (bool on)"
 
 .PP
@@ -497,6 +533,8 @@ Enable step alignment\&. When step alignment is enabled values resulting from sl
 .RE
 .PP
 
+.PP
+Definition at line 547 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setTotalSteps (uint stepCount)"
 
 .PP
@@ -515,6 +553,8 @@ The default setting is 100\&.
 .RE
 .PP
 
+.PP
+Definition at line 474 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setTracking (bool on)"
 
 .PP
@@ -533,6 +573,8 @@ Tracking is enabled by default\&.
 .RE
 .PP
 
+.PP
+Definition at line 177 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setValid (bool on)"
 Set the value to be valid/invalid
 .PP
@@ -547,6 +589,8 @@ Set the value to be valid/invalid
 .RE
 .PP
 
+.PP
+Definition at line 113 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setValue (double value)\fC [slot]\fP"
 Set the slider to the specified value
 .PP
@@ -561,6 +605,8 @@ Set the slider to the specified value
 .RE
 .PP
 
+.PP
+Definition at line 570 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::setWrapping (bool on)"
 If wrapping is true stepping up from \fBupperBound()\fP value will take you to the \fBminimum()\fP value and vice versa\&.
 .PP
@@ -575,6 +621,8 @@ If wrapping is true stepping up from \fBupperBound()\fP value will take you to t
 .RE
 .PP
 
+.PP
+Definition at line 599 of file qwt_abstract_slider\&.cpp\&.
 .SS "uint QwtAbstractSlider::singleSteps () const"
 
 .PP
@@ -589,6 +637,8 @@ Number of steps
 .RE
 .PP
 
+.PP
+Definition at line 508 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::sliderMoved (double value)\fC [signal]\fP"
 This signal is emitted when the user moves the slider with the mouse\&.
 .PP
@@ -621,6 +671,8 @@ True, when step alignment is enabled
 .RE
 .PP
 
+.PP
+Definition at line 559 of file qwt_abstract_slider\&.cpp\&.
 .SS "uint QwtAbstractSlider::totalSteps () const"
 
 .PP
@@ -635,6 +687,8 @@ Number of steps
 .RE
 .PP
 
+.PP
+Definition at line 483 of file qwt_abstract_slider\&.cpp\&.
 .SS "void QwtAbstractSlider::valueChanged (double value)\fC [signal]\fP"
 
 .PP
@@ -651,7 +705,7 @@ Notify a change of value\&. When tracking is enabled (default setting), this sig
 .RE
 .PP
 
-.SS "void QwtAbstractSlider::wheelEvent (QWheelEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtAbstractSlider::wheelEvent (QWheelEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Wheel Event handler
 .PP
 In/decreases the value by s number of steps\&. The direction depends on the \fBinvertedControls()\fP property\&.
@@ -666,6 +720,8 @@ When the control or shift modifier is pressed the wheel delta ( divided by 120 )
 
 .PP
 Reimplemented in \fBQwtDial\fP\&.
+.PP
+Definition at line 296 of file qwt_abstract_slider\&.cpp\&.
 .SS "bool QwtAbstractSlider::wrapping () const"
 
 .PP
@@ -680,6 +736,8 @@ True, when wrapping is set
 .RE
 .PP
 
+.PP
+Definition at line 608 of file qwt_abstract_slider\&.cpp\&.
 
 .SH "Author"
 .PP 

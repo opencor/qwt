@@ -9,7 +9,7 @@ var class_qwt_analog_clock =
     [ "QwtAnalogClock", "class_qwt_analog_clock.html#af52a1110f1db89c162f49a23772745b9", null ],
     [ "~QwtAnalogClock", "class_qwt_analog_clock.html#a3abdcecf88e3d3510d94e96e7e9e74ee", null ],
     [ "drawHand", "class_qwt_analog_clock.html#a989638ce2b03e02fc0c549c16733f5ad", null ],
-    [ "drawNeedle", "class_qwt_analog_clock.html#a7542466f2d3ca3c310fb49292c6426c6", null ],
+    [ "drawNeedle", "class_qwt_analog_clock.html#af3ec354864af5b4cd1295a4746960142", null ],
     [ "hand", "class_qwt_analog_clock.html#abb93bf8255bc00ef160165385bb6adce", null ],
     [ "hand", "class_qwt_analog_clock.html#a4231bc54b5bd8a7530f03515aeec7689", null ],
     [ "setCurrentTime", "class_qwt_analog_clock.html#a1972a54ce59155ec7435103f11a775a7", null ],

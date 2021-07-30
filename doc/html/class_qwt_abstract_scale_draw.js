@@ -1,6 +1,6 @@
 var class_qwt_abstract_scale_draw =
 [
-    [ "ScaleComponents", "class_qwt_abstract_scale_draw.html#a0dd3ccdfa074fb6b1781b84ed2a4729a", null ],
+    [ "ScaleComponents", "class_qwt_abstract_scale_draw.html#af900d3a139451b70e6ce5acee5e2df7e", null ],
     [ "ScaleComponent", "class_qwt_abstract_scale_draw.html#a26215d06a4d48adf401d0aa05d4193c5", [
       [ "Backbone", "class_qwt_abstract_scale_draw.html#a26215d06a4d48adf401d0aa05d4193c5a61a6c4f4dec2b089edfb655e2b21c3a2", null ],
       [ "Ticks", "class_qwt_abstract_scale_draw.html#a26215d06a4d48adf401d0aa05d4193c5a1f23d080ce1229a0c4f70469e88acce0", null ],
@@ -19,12 +19,12 @@ var class_qwt_abstract_scale_draw =
     [ "label", "class_qwt_abstract_scale_draw.html#ac1d855f856b746559c41f4f06ec5442d", null ],
     [ "maxTickLength", "class_qwt_abstract_scale_draw.html#ab3713ea053eb3d6327b18a3d14c7b820", null ],
     [ "minimumExtent", "class_qwt_abstract_scale_draw.html#abdd97b4bedda111df8208ec96a894f8f", null ],
-    [ "penWidth", "class_qwt_abstract_scale_draw.html#a400719a9bf1b916224d744e75d527989", null ],
+    [ "penWidthF", "class_qwt_abstract_scale_draw.html#ad0e889e3a5b5af8adb0d6a507e7fbc95", null ],
     [ "scaleDiv", "class_qwt_abstract_scale_draw.html#ad15e796d2fd8bd1e2cfa66715bf58e2e", null ],
     [ "scaleMap", "class_qwt_abstract_scale_draw.html#ae7488eb63ad73a2e69acb29ff069c904", null ],
     [ "scaleMap", "class_qwt_abstract_scale_draw.html#a2582c30e82f8977877ac8044253f1fb8", null ],
     [ "setMinimumExtent", "class_qwt_abstract_scale_draw.html#ac174255c334b995ca010a6964597d5f2", null ],
-    [ "setPenWidth", "class_qwt_abstract_scale_draw.html#a098e1f813077c9bb0c5f83266035943a", null ],
+    [ "setPenWidthF", "class_qwt_abstract_scale_draw.html#a6401e26332d65433e0b881400a1ce03b", null ],
     [ "setScaleDiv", "class_qwt_abstract_scale_draw.html#a149792f955cc3f05c16362338bcc98c4", null ],
     [ "setSpacing", "class_qwt_abstract_scale_draw.html#a074675cd805656f0ae158f84745074af", null ],
     [ "setTickLength", "class_qwt_abstract_scale_draw.html#a7fed388e435aae791d61f48cc9ddf632", null ],

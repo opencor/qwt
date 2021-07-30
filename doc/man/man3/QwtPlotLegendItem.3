@@ -1,4 +1,4 @@
-.TH "QwtPlotLegendItem" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotLegendItem" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,14 +31,21 @@ Inherits \fBQwtPlotItem\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
-.RI "void \fBsetAlignment\fP (Qt::Alignment)"
+.RI "void \fBsetAlignmentInCanvas\fP (Qt::Alignment)"
 .br
 .RI "Set the alignmnet\&. "
 .ti -1c
-.RI "Qt::Alignment \fBalignment\fP () const"
+.RI "Qt::Alignment \fBalignmentInCanvas\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetOffsetInCanvas\fP (Qt::Orientations, int numPixels)"
+.br
+.RI "Set the distance between the legend and the canvas border\&. "
+.ti -1c
+.RI "int \fBoffsetInCanvas\fP (Qt::Orientation) const"
 .br
 .ti -1c
 .RI "void \fBsetMaxColumns\fP (uint)"
@@ -80,13 +87,6 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "QFont \fBfont\fP () const"
 .br
 .ti -1c
-.RI "void \fBsetBorderDistance\fP (int)"
-.br
-.RI "Set the margin between the legend and the canvas border\&. "
-.ti -1c
-.RI "int \fBborderDistance\fP () const"
-.br
-.ti -1c
 .RI "void \fBsetBorderRadius\fP (double)"
 .br
 .ti -1c
@@ -120,14 +120,14 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "QPen \fBtextPen\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const override"
 .br
 .ti -1c
 .RI "void \fBclearLegend\fP ()"
 .br
 .RI "Remove all items from the legend\&. "
 .ti -1c
-.RI "virtual void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *, const QList< \fBQwtLegendData\fP > &)"
+.RI "virtual void \fBupdateLegend\fP (const \fBQwtPlotItem\fP *, const \fBQList\fP< \fBQwtLegendData\fP > &) override"
 .br
 .ti -1c
 .RI "virtual QRect \fBgeometry\fP (const QRectF &canvasRect) const"
@@ -139,17 +139,17 @@ Inherits \fBQwtPlotItem\fP\&.
 .RI "virtual int \fBheightForWidth\fP (const \fBQwtLegendData\fP &, int width) const"
 .br
 .ti -1c
-.RI "QList< const \fBQwtPlotItem\fP * > \fBplotItems\fP () const"
+.RI "\fBQList\fP< const \fBQwtPlotItem\fP * > \fBplotItems\fP () const"
 .br
 .ti -1c
-.RI "QList< QRect > \fBlegendGeometries\fP (const \fBQwtPlotItem\fP *) const"
+.RI "\fBQList\fP< QRect > \fBlegendGeometries\fP (const \fBQwtPlotItem\fP *) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawLegendData\fP (QPainter *painter, const \fBQwtPlotItem\fP *, const \fBQwtLegendData\fP &, const QRectF &) const"
+.RI "virtual void \fBdrawLegendData\fP (QPainter *, const \fBQwtPlotItem\fP *, const \fBQwtLegendData\fP &, const QRectF &) const"
 .br
 .ti -1c
 .RI "virtual void \fBdrawBackground\fP (QPainter *, const QRectF &rect) const"
@@ -163,7 +163,7 @@ A class which draws a legend inside the plot canvas\&.
 .PP
 In opposite to \fBQwtLegend\fP the legend item is not interactive\&. To identify mouse clicks on a legend item an event filter needs to be installed catching mouse events ob the plot canvas\&. The geometries of the legend items are available using \fBlegendGeometries()\fP\&.
 .PP
-The legend item is aligned to plot canvas according to its \fBalignment()\fP flags\&. It might have a background for the complete legend ( usually semi transparent ) or for each legend item\&.
+The legend item is aligned to plot canvas according to its alignment() flags\&. It might have a background for the complete legend ( usually semi transparent ) or for each legend item\&.
 .PP
 \fBNote\fP
 .RS 4
@@ -171,6 +171,8 @@ An external \fBQwtLegend\fP with a transparent background on top the plot canvas
 .RE
 .PP
 
+.PP
+Definition at line 41 of file qwt_plot_legenditem\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotLegendItem::BackgroundMode\fP"
@@ -195,9 +197,11 @@ The legend has a background\&.
 .TP
 \fB\fIItemBackground \fP\fP
 Each item has a background\&. 
+.PP
+Definition at line 54 of file qwt_plot_legenditem\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "Qt::Alignment QwtPlotLegendItem::alignment () const"
+.SS "Qt::Alignment QwtPlotLegendItem::alignmentInCanvas () const"
 
 .PP
 \fBReturns\fP
@@ -207,10 +211,12 @@ Alignment flags
 .PP
 \fBSee also\fP
 .RS 4
-\fBsetAlignment()\fP 
+\fBsetAlignmentInCanvas()\fP 
 .RE
 .PP
 
+.PP
+Definition at line 223 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QBrush QwtPlotLegendItem::backgroundBrush () const"
 
 .PP
@@ -225,6 +231,8 @@ Brush is used to fill the background
 .RE
 .PP
 
+.PP
+Definition at line 522 of file qwt_plot_legenditem\&.cpp\&.
 .SS "\fBQwtPlotLegendItem::BackgroundMode\fP QwtPlotLegendItem::backgroundMode () const"
 
 .PP
@@ -239,20 +247,8 @@ backgroundMode
 .RE
 .PP
 
-.SS "int QwtPlotLegendItem::borderDistance () const"
-
 .PP
-\fBReturns\fP
-.RS 4
-Margin between the legend and the canvas border 
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBmargin()\fP 
-.RE
-.PP
-
+Definition at line 550 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QPen QwtPlotLegendItem::borderPen () const"
 
 .PP
@@ -267,6 +263,8 @@ Pen for drawing the border
 .RE
 .PP
 
+.PP
+Definition at line 496 of file qwt_plot_legenditem\&.cpp\&.
 .SS "double QwtPlotLegendItem::borderRadius () const"
 
 .PP
@@ -281,7 +279,9 @@ Radius of the border
 .RE
 .PP
 
-.SS "void QwtPlotLegendItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
+.PP
+Definition at line 472 of file qwt_plot_legenditem\&.cpp\&.
+.SS "void QwtPlotLegendItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [override]\fP, \fC [virtual]\fP"
 Draw the legend
 .PP
 \fBParameters\fP
@@ -298,6 +298,8 @@ Draw the legend
 
 .PP
 Implements \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 587 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::drawBackground (QPainter * painter, const QRectF & rect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a rounded rect
 .PP
@@ -314,6 +316,8 @@ Draw a rounded rect
 .RE
 .PP
 
+.PP
+Definition at line 630 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::drawLegendData (QPainter * painter, const \fBQwtPlotItem\fP * plotItem, const \fBQwtLegendData\fP & data, const QRectF & rect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw an entry on the legend
 .PP
@@ -329,6 +333,8 @@ Draw an entry on the legend
 .RE
 .PP
 
+.PP
+Definition at line 780 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QFont QwtPlotLegendItem::font () const"
 
 .PP
@@ -343,6 +349,8 @@ Font used for drawing the text label
 .RE
 .PP
 
+.PP
+Definition at line 389 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QRect QwtPlotLegendItem::geometry (const QRectF & canvasRect) const\fC [virtual]\fP"
 Calculate the geometry of the legend on the canvas
 .PP
@@ -357,6 +365,8 @@ Geometry of the legend
 .RE
 .PP
 
+.PP
+Definition at line 650 of file qwt_plot_legenditem\&.cpp\&.
 .SS "int QwtPlotLegendItem::heightForWidth (const \fBQwtLegendData\fP & data, int width) const\fC [virtual]\fP"
 
 .PP
@@ -373,6 +383,8 @@ The preferred height, for a width\&.
 .RE
 .PP
 
+.PP
+Definition at line 862 of file qwt_plot_legenditem\&.cpp\&.
 .SS "int QwtPlotLegendItem::itemMargin () const"
 
 .PP
@@ -387,6 +399,8 @@ Margin around each item
 .RE
 .PP
 
+.PP
+Definition at line 335 of file qwt_plot_legenditem\&.cpp\&.
 .SS "int QwtPlotLegendItem::itemSpacing () const"
 
 .PP
@@ -401,7 +415,9 @@ Spacing inside of each item
 .RE
 .PP
 
-.SS "QList< QRect > QwtPlotLegendItem::legendGeometries (const \fBQwtPlotItem\fP * plotItem) const"
+.PP
+Definition at line 363 of file qwt_plot_legenditem\&.cpp\&.
+.SS "\fBQList\fP< QRect > QwtPlotLegendItem::legendGeometries (const \fBQwtPlotItem\fP * plotItem) const"
 
 .PP
 \fBReturns\fP
@@ -415,6 +431,8 @@ Usually a plot item has only one entry on the legend
 .RE
 .PP
 
+.PP
+Definition at line 895 of file qwt_plot_legenditem\&.cpp\&.
 .SS "int QwtPlotLegendItem::margin () const"
 
 .PP
@@ -429,6 +447,8 @@ Margin around the legend items
 .RE
 .PP
 
+.PP
+Definition at line 280 of file qwt_plot_legenditem\&.cpp\&.
 .SS "uint QwtPlotLegendItem::maxColumns () const"
 
 .PP
@@ -443,6 +463,8 @@ Maximum number of columns
 .RE
 .PP
 
+.PP
+Definition at line 251 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QSize QwtPlotLegendItem::minimumSize (const \fBQwtLegendData\fP & data) const\fC [virtual]\fP"
 Minimum size hint needed to display an entry
 .PP
@@ -457,7 +479,30 @@ Minimum size
 .RE
 .PP
 
-.SS "QList< const \fBQwtPlotItem\fP * > QwtPlotLegendItem::plotItems () const"
+.PP
+Definition at line 823 of file qwt_plot_legenditem\&.cpp\&.
+.SS "int QwtPlotLegendItem::offsetInCanvas (Qt::Orientation orientation) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP Qt::Horizontal is for the left/right, Qt::Vertical for the top/bottom padding\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Distance between the legend and the canvas border 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetOffsetInCanvas()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 444 of file qwt_plot_legenditem\&.cpp\&.
+.SS "\fBQList\fP< const \fBQwtPlotItem\fP * > QwtPlotLegendItem::plotItems () const"
 
 .PP
 \fBReturns\fP
@@ -471,7 +516,9 @@ A plot item might have more than one entry on the legend
 .RE
 .PP
 
-.SS "int QwtPlotLegendItem::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 886 of file qwt_plot_legenditem\&.cpp\&.
+.SS "int QwtPlotLegendItem::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -482,7 +529,9 @@ A plot item might have more than one entry on the legend
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "void QwtPlotLegendItem::setAlignment (Qt::Alignment alignment)"
+.PP
+Definition at line 192 of file qwt_plot_legenditem\&.cpp\&.
+.SS "void QwtPlotLegendItem::setAlignmentInCanvas (Qt::Alignment alignment)"
 
 .PP
 Set the alignmnet\&. Alignment means the position of the legend relative to the geometry of the plot canvas\&.
@@ -494,7 +543,7 @@ Set the alignmnet\&. Alignment means the position of the legend relative to the 
 .PP
 \fBSee also\fP
 .RS 4
-\fBalignment()\fP, \fBsetMaxColumns()\fP
+\fBalignmentInCanvas()\fP, \fBsetMaxColumns()\fP
 .RE
 .PP
 \fBNote\fP
@@ -503,6 +552,8 @@ To align a legend with many items horizontally the number of columns need to be 
 .RE
 .PP
 
+.PP
+Definition at line 210 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setBackgroundBrush (const QBrush & brush)"
 
 .PP
@@ -519,6 +570,8 @@ Set the background brush\&. The brush is used to fill the background
 .RE
 .PP
 
+.PP
+Definition at line 509 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setBackgroundMode (\fBBackgroundMode\fP mode)"
 
 .PP
@@ -532,22 +585,8 @@ The default setting is LegendBackground\&.
 .RE
 .PP
 
-.SS "void QwtPlotLegendItem::setBorderDistance (int distance)"
-
 .PP
-Set the margin between the legend and the canvas border\&. The default setting for the margin is 10 pixels\&.
-.PP
-\fBParameters\fP
-.RS 4
-\fIdistance\fP Margin in pixels 
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBsetMargin()\fP 
-.RE
-.PP
-
+Definition at line 537 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setBorderPen (const QPen & pen)"
 Set the pen for drawing the border
 .PP
@@ -562,6 +601,8 @@ Set the pen for drawing the border
 .RE
 .PP
 
+.PP
+Definition at line 483 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setBorderRadius (double radius)"
 Set the radius for the border
 .PP
@@ -576,6 +617,8 @@ Set the radius for the border
 .RE
 .PP
 
+.PP
+Definition at line 457 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setFont (const QFont & font)"
 Change the font used for drawing the text label
 .PP
@@ -590,6 +633,8 @@ Change the font used for drawing the text label
 .RE
 .PP
 
+.PP
+Definition at line 374 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setItemMargin (int margin)"
 Set the margin around each item
 .PP
@@ -604,6 +649,8 @@ Set the margin around each item
 .RE
 .PP
 
+.PP
+Definition at line 319 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setItemSpacing (int spacing)"
 Set the spacing inside of each item
 .PP
@@ -618,6 +665,8 @@ Set the spacing inside of each item
 .RE
 .PP
 
+.PP
+Definition at line 346 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setMargin (int margin)"
 
 .PP
@@ -634,6 +683,8 @@ Set the margin around legend items\&. The default setting for the margin is 0\&.
 .RE
 .PP
 
+.PP
+Definition at line 264 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setMaxColumns (uint maxColumns)"
 
 .PP
@@ -650,6 +701,28 @@ Limit the number of columns\&. When aligning the legend horizontally ( Qt::Align
 .RE
 .PP
 
+.PP
+Definition at line 238 of file qwt_plot_legenditem\&.cpp\&.
+.SS "void QwtPlotLegendItem::setOffsetInCanvas (Qt::Orientations orientations, int numPixels)"
+
+.PP
+Set the distance between the legend and the canvas border\&. The default setting is 10 pixels\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientations\fP Qt::Horizontal is for the left/right, Qt::Vertical for the top/bottom offset\&.
+.br
+\fInumPixels\fP Distance in pixels 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetMargin()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 405 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setSpacing (int spacing)"
 
 .PP
@@ -666,6 +739,8 @@ Set the spacing between the legend items\&.
 .RE
 .PP
 
+.PP
+Definition at line 294 of file qwt_plot_legenditem\&.cpp\&.
 .SS "void QwtPlotLegendItem::setTextPen (const QPen & pen)"
 
 .PP
@@ -682,6 +757,8 @@ Set the pen for drawing text labels\&.
 .RE
 .PP
 
+.PP
+Definition at line 561 of file qwt_plot_legenditem\&.cpp\&.
 .SS "int QwtPlotLegendItem::spacing () const"
 
 .PP
@@ -696,6 +773,8 @@ Spacing between the legend items
 .RE
 .PP
 
+.PP
+Definition at line 308 of file qwt_plot_legenditem\&.cpp\&.
 .SS "QPen QwtPlotLegendItem::textPen () const"
 
 .PP
@@ -710,7 +789,9 @@ Pen for drawing text labels
 .RE
 .PP
 
-.SS "void QwtPlotLegendItem::updateLegend (const \fBQwtPlotItem\fP * plotItem, const QList< \fBQwtLegendData\fP > & data)\fC [virtual]\fP"
+.PP
+Definition at line 574 of file qwt_plot_legenditem\&.cpp\&.
+.SS "void QwtPlotLegendItem::updateLegend (const \fBQwtPlotItem\fP * plotItem, const \fBQList\fP< \fBQwtLegendData\fP > & data)\fC [override]\fP, \fC [virtual]\fP"
 Update the legend items according to modifications of a plot item
 .PP
 \fBParameters\fP
@@ -723,6 +804,8 @@ Update the legend items according to modifications of a plot item
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 697 of file qwt_plot_legenditem\&.cpp\&.
 
 .SH "Author"
 .PP 
