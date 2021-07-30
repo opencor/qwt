@@ -1,4 +1,4 @@
-.TH "QwtInterval" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtInterval" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -68,6 +68,10 @@ QwtInterval \- A class representing an interval\&.
 .br
 .RI "Return the width of an interval\&. "
 .ti -1c
+.RI "long double \fBwidthL\fP () const"
+.br
+.RI "Return the width of an interval as long double\&. "
+.ti -1c
 .RI "void \fBsetMinValue\fP (double)"
 .br
 .ti -1c
@@ -75,6 +79,9 @@ QwtInterval \- A class representing an interval\&.
 .br
 .ti -1c
 .RI "bool \fBcontains\fP (double value) const"
+.br
+.ti -1c
+.RI "bool \fBcontains\fP (const \fBQwtInterval\fP &) const"
 .br
 .ti -1c
 .RI "bool \fBintersects\fP (const \fBQwtInterval\fP &) const"
@@ -131,6 +138,16 @@ QwtInterval \- A class representing an interval\&.
 A class representing an interval\&. 
 
 The interval is represented by 2 doubles, the lower and the upper limit\&. 
+.PP
+Definition at line 22 of file qwt_interval\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBBorderFlag\fP > \fBQwtInterval::BorderFlags\fP"
+
+.PP
+Border flags\&. An ORed combination of \fBBorderFlag\fP values\&. 
+.PP
+Definition at line 45 of file qwt_interval\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtInterval::BorderFlag\fP"
@@ -157,6 +174,8 @@ Max value is not included in the interval\&.
 .TP
 \fB\fIExcludeBorders \fP\fP
 Min/Max values are not included in the interval\&. 
+.PP
+Definition at line 29 of file qwt_interval\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtInterval::QwtInterval ()\fC [inline]\fP"
@@ -170,6 +189,8 @@ Default Constructor\&. Creates an invalid interval [0\&.0, -1\&.0]
 .RE
 .PP
 
+.PP
+Definition at line 112 of file qwt_interval\&.h\&.
 .SS "QwtInterval::QwtInterval (double minValue, double maxValue, \fBBorderFlags\fP borderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
 Constructor
 .PP
@@ -185,6 +206,8 @@ Build an interval with from min/max values
 .RE
 .PP
 
+.PP
+Definition at line 128 of file qwt_interval\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBQwtInterval::BorderFlags\fP QwtInterval::borderFlags () const\fC [inline]\fP"
@@ -201,6 +224,24 @@ Border flags
 .RE
 .PP
 
+.PP
+Definition at line 166 of file qwt_interval\&.h\&.
+.SS "bool QwtInterval::contains (const \fBQwtInterval\fP & interval) const"
+Test if an interval is inside an interval
+.PP
+\fBParameters\fP
+.RS 4
+\fIinterval\fP Interval 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true, if interval lies inside the boundaries 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file qwt_interval\&.cpp\&.
 .SS "bool QwtInterval::contains (double value) const"
 Test if a value is inside an interval
 .PP
@@ -211,10 +252,12 @@ Test if a value is inside an interval
 .PP
 \fBReturns\fP
 .RS 4
-true, if value >= \fBminValue()\fP && value <= \fBmaxValue()\fP 
+true, if value lies inside the boundaries 
 .RE
 .PP
 
+.PP
+Definition at line 67 of file qwt_interval\&.cpp\&.
 .SS "\fBQwtInterval\fP QwtInterval::extend (double value) const"
 
 .PP
@@ -238,6 +281,8 @@ extended interval
 .RE
 .PP
 
+.PP
+Definition at line 363 of file qwt_interval\&.cpp\&.
 .SS "\fBQwtInterval\fP QwtInterval::intersect (const \fBQwtInterval\fP & other) const"
 
 .PP
@@ -254,6 +299,8 @@ Intersection
 .RE
 .PP
 
+.PP
+Definition at line 186 of file qwt_interval\&.cpp\&.
 .SS "bool QwtInterval::intersects (const \fBQwtInterval\fP & other) const"
 
 .PP
@@ -270,6 +317,8 @@ True, when the intervals are intersecting
 .RE
 .PP
 
+.PP
+Definition at line 277 of file qwt_interval\&.cpp\&.
 .SS "void QwtInterval::invalidate ()\fC [inline]\fP"
 Invalidate the interval
 .PP
@@ -281,6 +330,8 @@ The limits are set to interval [0\&.0, -1\&.0]
 .RE
 .PP
 
+.PP
+Definition at line 325 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::inverted () const"
 Invert the limits of the interval 
 .PP
@@ -295,6 +346,8 @@ Inverted interval
 .RE
 .PP
 
+.PP
+Definition at line 48 of file qwt_interval\&.cpp\&.
 .SS "bool QwtInterval::isNull () const\fC [inline]\fP"
 
 .PP
@@ -304,6 +357,8 @@ true, if \fBisValid()\fP && (\fBminValue()\fP >= \fBmaxValue()\fP)
 .RE
 .PP
 
+.PP
+Definition at line 314 of file qwt_interval\&.h\&.
 .SS "bool QwtInterval::isValid () const\fC [inline]\fP"
 A interval is valid when \fBminValue()\fP <= \fBmaxValue()\fP\&. In case of \fBQwtInterval::ExcludeBorders\fP it is true when \fBminValue()\fP < \fBmaxValue()\fP
 .PP
@@ -313,6 +368,8 @@ True, when the interval is valid
 .RE
 .PP
 
+.PP
+Definition at line 210 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::limited (double lowerBound, double upperBound) const"
 Limit the interval, keeping the border modes
 .PP
@@ -329,6 +386,8 @@ Limited interval
 .RE
 .PP
 
+.PP
+Definition at line 336 of file qwt_interval\&.cpp\&.
 .SS "double QwtInterval::maxValue () const\fC [inline]\fP"
 
 .PP
@@ -338,6 +397,8 @@ Upper limit of the interval
 .RE
 .PP
 
+.PP
+Definition at line 198 of file qwt_interval\&.h\&.
 .SS "double QwtInterval::minValue () const\fC [inline]\fP"
 
 .PP
@@ -347,6 +408,8 @@ Lower limit of the interval
 .RE
 .PP
 
+.PP
+Definition at line 192 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::normalized () const"
 
 .PP
@@ -363,6 +426,8 @@ Normalized interval
 .RE
 .PP
 
+.PP
+Definition at line 29 of file qwt_interval\&.cpp\&.
 .SS "bool QwtInterval::operator!= (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
@@ -379,6 +444,8 @@ True, when this and other are not equal
 .RE
 .PP
 
+.PP
+Definition at line 296 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::operator& (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
@@ -400,6 +467,8 @@ Intersection of this and other
 .RE
 .PP
 
+.PP
+Definition at line 258 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP & QwtInterval::operator&= (const \fBQwtInterval\fP & other)"
 
 .PP
@@ -416,6 +485,8 @@ This interval
 .RE
 .PP
 
+.PP
+Definition at line 265 of file qwt_interval\&.cpp\&.
 .SS "bool QwtInterval::operator== (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 
 .PP
@@ -432,6 +503,8 @@ True, when this and other are equal
 .RE
 .PP
 
+.PP
+Definition at line 284 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::operator| (const \fBQwtInterval\fP & other) const\fC [inline]\fP"
 Union of two intervals
 .PP
@@ -451,6 +524,8 @@ Union of this and other
 .RE
 .PP
 
+.PP
+Definition at line 272 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::operator| (double value) const\fC [inline]\fP"
 Extend an interval
 .PP
@@ -470,6 +545,8 @@ Extended interval
 .RE
 .PP
 
+.PP
+Definition at line 308 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP & QwtInterval::operator|= (const \fBQwtInterval\fP & other)"
 
 .PP
@@ -486,6 +563,8 @@ This interval
 .RE
 .PP
 
+.PP
+Definition at line 253 of file qwt_interval\&.cpp\&.
 .SS "\fBQwtInterval\fP & QwtInterval::operator|= (double value)"
 Extend an interval
 .PP
@@ -505,6 +584,8 @@ Reference of the extended interval
 .RE
 .PP
 
+.PP
+Definition at line 380 of file qwt_interval\&.cpp\&.
 .SS "void QwtInterval::setBorderFlags (\fBBorderFlags\fP borderFlags)\fC [inline]\fP"
 Change the border flags
 .PP
@@ -519,6 +600,8 @@ Change the border flags
 .RE
 .PP
 
+.PP
+Definition at line 157 of file qwt_interval\&.h\&.
 .SS "void QwtInterval::setInterval (double minValue, double maxValue, \fBBorderFlags\fP borderFlags = \fC\fBIncludeBorders\fP\fP)\fC [inline]\fP"
 Assign the limits of the interval
 .PP
@@ -532,6 +615,8 @@ Assign the limits of the interval
 .RE
 .PP
 
+.PP
+Definition at line 143 of file qwt_interval\&.h\&.
 .SS "void QwtInterval::setMaxValue (double maxValue)\fC [inline]\fP"
 Assign the upper limit of the interval
 .PP
@@ -541,6 +626,8 @@ Assign the upper limit of the interval
 .RE
 .PP
 
+.PP
+Definition at line 186 of file qwt_interval\&.h\&.
 .SS "void QwtInterval::setMinValue (double minValue)\fC [inline]\fP"
 Assign the lower limit of the interval
 .PP
@@ -550,6 +637,8 @@ Assign the lower limit of the interval
 .RE
 .PP
 
+.PP
+Definition at line 176 of file qwt_interval\&.h\&.
 .SS "\fBQwtInterval\fP QwtInterval::symmetrize (double value) const"
 Adjust the limit that is closer to value, so that value becomes the center of the interval\&.
 .PP
@@ -564,6 +653,8 @@ Interval with value as center
 .RE
 .PP
 
+.PP
+Definition at line 317 of file qwt_interval\&.cpp\&.
 .SS "double QwtInterval::width () const\fC [inline]\fP"
 
 .PP
@@ -580,6 +671,26 @@ Interval width
 .RE
 .PP
 
+.PP
+Definition at line 227 of file qwt_interval\&.h\&.
+.SS "long double QwtInterval::widthL () const\fC [inline]\fP"
+
+.PP
+Return the width of an interval as long double\&. The width of invalid intervals is 0\&.0, otherwise the result is \fBmaxValue()\fP - \fBminValue()\fP\&.
+.PP
+\fBReturns\fP
+.RS 4
+Interval width 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBisValid()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 241 of file qwt_interval\&.h\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtTransform" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtTransform" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -60,6 +60,8 @@ p = p1 + ( p2 - p1 ) * ( T( s ) - T( s1 ) / ( T( s2 ) - T( s1 ) );
 s = invT ( T( s1 ) + ( T( s2 ) - T( s1 ) ) * ( p - p1 ) / ( p2 - p1 ) ); 
 .PP
 
+.PP
+Definition at line 35 of file qwt_transform\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "double QwtTransform::bounded (double value) const\fC [virtual]\fP"
@@ -78,6 +80,8 @@ value unmodified
 
 .PP
 Reimplemented in \fBQwtLogTransform\fP\&.
+.PP
+Definition at line 33 of file qwt_transform\&.cpp\&.
 .SS "virtual double QwtTransform::invTransform (double value) const\fC [pure virtual]\fP"
 Inverse transformation function
 .PP

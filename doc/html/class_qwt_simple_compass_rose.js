@@ -2,7 +2,7 @@ var class_qwt_simple_compass_rose =
 [
     [ "QwtSimpleCompassRose", "class_qwt_simple_compass_rose.html#a66cc98efe5717eaf11fb0e713cd1aa21", null ],
     [ "~QwtSimpleCompassRose", "class_qwt_simple_compass_rose.html#a157304c9a535126d33a80df9a9dad292", null ],
-    [ "draw", "class_qwt_simple_compass_rose.html#a9f474dbf0a9c35224e9dc1d168cbf35f", null ],
+    [ "draw", "class_qwt_simple_compass_rose.html#a81ac925ddcc4ba29de333237c1cf2b6d", null ],
     [ "numThornLevels", "class_qwt_simple_compass_rose.html#a6ea00a06b07d87798e2630b489fb619e", null ],
     [ "numThorns", "class_qwt_simple_compass_rose.html#a2c4df8d87a99b4e84e077773bf60956c", null ],
     [ "setNumThornLevels", "class_qwt_simple_compass_rose.html#a45cbc152c610d096ecd4231b0f9ba549", null ],

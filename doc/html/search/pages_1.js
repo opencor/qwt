@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['curve_20plots_3356',['Curve Plots',['../curvescreenshots.html',1,'']]]
+  ['curve_20plots_4013',['Curve Plots',['../curvescreenshots.html',1,'']]]
 ];

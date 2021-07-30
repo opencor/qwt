@@ -1,4 +1,4 @@
-.TH "QwtPainter" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPainter" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,10 +26,10 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .RI "static bool \fBroundingAlignment\fP ()"
 .br
 .ti -1c
-.RI "static bool \fBroundingAlignment\fP (QPainter *)"
+.RI "static bool \fBroundingAlignment\fP (const QPainter *)"
 .br
 .ti -1c
-.RI "static void \fBdrawText\fP (QPainter *, double x, double y, const QString &)"
+.RI "static void \fBdrawText\fP (QPainter *, qreal x, qreal y, const QString &)"
 .br
 .RI "Wrapper for QPainter::drawText() "
 .ti -1c
@@ -37,7 +37,7 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .br
 .RI "Wrapper for QPainter::drawText() "
 .ti -1c
-.RI "static void \fBdrawText\fP (QPainter *, double x, double y, double w, double h, int flags, const QString &)"
+.RI "static void \fBdrawText\fP (QPainter *, qreal x, qreal y, qreal w, qreal h, int flags, const QString &)"
 .br
 .RI "Wrapper for QPainter::drawText() "
 .ti -1c
@@ -48,7 +48,7 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .RI "static void \fBdrawSimpleRichText\fP (QPainter *, const QRectF &, int flags, const QTextDocument &)"
 .br
 .ti -1c
-.RI "static void \fBdrawRect\fP (QPainter *, double x, double y, double w, double h)"
+.RI "static void \fBdrawRect\fP (QPainter *, qreal x, qreal y, qreal w, qreal h)"
 .br
 .RI "Wrapper for QPainter::drawRect() "
 .ti -1c
@@ -64,11 +64,11 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .br
 .RI "Wrapper for QPainter::drawEllipse() "
 .ti -1c
-.RI "static void \fBdrawPie\fP (QPainter *, const QRectF &, int a, int alen)"
+.RI "static void \fBdrawPie\fP (QPainter *, const QRectF &r, int a, int alen)"
 .br
 .RI "Wrapper for QPainter::drawPie() "
 .ti -1c
-.RI "static void \fBdrawLine\fP (QPainter *, double x1, double y1, double x2, double y2)"
+.RI "static void \fBdrawLine\fP (QPainter *, qreal x1, qreal y1, qreal x2, qreal y2)"
 .br
 .RI "Wrapper for QPainter::drawLine() "
 .ti -1c
@@ -116,7 +116,7 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .br
 .RI "Wrapper for QPainter::drawPoints() "
 .ti -1c
-.RI "static void \fBdrawPoint\fP (QPainter *, double x, double y)"
+.RI "static void \fBdrawPoint\fP (QPainter *, qreal x, qreal y)"
 .br
 .RI "Wrapper for QPainter::drawPoint() "
 .ti -1c
@@ -147,10 +147,10 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .RI "static void \fBdrawRoundFrame\fP (QPainter *, const QRectF &, const QPalette &, int lineWidth, int frameStyle)"
 .br
 .ti -1c
-.RI "static void \fBdrawRoundedFrame\fP (QPainter *, const QRectF &, double xRadius, double yRadius, const QPalette &, int lineWidth, int frameStyle)"
+.RI "static void \fBdrawRoundedFrame\fP (QPainter *, const QRectF &, qreal xRadius, qreal yRadius, const QPalette &, int lineWidth, int frameStyle)"
 .br
 .ti -1c
-.RI "static void \fBdrawFrame\fP (QPainter *, const QRectF &rect, const QPalette &palette, QPalette::ColorRole foregroundRole, int frameWidth, int midLineWidth, int frameStyle)"
+.RI "static void \fBdrawFrame\fP (QPainter *, const QRectF &rect, const QPalette &palette, QPalette::ColorRole foregroundRole, int lineWidth, int midLineWidth, int frameStyle)"
 .br
 .ti -1c
 .RI "static void \fBdrawFocusRect\fP (QPainter *, const QWidget *)"
@@ -161,10 +161,10 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .br
 .RI "Draw a focus rectangle on a widget using its style\&. "
 .ti -1c
-.RI "static void \fBdrawColorBar\fP (QPainter *painter, const \fBQwtColorMap\fP &, const \fBQwtInterval\fP &, const \fBQwtScaleMap\fP &, Qt::Orientation, const QRectF &)"
+.RI "static void \fBdrawColorBar\fP (QPainter *, const \fBQwtColorMap\fP &, const \fBQwtInterval\fP &, const \fBQwtScaleMap\fP &, Qt::Orientation, const QRectF &)"
 .br
 .ti -1c
-.RI "static bool \fBisAligning\fP (QPainter *painter)"
+.RI "static bool \fBisAligning\fP (const QPainter *)"
 .br
 .ti -1c
 .RI "static bool \fBisX11GraphicsSystem\fP ()"
@@ -173,15 +173,38 @@ QwtPainter \- A collection of QPainter workarounds\&.
 .RI "static void \fBfillPixmap\fP (const QWidget *, QPixmap &, const QPoint &offset=QPoint())"
 .br
 .ti -1c
-.RI "static void \fBdrawBackgound\fP (QPainter *painter, const QRectF &rect, const QWidget *widget)"
+.RI "static void \fBdrawBackgound\fP (QPainter *, const QRectF &, const QWidget *)"
 .br
 .ti -1c
 .RI "static QPixmap \fBbackingStore\fP (QWidget *, const QSize &)"
+.br
+.ti -1c
+.RI "static qreal \fBdevicePixelRatio\fP (const QPaintDevice *)"
+.br
+.ti -1c
+.RI "static qreal \fBeffectivePenWidth\fP (const QPen &)"
+.br
+.ti -1c
+.RI "static int \fBhorizontalAdvance\fP (const QFontMetrics &, const QString &)"
+.br
+.ti -1c
+.RI "static qreal \fBhorizontalAdvance\fP (const QFontMetricsF &, const QString &)"
+.br
+.ti -1c
+.RI "static int \fBhorizontalAdvance\fP (const QFontMetrics &, QChar)"
+.br
+.ti -1c
+.RI "static qreal \fBhorizontalAdvance\fP (const QFontMetricsF &, QChar)"
+.br
+.ti -1c
+.RI "static QFont \fBscaledFont\fP (const QFont &, const QPaintDevice *=nullptr)"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 A collection of QPainter workarounds\&. 
+.PP
+Definition at line 36 of file qwt_painter\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QPixmap QwtPainter::backingStore (QWidget * widget, const QSize & size)\fC [static]\fP"
@@ -200,6 +223,24 @@ A pixmap that can be used as backing store
 .RE
 .PP
 
+.PP
+Definition at line 1525 of file qwt_painter\&.cpp\&.
+.SS "qreal QwtPainter::devicePixelRatio (const QPaintDevice * paintDevice)\fC [static]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Pixel ratio for a paint device 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpaintDevice\fP Paint device 
+.RE
+.PP
+
+.PP
+Definition at line 1491 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::drawBackgound (QPainter * painter, const QRectF & rect, const QWidget * widget)\fC [static]\fP"
 Fill rect with the background of a widget
 .PP
@@ -218,6 +259,8 @@ QStyle::PE_Widget, QWidget::backgroundRole()
 .RE
 .PP
 
+.PP
+Definition at line 1351 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::drawColorBar (QPainter * painter, const \fBQwtColorMap\fP & colorMap, const \fBQwtInterval\fP & interval, const \fBQwtScaleMap\fP & scaleMap, Qt::Orientation orientation, const QRectF & rect)\fC [static]\fP"
 Draw a color bar into a rectangle
 .PP
@@ -233,10 +276,12 @@ Draw a color bar into a rectangle
 .br
 \fIorientation\fP Orientation 
 .br
-\fIrect\fP Traget rectangle 
+\fIrect\fP Target rectangle 
 .RE
 .PP
 
+.PP
+Definition at line 1205 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::drawFrame (QPainter * painter, const QRectF & rect, const QPalette & palette, QPalette::ColorRole foregroundRole, int frameWidth, int midLineWidth, int frameStyle)\fC [static]\fP"
 Draw a rectangular frame
 .PP
@@ -258,7 +303,9 @@ Draw a rectangular frame
 .RE
 .PP
 
-.SS "void QwtPainter::drawRoundedFrame (QPainter * painter, const QRectF & rect, double xRadius, double yRadius, const QPalette & palette, int lineWidth, int frameStyle)\fC [static]\fP"
+.PP
+Definition at line 911 of file qwt_painter\&.cpp\&.
+.SS "void QwtPainter::drawRoundedFrame (QPainter * painter, const QRectF & rect, qreal xRadius, qreal yRadius, const QPalette & palette, int lineWidth, int frameStyle)\fC [static]\fP"
 Draw a rectangular frame with rounded borders
 .PP
 \fBParameters\fP
@@ -279,6 +326,8 @@ Draw a rectangular frame with rounded borders
 .RE
 .PP
 
+.PP
+Definition at line 1065 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::drawRoundFrame (QPainter * painter, const QRectF & rect, const QPalette & palette, int lineWidth, int frameStyle)\fC [static]\fP"
 Draw a round frame
 .PP
@@ -296,6 +345,8 @@ Draw a round frame
 .RE
 .PP
 
+.PP
+Definition at line 845 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::drawSimpleRichText (QPainter * painter, const QRectF & rect, int flags, const QTextDocument & text)\fC [static]\fP"
 Draw a text document into a rectangle
 .PP
@@ -303,7 +354,7 @@ Draw a text document into a rectangle
 .RS 4
 \fIpainter\fP Painter 
 .br
-\fIrect\fP Traget rectangle 
+\fIrect\fP Target rectangle 
 .br
 \fIflags\fP Alignments/Text flags, see QPainter::drawText() 
 .br
@@ -311,6 +362,24 @@ Draw a text document into a rectangle
 .RE
 .PP
 
+.PP
+Definition at line 489 of file qwt_painter\&.cpp\&.
+.SS "qreal QwtPainter::effectivePenWidth (const QPen & pen)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+pen\&.widthF() expanded to at least 1\&.0 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpen\fP Pen 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file qwt_painter\&.h\&.
 .SS "void QwtPainter::fillPixmap (const QWidget * widget, QPixmap & pixmap, const QPoint & offset = \fCQPoint()\fP)\fC [static]\fP"
 Fill a pixmap with the content of a widget
 .PP
@@ -331,7 +400,81 @@ QPixmap::fill()
 .RE
 .PP
 
-.SS "bool QwtPainter::isAligning (QPainter * painter)\fC [static]\fP"
+.PP
+Definition at line 1311 of file qwt_painter\&.cpp\&.
+.SS "int QwtPainter::horizontalAdvance (const QFontMetrics & fontMetrics, const QString & text)\fC [static]\fP"
+Distance appropriate for drawing a subsequent character after text\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfontMetrics\fP Font metrics 
+.br
+\fItext\fP Text 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+horizontal advance in pixels 
+.RE
+.PP
+
+.PP
+Definition at line 1379 of file qwt_painter\&.cpp\&.
+.SS "int QwtPainter::horizontalAdvance (const QFontMetrics & fontMetrics, QChar ch)\fC [static]\fP"
+Distance appropriate for drawing a subsequent character after ch\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfontMetrics\fP Font metrics 
+.br
+\fIch\fP Character 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+horizontal advance in pixels 
+.RE
+.PP
+
+.PP
+Definition at line 1414 of file qwt_painter\&.cpp\&.
+.SS "qreal QwtPainter::horizontalAdvance (const QFontMetricsF & fontMetrics, const QString & text)\fC [static]\fP"
+Distance appropriate for drawing a subsequent character after text\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfontMetrics\fP Font metrics 
+.br
+\fItext\fP Text 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+horizontal advance in pixels 
+.RE
+.PP
+
+.PP
+Definition at line 1397 of file qwt_painter\&.cpp\&.
+.SS "qreal QwtPainter::horizontalAdvance (const QFontMetricsF & fontMetrics, QChar ch)\fC [static]\fP"
+Distance appropriate for drawing a subsequent character after ch\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfontMetrics\fP Font metrics 
+.br
+\fIch\fP Character 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+horizontal advance in pixels 
+.RE
+.PP
+
+.PP
+Definition at line 1431 of file qwt_painter\&.cpp\&.
+.SS "bool QwtPainter::isAligning (const QPainter * painter)\fC [static]\fP"
 Check if the painter is using a paint engine, that aligns coordinates to integers\&. Today these are all paint engines beside QPaintEngine::Pdf and QPaintEngine::SVG\&.
 .PP
 If we have an integer based paint engine it is also checked if the painter has a transformation matrix, that rotates or scales\&.
@@ -352,6 +495,8 @@ true, when the painter is aligning
 .RE
 .PP
 
+.PP
+Definition at line 267 of file qwt_painter\&.cpp\&.
 .SS "bool QwtPainter::isX11GraphicsSystem ()\fC [static]\fP"
 Check is the application is running with the X11 graphics system that has some special capabilities that can be used for incremental painting to a widget\&.
 .PP
@@ -361,6 +506,8 @@ True, when the graphics system is X11
 .RE
 .PP
 
+.PP
+Definition at line 233 of file qwt_painter\&.cpp\&.
 .SS "bool QwtPainter::polylineSplitting ()\fC [inline]\fP, \fC [static]\fP"
 
 .PP
@@ -375,6 +522,8 @@ True, when line splitting for the raster paint engine is enabled\&.
 .RE
 .PP
 
+.PP
+Definition at line 170 of file qwt_painter\&.h\&.
 .SS "bool QwtPainter::roundingAlignment ()\fC [inline]\fP, \fC [static]\fP"
 Check whether coordinates should be rounded, before they are painted to a paint engine that rounds to integer values\&. For other paint engines ( PDF, SVG ), this flag has no effect\&.
 .PP
@@ -389,7 +538,9 @@ True, when rounding is enabled
 .RE
 .PP
 
-.SS "bool QwtPainter::roundingAlignment (QPainter * painter)\fC [inline]\fP, \fC [static]\fP"
+.PP
+Definition at line 183 of file qwt_painter\&.h\&.
+.SS "bool QwtPainter::roundingAlignment (const QPainter * painter)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 \fBReturns\fP
@@ -403,6 +554,26 @@ True, when rounding is enabled
 .RE
 .PP
 
+.PP
+Definition at line 192 of file qwt_painter\&.h\&.
+.SS "QFont QwtPainter::scaledFont (const QFont & font, const QPaintDevice * paintDevice = \fCnullptr\fP)\fC [static]\fP"
+Adjust the DPI value of font according to the DPI value of the paint device
+.PP
+\fBParameters\fP
+.RS 4
+\fIfont\fP Unscaled font 
+.br
+\fIpaintDevice\fP Paint device providing a DPI value\&. If paintDevice == null the DPI value of the primary screen will be used
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Font being adjusted to the DPI value of the paint device 
+.RE
+.PP
+
+.PP
+Definition at line 1450 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::setPolylineSplitting (bool enable)\fC [static]\fP"
 
 .PP
@@ -418,6 +589,8 @@ The default setting is true\&.
 .RE
 .PP
 
+.PP
+Definition at line 335 of file qwt_painter\&.cpp\&.
 .SS "void QwtPainter::setRoundingAlignment (bool enable)\fC [static]\fP"
 Enable whether coordinates should be rounded, before they are painted to a paint engine that floors to integer values\&. For other paint engines ( PDF, SVG ) this flag has no effect\&. \fBQwtPainter\fP stores this flag only, the rounding itself is done in the painting code ( f\&.e the plot items )\&.
 .PP
@@ -429,6 +602,8 @@ The default setting is true\&.
 .RE
 .PP
 
+.PP
+Definition at line 315 of file qwt_painter\&.cpp\&.
 
 .SH "Author"
 .PP 

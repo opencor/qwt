@@ -4,6 +4,7 @@ var class_qwt_abstract_scale =
     [ "~QwtAbstractScale", "class_qwt_abstract_scale.html#a73890593efff11427ea7a42a3ebadefd", null ],
     [ "abstractScaleDraw", "class_qwt_abstract_scale.html#aa61afdff037ef745a6dad686537cdb96", null ],
     [ "abstractScaleDraw", "class_qwt_abstract_scale.html#a473e84e72bd52afac58c04d004b5c06a", null ],
+    [ "changeEvent", "class_qwt_abstract_scale.html#af0927183d21284a5c37a82a04bfe2942", null ],
     [ "invTransform", "class_qwt_abstract_scale.html#a50932c4bed140da5ce96b6718de2636b", null ],
     [ "isInverted", "class_qwt_abstract_scale.html#a8c649b5b370b06f5028fb83b78189e4a", null ],
     [ "lowerBound", "class_qwt_abstract_scale.html#a41b46b9bf8b6d7986cc64c766f3b667c", null ],
@@ -29,5 +30,6 @@ var class_qwt_abstract_scale =
     [ "setScaleStepSize", "class_qwt_abstract_scale.html#aac745efd9414e529794e2189f7c535cb", null ],
     [ "setUpperBound", "class_qwt_abstract_scale.html#a1b2ea5c97eb19ccd55ec83713ab675fe", null ],
     [ "transform", "class_qwt_abstract_scale.html#a6fac557f38c8121b97fda514cf91bcbf", null ],
+    [ "updateScaleDraw", "class_qwt_abstract_scale.html#ad4015d13f98c9a48fb5d6321647f1323", null ],
     [ "upperBound", "class_qwt_abstract_scale.html#ae5696dae4e4cc4332a84453a0ce18cc8", null ]
 ];

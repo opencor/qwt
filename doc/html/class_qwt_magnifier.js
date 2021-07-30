@@ -2,7 +2,7 @@ var class_qwt_magnifier =
 [
     [ "QwtMagnifier", "class_qwt_magnifier.html#aa11b927c72e0421570a137f0fa1cfb7b", null ],
     [ "~QwtMagnifier", "class_qwt_magnifier.html#ac18a7858407951a335399ee6969a50da", null ],
-    [ "eventFilter", "class_qwt_magnifier.html#ae7f4c0ad7631501cec17abe31695281f", null ],
+    [ "eventFilter", "class_qwt_magnifier.html#af90d8c4b5915635957b636d502611740", null ],
     [ "getMouseButton", "class_qwt_magnifier.html#a8793ae263bf2c96db8eb7d2942f01974", null ],
     [ "getZoomInKey", "class_qwt_magnifier.html#a0df893ea54dbb2a1967248740a1db84f", null ],
     [ "getZoomOutKey", "class_qwt_magnifier.html#ad1192dfc87ec7b451d3dfa982cc0e602", null ],

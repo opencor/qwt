@@ -1,4 +1,4 @@
-.TH "QwtDate" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtDate" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -75,6 +75,8 @@ An axis for a date/time interval is expected to be aligned and divided in time/d
 .RE
 .PP
 
+.PP
+Definition at line 42 of file qwt_date\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "anonymous enum"
@@ -85,6 +87,8 @@ An axis for a date/time interval is expected to be aligned and divided in time/d
 .TP
 \fB\fIJulianDayForEpoch \fP\fP
 The Julian day of 'The Epoch'\&. 
+.PP
+Definition at line 102 of file qwt_date\&.h\&.
 .SS "enum \fBQwtDate::IntervalType\fP"
 Classification of an time interval
 .PP
@@ -116,6 +120,8 @@ The interval is related to months\&.
 .TP
 \fB\fIYear \fP\fP
 The interval is related to years\&. 
+.PP
+Definition at line 75 of file qwt_date\&.h\&.
 .SS "enum \fBQwtDate::Week0Type\fP"
 How to identify the first week of year differs between countries\&. 
 .PP
@@ -131,6 +137,8 @@ FirstThursday corresponds to the numbering that is implemented in QDate::weekNum
 'The week with January 1\&.1 in it\&.'
 .PP
 In the U\&.S\&. this definition is more common than FirstThursday\&. 
+.PP
+Definition at line 49 of file qwt_date\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QDateTime QwtDate::ceil (const QDateTime & dateTime, \fBIntervalType\fP intervalType)\fC [static]\fP"
@@ -154,6 +162,8 @@ Ceiled datetime
 .RE
 .PP
 
+.PP
+Definition at line 323 of file qwt_date\&.cpp\&.
 .SS "QDate QwtDate::dateOfWeek0 (int year, \fBWeek0Type\fP type)\fC [static]\fP"
 
 .PP
@@ -177,6 +187,8 @@ QLocale::firstDayOfWeek(), \fBweekNumber()\fP
 .RE
 .PP
 
+.PP
+Definition at line 542 of file qwt_date\&.cpp\&.
 .SS "QDateTime QwtDate::floor (const QDateTime & dateTime, \fBIntervalType\fP intervalType)\fC [static]\fP"
 Floor a datetime according the interval type
 .PP
@@ -198,6 +210,8 @@ Floored datetime
 .RE
 .PP
 
+.PP
+Definition at line 425 of file qwt_date\&.cpp\&.
 .SS "QDate QwtDate::maxDate ()\fC [static]\fP"
 Maximum for the supported date range
 .PP
@@ -225,6 +239,8 @@ The maximum differs between Qt4 and Qt5
 .RE
 .PP
 
+.PP
+Definition at line 521 of file qwt_date\&.cpp\&.
 .SS "QDate QwtDate::minDate ()\fC [static]\fP"
 Minimum for the supported date range
 .PP
@@ -247,6 +263,8 @@ minimum of the date range
 .RE
 .PP
 
+.PP
+Definition at line 499 of file qwt_date\&.cpp\&.
 .SS "QDateTime QwtDate::toDateTime (double value, Qt::TimeSpec timeSpec = \fCQt::UTC\fP)\fC [static]\fP"
 Translate from double to QDateTime
 .PP
@@ -273,6 +291,8 @@ The return datetime for Qt::OffsetFromUTC will be Qt::UTC
 .RE
 .PP
 
+.PP
+Definition at line 261 of file qwt_date\&.cpp\&.
 .SS "double QwtDate::toDouble (const QDateTime & dateTime)\fC [static]\fP"
 Translate from QDateTime to double
 .PP
@@ -297,6 +317,8 @@ For values very far below or above 1970-01-01 UTC rounding errors will happen du
 .RE
 .PP
 
+.PP
+Definition at line 298 of file qwt_date\&.cpp\&.
 .SS "QString QwtDate::toString (const QDateTime & dateTime, const QString & format, \fBWeek0Type\fP week0Type)\fC [static]\fP"
 Translate a datetime into a string
 .PP
@@ -334,6 +356,8 @@ QDateTime::toString(), \fBweekNumber()\fP, \fBQwtDateScaleDraw\fP
 .RE
 .PP
 
+.PP
+Definition at line 686 of file qwt_date\&.cpp\&.
 .SS "int QwtDate::utcOffset (const QDateTime & dateTime)\fC [static]\fP"
 Offset in seconds from Coordinated Universal Time
 .PP
@@ -342,7 +366,7 @@ The offset depends on the time specification of dateTime:
 .IP "\(bu" 2
 Qt::UTC 0, dateTime has no offset
 .IP "\(bu" 2
-Qt::OffsetFromUTC returns dateTime\&.utcOffset()
+Qt::OffsetFromUTC returns dateTime\&.offsetFromUtc()
 .IP "\(bu" 2
 Qt::LocalTime: number of seconds from the UTC
 .PP
@@ -360,6 +384,8 @@ Offset in seconds
 .RE
 .PP
 
+.PP
+Definition at line 635 of file qwt_date\&.cpp\&.
 .SS "int QwtDate::weekNumber (const QDate & date, \fBWeek0Type\fP type)\fC [static]\fP"
 Find the week number of a date
 .PP
@@ -386,6 +412,8 @@ Week number, starting with 1
 .RE
 .PP
 
+.PP
+Definition at line 585 of file qwt_date\&.cpp\&.
 
 .SH "Author"
 .PP 

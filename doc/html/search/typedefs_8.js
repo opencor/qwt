@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['renderhints_3011',['RenderHints',['../class_qwt_graphic.html#ac239a34c1c3fe47a3a57b70331c0d2fa',1,'QwtGraphic::RenderHints()'],['../class_qwt_plot_item.html#a40cf900701d3a68948b00316689616d1',1,'QwtPlotItem::RenderHints()']]]
+  ['options_3617',['Options',['../class_qwt_plot_layout.html#a9b2b5616e6c1a21ccc7824facf1df067',1,'QwtPlotLayout::Options()'],['../class_qwt_polar_layout.html#aec564b38dd98f314989807c200b48df2',1,'QwtPolarLayout::Options()']]]
 ];

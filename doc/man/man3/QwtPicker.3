@@ -1,4 +1,4 @@
-.TH "QwtPicker" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPicker" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ QwtPicker \- \fBQwtPicker\fP provides selections on a widget\&.
 .PP
 Inherits QObject, and \fBQwtEventPattern\fP\&.
 .PP
-Inherited by \fBQwtPlotPicker\fP\&.
+Inherited by \fBQwtPlotPicker\fP, and \fBQwtPolarPicker\fP\&.
 .SS "Public Types"
 
 .in +1c
@@ -124,7 +124,7 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .RI "bool \fBisActive\fP () const"
 .br
 .ti -1c
-.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *)"
+.RI "virtual bool \fBeventFilter\fP (QObject *, QEvent *) override"
 .br
 .RI "Event filter\&. "
 .ti -1c
@@ -143,6 +143,9 @@ Inherited by \fBQwtPlotPicker\fP\&.
 .br
 .ti -1c
 .RI "virtual void \fBdrawTracker\fP (QPainter *) const"
+.br
+.ti -1c
+.RI "virtual QRegion \fBtrackerMask\fP () const"
 .br
 .ti -1c
 .RI "virtual QRegion \fBrubberBandMask\fP () const"
@@ -278,14 +281,13 @@ Optionally \fBQwtPicker\fP support the process of collecting points by a rubber 
 #include <qwt_picker\&.h>
 #include <qwt_picker_machine\&.h>
 
-QwtPicker *picker = new QwtPicker(widget);
-picker->setStateMachine(new QwtPickerDragRectMachine);
-picker->setTrackerMode(QwtPicker::ActiveOnly);
-picker->setRubberBand(QwtPicker::RectRubberBand);
+   QwtPicker *picker = new QwtPicker(widget);
+   picker->setStateMachine(new QwtPickerDragRectMachine);
+   picker->setTrackerMode(QwtPicker::ActiveOnly);
+   picker->setRubberBand(QwtPicker::RectRubberBand);
 
 .fi
 .PP
- \\endpar
 .RE
 .PP
 The state machine triggers the following commands:
@@ -322,6 +324,8 @@ In case of QWidget::NoFocus the focus policy of the observed widget is set to QW
 .RE
 .PP
 
+.PP
+Definition at line 103 of file qwt_picker\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPicker::DisplayMode\fP"
@@ -347,6 +351,8 @@ Display always\&.
 .TP
 \fB\fIActiveOnly \fP\fP
 Display only when the selection is active\&. 
+.PP
+Definition at line 161 of file qwt_picker\&.h\&.
 .SS "enum \fBQwtPicker::ResizeMode\fP"
 Controls what to do with the selected points of an active selection when the observed widget is resized\&.
 .PP
@@ -367,6 +373,8 @@ All points are scaled according to the new size,\&.
 .TP
 \fB\fIKeepSize \fP\fP
 All points remain unchanged\&. 
+.PP
+Definition at line 181 of file qwt_picker\&.h\&.
 .SS "enum \fBQwtPicker::RubberBand\fP"
 Rubber band style
 .PP
@@ -405,6 +413,8 @@ A polygon ( only for \fBQwtPickerMachine::PolygonSelection\fP )
 .TP
 \fB\fIUserRubberBand \fP\fP
 Values >= UserRubberBand can be used to define additional rubber bands\&. 
+.PP
+Definition at line 127 of file qwt_picker\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPicker::QwtPicker (QWidget * parent)\fC [explicit]\fP"
@@ -418,6 +428,8 @@ Creates an picker that is enabled, but without a state machine\&. rubber band an
 .RE
 .PP
 
+.PP
+Definition at line 168 of file qwt_picker\&.cpp\&.
 .SS "QwtPicker::QwtPicker (\fBRubberBand\fP rubberBand, \fBDisplayMode\fP trackerMode, QWidget * parent)\fC [explicit]\fP"
 Constructor
 .PP
@@ -431,6 +443,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 181 of file qwt_picker\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "bool QwtPicker::accept (QPolygon & selection) const\fC [protected]\fP, \fC [virtual]\fP"
@@ -451,6 +465,8 @@ true, when accepted, false otherwise
 
 .PP
 Reimplemented in \fBQwtPlotZoomer\fP\&.
+.PP
+Definition at line 1383 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::activated (bool on)\fC [signal]\fP"
 A signal indicating, when the picker has been activated\&. Together with \fBsetEnabled()\fP it can be used to implement selections with more than one picker\&.
 .PP
@@ -501,7 +517,6 @@ QPolygon MyPicker::adjustedPoints( const QPolygon &points ) const
 
 .fi
 .PP
- \\endpar
 .RE
 .PP
 \fBParameters\fP
@@ -515,6 +530,8 @@ Selected points unmodified
 .RE
 .PP
 
+.PP
+Definition at line 783 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::append (const QPoint & pos)\fC [protected]\fP, \fC [virtual]\fP"
 Append a point to the selection and update rubber band and tracker\&. The \fBappended()\fP signal is emitted\&.
 .PP
@@ -530,7 +547,9 @@ Append a point to the selection and update rubber band and tracker\&. The \fBapp
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotPicker\fP\&.
+Reimplemented in \fBQwtPolarPicker\fP, and \fBQwtPlotPicker\fP\&.
+.PP
+Definition at line 1320 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::appended (const QPoint & pos)\fC [signal]\fP"
 A signal emitted when a point has been appended to the selection
 .PP
@@ -556,6 +575,8 @@ Open a selection setting the state to active
 
 .PP
 Reimplemented in \fBQwtPlotZoomer\fP\&.
+.PP
+Definition at line 1239 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::changed (const QPolygon & selection)\fC [signal]\fP"
 A signal emitted when the active selection has been changed\&. This might happen when the observed widget is resized\&.
 .PP
@@ -584,6 +605,8 @@ Draw a rubber band, depending on \fBrubberBand()\fP
 .RE
 .PP
 
+.PP
+Definition at line 637 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::drawTracker (QPainter * painter) const\fC [virtual]\fP"
 Draw the tracker
 .PP
@@ -598,6 +621,8 @@ Draw the tracker
 .RE
 .PP
 
+.PP
+Definition at line 732 of file qwt_picker\&.cpp\&.
 .SS "bool QwtPicker::end (bool ok = \fCtrue\fP)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -620,8 +645,10 @@ true if the selection is accepted, false otherwise
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotZoomer\fP, and \fBQwtPlotPicker\fP\&.
-.SS "bool QwtPicker::eventFilter (QObject * object, QEvent * event)\fC [virtual]\fP"
+Reimplemented in \fBQwtPolarPicker\fP, \fBQwtPlotZoomer\fP, and \fBQwtPlotPicker\fP\&.
+.PP
+Definition at line 1272 of file qwt_picker\&.cpp\&.
+.SS "bool QwtPicker::eventFilter (QObject * object, QEvent * event)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Event filter\&. When \fBisEnabled()\fP is true all events of the observed widget are filtered\&. Mouse and keyboard events are translated into widgetMouse- and widgetKey- and widgetWheel-events\&. Paint and Resize events are handled to keep rubber band and tracker up to date\&.
@@ -644,6 +671,8 @@ Always false\&.
 .RE
 .PP
 
+.PP
+Definition at line 893 of file qwt_picker\&.cpp\&.
 .SS "bool QwtPicker::isActive () const"
 A picker is active between \fBbegin()\fP and \fBend()\fP\&. 
 .PP
@@ -653,6 +682,8 @@ true if the selection is active\&.
 .RE
 .PP
 
+.PP
+Definition at line 1393 of file qwt_picker\&.cpp\&.
 .SS "bool QwtPicker::isEnabled () const"
 
 .PP
@@ -667,6 +698,8 @@ true when enabled, false otherwise
 .RE
 .PP
 
+.PP
+Definition at line 399 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::move (const QPoint & pos)\fC [protected]\fP, \fC [virtual]\fP"
 Move the last point of the selection The \fBmoved()\fP signal is emitted\&.
 .PP
@@ -682,7 +715,9 @@ Move the last point of the selection The \fBmoved()\fP signal is emitted\&.
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotPicker\fP\&.
+Reimplemented in \fBQwtPolarPicker\fP, and \fBQwtPlotPicker\fP\&.
+.PP
+Definition at line 1338 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::moved (const QPoint & pos)\fC [signal]\fP"
 A signal emitted whenever the last appended point of the selection has been moved\&.
 .PP
@@ -706,6 +741,10 @@ Find the area of the observed widget, where selection might happen\&.
 .RE
 .PP
 
+.PP
+Reimplemented in \fBQwtPolarPicker\fP\&.
+.PP
+Definition at line 1474 of file qwt_picker\&.cpp\&.
 .SS "const QPolygon & QwtPicker::pickedPoints () const\fC [protected]\fP"
 Return the points, that have been collected so far\&. The \fBselection()\fP is calculated from the \fBpickedPoints()\fP in \fBadjustedPoints()\fP\&. 
 .PP
@@ -715,6 +754,8 @@ Picked points
 .RE
 .PP
 
+.PP
+Definition at line 1403 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::remove ()\fC [protected]\fP, \fC [virtual]\fP"
 Remove the last point of the selection The \fBremoved()\fP signal is emitted\&.
 .PP
@@ -724,6 +765,8 @@ Remove the last point of the selection The \fBremoved()\fP signal is emitted\&.
 .RE
 .PP
 
+.PP
+Definition at line 1359 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::removed (const QPoint & pos)\fC [signal]\fP"
 A signal emitted whenever the last appended point of the selection has been removed\&.
 .PP
@@ -740,6 +783,8 @@ A signal emitted whenever the last appended point of the selection has been remo
 
 .SS "void QwtPicker::reset ()\fC [protected]\fP, \fC [virtual]\fP"
 Reset the state machine and terminate ( end(false) ) the selection 
+.PP
+Definition at line 1303 of file qwt_picker\&.cpp\&.
 .SS "\fBQwtPicker::ResizeMode\fP QwtPicker::resizeMode () const"
 
 .PP
@@ -754,6 +799,8 @@ Resize mode
 .RE
 .PP
 
+.PP
+Definition at line 361 of file qwt_picker\&.cpp\&.
 .SS "\fBQwtPicker::RubberBand\fP QwtPicker::rubberBand () const"
 
 .PP
@@ -768,6 +815,8 @@ Rubber band style
 .RE
 .PP
 
+.PP
+Definition at line 298 of file qwt_picker\&.cpp\&.
 .SS "QRegion QwtPicker::rubberBandMask () const\fC [virtual]\fP"
 Calculate the mask for the rubber band overlay
 .PP
@@ -782,6 +831,8 @@ QWidget::setMask()
 .RE
 .PP
 
+.PP
+Definition at line 525 of file qwt_picker\&.cpp\&.
 .SS "const \fBQwtWidgetOverlay\fP * QwtPicker::rubberBandOverlay () const\fC [protected]\fP"
 
 .PP
@@ -791,6 +842,8 @@ Overlay displaying the rubber band
 .RE
 .PP
 
+.PP
+Definition at line 1581 of file qwt_picker\&.cpp\&.
 .SS "QPen QwtPicker::rubberBandPen () const"
 
 .PP
@@ -805,6 +858,8 @@ Rubber band pen
 .RE
 .PP
 
+.PP
+Definition at line 472 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::selected (const QPolygon & polygon)\fC [signal]\fP"
 A signal emitting the selected points, at the end of a selection\&.
 .PP
@@ -828,6 +883,8 @@ Selected points
 .RE
 .PP
 
+.PP
+Definition at line 792 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setEnabled (bool enabled)\fC [slot]\fP"
 
 .PP
@@ -844,6 +901,8 @@ En/disable the picker\&. When enabled is true an event filter is installed for t
 .RE
 .PP
 
+.PP
+Definition at line 375 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setResizeMode (\fBResizeMode\fP mode)"
 
 .PP
@@ -864,6 +923,8 @@ The default mode is Stretch\&.
 .RE
 .PP
 
+.PP
+Definition at line 351 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setRubberBand (\fBRubberBand\fP rubberBand)"
 Set the rubber band style
 .PP
@@ -878,6 +939,8 @@ Set the rubber band style
 .RE
 .PP
 
+.PP
+Definition at line 289 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setRubberBandPen (const QPen & pen)"
 Set the pen for the rubberband
 .PP
@@ -892,6 +955,8 @@ Set the pen for the rubberband
 .RE
 .PP
 
+.PP
+Definition at line 459 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setStateMachine (\fBQwtPickerMachine\fP * stateMachine)"
 Set a state machine and delete the previous one
 .PP
@@ -906,6 +971,8 @@ Set a state machine and delete the previous one
 .RE
 .PP
 
+.PP
+Definition at line 229 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setTrackerFont (const QFont & font)"
 Set the font for the tracker
 .PP
@@ -920,6 +987,8 @@ Set the font for the tracker
 .RE
 .PP
 
+.PP
+Definition at line 410 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setTrackerMode (\fBDisplayMode\fP mode)"
 
 .PP
@@ -941,6 +1010,8 @@ In case of AlwaysOn, mouseTracking will be enabled for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 319 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::setTrackerPen (const QPen & pen)"
 Set the pen for the tracker
 .PP
@@ -955,6 +1026,8 @@ Set the pen for the tracker
 .RE
 .PP
 
+.PP
+Definition at line 435 of file qwt_picker\&.cpp\&.
 .SS "\fBQwtPickerMachine\fP * QwtPicker::stateMachine ()"
 
 .PP
@@ -969,6 +1042,8 @@ Assigned state machine
 .RE
 .PP
 
+.PP
+Definition at line 247 of file qwt_picker\&.cpp\&.
 .SS "const \fBQwtPickerMachine\fP * QwtPicker::stateMachine () const"
 
 .PP
@@ -983,6 +1058,8 @@ Assigned state machine
 .RE
 .PP
 
+.PP
+Definition at line 256 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::stretchSelection (const QSize & oldSize, const QSize & newSize)\fC [protected]\fP, \fC [virtual]\fP"
 Scale the selection by the ratios of oldSize and newSize The \fBchanged()\fP signal is emitted\&.
 .PP
@@ -999,6 +1076,8 @@ Scale the selection by the ratios of oldSize and newSize The \fBchanged()\fP sig
 .RE
 .PP
 
+.PP
+Definition at line 1417 of file qwt_picker\&.cpp\&.
 .SS "QFont QwtPicker::trackerFont () const"
 
 .PP
@@ -1013,6 +1092,24 @@ Tracker font
 .RE
 .PP
 
+.PP
+Definition at line 424 of file qwt_picker\&.cpp\&.
+.SS "QRegion QwtPicker::trackerMask () const\fC [virtual]\fP"
+Calculate the mask for the tracker overlay
+.PP
+\fBReturns\fP
+.RS 4
+Region with one rectangle: trackerRect( trackerFont() ); 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QWidget::setMask(), \fBtrackerRect()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 514 of file qwt_picker\&.cpp\&.
 .SS "\fBQwtPicker::DisplayMode\fP QwtPicker::trackerMode () const"
 
 .PP
@@ -1027,6 +1124,8 @@ Tracker display mode
 .RE
 .PP
 
+.PP
+Definition at line 332 of file qwt_picker\&.cpp\&.
 .SS "const \fBQwtWidgetOverlay\fP * QwtPicker::trackerOverlay () const\fC [protected]\fP"
 
 .PP
@@ -1036,6 +1135,8 @@ Overlay displaying the tracker text
 .RE
 .PP
 
+.PP
+Definition at line 1587 of file qwt_picker\&.cpp\&.
 .SS "QPen QwtPicker::trackerPen () const"
 
 .PP
@@ -1050,6 +1151,8 @@ Tracker pen
 .RE
 .PP
 
+.PP
+Definition at line 448 of file qwt_picker\&.cpp\&.
 .SS "QPoint QwtPicker::trackerPosition () const"
 
 .PP
@@ -1059,6 +1162,8 @@ Current position of the tracker
 .RE
 .PP
 
+.PP
+Definition at line 798 of file qwt_picker\&.cpp\&.
 .SS "QRect QwtPicker::trackerRect (const QFont & font) const\fC [virtual]\fP"
 Calculate the bounding rectangle for the tracker text from the current position of the tracker
 .PP
@@ -1078,6 +1183,8 @@ Bounding rectangle of the tracker text
 .RE
 .PP
 
+.PP
+Definition at line 812 of file qwt_picker\&.cpp\&.
 .SS "\fBQwtText\fP QwtPicker::trackerText (const QPoint & pos) const\fC [virtual]\fP"
 
 .PP
@@ -1097,7 +1204,9 @@ Converted position as string
 .PP
 
 .PP
-Reimplemented in \fBQwtPlotPicker\fP\&.
+Reimplemented in \fBQwtPolarPicker\fP, and \fBQwtPlotPicker\fP\&.
+.PP
+Definition at line 490 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::transition (const QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Passes an event to the state machine and executes the resulting commands\&. Append and Move commands use the current position of the cursor ( QCursor::pos() )\&.
 .PP
@@ -1107,6 +1216,8 @@ Passes an event to the state machine and executes the resulting commands\&. Appe
 .RE
 .PP
 
+.PP
+Definition at line 1176 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetEnterEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a enter event for the observed widget\&.
 .PP
@@ -1121,6 +1232,8 @@ Handle a enter event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 1018 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetKeyPressEvent (QKeyEvent * keyEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a key press event for the observed widget\&.
 .PP
@@ -1139,6 +1252,8 @@ Selections can be completely done by the keyboard\&. The arrow keys move the cur
 
 .PP
 Reimplemented in \fBQwtPlotZoomer\fP\&.
+.PP
+Definition at line 1112 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetKeyReleaseEvent (QKeyEvent * keyEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a key release event for the observed widget\&.
 .PP
@@ -1155,6 +1270,8 @@ Passes the event to the state machine\&.
 .RE
 .PP
 
+.PP
+Definition at line 1164 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetLeaveEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a leave event for the observed widget\&.
 .PP
@@ -1169,6 +1286,8 @@ Handle a leave event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 1032 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetMouseDoubleClickEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle mouse double click event for the observed widget\&.
 .PP
@@ -1183,6 +1302,8 @@ Handle mouse double click event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 1064 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetMouseMoveEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse move event for the observed widget\&.
 .PP
@@ -1197,6 +1318,8 @@ Handle a mouse move event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 996 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetMousePressEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse press event for the observed widget\&.
 .PP
@@ -1211,6 +1334,8 @@ Handle a mouse press event for the observed widget\&.
 .RE
 .PP
 
+.PP
+Definition at line 982 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetMouseReleaseEvent (QMouseEvent * mouseEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a mouse release event for the observed widget\&.
 .PP
@@ -1227,6 +1352,8 @@ Handle a mouse release event for the observed widget\&.
 
 .PP
 Reimplemented in \fBQwtPlotZoomer\fP\&.
+.PP
+Definition at line 1050 of file qwt_picker\&.cpp\&.
 .SS "void QwtPicker::widgetWheelEvent (QWheelEvent * wheelEvent)\fC [protected]\fP, \fC [virtual]\fP"
 Handle a wheel event for the observed widget\&.
 .PP
@@ -1243,6 +1370,8 @@ Move the last point of the selection in case of \fBisActive()\fP == true
 .RE
 .PP
 
+.PP
+Definition at line 1081 of file qwt_picker\&.cpp\&.
 
 .SH "Author"
 .PP 

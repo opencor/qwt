@@ -24,6 +24,13 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"},
+{text:"Enumerations",url:"namespacemembers_enum.html"},
+{text:"Enumerator",url:"namespacemembers_eval.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
@@ -83,7 +90,20 @@ var menudata={children:[
 {text:"z",url:"functions_func_z.html#index_z"},
 {text:"~",url:"functions_func_~.html#index__7E"}]},
 {text:"Variables",url:"functions_vars.html"},
-{text:"Typedefs",url:"functions_type.html"},
+{text:"Typedefs",url:"functions_type.html",children:[
+{text:"a",url:"functions_type.html#index_a"},
+{text:"b",url:"functions_type.html#index_b"},
+{text:"c",url:"functions_type.html#index_c"},
+{text:"d",url:"functions_type.html#index_d"},
+{text:"g",url:"functions_type.html#index_g"},
+{text:"i",url:"functions_type.html#index_i"},
+{text:"l",url:"functions_type.html#index_l"},
+{text:"m",url:"functions_type.html#index_m"},
+{text:"o",url:"functions_type.html#index_o"},
+{text:"p",url:"functions_type.html#index_p"},
+{text:"r",url:"functions_type.html#index_r"},
+{text:"s",url:"functions_type.html#index_s"},
+{text:"t",url:"functions_type.html#index_t"}]},
 {text:"Enumerations",url:"functions_enum.html",children:[
 {text:"a",url:"functions_enum.html#index_a"},
 {text:"b",url:"functions_enum.html#index_b"},
@@ -91,6 +111,7 @@ var menudata={children:[
 {text:"d",url:"functions_enum.html#index_d"},
 {text:"e",url:"functions_enum.html#index_e"},
 {text:"f",url:"functions_enum.html#index_f"},
+{text:"g",url:"functions_enum.html#index_g"},
 {text:"h",url:"functions_enum.html#index_h"},
 {text:"i",url:"functions_enum.html#index_i"},
 {text:"k",url:"functions_enum.html#index_k"},

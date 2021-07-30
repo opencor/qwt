@@ -1,4 +1,4 @@
-.TH "QwtNullPaintDevice" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtNullPaintDevice" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ QwtNullPaintDevice \- A null paint device doing nothing\&.
 .PP
 Inherits QPaintDevice\&.
 .PP
-Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
+Inherited by \fBQwtGraphic\fP\&.
 .SS "Public Types"
 
 .in +1c
@@ -39,11 +39,11 @@ Inherited by \fBQwtGraphic\fP, and QwtStyleSheetRecorder\&.
 .RI "\fBMode\fP \fBmode\fP () const"
 .br
 .ti -1c
-.RI "virtual QPaintEngine * \fBpaintEngine\fP () const"
+.RI "virtual QPaintEngine * \fBpaintEngine\fP () const override"
 .br
 .RI "See QPaintDevice::paintEngine() "
 .ti -1c
-.RI "virtual int \fBmetric\fP (PaintDeviceMetric) const"
+.RI "virtual int \fBmetric\fP (PaintDeviceMetric) const override"
 .br
 .ti -1c
 .RI "virtual void \fBdrawRects\fP (const QRect *, int)"
@@ -126,6 +126,8 @@ Sometimes important layout/rendering geometries are not available or changeable 
 \fBQwtNullPaintDevice\fP can be used to manipulate or filter out this information by analyzing the stream of paint primitives\&.
 .PP
 F\&.e\&. \fBQwtNullPaintDevice\fP is used by \fBQwtPlotCanvas\fP to identify styled backgrounds with rounded corners\&. 
+.PP
+Definition at line 32 of file qwt_null_paintdevice\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtNullPaintDevice::Mode\fP"
@@ -171,9 +173,11 @@ Vector graphic primitives are mapped to a QPainterPath and are painted by drawPa
 \fBdrawImage()\fP 
 .PP
 
+.PP
+Definition at line 40 of file qwt_null_paintdevice\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "int QwtNullPaintDevice::metric (PaintDeviceMetric deviceMetric) const\fC [virtual]\fP"
+.SS "int QwtNullPaintDevice::metric (PaintDeviceMetric deviceMetric) const\fC [override]\fP, \fC [virtual]\fP"
 See QPaintDevice::metric()
 .PP
 \fBParameters\fP
@@ -192,6 +196,8 @@ Metric information for the given paint device metric\&.
 .RE
 .PP
 
+.PP
+Definition at line 422 of file qwt_null_paintdevice\&.cpp\&.
 .SS "\fBQwtNullPaintDevice::Mode\fP QwtNullPaintDevice::mode () const"
 
 .PP
@@ -206,6 +212,8 @@ Render mode
 .RE
 .PP
 
+.PP
+Definition at line 395 of file qwt_null_paintdevice\&.cpp\&.
 .SS "void QwtNullPaintDevice::setMode (\fBMode\fP mode)"
 Set the render mode
 .PP
@@ -220,6 +228,8 @@ Set the render mode
 .RE
 .PP
 
+.PP
+Definition at line 386 of file qwt_null_paintdevice\&.cpp\&.
 .SS "virtual QSize QwtNullPaintDevice::sizeMetrics () const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP

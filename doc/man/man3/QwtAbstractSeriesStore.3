@@ -1,4 +1,4 @@
-.TH "QwtAbstractSeriesStore" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractSeriesStore" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,14 +10,18 @@ QwtAbstractSeriesStore \- Bridge between \fBQwtSeriesStore\fP and \fBQwtPlotSeri
 .PP
 \fC#include <qwt_series_store\&.h>\fP
 .PP
-Inherited by \fBQwtPlotSeriesItem\fP\fC [virtual]\fP, \fBQwtSeriesStore< T >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QPointF >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtIntervalSample >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtPoint3D >\fP\fC [virtual]\fP, and \fBQwtSeriesStore< QwtSetSample >\fP\fC [virtual]\fP\&.
-.SS "Protected Member Functions"
+Inherited by \fBQwtSeriesStore< QwtIntervalSample >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtVectorFieldSample >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QPointF >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtPoint3D >\fP\fC [virtual]\fP, \fBQwtSeriesStore< QwtSetSample >\fP\fC [virtual]\fP, \fBQwtPlotSeriesItem\fP\fC [virtual]\fP, and \fBQwtSeriesStore< T >\fP\fC [virtual]\fP\&.
+.SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "virtual \fB~QwtAbstractSeriesStore\fP ()"
 .br
 .RI "Destructor\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
 .ti -1c
 .RI "virtual void \fBdataChanged\fP ()=0"
 .br
@@ -37,6 +41,8 @@ Inherited by \fBQwtPlotSeriesItem\fP\fC [virtual]\fP, \fBQwtSeriesStore< T >\fP\
 Bridge between \fBQwtSeriesStore\fP and \fBQwtPlotSeriesItem\fP\&. 
 
 \fBQwtAbstractSeriesStore\fP is an abstract interface only to make it possible to isolate the template based methods ( \fBQwtSeriesStore\fP ) from the regular methods ( \fBQwtPlotSeriesItem\fP ) to make it possible to derive from \fBQwtPlotSeriesItem\fP without any hassle with templates\&. 
+.PP
+Definition at line 24 of file qwt_series_store\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "virtual QRectF QwtAbstractSeriesStore::dataRect () const\fC [protected]\fP, \fC [pure virtual]\fP"
@@ -49,7 +55,7 @@ Bounding rectangle of the stored series
 .PP
 
 .PP
-Implemented in \fBQwtSeriesStore< T >\fP\&.
+Implemented in \fBQwtSeriesStore< T >\fP, \fBQwtSeriesStore< QwtIntervalSample >\fP, \fBQwtSeriesStore< QwtVectorFieldSample >\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP, \fBQwtSeriesStore< QPointF >\fP, \fBQwtSeriesStore< QwtPoint3D >\fP, and \fBQwtSeriesStore< QwtSetSample >\fP\&.
 .SS "virtual size_t QwtAbstractSeriesStore::dataSize () const\fC [protected]\fP, \fC [pure virtual]\fP"
 
 .PP
@@ -60,7 +66,7 @@ Number of samples
 .PP
 
 .PP
-Implemented in \fBQwtSeriesStore< T >\fP\&.
+Implemented in \fBQwtSeriesStore< T >\fP, \fBQwtSeriesStore< QwtIntervalSample >\fP, \fBQwtSeriesStore< QwtVectorFieldSample >\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP, \fBQwtSeriesStore< QPointF >\fP, \fBQwtSeriesStore< QwtPoint3D >\fP, and \fBQwtSeriesStore< QwtSetSample >\fP\&.
 .SS "virtual void QwtAbstractSeriesStore::setRectOfInterest (const QRectF &)\fC [protected]\fP, \fC [pure virtual]\fP"
 Set a the 'rectangle of interest' for the stored series 
 .PP
@@ -71,7 +77,7 @@ Set a the 'rectangle of interest' for the stored series
 .PP
 
 .PP
-Implemented in \fBQwtSeriesStore< T >\fP, \fBQwtSeriesStore< QwtIntervalSample >\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP, \fBQwtSeriesStore< QPointF >\fP, \fBQwtSeriesStore< QwtSetSample >\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
+Implemented in \fBQwtSeriesStore< T >\fP, \fBQwtSeriesStore< QwtIntervalSample >\fP, \fBQwtSeriesStore< QwtVectorFieldSample >\fP, \fBQwtSeriesStore< QwtOHLCSample >\fP, \fBQwtSeriesStore< QPointF >\fP, \fBQwtSeriesStore< QwtPoint3D >\fP, and \fBQwtSeriesStore< QwtSetSample >\fP\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtPlotIntervalCurve" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotIntervalCurve" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,7 +24,6 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -40,7 +39,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
@@ -49,7 +48,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (const QVector< \fBQwtIntervalSample\fP > &)"
+.RI "void \fBsetSamples\fP (const \fBQVector\fP< \fBQwtIntervalSample\fP > &)"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > *)"
@@ -83,13 +82,13 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 .RI "const \fBQwtIntervalSymbol\fP * \fBsymbol\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
+.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const override"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .ti -1c
-.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
+.RI "virtual \fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const override"
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -111,6 +110,14 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtIntervalSample >\fP\
 \fBQwtPlotIntervalCurve\fP represents a series of samples, where each value is associated with an interval ( $[y1,y2] = f(x)$ )\&. 
 
 The representation depends on the \fBstyle()\fP and an optional \fBsymbol()\fP that is displayed for each interval\&. \fBQwtPlotIntervalCurve\fP might be used to display error bars or the area between 2 curves\&. 
+.PP
+Definition at line 27 of file qwt_plot_intervalcurve\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtPlotIntervalCurve::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 77 of file qwt_plot_intervalcurve\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotIntervalCurve::CurveStyle\fP"
@@ -136,6 +143,8 @@ Build 2 curves from the upper and lower limits of the intervals and draw them wi
 .TP
 \fB\fIUserCurve \fP\fP
 Styles >= \fBQwtPlotIntervalCurve::UserCurve\fP are reserved for derived classes that overload \fBdrawSeries()\fP with additional application specific curve types\&. 
+.PP
+Definition at line 38 of file qwt_plot_intervalcurve\&.h\&.
 .SS "enum \fBQwtPlotIntervalCurve::PaintAttribute\fP"
 Attributes to modify the drawing algorithm\&. 
 .PP
@@ -154,6 +163,8 @@ Clip polygons before painting them\&. In situations, where points are far outsid
 .TP
 \fB\fIClipSymbol \fP\fP
 Check if a symbol is on the plot canvas before painting it\&. 
+.PP
+Definition at line 64 of file qwt_plot_intervalcurve\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
@@ -165,6 +176,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 90 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "QwtPlotIntervalCurve::QwtPlotIntervalCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
@@ -174,9 +187,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 80 of file qwt_plot_intervalcurve\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtPlotIntervalCurve::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtPlotIntervalCurve::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -187,6 +202,8 @@ Bounding rectangle of all samples\&. For an empty series the rectangle is invali
 
 .PP
 Reimplemented from \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 300 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "const QBrush & QwtPlotIntervalCurve::brush () const"
 
 .PP
@@ -201,7 +218,9 @@ Brush used to fill the area in Tube \fBstyle()\fP
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
+.PP
+Definition at line 291 of file qwt_plot_intervalcurve\&.cpp\&.
+.SS "void QwtPlotIntervalCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [override]\fP, \fC [virtual]\fP"
 Draw a subset of the samples
 .PP
 \fBParameters\fP
@@ -227,6 +246,8 @@ Draw a subset of the samples
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 322 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::drawSymbols (QPainter * painter, const \fBQwtIntervalSymbol\fP & symbol, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw symbols for a subset of the samples
 .PP
@@ -253,6 +274,8 @@ Draw symbols for a subset of the samples
 .RE
 .PP
 
+.PP
+Definition at line 487 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::drawTube (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a tube
 .PP
@@ -279,7 +302,9 @@ Builds 2 curves from the upper and lower limits of the intervals and draws them 
 .RE
 .PP
 
-.SS "\fBQwtGraphic\fP QwtPlotIntervalCurve::legendIcon (int index, const QSizeF & size) const\fC [virtual]\fP"
+.PP
+Definition at line 371 of file qwt_plot_intervalcurve\&.cpp\&.
+.SS "\fBQwtGraphic\fP QwtPlotIntervalCurve::legendIcon (int index, const QSizeF & size) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -304,6 +329,8 @@ In case of Tube \fBstyle()\fP the icon is a plain rectangle filled with the \fBb
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 554 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "const QPen & QwtPlotIntervalCurve::pen () const"
 
 .PP
@@ -318,7 +345,9 @@ Pen used to draw the lines
 .RE
 .PP
 
-.SS "int QwtPlotIntervalCurve::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 263 of file qwt_plot_intervalcurve\&.cpp\&.
+.SS "int QwtPlotIntervalCurve::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -329,6 +358,8 @@ Pen used to draw the lines
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 115 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setBrush (const QBrush & brush)"
 Assign a brush\&.
 .PP
@@ -345,6 +376,8 @@ The brush is used to fill the area in Tube \fBstyle()\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 276 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
@@ -361,6 +394,8 @@ Specify an attribute how to draw the curve
 .RE
 .PP
 
+.PP
+Definition at line 127 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
@@ -381,6 +416,8 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 .RE
 .PP
 
+.PP
+Definition at line 238 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setPen (const QPen & pen)"
 
 .PP
@@ -397,7 +434,9 @@ Assign a pen\&.
 .RE
 .PP
 
-.SS "void QwtPlotIntervalCurve::setSamples (const QVector< \fBQwtIntervalSample\fP > & samples)"
+.PP
+Definition at line 248 of file qwt_plot_intervalcurve\&.cpp\&.
+.SS "void QwtPlotIntervalCurve::setSamples (const \fBQVector\fP< \fBQwtIntervalSample\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters\fP
@@ -406,6 +445,8 @@ Initialize data with an array of samples\&.
 .RE
 .PP
 
+.PP
+Definition at line 150 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtIntervalSample\fP > * data)"
 Assign a series of samples
 .PP
@@ -422,6 +463,8 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
+.PP
+Definition at line 166 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setStyle (\fBCurveStyle\fP style)"
 Set the curve's drawing style
 .PP
@@ -436,6 +479,8 @@ Set the curve's drawing style
 .RE
 .PP
 
+.PP
+Definition at line 178 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "void QwtPlotIntervalCurve::setSymbol (const \fBQwtIntervalSymbol\fP * symbol)"
 Assign a symbol\&.
 .PP
@@ -450,6 +495,8 @@ Assign a symbol\&.
 .RE
 .PP
 
+.PP
+Definition at line 204 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "\fBQwtPlotIntervalCurve::CurveStyle\fP QwtPlotIntervalCurve::style () const"
 
 .PP
@@ -464,6 +511,8 @@ Style of the curve
 .RE
 .PP
 
+.PP
+Definition at line 193 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "const \fBQwtIntervalSymbol\fP * QwtPlotIntervalCurve::symbol () const"
 
 .PP
@@ -478,6 +527,8 @@ Current symbol or NULL, when no symbol has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 220 of file qwt_plot_intervalcurve\&.cpp\&.
 .SS "bool QwtPlotIntervalCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
@@ -492,6 +543,8 @@ True, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 140 of file qwt_plot_intervalcurve\&.cpp\&.
 
 .SH "Author"
 .PP 

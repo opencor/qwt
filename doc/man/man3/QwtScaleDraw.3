@@ -1,4 +1,4 @@
-.TH "QwtScaleDraw" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtScaleDraw" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,7 +42,7 @@ Inherited by \fBQwtDateScaleDraw\fP\&.
 .RI "int \fBminLength\fP (const QFont &) const"
 .br
 .ti -1c
-.RI "virtual double \fBextent\fP (const QFont &) const"
+.RI "virtual double \fBextent\fP (const QFont &) const override"
 .br
 .ti -1c
 .RI "void \fBmove\fP (double x, double y)"
@@ -109,13 +109,13 @@ Inherited by \fBQwtDateScaleDraw\fP\&.
 .RI "QTransform \fBlabelTransformation\fP (const QPointF &, const QSizeF &) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawTick\fP (QPainter *, double value, double len) const"
+.RI "virtual void \fBdrawTick\fP (QPainter *, double value, double len) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdrawBackbone\fP (QPainter *) const"
+.RI "virtual void \fBdrawBackbone\fP (QPainter *) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdrawLabel\fP (QPainter *, double value) const"
+.RI "virtual void \fBdrawLabel\fP (QPainter *, double value) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -125,6 +125,8 @@ A class for drawing scales\&.
 \fBQwtScaleDraw\fP can be used to draw linear or logarithmic scales\&. A scale has a position, an alignment and a length, which can be specified \&. The labels can be rotated and aligned to the ticks using \fBsetLabelRotation()\fP and \fBsetLabelAlignment()\fP\&.
 .PP
 After a scale division has been specified as a \fBQwtScaleDiv\fP object using \fBQwtAbstractScaleDraw::setScaleDiv(const QwtScaleDiv &s)\fP, the scale can be drawn with the \fBQwtAbstractScaleDraw::draw()\fP member\&. 
+.PP
+Definition at line 35 of file qwt_scale_draw\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtScaleDraw::Alignment\fP"
@@ -151,12 +153,16 @@ The scale is left\&.
 .TP
 \fB\fIRightScale \fP\fP
 The scale is right\&. 
+.PP
+Definition at line 42 of file qwt_scale_draw\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtScaleDraw::QwtScaleDraw ()"
 
 .PP
 Constructor\&. The range of the scale is initialized to [0, 100], The position is at (0, 0) with a length of 100\&. The orientation is QwtAbstractScaleDraw::Bottom\&. 
+.PP
+Definition at line 292 of file qwt_scale_draw\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBQwtScaleDraw::Alignment\fP QwtScaleDraw::alignment () const"
@@ -173,6 +179,8 @@ Alignment of the scale
 .RE
 .PP
 
+.PP
+Definition at line 309 of file qwt_scale_draw\&.cpp\&.
 .SS "QRect QwtScaleDraw::boundingLabelRect (const QFont & font, double value) const"
 
 .PP
@@ -196,7 +204,9 @@ Bounding rectangle
 .RE
 .PP
 
-.SS "void QwtScaleDraw::drawBackbone (QPainter * painter) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 798 of file qwt_scale_draw\&.cpp\&.
+.SS "void QwtScaleDraw::drawBackbone (QPainter * painter) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draws the baseline of the scale 
 .PP
 \fBParameters\fP
@@ -212,7 +222,9 @@ Draws the baseline of the scale
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "void QwtScaleDraw::drawLabel (QPainter * painter, double value) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 668 of file qwt_scale_draw\&.cpp\&.
+.SS "void QwtScaleDraw::drawLabel (QPainter * painter, double value) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draws the label for a major scale tick
 .PP
 \fBParameters\fP
@@ -230,7 +242,9 @@ Draws the label for a major scale tick
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "void QwtScaleDraw::drawTick (QPainter * painter, double value, double len) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 766 of file qwt_scale_draw\&.cpp\&.
+.SS "void QwtScaleDraw::drawTick (QPainter * painter, double value, double len) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw a tick
 .PP
 \fBParameters\fP
@@ -250,7 +264,9 @@ Draw a tick
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
-.SS "double QwtScaleDraw::extent (const QFont & font) const\fC [virtual]\fP"
+.PP
+Definition at line 649 of file qwt_scale_draw\&.cpp\&.
+.SS "double QwtScaleDraw::extent (const QFont & font) const\fC [override]\fP, \fC [virtual]\fP"
 Calculate the width/height that is needed for a vertical/horizontal scale\&.
 .PP
 The extent is calculated from the pen width of the backbone, the major tick length, the spacing and the maximum width/height of the labels\&.
@@ -273,6 +289,8 @@ Extent
 
 .PP
 Implements \fBQwtAbstractScaleDraw\fP\&.
+.PP
+Definition at line 523 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::getBorderDistHint (const QFont & font, int & start, int & end) const"
 
 .PP
@@ -288,6 +306,8 @@ Determine the minimum border distance\&. This member function returns the minimu
 .RE
 .PP
 
+.PP
+Definition at line 361 of file qwt_scale_draw\&.cpp\&.
 .SS "Qt::Alignment QwtScaleDraw::labelAlignment () const"
 
 .PP
@@ -302,6 +322,8 @@ the label flags
 .RE
 .PP
 
+.PP
+Definition at line 982 of file qwt_scale_draw\&.cpp\&.
 .SS "QPointF QwtScaleDraw::labelPosition (double value) const"
 Find the position, where to paint a label
 .PP
@@ -318,6 +340,8 @@ Position, where to paint a label
 .RE
 .PP
 
+.PP
+Definition at line 596 of file qwt_scale_draw\&.cpp\&.
 .SS "QRectF QwtScaleDraw::labelRect (const QFont & font, double value) const"
 Find the bounding rectangle for the label\&. The coordinates of the rectangle are relative to spacing + tick length from the backbone in direction of the tick\&.
 .PP
@@ -334,6 +358,8 @@ Bounding rectangle that is needed to draw a label
 .RE
 .PP
 
+.PP
+Definition at line 891 of file qwt_scale_draw\&.cpp\&.
 .SS "double QwtScaleDraw::labelRotation () const"
 
 .PP
@@ -348,6 +374,8 @@ the label rotation
 .RE
 .PP
 
+.PP
+Definition at line 943 of file qwt_scale_draw\&.cpp\&.
 .SS "QSizeF QwtScaleDraw::labelSize (const QFont & font, double value) const"
 Calculate the size that is needed to draw a label
 .PP
@@ -364,6 +392,8 @@ Size that is needed to draw a label
 .RE
 .PP
 
+.PP
+Definition at line 916 of file qwt_scale_draw\&.cpp\&.
 .SS "QTransform QwtScaleDraw::labelTransformation (const QPointF & pos, const QSizeF & size) const\fC [protected]\fP"
 Calculate the transformation that is needed to paint a label depending on its alignment and rotation\&.
 .PP
@@ -385,6 +415,8 @@ Transformation matrix
 .RE
 .PP
 
+.PP
+Definition at line 821 of file qwt_scale_draw\&.cpp\&.
 .SS "double QwtScaleDraw::length () const"
 
 .PP
@@ -399,6 +431,8 @@ the length of the backbone
 .RE
 .PP
 
+.PP
+Definition at line 753 of file qwt_scale_draw\&.cpp\&.
 .SS "int QwtScaleDraw::maxLabelHeight (const QFont & font) const"
 
 .PP
@@ -413,6 +447,8 @@ the maximum height of a label
 .RE
 .PP
 
+.PP
+Definition at line 1014 of file qwt_scale_draw\&.cpp\&.
 .SS "int QwtScaleDraw::maxLabelWidth (const QFont & font) const"
 
 .PP
@@ -427,6 +463,8 @@ the maximum width of a label
 .RE
 .PP
 
+.PP
+Definition at line 991 of file qwt_scale_draw\&.cpp\&.
 .SS "int QwtScaleDraw::minLabelDist (const QFont & font) const"
 Determine the minimum distance between two labels, that is necessary that the texts don't overlap\&.
 .PP
@@ -446,6 +484,8 @@ The maximum width of a label
 .RE
 .PP
 
+.PP
+Definition at line 436 of file qwt_scale_draw\&.cpp\&.
 .SS "int QwtScaleDraw::minLength (const QFont & font) const"
 Calculate the minimum length that is needed to draw the scale
 .PP
@@ -465,6 +505,8 @@ Minimum length that is needed to draw the scale
 .RE
 .PP
 
+.PP
+Definition at line 560 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::move (const QPointF & pos)"
 
 .PP
@@ -490,6 +532,8 @@ The origin is the leftmost point of the backbone\&. The backbone is a horizontal
 .RE
 .PP
 
+.PP
+Definition at line 707 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::move (double x, double y)\fC [inline]\fP"
 Move the position of the scale
 .PP
@@ -506,6 +550,8 @@ Move the position of the scale
 .RE
 .PP
 
+.PP
+Definition at line 118 of file qwt_scale_draw\&.h\&.
 .SS "Qt::Orientation QwtScaleDraw::orientation () const"
 Return the orientation
 .PP
@@ -522,6 +568,8 @@ Orientation of the scale
 .RE
 .PP
 
+.PP
+Definition at line 337 of file qwt_scale_draw\&.cpp\&.
 .SS "QPointF QwtScaleDraw::pos () const"
 
 .PP
@@ -536,6 +584,8 @@ Origin of the scale
 .RE
 .PP
 
+.PP
+Definition at line 717 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::setAlignment (\fBAlignment\fP align)"
 Set the alignment of the scale
 .PP
@@ -552,23 +602,24 @@ The default alignment is \fBQwtScaleDraw::BottomScale\fP
 .RE
 .PP
 
+.PP
+Definition at line 322 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::setLabelAlignment (Qt::Alignment alignment)"
 
 .PP
 Change the label flags\&. Labels are aligned to the point tick length + spacing away from the backbone\&.
 .PP
-The alignment is relative to the orientation of the label text\&. In case of an flags of 0 the label will be aligned depending on the orientation of the scale: 
+The alignment is relative to the orientation of the label text\&. In case of an flags of 0 the label will be aligned depending on the orientation of the scale:
 .PP
-.nf
-QwtScaleDraw::TopScale: Qt::AlignHCenter | Qt::AlignTop\n
-QwtScaleDraw::BottomScale: Qt::AlignHCenter | Qt::AlignBottom\n
-QwtScaleDraw::LeftScale: Qt::AlignLeft | Qt::AlignVCenter\n
-QwtScaleDraw::RightScale: Qt::AlignRight | Qt::AlignVCenter\n
-
-.fi
-.PP
-.PP
-Changing the alignment is often necessary for rotated labels\&.
+\fBQwtScaleDraw::TopScale\fP: Qt::AlignHCenter | Qt::AlignTop
+.br
+ \fBQwtScaleDraw::BottomScale\fP: Qt::AlignHCenter | Qt::AlignBottom
+.br
+ \fBQwtScaleDraw::LeftScale\fP: Qt::AlignLeft | Qt::AlignVCenter
+.br
+ \fBQwtScaleDraw::RightScale\fP: Qt::AlignRight | Qt::AlignVCenter
+.br
+ Changing the alignment is often necessary for rotated labels\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -586,6 +637,8 @@ The various alignments might be confusing\&. The alignment of the label is not t
 .RE
 .PP
 
+.PP
+Definition at line 973 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::setLabelRotation (double rotation)"
 Rotate all labels\&.
 .PP
@@ -602,6 +655,8 @@ When changing the rotation, it might be necessary to adjust the label flags too\
 .RE
 .PP
 
+.PP
+Definition at line 934 of file qwt_scale_draw\&.cpp\&.
 .SS "void QwtScaleDraw::setLength (double length)"
 Set the length of the backbone\&.
 .PP
@@ -618,6 +673,8 @@ The length doesn't include the space needed for overlapping labels\&.
 .RE
 .PP
 
+.PP
+Definition at line 732 of file qwt_scale_draw\&.cpp\&.
 
 .SH "Author"
 .PP 

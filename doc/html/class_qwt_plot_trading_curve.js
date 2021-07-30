@@ -1,6 +1,6 @@
 var class_qwt_plot_trading_curve =
 [
-    [ "PaintAttributes", "class_qwt_plot_trading_curve.html#a284bcaa3994148bda302e5fec17467d8", null ],
+    [ "PaintAttributes", "class_qwt_plot_trading_curve.html#a4734602deb7f324c4516b6b99e6b276f", null ],
     [ "Direction", "class_qwt_plot_trading_curve.html#ab9136d2f1a4dc34dd09a0c03e809b4af", [
       [ "Increasing", "class_qwt_plot_trading_curve.html#ab9136d2f1a4dc34dd09a0c03e809b4afa0d39ddffe160060a5c99ff5324d227d8", null ],
       [ "Decreasing", "class_qwt_plot_trading_curve.html#ab9136d2f1a4dc34dd09a0c03e809b4afacd9a36ba360db4449bf40928d1652d83", null ]
@@ -17,17 +17,17 @@ var class_qwt_plot_trading_curve =
     [ "QwtPlotTradingCurve", "class_qwt_plot_trading_curve.html#afb106d8dcc21f071ad1666c588f9ee22", null ],
     [ "QwtPlotTradingCurve", "class_qwt_plot_trading_curve.html#aa8359acb3760cc9f8ccc8ab10d10262f", null ],
     [ "~QwtPlotTradingCurve", "class_qwt_plot_trading_curve.html#a93a040562cf897355196f127c7231194", null ],
-    [ "boundingRect", "class_qwt_plot_trading_curve.html#a589f27bb404c411449d737a96df19f72", null ],
-    [ "drawBar", "class_qwt_plot_trading_curve.html#a59325da18e8bac9e18971a4aaf7f191f", null ],
+    [ "boundingRect", "class_qwt_plot_trading_curve.html#a71567f7b751183fcda0c3a699583e8fd", null ],
+    [ "drawBar", "class_qwt_plot_trading_curve.html#a2b9f74bbe5f35b3779ce6d2bc75c1bf3", null ],
     [ "drawCandleStick", "class_qwt_plot_trading_curve.html#a3d94d83557a7bc38ee52136582debc20", null ],
-    [ "drawSeries", "class_qwt_plot_trading_curve.html#ad4b942baeab003a91bb93124245449a6", null ],
+    [ "drawSeries", "class_qwt_plot_trading_curve.html#a78cebbc945067ba8f6765306f5a48c4d", null ],
     [ "drawSymbols", "class_qwt_plot_trading_curve.html#a73030fbd4367f64d5a3f75cc9bcb0ed3", null ],
     [ "drawUserSymbol", "class_qwt_plot_trading_curve.html#a546674cc32f6be4c83dbfb0b76aae067", null ],
     [ "init", "class_qwt_plot_trading_curve.html#a9fdb6082069ae913ed988137da1d57dd", null ],
-    [ "legendIcon", "class_qwt_plot_trading_curve.html#a99cbde78feeea61925419dc0ce4c65f1", null ],
+    [ "legendIcon", "class_qwt_plot_trading_curve.html#a6bd330d29457c84e38f02d8dd5250590", null ],
     [ "maxSymbolWidth", "class_qwt_plot_trading_curve.html#a88e894c4a12d196e8689152ede49ed8a", null ],
     [ "minSymbolWidth", "class_qwt_plot_trading_curve.html#a50c89d345c4d5bfeec6be2e419fe2f13", null ],
-    [ "rtti", "class_qwt_plot_trading_curve.html#ae5c1f371fe7b9005347045e6f8f3414f", null ],
+    [ "rtti", "class_qwt_plot_trading_curve.html#af76dbd352461e03f301cc9e436b85583", null ],
     [ "scaledSymbolWidth", "class_qwt_plot_trading_curve.html#ac288b8585704112ef51d6d55d86536e5", null ],
     [ "setMaxSymbolWidth", "class_qwt_plot_trading_curve.html#af97b34d767ae5a89076ec79324739bc5", null ],
     [ "setMinSymbolWidth", "class_qwt_plot_trading_curve.html#a8411a6cd96cf521e95a06792a0b99a52", null ],

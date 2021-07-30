@@ -1,4 +1,4 @@
-.TH "QwtPlotBarChart" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotBarChart" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,13 +33,13 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (const QVector< QPointF > &)"
+.RI "void \fBsetSamples\fP (const \fBQVector\fP< QPointF > &)"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (const QVector< double > &)"
+.RI "void \fBsetSamples\fP (const \fBQVector\fP< double > &)"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< QPointF > *)"
@@ -58,10 +58,10 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 .RI "\fBLegendMode\fP \fBlegendMode\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *painter, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
+.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const override"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .ti -1c
 .RI "virtual \fBQwtColumnSymbol\fP * \fBspecialSymbol\fP (int sampleIndex, const QPointF &) const"
@@ -81,11 +81,14 @@ Inherits \fBQwtPlotAbstractBarChart\fP, and \fBQwtSeriesStore< QPointF >\fP\&.
 .RI "virtual void \fBdrawBar\fP (QPainter *, int sampleIndex, const QPointF &\fBsample\fP, const \fBQwtColumnRect\fP &) const"
 .br
 .ti -1c
-.RI "QList< \fBQwtLegendData\fP > \fBlegendData\fP () const"
+.RI "\fBQwtColumnRect\fP \fBcolumnRect\fP (const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, const \fBQwtInterval\fP &boundingInterval, const QPointF &\fBsample\fP) const"
+.br
+.ti -1c
+.RI "\fBQList\fP< \fBQwtLegendData\fP > \fBlegendData\fP () const override"
 .br
 .RI "Return all information, that is needed to represent the item on the legend\&. "
 .ti -1c
-.RI "\fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const"
+.RI "\fBQwtGraphic\fP \fBlegendIcon\fP (int index, const QSizeF &) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -106,6 +109,8 @@ The most common use case of a bar chart is to display a list of y coordinates, w
 .RE
 .PP
 
+.PP
+Definition at line 41 of file qwt_plot_barchart\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotBarChart::LegendMode\fP"
@@ -142,6 +147,8 @@ One entry for each value showing the individual symbol of the corresponding bar 
 .RE
 .PP
 
+.PP
+Definition at line 52 of file qwt_plot_barchart\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotBarChart::QwtPlotBarChart (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
@@ -153,6 +160,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 51 of file qwt_plot_barchart\&.cpp\&.
 .SS "QwtPlotBarChart::QwtPlotBarChart (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
@@ -162,6 +171,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 41 of file qwt_plot_barchart\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBQwtText\fP QwtPlotBarChart::barTitle (int sampleIndex) const\fC [virtual]\fP"
@@ -187,7 +198,9 @@ An empty text
 .RE
 .PP
 
-.SS "QRectF QwtPlotBarChart::boundingRect () const\fC [virtual]\fP"
+.PP
+Definition at line 399 of file qwt_plot_barchart\&.cpp\&.
+.SS "QRectF QwtPlotBarChart::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -198,6 +211,32 @@ Bounding rectangle of all samples\&. For an empty series the rectangle is invali
 
 .PP
 Reimplemented from \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 186 of file qwt_plot_barchart\&.cpp\&.
+.SS "\fBQwtColumnRect\fP QwtPlotBarChart::columnRect (const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, const \fBQwtInterval\fP & boundingInterval, const QPointF & sample) const\fC [protected]\fP"
+Calculate the geometry of a bar in widget coordinates
+.PP
+\fBParameters\fP
+.RS 4
+\fIxMap\fP x map 
+.br
+\fIyMap\fP y map 
+.br
+\fIcanvasRect\fP Contents rect of the canvas 
+.br
+\fIboundingInterval\fP Bounding interval of sample values 
+.br
+\fIsample\fP Value of the sample
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Geometry of the column 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file qwt_plot_barchart\&.cpp\&.
 .SS "void QwtPlotBarChart::drawBar (QPainter * painter, int sampleIndex, const QPointF & sample, const \fBQwtColumnRect\fP & rect) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a bar
 .PP
@@ -213,6 +252,8 @@ Draw a bar
 .RE
 .PP
 
+.PP
+Definition at line 341 of file qwt_plot_barchart\&.cpp\&.
 .SS "void QwtPlotBarChart::drawSample (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, const \fBQwtInterval\fP & boundingInterval, int index, const QPointF & sample) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a sample
 .PP
@@ -239,7 +280,9 @@ Draw a sample
 .RE
 .PP
 
-.SS "void QwtPlotBarChart::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
+.PP
+Definition at line 322 of file qwt_plot_barchart\&.cpp\&.
+.SS "void QwtPlotBarChart::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [override]\fP, \fC [virtual]\fP"
 Draw an interval of the bar chart
 .PP
 \fBParameters\fP
@@ -265,7 +308,9 @@ drawSymbols()
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
-.SS "QList< \fBQwtLegendData\fP > QwtPlotBarChart::legendData () const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 223 of file qwt_plot_barchart\&.cpp\&.
+.SS "\fBQList\fP< \fBQwtLegendData\fP > QwtPlotBarChart::legendData () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Return all information, that is needed to represent the item on the legend\&. In case of LegendBarTitles an entry for each bar is returned, otherwise the chart is represented like any other plot item from its \fBtitle()\fP and the \fBlegendIcon()\fP\&.
@@ -283,7 +328,9 @@ Information, that is needed to represent the item on the legend
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "\fBQwtGraphic\fP QwtPlotBarChart::legendIcon (int index, const QSizeF & size) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 416 of file qwt_plot_barchart\&.cpp\&.
+.SS "\fBQwtGraphic\fP QwtPlotBarChart::legendIcon (int index, const QSizeF & size) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -308,6 +355,8 @@ When the \fBlegendMode()\fP is LegendBarTitles the icon shows the bar correspond
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 462 of file qwt_plot_barchart\&.cpp\&.
 .SS "\fBQwtPlotBarChart::LegendMode\fP QwtPlotBarChart::legendMode () const"
 
 .PP
@@ -322,7 +371,9 @@ Legend mode
 .RE
 .PP
 
-.SS "int QwtPlotBarChart::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 177 of file qwt_plot_barchart\&.cpp\&.
+.SS "int QwtPlotBarChart::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -333,6 +384,8 @@ Legend mode
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 70 of file qwt_plot_barchart\&.cpp\&.
 .SS "void QwtPlotBarChart::setLegendMode (\fBLegendMode\fP mode)"
 Set the mode that decides what to display on the legend
 .PP
@@ -349,7 +402,9 @@ In case of LegendBarTitles \fBbarTitle()\fP needs to be overloaded to return ind
 .RE
 .PP
 
-.SS "void QwtPlotBarChart::setSamples (const QVector< double > & samples)"
+.PP
+Definition at line 164 of file qwt_plot_barchart\&.cpp\&.
+.SS "void QwtPlotBarChart::setSamples (const \fBQVector\fP< double > & samples)"
 Initialize data with an array of doubles
 .PP
 The indices in the array are taken as x coordinate, while the doubles are interpreted as y values\&.
@@ -361,11 +416,13 @@ The indices in the array are taken as x coordinate, while the doubles are interp
 .PP
 \fBNote\fP
 .RS 4
-QVector is implicitly shared 
+\fBQVector\fP is implicitly shared 
 .RE
 .PP
 
-.SS "void QwtPlotBarChart::setSamples (const QVector< QPointF > & samples)"
+.PP
+Definition at line 97 of file qwt_plot_barchart\&.cpp\&.
+.SS "void QwtPlotBarChart::setSamples (const \fBQVector\fP< QPointF > & samples)"
 Initialize data with an array of points
 .PP
 \fBParameters\fP
@@ -375,12 +432,14 @@ Initialize data with an array of points
 .PP
 \fBNote\fP
 .RS 4
-QVector is implicitly shared 
+\fBQVector\fP is implicitly shared 
 .PP
 QPolygonF is derived from QVector<QPointF> 
 .RE
 .PP
 
+.PP
+Definition at line 82 of file qwt_plot_barchart\&.cpp\&.
 .SS "void QwtPlotBarChart::setSamples (\fBQwtSeriesData\fP< QPointF > * data)"
 Assign a series of samples
 .PP
@@ -397,6 +456,8 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
+.PP
+Definition at line 119 of file qwt_plot_barchart\&.cpp\&.
 .SS "void QwtPlotBarChart::setSymbol (\fBQwtColumnSymbol\fP * symbol)"
 
 .PP
@@ -413,6 +474,8 @@ Assign a symbol\&. The bar chart will take the ownership of the symbol, hence th
 .RE
 .PP
 
+.PP
+Definition at line 134 of file qwt_plot_barchart\&.cpp\&.
 .SS "\fBQwtColumnSymbol\fP * QwtPlotBarChart::specialSymbol (int sampleIndex, const QPointF & sample) const\fC [virtual]\fP"
 Needs to be overloaded to return a non default symbol for a specific sample
 .PP
@@ -429,6 +492,8 @@ NULL, indicating to use the default symbol
 .RE
 .PP
 
+.PP
+Definition at line 377 of file qwt_plot_barchart\&.cpp\&.
 .SS "const \fBQwtColumnSymbol\fP * QwtPlotBarChart::symbol () const"
 
 .PP
@@ -443,6 +508,8 @@ Current symbol or NULL, when no symbol has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 150 of file qwt_plot_barchart\&.cpp\&.
 
 .SH "Author"
 .PP 

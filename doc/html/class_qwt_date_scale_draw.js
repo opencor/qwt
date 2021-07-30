@@ -5,7 +5,7 @@ var class_qwt_date_scale_draw =
     [ "dateFormat", "class_qwt_date_scale_draw.html#a6ed36308c2d52aad421e85cb7ede1907", null ],
     [ "dateFormatOfDate", "class_qwt_date_scale_draw.html#ac713d7c711d5e98b9d0fe62b70c97b59", null ],
     [ "intervalType", "class_qwt_date_scale_draw.html#a254741840cb7c96e42f2a8263f78506b", null ],
-    [ "label", "class_qwt_date_scale_draw.html#ab7fd5ea597bdb8b494e40400ab10d27e", null ],
+    [ "label", "class_qwt_date_scale_draw.html#ad8d7deafeb00ee3e316ac1e6bfe1db1b", null ],
     [ "setDateFormat", "class_qwt_date_scale_draw.html#ae8eb41024970bec16987d0c736ae890e", null ],
     [ "setTimeSpec", "class_qwt_date_scale_draw.html#a278fdb655a98dda440ce5c0f8fc82c4e", null ],
     [ "setUtcOffset", "class_qwt_date_scale_draw.html#ab97b5fc37dc46dcf635a56e13d7b93a3", null ],

@@ -1,4 +1,4 @@
-.TH "QwtPlainTextEngine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlainTextEngine" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,20 +23,20 @@ Inherits \fBQwtTextEngine\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const"
+.RI "virtual double \fBheightForWidth\fP (const QFont &font, int flags, const QString &text, double width) const override"
 .br
 .ti -1c
-.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const"
+.RI "virtual QSizeF \fBtextSize\fP (const QFont &font, int flags, const QString &text) const override"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *painter, const QRectF &rect, int flags, const QString &text) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const QRectF &rect, int flags, const QString &text) const override"
 .br
 .RI "Draw the text in a clipping rectangle\&. "
 .ti -1c
-.RI "virtual bool \fBmightRender\fP (const QString &) const"
+.RI "virtual bool \fBmightRender\fP (const QString &) const override"
 .br
 .ti -1c
-.RI "virtual void \fBtextMargins\fP (const QFont &, const QString &, double &left, double &right, double &top, double &bottom) const"
+.RI "virtual void \fBtextMargins\fP (const QFont &, const QString &, double &left, double &right, double &top, double &bottom) const override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -45,9 +45,11 @@ Inherits \fBQwtTextEngine\fP\&.
 A text engine for plain texts\&. 
 
 \fBQwtPlainTextEngine\fP renders texts using the basic Qt classes QPainter and QFontMetrics\&. 
+.PP
+Definition at line 111 of file qwt_text_engine\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtPlainTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [virtual]\fP"
+.SS "void QwtPlainTextEngine::draw (QPainter * painter, const QRectF & rect, int flags, const QString & text) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Draw the text in a clipping rectangle\&. A wrapper for QPainter::drawText\&.
@@ -66,7 +68,9 @@ Draw the text in a clipping rectangle\&. A wrapper for QPainter::drawText\&.
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "double QwtPlainTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [virtual]\fP"
+.PP
+Definition at line 230 of file qwt_text_engine\&.cpp\&.
+.SS "double QwtPlainTextEngine::heightForWidth (const QFont & font, int flags, const QString & text, double width) const\fC [override]\fP, \fC [virtual]\fP"
 Find the height for a given width
 .PP
 \fBParameters\fP
@@ -88,7 +92,9 @@ Calculated height
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "bool QwtPlainTextEngine::mightRender (const QString &) const\fC [virtual]\fP"
+.PP
+Definition at line 172 of file qwt_text_engine\&.cpp\&.
+.SS "bool QwtPlainTextEngine::mightRender (const QString &) const\fC [override]\fP, \fC [virtual]\fP"
 Test if a string can be rendered by this text engine\&. 
 .PP
 \fBReturns\fP
@@ -99,7 +105,9 @@ Always true\&. All texts can be rendered by \fBQwtPlainTextEngine\fP
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "void QwtPlainTextEngine::textMargins (const QFont & font, const QString &, double & left, double & right, double & top, double & bottom) const\fC [virtual]\fP"
+.PP
+Definition at line 240 of file qwt_text_engine\&.cpp\&.
+.SS "void QwtPlainTextEngine::textMargins (const QFont & font, const QString &, double & left, double & right, double & top, double & bottom) const\fC [override]\fP, \fC [virtual]\fP"
 Return margins around the texts
 .PP
 \fBParameters\fP
@@ -118,7 +126,9 @@ Return margins around the texts
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
-.SS "QSizeF QwtPlainTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [virtual]\fP"
+.PP
+Definition at line 210 of file qwt_text_engine\&.cpp\&.
+.SS "QSizeF QwtPlainTextEngine::textSize (const QFont & font, int flags, const QString & text) const\fC [override]\fP, \fC [virtual]\fP"
 Returns the size, that is needed to render text
 .PP
 \fBParameters\fP
@@ -138,6 +148,8 @@ Calculated size
 
 .PP
 Implements \fBQwtTextEngine\fP\&.
+.PP
+Definition at line 191 of file qwt_text_engine\&.cpp\&.
 
 .SH "Author"
 .PP 

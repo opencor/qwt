@@ -1,4 +1,4 @@
-.TH "QwtSimpleCompassRose" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSimpleCompassRose" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,7 +46,7 @@ Inherits \fBQwtCompassRose\fP\&.
 .RI "double \fBshrinkFactor\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const QPointF &center, double radius, double north, QPalette::ColorGroup=QPalette::Active) const"
+.RI "virtual void \fBdraw\fP (QPainter *, const QPointF &center, double radius, double north, QPalette::ColorGroup=QPalette::Active) const override"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -59,6 +59,8 @@ Inherits \fBQwtCompassRose\fP\&.
 .SH "Detailed Description"
 .PP 
 A simple rose for \fBQwtCompass\fP\&. 
+.PP
+Definition at line 52 of file qwt_compass_rose\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtSimpleCompassRose::QwtSimpleCompassRose (int numThorns = \fC8\fP, int numThornLevels = \fC\-1\fP)"
@@ -72,9 +74,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 78 of file qwt_compass_rose\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtSimpleCompassRose::draw (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg = \fCQPalette::Active\fP) const\fC [virtual]\fP"
+.SS "void QwtSimpleCompassRose::draw (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg = \fCQPalette::Active\fP) const\fC [override]\fP, \fC [virtual]\fP"
 Draw the rose
 .PP
 \fBParameters\fP
@@ -93,6 +97,8 @@ Draw the rose
 
 .PP
 Implements \fBQwtCompassRose\fP\&.
+.PP
+Definition at line 131 of file qwt_compass_rose\&.cpp\&.
 .SS "void QwtSimpleCompassRose::drawRose (QPainter * painter, const QPalette & palette, const QPointF & center, double radius, double north, double width, int numThorns, int numThornLevels, double shrinkFactor)\fC [static]\fP"
 Draw the rose
 .PP
@@ -118,6 +124,8 @@ Draw the rose
 .RE
 .PP
 
+.PP
+Definition at line 154 of file qwt_compass_rose\&.cpp\&.
 .SS "int QwtSimpleCompassRose::numThornLevels () const"
 
 .PP
@@ -132,6 +140,8 @@ Number of thorn levels
 .RE
 .PP
 
+.PP
+Definition at line 293 of file qwt_compass_rose\&.cpp\&.
 .SS "int QwtSimpleCompassRose::numThorns () const"
 
 .PP
@@ -146,6 +156,8 @@ Number of thorns
 .RE
 .PP
 
+.PP
+Definition at line 273 of file qwt_compass_rose\&.cpp\&.
 .SS "void QwtSimpleCompassRose::setNumThornLevels (int numThornLevels)"
 Set the of thorns levels
 .PP
@@ -160,6 +172,8 @@ Set the of thorns levels
 .RE
 .PP
 
+.PP
+Definition at line 284 of file qwt_compass_rose\&.cpp\&.
 .SS "void QwtSimpleCompassRose::setNumThorns (int numThorns)"
 Set the number of thorns on one level The number is aligned to a multiple of 4, with a minimum of 4
 .PP
@@ -174,6 +188,8 @@ Set the number of thorns on one level The number is aligned to a multiple of 4, 
 .RE
 .PP
 
+.PP
+Definition at line 258 of file qwt_compass_rose\&.cpp\&.
 .SS "void QwtSimpleCompassRose::setShrinkFactor (double factor)"
 Set the Factor how to shrink the thorns with each level The default value is 0\&.9\&.
 .PP
@@ -188,6 +204,8 @@ Set the Factor how to shrink the thorns with each level The default value is 0\&
 .RE
 .PP
 
+.PP
+Definition at line 108 of file qwt_compass_rose\&.cpp\&.
 .SS "void QwtSimpleCompassRose::setWidth (double width)"
 Set the width of the rose heads\&. Lower value make thinner heads\&. The range is limited from 0\&.03 to 0\&.4\&.
 .PP
@@ -197,6 +215,8 @@ Set the width of the rose heads\&. Lower value make thinner heads\&. The range i
 .RE
 .PP
 
+.PP
+Definition at line 232 of file qwt_compass_rose\&.cpp\&.
 .SS "double QwtSimpleCompassRose::shrinkFactor () const"
 
 .PP
@@ -211,6 +231,8 @@ Factor how to shrink the thorns with each level
 .RE
 .PP
 
+.PP
+Definition at line 117 of file qwt_compass_rose\&.cpp\&.
 .SS "double QwtSimpleCompassRose::width () const"
 
 .PP
@@ -225,6 +247,8 @@ Width of the rose
 .RE
 .PP
 
+.PP
+Definition at line 246 of file qwt_compass_rose\&.cpp\&.
 
 .SH "Author"
 .PP 

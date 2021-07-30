@@ -1,6 +1,5 @@
 var class_qwt_date =
 [
-    [ "JulianDayForEpoch", "class_qwt_date.html#af636fffdebea2e4463fc32461b1217e0aed8ee8f3dbc5b7a5e953b3ec51a79108", null ],
     [ "IntervalType", "class_qwt_date.html#ad037b999a51cae4d9ab36bf8e7859587", [
       [ "Millisecond", "class_qwt_date.html#ad037b999a51cae4d9ab36bf8e7859587a4e1d45d6382c27689a30adc11186d4f1", null ],
       [ "Second", "class_qwt_date.html#ad037b999a51cae4d9ab36bf8e7859587aabaf7a7d45288a33590f61fe075b3590", null ],

@@ -1,4 +1,4 @@
-.TH "QwtColorMap" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtColorMap" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ QwtColorMap \- \fBQwtColorMap\fP is used to map values into colors\&.
 .PP
 \fC#include <qwt_color_map\&.h>\fP
 .PP
-Inherited by \fBQwtAlphaColorMap\fP, and \fBQwtLinearColorMap\fP\&.
+Inherited by \fBQwtAlphaColorMap\fP, \fBQwtHueColorMap\fP, \fBQwtLinearColorMap\fP, and \fBQwtSaturationValueColorMap\fP\&.
 .SS "Public Types"
 
 .in +1c
@@ -24,25 +24,35 @@ Inherited by \fBQwtAlphaColorMap\fP, and \fBQwtLinearColorMap\fP\&.
 .ti -1c
 .RI "\fBQwtColorMap\fP (\fBFormat\fP=\fBQwtColorMap::RGB\fP)"
 .br
-.RI "Constructor\&. "
 .ti -1c
 .RI "virtual \fB~QwtColorMap\fP ()"
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "\fBFormat\fP \fBformat\fP () const"
+.RI "void \fBsetFormat\fP (\fBFormat\fP)"
 .br
 .ti -1c
-.RI "virtual QRgb \fBrgb\fP (const \fBQwtInterval\fP &interval, double value) const =0"
+.RI "virtual QRgb \fBrgb\fP (\fBconst\fP \fBQwtInterval\fP &interval, double value) \fBconst\fP =0"
 .br
 .ti -1c
-.RI "virtual unsigned char \fBcolorIndex\fP (const \fBQwtInterval\fP &interval, double value) const =0"
+.RI "virtual uint \fBcolorIndex\fP (int numColors, \fBconst\fP \fBQwtInterval\fP &interval, double value) \fBconst\fP"
+.br
+.RI "Map a value of a given interval into a color index\&. "
+.ti -1c
+.RI "QColor \fBcolor\fP (\fBconst\fP \fBQwtInterval\fP &, double value) \fBconst\fP"
 .br
 .ti -1c
-.RI "QColor \fBcolor\fP (const \fBQwtInterval\fP &, double value) const"
+.RI "virtual \fBQVector\fP< QRgb > \fBcolorTable\fP (int numColors) \fBconst\fP"
 .br
 .ti -1c
-.RI "virtual QVector< QRgb > \fBcolorTable\fP (const \fBQwtInterval\fP &) const"
+.RI "virtual \fBQVector\fP< QRgb > \fBcolorTable256\fP () \fBconst\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFormat\fP \fBconst\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -70,6 +80,8 @@ QImage::Format_ARGB32
 
 .PP
 
+.PP
+Definition at line 37 of file qwt_color_map\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtColorMap::Format\fP"
@@ -89,10 +101,34 @@ Format for color mapping
 The map is intended to map into RGB values\&. 
 .TP
 \fB\fIIndexed \fP\fP
-The map is intended to map into 8 bit values, that are indices into the color table\&. 
+Map values into 8 bit values, that are used as indexes into the color table\&.
+.PP
+Indexed color maps are used to generate QImage::Format_Indexed8 images\&. The calculation of the color index is usually faster and the resulting image has a lower memory footprint\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBcolorIndex()\fP, \fBcolorTable()\fP 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file qwt_color_map\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QwtColorMap::QwtColorMap (\fBFormat\fP format = \fC\fBQwtColorMap::RGB\fP\fP)\fC [explicit]\fP"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformat\fP Format of the color map 
+.RE
+.PP
+
+.PP
+Definition at line 249 of file qwt_color_map\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QColor QwtColorMap::color (const \fBQwtInterval\fP & interval, double value) const\fC [inline]\fP"
+.SS "QColor QwtColorMap::color (\fBconst\fP \fBQwtInterval\fP & interval, double value) const\fC [inline]\fP"
 Map a value into a color
 .PP
 \fBParameters\fP
@@ -104,42 +140,58 @@ Map a value into a color
 .PP
 \fBReturns\fP
 .RS 4
-Color corresponding to value
-.RE
-.PP
-\fBWarning\fP
-.RS 4
-This method is slow for Indexed color maps\&. If it is necessary to map many values, its better to get the color table once and find the color using \fBcolorIndex()\fP\&. 
+Color corresponding to value 
 .RE
 .PP
 
-.SS "virtual unsigned char QwtColorMap::colorIndex (const \fBQwtInterval\fP & interval, double value) const\fC [pure virtual]\fP"
-Map a value of a given interval into a color index
+.PP
+Definition at line 248 of file qwt_color_map\&.h\&.
+.SS "uint QwtColorMap::colorIndex (int numColors, \fBconst\fP \fBQwtInterval\fP & interval, double value) const\fC [virtual]\fP"
+
+.PP
+Map a value of a given interval into a color index\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIinterval\fP Range for the values 
+\fInumColors\fP Number of colors 
 .br
-\fIvalue\fP Value 
+\fIinterval\fP Range for all values 
+.br
+\fIvalue\fP Value to map into a color index
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-color index, corresponding to value 
+Index, between 0 and numColors - 1, or -1 for an invalid value 
 .RE
 .PP
 
 .PP
-Implemented in \fBQwtLinearColorMap\fP\&.
-.SS "QVector< QRgb > QwtColorMap::colorTable (const \fBQwtInterval\fP & interval) const\fC [virtual]\fP"
-Build and return a color map of 256 colors
+Reimplemented in \fBQwtLinearColorMap\fP\&.
+.PP
+Definition at line 278 of file qwt_color_map\&.cpp\&.
+.SS "\fBQVector\fP< QRgb > QwtColorMap::colorTable (int numColors) const\fC [virtual]\fP"
+Build and return a color map of arbitrary number of colors
 .PP
 The color table is needed for rendering indexed images in combination with using \fBcolorIndex()\fP\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIinterval\fP Range for the values 
+\fInumColors\fP Number of colors 
 .RE
+.PP
+\fBReturns\fP
+.RS 4
+A color table 
+.RE
+.PP
+
+.PP
+Definition at line 325 of file qwt_color_map\&.cpp\&.
+.SS "\fBQVector\fP< QRgb > QwtColorMap::colorTable256 () const\fC [virtual]\fP"
+Build and return a color map of 256 colors
+.PP
+The color table is needed for rendering indexed images in combination with using \fBcolorIndex()\fP\&.
 .PP
 \fBReturns\fP
 .RS 4
@@ -147,21 +199,9 @@ A color table, that can be used for a QImage
 .RE
 .PP
 
-.SS "\fBQwtColorMap::Format\fP QwtColorMap::format () const\fC [inline]\fP"
-
 .PP
-\fBReturns\fP
-.RS 4
-Intended format of the color map 
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBFormat\fP 
-.RE
-.PP
-
-.SS "virtual QRgb QwtColorMap::rgb (const \fBQwtInterval\fP & interval, double value) const\fC [pure virtual]\fP"
+Definition at line 304 of file qwt_color_map\&.cpp\&.
+.SS "virtual QRgb QwtColorMap::rgb (\fBconst\fP \fBQwtInterval\fP & interval, double value) const\fC [pure virtual]\fP"
 Map a value of a given interval into a RGB value\&.
 .PP
 \fBParameters\fP
@@ -178,7 +218,42 @@ RGB value, corresponding to value
 .PP
 
 .PP
-Implemented in \fBQwtAlphaColorMap\fP, and \fBQwtLinearColorMap\fP\&.
+Implemented in \fBQwtSaturationValueColorMap\fP, \fBQwtHueColorMap\fP, \fBQwtAlphaColorMap\fP, and \fBQwtLinearColorMap\fP\&.
+.SS "void QwtColorMap::setFormat (\fBFormat\fP format)"
+Set the format of the color map
+.PP
+\fBParameters\fP
+.RS 4
+\fIformat\fP Format of the color map 
+.RE
+.PP
+
+.PP
+Definition at line 264 of file qwt_color_map\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQwtColorMap::Format\fP QwtColorMap::const\fC [inline]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    return m_format
+.fi
+
+.PP
+\fBReturns\fP
+.RS 4
+Intended format of the color map 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBFormat\fP 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file qwt_color_map\&.h\&.
 
 .SH "Author"
 .PP 

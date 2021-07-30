@@ -6,5 +6,5 @@ var class_qwt_series_data =
     [ "sample", "class_qwt_series_data.html#ae8650d16c07c58f01897ab48658a3266", null ],
     [ "setRectOfInterest", "class_qwt_series_data.html#a391b4601a7454b2f9582fbc2662d108e", null ],
     [ "size", "class_qwt_series_data.html#a3cfe5b26fc55a887ac85b0103ae80a3e", null ],
-    [ "d_boundingRect", "class_qwt_series_data.html#a24fbbcb0baa0c728117d2e6764d00414", null ]
+    [ "cachedBoundingRect", "class_qwt_series_data.html#aa9950de8549a4daf29dede52736f5292", null ]
 ];

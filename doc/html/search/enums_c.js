@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['paintattribute_3054',['PaintAttribute',['../class_qwt_plot_canvas.html#a76066290edb594a71ee09be564563b0f',1,'QwtPlotCanvas::PaintAttribute()'],['../class_qwt_plot_curve.html#a96db1b854c63bfbc452c943251a11b66',1,'QwtPlotCurve::PaintAttribute()'],['../class_qwt_plot_interval_curve.html#a3deaf543802d69a38961f9e944bfad95',1,'QwtPlotIntervalCurve::PaintAttribute()'],['../class_qwt_plot_raster_item.html#a75ac68ea258b8612e8a1893e845394ee',1,'QwtPlotRasterItem::PaintAttribute()'],['../class_qwt_plot_shape_item.html#aaa78031ce7ab1b8e713bc05da05a4631',1,'QwtPlotShapeItem::PaintAttribute()'],['../class_qwt_plot_spectro_curve.html#af6d4c6ae392f3f521db710484a059625',1,'QwtPlotSpectroCurve::PaintAttribute()'],['../class_qwt_plot_trading_curve.html#afc40b9bee1371ebce4a7f3853fee7968',1,'QwtPlotTradingCurve::PaintAttribute()'],['../class_qwt_text.html#a9739e47ea489e690f121e4b1d27ae24e',1,'QwtText::PaintAttribute()']]]
+  ['option_3667',['Option',['../class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221d',1,'QwtPlotLayout::Option()'],['../class_qwt_polar_layout.html#abb9ffb4d2547fc48b37c89c380cb5c60',1,'QwtPolarLayout::Option()']]],
+  ['originmode_3668',['OriginMode',['../class_qwt_thermo.html#a932d866dd7782cc56cd7fc3e5abb3183',1,'QwtThermo']]]
 ];

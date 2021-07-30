@@ -1,4 +1,4 @@
-.TH "QwtSymbol" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSymbol" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -146,6 +146,8 @@ QwtSymbol \- A class for drawing symbols\&.
 .SH "Detailed Description"
 .PP 
 A class for drawing symbols\&. 
+.PP
+Definition at line 31 of file qwt_symbol\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtSymbol::CachePolicy\fP"
@@ -188,6 +190,8 @@ Use a cache when one of the following conditions is true:
 The symbol is rendered with the software renderer ( QPaintEngine::Raster ) 
 .PP
 
+.PP
+Definition at line 150 of file qwt_symbol\&.h\&.
 .SS "enum \fBQwtSymbol::Style\fP"
 Symbol Style 
 .PP
@@ -291,9 +295,11 @@ The symbol is represented by a SVG graphic\&. The graphic is centered or aligned
 .TP
 \fB\fIUserStyle \fP\fP
 Styles >= QwtSymbol::UserSymbol are reserved for derived classes of \fBQwtSymbol\fP that overload \fBdrawSymbols()\fP with additional application specific symbol types\&. 
+.PP
+Definition at line 38 of file qwt_symbol\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtSymbol::QwtSymbol (\fBStyle\fP style = \fC\fBNoSymbol\fP\fP)"
+.SS "QwtSymbol::QwtSymbol (\fBStyle\fP style = \fC\fBNoSymbol\fP\fP)\fC [explicit]\fP"
 Default Constructor 
 .PP
 \fBParameters\fP
@@ -302,6 +308,8 @@ Default Constructor
 .RE
 .PP
 The symbol is constructed with gray interior, black outline with zero width, no size and style 'NoSymbol'\&. 
+.PP
+Definition at line 843 of file qwt_symbol\&.cpp\&.
 .SS "QwtSymbol::QwtSymbol (\fBQwtSymbol::Style\fP style, const QBrush & brush, const QPen & pen, const QSize & size)"
 
 .PP
@@ -324,6 +332,8 @@ Constructor\&.
 .RE
 .PP
 
+.PP
+Definition at line 858 of file qwt_symbol\&.cpp\&.
 .SS "QwtSymbol::QwtSymbol (const QPainterPath & path, const QBrush & brush, const QPen & pen)"
 
 .PP
@@ -344,6 +354,8 @@ Constructor\&. The symbol gets initialized by a painter path\&. The style is set
 .RE
 .PP
 
+.PP
+Definition at line 878 of file qwt_symbol\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QRect QwtSymbol::boundingRect () const\fC [virtual]\fP"
@@ -355,6 +367,8 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Definition at line 1637 of file qwt_symbol\&.cpp\&.
 .SS "const QBrush & QwtSymbol::brush () const"
 
 .PP
@@ -369,6 +383,8 @@ Brush
 .RE
 .PP
 
+.PP
+Definition at line 1123 of file qwt_symbol\&.cpp\&.
 .SS "\fBQwtSymbol::CachePolicy\fP QwtSymbol::cachePolicy () const"
 
 .PP
@@ -383,6 +399,8 @@ Cache policy
 .RE
 .PP
 
+.PP
+Definition at line 913 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::drawSymbol (QPainter * painter, const QPointF & pos) const\fC [inline]\fP"
 
 .PP
@@ -396,6 +414,8 @@ Draw the symbol at a specified position\&.
 .RE
 .PP
 
+.PP
+Definition at line 238 of file qwt_symbol\&.h\&.
 .SS "void QwtSymbol::drawSymbol (QPainter * painter, const QRectF & rect) const"
 
 .PP
@@ -411,6 +431,8 @@ This method is primarily intended for drawing a symbol to the legend\&.
 .RE
 .PP
 
+.PP
+Definition at line 1434 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::drawSymbols (QPainter * painter, const QPointF * points, int numPoints) const"
 Render an array of symbols
 .PP
@@ -426,6 +448,8 @@ Painting several symbols is more effective than drawing symbols one by one, as a
 .RE
 .PP
 
+.PP
+Definition at line 1307 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::drawSymbols (QPainter * painter, const QPolygonF & points) const\fC [inline]\fP"
 
 .PP
@@ -439,6 +463,8 @@ Draw symbols at the specified points\&.
 .RE
 .PP
 
+.PP
+Definition at line 251 of file qwt_symbol\&.h\&.
 .SS "const \fBQwtGraphic\fP & QwtSymbol::graphic () const"
 
 .PP
@@ -453,6 +479,8 @@ Assigned graphic
 .RE
 .PP
 
+.PP
+Definition at line 1027 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::invalidateCache ()"
 Invalidate the cached symbol pixmap
 .PP
@@ -464,6 +492,8 @@ The symbol invalidates its cache, whenever an attribute is changed that has an e
 .RE
 .PP
 
+.PP
+Definition at line 1770 of file qwt_symbol\&.cpp\&.
 .SS "bool QwtSymbol::isPinPointEnabled () const"
 
 .PP
@@ -478,6 +508,8 @@ True, when the pin point translation is enabled
 .RE
 .PP
 
+.PP
+Definition at line 1291 of file qwt_symbol\&.cpp\&.
 .SS "const QPainterPath & QwtSymbol::path () const"
 
 .PP
@@ -492,6 +524,8 @@ Painter path for displaying the symbol
 .RE
 .PP
 
+.PP
+Definition at line 977 of file qwt_symbol\&.cpp\&.
 .SS "const QPen & QwtSymbol::pen () const"
 
 .PP
@@ -506,6 +540,8 @@ Pen
 .RE
 .PP
 
+.PP
+Definition at line 1171 of file qwt_symbol\&.cpp\&.
 .SS "QPointF QwtSymbol::pinPoint () const"
 
 .PP
@@ -520,6 +556,8 @@ Pin point
 .RE
 .PP
 
+.PP
+Definition at line 1267 of file qwt_symbol\&.cpp\&.
 .SS "const QPixmap & QwtSymbol::pixmap () const"
 
 .PP
@@ -534,6 +572,8 @@ Assigned pixmap
 .RE
 .PP
 
+.PP
+Definition at line 1002 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::renderSymbols (QPainter * painter, const QPointF * points, int numPoints) const\fC [protected]\fP, \fC [virtual]\fP"
 Render the symbol to series of points
 .PP
@@ -547,6 +587,8 @@ Render the symbol to series of points
 .RE
 .PP
 
+.PP
+Definition at line 1513 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setBrush (const QBrush & brush)"
 
 .PP
@@ -563,6 +605,8 @@ Assign a brush\&. The brush is used to draw the interior of the symbol\&.
 .RE
 .PP
 
+.PP
+Definition at line 1107 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setCachePolicy (\fBQwtSymbol::CachePolicy\fP policy)"
 Change the cache policy
 .PP
@@ -579,6 +623,8 @@ The default policy is AutoCache
 .RE
 .PP
 
+.PP
+Definition at line 899 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setColor (const QColor & color)\fC [virtual]\fP"
 
 .PP
@@ -595,6 +641,8 @@ Set the color of the symbol\&. Change the color of the brush for symbol types wi
 .RE
 .PP
 
+.PP
+Definition at line 1186 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setGraphic (const \fBQwtGraphic\fP & graphic)"
 Set a graphic as symbol
 .PP
@@ -616,6 +664,8 @@ the \fBstyle()\fP is set to \fBQwtSymbol::Graphic\fP
 .RE
 .PP
 
+.PP
+Definition at line 1017 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPath (const QPainterPath & path)"
 
 .PP
@@ -632,33 +682,32 @@ The following code defines a symbol drawing an arrow:
 .nf
 #include <qwt_symbol\&.h>
 
-QwtSymbol *symbol = new QwtSymbol();
+     QwtSymbol *symbol = new QwtSymbol();
 
-QPen pen( Qt::black, 2 );
-pen\&.setJoinStyle( Qt::MiterJoin );
+     QPen pen( Qt::black, 2 );
+     pen\&.setJoinStyle( Qt::MiterJoin );
 
-symbol->setPen( pen );
-symbol->setBrush( Qt::red );
+     symbol->setPen( pen );
+     symbol->setBrush( Qt::red );
 
-QPainterPath path;
-path\&.moveTo( 0, 8 );
-path\&.lineTo( 0, 5 );
-path\&.lineTo( -3, 5 );
-path\&.lineTo( 0, 0 );
-path\&.lineTo( 3, 5 );
-path\&.lineTo( 0, 5 );
+     QPainterPath path;
+     path\&.moveTo( 0, 8 );
+     path\&.lineTo( 0, 5 );
+     path\&.lineTo( -3, 5 );
+     path\&.lineTo( 0, 0 );
+     path\&.lineTo( 3, 5 );
+     path\&.lineTo( 0, 5 );
 
-QTransform transform;
-transform\&.rotate( -30\&.0 );
-path = transform\&.map( path );
+     QTransform transform;
+     transform\&.rotate( -30\&.0 );
+     path = transform\&.map( path );
 
-symbol->setPath( path );
-symbol->setPinPoint( QPointF( 0\&.0, 0\&.0 ) );
+     symbol->setPath( path );
+     symbol->setPinPoint( QPointF( 0\&.0, 0\&.0 ) );
 
-setSize( 10, 14 );
+     setSize( 10, 14 );
 .fi
 .PP
- \\endpar
 .PP
 \fBParameters\fP
 .RS 4
@@ -667,7 +716,7 @@ setSize( 10, 14 );
 .PP
 \fBNote\fP
 .RS 4
-The style is implicitely set to \fBQwtSymbol::Path\fP\&. 
+The style is implicitly set to \fBQwtSymbol::Path\fP\&. 
 .RE
 .PP
 \fBSee also\fP
@@ -676,6 +725,8 @@ The style is implicitely set to \fBQwtSymbol::Path\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 966 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
@@ -696,6 +747,8 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 .RE
 .PP
 
+.PP
+Definition at line 1141 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPen (const QPen & pen)"
 Assign a pen
 .PP
@@ -712,6 +765,8 @@ The pen is used to draw the symbol's outline\&.
 .RE
 .PP
 
+.PP
+Definition at line 1155 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPinPoint (const QPointF & pos, bool enable = \fCtrue\fP)"
 
 .PP
@@ -730,6 +785,8 @@ Set and enable a pin point\&. The position of a complex symbol is not always ali
 .RE
 .PP
 
+.PP
+Definition at line 1249 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPinPointEnabled (bool on)"
 En/Disable the pin point alignment
 .PP
@@ -744,6 +801,8 @@ En/Disable the pin point alignment
 .RE
 .PP
 
+.PP
+Definition at line 1278 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setPixmap (const QPixmap & pixmap)"
 Set a pixmap as symbol
 .PP
@@ -765,6 +824,8 @@ the \fBstyle()\fP is set to \fBQwtSymbol::Pixmap\fP
 .RE
 .PP
 
+.PP
+Definition at line 992 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setSize (const QSize & size)"
 Set the symbol's size 
 .PP
@@ -779,6 +840,8 @@ Set the symbol's size
 .RE
 .PP
 
+.PP
+Definition at line 1081 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setSize (int width, int height = \fC\-1\fP)"
 
 .PP
@@ -797,6 +860,8 @@ Specify the symbol's size\&. If the 'h' parameter is left out or less than 0, an
 .RE
 .PP
 
+.PP
+Definition at line 1067 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setStyle (\fBQwtSymbol::Style\fP style)"
 Specify the symbol style
 .PP
@@ -811,6 +876,8 @@ Specify the symbol style
 .RE
 .PP
 
+.PP
+Definition at line 1782 of file qwt_symbol\&.cpp\&.
 .SS "void QwtSymbol::setSvgDocument (const QByteArray & svgDocument)"
 Set a SVG icon as symbol
 .PP
@@ -832,6 +899,8 @@ the \fBstyle()\fP is set to \fBQwtSymbol::SvgDocument\fP
 .RE
 .PP
 
+.PP
+Definition at line 1044 of file qwt_symbol\&.cpp\&.
 .SS "const QSize & QwtSymbol::size () const"
 
 .PP
@@ -846,6 +915,8 @@ Size
 .RE
 .PP
 
+.PP
+Definition at line 1094 of file qwt_symbol\&.cpp\&.
 .SS "\fBQwtSymbol::Style\fP QwtSymbol::style () const"
 
 .PP
@@ -860,6 +931,8 @@ Current symbol style
 .RE
 .PP
 
+.PP
+Definition at line 1795 of file qwt_symbol\&.cpp\&.
 
 .SH "Author"
 .PP 

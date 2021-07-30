@@ -1,4 +1,4 @@
-.TH "QwtThermo" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtThermo" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -134,10 +134,10 @@ Inherits \fBQwtAbstractScale\fP\&.
 .br
 .RI "Return the value\&. "
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtScaleDraw\fP *)"
@@ -154,17 +154,17 @@ Inherits \fBQwtAbstractScale\fP\&.
 .RI "virtual void \fBdrawLiquid\fP (QPainter *, const QRect &) const"
 .br
 .ti -1c
-.RI "virtual void \fBscaleChange\fP ()"
+.RI "virtual void \fBscaleChange\fP () override"
 .br
 .RI "Notify a scale change\&. "
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBresizeEvent\fP (QResizeEvent *)"
+.RI "virtual void \fBresizeEvent\fP (QResizeEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBchangeEvent\fP (QEvent *)"
+.RI "virtual void \fBchangeEvent\fP (QEvent *) override"
 .br
 .ti -1c
 .RI "\fBQwtScaleDraw\fP * \fBscaleDraw\fP ()"
@@ -211,6 +211,8 @@ QPalette::WindowText For the axis of the scale
 QPalette::Text For the labels of the scale 
 .PP
 
+.PP
+Definition at line 46 of file qwt_thermo\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtThermo::OriginMode\fP"
@@ -234,6 +236,8 @@ The origin is the maximum of the scale\&.
 .TP
 \fB\fIOriginCustom \fP\fP
 The origin is specified using the \fBorigin()\fP property\&. 
+.PP
+Definition at line 91 of file qwt_thermo\&.h\&.
 .SS "enum \fBQwtThermo::ScalePosition\fP"
 Position of the scale 
 .PP
@@ -255,6 +259,8 @@ The scale is right of a vertical or below of a horizontal slider\&.
 .TP
 \fB\fITrailingScale \fP\fP
 The scale is left of a vertical or above of a horizontal slider\&. 
+.PP
+Definition at line 73 of file qwt_thermo\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtThermo::QwtThermo (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -266,6 +272,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 121 of file qwt_thermo\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QBrush QwtThermo::alarmBrush () const"
@@ -287,6 +295,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 761 of file qwt_thermo\&.cpp\&.
 .SS "bool QwtThermo::alarmEnabled () const"
 
 .PP
@@ -301,6 +311,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 837 of file qwt_thermo\&.cpp\&.
 .SS "double QwtThermo::alarmLevel () const"
 
 .PP
@@ -320,6 +332,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 789 of file qwt_thermo\&.cpp\&.
 .SS "QRect QwtThermo::alarmRect (const QRect & fillRect) const\fC [protected]\fP"
 
 .PP
@@ -341,6 +355,8 @@ Rectangle to be filled with the alarm brush
 .RE
 .PP
 
+.PP
+Definition at line 944 of file qwt_thermo\&.cpp\&.
 .SS "int QwtThermo::borderWidth () const"
 
 .PP
@@ -355,7 +371,9 @@ Border width of the thermometer pipe\&.
 .RE
 .PP
 
-.SS "void QwtThermo::changeEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 671 of file qwt_thermo\&.cpp\&.
+.SS "void QwtThermo::changeEvent (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Qt change event handler 
 .PP
 \fBParameters\fP
@@ -364,6 +382,10 @@ Qt change event handler
 .RE
 .PP
 
+.PP
+Reimplemented from \fBQwtAbstractScale\fP\&.
+.PP
+Definition at line 277 of file qwt_thermo\&.cpp\&.
 .SS "\fBQwtColorMap\fP * QwtThermo::colorMap ()"
 
 .PP
@@ -378,6 +400,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 697 of file qwt_thermo\&.cpp\&.
 .SS "const \fBQwtColorMap\fP * QwtThermo::colorMap () const"
 
 .PP
@@ -392,6 +416,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 707 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::drawLiquid (QPainter * painter, const QRect & pipeRect) const\fC [protected]\fP, \fC [virtual]\fP"
 Redraw the liquid in thermometer pipe\&. 
 .PP
@@ -403,6 +429,8 @@ Redraw the liquid in thermometer pipe\&.
 .RE
 .PP
 
+.PP
+Definition at line 546 of file qwt_thermo\&.cpp\&.
 .SS "QBrush QwtThermo::fillBrush () const"
 
 .PP
@@ -417,6 +445,8 @@ Liquid ( QPalette::ButtonText ) brush\&.
 .RE
 .PP
 
+.PP
+Definition at line 731 of file qwt_thermo\&.cpp\&.
 .SS "QRect QwtThermo::fillRect (const QRect & pipeRect) const\fC [protected]\fP"
 
 .PP
@@ -438,7 +468,9 @@ Rectangle to be filled ( fill and alarm brush )
 .RE
 .PP
 
-.SS "QSize QwtThermo::minimumSizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 897 of file qwt_thermo\&.cpp\&.
+.SS "QSize QwtThermo::minimumSizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -457,6 +489,8 @@ The return value depends on the font and the scale\&.
 .RE
 .PP
 
+.PP
+Definition at line 856 of file qwt_thermo\&.cpp\&.
 .SS "Qt::Orientation QwtThermo::orientation () const"
 
 .PP
@@ -471,6 +505,8 @@ Orientation
 .RE
 .PP
 
+.PP
+Definition at line 455 of file qwt_thermo\&.cpp\&.
 .SS "double QwtThermo::origin () const"
 
 .PP
@@ -485,6 +521,8 @@ Origin of the thermo, when OriginCustom is enabled
 .RE
 .PP
 
+.PP
+Definition at line 504 of file qwt_thermo\&.cpp\&.
 .SS "\fBQwtThermo::OriginMode\fP QwtThermo::originMode () const"
 
 .PP
@@ -499,7 +537,9 @@ Mode, how the origin is determined\&.
 .RE
 .PP
 
-.SS "void QwtThermo::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 477 of file qwt_thermo\&.cpp\&.
+.SS "void QwtThermo::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Paint event handler 
 .PP
 \fBParameters\fP
@@ -508,6 +548,8 @@ Paint event handler
 .RE
 .PP
 
+.PP
+Definition at line 235 of file qwt_thermo\&.cpp\&.
 .SS "QRect QwtThermo::pipeRect () const\fC [protected]\fP"
 
 .PP
@@ -517,6 +559,8 @@ Bounding rectangle of the pipe ( without borders ) in widget coordinates
 .RE
 .PP
 
+.PP
+Definition at line 385 of file qwt_thermo\&.cpp\&.
 .SS "int QwtThermo::pipeWidth () const"
 
 .PP
@@ -531,6 +575,8 @@ Width of the pipe\&.
 .RE
 .PP
 
+.PP
+Definition at line 813 of file qwt_thermo\&.cpp\&.
 .SS "\fBQwtInterval::BorderFlags\fP QwtThermo::rangeFlags () const"
 
 .PP
@@ -545,7 +591,9 @@ Range flags
 .RE
 .PP
 
-.SS "void QwtThermo::resizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 170 of file qwt_thermo\&.cpp\&.
+.SS "void QwtThermo::resizeEvent (QResizeEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Resize event handler 
 .PP
 \fBParameters\fP
@@ -554,6 +602,8 @@ Resize event handler
 .RE
 .PP
 
+.PP
+Definition at line 267 of file qwt_thermo\&.cpp\&.
 .SS "\fBQwtScaleDraw\fP * QwtThermo::scaleDraw ()\fC [protected]\fP"
 
 .PP
@@ -568,6 +618,8 @@ the scale draw of the thermo
 .RE
 .PP
 
+.PP
+Definition at line 226 of file qwt_thermo\&.cpp\&.
 .SS "const \fBQwtScaleDraw\fP * QwtThermo::scaleDraw () const"
 
 .PP
@@ -582,6 +634,8 @@ the scale draw of the thermo
 .RE
 .PP
 
+.PP
+Definition at line 217 of file qwt_thermo\&.cpp\&.
 .SS "\fBQwtThermo::ScalePosition\fP QwtThermo::scalePosition () const"
 
 .PP
@@ -596,6 +650,8 @@ Scale position\&.
 .RE
 .PP
 
+.PP
+Definition at line 530 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setAlarmBrush (const QBrush & brush)"
 
 .PP
@@ -617,6 +673,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 747 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setAlarmEnabled (bool on)"
 
 .PP
@@ -633,6 +691,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 825 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setAlarmLevel (double level)"
 Specify the alarm threshold\&.
 .PP
@@ -652,6 +712,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 775 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setBorderWidth (int width)"
 Set the border width of the pipe\&. 
 .PP
@@ -666,6 +728,8 @@ Set the border width of the pipe\&.
 .RE
 .PP
 
+.PP
+Definition at line 655 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setColorMap (\fBQwtColorMap\fP * colorMap)"
 
 .PP
@@ -682,6 +746,8 @@ The alarm threshold has no effect, when a color map has been assigned
 .RE
 .PP
 
+.PP
+Definition at line 683 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setFillBrush (const QBrush & brush)"
 
 .PP
@@ -698,6 +764,8 @@ Change the brush of the liquid\&. Changes the QPalette::ButtonText brush of the 
 .RE
 .PP
 
+.PP
+Definition at line 720 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setOrientation (Qt::Orientation orientation)"
 
 .PP
@@ -714,6 +782,8 @@ Set the orientation\&.
 .RE
 .PP
 
+.PP
+Definition at line 432 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setOrigin (double origin)"
 
 .PP
@@ -730,6 +800,8 @@ Specifies the custom origin\&. If originMode is set to OriginCustom this propert
 .RE
 .PP
 
+.PP
+Definition at line 491 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setOriginMode (\fBOriginMode\fP m)"
 
 .PP
@@ -741,6 +813,8 @@ Change how the origin is determined\&.
 .RE
 .PP
 
+.PP
+Definition at line 464 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setPipeWidth (int width)"
 Change the width of the pipe\&.
 .PP
@@ -755,6 +829,8 @@ Change the width of the pipe\&.
 .RE
 .PP
 
+.PP
+Definition at line 800 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setRangeFlags (\fBQwtInterval::BorderFlags\fP flags)"
 
 .PP
@@ -773,6 +849,8 @@ F\&.e\&. when a minimum of 0\&.0 has to be displayed as an empty pipe the minVal
 .RE
 .PP
 
+.PP
+Definition at line 157 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setScaleDraw (\fBQwtScaleDraw\fP * scaleDraw)"
 
 .PP
@@ -784,6 +862,8 @@ Set a scale draw\&. For changing the labels of the scales, it is necessary to de
 .RE
 .PP
 
+.PP
+Definition at line 207 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setScalePosition (\fBScalePosition\fP scalePosition)"
 
 .PP
@@ -800,6 +880,8 @@ Change the position of the scale\&.
 .RE
 .PP
 
+.PP
+Definition at line 515 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setSpacing (int spacing)"
 
 .PP
@@ -818,6 +900,8 @@ The default setting is 3 pixels\&.
 .RE
 .PP
 
+.PP
+Definition at line 629 of file qwt_thermo\&.cpp\&.
 .SS "void QwtThermo::setValue (double value)\fC [virtual]\fP, \fC [slot]\fP"
 Set the current value\&.
 .PP
@@ -832,7 +916,9 @@ Set the current value\&.
 .RE
 .PP
 
-.SS "QSize QwtThermo::sizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 181 of file qwt_thermo\&.cpp\&.
+.SS "QSize QwtThermo::sizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -846,6 +932,8 @@ the minimum size hint
 .RE
 .PP
 
+.PP
+Definition at line 846 of file qwt_thermo\&.cpp\&.
 .SS "int QwtThermo::spacing () const"
 
 .PP
@@ -860,6 +948,8 @@ Number of pixels between pipe and scale
 .RE
 .PP
 
+.PP
+Definition at line 645 of file qwt_thermo\&.cpp\&.
 
 .SH "Author"
 .PP 

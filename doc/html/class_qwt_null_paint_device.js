@@ -22,9 +22,9 @@ var class_qwt_null_paint_device =
     [ "drawRects", "class_qwt_null_paint_device.html#a78163254e4793afc26b1752178964336", null ],
     [ "drawTextItem", "class_qwt_null_paint_device.html#a9c0566fc34422c4bd61534cebfb95d63", null ],
     [ "drawTiledPixmap", "class_qwt_null_paint_device.html#affb43b9932b513670eb4fe7b1259f39e", null ],
-    [ "metric", "class_qwt_null_paint_device.html#a97d521b0b284dcdc262a03840ae80a8c", null ],
+    [ "metric", "class_qwt_null_paint_device.html#a56f64cfdaf8535dc576f1d813b796ba4", null ],
     [ "mode", "class_qwt_null_paint_device.html#aee6442e130abc43b818d4da90b9f45b9", null ],
-    [ "paintEngine", "class_qwt_null_paint_device.html#a69b6e22f20dd4a9103d387acc6a79a7e", null ],
+    [ "paintEngine", "class_qwt_null_paint_device.html#a5c5e8a4e75850c749546ede1eac81134", null ],
     [ "setMode", "class_qwt_null_paint_device.html#a8b159556695136a58eec6e78fd88957b", null ],
     [ "sizeMetrics", "class_qwt_null_paint_device.html#ab95def8c9d76d4fa6142458fd5ea4970", null ],
     [ "updateState", "class_qwt_null_paint_device.html#a73244bfbecba932af1b105cfe3cf4f2d", null ]

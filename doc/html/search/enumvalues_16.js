@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['xbottom_3349',['xBottom',['../class_qwt_plot.html#a81df699dcf9dde0752c0726b5f31e271ad5566960e78f2473c1a1e853def4c4ac',1,'QwtPlot']]],
-  ['xcross_3350',['XCross',['../class_qwt_symbol.html#a62f457952470c2076962e83ef2c24d2faa734e8b9433131230af5d8c319b5529e',1,'QwtSymbol']]],
-  ['xtop_3351',['xTop',['../class_qwt_plot.html#a81df699dcf9dde0752c0726b5f31e271ae51eb7525eb3f9f806e659614018beb8',1,'QwtPlot']]]
+  ['xbottom_4006',['XBottom',['../namespace_qwt_axis.html#a3dadce451809a6f77e44d81abef8c8d8ab9f573fe3ce8eb0c41a5fa66f5ae2aaa',1,'QwtAxis']]],
+  ['xcross_4007',['XCross',['../class_qwt_symbol.html#a62f457952470c2076962e83ef2c24d2faa734e8b9433131230af5d8c319b5529e',1,'QwtSymbol']]],
+  ['xtop_4008',['XTop',['../namespace_qwt_axis.html#a3dadce451809a6f77e44d81abef8c8d8ab483cd2eb534396b9847e7f2c1bd671a',1,'QwtAxis']]]
 ];

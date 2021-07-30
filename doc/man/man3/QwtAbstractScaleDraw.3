@@ -1,4 +1,4 @@
-.TH "QwtAbstractScaleDraw" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractScaleDraw" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,6 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBScaleComponent\fP > \fBScaleComponents\fP"
 .br
-.RI "Scale components\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -72,11 +71,11 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .br
 .RI "Get the spacing\&. "
 .ti -1c
-.RI "void \fBsetPenWidth\fP (int width)"
+.RI "void \fBsetPenWidthF\fP (qreal width)"
 .br
 .RI "Specify the width of the scale pen\&. "
 .ti -1c
-.RI "int \fBpenWidth\fP () const"
+.RI "qreal \fBpenWidthF\fP () const"
 .br
 .ti -1c
 .RI "virtual void \fBdraw\fP (QPainter *, const QPalette &) const"
@@ -96,6 +95,9 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .ti -1c
 .RI "double \fBminimumExtent\fP () const"
 .br
+.ti -1c
+.RI "void \fBinvalidateCache\fP ()"
+.br
 .in -1c
 .SS "Protected Member Functions"
 
@@ -110,9 +112,6 @@ Inherited by \fBQwtRoundScaleDraw\fP, and \fBQwtScaleDraw\fP\&.
 .RI "virtual void \fBdrawLabel\fP (QPainter *painter, double value) const =0"
 .br
 .ti -1c
-.RI "void \fBinvalidateCache\fP ()"
-.br
-.ti -1c
 .RI "const \fBQwtText\fP & \fBtickLabel\fP (const QFont &, double value) const"
 .br
 .RI "Convert a value into its representing label and cache it\&. "
@@ -124,6 +123,14 @@ A abstract base class for drawing scales\&.
 \fBQwtAbstractScaleDraw\fP can be used to draw linear or logarithmic scales\&.
 .PP
 After a scale division has been specified as a \fBQwtScaleDiv\fP object using \fBsetScaleDiv()\fP, the scale can be drawn with the \fBdraw()\fP member\&. 
+.PP
+Definition at line 31 of file qwt_abstract_scale_draw\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBScaleComponent\fP > \fBQwtAbstractScaleDraw::ScaleComponents\fP"
+An ORed combination of \fBScaleComponent\fP values\&. 
+.PP
+Definition at line 51 of file qwt_abstract_scale_draw\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtAbstractScaleDraw::ScaleComponent\fP"
@@ -147,12 +154,16 @@ Ticks\&.
 .TP
 \fB\fILabels \fP\fP
 Labels\&. 
+.PP
+Definition at line 39 of file qwt_abstract_scale_draw\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtAbstractScaleDraw::QwtAbstractScaleDraw ()"
 
 .PP
 Constructor\&. The range of the scale is initialized to [0, 100], The spacing (distance between ticks and labels) is set to 4, the tick lengths are set to 4,6 and 8 pixels 
+.PP
+Definition at line 60 of file qwt_abstract_scale_draw\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtAbstractScaleDraw::draw (QPainter * painter, const QPalette & palette) const\fC [virtual]\fP"
@@ -168,6 +179,8 @@ Draw the scale\&.
 .RE
 .PP
 
+.PP
+Definition at line 169 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "virtual void QwtAbstractScaleDraw::drawBackbone (QPainter * painter) const\fC [protected]\fP, \fC [pure virtual]\fP"
 Draws the baseline of the scale 
 .PP
@@ -238,6 +251,8 @@ En/Disable a component of the scale
 .RE
 .PP
 
+.PP
+Definition at line 79 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "virtual double QwtAbstractScaleDraw::extent (const QFont & font) const\fC [pure virtual]\fP"
 Calculate the extent
 .PP
@@ -280,10 +295,14 @@ true, when component is enabled
 .RE
 .PP
 
-.SS "void QwtAbstractScaleDraw::invalidateCache ()\fC [protected]\fP"
+.PP
+Definition at line 95 of file qwt_abstract_scale_draw\&.cpp\&.
+.SS "void QwtAbstractScaleDraw::invalidateCache ()"
 Invalidate the cache used by \fBtickLabel()\fP
 .PP
 The cache is invalidated, when a new \fBQwtScaleDiv\fP is set\&. If the labels need to be changed\&. while the same \fBQwtScaleDiv\fP is set, \fBinvalidateCache()\fP needs to be called manually\&. 
+.PP
+Definition at line 417 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "\fBQwtText\fP QwtAbstractScaleDraw::label (double value) const\fC [virtual]\fP"
 
 .PP
@@ -302,6 +321,8 @@ Label string\&.
 
 .PP
 Reimplemented in \fBQwtDateScaleDraw\fP, and \fBQwtCompassScaleDraw\fP\&.
+.PP
+Definition at line 375 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "double QwtAbstractScaleDraw::maxTickLength () const"
 
 .PP
@@ -318,6 +339,8 @@ Useful for layout calculations
 .RE
 .PP
 
+.PP
+Definition at line 355 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "double QwtAbstractScaleDraw::minimumExtent () const"
 Get the minimum extent 
 .PP
@@ -332,7 +355,9 @@ Minimum extent
 .RE
 .PP
 
-.SS "int QwtAbstractScaleDraw::penWidth () const"
+.PP
+Definition at line 302 of file qwt_abstract_scale_draw\&.cpp\&.
+.SS "qreal QwtAbstractScaleDraw::penWidthF () const"
 
 .PP
 \fBReturns\fP
@@ -342,10 +367,12 @@ Scale pen width
 .PP
 \fBSee also\fP
 .RS 4
-\fBsetPenWidth()\fP 
+setPenWidth() 
 .RE
 .PP
 
+.PP
+Definition at line 156 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "const \fBQwtScaleDiv\fP & QwtAbstractScaleDraw::scaleDiv () const"
 
 .PP
@@ -355,6 +382,8 @@ scale division
 .RE
 .PP
 
+.PP
+Definition at line 133 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "\fBQwtScaleMap\fP & QwtAbstractScaleDraw::scaleMap ()"
 
 .PP
@@ -364,6 +393,8 @@ Map how to translate between scale and pixel values
 .RE
 .PP
 
+.PP
+Definition at line 127 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "const \fBQwtScaleMap\fP & QwtAbstractScaleDraw::scaleMap () const"
 
 .PP
@@ -373,6 +404,8 @@ Map how to translate between scale and pixel values
 .RE
 .PP
 
+.PP
+Definition at line 121 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "void QwtAbstractScaleDraw::setMinimumExtent (double minExtent)"
 
 .PP
@@ -389,22 +422,26 @@ Set a minimum for the extent\&. The extent is calculated from the components of 
 .RE
 .PP
 
-.SS "void QwtAbstractScaleDraw::setPenWidth (int width)"
+.PP
+Definition at line 289 of file qwt_abstract_scale_draw\&.cpp\&.
+.SS "void QwtAbstractScaleDraw::setPenWidthF (qreal width)"
 
 .PP
 Specify the width of the scale pen\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIwidth\fP Pen width 
+\fIwidth\fP Pen width
 .RE
 .PP
 \fBSee also\fP
 .RS 4
-\fBpenWidth()\fP 
+penWidth() 
 .RE
 .PP
 
+.PP
+Definition at line 144 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "void QwtAbstractScaleDraw::setScaleDiv (const \fBQwtScaleDiv\fP & scaleDiv)"
 Change the scale division 
 .PP
@@ -414,6 +451,8 @@ Change the scale division
 .RE
 .PP
 
+.PP
+Definition at line 104 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "void QwtAbstractScaleDraw::setSpacing (double spacing)"
 
 .PP
@@ -430,6 +469,8 @@ Set the spacing between tick and labels\&. The spacing is the distance between t
 .RE
 .PP
 
+.PP
+Definition at line 254 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "void QwtAbstractScaleDraw::setTickLength (\fBQwtScaleDiv::TickType\fP tickType, double length)"
 Set the length of the ticks
 .PP
@@ -446,6 +487,8 @@ the length is limited to [0\&.\&.1000]
 .RE
 .PP
 
+.PP
+Definition at line 315 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "void QwtAbstractScaleDraw::setTransformation (\fBQwtTransform\fP * transformation)"
 Change the transformation of the scale 
 .PP
@@ -455,6 +498,8 @@ Change the transformation of the scale
 .RE
 .PP
 
+.PP
+Definition at line 115 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "double QwtAbstractScaleDraw::spacing () const"
 
 .PP
@@ -471,6 +516,8 @@ Spacing
 .RE
 .PP
 
+.PP
+Definition at line 271 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "const \fBQwtText\fP & QwtAbstractScaleDraw::tickLabel (const QFont & font, double value) const\fC [protected]\fP"
 
 .PP
@@ -489,6 +536,8 @@ Tick label
 .RE
 .PP
 
+.PP
+Definition at line 393 of file qwt_abstract_scale_draw\&.cpp\&.
 .SS "double QwtAbstractScaleDraw::tickLength (\fBQwtScaleDiv::TickType\fP tickType) const"
 
 .PP
@@ -503,6 +552,8 @@ Length of the ticks
 .RE
 .PP
 
+.PP
+Definition at line 338 of file qwt_abstract_scale_draw\&.cpp\&.
 
 .SH "Author"
 .PP 

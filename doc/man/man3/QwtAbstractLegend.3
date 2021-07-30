@@ -1,4 +1,4 @@
-.TH "QwtAbstractLegend" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtAbstractLegend" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ Inherited by \fBQwtLegend\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBupdateLegend\fP (const QVariant &itemInfo, const QList< \fBQwtLegendData\fP > &data)=0"
+.RI "virtual void \fBupdateLegend\fP (const QVariant &itemInfo, const \fBQList\fP< \fBQwtLegendData\fP > &data)=0"
 .br
 .RI "Update the entries for a plot item\&. "
 .in -1c
@@ -58,6 +58,8 @@ Other type of legends can be implemented by connecting to the \fBQwtPlot::legend
 .RE
 .PP
 
+.PP
+Definition at line 34 of file qwt_abstract_legend\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtAbstractLegend::QwtAbstractLegend (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -69,6 +71,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 18 of file qwt_abstract_legend\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "virtual bool QwtAbstractLegend::isEmpty () const\fC [pure virtual]\fP"
@@ -118,7 +122,9 @@ Extent of the corresponding scroll element
 
 .PP
 Reimplemented in \fBQwtLegend\fP\&.
-.SS "virtual void QwtAbstractLegend::updateLegend (const QVariant & itemInfo, const QList< \fBQwtLegendData\fP > & data)\fC [pure virtual]\fP, \fC [slot]\fP"
+.PP
+Definition at line 35 of file qwt_abstract_legend\&.cpp\&.
+.SS "virtual void QwtAbstractLegend::updateLegend (const QVariant & itemInfo, const \fBQList\fP< \fBQwtLegendData\fP > & data)\fC [pure virtual]\fP, \fC [slot]\fP"
 
 .PP
 Update the entries for a plot item\&. 

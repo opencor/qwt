@@ -1,4 +1,4 @@
-.TH "QwtPlotPanner" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotPanner" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,13 @@ QwtPlotPanner \- \fBQwtPlotPanner\fP provides panning of a plot canvas\&.
 \fC#include <qwt_plot_panner\&.h>\fP
 .PP
 Inherits \fBQwtPanner\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBmoveCanvas\fP (int dx, int dy)"
+.br
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
@@ -39,28 +46,21 @@ Inherits \fBQwtPanner\fP\&.
 .br
 .RI "Return plot widget, containing the observed plot canvas\&. "
 .ti -1c
-.RI "void \fBsetAxisEnabled\fP (int axis, bool on)"
+.RI "void \fBsetAxisEnabled\fP (QwtAxisId axisId, bool on)"
 .br
 .RI "En/Disable an axis\&. "
 .ti -1c
-.RI "bool \fBisAxisEnabled\fP (int axis) const"
-.br
-.in -1c
-.SS "Protected Slots"
-
-.in +1c
-.ti -1c
-.RI "virtual void \fBmoveCanvas\fP (int dx, int dy)"
+.RI "bool \fBisAxisEnabled\fP (QwtAxisId) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual QBitmap \fBcontentsMask\fP () const"
+.RI "virtual QBitmap \fBcontentsMask\fP () const override"
 .br
 .ti -1c
-.RI "virtual QPixmap \fBgrab\fP () const"
+.RI "virtual QPixmap \fBgrab\fP () const override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -83,6 +83,8 @@ The axes are not updated, while dragging the canvas
 .RE
 .PP
 
+.PP
+Definition at line 32 of file qwt_plot_panner\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotPanner::QwtPlotPanner (QWidget * canvas)\fC [explicit]\fP"
@@ -101,9 +103,11 @@ A panner for the canvas of a \fBQwtPlot\fP\&. The panner is enabled for all axes
 .RE
 .PP
 
+.PP
+Definition at line 128 of file qwt_plot_panner\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QBitmap QwtPlotPanner::contentsMask () const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "QBitmap QwtPlotPanner::contentsMask () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Calculate a mask from the border path of the canvas
 .PP
 \fBReturns\fP
@@ -119,7 +123,9 @@ Mask as bitmap
 
 .PP
 Reimplemented from \fBQwtPanner\fP\&.
-.SS "QPixmap QwtPlotPanner::grab () const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 267 of file qwt_plot_panner\&.cpp\&.
+.SS "QPixmap QwtPlotPanner::grab () const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -130,12 +136,14 @@ Pixmap with the content of the canvas
 
 .PP
 Reimplemented from \fBQwtPanner\fP\&.
-.SS "bool QwtPlotPanner::isAxisEnabled (int axis) const"
+.PP
+Definition at line 278 of file qwt_plot_panner\&.cpp\&.
+.SS "bool QwtPlotPanner::isAxisEnabled (QwtAxisId axisId) const"
 Test if an axis is enabled
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
+\fIaxisId\fP Axis 
 .RE
 .PP
 \fBReturns\fP
@@ -149,7 +157,9 @@ True, if the axis is enabled
 .RE
 .PP
 
-.SS "void QwtPlotPanner::moveCanvas (int dx, int dy)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+.PP
+Definition at line 168 of file qwt_plot_panner\&.cpp\&.
+.SS "void QwtPlotPanner::moveCanvas (int dx, int dy)\fC [virtual]\fP, \fC [slot]\fP"
 Adjust the enabled axes according to dx/dy
 .PP
 \fBParameters\fP
@@ -165,14 +175,16 @@ Adjust the enabled axes according to dx/dy
 .RE
 .PP
 
-.SS "void QwtPlotPanner::setAxisEnabled (int axis, bool on)"
+.PP
+Definition at line 216 of file qwt_plot_panner\&.cpp\&.
+.SS "void QwtPlotPanner::setAxisEnabled (QwtAxisId axisId, bool on)"
 
 .PP
 En/Disable an axis\&. Axes that are enabled will be synchronized to the result of panning\&. All other axes will remain unchanged\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIaxis\fP Axis, see \fBQwtPlot::Axis\fP 
+\fIaxisId\fP Axis id 
 .br
 \fIon\fP On/Off
 .RE
@@ -183,6 +195,8 @@ En/Disable an axis\&. Axes that are enabled will be synchronized to the result o
 .RE
 .PP
 
+.PP
+Definition at line 154 of file qwt_plot_panner\&.cpp\&.
 
 .SH "Author"
 .PP 

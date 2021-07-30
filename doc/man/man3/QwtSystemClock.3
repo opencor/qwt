@@ -1,4 +1,4 @@
-.TH "QwtSystemClock" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtSystemClock" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,19 +13,12 @@ QwtSystemClock \- \fBQwtSystemClock\fP provides high resolution clock time funct
 
 .in +1c
 .ti -1c
-.RI "\fBQwtSystemClock\fP ()"
-.br
-.RI "Constructs a null clock object\&. "
-.ti -1c
-.RI "virtual \fB~QwtSystemClock\fP ()"
-.br
-.RI "Destructor\&. "
-.ti -1c
 .RI "bool \fBisNull\fP () const"
 .br
 .ti -1c
 .RI "void \fBstart\fP ()"
 .br
+.RI "Start the elapsed timer\&. "
 .ti -1c
 .RI "double \fBrestart\fP ()"
 .br
@@ -37,18 +30,11 @@ QwtSystemClock \- \fBQwtSystemClock\fP provides high resolution clock time funct
 .PP 
 \fBQwtSystemClock\fP provides high resolution clock time functions\&. 
 
-Sometimes the resolution offered by QTime ( millisecond ) is not accurate enough for implementing time measurements ( f\&.e\&. sampling )\&. \fBQwtSystemClock\fP offers a subset of the QTime functionality using higher resolution timers ( if possible )\&.
-.PP
 Precision and time intervals are multiples of milliseconds (ms)\&.
 .PP
-( \fBQwtSystemClock\fP is obsolete since Qt 4\&.8 as QElapsedTimer offers the same precision )
+( \fBQwtSystemClock\fP is deprecated as QElapsedTimer offers the same precision ) 
 .PP
-\fBNote\fP
-.RS 4
-The implementation uses high-resolution performance counter on Windows, mach_absolute_time() on the Mac or POSIX timers on other systems\&. If none is available it falls back on QTimer\&. 
-.RE
-.PP
-
+Definition at line 24 of file qwt_system_clock\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "double QwtSystemClock::elapsed () const"
@@ -56,30 +42,34 @@ The implementation uses high-resolution performance counter on Windows, mach_abs
 .PP
 \fBReturns\fP
 .RS 4
-Number of milliseconds that have elapsed since the last time \fBstart()\fP or \fBrestart()\fP was called or 0\&.0 for null clocks\&. 
+elapsed time in multiples of milliseconds 
 .RE
 .PP
 
+.PP
+Definition at line 36 of file qwt_system_clock\&.cpp\&.
 .SS "bool QwtSystemClock::isNull () const"
 
 .PP
 \fBReturns\fP
 .RS 4
-true if the clock has never been started\&. 
+true, if the elapsed timer is valid 
 .RE
 .PP
 
+.PP
+Definition at line 14 of file qwt_system_clock\&.cpp\&.
 .SS "double QwtSystemClock::restart ()"
-Set the start time to the current time 
+Restart the elapsed timer 
 .PP
 \fBReturns\fP
 .RS 4
-Time, that is elapsed since the previous start time\&. 
+elapsed time in multiples of milliseconds 
 .RE
 .PP
 
-.SS "void QwtSystemClock::start ()"
-Sets the start time to the current time\&. 
+.PP
+Definition at line 29 of file qwt_system_clock\&.cpp\&.
 
 .SH "Author"
 .PP 

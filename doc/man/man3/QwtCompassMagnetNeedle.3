@@ -1,4 +1,4 @@
-.TH "QwtCompassMagnetNeedle" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompassMagnetNeedle" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,7 +31,7 @@ Inherits \fBQwtDialNeedle\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const"
+.RI "virtual void \fBdrawNeedle\fP (QPainter *, double length, QPalette::ColorGroup) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -61,6 +61,8 @@ QPalette::Base
 .RE
 .PP
 
+.PP
+Definition at line 127 of file qwt_dial_needle\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtCompassMagnetNeedle::Style\fP"
@@ -76,9 +78,11 @@ A needle with a triangular shape\&.
 .TP
 \fB\fIThinStyle \fP\fP
 A thin needle\&. 
+.PP
+Definition at line 131 of file qwt_dial_needle\&.h\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtCompassMagnetNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [protected]\fP, \fC [virtual]\fP"
+.SS "void QwtCompassMagnetNeedle::drawNeedle (QPainter * painter, double length, QPalette::ColorGroup colorGroup) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw the needle
 .PP
 \fBParameters\fP
@@ -93,6 +97,8 @@ Draw the needle
 
 .PP
 Implements \fBQwtDialNeedle\fP\&.
+.PP
+Definition at line 369 of file qwt_dial_needle\&.cpp\&.
 
 .SH "Author"
 .PP 

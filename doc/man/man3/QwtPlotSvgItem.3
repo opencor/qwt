@@ -1,4 +1,4 @@
-.TH "QwtPlotSvgItem" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSvgItem" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ QwtPlotSvgItem \- A plot item, which displays data in Scalable Vector Graphics (
 .PP
 \fC#include <qwt_plot_svgitem\&.h>\fP
 .PP
-Inherits \fBQwtPlotItem\fP\&.
+Inherits \fBQwtPlotGraphicItem\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -32,50 +32,23 @@ Inherits \fBQwtPlotItem\fP\&.
 .ti -1c
 .RI "bool \fBloadData\fP (const QRectF &, const QByteArray &)"
 .br
-.ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
-.br
-.RI "Bounding rectangle of the item\&. "
-.ti -1c
-.RI "virtual void \fBdraw\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect) const"
-.br
-.ti -1c
-.RI "virtual int \fBrtti\fP () const"
-.br
-.in -1c
-.SS "Protected Member Functions"
-
-.in +1c
-.ti -1c
-.RI "const QSvgRenderer & \fBrenderer\fP () const"
-.br
-.ti -1c
-.RI "QSvgRenderer & \fBrenderer\fP ()"
-.br
-.ti -1c
-.RI "void \fBrender\fP (QPainter *, const QRectF &\fBviewBox\fP, const QRectF &rect) const"
-.br
-.ti -1c
-.RI "QRectF \fBviewBox\fP (const QRectF &rect) const"
-.br
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
 A plot item, which displays data in Scalable Vector Graphics (SVG) format\&. 
 
-SVG images are often used to display maps 
+SVG images are often used to display maps
+.PP
+\fBQwtPlotSvgItem\fP is only a small convenience wrapper class for \fBQwtPlotGraphicItem\fP, that creates a \fBQwtGraphic\fP from SVG data\&. 
+.PP
+Definition at line 28 of file qwt_plot_svgitem\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotSvgItem::QwtPlotSvgItem (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
 
 .PP
-Constructor\&. Sets the following item attributes:
-.IP "\(bu" 2
-\fBQwtPlotItem::AutoScale\fP: true
-.IP "\(bu" 2
-\fBQwtPlotItem::Legend\fP: false
-.PP
+Constructor\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -83,15 +56,12 @@ Constructor\&. Sets the following item attributes:
 .RE
 .PP
 
+.PP
+Definition at line 20 of file qwt_plot_svgitem\&.cpp\&.
 .SS "QwtPlotSvgItem::QwtPlotSvgItem (const \fBQwtText\fP & title)\fC [explicit]\fP"
 
 .PP
-Constructor\&. Sets the following item attributes:
-.IP "\(bu" 2
-\fBQwtPlotItem::AutoScale\fP: true
-.IP "\(bu" 2
-\fBQwtPlotItem::Legend\fP: false
-.PP
+Constructor\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -99,25 +69,10 @@ Constructor\&. Sets the following item attributes:
 .RE
 .PP
 
+.PP
+Definition at line 29 of file qwt_plot_svgitem\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void QwtPlotSvgItem::draw (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect) const\fC [virtual]\fP"
-Draw the SVG item
-.PP
-\fBParameters\fP
-.RS 4
-\fIpainter\fP Painter 
-.br
-\fIxMap\fP X-Scale Map 
-.br
-\fIyMap\fP Y-Scale Map 
-.br
-\fIcanvasRect\fP Contents rect of the plot canvas 
-.RE
-.PP
-
-.PP
-Implements \fBQwtPlotItem\fP\&.
 .SS "bool QwtPlotSvgItem::loadData (const QRectF & rect, const QByteArray & data)"
 Load SVG data
 .PP
@@ -134,6 +89,8 @@ true, if the SVG data could be loaded
 .RE
 .PP
 
+.PP
+Definition at line 74 of file qwt_plot_svgitem\&.cpp\&.
 .SS "bool QwtPlotSvgItem::loadFile (const QRectF & rect, const QString & fileName)"
 Load a SVG file
 .PP
@@ -150,62 +107,8 @@ true, if the SVG file could be loaded
 .RE
 .PP
 
-.SS "void QwtPlotSvgItem::render (QPainter * painter, const QRectF & viewBox, const QRectF & rect) const\fC [protected]\fP"
-Render the SVG data
 .PP
-\fBParameters\fP
-.RS 4
-\fIpainter\fP Painter 
-.br
-\fIviewBox\fP View Box, see QSvgRenderer::viewBox() 
-.br
-\fIrect\fP Target rectangle on the paint device 
-.RE
-.PP
-
-.SS "QSvgRenderer & QwtPlotSvgItem::renderer ()\fC [protected]\fP"
-
-.PP
-\fBReturns\fP
-.RS 4
-Renderer used to render the SVG data 
-.RE
-.PP
-
-.SS "const QSvgRenderer & QwtPlotSvgItem::renderer () const\fC [protected]\fP"
-
-.PP
-\fBReturns\fP
-.RS 4
-Renderer used to render the SVG data 
-.RE
-.PP
-
-.SS "int QwtPlotSvgItem::rtti () const\fC [virtual]\fP"
-
-.PP
-\fBReturns\fP
-.RS 4
-\fBQwtPlotItem::Rtti_PlotSVG\fP 
-.RE
-.PP
-
-.PP
-Reimplemented from \fBQwtPlotItem\fP\&.
-.SS "QRectF QwtPlotSvgItem::viewBox (const QRectF & rect) const\fC [protected]\fP"
-Calculate the view box from rect and \fBboundingRect()\fP\&.
-.PP
-\fBParameters\fP
-.RS 4
-\fIrect\fP Rectangle in scale coordinates 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-View box, see QSvgRenderer::viewBox() 
-.RE
-.PP
-
+Definition at line 47 of file qwt_plot_svgitem\&.cpp\&.
 
 .SH "Author"
 .PP 

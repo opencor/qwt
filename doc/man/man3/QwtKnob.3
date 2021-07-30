@@ -1,4 +1,4 @@
-.TH "QwtKnob" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtKnob" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -93,10 +93,10 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .RI "int \fBmarkerSize\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetScaleDraw\fP (\fBQwtRoundScaleDraw\fP *)"
@@ -115,10 +115,10 @@ Inherits \fBQwtAbstractSlider\fP\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBchangeEvent\fP (QEvent *)"
+.RI "virtual void \fBchangeEvent\fP (QEvent *) override"
 .br
 .ti -1c
 .RI "virtual void \fBdrawKnob\fP (QPainter *, const QRectF &) const"
@@ -132,11 +132,11 @@ Inherits \fBQwtAbstractSlider\fP\&.
 .br
 .RI "Draw the marker at the knob's front\&. "
 .ti -1c
-.RI "virtual double \fBscrolledTo\fP (const QPoint &) const"
+.RI "virtual double \fBscrolledTo\fP (const QPoint &) const override"
 .br
 .RI "Determine the value for a new position of the mouse\&. "
 .ti -1c
-.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const"
+.RI "virtual bool \fBisScrollPosition\fP (const QPoint &) const override"
 .br
 .RI "Determine what to do when the user presses a mouse button\&. "
 .in -1c
@@ -160,6 +160,8 @@ width <= 0 The knob is extended to the minimum of width/height of the contentsRe
 Setting a fixed \fBknobWidth()\fP is helpful to align several knobs with different scale labels\&.
 .PP
  
+.PP
+Definition at line 42 of file qwt_knob\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtKnob::KnobStyle\fP"
@@ -188,6 +190,8 @@ Build a gradient from QPalette::Midlight, QPalette::Button and QPalette::Midligh
 .TP
 \fB\fIStyled \fP\fP
 Build a radial gradient from QPalette::Button like it is used for QDial in various Qt styles\&. 
+.PP
+Definition at line 66 of file qwt_knob\&.h\&.
 .SS "enum \fBQwtKnob::MarkerStyle\fP"
 
 .PP
@@ -220,6 +224,8 @@ Draw a raised ellipse with a gradient build from QPalette::Light and QPalette::M
 .TP
 \fB\fINotch \fP\fP
 Draw a sunken ellipse with a gradient build from QPalette::Light and QPalette::Mid 
+.PP
+Definition at line 95 of file qwt_knob\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtKnob::QwtKnob (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -238,6 +244,8 @@ Constructor\&. Construct a knob with an angle of 270°\&. The style is \fBQwtKno
 .RE
 .PP
 
+.PP
+Definition at line 103 of file qwt_knob\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "Qt::Alignment QwtKnob::alignment () const"
@@ -254,7 +262,9 @@ Alignment of the knob inside of contentsRect()
 .RE
 .PP
 
-.SS "void QwtKnob::changeEvent (QEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 743 of file qwt_knob\&.cpp\&.
+.SS "void QwtKnob::changeEvent (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handle QEvent::StyleChange and QEvent::FontChange; 
 .PP
 \fBParameters\fP
@@ -263,6 +273,10 @@ Handle QEvent::StyleChange and QEvent::FontChange;
 .RE
 .PP
 
+.PP
+Reimplemented from \fBQwtAbstractScale\fP\&.
+.PP
+Definition at line 431 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::drawFocusIndicator (QPainter * painter) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw the focus indicator 
 .PP
@@ -272,6 +286,8 @@ Draw the focus indicator
 .RE
 .PP
 
+.PP
+Definition at line 697 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::drawKnob (QPainter * painter, const QRectF & knobRect) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -285,6 +301,8 @@ Draw the knob\&.
 .RE
 .PP
 
+.PP
+Definition at line 489 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::drawMarker (QPainter * painter, const QRectF & rect, double angle) const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -300,7 +318,9 @@ Draw the marker at the knob's front\&.
 .RE
 .PP
 
-.SS "bool QwtKnob::isScrollPosition (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 576 of file qwt_knob\&.cpp\&.
+.SS "bool QwtKnob::isScrollPosition (const QPoint & pos) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Determine what to do when the user presses a mouse button\&. 
@@ -323,6 +343,8 @@ Determine what to do when the user presses a mouse button\&.
 
 .PP
 Implements \fBQwtAbstractSlider\fP\&.
+.PP
+Definition at line 347 of file qwt_knob\&.cpp\&.
 .SS "QRect QwtKnob::knobRect () const"
 Calculate the bounding rectangle of the knob without the scale
 .PP
@@ -337,6 +359,8 @@ Bounding rectangle of the knob
 .RE
 .PP
 
+.PP
+Definition at line 292 of file qwt_knob\&.cpp\&.
 .SS "\fBQwtKnob::KnobStyle\fP QwtKnob::knobStyle () const"
 
 .PP
@@ -351,6 +375,8 @@ Marker type of the knob
 .RE
 .PP
 
+.PP
+Definition at line 144 of file qwt_knob\&.cpp\&.
 .SS "int QwtKnob::markerSize () const"
 
 .PP
@@ -365,6 +391,8 @@ Marker size
 .RE
 .PP
 
+.PP
+Definition at line 825 of file qwt_knob\&.cpp\&.
 .SS "\fBQwtKnob::MarkerStyle\fP QwtKnob::markerStyle () const"
 
 .PP
@@ -379,7 +407,9 @@ Marker type of the knob
 .RE
 .PP
 
-.SS "QSize QwtKnob::minimumSizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 168 of file qwt_knob\&.cpp\&.
+.SS "QSize QwtKnob::minimumSizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -393,6 +423,8 @@ Minimum size hint
 .RE
 .PP
 
+.PP
+Definition at line 843 of file qwt_knob\&.cpp\&.
 .SS "int QwtKnob::numTurns () const"
 
 .PP
@@ -409,7 +441,9 @@ When the total angle is below 360° \fBnumTurns()\fP is ceiled to 1\&.
 .RE
 .PP
 
-.SS "void QwtKnob::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 245 of file qwt_knob\&.cpp\&.
+.SS "void QwtKnob::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Repaint the knob 
 .PP
 \fBParameters\fP
@@ -418,6 +452,8 @@ Repaint the knob
 .RE
 .PP
 
+.PP
+Definition at line 451 of file qwt_knob\&.cpp\&.
 .SS "\fBQwtRoundScaleDraw\fP * QwtKnob::scaleDraw ()"
 
 .PP
@@ -432,6 +468,8 @@ the scale draw of the knob
 .RE
 .PP
 
+.PP
+Definition at line 281 of file qwt_knob\&.cpp\&.
 .SS "const \fBQwtRoundScaleDraw\fP * QwtKnob::scaleDraw () const"
 
 .PP
@@ -446,7 +484,9 @@ the scale draw of the knob
 .RE
 .PP
 
-.SS "double QwtKnob::scrolledTo (const QPoint & pos) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 272 of file qwt_knob\&.cpp\&.
+.SS "double QwtKnob::scrolledTo (const QPoint & pos) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
 Determine the value for a new position of the mouse\&. 
@@ -469,6 +509,8 @@ Value for the mouse position
 
 .PP
 Implements \fBQwtAbstractSlider\fP\&.
+.PP
+Definition at line 373 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setAlignment (Qt::Alignment alignment)"
 
 .PP
@@ -487,6 +529,8 @@ The default setting is Qt::AlignCenter
 .RE
 .PP
 
+.PP
+Definition at line 730 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setBorderWidth (int borderWidth)"
 
 .PP
@@ -498,6 +542,8 @@ Set the knob's border width\&.
 .RE
 .PP
 
+.PP
+Definition at line 790 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setKnobStyle (\fBKnobStyle\fP knobStyle)"
 
 .PP
@@ -514,6 +560,8 @@ Set the knob type\&.
 .RE
 .PP
 
+.PP
+Definition at line 131 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setKnobWidth (int width)"
 
 .PP
@@ -535,6 +583,8 @@ Modifies the sizePolicy()
 .RE
 .PP
 
+.PP
+Definition at line 759 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setMarkerSize (int size)"
 
 .PP
@@ -546,6 +596,8 @@ Set the size of the marker\&. When setting a size <= 0 the marker will automatic
 .RE
 .PP
 
+.PP
+Definition at line 812 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setMarkerStyle (\fBMarkerStyle\fP markerStyle)"
 
 .PP
@@ -562,6 +614,8 @@ Set the marker type of the knob\&.
 .RE
 .PP
 
+.PP
+Definition at line 155 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setNumTurns (int numTurns)"
 
 .PP
@@ -576,6 +630,8 @@ otherwise the total angle is floored to 360°\&.
 .RE
 .PP
 
+.PP
+Definition at line 219 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setScaleDraw (\fBQwtRoundScaleDraw\fP * scaleDraw)"
 Change the scale draw of the knob
 .PP
@@ -587,6 +643,8 @@ For changing the labels of the scales, it is necessary to derive from \fBQwtRoun
 .RE
 .PP
 
+.PP
+Definition at line 259 of file qwt_knob\&.cpp\&.
 .SS "void QwtKnob::setTotalAngle (double angle)"
 
 .PP
@@ -607,7 +665,9 @@ The default angle is 270 degrees\&.
 .RE
 .PP
 
-.SS "QSize QwtKnob::sizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 185 of file qwt_knob\&.cpp\&.
+.SS "QSize QwtKnob::sizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -616,6 +676,8 @@ The default angle is 270 degrees\&.
 .RE
 .PP
 
+.PP
+Definition at line 833 of file qwt_knob\&.cpp\&.
 .SS "double QwtKnob::totalAngle () const"
 
 .PP
@@ -630,6 +692,8 @@ the total angle
 .RE
 .PP
 
+.PP
+Definition at line 205 of file qwt_knob\&.cpp\&.
 
 .SH "Author"
 .PP 

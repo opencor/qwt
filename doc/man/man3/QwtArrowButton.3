@@ -1,4 +1,4 @@
-.TH "QwtArrowButton" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtArrowButton" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,10 +30,10 @@ Inherits QPushButton\&.
 .br
 .RI "The number of arrows\&. "
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .ti -1c
-.RI "virtual QSize \fBminimumSizeHint\fP () const"
+.RI "virtual QSize \fBminimumSizeHint\fP () const override"
 .br
 .RI "Return a minimum size hint\&. "
 .in -1c
@@ -41,8 +41,12 @@ Inherits QPushButton\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *event)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
+.ti -1c
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
+.br
+.RI "autoRepeat for the space keys "
 .ti -1c
 .RI "virtual void \fBdrawButtonLabel\fP (QPainter *)"
 .br
@@ -56,16 +60,14 @@ Inherits QPushButton\&.
 .ti -1c
 .RI "virtual QSize \fBarrowSize\fP (Qt::ArrowType, const QSize &boundingSize) const"
 .br
-.ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
-.br
-.RI "autoRepeat for the space keys "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Arrow Button\&. 
 
 A push button with one or more filled triangles on its front\&. An Arrow button can have 1 to 3 arrows in a row, pointing up, down, left or right\&. 
+.PP
+Definition at line 23 of file qwt_arrow_button\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtArrowButton::QwtArrowButton (int num, Qt::ArrowType arrowType, QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -81,6 +83,8 @@ A push button with one or more filled triangles on its front\&. An Arrow button 
 .RE
 .PP
 
+.PP
+Definition at line 55 of file qwt_arrow_button\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "QSize QwtArrowButton::arrowSize (Qt::ArrowType arrowType, const QSize & boundingSize) const\fC [protected]\fP, \fC [virtual]\fP"
@@ -99,6 +103,8 @@ Size of the arrow
 .RE
 .PP
 
+.PP
+Definition at line 296 of file qwt_arrow_button\&.cpp\&.
 .SS "void QwtArrowButton::drawArrow (QPainter * painter, const QRect & r, Qt::ArrowType arrowType) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw an arrow int a bounding rectangle
 .PP
@@ -112,6 +118,8 @@ Draw an arrow int a bounding rectangle
 .RE
 .PP
 
+.PP
+Definition at line 215 of file qwt_arrow_button\&.cpp\&.
 .SS "void QwtArrowButton::drawButtonLabel (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -128,6 +136,8 @@ The Qt Manual for QPushButton
 .RE
 .PP
 
+.PP
+Definition at line 143 of file qwt_arrow_button\&.cpp\&.
 .SS "QRect QwtArrowButton::labelRect () const\fC [protected]\fP, \fC [virtual]\fP"
 
 .PP
@@ -137,7 +147,9 @@ the bounding rectangle for the label
 .RE
 .PP
 
-.SS "void QwtArrowButton::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 104 of file qwt_arrow_button\&.cpp\&.
+.SS "void QwtArrowButton::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Paint event handler 
 .PP
 \fBParameters\fP
@@ -146,7 +158,9 @@ Paint event handler
 .RE
 .PP
 
-.SS "QSize QwtArrowButton::sizeHint () const\fC [virtual]\fP"
+.PP
+Definition at line 130 of file qwt_arrow_button\&.cpp\&.
+.SS "QSize QwtArrowButton::sizeHint () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -155,6 +169,8 @@ a size hint
 .RE
 .PP
 
+.PP
+Definition at line 259 of file qwt_arrow_button\&.cpp\&.
 
 .SH "Author"
 .PP 

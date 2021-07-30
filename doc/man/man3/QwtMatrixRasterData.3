@@ -1,4 +1,4 @@
-.TH "QwtMatrixRasterData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtMatrixRasterData" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherits \fBQwtRasterData\fP\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBResampleMode\fP { \fBNearestNeighbour\fP, \fBBilinearInterpolation\fP }"
+.RI "enum \fBResampleMode\fP { \fBNearestNeighbour\fP, \fBBilinearInterpolation\fP, \fBBicubicInterpolation\fP }"
 .br
 .RI "Resampling algorithm The default setting is NearestNeighbour;\&. "
 .in -1c
@@ -38,15 +38,18 @@ Inherits \fBQwtRasterData\fP\&.
 .RI "\fBResampleMode\fP \fBresampleMode\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBsetInterval\fP (Qt::Axis, const \fBQwtInterval\fP &)"
+.RI "void \fBsetInterval\fP (Qt::Axis, const \fBQwtInterval\fP &)"
 .br
 .RI "Assign the bounding interval for an axis\&. "
 .ti -1c
-.RI "void \fBsetValueMatrix\fP (const QVector< double > &values, int \fBnumColumns\fP)"
+.RI "virtual \fBQwtInterval\fP \fBinterval\fP (Qt::Axis axis) const override final"
+.br
+.ti -1c
+.RI "void \fBsetValueMatrix\fP (const \fBQVector\fP< double > &values, int \fBnumColumns\fP)"
 .br
 .RI "Assign a value matrix\&. "
 .ti -1c
-.RI "const QVector< double > \fBvalueMatrix\fP () const"
+.RI "const \fBQVector\fP< double > \fBvalueMatrix\fP () const"
 .br
 .ti -1c
 .RI "void \fBsetValue\fP (int row, int col, double \fBvalue\fP)"
@@ -59,11 +62,11 @@ Inherits \fBQwtRasterData\fP\&.
 .RI "int \fBnumRows\fP () const"
 .br
 .ti -1c
-.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const"
+.RI "virtual QRectF \fBpixelHint\fP (const QRectF &) const override"
 .br
 .RI "Calculate the pixel hint\&. "
 .ti -1c
-.RI "virtual double \fBvalue\fP (double x, double y) const"
+.RI "virtual double \fBvalue\fP (double x, double y) const override"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -71,6 +74,8 @@ Inherits \fBQwtRasterData\fP\&.
 A class representing a matrix of values as raster data\&. 
 
 \fBQwtMatrixRasterData\fP implements an interface for a matrix of equidistant values, that can be used by a \fBQwtPlotRasterItem\fP\&. It implements a couple of resampling algorithms, to provide values for positions, that or not on the value matrix\&. 
+.PP
+Definition at line 28 of file qwt_matrix_raster_data\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtMatrixRasterData::ResampleMode\fP"
@@ -86,8 +91,31 @@ Return the value from the matrix, that is nearest to the the requested position\
 .TP
 \fB\fIBilinearInterpolation \fP\fP
 Interpolate the value from the distances and values of the 4 surrounding values in the matrix, 
+.TP
+\fB\fIBicubicInterpolation \fP\fP
+Interpolate the value from the 16 surrounding values in the matrix using hermite bicubic interpolation 
+.PP
+Definition at line 35 of file qwt_matrix_raster_data\&.h\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "\fBQwtInterval\fP QwtMatrixRasterData::interval (Qt::Axis axis) const\fC [final]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Bounding interval for an axis 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetInterval\fP 
+.RE
+.PP
+
+.PP
+Implements \fBQwtRasterData\fP\&.
+.PP
+Definition at line 134 of file qwt_matrix_raster_data\&.cpp\&.
 .SS "int QwtMatrixRasterData::numColumns () const"
 
 .PP
@@ -102,6 +130,8 @@ Number of columns of the value matrix
 .RE
 .PP
 
+.PP
+Definition at line 195 of file qwt_matrix_raster_data\&.cpp\&.
 .SS "int QwtMatrixRasterData::numRows () const"
 
 .PP
@@ -116,7 +146,9 @@ Number of rows of the value matrix
 .RE
 .PP
 
-.SS "QRectF QwtMatrixRasterData::pixelHint (const QRectF & area) const\fC [virtual]\fP"
+.PP
+Definition at line 204 of file qwt_matrix_raster_data\&.cpp\&.
+.SS "QRectF QwtMatrixRasterData::pixelHint (const QRectF & area) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate the pixel hint\&. \fBpixelHint()\fP returns the geometry of a pixel, that can be used to calculate the resolution and alignment of the plot item, that is representing the data\&.
@@ -149,6 +181,8 @@ Calculated hint
 
 .PP
 Reimplemented from \fBQwtRasterData\fP\&.
+.PP
+Definition at line 229 of file qwt_matrix_raster_data\&.cpp\&.
 .SS "\fBQwtMatrixRasterData::ResampleMode\fP QwtMatrixRasterData::resampleMode () const"
 
 .PP
@@ -163,7 +197,9 @@ resampling algorithm
 .RE
 .PP
 
-.SS "void QwtMatrixRasterData::setInterval (Qt::Axis axis, const \fBQwtInterval\fP & interval)\fC [virtual]\fP"
+.PP
+Definition at line 99 of file qwt_matrix_raster_data\&.cpp\&.
+.SS "void QwtMatrixRasterData::setInterval (Qt::Axis axis, const \fBQwtInterval\fP & interval)"
 
 .PP
 Assign the bounding interval for an axis\&. Setting the bounding intervals for the X/Y axis is mandatory to define the positions for the values of the value matrix\&. The interval in Z direction defines the possible range for the values in the matrix, what is f\&.e used by \fBQwtPlotSpectrogram\fP to map values to colors\&. The Z-interval might be the bounding interval of the values in the matrix, but usually it isn't\&. ( f\&.e a interval of 0\&.0-100\&.0 for values in percentage )
@@ -182,7 +218,7 @@ Assign the bounding interval for an axis\&. Setting the bounding intervals for t
 .PP
 
 .PP
-Reimplemented from \fBQwtRasterData\fP\&.
+Definition at line 120 of file qwt_matrix_raster_data\&.cpp\&.
 .SS "void QwtMatrixRasterData::setResampleMode (\fBResampleMode\fP mode)"
 
 .PP
@@ -199,6 +235,8 @@ Set the resampling algorithm\&.
 .RE
 .PP
 
+.PP
+Definition at line 90 of file qwt_matrix_raster_data\&.cpp\&.
 .SS "void QwtMatrixRasterData::setValue (int row, int col, double value)"
 
 .PP
@@ -219,7 +257,9 @@ Change a single value in the matrix\&.
 .RE
 .PP
 
-.SS "void QwtMatrixRasterData::setValueMatrix (const QVector< double > & values, int numColumns)"
+.PP
+Definition at line 181 of file qwt_matrix_raster_data\&.cpp\&.
+.SS "void QwtMatrixRasterData::setValueMatrix (const \fBQVector\fP< double > & values, int numColumns)"
 
 .PP
 Assign a value matrix\&. The positions of the values are calculated by dividing the bounding rectangle of the X/Y intervals into equidistant rectangles ( pixels )\&. Each value corresponds to the center of a pixel\&.
@@ -237,7 +277,9 @@ Assign a value matrix\&. The positions of the values are calculated by dividing 
 .RE
 .PP
 
-.SS "double QwtMatrixRasterData::value (double x, double y) const\fC [virtual]\fP"
+.PP
+Definition at line 155 of file qwt_matrix_raster_data\&.cpp\&.
+.SS "double QwtMatrixRasterData::value (double x, double y) const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -260,7 +302,9 @@ the value at a raster position
 
 .PP
 Implements \fBQwtRasterData\fP\&.
-.SS "const QVector< double > QwtMatrixRasterData::valueMatrix () const"
+.PP
+Definition at line 256 of file qwt_matrix_raster_data\&.cpp\&.
+.SS "const \fBQVector\fP< double > QwtMatrixRasterData::valueMatrix () const"
 
 .PP
 \fBReturns\fP
@@ -274,6 +318,8 @@ Value matrix
 .RE
 .PP
 
+.PP
+Definition at line 167 of file qwt_matrix_raster_data\&.cpp\&.
 
 .SH "Author"
 .PP 

@@ -1,4 +1,4 @@
-.TH "QwtPlotCanvas" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotCanvas" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ QwtPlotCanvas \- Canvas of a \fBQwtPlot\fP\&.
 .PP
 \fC#include <qwt_plot_canvas\&.h>\fP
 .PP
-Inherits QFrame\&.
+Inherits QFrame, and \fBQwtPlotAbstractCanvas\fP\&.
 .SS "Public Types"
 
 .in +1c
@@ -19,13 +19,8 @@ Inherits QFrame\&.
 .br
 .RI "Paint attributes\&. "
 .ti -1c
-.RI "enum \fBFocusIndicator\fP { \fBNoFocusIndicator\fP, \fBCanvasFocusIndicator\fP, \fBItemFocusIndicator\fP }"
-.br
-.RI "Focus indicator The default setting is NoFocusIndicator\&. "
-.ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Slots"
 
@@ -46,26 +41,6 @@ Inherits QFrame\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "\fBQwtPlot\fP * \fBplot\fP ()"
-.br
-.RI "Return parent plot widget\&. "
-.ti -1c
-.RI "const \fBQwtPlot\fP * \fBplot\fP () const"
-.br
-.RI "Return parent plot widget\&. "
-.ti -1c
-.RI "void \fBsetFocusIndicator\fP (\fBFocusIndicator\fP)"
-.br
-.ti -1c
-.RI "\fBFocusIndicator\fP \fBfocusIndicator\fP () const"
-.br
-.ti -1c
-.RI "void \fBsetBorderRadius\fP (double)"
-.br
-.ti -1c
-.RI "double \fBborderRadius\fP () const"
-.br
-.ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
 .br
 .RI "Changing the paint attributes\&. "
@@ -76,11 +51,11 @@ Inherits QFrame\&.
 .RI "const QPixmap * \fBbackingStore\fP () const"
 .br
 .ti -1c
-.RI "void \fBinvalidateBackingStore\fP ()"
+.RI "Q_INVOKABLE void \fBinvalidateBackingStore\fP ()"
 .br
 .RI "Invalidate the internal backing store\&. "
 .ti -1c
-.RI "virtual bool \fBevent\fP (QEvent *)"
+.RI "virtual bool \fBevent\fP (QEvent *) override"
 .br
 .ti -1c
 .RI "Q_INVOKABLE QPainterPath \fBborderPath\fP (const QRect &) const"
@@ -90,21 +65,14 @@ Inherits QFrame\&.
 
 .in +1c
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBresizeEvent\fP (QResizeEvent *)"
+.RI "virtual void \fBresizeEvent\fP (QResizeEvent *) override"
 .br
 .ti -1c
-.RI "virtual void \fBdrawFocusIndicator\fP (QPainter *)"
+.RI "virtual void \fBdrawBorder\fP (QPainter *) override"
 .br
-.ti -1c
-.RI "virtual void \fBdrawBorder\fP (QPainter *)"
-.br
-.ti -1c
-.RI "void \fBupdateStyleSheetInfo\fP ()"
-.br
-.RI "Update the cached information about the current style sheet\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -114,35 +82,20 @@ Canvas is the widget where all plot items are displayed
 .PP
 \fBSee also\fP
 .RS 4
-\fBQwtPlot::setCanvas()\fP, \fBQwtPlotGLCanvas\fP 
+\fBQwtPlot::setCanvas()\fP, \fBQwtPlotGLCanvas\fP, \fBQwtPlotOpenGLCanvas\fP 
 .RE
 .PP
 
+.PP
+Definition at line 29 of file qwt_plot_canvas\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtPlotCanvas::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 102 of file qwt_plot_canvas\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
-.SS "enum \fBQwtPlotCanvas::FocusIndicator\fP"
-
-.PP
-Focus indicator The default setting is NoFocusIndicator\&. 
-.PP
-\fBSee also\fP
-.RS 4
-\fBsetFocusIndicator()\fP, \fBfocusIndicator()\fP, \fBdrawFocusIndicator()\fP 
-.RE
-.PP
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\fB\fINoFocusIndicator \fP\fP
-Don't paint a focus indicator\&. 
-.TP
-\fB\fICanvasFocusIndicator \fP\fP
-The focus is related to the complete canvas\&. Paint the focus indicator using \fBdrawFocusIndicator()\fP 
-.TP
-\fB\fIItemFocusIndicator \fP\fP
-The focus is related to an item (curve, point, \&.\&.\&.) on the canvas\&. It is up to the application to display a focus indication using f\&.e\&. highlighting\&. 
 .SS "enum \fBQwtPlotCanvas::PaintAttribute\fP"
 
 .PP
@@ -194,6 +147,8 @@ When ImmediatePaint is set \fBreplot()\fP calls repaint() instead of update()\&.
 .RE
 .PP
 
+.PP
+Definition at line 44 of file qwt_plot_canvas\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotCanvas::QwtPlotCanvas (\fBQwtPlot\fP * plot = \fCNULL\fP)\fC [explicit]\fP"
@@ -212,6 +167,8 @@ Constructor\&.
 .RE
 .PP
 
+.PP
+Definition at line 41 of file qwt_plot_canvas\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "const QPixmap * QwtPlotCanvas::backingStore () const"
@@ -223,6 +180,8 @@ Backing store, might be null
 .RE
 .PP
 
+.PP
+Definition at line 133 of file qwt_plot_canvas\&.cpp\&.
 .SS "QPainterPath QwtPlotCanvas::borderPath (const QRect & rect) const"
 Calculate the painter path for a styled or rounded border
 .PP
@@ -239,21 +198,9 @@ Painter path, that can be used for clipping
 .RE
 .PP
 
-.SS "double QwtPlotCanvas::borderRadius () const"
-
 .PP
-\fBReturns\fP
-.RS 4
-Radius for the corners of the border frame 
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBsetBorderRadius()\fP 
-.RE
-.PP
-
-.SS "void QwtPlotCanvas::drawBorder (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
+Definition at line 320 of file qwt_plot_canvas\&.cpp\&.
+.SS "void QwtPlotCanvas::drawBorder (QPainter * painter)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw the border of the plot canvas
 .PP
 \fBParameters\fP
@@ -267,16 +214,11 @@ Draw the border of the plot canvas
 .RE
 .PP
 
-.SS "void QwtPlotCanvas::drawFocusIndicator (QPainter * painter)\fC [protected]\fP, \fC [virtual]\fP"
-Draw the focus indication 
 .PP
-\fBParameters\fP
-.RS 4
-\fIpainter\fP Painter 
-.RE
+Reimplemented from \fBQwtPlotAbstractCanvas\fP\&.
 .PP
-
-.SS "bool QwtPlotCanvas::event (QEvent * event)\fC [virtual]\fP"
+Definition at line 276 of file qwt_plot_canvas\&.cpp\&.
+.SS "bool QwtPlotCanvas::event (QEvent * event)\fC [override]\fP, \fC [virtual]\fP"
 Qt event handler for QEvent::PolishRequest and QEvent::StyleChange
 .PP
 \fBParameters\fP
@@ -290,21 +232,9 @@ See QFrame::event()
 .RE
 .PP
 
-.SS "\fBQwtPlotCanvas::FocusIndicator\fP QwtPlotCanvas::focusIndicator () const"
-
 .PP
-\fBReturns\fP
-.RS 4
-Focus indicator
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBFocusIndicator\fP, \fBsetFocusIndicator()\fP 
-.RE
-.PP
-
-.SS "void QwtPlotCanvas::paintEvent (QPaintEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+Definition at line 151 of file qwt_plot_canvas\&.cpp\&.
+.SS "void QwtPlotCanvas::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Paint event 
 .PP
 \fBParameters\fP
@@ -313,6 +243,8 @@ Paint event
 .RE
 .PP
 
+.PP
+Definition at line 178 of file qwt_plot_canvas\&.cpp\&.
 .SS "void QwtPlotCanvas::replot ()\fC [slot]\fP"
 Invalidate the paint cache and repaint the canvas 
 .PP
@@ -322,7 +254,9 @@ invalidatePaintCache()
 .RE
 .PP
 
-.SS "void QwtPlotCanvas::resizeEvent (QResizeEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 301 of file qwt_plot_canvas\&.cpp\&.
+.SS "void QwtPlotCanvas::resizeEvent (QResizeEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Resize event 
 .PP
 \fBParameters\fP
@@ -331,29 +265,8 @@ Resize event
 .RE
 .PP
 
-.SS "void QwtPlotCanvas::setBorderRadius (double radius)"
-Set the radius for the corners of the border frame
 .PP
-\fBParameters\fP
-.RS 4
-\fIradius\fP Radius of a rounded corner 
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-\fBborderRadius()\fP 
-.RE
-.PP
-
-.SS "void QwtPlotCanvas::setFocusIndicator (\fBFocusIndicator\fP focusIndicator)"
-Set the focus indicator
-.PP
-\fBSee also\fP
-.RS 4
-\fBFocusIndicator\fP, \fBfocusIndicator()\fP 
-.RE
-.PP
-
+Definition at line 291 of file qwt_plot_canvas\&.cpp\&.
 .SS "void QwtPlotCanvas::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 
 .PP
@@ -372,6 +285,8 @@ Changing the paint attributes\&.
 .RE
 .PP
 
+.PP
+Definition at line 70 of file qwt_plot_canvas\&.cpp\&.
 .SS "bool QwtPlotCanvas::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 Test whether a paint attribute is enabled
 .PP
@@ -391,6 +306,8 @@ true, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 127 of file qwt_plot_canvas\&.cpp\&.
 
 .SH "Author"
 .PP 

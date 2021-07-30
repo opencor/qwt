@@ -1,6 +1,6 @@
 var class_qwt_plot_raster_item =
 [
-    [ "PaintAttributes", "class_qwt_plot_raster_item.html#a6bde441d571c4943da01765dec2d4b4a", null ],
+    [ "PaintAttributes", "class_qwt_plot_raster_item.html#a71cc9ee02852dac4e5cf418e37563c9d", null ],
     [ "CachePolicy", "class_qwt_plot_raster_item.html#a94929fc4c31c3dab75ee5adcac2d57b0", [
       [ "NoCache", "class_qwt_plot_raster_item.html#a94929fc4c31c3dab75ee5adcac2d57b0a758ccf247c4ae50d4ffd090ef3a6058e", null ],
       [ "PaintCache", "class_qwt_plot_raster_item.html#a94929fc4c31c3dab75ee5adcac2d57b0a3bfb74bebbfe1ccabe1d6654fee7c56d", null ]
@@ -12,9 +12,9 @@ var class_qwt_plot_raster_item =
     [ "QwtPlotRasterItem", "class_qwt_plot_raster_item.html#af487c6abc8e95200d4537d1373f96be5", null ],
     [ "~QwtPlotRasterItem", "class_qwt_plot_raster_item.html#a2715233827c346ab15504dc75d6e9714", null ],
     [ "alpha", "class_qwt_plot_raster_item.html#a6a8ee7f74861bf13335044810174bd3c", null ],
-    [ "boundingRect", "class_qwt_plot_raster_item.html#a90086b343d7574af73b107940560a205", null ],
+    [ "boundingRect", "class_qwt_plot_raster_item.html#a0da9b86321855e580d0e21d2939d5391", null ],
     [ "cachePolicy", "class_qwt_plot_raster_item.html#aec74de65bf6b566afd52db6dc4c67c46", null ],
-    [ "draw", "class_qwt_plot_raster_item.html#ad1b901baadc6a694929ee39a5a2acbbb", null ],
+    [ "draw", "class_qwt_plot_raster_item.html#a0d93dc1cd50a43bc10bc1b1bfd457a4c", null ],
     [ "imageMap", "class_qwt_plot_raster_item.html#ad64bb562d81ec0ccc7b4cfbf6bb9a133", null ],
     [ "interval", "class_qwt_plot_raster_item.html#ae89258a78b262ccaad43c4a2d5f7b5b4", null ],
     [ "invalidateCache", "class_qwt_plot_raster_item.html#a547ce4d8d031b230226cfbd509ef65b5", null ],

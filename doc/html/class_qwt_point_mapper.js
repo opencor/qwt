@@ -1,9 +1,10 @@
 var class_qwt_point_mapper =
 [
-    [ "TransformationFlags", "class_qwt_point_mapper.html#af7a8c38f6dd7faf8396a87a882e2f967", null ],
+    [ "TransformationFlags", "class_qwt_point_mapper.html#aba6206c8750314c543f0e3b771ae1641", null ],
     [ "TransformationFlag", "class_qwt_point_mapper.html#aafc07ceadb3f311057037ca8680e1c23", [
       [ "RoundPoints", "class_qwt_point_mapper.html#aafc07ceadb3f311057037ca8680e1c23a0e367a1519b0005cad8bb324854cc8e3", null ],
-      [ "WeedOutPoints", "class_qwt_point_mapper.html#aafc07ceadb3f311057037ca8680e1c23a288f41a8e4d53c895f7bffaaa9b5d9e4", null ]
+      [ "WeedOutPoints", "class_qwt_point_mapper.html#aafc07ceadb3f311057037ca8680e1c23a288f41a8e4d53c895f7bffaaa9b5d9e4", null ],
+      [ "WeedOutIntermediatePoints", "class_qwt_point_mapper.html#aafc07ceadb3f311057037ca8680e1c23a7708d7fa581149d1a443f0eaf7066b06", null ]
     ] ],
     [ "QwtPointMapper", "class_qwt_point_mapper.html#a6e5eabb9c1af9b035023376fa2e1c472", null ],
     [ "~QwtPointMapper", "class_qwt_point_mapper.html#aabe6a70dae5784e8b67f4527c51e0c09", null ],

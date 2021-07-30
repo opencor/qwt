@@ -1,4 +1,4 @@
-.TH "QwtCompass" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtCompass" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,10 +39,10 @@ Inherits \fBQwtDial\fP\&.
 .RI "virtual void \fBdrawRose\fP (QPainter *, const QPointF &center, double radius, double north, QPalette::ColorGroup) const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawScaleContents\fP (QPainter *, const QPointF &center, double radius) const"
+.RI "virtual void \fBdrawScaleContents\fP (QPainter *, const QPointF &center, double radius) const override"
 .br
 .ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -59,6 +59,8 @@ The examples/dials example shows how to use \fBQwtCompass\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 61 of file qwt_compass\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtCompass::QwtCompass (QWidget * parent = \fCNULL\fP)\fC [explicit]\fP"
@@ -72,6 +74,8 @@ Constructor\&.
 .RE
 .PP
 Create a compass widget with a scale, no needle and no rose\&. The default origin is 270\&.0 with no valid value\&. It accepts mouse and keyboard inputs and has no step size\&. The default mode is \fBQwtDial::RotateNeedle\fP\&. 
+.PP
+Definition at line 158 of file qwt_compass\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtCompass::drawRose (QPainter * painter, const QPointF & center, double radius, double north, QPalette::ColorGroup cg) const\fC [protected]\fP, \fC [virtual]\fP"
@@ -91,7 +95,9 @@ Draw the compass rose
 .RE
 .PP
 
-.SS "void QwtCompass::drawScaleContents (QPainter * painter, const QPointF & center, double radius) const\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 218 of file qwt_compass\&.cpp\&.
+.SS "void QwtCompass::drawScaleContents (QPainter * painter, const QPointF & center, double radius) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Draw the contents of the scale
 .PP
 \fBParameters\fP
@@ -106,7 +112,9 @@ Draw the contents of the scale
 
 .PP
 Reimplemented from \fBQwtDial\fP\&.
-.SS "void QwtCompass::keyPressEvent (QKeyEvent * kev)\fC [protected]\fP, \fC [virtual]\fP"
+.PP
+Definition at line 189 of file qwt_compass\&.cpp\&.
+.SS "void QwtCompass::keyPressEvent (QKeyEvent * kev)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
 Handles key events
 .PP
 Beside the keys described in \fBQwtDial::keyPressEvent\fP numbers from 1-9 (without 5) set the direction according to their position on the num pad\&.
@@ -119,6 +127,8 @@ Beside the keys described in \fBQwtDial::keyPressEvent\fP numbers from 1-9 (with
 
 .PP
 Reimplemented from \fBQwtAbstractSlider\fP\&.
+.PP
+Definition at line 271 of file qwt_compass\&.cpp\&.
 .SS "\fBQwtCompassRose\fP * QwtCompass::rose ()"
 
 .PP
@@ -133,6 +143,8 @@ rose
 .RE
 .PP
 
+.PP
+Definition at line 257 of file qwt_compass\&.cpp\&.
 .SS "const \fBQwtCompassRose\fP * QwtCompass::rose () const"
 
 .PP
@@ -147,6 +159,8 @@ rose
 .RE
 .PP
 
+.PP
+Definition at line 248 of file qwt_compass\&.cpp\&.
 .SS "void QwtCompass::setRose (\fBQwtCompassRose\fP * rose)"
 Set a rose for the compass 
 .PP
@@ -166,6 +180,8 @@ The rose will be deleted, when a different rose is set or in ~QwtCompass
 .RE
 .PP
 
+.PP
+Definition at line 232 of file qwt_compass\&.cpp\&.
 
 .SH "Author"
 .PP 

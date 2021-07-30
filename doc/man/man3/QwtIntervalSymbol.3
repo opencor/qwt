@@ -1,4 +1,4 @@
-.TH "QwtIntervalSymbol" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtIntervalSymbol" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -87,6 +87,8 @@ A drawing primitive for displaying an interval like an error bar\&.
 .RE
 .PP
 
+.PP
+Definition at line 27 of file qwt_interval_symbol\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtIntervalSymbol::Style\fP"
@@ -108,9 +110,11 @@ The symbol displays a plain rectangle using \fBpen()\fP and \fBbrush()\fP\&. The
 .TP
 \fB\fIUserSymbol \fP\fP
 Styles >= UserSymbol are reserved for derived classes of \fBQwtIntervalSymbol\fP that overload \fBdraw()\fP with additional application specific symbol types\&. 
+.PP
+Definition at line 31 of file qwt_interval_symbol\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtIntervalSymbol::QwtIntervalSymbol (\fBStyle\fP style = \fC\fBNoSymbol\fP\fP)"
+.SS "QwtIntervalSymbol::QwtIntervalSymbol (\fBStyle\fP style = \fC\fBNoSymbol\fP\fP)\fC [explicit]\fP"
 Constructor
 .PP
 \fBParameters\fP
@@ -124,6 +128,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 47 of file qwt_interval_symbol\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "const QBrush & QwtIntervalSymbol::brush () const"
@@ -140,6 +146,8 @@ Brush
 .RE
 .PP
 
+.PP
+Definition at line 146 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::draw (QPainter * painter, Qt::Orientation orientation, const QPointF & from, const QPointF & to) const\fC [virtual]\fP"
 Draw a symbol depending on its style
 .PP
@@ -160,6 +168,8 @@ Draw a symbol depending on its style
 .RE
 .PP
 
+.PP
+Definition at line 200 of file qwt_interval_symbol\&.cpp\&.
 .SS "const QPen & QwtIntervalSymbol::pen () const"
 
 .PP
@@ -174,6 +184,8 @@ Pen
 .RE
 .PP
 
+.PP
+Definition at line 185 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::setBrush (const QBrush & brush)"
 
 .PP
@@ -190,6 +202,8 @@ Assign a brush\&. The brush is used for the Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 137 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::setPen (const QColor & color, qreal width = \fC0\&.0\fP, Qt::PenStyle style = \fCQt::SolidLine\fP)"
 Build and assign a pen
 .PP
@@ -210,6 +224,8 @@ In Qt5 the default pen width is 1\&.0 ( 0\&.0 in Qt4 ) what makes it non cosmeti
 .RE
 .PP
 
+.PP
+Definition at line 164 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::setPen (const QPen & pen)"
 Assign a pen
 .PP
@@ -224,6 +240,8 @@ Assign a pen
 .RE
 .PP
 
+.PP
+Definition at line 176 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::setStyle (\fBStyle\fP style)"
 Specify the symbol style
 .PP
@@ -238,6 +256,8 @@ Specify the symbol style
 .RE
 .PP
 
+.PP
+Definition at line 94 of file qwt_interval_symbol\&.cpp\&.
 .SS "void QwtIntervalSymbol::setWidth (int width)"
 Specify the width of the symbol It is used depending on the style\&.
 .PP
@@ -252,6 +272,8 @@ Specify the width of the symbol It is used depending on the style\&.
 .RE
 .PP
 
+.PP
+Definition at line 115 of file qwt_interval_symbol\&.cpp\&.
 .SS "\fBQwtIntervalSymbol::Style\fP QwtIntervalSymbol::style () const"
 
 .PP
@@ -266,6 +288,8 @@ Current symbol style
 .RE
 .PP
 
+.PP
+Definition at line 103 of file qwt_interval_symbol\&.cpp\&.
 .SS "int QwtIntervalSymbol::width () const"
 
 .PP
@@ -280,6 +304,8 @@ Width of the symbol\&.
 .RE
 .PP
 
+.PP
+Definition at line 124 of file qwt_interval_symbol\&.cpp\&.
 
 .SH "Author"
 .PP 

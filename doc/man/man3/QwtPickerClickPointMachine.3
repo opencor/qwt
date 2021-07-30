@@ -1,4 +1,4 @@
-.TH "QwtPickerClickPointMachine" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPickerClickPointMachine" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,7 +19,7 @@ Inherits \fBQwtPickerMachine\fP\&.
 .br
 .RI "Constructor\&. "
 .ti -1c
-.RI "virtual QList< \fBCommand\fP > \fBtransition\fP (const \fBQwtEventPattern\fP &, const QEvent *)"
+.RI "virtual \fBQList\fP< \fBCommand\fP > \fBtransition\fP (const \fBQwtEventPattern\fP &, const QEvent *) override"
 .br
 .RI "Transition\&. "
 .in -1c
@@ -36,6 +36,8 @@ Pressing \fBQwtEventPattern::MouseSelect1\fP or \fBQwtEventPattern::KeySelect1\f
 .RE
 .PP
 
+.PP
+Definition at line 102 of file qwt_picker_machine\&.h\&.
 
 .SH "Author"
 .PP 

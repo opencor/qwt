@@ -1,4 +1,4 @@
-.TH "QwtPlotSpectroCurve" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPlotSpectroCurve" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,6 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
 .ti -1c
 .RI "typedef QFlags< \fBPaintAttribute\fP > \fBPaintAttributes\fP"
 .br
-.RI "Paint attributes\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -37,7 +36,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
 .br
 .RI "Destructor\&. "
 .ti -1c
-.RI "virtual int \fBrtti\fP () const"
+.RI "virtual int \fBrtti\fP () const override"
 .br
 .ti -1c
 .RI "void \fBsetPaintAttribute\fP (\fBPaintAttribute\fP, bool on=true)"
@@ -46,7 +45,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
 .RI "bool \fBtestPaintAttribute\fP (\fBPaintAttribute\fP) const"
 .br
 .ti -1c
-.RI "void \fBsetSamples\fP (const QVector< \fBQwtPoint3D\fP > &)"
+.RI "void \fBsetSamples\fP (const \fBQVector\fP< \fBQwtPoint3D\fP > &)"
 .br
 .ti -1c
 .RI "void \fBsetSamples\fP (\fBQwtSeriesData\fP< \fBQwtPoint3D\fP > *)"
@@ -64,7 +63,7 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
 .RI "\fBQwtInterval\fP & \fBcolorRange\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const"
+.RI "virtual void \fBdrawSeries\fP (QPainter *, const \fBQwtScaleMap\fP &xMap, const \fBQwtScaleMap\fP &yMap, const QRectF &canvasRect, int from, int to) const override"
 .br
 .ti -1c
 .RI "void \fBsetPenWidth\fP (double)"
@@ -83,6 +82,14 @@ Inherits \fBQwtPlotSeriesItem\fP, and \fBQwtSeriesStore< QwtPoint3D >\fP\&.
 .SH "Detailed Description"
 .PP 
 Curve that displays 3D points as dots, where the z coordinate is mapped to a color\&. 
+.PP
+Definition at line 22 of file qwt_plot_spectrocurve\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QFlags<\fBPaintAttribute\fP > \fBQwtPlotSpectroCurve::PaintAttributes\fP"
+An ORed combination of \fBPaintAttribute\fP values\&. 
+.PP
+Definition at line 34 of file qwt_plot_spectrocurve\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtPlotSpectroCurve::PaintAttribute\fP"
@@ -95,6 +102,8 @@ Paint attributes\&.
 .TP
 \fB\fIClipPoints \fP\fP
 Clip points outside the canvas rectangle\&. 
+.PP
+Definition at line 28 of file qwt_plot_spectrocurve\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtPlotSpectroCurve::QwtPlotSpectroCurve (const QString & title = \fCQString()\fP)\fC [explicit]\fP"
@@ -106,6 +115,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 55 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "QwtPlotSpectroCurve::QwtPlotSpectroCurve (const \fBQwtText\fP & title)\fC [explicit]\fP"
 Constructor 
 .PP
@@ -115,6 +126,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 45 of file qwt_plot_spectrocurve\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "const \fBQwtColorMap\fP * QwtPlotSpectroCurve::colorMap () const"
@@ -131,6 +144,8 @@ Color Map used for mapping the intensity values to colors
 .RE
 .PP
 
+.PP
+Definition at line 163 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "\fBQwtInterval\fP & QwtPlotSpectroCurve::colorRange () const"
 
 .PP
@@ -145,6 +160,8 @@ Value interval, that corresponds to the color map
 .RE
 .PP
 
+.PP
+Definition at line 191 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::drawDots (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [protected]\fP, \fC [virtual]\fP"
 Draw a subset of the points
 .PP
@@ -169,7 +186,9 @@ Draw a subset of the points
 .RE
 .PP
 
-.SS "void QwtPlotSpectroCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [virtual]\fP"
+.PP
+Definition at line 270 of file qwt_plot_spectrocurve\&.cpp\&.
+.SS "void QwtPlotSpectroCurve::drawSeries (QPainter * painter, const \fBQwtScaleMap\fP & xMap, const \fBQwtScaleMap\fP & yMap, const QRectF & canvasRect, int from, int to) const\fC [override]\fP, \fC [virtual]\fP"
 Draw a subset of the points
 .PP
 \fBParameters\fP
@@ -195,6 +214,8 @@ Draw a subset of the points
 
 .PP
 Implements \fBQwtPlotSeriesItem\fP\&.
+.PP
+Definition at line 238 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "double QwtPlotSpectroCurve::penWidth () const"
 
 .PP
@@ -209,7 +230,9 @@ Pen width used to draw a dot
 .RE
 .PP
 
-.SS "int QwtPlotSpectroCurve::rtti () const\fC [virtual]\fP"
+.PP
+Definition at line 220 of file qwt_plot_spectrocurve\&.cpp\&.
+.SS "int QwtPlotSpectroCurve::rtti () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 \fBReturns\fP
@@ -220,6 +243,8 @@ Pen width used to draw a dot
 
 .PP
 Reimplemented from \fBQwtPlotItem\fP\&.
+.PP
+Definition at line 82 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::setColorMap (\fBQwtColorMap\fP * colorMap)"
 Change the color map
 .PP
@@ -236,6 +261,8 @@ Often it is useful to display the mapping between intensities and colors as an a
 .RE
 .PP
 
+.PP
+Definition at line 147 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::setColorRange (const \fBQwtInterval\fP & interval)"
 Set the value interval, that corresponds to the color map
 .PP
@@ -250,6 +277,8 @@ Set the value interval, that corresponds to the color map
 .RE
 .PP
 
+.PP
+Definition at line 176 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::setPaintAttribute (\fBPaintAttribute\fP attribute, bool on = \fCtrue\fP)"
 Specify an attribute how to draw the curve
 .PP
@@ -261,6 +290,8 @@ Specify an attribute how to draw the curve
 .RE
 .PP
 
+.PP
+Definition at line 94 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::setPenWidth (double penWidth)"
 Assign a pen width
 .PP
@@ -275,7 +306,9 @@ Assign a pen width
 .RE
 .PP
 
-.SS "void QwtPlotSpectroCurve::setSamples (const QVector< \fBQwtPoint3D\fP > & samples)"
+.PP
+Definition at line 202 of file qwt_plot_spectrocurve\&.cpp\&.
+.SS "void QwtPlotSpectroCurve::setSamples (const \fBQVector\fP< \fBQwtPoint3D\fP > & samples)"
 Initialize data with an array of samples\&. 
 .PP
 \fBParameters\fP
@@ -284,6 +317,8 @@ Initialize data with an array of samples\&.
 .RE
 .PP
 
+.PP
+Definition at line 115 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "void QwtPlotSpectroCurve::setSamples (\fBQwtSeriesData\fP< \fBQwtPoint3D\fP > * data)"
 Assign a series of samples
 .PP
@@ -300,6 +335,8 @@ The item takes ownership of the data object, deleting it when its not used anymo
 .RE
 .PP
 
+.PP
+Definition at line 130 of file qwt_plot_spectrocurve\&.cpp\&.
 .SS "bool QwtPlotSpectroCurve::testPaintAttribute (\fBPaintAttribute\fP attribute) const"
 
 .PP
@@ -314,6 +351,8 @@ True, when attribute is enabled
 .RE
 .PP
 
+.PP
+Definition at line 106 of file qwt_plot_spectrocurve\&.cpp\&.
 
 .SH "Author"
 .PP 

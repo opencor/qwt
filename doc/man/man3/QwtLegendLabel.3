@@ -1,4 +1,4 @@
-.TH "QwtLegendLabel" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtLegendLabel" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -68,7 +68,7 @@ Inherits \fBQwtTextLabel\fP\&.
 .RI "int \fBspacing\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBsetText\fP (const \fBQwtText\fP &)"
+.RI "virtual void \fBsetText\fP (const \fBQwtText\fP &) override"
 .br
 .ti -1c
 .RI "void \fBsetIcon\fP (const QPixmap &)"
@@ -77,7 +77,7 @@ Inherits \fBQwtTextLabel\fP\&.
 .RI "QPixmap \fBicon\fP () const"
 .br
 .ti -1c
-.RI "virtual QSize \fBsizeHint\fP () const"
+.RI "virtual QSize \fBsizeHint\fP () const override"
 .br
 .RI "Return a size hint\&. "
 .ti -1c
@@ -97,29 +97,31 @@ Inherits \fBQwtTextLabel\fP\&.
 .br
 .RI "Return true, if the item is down\&. "
 .ti -1c
-.RI "virtual void \fBpaintEvent\fP (QPaintEvent *)"
+.RI "virtual void \fBpaintEvent\fP (QPaintEvent *) override"
 .br
 .RI "Paint event\&. "
 .ti -1c
-.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmousePressEvent\fP (QMouseEvent *) override"
 .br
 .RI "Handle mouse press events\&. "
 .ti -1c
-.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *)"
+.RI "virtual void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
 .br
 .RI "Handle mouse release events\&. "
 .ti -1c
-.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *) override"
 .br
 .RI "Handle key press events\&. "
 .ti -1c
-.RI "virtual void \fBkeyReleaseEvent\fP (QKeyEvent *)"
+.RI "virtual void \fBkeyReleaseEvent\fP (QKeyEvent *) override"
 .br
 .RI "Handle key release events\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 A widget representing something on a \fBQwtLegend\fP\&. 
+.PP
+Definition at line 22 of file qwt_legend_label\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "QwtLegendLabel::QwtLegendLabel (QWidget * parent = \fC0\fP)\fC [explicit]\fP"
@@ -131,6 +133,8 @@ A widget representing something on a \fBQwtLegend\fP\&.
 .RE
 .PP
 
+.PP
+Definition at line 91 of file qwt_legend_label\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "const \fBQwtLegendData\fP & QwtLegendLabel::data () const"
@@ -147,6 +151,8 @@ Attributes of the label
 .RE
 .PP
 
+.PP
+Definition at line 83 of file qwt_legend_label\&.cpp\&.
 .SS "QPixmap QwtLegendLabel::icon () const"
 
 .PP
@@ -161,6 +167,8 @@ Pixmap representing a plot item
 .RE
 .PP
 
+.PP
+Definition at line 176 of file qwt_legend_label\&.cpp\&.
 .SS "\fBQwtLegendData::Mode\fP QwtLegendLabel::itemMode () const"
 
 .PP
@@ -175,6 +183,8 @@ Item mode
 .RE
 .PP
 
+.PP
+Definition at line 149 of file qwt_legend_label\&.cpp\&.
 .SS "void QwtLegendLabel::setChecked (bool on)\fC [slot]\fP"
 Check/Uncheck a the item
 .PP
@@ -189,6 +199,8 @@ Check/Uncheck a the item
 .RE
 .PP
 
+.PP
+Definition at line 217 of file qwt_legend_label\&.cpp\&.
 .SS "void QwtLegendLabel::setData (const \fBQwtLegendData\fP & legendData)"
 Set the attributes of the legend label
 .PP
@@ -203,6 +215,8 @@ Set the attributes of the legend label
 .RE
 .PP
 
+.PP
+Definition at line 61 of file qwt_legend_label\&.cpp\&.
 .SS "void QwtLegendLabel::setIcon (const QPixmap & icon)"
 Assign the icon
 .PP
@@ -217,6 +231,8 @@ Assign the icon
 .RE
 .PP
 
+.PP
+Definition at line 161 of file qwt_legend_label\&.cpp\&.
 .SS "void QwtLegendLabel::setItemMode (\fBQwtLegendData::Mode\fP mode)"
 Set the item mode The default is \fBQwtLegendData::ReadOnly\fP
 .PP
@@ -231,6 +247,8 @@ Set the item mode The default is \fBQwtLegendData::ReadOnly\fP
 .RE
 .PP
 
+.PP
+Definition at line 130 of file qwt_legend_label\&.cpp\&.
 .SS "void QwtLegendLabel::setSpacing (int spacing)"
 
 .PP
@@ -247,7 +265,9 @@ Change the spacing between icon and text\&.
 .RE
 .PP
 
-.SS "void QwtLegendLabel::setText (const \fBQwtText\fP & text)\fC [virtual]\fP"
+.PP
+Definition at line 187 of file qwt_legend_label\&.cpp\&.
+.SS "void QwtLegendLabel::setText (const \fBQwtText\fP & text)\fC [override]\fP, \fC [virtual]\fP"
 Set the text to the legend item
 .PP
 \fBParameters\fP
@@ -263,6 +283,8 @@ Set the text to the legend item
 
 .PP
 Reimplemented from \fBQwtTextLabel\fP\&.
+.PP
+Definition at line 112 of file qwt_legend_label\&.cpp\&.
 .SS "int QwtLegendLabel::spacing () const"
 
 .PP
@@ -277,6 +299,8 @@ Spacing between icon and text
 .RE
 .PP
 
+.PP
+Definition at line 206 of file qwt_legend_label\&.cpp\&.
 
 .SH "Author"
 .PP 

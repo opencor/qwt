@@ -1,4 +1,4 @@
-.TH "QwtPoint3DSeriesData" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtPoint3DSeriesData" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,10 +15,10 @@ Inherits \fBQwtArraySeriesData< QwtPoint3D >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBQwtPoint3DSeriesData\fP (const QVector< \fBQwtPoint3D\fP > &=QVector< \fBQwtPoint3D\fP >())"
+.RI "\fBQwtPoint3DSeriesData\fP (const \fBQVector\fP< \fBQwtPoint3D\fP > &=\fBQVector\fP< \fBQwtPoint3D\fP >())"
 .br
 .ti -1c
-.RI "virtual QRectF \fBboundingRect\fP () const"
+.RI "virtual QRectF \fBboundingRect\fP () const override"
 .br
 .RI "Calculate the bounding rectangle\&. "
 .in -1c
@@ -26,9 +26,11 @@ Inherits \fBQwtArraySeriesData< QwtPoint3D >\fP\&.
 .SH "Detailed Description"
 .PP 
 Interface for iterating over an array of 3D points\&. 
+.PP
+Definition at line 219 of file qwt_series_data\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtPoint3DSeriesData::QwtPoint3DSeriesData (const QVector< \fBQwtPoint3D\fP > & samples = \fCQVector<\fBQwtPoint3D\fP>()\fP)"
+.SS "QwtPoint3DSeriesData::QwtPoint3DSeriesData (const \fBQVector\fP< \fBQwtPoint3D\fP > & samples = \fC\fBQVector\fP< \fBQwtPoint3D\fP >( )\fP)"
 Constructor 
 .PP
 \fBParameters\fP
@@ -37,9 +39,11 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 275 of file qwt_series_data\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "QRectF QwtPoint3DSeriesData::boundingRect () const\fC [virtual]\fP"
+.SS "QRectF QwtPoint3DSeriesData::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Calculate the bounding rectangle\&. The bounding rectangle is calculated once by iterating over all points and is stored for all following requests\&.
@@ -50,6 +54,10 @@ Bounding rectangle
 .RE
 .PP
 
+.PP
+Implements \fBQwtSeriesData< T >\fP\&.
+.PP
+Definition at line 289 of file qwt_series_data\&.cpp\&.
 
 .SH "Author"
 .PP 

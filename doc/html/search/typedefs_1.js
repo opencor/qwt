@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['borderflags_2998',['BorderFlags',['../class_qwt_interval.html#a678a26fcaa91cca596d9aebcbf5776c9',1,'QwtInterval']]]
+  ['borderflags_3602',['BorderFlags',['../class_qwt_interval.html#aed8121e9a5992e790926d85cd20220a3',1,'QwtInterval']]]
 ];

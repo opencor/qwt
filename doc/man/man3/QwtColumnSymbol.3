@@ -1,4 +1,4 @@
-.TH "QwtColumnSymbol" 3 "Mon Dec 28 2020" "Version 6.1.6" "Qwt User's Guide" \" -*- nroff -*-
+.TH "QwtColumnSymbol" 3 "Sun Jul 18 2021" "Version 6.2.0" "Qwt User's Guide" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -67,6 +67,8 @@ QwtColumnSymbol \- A drawing primitive for columns\&.
 .SH "Detailed Description"
 .PP 
 A drawing primitive for columns\&. 
+.PP
+Definition at line 74 of file qwt_column_symbol\&.h\&.
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBQwtColumnSymbol::FrameStyle\fP"
@@ -90,6 +92,8 @@ A plain frame style\&.
 .TP
 \fB\fIRaised \fP\fP
 A raised frame style\&. 
+.PP
+Definition at line 104 of file qwt_column_symbol\&.h\&.
 .SS "enum \fBQwtColumnSymbol::Style\fP"
 Style 
 .PP
@@ -111,9 +115,11 @@ The column is painted with a frame depending on the \fBframeStyle()\fP and \fBli
 .TP
 \fB\fIUserStyle \fP\fP
 Styles >= \fBQwtColumnSymbol::UserStyle\fP are reserved for derived classes of \fBQwtColumnSymbol\fP that overload \fBdraw()\fP with additional application specific symbol types\&. 
+.PP
+Definition at line 81 of file qwt_column_symbol\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "QwtColumnSymbol::QwtColumnSymbol (\fBStyle\fP style = \fC\fBNoStyle\fP\fP)"
+.SS "QwtColumnSymbol::QwtColumnSymbol (\fBStyle\fP style = \fC\fBNoStyle\fP\fP)\fC [explicit]\fP"
 Constructor
 .PP
 \fBParameters\fP
@@ -127,6 +133,8 @@ Constructor
 .RE
 .PP
 
+.PP
+Definition at line 135 of file qwt_column_symbol\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void QwtColumnSymbol::draw (QPainter * painter, const \fBQwtColumnRect\fP & rect) const\fC [virtual]\fP"
@@ -145,6 +153,8 @@ Draw the symbol depending on its style\&.
 .RE
 .PP
 
+.PP
+Definition at line 238 of file qwt_column_symbol\&.cpp\&.
 .SS "void QwtColumnSymbol::drawBox (QPainter * painter, const \fBQwtColumnRect\fP & rect) const\fC [protected]\fP"
 Draw the symbol when it is in Box style\&.
 .PP
@@ -161,6 +171,8 @@ Draw the symbol when it is in Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 264 of file qwt_column_symbol\&.cpp\&.
 .SS "\fBQwtColumnSymbol::FrameStyle\fP QwtColumnSymbol::frameStyle () const"
 
 .PP
@@ -175,6 +187,8 @@ Current frame style, that is used for the Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 202 of file qwt_column_symbol\&.cpp\&.
 .SS "int QwtColumnSymbol::lineWidth () const"
 
 .PP
@@ -189,6 +203,8 @@ Line width of the frame, that is used for the Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 225 of file qwt_column_symbol\&.cpp\&.
 .SS "const QPalette & QwtColumnSymbol::palette () const"
 
 .PP
@@ -203,6 +219,8 @@ Current palette
 .RE
 .PP
 
+.PP
+Definition at line 182 of file qwt_column_symbol\&.cpp\&.
 .SS "void QwtColumnSymbol::setFrameStyle (\fBFrameStyle\fP frameStyle)"
 Set the frame, that is used for the Box style\&.
 .PP
@@ -217,6 +235,8 @@ Set the frame, that is used for the Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 193 of file qwt_column_symbol\&.cpp\&.
 .SS "void QwtColumnSymbol::setLineWidth (int width)"
 Set the line width of the frame, that is used for the Box style\&.
 .PP
@@ -231,6 +251,8 @@ Set the line width of the frame, that is used for the Box style\&.
 .RE
 .PP
 
+.PP
+Definition at line 213 of file qwt_column_symbol\&.cpp\&.
 .SS "void QwtColumnSymbol::setPalette (const QPalette & palette)"
 Assign a palette for the symbol
 .PP
@@ -245,6 +267,8 @@ Assign a palette for the symbol
 .RE
 .PP
 
+.PP
+Definition at line 173 of file qwt_column_symbol\&.cpp\&.
 .SS "void QwtColumnSymbol::setStyle (\fBStyle\fP style)"
 Specify the symbol style
 .PP
@@ -259,6 +283,8 @@ Specify the symbol style
 .RE
 .PP
 
+.PP
+Definition at line 153 of file qwt_column_symbol\&.cpp\&.
 .SS "\fBQwtColumnSymbol::Style\fP QwtColumnSymbol::style () const"
 
 .PP
@@ -273,6 +299,8 @@ Current symbol style
 .RE
 .PP
 
+.PP
+Definition at line 162 of file qwt_column_symbol\&.cpp\&.
 
 .SH "Author"
 .PP 

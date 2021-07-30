@@ -26,6 +26,15 @@ var NAVTREE =
 [
   [ "Qwt User's Guide", "index.html", [
     [ "Qwt - Qt Widgets for Technical Applications", "index.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -45,17 +54,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_qwt_counter.html#a259de8df2b8928139d1fc4738694eac8",
-"class_qwt_interval.html#a15d4be800076713aaca0e00c4ca5975a",
-"class_qwt_magnifier.html#acbb443e8e38f049b937a8b00fcf05869",
-"class_qwt_pixel_matrix.html#a6691629e198fb39e6f653038cfb74f6b",
-"class_qwt_plot_dict.html#a44ae2958a8f6115d17c777c6061aea99",
-"class_qwt_plot_layout.html#ad0d2d60e86a4c69ec105524041d5221da9036bf7de40018a2f12d456a04949c6b",
-"class_qwt_plot_rescaler.html#ac5a49fa34b071da28517efe6212d81ea",
-"class_qwt_point3_d_series_data.html#a4410e3dea4acccfdde70eb1f99829c16",
-"class_qwt_scale_widget.html#addfd5f0802f85f8abee1d3ff7a1617d6",
-"class_qwt_text.html#ad9947790e30eb555a651872ed97757ef",
-"functions_l.html"
+"class_qwt_compass_rose.html#ad974a3035da51a9cfb36fa04eb1c40a6",
+"class_qwt_graphic.html#a441f351c6578deab715126586dd1ca21",
+"class_qwt_linear_color_map.html#aedf72ce7e3d0059b5a8e6b197a67f796",
+"class_qwt_picker.html#afeb497069fb64ef3948f5dae605268ae",
+"class_qwt_plot_canvas.html#a76066290edb594a71ee09be564563b0fa2a2fee2c1807f8306850e15977bacb70",
+"class_qwt_plot_item.html#a448f33b595d511b18c2df88ac43503e1",
+"class_qwt_plot_picker.html#a6e70b987ac087bd46f35adaece356f73",
+"class_qwt_plot_trading_curve.html#a3d94d83557a7bc38ee52136582debc20",
+"class_qwt_polar_fitter.html#af44b4b5f62393add4ea35b11b6723c12",
+"class_qwt_polar_renderer.html#a58aa83824c90dbf1dd240a6fbf905fdf",
+"class_qwt_scale_widget.html#aeb337b8e67fc00ca98bf39a6d70aea61",
+"class_qwt_symbol.html#a62f457952470c2076962e83ef2c24d2faeb6111f6fc1813efb466687309c873bd",
+"class_qwt_wheel.html#a60b0bb4f0082e5fb8967745cb8d340c1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
