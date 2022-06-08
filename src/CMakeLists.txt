@@ -8,7 +8,7 @@ option(QWT_CONFIG_QwtPlot "Enable more verbose output from Makefile builds." ON)
 option(QWT_CONFIG_QwtWidgets "Enable more verbose output from Makefile builds." ON)
 option(QWT_CONFIG_QwtPolar "Enable more verbose output from Makefile builds." ON)
 
-
+set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE) 
 
 #make sure MOC compiler is called in parallel
 set(CMAKE_AUTOGEN_PARALLEL AUTO)
@@ -31,6 +31,7 @@ find_package(Qt5OpenGL CONFIG REQUIRED)
 find_package(Qt5Charts CONFIG REQUIRED)
 find_package(Qt5PrintSupport CONFIG REQUIRED)
 find_package(Qt5Concurrent CONFIG REQUIRED)
+find_package(Qt5OpenGL CONFIG REQUIRED)
 
 
 set(HEADERS 
@@ -128,6 +129,7 @@ set(SOURCES
 
 
 if(QWT_CONFIG_QwtPlot)
+message("UUUUUUUUUUUUUUUUU")
     set(SOURCES ${SOURCES}
         qwt_curve_fitter.cpp  
         qwt_spline_curve_fitter.cpp  
@@ -247,22 +249,35 @@ if(QWT_CONFIG_QwtPolar)
 endif()    
 
 
+set(SOURCES ${SOURCES}
+qwt_plot_glcanvas.cpp
+qwt_plot_opengl_canvas.cpp
+)
+
+set(HEADERS ${HEADERS}
+qwt_plot_glcanvas.h
+qwt_plot_opengl_canvas.h
+)
+
+
 if(QWT_CONFIG_QwtOpenGL)
     if(QT_VERSION_MAJOR <  6)  # lessThan(QT_MAJOR_VERSION, 6) {
         set(SOURCES ${SOURCES}
             qwt_plot_glcanvas.cpp
-        )
+            qwt_plot_opengl_canvas.cpp
+            )
 
         set(HEADERS ${HEADERS}
             qwt_plot_glcanvas.h
-        )
+            qwt_plot_opengl_canvas.h
+            )
     endif()
 
     if(QT_VERSION_MAJOR >  4)  # greaterThan(QT_MAJOR_VERSION, 4)
         if(QT_VERSION_MINOR <  6)  #
             set(SOURCES ${SOURCES}
             #    qwt_plot_glcanvas.cpp
-            )
+)
 
             set(HEADERS ${HEADERS}
             #    qwt_plot_glcanvas.h
@@ -432,11 +447,41 @@ endif()
 endif()    
 
 
-add_library(qwt ${SOURCES} ${HEADERS})
-target_link_libraries(qwt Qt5::Widgets Qt5::Charts Qt5::PrintSupport Qt5::Concurrent) 
-target_compile_definitions(qwt PRIVATE QWT_NO_SVG)
+# foreach(X IN ${SOURCES} )
+#     message(STATUS "${X}")
+# endforeach()
 
+foreach(i ${SOURCES})
+    message("${i}")
+endforeach()
+
+# SHARED ?
+add_library(qwt   ${SOURCES} ${HEADERS})
+target_link_libraries(qwt Qt5::Widgets Qt5::Charts Qt5::PrintSupport Qt5::Concurrent Qt5::OpenGL) 
+target_compile_definitions(qwt PUBLIC QWT_NO_SVG)
+target_compile_definitions(qwt PUBLIC QWT_MOC_INCLUDE)
+target_include_directories(qwt PUBLIC ../classincludes ./ )
+
+#get_target_property(MY_PROJECT_SOURCES qwt SOURCES)
+#message(${MY_PROJECT_SOURCES})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+
+
+#add_executable(animation ../examples/animation/main.cpp ../examples/animation/Plot.cpp ../examples/animation/Plot.h)
+#target_link_libraries(animation qwt Qt5::Widgets Qt5::Charts Qt5::PrintSupport Qt5::Concurrent Qt5::OpenGL)
+
+# foreach(subdir ../examples)
+#     message("IIIIIIIIII ${subdir}")
+# endforeach()
+
+#FILE(GLOB children ${curdir}/*)
+# FILE(GLOB children ../examples)
+# message("IIIIIIIIII ${children}")
+
+
+# add_executable(sinusplot ../examples/sinusplot/main.cpp )
+# target_link_libraries(sinusplot qwt Qt5::Widgets Qt5::Charts Qt5::PrintSupport Qt5::Concurrent Qt5::OpenGL)
+
