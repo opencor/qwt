@@ -586,4 +586,6 @@ int main()
 {
     testSplines();
     testDuplicates();
+    
+    return 0;
 }
