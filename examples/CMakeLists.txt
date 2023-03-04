@@ -1,30 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(qwt_examples VERSION 0.1.0)
 
-
-
-#make sure MOC compiler is called in parallel
-#set(CMAKE_AUTOGEN_PARALLEL AUTO)
-
-# Find includes in corresponding build directories
-#set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 # Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
 
-# Instruct CMake to create code from Qt resource files (*.qrc)
-#set(CMAKE_AUTORCC ON)
-
-# UI ==> H generator from QT   # Instruct CMake to create code from Qt designer ui files
-#set(CMAKE_AUTOUIC ON)
-
-# # Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
-# find_package(Qt5OpenGL CONFIG REQUIRED)
-# find_package(Qt5Charts CONFIG REQUIRED)
-# find_package(Qt5PrintSupport CONFIG REQUIRED)
-# find_package(Qt5Concurrent CONFIG REQUIRED)
-# find_package(Qt5OpenGL CONFIG REQUIRED)
 
 MACRO(ADD_EXAMPLE   example_name)
     set(SRC_FILES "")
@@ -59,4 +39,3 @@ ADD_EXAMPLE(splineeditor)
 ADD_EXAMPLE(stockchart)
 ADD_EXAMPLE(sysinfo)
 ADD_EXAMPLE(tvplot)
-

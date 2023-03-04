@@ -1,12 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(qwt VERSION 0.1.0)
 
-include(CTest)
-enable_testing()
-
-option(QWT_CONFIG_QwtPlot "Enable more verbose output from Makefile builds." ON)
-option(QWT_CONFIG_QwtWidgets "Enable more verbose output from Makefile builds." ON)
-option(QWT_CONFIG_QwtPolar "Enable more verbose output from Makefile builds." ON)
+option(QWT_CONFIG_QwtPlot "Enable QwtPlot builds." ON)
+option(QWT_CONFIG_QwtWidgets "Enable QwtWidgets builds." ON)
+option(QWT_CONFIG_QwtPolar "Enable QwtPolar builds." ON)
 
 set(CMAKE_VERBOSE_MAKEFILE ON CACHE BOOL "ON" FORCE) 
 
@@ -129,7 +126,6 @@ set(SOURCES
 
 
 if(QWT_CONFIG_QwtPlot)
-message("UUUUUUUUUUUUUUUUU")
     set(SOURCES ${SOURCES}
         qwt_curve_fitter.cpp  
         qwt_spline_curve_fitter.cpp  
@@ -464,10 +460,6 @@ target_include_directories(qwt PUBLIC ../classincludes ./ )
 
 #get_target_property(MY_PROJECT_SOURCES qwt SOURCES)
 #message(${MY_PROJECT_SOURCES})
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
 
 
 #add_executable(animation ../examples/animation/main.cpp ../examples/animation/Plot.cpp ../examples/animation/Plot.h)
